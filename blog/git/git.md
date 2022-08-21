@@ -50,3 +50,6 @@ git branch --set-upstream-to=origin/master master
 git push origin master
 ```
 
+## 3.git branch -m xxx aaa
+
+修改分支名称
