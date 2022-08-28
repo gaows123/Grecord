@@ -1,0 +1,4 @@
+<map id="costmap_2d::padFootprint" name="costmap_2d::padFootprint">
+<area shape="rect" id="node1" title="Adds the specified amount of padding to the footprint (in place)" alt="" coords="5,5,179,32"/>
+<area shape="rect" id="node2" href="$costmap__math_8h.html#a07fdddafa7ce762bfda59e7146a194ae" title="Same as sign(x) but returns 0 if x is 0." alt="" coords="227,5,280,32"/>
+</map>

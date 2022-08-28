@@ -1,0 +1,13 @@
+<map id="dwa_local_planner::DWAPlannerROS::isGoalReached" name="dwa_local_planner::DWAPlannerROS::isGoalReached">
+<area shape="rect" id="node1" title="是否到达目标点" alt="" coords="5,199,225,241"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="273,126,471,167"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a296b387b74afe1c430f0dc6efb2f2ae8" title=" " alt="" coords="274,192,470,248"/>
+<area shape="rect" id="node11" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8" title=" " alt="" coords="273,273,471,314"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="567,5,701,61"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="567,85,701,141"/>
+<area shape="rect" id="node7" href="$namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="519,166,749,207"/>
+<area shape="rect" id="node8" href="$namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="547,231,721,273"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="561,297,707,353"/>
+<area shape="rect" id="node10" href="$namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="567,378,701,419"/>
+<area shape="rect" id="node6" href="$namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="797,93,931,134"/>
+</map>

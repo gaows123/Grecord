@@ -1,0 +1,8 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,56,200,83"/>
+<area shape="rect" id="node2" href="$classcarrot__planner_1_1_carrot_planner.html" title="Provides a simple global planner that will compute a valid goal point for the local planner by walkin..." alt="" coords="250,5,441,32"/>
+<area shape="rect" id="node3" href="$classglobal__planner_1_1_global_planner.html" title=" " alt="" coords="248,56,443,83"/>
+<area shape="rect" id="node5" href="$classnavfn_1_1_navfn_r_o_s.html" title="Navfn 全局规划器的ROS封装类" alt="" coords="283,108,407,135"/>
+<area shape="rect" id="node4" href="$classglobal__planner_1_1_planner_with_costmap.html" title=" " alt="" coords="491,46,673,87"/>
+<area shape="rect" id="node6" href="$classnavfn_1_1_navfn_with_costmap.html" title=" " alt="" coords="495,112,669,139"/>
+</map>

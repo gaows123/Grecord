@@ -1,0 +1,41 @@
+\hypertarget{image__loader_8cpp}{}\doxysection{map\+\_\+server/src/image\+\_\+loader.cpp 文件参考}
+\label{image__loader_8cpp}\index{map\_server/src/image\_loader.cpp@{map\_server/src/image\_loader.cpp}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$SDL/\+SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$Linear\+Math/bt\+Quaternion.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}map\+\_\+server/image\+\_\+loader.\+h\char`\"{}}\newline
+image\+\_\+loader.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{image__loader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{命名空间}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemap__server}{map\+\_\+server}}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{image__loader_8cpp_a2388723427585df03b86ed963c9de575}{MAP\+\_\+\+IDX}}(sx,  i,  j)~((sx) $\ast$ (j) + (i))
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d}{map\+\_\+server\+::load\+Map\+From\+File}} (nav\+\_\+msgs\+::\+Get\+Map\+::\+Response $\ast$resp, const char $\ast$fname, double res, bool negate, double occ\+\_\+th, double free\+\_\+th, double $\ast$origin, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}} mode=\mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}{TRINARY}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{image__loader_8cpp_a2388723427585df03b86ed963c9de575}\label{image__loader_8cpp_a2388723427585df03b86ed963c9de575}} 
+\index{image\_loader.cpp@{image\_loader.cpp}!MAP\_IDX@{MAP\_IDX}}
+\index{MAP\_IDX@{MAP\_IDX}!image\_loader.cpp@{image\_loader.cpp}}
+\doxysubsubsection{\texorpdfstring{MAP\_IDX}{MAP\_IDX}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+IDX(\begin{DoxyParamCaption}\item[{}]{sx,  }\item[{}]{i,  }\item[{}]{j }\end{DoxyParamCaption})~((sx) $\ast$ (j) + (i))}
+

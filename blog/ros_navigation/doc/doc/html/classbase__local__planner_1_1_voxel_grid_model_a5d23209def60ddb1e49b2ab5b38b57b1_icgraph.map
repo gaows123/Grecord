@@ -1,0 +1,4 @@
+<map id="base_local_planner::VoxelGridModel::lineCost" name="base_local_planner::VoxelGridModel::lineCost">
+<area shape="rect" id="node1" title="Rasterizes a line in the costmap grid and checks for collisions" alt="" coords="257,5,435,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_voxel_grid_model.html#affcef4b1c4c95dd4209d36bd0d24fc14" title="Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the g..." alt="" coords="5,5,209,47"/>
+</map>

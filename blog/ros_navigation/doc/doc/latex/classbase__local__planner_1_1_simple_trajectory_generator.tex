@@ -1,0 +1,382 @@
+\hypertarget{classbase__local__planner_1_1_simple_trajectory_generator}{}\doxysection{base\+\_\+local\+\_\+planner\+::Simple\+Trajectory\+Generator类 参考}
+\label{classbase__local__planner_1_1_simple_trajectory_generator}\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+
+
+{\ttfamily \#include $<$simple\+\_\+trajectory\+\_\+generator.\+h$>$}
+
+
+
+类 base\+\_\+local\+\_\+planner\+::Simple\+Trajectory\+Generator 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classbase__local__planner_1_1_simple_trajectory_generator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+base\+\_\+local\+\_\+planner\+::Simple\+Trajectory\+Generator 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a83cdc24bc40a5ed55ec7d089c67d8018}{Simple\+Trajectory\+Generator}} ()
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_aea15c7d1fe8977c75334caff43b12925}{$\sim$\+Simple\+Trajectory\+Generator}} ()
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf}{initialise}} (const Eigen\+::\+Vector3f \&pos, const Eigen\+::\+Vector3f \&vel, const Eigen\+::\+Vector3f \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$limits, const Eigen\+::\+Vector3f \&vsamples, std\+::vector$<$ Eigen\+::\+Vector3f $>$ additional\+\_\+samples, bool discretize\+\_\+by\+\_\+time=false)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa}{initialise}} (const Eigen\+::\+Vector3f \&pos, const Eigen\+::\+Vector3f \&vel, const Eigen\+::\+Vector3f \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$limits, const Eigen\+::\+Vector3f \&vsamples, bool discretize\+\_\+by\+\_\+time=false)
+\begin{DoxyCompactList}\small\item\em 这里重载了initialise，跟上一个initialise相比，少了输入参数additional\+\_\+samples \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83}{set\+Parameters}} (double sim\+\_\+time, double sim\+\_\+granularity, double angular\+\_\+sim\+\_\+granularity, bool use\+\_\+dwa=false, double sim\+\_\+period=0.\+0)
+\begin{DoxyCompactList}\small\item\em 只用在参数被改变的时候，该函数才被调用 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2}{has\+More\+Trajectories}} ()
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8}{next\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768}{generate\+Trajectory}} (Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f sample\+\_\+target\+\_\+vel, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} \&traj)
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static Eigen\+::\+Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626}{compute\+New\+Positions}} (const Eigen\+::\+Vector3f \&pos, const Eigen\+::\+Vector3f \&vel, double dt)
+\item 
+static Eigen\+::\+Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075}{compute\+New\+Velocities}} (const Eigen\+::\+Vector3f \&sample\+\_\+target\+\_\+vel, const Eigen\+::\+Vector3f \&vel, Eigen\+::\+Vector3f acclimits, double dt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_acc42f25461d9894845955e5d464e4a58}{next\+\_\+sample\+\_\+index\+\_\+}}
+\item 
+std\+::vector$<$ Eigen\+::\+Vector3f $>$ \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a6084045fc45c79ded7ef6b75f60320e7}{sample\+\_\+params\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a0586ccaf8b6372830bd715d476889bb9}{limits\+\_\+}}
+\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a1e308de90ce96375e50889bb75398830}{pos\+\_\+}}
+\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a6d5012705423167541f096bedaa5152f}{vel\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_aa811b5385f768045ec76638d431c4289}{continued\+\_\+acceleration\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a719ba193671c3057ac1dace84aa01526}{discretize\+\_\+by\+\_\+time\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a6e59c0e68ed11342bcad2d80db5f967d}{sim\+\_\+time\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_ac8e05c3fe4516c7343621649722b1bae}{sim\+\_\+granularity\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_abe5c2bf96effe4753a884f5947044fb9}{angular\+\_\+sim\+\_\+granularity\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_ad388680d803d492b2565c7f3f4a508e6}{use\+\_\+dwa\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a5447b0d5c0fb3f642db474c86d0e33d8}{sim\+\_\+period\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+generates trajectories based on equi-\/distant discretisation of the degrees of freedom. This is supposed to be a simple and robust implementation of the \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator}{Trajectory\+Sample\+Generator}} interface, more efficient implementations are thinkable.
+
+This can be used for both dwa and trajectory rollout approaches. As an example, assuming these values\+: sim\+\_\+time = 1s, sim\+\_\+period=200ms, dt = 200ms, vsamples\+\_\+x=5, acc\+\_\+limit\+\_\+x = 1m/s$^\wedge$2, vel\+\_\+x=0 (robot at rest, values just for easy calculations) dwa\+\_\+planner will sample max-\/x-\/velocities from 0m/s to 0.\+2m/s. trajectory rollout approach will sample max-\/x-\/velocities 0m/s up to 1m/s trajectory rollout approach does so respecting the acceleration limit, so it gradually increases velocity 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a83cdc24bc40a5ed55ec7d089c67d8018}\label{classbase__local__planner_1_1_simple_trajectory_generator_a83cdc24bc40a5ed55ec7d089c67d8018}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!SimpleTrajectoryGenerator@{SimpleTrajectoryGenerator}}
+\index{SimpleTrajectoryGenerator@{SimpleTrajectoryGenerator}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{SimpleTrajectoryGenerator()}{SimpleTrajectoryGenerator()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::\+Simple\+Trajectory\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_aea15c7d1fe8977c75334caff43b12925}\label{classbase__local__planner_1_1_simple_trajectory_generator_aea15c7d1fe8977c75334caff43b12925}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!````~SimpleTrajectoryGenerator@{$\sim$SimpleTrajectoryGenerator}}
+\index{````~SimpleTrajectoryGenerator@{$\sim$SimpleTrajectoryGenerator}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimpleTrajectoryGenerator()}{~SimpleTrajectoryGenerator()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::$\sim$\+Simple\+Trajectory\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626}\label{classbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!computeNewPositions@{computeNewPositions}}
+\index{computeNewPositions@{computeNewPositions}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{computeNewPositions()}{computeNewPositions()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::compute\+New\+Positions (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{pos,  }\item[{const Eigen\+::\+Vector3f \&}]{vel,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075}\label{classbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!computeNewVelocities@{computeNewVelocities}}
+\index{computeNewVelocities@{computeNewVelocities}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{computeNewVelocities()}{computeNewVelocities()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::compute\+New\+Velocities (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{sample\+\_\+target\+\_\+vel,  }\item[{const Eigen\+::\+Vector3f \&}]{vel,  }\item[{Eigen\+::\+Vector3f}]{acclimits,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+change vel using acceleration limits to converge towards sample\+\_\+target-\/vel 根据加速度限制改变速度，向采样目标速度收敛 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768}\label{classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!generateTrajectory@{generateTrajectory}}
+\index{generateTrajectory@{generateTrajectory}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{generateTrajectory()}{generateTrajectory()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::generate\+Trajectory (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector3f}]{pos,  }\item[{Eigen\+::\+Vector3f}]{vel,  }\item[{Eigen\+::\+Vector3f}]{sample\+\_\+target\+\_\+vel,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} \&}]{traj }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{参数}
+{\em pos} & 机器人当前位姿 \\
+\hline
+{\em vel} & 期望采样的速度 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2}\label{classbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!hasMoreTrajectories@{hasMoreTrajectories}}
+\index{hasMoreTrajectories@{hasMoreTrajectories}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{hasMoreTrajectories()}{hasMoreTrajectories()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::has\+More\+Trajectories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+局部路径规划器是否可以产生多个轨迹
+
+产生器是否可以生成多个局部路径 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator_a053d4cfcef3b7c84bc86eb4c87211e3b}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Sample\+Generator}}.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa}\label{classbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!initialise@{initialise}}
+\index{initialise@{initialise}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{initialise()}{initialise()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::initialise (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{pos,  }\item[{const Eigen\+::\+Vector3f \&}]{vel,  }\item[{const Eigen\+::\+Vector3f \&}]{goal,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$}]{limits,  }\item[{const Eigen\+::\+Vector3f \&}]{vsamples,  }\item[{bool}]{discretize\+\_\+by\+\_\+time = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+这里重载了initialise，跟上一个initialise相比，少了输入参数additional\+\_\+samples 
+
+
+\begin{DoxyParams}{参数}
+{\em pos} & 当前位置 \\
+\hline
+{\em vel} & 当前速度 \\
+\hline
+{\em limits} & 速度限制 \\
+\hline
+{\em vsamples} & in how many samples to divide the given dimension 分成多少哥样本 \\
+\hline
+{\em use\+\_\+acceleration\+\_\+limits} & true时，用客观物理模型, 不然用理想的机器人模型 \\
+\hline
+{\em discretize\+\_\+by\+\_\+time} & 如果为true, 路径基于相同时间步长端被分段，不然基于等距的步长 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf}\label{classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!initialise@{initialise}}
+\index{initialise@{initialise}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{initialise()}{initialise()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::initialise (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f \&}]{pos,  }\item[{const Eigen\+::\+Vector3f \&}]{vel,  }\item[{const Eigen\+::\+Vector3f \&}]{goal,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} $\ast$}]{limits,  }\item[{const Eigen\+::\+Vector3f \&}]{vsamples,  }\item[{std\+::vector$<$ Eigen\+::\+Vector3f $>$}]{additional\+\_\+samples,  }\item[{bool}]{discretize\+\_\+by\+\_\+time = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{参数}
+{\em pos} & 当前位置 \\
+\hline
+{\em vel} & 当前速度 \\
+\hline
+{\em limits} & 速度限制 \\
+\hline
+{\em vsamples} & in how many samples to divide the given dimension 采样速度，分成多少哥样本 \\
+\hline
+{\em use\+\_\+acceleration\+\_\+limits} & true时，用客观物理模型, 不然用理想的机器人模型 \\
+\hline
+{\em additional\+\_\+samples} & (deprecated)\+: Additional velocity samples to generate individual trajectories from. 用来产生局部轨迹的附加的速度样本(不怎么用到) \\
+\hline
+{\em discretize\+\_\+by\+\_\+time} & 如果为true, 路径基于相同时间步长端被分段，不然基于等距的步长 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8}\label{classbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!nextTrajectory@{nextTrajectory}}
+\index{nextTrajectory@{nextTrajectory}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{nextTrajectory()}{nextTrajectory()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::next\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&}]{comp\+\_\+traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+局部路径规划器是否可以产生多个轨迹
+
+产生和返回下个采样局部路径 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator_a810dd5771cf6cd1645fabf5c9bc25d94}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Sample\+Generator}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83}\label{classbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!setParameters@{setParameters}}
+\index{setParameters@{setParameters}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{setParameters()}{setParameters()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::set\+Parameters (\begin{DoxyParamCaption}\item[{double}]{sim\+\_\+time,  }\item[{double}]{sim\+\_\+granularity,  }\item[{double}]{angular\+\_\+sim\+\_\+granularity,  }\item[{bool}]{use\+\_\+dwa = {\ttfamily false},  }\item[{double}]{sim\+\_\+period = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+只用在参数被改变的时候，该函数才被调用 
+
+
+\begin{DoxyParams}{参数}
+{\em sim\+\_\+granularity} & granularity of collision detection \\
+\hline
+{\em angular\+\_\+sim\+\_\+granularity} & angular granularity of collision detection \\
+\hline
+{\em use\+\_\+dwa} & 是否使用\+DWA（不是则使用trajectory rollout） \\
+\hline
+{\em sim\+\_\+period} & 同一轨迹中两点之间的距离 \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_abe5c2bf96effe4753a884f5947044fb9}\label{classbase__local__planner_1_1_simple_trajectory_generator_abe5c2bf96effe4753a884f5947044fb9}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!angular\_sim\_granularity\_@{angular\_sim\_granularity\_}}
+\index{angular\_sim\_granularity\_@{angular\_sim\_granularity\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{angular\_sim\_granularity\_}{angular\_sim\_granularity\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::angular\+\_\+sim\+\_\+granularity\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_aa811b5385f768045ec76638d431c4289}\label{classbase__local__planner_1_1_simple_trajectory_generator_aa811b5385f768045ec76638d431c4289}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!continued\_acceleration\_@{continued\_acceleration\_}}
+\index{continued\_acceleration\_@{continued\_acceleration\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{continued\_acceleration\_}{continued\_acceleration\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::continued\+\_\+acceleration\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a719ba193671c3057ac1dace84aa01526}\label{classbase__local__planner_1_1_simple_trajectory_generator_a719ba193671c3057ac1dace84aa01526}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!discretize\_by\_time\_@{discretize\_by\_time\_}}
+\index{discretize\_by\_time\_@{discretize\_by\_time\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{discretize\_by\_time\_}{discretize\_by\_time\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::discretize\+\_\+by\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a0586ccaf8b6372830bd715d476889bb9}\label{classbase__local__planner_1_1_simple_trajectory_generator_a0586ccaf8b6372830bd715d476889bb9}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!limits\_@{limits\_}}
+\index{limits\_@{limits\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{limits\_}{limits\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::limits\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_acc42f25461d9894845955e5d464e4a58}\label{classbase__local__planner_1_1_simple_trajectory_generator_acc42f25461d9894845955e5d464e4a58}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!next\_sample\_index\_@{next\_sample\_index\_}}
+\index{next\_sample\_index\_@{next\_sample\_index\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{next\_sample\_index\_}{next\_sample\_index\_}}
+{\footnotesize\ttfamily unsigned int base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::next\+\_\+sample\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a1e308de90ce96375e50889bb75398830}\label{classbase__local__planner_1_1_simple_trajectory_generator_a1e308de90ce96375e50889bb75398830}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!pos\_@{pos\_}}
+\index{pos\_@{pos\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{pos\_}{pos\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::pos\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a6084045fc45c79ded7ef6b75f60320e7}\label{classbase__local__planner_1_1_simple_trajectory_generator_a6084045fc45c79ded7ef6b75f60320e7}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!sample\_params\_@{sample\_params\_}}
+\index{sample\_params\_@{sample\_params\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{sample\_params\_}{sample\_params\_}}
+{\footnotesize\ttfamily std\+::vector$<$Eigen\+::\+Vector3f$>$ base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::sample\+\_\+params\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_ac8e05c3fe4516c7343621649722b1bae}\label{classbase__local__planner_1_1_simple_trajectory_generator_ac8e05c3fe4516c7343621649722b1bae}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!sim\_granularity\_@{sim\_granularity\_}}
+\index{sim\_granularity\_@{sim\_granularity\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{sim\_granularity\_}{sim\_granularity\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::sim\+\_\+granularity\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a5447b0d5c0fb3f642db474c86d0e33d8}\label{classbase__local__planner_1_1_simple_trajectory_generator_a5447b0d5c0fb3f642db474c86d0e33d8}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!sim\_period\_@{sim\_period\_}}
+\index{sim\_period\_@{sim\_period\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{sim\_period\_}{sim\_period\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::sim\+\_\+period\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a6e59c0e68ed11342bcad2d80db5f967d}\label{classbase__local__planner_1_1_simple_trajectory_generator_a6e59c0e68ed11342bcad2d80db5f967d}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!sim\_time\_@{sim\_time\_}}
+\index{sim\_time\_@{sim\_time\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{sim\_time\_}{sim\_time\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::sim\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_ad388680d803d492b2565c7f3f4a508e6}\label{classbase__local__planner_1_1_simple_trajectory_generator_ad388680d803d492b2565c7f3f4a508e6}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!use\_dwa\_@{use\_dwa\_}}
+\index{use\_dwa\_@{use\_dwa\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{use\_dwa\_}{use\_dwa\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::use\+\_\+dwa\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_trajectory_generator_a6d5012705423167541f096bedaa5152f}\label{classbase__local__planner_1_1_simple_trajectory_generator_a6d5012705423167541f096bedaa5152f}} 
+\index{base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}!vel\_@{vel\_}}
+\index{vel\_@{vel\_}!base\_local\_planner::SimpleTrajectoryGenerator@{base\_local\_planner::SimpleTrajectoryGenerator}}
+\doxysubsubsection{\texorpdfstring{vel\_}{vel\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator\+::vel\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{simple__trajectory__generator_8h}{simple\+\_\+trajectory\+\_\+generator.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{simple__trajectory__generator_8cpp}{simple\+\_\+trajectory\+\_\+generator.\+cpp}}\end{DoxyCompactItemize}

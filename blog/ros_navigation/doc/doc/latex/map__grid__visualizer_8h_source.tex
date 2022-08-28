@@ -1,0 +1,65 @@
+\hypertarget{map__grid__visualizer_8h_source}{}\doxysection{map\+\_\+grid\+\_\+visualizer.\+h}
+\label{map__grid__visualizer_8h_source}\index{base\_local\_planner/include/base\_local\_planner/map\_grid\_visualizer.h@{base\_local\_planner/include/base\_local\_planner/map\_grid\_visualizer.h}}
+\mbox{\hyperlink{map__grid__visualizer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Copyright (c) 2010, Eric Perko}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{12 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{13 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{14 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{17 \textcolor{comment}{ *   * Neither the name of Eric Perko nor the names of its}}
+\DoxyCodeLine{18 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{20 \textcolor{comment}{ *}}
+\DoxyCodeLine{21 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{33 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#ifndef MAP\_GRID\_VISUALIZER\_H\_}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define MAP\_GRID\_VISUALIZER\_H\_}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{map__grid_8h}{base\_local\_planner/map\_grid.h}}>}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{42     \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{MapGridVisualizer}} \{}
+\DoxyCodeLine{43         \textcolor{keyword}{public}:}
+\DoxyCodeLine{47             \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a420b3e168a5a208620f1dffe7845ae4e}{MapGridVisualizer}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55             \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a4145416ab13ea8b513d7707d65f3e8f3}{initialize}}(\textcolor{keyword}{const} std::string\& name, std::string frame, boost::function<\textcolor{keywordtype}{bool} (\textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{float} \&path\_cost, \textcolor{keywordtype}{float} \&goal\_cost, \textcolor{keywordtype}{float} \&occ\_cost, \textcolor{keywordtype}{float} \&total\_cost)> cost\_function);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60             \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_abc768f1e16ce0cdf87dec9f25a60ee64}{publishCostCloud}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap\_p\_);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         \textcolor{keyword}{private}:}
+\DoxyCodeLine{63             std::string \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a2aad521bd530b881880604871b698407}{name\_}}; }
+\DoxyCodeLine{64             boost::function<bool (\textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{float} \&path\_cost, \textcolor{keywordtype}{float} \&goal\_cost, \textcolor{keywordtype}{float} \&occ\_cost, \textcolor{keywordtype}{float} \&total\_cost)> \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_ac4b8d39eae362637bad41f242a6a3c29}{cost\_function\_}}; }
+\DoxyCodeLine{65             ros::NodeHandle \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a8118b16aef9c4fd8c4745bb95205e2ae}{ns\_nh\_}};}
+\DoxyCodeLine{66             std::string \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a9c994379fd31b6219a5515bea76972f8}{frame\_id\_}};}
+\DoxyCodeLine{67             ros::Publisher \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a2e3e32d68502d65965de29432319464c}{pub\_}};}
+\DoxyCodeLine{68     \};}
+\DoxyCodeLine{69 \};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

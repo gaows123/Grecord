@@ -1,0 +1,10 @@
+<map id="costmap_2d::ObstacleLayer::raytraceFreespace" name="costmap_2d::ObstacleLayer::raytraceFreespace">
+<area shape="rect" id="node1" title="根据单次的观测来清除自由空间" alt="" coords="5,129,191,171"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="247,5,416,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#af1d619d9b49b6851cb0a33de4e39ec78" title="Raytrace a line and apply some action at each step" alt="" coords="247,71,416,112"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap_layer.html#a7ae82ac5b75c5627ded6cda139849f6c" title=" " alt="" coords="472,163,657,204"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_obstacle_layer.html#aadace7301e7b08f358ea3e9e8a17f452" title=" " alt="" coords="239,188,424,229"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="247,253,416,295"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a54462e95337134adf0a59785b39b57f6" title="A 2D implementation of Bresenham&#39;s raytracing algorithm... applies an action at each step 实现了 对于离散的平面..." alt="" coords="480,19,649,60"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a947041f50d5fb1a44c3fd0601c4fc608" title=" " alt="" coords="480,84,649,125"/>
+</map>

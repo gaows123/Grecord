@@ -1,0 +1,73 @@
+\hypertarget{footprint__helper_8h_source}{}\doxysection{footprint\+\_\+helper.\+h}
+\label{footprint__helper_8h_source}\index{base\_local\_planner/include/base\_local\_planner/footprint\_helper.h@{base\_local\_planner/include/base\_local\_planner/footprint\_helper.h}}
+\mbox{\hyperlink{footprint__helper_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: TKruse}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef FOOTPRINT\_HELPER\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define FOOTPRINT\_HELPER\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <Eigen/Core>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <base\_local\_planner/Position2DInt.h>}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_footprint_helper}{FootprintHelper}} \{}
+\DoxyCodeLine{51 \textcolor{keyword}{public}:}
+\DoxyCodeLine{52   \mbox{\hyperlink{classbase__local__planner_1_1_footprint_helper_a78960bd9bd3bd7fedfff09a7a9132e01}{FootprintHelper}}();}
+\DoxyCodeLine{53   \textcolor{keyword}{virtual} \mbox{\hyperlink{classbase__local__planner_1_1_footprint_helper_a829bdb95d065a62a70e1cbc57a828ab7}{\string~FootprintHelper}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{63   std::vector<base\_local\_planner::Position2DInt> \mbox{\hyperlink{classbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15}{getFootprintCells}}(}
+\DoxyCodeLine{64       Eigen::Vector3f pos,}
+\DoxyCodeLine{65       std::vector<geometry\_msgs::Point> footprint\_spec,}
+\DoxyCodeLine{66       \textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\&,}
+\DoxyCodeLine{67       \textcolor{keywordtype}{bool} fill);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{77   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_footprint_helper_ab65128ff1acf0eb1d8b398ad0741ee55}{getLineCells}}(\textcolor{keywordtype}{int} x0, \textcolor{keywordtype}{int} x1, \textcolor{keywordtype}{int} y0, \textcolor{keywordtype}{int} y1, std::vector<base\_local\_planner::Position2DInt>\& pts);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_footprint_helper_a6bb46e8dcf95d5694a1aa5b03ab83892}{getFillCells}}(std::vector<base\_local\_planner::Position2DInt>\& footprint);}
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \} \textcolor{comment}{/* namespace base\_local\_planner */}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FOOTPRINT\_HELPER\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

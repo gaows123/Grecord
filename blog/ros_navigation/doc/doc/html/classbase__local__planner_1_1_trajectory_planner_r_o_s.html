@@ -1,0 +1,1991 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::TrajectoryPlannerROS类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html">TrajectoryPlannerROS</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_trajectory_planner_r_o_s-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::TrajectoryPlannerROS类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A ROS wrapper for the trajectory controller that queries the param server to construct a controller  
+ <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="trajectory__planner__ros_8h_source.html">trajectory_planner_ros.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::TrajectoryPlannerROS 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s__inherit__graph.png" border="0" usemap="#abase__local__planner_1_1_trajectory_planner_r_o_s_inherit__map" alt="Inheritance graph"/></div>
+<map name="abase__local__planner_1_1_trajectory_planner_r_o_s_inherit__map" id="abase__local__planner_1_1_trajectory_planner_r_o_s_inherit__map">
+<area shape="rect" title="A ROS wrapper for the trajectory controller that queries the param server to construct a controller" alt="" coords="19,80,179,121"/>
+<area shape="rect" href="classnav__core_1_1_base_local_planner.html" title="提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口." alt="" coords="5,5,193,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+base_local_planner::TrajectoryPlannerROS 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s__coll__graph.png" border="0" usemap="#abase__local__planner_1_1_trajectory_planner_r_o_s_coll__map" alt="Collaboration graph"/></div>
+<map name="abase__local__planner_1_1_trajectory_planner_r_o_s_coll__map" id="abase__local__planner_1_1_trajectory_planner_r_o_s_coll__map">
+<area shape="rect" title="A ROS wrapper for the trajectory controller that queries the param server to construct a controller" alt="" coords="1057,381,1217,422"/>
+<area shape="rect" href="classnav__core_1_1_base_local_planner.html" title="提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口." alt="" coords="730,5,918,32"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="353,49,486,90"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html" title="该类从给定的代价地图，路径和机器人位置计算下发速度" alt="" coords="757,209,891,250"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html" title=" " alt="" coords="353,114,486,155"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll..." alt="" coords="353,309,486,350"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,388,175,415"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="320,476,519,503"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="308,425,531,452"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html" title="Holds a trajectory generated by considering an x, y, and theta velocity" alt="" coords="353,243,486,285"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="725,451,923,477"/>
+<area shape="rect" title=" " alt="" coords="63,601,117,628"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_visualizer.html" title=" " alt="" coords="560,662,696,703"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html" title=" " alt="" coords="555,723,701,765"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3b6817c8d9f2a49b00ccdda3bc166548"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a3b6817c8d9f2a49b00ccdda3bc166548">TrajectoryPlannerROS</a> ()</td></tr>
+<tr class="memdesc:a3b6817c8d9f2a49b00ccdda3bc166548"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a3b6817c8d9f2a49b00ccdda3bc166548">更多...</a><br /></td></tr>
+<tr class="separator:a3b6817c8d9f2a49b00ccdda3bc166548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ea81ba7bfd31aaa999477ae8f9e0d0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f">TrajectoryPlannerROS</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a0ea81ba7bfd31aaa999477ae8f9e0d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造ros封装类  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f">更多...</a><br /></td></tr>
+<tr class="separator:a0ea81ba7bfd31aaa999477ae8f9e0d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a758c9bd9cb0202ed06c07c5aa49c03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a9a758c9bd9cb0202ed06c07c5aa49c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造ros封装类  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03">更多...</a><br /></td></tr>
+<tr class="separator:a9a758c9bd9cb0202ed06c07c5aa49c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79384acb51a894dbcec4447bee1ca90f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a79384acb51a894dbcec4447bee1ca90f">~TrajectoryPlannerROS</a> ()</td></tr>
+<tr class="memdesc:a79384acb51a894dbcec4447bee1ca90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">封装类的析构函数  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a79384acb51a894dbcec4447bee1ca90f">更多...</a><br /></td></tr>
+<tr class="separator:a79384acb51a894dbcec4447bee1ca90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2d96332da31a154db84930754409af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af">computeVelocityCommands</a> (geometry_msgs::Twist &amp;cmd_vel)</td></tr>
+<tr class="memdesc:adb2d96332da31a154db84930754409af"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当前机器人坐标，朝向和速度，计算下个下发速度  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af">更多...</a><br /></td></tr>
+<tr class="separator:adb2d96332da31a154db84930754409af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a0c8be5746b1e1d8657f6b867ea934"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af3a0c8be5746b1e1d8657f6b867ea934">setPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</td></tr>
+<tr class="memdesc:af3a0c8be5746b1e1d8657f6b867ea934"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新局部规划器要跟随的路径  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af3a0c8be5746b1e1d8657f6b867ea934">更多...</a><br /></td></tr>
+<tr class="separator:af3a0c8be5746b1e1d8657f6b867ea934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5196b75a728ab7c37d6bdd99faa7b541"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a5196b75a728ab7c37d6bdd99faa7b541">isGoalReached</a> ()</td></tr>
+<tr class="memdesc:a5196b75a728ab7c37d6bdd99faa7b541"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否已经到达了目标点  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a5196b75a728ab7c37d6bdd99faa7b541">更多...</a><br /></td></tr>
+<tr class="separator:a5196b75a728ab7c37d6bdd99faa7b541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9155bebb3d073ae4b19b8d0da87478a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6">checkTrajectory</a> (double vx_samp, double vy_samp, double vtheta_samp, bool update_map=true)</td></tr>
+<tr class="memdesc:a9155bebb3d073ae4b19b8d0da87478a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算轨迹并且为其打分  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6">更多...</a><br /></td></tr>
+<tr class="separator:a9155bebb3d073ae4b19b8d0da87478a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af883fc515db5a2234cd6b6d366ca31a5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5">scoreTrajectory</a> (double vx_samp, double vy_samp, double vtheta_samp, bool update_map=true)</td></tr>
+<tr class="memdesc:af883fc515db5a2234cd6b6d366ca31a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">产生和打分单个局部轨迹  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5">更多...</a><br /></td></tr>
+<tr class="separator:af883fc515db5a2234cd6b6d366ca31a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bc029d01fb414521862b83f81aa5c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9">isInitialized</a> ()</td></tr>
+<tr class="separator:a99bc029d01fb414521862b83f81aa5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af232d29db5af486516c48cf10c3b3ad6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_trajectory_planner.html">TrajectoryPlanner</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af232d29db5af486516c48cf10c3b3ad6">getPlanner</a> () const</td></tr>
+<tr class="memdesc:af232d29db5af486516c48cf10c3b3ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回内部的TrajectoryPlanner对象，只有在initialize()后才有效  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af232d29db5af486516c48cf10c3b3ad6">更多...</a><br /></td></tr>
+<tr class="separator:af232d29db5af486516c48cf10c3b3ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnav__core_1_1_base_local_planner"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnav__core_1_1_base_local_planner')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a></td></tr>
+<tr class="memitem:aa02dad5e3be910ae7d5159b7a53c0188 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#aa02dad5e3be910ae7d5159b7a53c0188">computeVelocityCommands</a> (geometry_msgs::Twist &amp;cmd_vel)=0</td></tr>
+<tr class="memdesc:aa02dad5e3be910ae7d5159b7a53c0188 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当前位置和朝向，机器人速度，计算下发给底座的速度命令  <a href="classnav__core_1_1_base_local_planner.html#aa02dad5e3be910ae7d5159b7a53c0188">更多...</a><br /></td></tr>
+<tr class="separator:aa02dad5e3be910ae7d5159b7a53c0188 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b2312d3218496be06a298767b26716 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#a27b2312d3218496be06a298767b26716">isGoalReached</a> ()=0</td></tr>
+<tr class="memdesc:a27b2312d3218496be06a298767b26716 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否已经到达了目标点  <a href="classnav__core_1_1_base_local_planner.html#a27b2312d3218496be06a298767b26716">更多...</a><br /></td></tr>
+<tr class="separator:a27b2312d3218496be06a298767b26716 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30adc27a5c123f129ef7046ffbb0f3e inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#ac30adc27a5c123f129ef7046ffbb0f3e">setPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</td></tr>
+<tr class="memdesc:ac30adc27a5c123f129ef7046ffbb0f3e inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新要跟随的全局路径  <a href="classnav__core_1_1_base_local_planner.html#ac30adc27a5c123f129ef7046ffbb0f3e">更多...</a><br /></td></tr>
+<tr class="separator:ac30adc27a5c123f129ef7046ffbb0f3e inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488521ac3d0ff67000aed87ab3fea84b inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#a488521ac3d0ff67000aed87ab3fea84b">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)=0</td></tr>
+<tr class="memdesc:a488521ac3d0ff67000aed87ab3fea84b inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造局部规划器  <a href="classnav__core_1_1_base_local_planner.html#a488521ac3d0ff67000aed87ab3fea84b">更多...</a><br /></td></tr>
+<tr class="separator:a488521ac3d0ff67000aed87ab3fea84b inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5526e4d50be56e27bf5a11a2c177453 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#ad5526e4d50be56e27bf5a11a2c177453">~BaseLocalPlanner</a> ()</td></tr>
+<tr class="memdesc:ad5526e4d50be56e27bf5a11a2c177453 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口的虚析构  <a href="classnav__core_1_1_base_local_planner.html#ad5526e4d50be56e27bf5a11a2c177453">更多...</a><br /></td></tr>
+<tr class="separator:ad5526e4d50be56e27bf5a11a2c177453 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a9fa1e0775ebaf2cc0d46d65011b68630"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9fa1e0775ebaf2cc0d46d65011b68630">reconfigureCB</a> (BaseLocalPlannerConfig &amp;config, uint32_t level)</td></tr>
+<tr class="memdesc:a9fa1e0775ebaf2cc0d46d65011b68630"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于更新局部规划器参数的回调函数  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9fa1e0775ebaf2cc0d46d65011b68630">更多...</a><br /></td></tr>
+<tr class="separator:a9fa1e0775ebaf2cc0d46d65011b68630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668b3cdefa51616c2fdf44b5ae2299b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6">rotateToGoal</a> (const geometry_msgs::PoseStamped &amp;global_pose, const geometry_msgs::PoseStamped &amp;robot_vel, double goal_th, geometry_msgs::Twist &amp;cmd_vel)</td></tr>
+<tr class="memdesc:a668b3cdefa51616c2fdf44b5ae2299b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">一旦到了目标点位置上，开始旋转对齐  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6">更多...</a><br /></td></tr>
+<tr class="separator:a668b3cdefa51616c2fdf44b5ae2299b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82e06f9bf7a71996678689b83d5d1e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3">stopWithAccLimits</a> (const geometry_msgs::PoseStamped &amp;global_pose, const geometry_msgs::PoseStamped &amp;robot_vel, geometry_msgs::Twist &amp;cmd_vel)</td></tr>
+<tr class="memdesc:ab82e06f9bf7a71996678689b83d5d1e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">基于加速度限制让机器人停止  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3">更多...</a><br /></td></tr>
+<tr class="separator:ab82e06f9bf7a71996678689b83d5d1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a94734b46ffd4a4b0cc58ac894e9414"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a1a94734b46ffd4a4b0cc58ac894e9414">loadYVels</a> (ros::NodeHandle node)</td></tr>
+<tr class="separator:a1a94734b46ffd4a4b0cc58ac894e9414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7a715a0c6fb57fa5254b817519362b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ada7a715a0c6fb57fa5254b817519362b">sign</a> (double x)</td></tr>
+<tr class="separator:ada7a715a0c6fb57fa5254b817519362b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5b05092eccb2fb636c597265d5ed40b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_world_model.html">WorldModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a5b05092eccb2fb636c597265d5ed40b2">world_model_</a></td></tr>
+<tr class="separator:a5b05092eccb2fb636c597265d5ed40b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e956dac438ffd88c237d3dd2964869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_trajectory_planner.html">TrajectoryPlanner</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a46e956dac438ffd88c237d3dd2964869">tc_</a></td></tr>
+<tr class="memdesc:a46e956dac438ffd88c237d3dd2964869"><td class="mdescLeft">&#160;</td><td class="mdescRight">轨迹局部规划器，tc是 trajectory controller的缩写  <a href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a46e956dac438ffd88c237d3dd2964869">更多...</a><br /></td></tr>
+<tr class="separator:a46e956dac438ffd88c237d3dd2964869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bcbda99e0430a9674784b7e6e552e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a88bcbda99e0430a9674784b7e6e552e5">costmap_ros_</a></td></tr>
+<tr class="separator:a88bcbda99e0430a9674784b7e6e552e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ac556f41430e2f77e4b3e363174955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a91ac556f41430e2f77e4b3e363174955">costmap_</a></td></tr>
+<tr class="separator:a91ac556f41430e2f77e4b3e363174955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac473c8569b7c79663162376818a2b353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_map_grid_visualizer.html">MapGridVisualizer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ac473c8569b7c79663162376818a2b353">map_viz_</a></td></tr>
+<tr class="separator:ac473c8569b7c79663162376818a2b353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe6f3cc698dfcc7afb3d89d321e4550"><td class="memItemLeft" align="right" valign="top">tf2_ros::Buffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#afbe6f3cc698dfcc7afb3d89d321e4550">tf_</a></td></tr>
+<tr class="separator:afbe6f3cc698dfcc7afb3d89d321e4550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ef03662ad6972629e2f40db458ed79"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ae1ef03662ad6972629e2f40db458ed79">global_frame_</a></td></tr>
+<tr class="separator:ae1ef03662ad6972629e2f40db458ed79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad870ec0a030496c3f00570d5b7492947"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ad870ec0a030496c3f00570d5b7492947">max_sensor_range_</a></td></tr>
+<tr class="separator:ad870ec0a030496c3f00570d5b7492947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1696ab6bd7f735c93a1bc0ed71713f78"><td class="memItemLeft" align="right" valign="top">nav_msgs::Odometry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a1696ab6bd7f735c93a1bc0ed71713f78">base_odom_</a></td></tr>
+<tr class="separator:a1696ab6bd7f735c93a1bc0ed71713f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76406da45ddc78af258c3c514edd6f2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ae76406da45ddc78af258c3c514edd6f2">robot_base_frame_</a></td></tr>
+<tr class="separator:ae76406da45ddc78af258c3c514edd6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ff11c255348f097b206d5bbb407f4d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a09ff11c255348f097b206d5bbb407f4d">rot_stopped_velocity_</a></td></tr>
+<tr class="separator:a09ff11c255348f097b206d5bbb407f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d24f42ed1e07067887fd1745b0c13c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ac2d24f42ed1e07067887fd1745b0c13c">trans_stopped_velocity_</a></td></tr>
+<tr class="separator:ac2d24f42ed1e07067887fd1745b0c13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c00302b7da1fa156f5041ae41c1b493"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a3c00302b7da1fa156f5041ae41c1b493">xy_goal_tolerance_</a></td></tr>
+<tr class="separator:a3c00302b7da1fa156f5041ae41c1b493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f3bfe629bbe670733042823f49584e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a21f3bfe629bbe670733042823f49584e">yaw_goal_tolerance_</a></td></tr>
+<tr class="separator:a21f3bfe629bbe670733042823f49584e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab87187e1f93b2202ca5b2ccdc54a133"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#aab87187e1f93b2202ca5b2ccdc54a133">min_in_place_vel_th_</a></td></tr>
+<tr class="separator:aab87187e1f93b2202ca5b2ccdc54a133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226445fba5513d89198ff40f8673b1ad"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::PoseStamped &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a226445fba5513d89198ff40f8673b1ad">global_plan_</a></td></tr>
+<tr class="separator:a226445fba5513d89198ff40f8673b1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af604f4e53309a3c6bced47e540c22e78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af604f4e53309a3c6bced47e540c22e78">prune_plan_</a></td></tr>
+<tr class="separator:af604f4e53309a3c6bced47e540c22e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8c9cb6ff03cb4a88ef3c43662bef91"><td class="memItemLeft" align="right" valign="top">boost::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a6b8c9cb6ff03cb4a88ef3c43662bef91">odom_lock_</a></td></tr>
+<tr class="separator:a6b8c9cb6ff03cb4a88ef3c43662bef91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2942f48b2c9fecff51b1889daf5e5d4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ac2942f48b2c9fecff51b1889daf5e5d4">max_vel_th_</a></td></tr>
+<tr class="separator:ac2942f48b2c9fecff51b1889daf5e5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64133d6019a4dcf33eec70a71830ee1c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a64133d6019a4dcf33eec70a71830ee1c">min_vel_th_</a></td></tr>
+<tr class="separator:a64133d6019a4dcf33eec70a71830ee1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56643b042c9ab1f755c01690153b24fb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a56643b042c9ab1f755c01690153b24fb">acc_lim_x_</a></td></tr>
+<tr class="separator:a56643b042c9ab1f755c01690153b24fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c43326c04a92417c9daaf212ce4bda"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a69c43326c04a92417c9daaf212ce4bda">acc_lim_y_</a></td></tr>
+<tr class="separator:a69c43326c04a92417c9daaf212ce4bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ba3f1430e5c76121e82fae51d3e8b2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a41ba3f1430e5c76121e82fae51d3e8b2">acc_lim_theta_</a></td></tr>
+<tr class="separator:a41ba3f1430e5c76121e82fae51d3e8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40f0600cfee52046c949523aef364b7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ae40f0600cfee52046c949523aef364b7">sim_period_</a></td></tr>
+<tr class="separator:ae40f0600cfee52046c949523aef364b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a875c2c222307d1cbc06679164f214"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a53a875c2c222307d1cbc06679164f214">rotating_to_goal_</a></td></tr>
+<tr class="separator:a53a875c2c222307d1cbc06679164f214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a221b620ba41f3e3bc499d7b30a36de63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a221b620ba41f3e3bc499d7b30a36de63">reached_goal_</a></td></tr>
+<tr class="separator:a221b620ba41f3e3bc499d7b30a36de63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688aca3f50ec29a81f048e1e49017abf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a688aca3f50ec29a81f048e1e49017abf">latch_xy_goal_tolerance_</a></td></tr>
+<tr class="separator:a688aca3f50ec29a81f048e1e49017abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab2b17659e6233084ebb0856f7d801a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a3ab2b17659e6233084ebb0856f7d801a">xy_tolerance_latch_</a></td></tr>
+<tr class="separator:a3ab2b17659e6233084ebb0856f7d801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d15245f94d7d5ba0c00bd09823e32d3"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a3d15245f94d7d5ba0c00bd09823e32d3">g_plan_pub_</a></td></tr>
+<tr class="separator:a3d15245f94d7d5ba0c00bd09823e32d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f0bdeafb5bd4e2097afaf193cecdc9"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a33f0bdeafb5bd4e2097afaf193cecdc9">l_plan_pub_</a></td></tr>
+<tr class="separator:a33f0bdeafb5bd4e2097afaf193cecdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d459ec3873d93b98a43747dafc1644e"><td class="memItemLeft" align="right" valign="top">dynamic_reconfigure::Server&lt; BaseLocalPlannerConfig &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a4d459ec3873d93b98a43747dafc1644e">dsrv_</a></td></tr>
+<tr class="separator:a4d459ec3873d93b98a43747dafc1644e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a236aa31c9c2336f6bcf71c86adbf89"><td class="memItemLeft" align="right" valign="top">base_local_planner::BaseLocalPlannerConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a8a236aa31c9c2336f6bcf71c86adbf89">default_config_</a></td></tr>
+<tr class="separator:a8a236aa31c9c2336f6bcf71c86adbf89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a027afe3c5cb208ede6b5ac7a10ef819e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a027afe3c5cb208ede6b5ac7a10ef819e">setup_</a></td></tr>
+<tr class="separator:a027afe3c5cb208ede6b5ac7a10ef819e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c099ecf00a17b0d01b8dd0707897b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a49c099ecf00a17b0d01b8dd0707897b8">initialized_</a></td></tr>
+<tr class="separator:a49c099ecf00a17b0d01b8dd0707897b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e936569e83535c63bf5a3b8a7a8c73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">base_local_planner::OdometryHelperRos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af9e936569e83535c63bf5a3b8a7a8c73">odom_helper_</a></td></tr>
+<tr class="separator:af9e936569e83535c63bf5a3b8a7a8c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8582d06e60dce9e1f0edc22fef3272"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::Point &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a6c8582d06e60dce9e1f0edc22fef3272">footprint_spec_</a></td></tr>
+<tr class="separator:a6c8582d06e60dce9e1f0edc22fef3272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classnav__core_1_1_base_local_planner"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classnav__core_1_1_base_local_planner')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a></td></tr>
+<tr class="memitem:a5d602dd4cf6f26470ec438cb20af48d7 inherit pro_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#a5d602dd4cf6f26470ec438cb20af48d7">BaseLocalPlanner</a> ()</td></tr>
+<tr class="separator:a5d602dd4cf6f26470ec438cb20af48d7 inherit pro_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >A ROS wrapper for the trajectory controller that queries the param server to construct a controller </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a3b6817c8d9f2a49b00ccdda3bc166548" name="a3b6817c8d9f2a49b00ccdda3bc166548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6817c8d9f2a49b00ccdda3bc166548">&#9670;&nbsp;</a></span>TrajectoryPlannerROS() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::TrajectoryPlannerROS::TrajectoryPlannerROS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>默认构造函数 </p>
+
+</div>
+</div>
+<a id="a0ea81ba7bfd31aaa999477ae8f9e0d0f" name="a0ea81ba7bfd31aaa999477ae8f9e0d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea81ba7bfd31aaa999477ae8f9e0d0f">&#9670;&nbsp;</a></span>TrajectoryPlannerROS() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::TrajectoryPlannerROS::TrajectoryPlannerROS </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造ros封装类 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>局部轨迹规划器的名字 </td></tr>
+    <tr><td class="paramname">tf</td><td>transform listener的指针 </td></tr>
+    <tr><td class="paramname">costmap</td><td>代价地图 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f_cgraph">
+<area shape="rect" title="构造ros封装类" alt="" coords="5,359,165,415"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="213,359,373,415"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9d02596d6352e0153a579427bbc2c394" title="Returns the local frame of the costmap" alt="" coords="421,37,619,79"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a23f9726d0f43f94e8c5b3a50556dd7b7" title="Compute the components and total cost for a map grid cell" alt="" coords="453,103,587,159"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="421,184,619,225"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="421,249,619,291"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="913,340,1083,381"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a4688b58dc94afe64bdaed02dceab5afd" title="Return the current footprint of the robot as a vector of points." alt="" coords="421,367,619,408"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_visualizer.html#a4145416ab13ea8b513d7707d65f3e8f3" title="Initializes the MapGridVisualizer" alt="" coords="452,433,588,489"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9" title=" " alt="" coords="440,513,600,569"/>
+<area shape="rect" href="namespacenav__core.html#ac1bc19a8eabb092a097d54d334066814" title="Load a parameter from one of two namespaces. Complain if it uses the old name." alt="" coords="423,593,617,635"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a1a94734b46ffd4a4b0cc58ac894e9414" title=" " alt="" coords="440,659,600,715"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9fa1e0775ebaf2cc0d46d65011b68630" title="用于更新局部规划器参数的回调函数" alt="" coords="440,739,600,795"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="681,5,851,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="681,71,851,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="677,137,855,193"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="913,5,1083,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="667,217,865,259"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a30b83584ef7b95a641db52efc67bc59c" title="Reconfigures the trajectory planner" alt="" coords="699,553,833,609"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a79384acb51a894dbcec4447bee1ca90f" name="a79384acb51a894dbcec4447bee1ca90f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79384acb51a894dbcec4447bee1ca90f">&#9670;&nbsp;</a></span>~TrajectoryPlannerROS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::TrajectoryPlannerROS::~TrajectoryPlannerROS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>封装类的析构函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9155bebb3d073ae4b19b8d0da87478a6" name="a9155bebb3d073ae4b19b8d0da87478a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9155bebb3d073ae4b19b8d0da87478a6">&#9670;&nbsp;</a></span>checkTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::checkTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update_map</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算轨迹并且为其打分 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vx_samp</td><td>用于推算出路径的x方向速度 </td></tr>
+    <tr><td class="paramname">vy_samp</td><td>用于推算出路径的y方向速度 </td></tr>
+    <tr><td class="paramname">vtheta_samp</td><td>用于推算出路径的角速度 </td></tr>
+    <tr><td class="paramname">update_map</td><td>是否更新地图 when computing the legality of the trajectory, this is useful to set to false if you're going to be doing a lot of trajectory checking over a short period of time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the trajectory is legal, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6_cgraph">
+<area shape="rect" title="计算轨迹并且为其打分" alt="" coords="5,615,165,671"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a16f45df8237d94cafe714d4e5aa4eeb3" title="产生和打分单个局部路径" alt="" coords="245,425,379,481"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="213,622,411,663"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="643,893,776,949"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="459,396,592,452"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a78ea0a479b32f589f518c55a78dcb755" title="Generate and score a single trajectory" alt="" coords="640,396,779,452"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="1556,275,1727,317"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="846,690,993,731"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#aadd3289b84c1c76778cc705250757c66" title="Compute orientation based on velocity" alt="" coords="827,43,1012,99"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a054ff7c497b332357979908f5df35031" title="Compute velocity based on acceleration" alt="" coords="843,123,995,179"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a464d133b3ff7d997ff2de19ea769e0ef" title="Compute x position based on velocity" alt="" coords="839,283,1000,339"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a2177c9510ce5cb1a6564e4d39797b4a7" title="Compute y position based on velocity" alt="" coords="839,363,1000,419"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab3f9bae95f002f9a800f16feaffd460e" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="853,203,986,259"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="1557,627,1726,669"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a36016a332040ca88776ebf7f48b632b4" title=" " alt="" coords="853,493,986,549"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="1088,602,1257,643"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="838,625,1001,666"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="1083,210,1263,251"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1775,627,1944,669"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#abd8710866ba7bd693c63919e93c87813" title=" " alt="" coords="1106,456,1239,512"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="1088,537,1257,578"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab1d5ed02ab5ede53f48fad6d426c27e9" title=" " alt="" coords="1354,521,1487,577"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11" title="reset path distance fields for all cells" alt="" coords="836,1119,1003,1161"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="838,835,1001,877"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="834,934,1005,975"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="1083,1264,1262,1320"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a" title=" " alt="" coords="1068,901,1277,942"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="1060,1031,1285,1073"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="1575,745,1708,786"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="1088,1097,1257,1138"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="1088,770,1257,811"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="1088,835,1257,877"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="1099,966,1247,1007"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="1333,686,1508,727"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb2d96332da31a154db84930754409af" name="adb2d96332da31a154db84930754409af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2d96332da31a154db84930754409af">&#9670;&nbsp;</a></span>computeVelocityCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::computeVelocityCommands </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据当前机器人坐标，朝向和速度，计算下个下发速度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd_vel</td><td>存储者下发速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True意味着找到有效轨迹 </dd></dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#aa02dad5e3be910ae7d5159b7a53c0188">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af_cgraph">
+<area shape="rect" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,917,199,973"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="555,1184,688,1240"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="247,429,477,470"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="275,494,449,535"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="289,560,435,616"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="290,641,434,682"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="273,706,451,747"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="263,771,461,813"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ab70a70a7a3f3d8e6788e6e1f0503a717" title=" " alt="" coords="289,837,435,893"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9" title=" " alt="" coords="282,917,442,973"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac8ecc12b4595fc60fdbe4b936ce1a274" title="Trim off parts of the global plan that are far enough behind the robot" alt="" coords="295,998,429,1039"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_visualizer.html#abc768f1e16ce0cdf87dec9f25a60ee64" title="Build and publish a PointCloud if the publish_cost_grid_pc parameter was true. Only include points fo..." alt="" coords="795,1569,931,1625"/>
+<area shape="rect" href="namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="295,1145,429,1186"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="282,1064,442,1120"/>
+<area shape="rect" href="namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="295,1262,429,1303"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3" title="基于加速度限制让机器人停止" alt="" coords="282,348,442,404"/>
+<area shape="rect" href="namespacebase__local__planner.html#a962893e66167d44e22bd284e83e4383e" title="Transforms the global plan of the robot from the planner frame to the frame of the costmap,..." alt="" coords="789,1457,937,1498"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="555,1291,688,1347"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a44c8434c9df68efb24eef36fc670ae7c" title="Create the trajectories we wish to explore, score them, and return the best option" alt="" coords="795,556,930,612"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html#ae808cb5daa8579714519073568709f15" title="获得组成机器人footprint的单元格" alt="" coords="765,119,960,175"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11" title="reset path distance fields for all cells" alt="" coords="779,1181,946,1222"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="781,1246,944,1287"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="777,1311,948,1353"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a78ea0a479b32f589f518c55a78dcb755" title="Generate and score a single trajectory" alt="" coords="1051,563,1190,619"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="1515,631,1684,673"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a7247858ecf5432a6557d8daf55e3e3f5" title="Get the last point of the trajectory" alt="" coords="1038,217,1203,258"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="1035,643,1206,685"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="1301,497,1447,538"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#aadd3289b84c1c76778cc705250757c66" title="Compute orientation based on velocity" alt="" coords="1281,563,1467,619"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a054ff7c497b332357979908f5df35031" title="Compute velocity based on acceleration" alt="" coords="1298,643,1450,699"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a464d133b3ff7d997ff2de19ea769e0ef" title="Compute x position based on velocity" alt="" coords="1293,723,1455,779"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a2177c9510ce5cb1a6564e4d39797b4a7" title="Compute y position based on velocity" alt="" coords="1293,803,1455,859"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab3f9bae95f002f9a800f16feaffd460e" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="1307,300,1441,356"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="1289,1014,1459,1055"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a36016a332040ca88776ebf7f48b632b4" title=" " alt="" coords="1307,883,1441,939"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="1293,431,1455,473"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="1515,1073,1684,1114"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html#a6bb46e8dcf95d5694a1aa5b03ab83892" title="填充多边形的轮廓，即机器人的footprint" alt="" coords="1040,5,1201,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html#ab65128ff1acf0eb1d8b398ad0741ee55" title="Bresenham&#39;s 算法追踪网格中连接两点的线" alt="" coords="1037,85,1205,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="1031,883,1210,939"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a" title=" " alt="" coords="1016,1311,1225,1353"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="1008,1115,1233,1157"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="1054,1181,1187,1222"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="1036,1377,1205,1418"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="1036,1545,1205,1586"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="1036,1610,1205,1651"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="1047,1246,1195,1287"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a16f45df8237d94cafe714d4e5aa4eeb3" title="产生和打分单个局部路径" alt="" coords="555,636,688,692"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ada7a715a0c6fb57fa5254b817519362b" title=" " alt="" coords="525,457,717,498"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="796,636,929,692"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af232d29db5af486516c48cf10c3b3ad6" name="af232d29db5af486516c48cf10c3b3ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af232d29db5af486516c48cf10c3b3ad6">&#9670;&nbsp;</a></span>getPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_trajectory_planner.html">TrajectoryPlanner</a> * base_local_planner::TrajectoryPlannerROS::getPlanner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>返回内部的TrajectoryPlanner对象，只有在initialize()后才有效 </p>
+
+</div>
+</div>
+<a id="a9a758c9bd9cb0202ed06c07c5aa49c03" name="a9a758c9bd9cb0202ed06c07c5aa49c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a758c9bd9cb0202ed06c07c5aa49c03">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::TrajectoryPlannerROS::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造ros封装类 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>局部轨迹规划器的名字 </td></tr>
+    <tr><td class="paramname">tf</td><td>transform listener的指针 </td></tr>
+    <tr><td class="paramname">costmap</td><td>代价地图 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#a488521ac3d0ff67000aed87ab3fea84b">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_cgraph">
+<area shape="rect" title="构造ros封装类" alt="" coords="5,359,165,415"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9d02596d6352e0153a579427bbc2c394" title="Returns the local frame of the costmap" alt="" coords="213,37,411,79"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a23f9726d0f43f94e8c5b3a50556dd7b7" title="Compute the components and total cost for a map grid cell" alt="" coords="245,103,379,159"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="213,184,411,225"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="213,249,411,291"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="705,340,875,381"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a4688b58dc94afe64bdaed02dceab5afd" title="Return the current footprint of the robot as a vector of points." alt="" coords="213,367,411,408"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_visualizer.html#a4145416ab13ea8b513d7707d65f3e8f3" title="Initializes the MapGridVisualizer" alt="" coords="244,433,380,489"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9" title=" " alt="" coords="232,513,392,569"/>
+<area shape="rect" href="namespacenav__core.html#ac1bc19a8eabb092a097d54d334066814" title="Load a parameter from one of two namespaces. Complain if it uses the old name." alt="" coords="215,593,409,635"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a1a94734b46ffd4a4b0cc58ac894e9414" title=" " alt="" coords="232,659,392,715"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9fa1e0775ebaf2cc0d46d65011b68630" title="用于更新局部规划器参数的回调函数" alt="" coords="232,739,392,795"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="473,5,643,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="473,71,643,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="469,137,647,193"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="705,5,875,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="459,217,657,259"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a30b83584ef7b95a641db52efc67bc59c" title="Reconfigures the trajectory planner" alt="" coords="491,553,625,609"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_icgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_icgraph">
+<area shape="rect" title="构造ros封装类" alt="" coords="213,5,373,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="5,5,165,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5196b75a728ab7c37d6bdd99faa7b541" name="a5196b75a728ab7c37d6bdd99faa7b541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5196b75a728ab7c37d6bdd99faa7b541">&#9670;&nbsp;</a></span>isGoalReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::isGoalReached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查是否已经到达了目标点 </p>
+<dl class="section return"><dt>返回</dt><dd>True 代表已经到达 </dd></dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#a27b2312d3218496be06a298767b26716">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541_cgraph">
+<area shape="rect" title="检查是否已经到达了目标点" alt="" coords="5,5,165,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9" title=" " alt="" coords="213,5,373,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a99bc029d01fb414521862b83f81aa5c9" name="a99bc029d01fb414521862b83f81aa5c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99bc029d01fb414521862b83f81aa5c9">&#9670;&nbsp;</a></span>isInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::isInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9_icgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9_icgraph">
+<area shape="rect" title=" " alt="" coords="455,125,615,181"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="213,5,407,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="230,85,390,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a5196b75a728ab7c37d6bdd99faa7b541" title="检查是否已经到达了目标点" alt="" coords="230,165,390,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af3a0c8be5746b1e1d8657f6b867ea934" title="更新局部规划器要跟随的路径" alt="" coords="230,245,390,301"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="5,85,165,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1a94734b46ffd4a4b0cc58ac894e9414" name="a1a94734b46ffd4a4b0cc58ac894e9414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a94734b46ffd4a4b0cc58ac894e9414">&#9670;&nbsp;</a></span>loadYVels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; base_local_planner::TrajectoryPlannerROS::loadYVels </td>
+          <td>(</td>
+          <td class="paramtype">ros::NodeHandle&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414_icgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414_icgraph">
+<area shape="rect" title=" " alt="" coords="421,5,581,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="213,5,373,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="5,5,165,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9fa1e0775ebaf2cc0d46d65011b68630" name="a9fa1e0775ebaf2cc0d46d65011b68630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa1e0775ebaf2cc0d46d65011b68630">&#9670;&nbsp;</a></span>reconfigureCB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::TrajectoryPlannerROS::reconfigureCB </td>
+          <td>(</td>
+          <td class="paramtype">BaseLocalPlannerConfig &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于更新局部规划器参数的回调函数 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_cgraph">
+<area shape="rect" title="用于更新局部规划器参数的回调函数" alt="" coords="5,5,165,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a30b83584ef7b95a641db52efc67bc59c" title="Reconfigures the trajectory planner" alt="" coords="213,5,347,61"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="395,13,564,54"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_icgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_icgraph">
+<area shape="rect" title="用于更新局部规划器参数的回调函数" alt="" coords="421,5,581,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="213,5,373,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="5,5,165,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a668b3cdefa51616c2fdf44b5ae2299b6" name="a668b3cdefa51616c2fdf44b5ae2299b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668b3cdefa51616c2fdf44b5ae2299b6">&#9670;&nbsp;</a></span>rotateToGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::rotateToGoal </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>robot_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>goal_th</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一旦到了目标点位置上，开始旋转对齐 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>机器人在全局坐标系下的位姿 </td></tr>
+    <tr><td class="paramname">robot_vel</td><td>机器人速度 </td></tr>
+    <tr><td class="paramname">goal_th</td><td>期望的th 速度 </td></tr>
+    <tr><td class="paramname">cmd_vel</td><td>速度命令的载体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True 代表找到有效的局部路径规划 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_cgraph">
+<area shape="rect" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="5,426,165,482"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a16f45df8237d94cafe714d4e5aa4eeb3" title="产生和打分单个局部路径" alt="" coords="243,389,376,445"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ada7a715a0c6fb57fa5254b817519362b" title=" " alt="" coords="213,469,405,511"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="453,389,587,445"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a78ea0a479b32f589f518c55a78dcb755" title="Generate and score a single trajectory" alt="" coords="651,351,789,407"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="635,432,805,473"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="873,5,1019,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#aadd3289b84c1c76778cc705250757c66" title="Compute orientation based on velocity" alt="" coords="853,71,1039,127"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a054ff7c497b332357979908f5df35031" title="Compute velocity based on acceleration" alt="" coords="870,151,1022,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a464d133b3ff7d997ff2de19ea769e0ef" title="Compute x position based on velocity" alt="" coords="865,231,1027,287"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a2177c9510ce5cb1a6564e4d39797b4a7" title="Compute y position based on velocity" alt="" coords="865,311,1027,367"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab3f9bae95f002f9a800f16feaffd460e" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="879,391,1013,447"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="1496,497,1665,539"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a36016a332040ca88776ebf7f48b632b4" title=" " alt="" coords="879,522,1013,578"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="1092,668,1261,709"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="865,653,1027,695"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="1087,399,1267,440"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1713,497,1883,539"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#abd8710866ba7bd693c63919e93c87813" title=" " alt="" coords="1110,522,1243,578"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="1092,603,1261,644"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab1d5ed02ab5ede53f48fad6d426c27e9" title=" " alt="" coords="1315,522,1448,578"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_icgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_icgraph">
+<area shape="rect" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="247,5,407,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af883fc515db5a2234cd6b6d366ca31a5" name="af883fc515db5a2234cd6b6d366ca31a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af883fc515db5a2234cd6b6d366ca31a5">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vx_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vy_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vtheta_samp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>update_map</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>产生和打分单个局部轨迹 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vx_samp</td><td>用于推算出路径的x方向速度 </td></tr>
+    <tr><td class="paramname">vy_samp</td><td>用于推算出路径的y方向速度 </td></tr>
+    <tr><td class="paramname">vtheta_samp</td><td>用于推算出路径的角速度 </td></tr>
+    <tr><td class="paramname">update_map</td><td>是否更新地图 when computing the legality of the trajectory, this is useful to set to false if you're going to be doing a lot of trajectory checking over a short period of time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>score of trajectory (double) </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5_cgraph">
+<area shape="rect" title="产生和打分单个局部轨迹" alt="" coords="5,396,165,452"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="213,330,411,371"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="245,396,379,452"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="461,893,595,949"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a78ea0a479b32f589f518c55a78dcb755" title="Generate and score a single trajectory" alt="" coords="459,396,597,452"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="1375,275,1545,317"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="665,690,811,731"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#aadd3289b84c1c76778cc705250757c66" title="Compute orientation based on velocity" alt="" coords="645,43,831,99"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a054ff7c497b332357979908f5df35031" title="Compute velocity based on acceleration" alt="" coords="662,123,814,179"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a464d133b3ff7d997ff2de19ea769e0ef" title="Compute x position based on velocity" alt="" coords="657,283,819,339"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a2177c9510ce5cb1a6564e4d39797b4a7" title="Compute y position based on velocity" alt="" coords="657,363,819,419"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab3f9bae95f002f9a800f16feaffd460e" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="671,203,805,259"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="1375,627,1545,669"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a36016a332040ca88776ebf7f48b632b4" title=" " alt="" coords="671,493,805,549"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="907,602,1076,643"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="657,625,819,666"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="901,210,1081,251"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1593,627,1763,669"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#abd8710866ba7bd693c63919e93c87813" title=" " alt="" coords="925,456,1058,512"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="907,537,1076,578"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab1d5ed02ab5ede53f48fad6d426c27e9" title=" " alt="" coords="1173,521,1306,577"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11" title="reset path distance fields for all cells" alt="" coords="655,1119,821,1161"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="657,835,819,877"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="653,934,823,975"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="902,1264,1081,1320"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a" title=" " alt="" coords="887,901,1096,942"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="879,1031,1104,1073"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="1393,745,1527,786"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="907,1097,1076,1138"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="907,770,1076,811"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="907,835,1076,877"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="917,966,1065,1007"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="1152,686,1327,727"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3a0c8be5746b1e1d8657f6b867ea934" name="af3a0c8be5746b1e1d8657f6b867ea934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a0c8be5746b1e1d8657f6b867ea934">&#9670;&nbsp;</a></span>setPlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::setPlan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>orig_global_plan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新局部规划器要跟随的路径 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orig_global_plan</td><td>更新的路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True 表示更新成功 </dd></dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#ac30adc27a5c123f129ef7046ffbb0f3e">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934_cgraph">
+<area shape="rect" title="更新局部规划器要跟随的路径" alt="" coords="5,5,165,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9" title=" " alt="" coords="213,5,373,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada7a715a0c6fb57fa5254b817519362b" name="ada7a715a0c6fb57fa5254b817519362b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7a715a0c6fb57fa5254b817519362b">&#9670;&nbsp;</a></span>sign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::sign </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b_icgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b_icgraph">
+<area shape="rect" title=" " alt="" coords="455,53,647,94"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="247,5,407,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3" title="基于加速度限制让机器人停止" alt="" coords="247,85,407,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,45,199,101"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab82e06f9bf7a71996678689b83d5d1e3" name="ab82e06f9bf7a71996678689b83d5d1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab82e06f9bf7a71996678689b83d5d1e3">&#9670;&nbsp;</a></span>stopWithAccLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::stopWithAccLimits </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>robot_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>基于加速度限制让机器人停止 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>机器人在全局坐标系下的位姿 </td></tr>
+    <tr><td class="paramname">robot_vel</td><td>机器人速度 </td></tr>
+    <tr><td class="paramname">cmd_vel</td><td>速度命令的载体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True 代表找到有效的局部路径规划 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_cgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_cgraph">
+<area shape="rect" title="基于加速度限制让机器人停止" alt="" coords="5,426,165,482"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a16f45df8237d94cafe714d4e5aa4eeb3" title="产生和打分单个局部路径" alt="" coords="243,389,376,445"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ada7a715a0c6fb57fa5254b817519362b" title=" " alt="" coords="213,469,405,511"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="453,389,587,445"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a78ea0a479b32f589f518c55a78dcb755" title="Generate and score a single trajectory" alt="" coords="651,351,789,407"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="635,432,805,473"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="873,5,1019,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#aadd3289b84c1c76778cc705250757c66" title="Compute orientation based on velocity" alt="" coords="853,71,1039,127"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a054ff7c497b332357979908f5df35031" title="Compute velocity based on acceleration" alt="" coords="870,151,1022,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a464d133b3ff7d997ff2de19ea769e0ef" title="Compute x position based on velocity" alt="" coords="865,231,1027,287"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a2177c9510ce5cb1a6564e4d39797b4a7" title="Compute y position based on velocity" alt="" coords="865,311,1027,367"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab3f9bae95f002f9a800f16feaffd460e" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="879,391,1013,447"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="1496,497,1665,539"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a36016a332040ca88776ebf7f48b632b4" title=" " alt="" coords="879,522,1013,578"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="1092,668,1261,709"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="865,653,1027,695"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="1087,399,1267,440"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1713,497,1883,539"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#abd8710866ba7bd693c63919e93c87813" title=" " alt="" coords="1110,522,1243,578"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="1092,603,1261,644"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ab1d5ed02ab5ede53f48fad6d426c27e9" title=" " alt="" coords="1315,522,1448,578"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_icgraph" id="aclassbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_icgraph">
+<area shape="rect" title="基于加速度限制让机器人停止" alt="" coords="247,5,407,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a41ba3f1430e5c76121e82fae51d3e8b2" name="a41ba3f1430e5c76121e82fae51d3e8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ba3f1430e5c76121e82fae51d3e8b2">&#9670;&nbsp;</a></span>acc_lim_theta_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::acc_lim_theta_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56643b042c9ab1f755c01690153b24fb" name="a56643b042c9ab1f755c01690153b24fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56643b042c9ab1f755c01690153b24fb">&#9670;&nbsp;</a></span>acc_lim_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::acc_lim_x_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69c43326c04a92417c9daaf212ce4bda" name="a69c43326c04a92417c9daaf212ce4bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c43326c04a92417c9daaf212ce4bda">&#9670;&nbsp;</a></span>acc_lim_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::acc_lim_y_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1696ab6bd7f735c93a1bc0ed71713f78" name="a1696ab6bd7f735c93a1bc0ed71713f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1696ab6bd7f735c93a1bc0ed71713f78">&#9670;&nbsp;</a></span>base_odom_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nav_msgs::Odometry base_local_planner::TrajectoryPlannerROS::base_odom_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91ac556f41430e2f77e4b3e363174955" name="a91ac556f41430e2f77e4b3e363174955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ac556f41430e2f77e4b3e363174955">&#9670;&nbsp;</a></span>costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* base_local_planner::TrajectoryPlannerROS::costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88bcbda99e0430a9674784b7e6e552e5" name="a88bcbda99e0430a9674784b7e6e552e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88bcbda99e0430a9674784b7e6e552e5">&#9670;&nbsp;</a></span>costmap_ros_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* base_local_planner::TrajectoryPlannerROS::costmap_ros_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a236aa31c9c2336f6bcf71c86adbf89" name="a8a236aa31c9c2336f6bcf71c86adbf89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a236aa31c9c2336f6bcf71c86adbf89">&#9670;&nbsp;</a></span>default_config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::BaseLocalPlannerConfig base_local_planner::TrajectoryPlannerROS::default_config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d459ec3873d93b98a43747dafc1644e" name="a4d459ec3873d93b98a43747dafc1644e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d459ec3873d93b98a43747dafc1644e">&#9670;&nbsp;</a></span>dsrv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic_reconfigure::Server&lt;BaseLocalPlannerConfig&gt;* base_local_planner::TrajectoryPlannerROS::dsrv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c8582d06e60dce9e1f0edc22fef3272" name="a6c8582d06e60dce9e1f0edc22fef3272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c8582d06e60dce9e1f0edc22fef3272">&#9670;&nbsp;</a></span>footprint_spec_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::Point&gt; base_local_planner::TrajectoryPlannerROS::footprint_spec_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d15245f94d7d5ba0c00bd09823e32d3" name="a3d15245f94d7d5ba0c00bd09823e32d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d15245f94d7d5ba0c00bd09823e32d3">&#9670;&nbsp;</a></span>g_plan_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher base_local_planner::TrajectoryPlannerROS::g_plan_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1ef03662ad6972629e2f40db458ed79" name="ae1ef03662ad6972629e2f40db458ed79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ef03662ad6972629e2f40db458ed79">&#9670;&nbsp;</a></span>global_frame_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string base_local_planner::TrajectoryPlannerROS::global_frame_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a226445fba5513d89198ff40f8673b1ad" name="a226445fba5513d89198ff40f8673b1ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226445fba5513d89198ff40f8673b1ad">&#9670;&nbsp;</a></span>global_plan_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::PoseStamped&gt; base_local_planner::TrajectoryPlannerROS::global_plan_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49c099ecf00a17b0d01b8dd0707897b8" name="a49c099ecf00a17b0d01b8dd0707897b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49c099ecf00a17b0d01b8dd0707897b8">&#9670;&nbsp;</a></span>initialized_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::initialized_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33f0bdeafb5bd4e2097afaf193cecdc9" name="a33f0bdeafb5bd4e2097afaf193cecdc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f0bdeafb5bd4e2097afaf193cecdc9">&#9670;&nbsp;</a></span>l_plan_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher base_local_planner::TrajectoryPlannerROS::l_plan_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a688aca3f50ec29a81f048e1e49017abf" name="a688aca3f50ec29a81f048e1e49017abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688aca3f50ec29a81f048e1e49017abf">&#9670;&nbsp;</a></span>latch_xy_goal_tolerance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::latch_xy_goal_tolerance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac473c8569b7c79663162376818a2b353" name="ac473c8569b7c79663162376818a2b353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac473c8569b7c79663162376818a2b353">&#9670;&nbsp;</a></span>map_viz_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_map_grid_visualizer.html">MapGridVisualizer</a> base_local_planner::TrajectoryPlannerROS::map_viz_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad870ec0a030496c3f00570d5b7492947" name="ad870ec0a030496c3f00570d5b7492947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad870ec0a030496c3f00570d5b7492947">&#9670;&nbsp;</a></span>max_sensor_range_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::max_sensor_range_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2942f48b2c9fecff51b1889daf5e5d4" name="ac2942f48b2c9fecff51b1889daf5e5d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2942f48b2c9fecff51b1889daf5e5d4">&#9670;&nbsp;</a></span>max_vel_th_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::max_vel_th_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab87187e1f93b2202ca5b2ccdc54a133" name="aab87187e1f93b2202ca5b2ccdc54a133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab87187e1f93b2202ca5b2ccdc54a133">&#9670;&nbsp;</a></span>min_in_place_vel_th_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::min_in_place_vel_th_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64133d6019a4dcf33eec70a71830ee1c" name="a64133d6019a4dcf33eec70a71830ee1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64133d6019a4dcf33eec70a71830ee1c">&#9670;&nbsp;</a></span>min_vel_th_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::min_vel_th_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9e936569e83535c63bf5a3b8a7a8c73" name="af9e936569e83535c63bf5a3b8a7a8c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e936569e83535c63bf5a3b8a7a8c73">&#9670;&nbsp;</a></span>odom_helper_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">base_local_planner::OdometryHelperRos</a> base_local_planner::TrajectoryPlannerROS::odom_helper_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b8c9cb6ff03cb4a88ef3c43662bef91" name="a6b8c9cb6ff03cb4a88ef3c43662bef91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8c9cb6ff03cb4a88ef3c43662bef91">&#9670;&nbsp;</a></span>odom_lock_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::recursive_mutex base_local_planner::TrajectoryPlannerROS::odom_lock_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af604f4e53309a3c6bced47e540c22e78" name="af604f4e53309a3c6bced47e540c22e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af604f4e53309a3c6bced47e540c22e78">&#9670;&nbsp;</a></span>prune_plan_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::prune_plan_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a221b620ba41f3e3bc499d7b30a36de63" name="a221b620ba41f3e3bc499d7b30a36de63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a221b620ba41f3e3bc499d7b30a36de63">&#9670;&nbsp;</a></span>reached_goal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::reached_goal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae76406da45ddc78af258c3c514edd6f2" name="ae76406da45ddc78af258c3c514edd6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76406da45ddc78af258c3c514edd6f2">&#9670;&nbsp;</a></span>robot_base_frame_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string base_local_planner::TrajectoryPlannerROS::robot_base_frame_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09ff11c255348f097b206d5bbb407f4d" name="a09ff11c255348f097b206d5bbb407f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ff11c255348f097b206d5bbb407f4d">&#9670;&nbsp;</a></span>rot_stopped_velocity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::rot_stopped_velocity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53a875c2c222307d1cbc06679164f214" name="a53a875c2c222307d1cbc06679164f214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a875c2c222307d1cbc06679164f214">&#9670;&nbsp;</a></span>rotating_to_goal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::rotating_to_goal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a027afe3c5cb208ede6b5ac7a10ef819e" name="a027afe3c5cb208ede6b5ac7a10ef819e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027afe3c5cb208ede6b5ac7a10ef819e">&#9670;&nbsp;</a></span>setup_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::setup_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae40f0600cfee52046c949523aef364b7" name="ae40f0600cfee52046c949523aef364b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40f0600cfee52046c949523aef364b7">&#9670;&nbsp;</a></span>sim_period_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::sim_period_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46e956dac438ffd88c237d3dd2964869" name="a46e956dac438ffd88c237d3dd2964869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e956dac438ffd88c237d3dd2964869">&#9670;&nbsp;</a></span>tc_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_trajectory_planner.html">TrajectoryPlanner</a>* base_local_planner::TrajectoryPlannerROS::tc_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>轨迹局部规划器，tc是 trajectory controller的缩写 </p>
+
+</div>
+</div>
+<a id="afbe6f3cc698dfcc7afb3d89d321e4550" name="afbe6f3cc698dfcc7afb3d89d321e4550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbe6f3cc698dfcc7afb3d89d321e4550">&#9670;&nbsp;</a></span>tf_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::Buffer* base_local_planner::TrajectoryPlannerROS::tf_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2d24f42ed1e07067887fd1745b0c13c" name="ac2d24f42ed1e07067887fd1745b0c13c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d24f42ed1e07067887fd1745b0c13c">&#9670;&nbsp;</a></span>trans_stopped_velocity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::trans_stopped_velocity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b05092eccb2fb636c597265d5ed40b2" name="a5b05092eccb2fb636c597265d5ed40b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b05092eccb2fb636c597265d5ed40b2">&#9670;&nbsp;</a></span>world_model_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_world_model.html">WorldModel</a>* base_local_planner::TrajectoryPlannerROS::world_model_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c00302b7da1fa156f5041ae41c1b493" name="a3c00302b7da1fa156f5041ae41c1b493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c00302b7da1fa156f5041ae41c1b493">&#9670;&nbsp;</a></span>xy_goal_tolerance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::xy_goal_tolerance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ab2b17659e6233084ebb0856f7d801a" name="a3ab2b17659e6233084ebb0856f7d801a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ab2b17659e6233084ebb0856f7d801a">&#9670;&nbsp;</a></span>xy_tolerance_latch_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::TrajectoryPlannerROS::xy_tolerance_latch_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21f3bfe629bbe670733042823f49584e" name="a21f3bfe629bbe670733042823f49584e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f3bfe629bbe670733042823f49584e">&#9670;&nbsp;</a></span>yaw_goal_tolerance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryPlannerROS::yaw_goal_tolerance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="trajectory__planner__ros_8h_source.html">trajectory_planner_ros.h</a></li>
+<li>base_local_planner/src/<a class="el" href="trajectory__planner__ros_8cpp.html">trajectory_planner_ros.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

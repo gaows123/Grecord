@@ -1,0 +1,193 @@
+\hypertarget{amcl__node_8cpp}{}\doxysection{amcl/src/amcl\+\_\+node.cpp 文件参考}
+\label{amcl__node_8cpp}\index{amcl/src/amcl\_node.cpp@{amcl/src/amcl\_node.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$boost/bind.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/thread/mutex.\+hpp$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}amcl/map/map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amcl/pf/pf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amcl/sensors/amcl\+\_\+odom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amcl/sensors/amcl\+\_\+laser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}portable\+\_\+utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ros/assert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sensor\+\_\+msgs/\+Laser\+Scan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Pose\+With\+Covariance\+Stamped.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Pose\+Array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Pose.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Pose\+Stamped.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Get\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Set\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}std\+\_\+srvs/\+Empty.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2/\+Linear\+Math/\+Transform.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2/convert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2\+\_\+geometry\+\_\+msgs/tf2\+\_\+geometry\+\_\+msgs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2\+\_\+ros/buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2\+\_\+ros/message\+\_\+filter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2\+\_\+ros/transform\+\_\+broadcaster.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2\+\_\+ros/transform\+\_\+listener.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}message\+\_\+filters/subscriber.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dynamic\+\_\+reconfigure/server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amcl/\+AMCLConfig.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$rosbag/bag.\+h$>$}\newline
+{\ttfamily \#include $<$rosbag/view.\+h$>$}\newline
+{\ttfamily \#include $<$boost/foreach.\+hpp$>$}\newline
+{\ttfamily \#include $<$diagnostic\+\_\+updater/diagnostic\+\_\+updater.\+h$>$}\newline
+amcl\+\_\+node.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amcl__node_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structamcl__hyp__t}{amcl\+\_\+hyp\+\_\+t}}
+\item 
+class \mbox{\hyperlink{class_amcl_node}{Amcl\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{amcl__node_8cpp_a75af3afadf140f0fa58181515af6ac07}{NEW\+\_\+\+UNIFORM\+\_\+\+SAMPLING}}~1
+\item 
+\#define \mbox{\hyperlink{amcl__node_8cpp_a56fe9bff0a1be75aae2da3e593053e2c}{USAGE}}~\char`\"{}USAGE\+: amcl\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{amcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade}{normalize}} (double z)
+\item 
+static double \mbox{\hyperlink{amcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c}{angle\+\_\+diff}} (double a, double b)
+\item 
+std\+::string \mbox{\hyperlink{amcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503}{strip\+Slash}} (const std\+::string \&in)
+\item 
+void \mbox{\hyperlink{amcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee}{sigint\+Handler}} (int sig)
+\item 
+int \mbox{\hyperlink{amcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{amcl__node_8cpp_a7210cd83e45f121f6f24e345dd68f3fa}{scan\+\_\+topic\+\_\+}} = \char`\"{}scan\char`\"{}
+\item 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_amcl_node}{Amcl\+Node}} $>$ \mbox{\hyperlink{amcl__node_8cpp_a161f2b637d2995fbebe3560c37416877}{amcl\+\_\+node\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{amcl__node_8cpp_a75af3afadf140f0fa58181515af6ac07}\label{amcl__node_8cpp_a75af3afadf140f0fa58181515af6ac07}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!NEW\_UNIFORM\_SAMPLING@{NEW\_UNIFORM\_SAMPLING}}
+\index{NEW\_UNIFORM\_SAMPLING@{NEW\_UNIFORM\_SAMPLING}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{NEW\_UNIFORM\_SAMPLING}{NEW\_UNIFORM\_SAMPLING}}
+{\footnotesize\ttfamily \#define NEW\+\_\+\+UNIFORM\+\_\+\+SAMPLING~1}
+
+\mbox{\Hypertarget{amcl__node_8cpp_a56fe9bff0a1be75aae2da3e593053e2c}\label{amcl__node_8cpp_a56fe9bff0a1be75aae2da3e593053e2c}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!USAGE@{USAGE}}
+\index{USAGE@{USAGE}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{USAGE}{USAGE}}
+{\footnotesize\ttfamily \#define USAGE~\char`\"{}USAGE\+: amcl\char`\"{}}
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{amcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c}\label{amcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!angle\_diff@{angle\_diff}}
+\index{angle\_diff@{angle\_diff}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{angle\_diff()}{angle\_diff()}}
+{\footnotesize\ttfamily static double angle\+\_\+diff (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{amcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{amcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{amcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!main@{main}}
+\index{main@{main}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{amcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{amcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade}\label{amcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!normalize@{normalize}}
+\index{normalize@{normalize}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily static double normalize (\begin{DoxyParamCaption}\item[{double}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{amcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee}\label{amcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!sigintHandler@{sigintHandler}}
+\index{sigintHandler@{sigintHandler}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{sigintHandler()}{sigintHandler()}}
+{\footnotesize\ttfamily void sigint\+Handler (\begin{DoxyParamCaption}\item[{int}]{sig }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{amcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{amcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503}\label{amcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!stripSlash@{stripSlash}}
+\index{stripSlash@{stripSlash}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{stripSlash()}{stripSlash()}}
+{\footnotesize\ttfamily std\+::string strip\+Slash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{amcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{amcl__node_8cpp_a161f2b637d2995fbebe3560c37416877}\label{amcl__node_8cpp_a161f2b637d2995fbebe3560c37416877}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!amcl\_node\_ptr@{amcl\_node\_ptr}}
+\index{amcl\_node\_ptr@{amcl\_node\_ptr}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{amcl\_node\_ptr}{amcl\_node\_ptr}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_amcl_node}{Amcl\+Node}}$>$ amcl\+\_\+node\+\_\+ptr}
+
+\mbox{\Hypertarget{amcl__node_8cpp_a7210cd83e45f121f6f24e345dd68f3fa}\label{amcl__node_8cpp_a7210cd83e45f121f6f24e345dd68f3fa}} 
+\index{amcl\_node.cpp@{amcl\_node.cpp}!scan\_topic\_@{scan\_topic\_}}
+\index{scan\_topic\_@{scan\_topic\_}!amcl\_node.cpp@{amcl\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{scan\_topic\_}{scan\_topic\_}}
+{\footnotesize\ttfamily const std\+::string scan\+\_\+topic\+\_\+ = \char`\"{}scan\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

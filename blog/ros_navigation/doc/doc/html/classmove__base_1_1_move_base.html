@@ -1,0 +1,2679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: move_base::MoveBase类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemove__base.html">move_base</a></li><li class="navelem"><a class="el" href="classmove__base_1_1_move_base.html">MoveBase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classmove__base_1_1_move_base-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">move_base::MoveBase类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A class that uses the actionlib::ActionServer interface that moves the robot base to a goal location.  
+ <a href="classmove__base_1_1_move_base.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="move__base_8h_source.html">move_base.h</a>&gt;</code></p>
+<div class="dynheader">
+move_base::MoveBase 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base__coll__graph.png" border="0" usemap="#amove__base_1_1_move_base_coll__map" alt="Collaboration graph"/></div>
+<map name="amove__base_1_1_move_base_coll__map" id="amove__base_1_1_move_base_coll__map">
+<area shape="rect" title="A class that uses the actionlib::ActionServer interface that moves the robot base to a goal location." alt="" coords="453,335,612,361"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="299,216,497,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="5,103,204,130"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="56,5,225,32"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="228,103,451,130"/>
+<area shape="rect" title=" " alt="" coords="419,5,473,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1132ccb47b3c514d52be347805eb31f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5">MoveBase</a> (tf2_ros::Buffer &amp;tf)</td></tr>
+<tr class="memdesc:a1132ccb47b3c514d52be347805eb31f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the actions  <a href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5">更多...</a><br /></td></tr>
+<tr class="separator:a1132ccb47b3c514d52be347805eb31f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eabd5e76e974cc7c7d4672b925ec4bf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4eabd5e76e974cc7c7d4672b925ec4bf">~MoveBase</a> ()</td></tr>
+<tr class="memdesc:a4eabd5e76e974cc7c7d4672b925ec4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor - Cleans up  <a href="classmove__base_1_1_move_base.html#a4eabd5e76e974cc7c7d4672b925ec4bf">更多...</a><br /></td></tr>
+<tr class="separator:a4eabd5e76e974cc7c7d4672b925ec4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cde906bc7b501d5918f8482da5fbabe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe">executeCycle</a> (geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>)</td></tr>
+<tr class="memdesc:a4cde906bc7b501d5918f8482da5fbabe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a control cycle  <a href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe">更多...</a><br /></td></tr>
+<tr class="separator:a4cde906bc7b501d5918f8482da5fbabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aa38fbbcfa91d3ee562fedd16a43bd098"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098">clearCostmapsService</a> (std_srvs::Empty::Request &amp;req, std_srvs::Empty::Response &amp;resp)</td></tr>
+<tr class="memdesc:aa38fbbcfa91d3ee562fedd16a43bd098"><td class="mdescLeft">&#160;</td><td class="mdescRight">A service call that clears the costmaps of obstacles  <a href="classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098">更多...</a><br /></td></tr>
+<tr class="separator:aa38fbbcfa91d3ee562fedd16a43bd098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02b97ca12b73c0caf06aaafde2c930e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7">planService</a> (nav_msgs::GetPlan::Request &amp;req, nav_msgs::GetPlan::Response &amp;resp)</td></tr>
+<tr class="memdesc:a02b97ca12b73c0caf06aaafde2c930e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A service call that can be made when the action is inactive that will return a plan  <a href="classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7">更多...</a><br /></td></tr>
+<tr class="separator:a02b97ca12b73c0caf06aaafde2c930e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48f0d98ba773f9799e0a970bf092089"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:af48f0d98ba773f9799e0a970bf092089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a new global plan  <a href="classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089">更多...</a><br /></td></tr>
+<tr class="separator:af48f0d98ba773f9799e0a970bf092089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ae63f18e3bbfb4465b1587d3a84a6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aa2ae63f18e3bbfb4465b1587d3a84a6f">loadRecoveryBehaviors</a> (ros::NodeHandle node)</td></tr>
+<tr class="memdesc:aa2ae63f18e3bbfb4465b1587d3a84a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the recovery behaviors for the navigation stack from the parameter server  <a href="classmove__base_1_1_move_base.html#aa2ae63f18e3bbfb4465b1587d3a84a6f">更多...</a><br /></td></tr>
+<tr class="separator:aa2ae63f18e3bbfb4465b1587d3a84a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559a81b839c06c7e69c00fe4a93cb213"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a559a81b839c06c7e69c00fe4a93cb213">loadDefaultRecoveryBehaviors</a> ()</td></tr>
+<tr class="memdesc:a559a81b839c06c7e69c00fe4a93cb213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the default recovery behaviors for the navigation stack  <a href="classmove__base_1_1_move_base.html#a559a81b839c06c7e69c00fe4a93cb213">更多...</a><br /></td></tr>
+<tr class="separator:a559a81b839c06c7e69c00fe4a93cb213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ec5faa6a11697af52c061fd90907d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2">clearCostmapWindows</a> (double size_x, double size_y)</td></tr>
+<tr class="memdesc:ac3ec5faa6a11697af52c061fd90907d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears obstacles within a window around the robot  <a href="classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2">更多...</a><br /></td></tr>
+<tr class="separator:ac3ec5faa6a11697af52c061fd90907d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31a9045b36350e06310c46eb138fc4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a">publishZeroVelocity</a> ()</td></tr>
+<tr class="memdesc:af31a9045b36350e06310c46eb138fc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes a velocity command of zero to the base  <a href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a">更多...</a><br /></td></tr>
+<tr class="separator:af31a9045b36350e06310c46eb138fc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874fe3d747671d75dfafd26d7b36068d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d">resetState</a> ()</td></tr>
+<tr class="memdesc:a874fe3d747671d75dfafd26d7b36068d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the state of the <a class="el" href="namespacemove__base.html">move_base</a> action and send a zero velocity command to the base  <a href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d">更多...</a><br /></td></tr>
+<tr class="separator:a874fe3d747671d75dfafd26d7b36068d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6225709ac09918840a6ca78518617fb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a6225709ac09918840a6ca78518617fb7">goalCB</a> (const geometry_msgs::PoseStamped::ConstPtr &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>)</td></tr>
+<tr class="separator:a6225709ac09918840a6ca78518617fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b28ebdf00058e1ffc8b29ec92c320a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a">planThread</a> ()</td></tr>
+<tr class="separator:a12b28ebdf00058e1ffc8b29ec92c320a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ac84b1ead88c0b9b0f361475c90401"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401">executeCb</a> (const move_base_msgs::MoveBaseGoalConstPtr &amp;move_base_goal)</td></tr>
+<tr class="separator:a02ac84b1ead88c0b9b0f361475c90401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e6417a642608d82f6d95f8eda0b72d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a02e6417a642608d82f6d95f8eda0b72d">isQuaternionValid</a> (const geometry_msgs::Quaternion &amp;q)</td></tr>
+<tr class="separator:a02e6417a642608d82f6d95f8eda0b72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab267e8cd4697812fde4df300cb5902ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac">getRobotPose</a> (geometry_msgs::PoseStamped &amp;global_pose, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap)</td></tr>
+<tr class="separator:ab267e8cd4697812fde4df300cb5902ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6108fe562dce4cadb9dc15f9ef377c9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#af6108fe562dce4cadb9dc15f9ef377c9">distance</a> (const geometry_msgs::PoseStamped &amp;p1, const geometry_msgs::PoseStamped &amp;p2)</td></tr>
+<tr class="separator:af6108fe562dce4cadb9dc15f9ef377c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2511210a27b06b9a515df783c074534"><td class="memItemLeft" align="right" valign="top">geometry_msgs::PoseStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ae2511210a27b06b9a515df783c074534">goalToGlobalFrame</a> (const geometry_msgs::PoseStamped &amp;goal_pose_msg)</td></tr>
+<tr class="separator:ae2511210a27b06b9a515df783c074534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdc13ba83e1281fba732980c7d5f225"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a8bdc13ba83e1281fba732980c7d5f225">wakePlanner</a> (const ros::TimerEvent &amp;event)</td></tr>
+<tr class="memdesc:a8bdc13ba83e1281fba732980c7d5f225"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to wake the planner at periodic intervals.  <a href="classmove__base_1_1_move_base.html#a8bdc13ba83e1281fba732980c7d5f225">更多...</a><br /></td></tr>
+<tr class="separator:a8bdc13ba83e1281fba732980c7d5f225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67ea64882589c75055cc07bf4bd9aa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1">reconfigureCB</a> (move_base::MoveBaseConfig &amp;config, uint32_t level)</td></tr>
+<tr class="separator:ab67ea64882589c75055cc07bf4bd9aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9c682b98057a8aba46c27e133c8639e1"><td class="memItemLeft" align="right" valign="top">tf2_ros::Buffer &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a9c682b98057a8aba46c27e133c8639e1">tf_</a></td></tr>
+<tr class="separator:a9c682b98057a8aba46c27e133c8639e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0691561e18e14022c6c7c3f584b9ad8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemove__base.html#ac8da40ec5525ddc900973cc3c6ced790">MoveBaseActionServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aa0691561e18e14022c6c7c3f584b9ad8">as_</a></td></tr>
+<tr class="separator:aa0691561e18e14022c6c7c3f584b9ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af756b3f1419d3fdbf1abd61066639811"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#af756b3f1419d3fdbf1abd61066639811">tc_</a></td></tr>
+<tr class="separator:af756b3f1419d3fdbf1abd61066639811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a215e33801629f482dddb812928ff1e6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a215e33801629f482dddb812928ff1e6c">planner_costmap_ros_</a></td></tr>
+<tr class="separator:a215e33801629f482dddb812928ff1e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9db6c791e5d92bd5280be83c908f90b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#af9db6c791e5d92bd5280be83c908f90b">controller_costmap_ros_</a></td></tr>
+<tr class="separator:af9db6c791e5d92bd5280be83c908f90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2564bdc40f3a74bb527e57efe8ad2238"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a2564bdc40f3a74bb527e57efe8ad2238">planner_</a></td></tr>
+<tr class="separator:a2564bdc40f3a74bb527e57efe8ad2238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9bfde38f6ab462a12ac5d74e5a91c3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#acb9bfde38f6ab462a12ac5d74e5a91c3">robot_base_frame_</a></td></tr>
+<tr class="separator:acb9bfde38f6ab462a12ac5d74e5a91c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8f515da67875f8badfd03d55183d8d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a8c8f515da67875f8badfd03d55183d8d">global_frame_</a></td></tr>
+<tr class="separator:a8c8f515da67875f8badfd03d55183d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7ab119183a6462de1c8ab60214a22f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; boost::shared_ptr&lt; <a class="el" href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a7c7ab119183a6462de1c8ab60214a22f">recovery_behaviors_</a></td></tr>
+<tr class="separator:a7c7ab119183a6462de1c8ab60214a22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a976906c4fac47447efeae651b96db92b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a976906c4fac47447efeae651b96db92b">recovery_behavior_names_</a></td></tr>
+<tr class="separator:a976906c4fac47447efeae651b96db92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff86447affb75f7f87c21cf8aa6b1e05"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aff86447affb75f7f87c21cf8aa6b1e05">recovery_index_</a></td></tr>
+<tr class="separator:aff86447affb75f7f87c21cf8aa6b1e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1673fe852de40856760507118516be6"><td class="memItemLeft" align="right" valign="top">geometry_msgs::PoseStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ab1673fe852de40856760507118516be6">global_pose_</a></td></tr>
+<tr class="separator:ab1673fe852de40856760507118516be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeebbf28b03f764abd63d0b756a6c4e7e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aeebbf28b03f764abd63d0b756a6c4e7e">planner_frequency_</a></td></tr>
+<tr class="separator:aeebbf28b03f764abd63d0b756a6c4e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a1a6d5934e7e79ed3162965e892c3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ad1a1a6d5934e7e79ed3162965e892c3f">controller_frequency_</a></td></tr>
+<tr class="separator:ad1a1a6d5934e7e79ed3162965e892c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d7236f88a70aef2555bb445dfd5e63"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a09d7236f88a70aef2555bb445dfd5e63">inscribed_radius_</a></td></tr>
+<tr class="separator:a09d7236f88a70aef2555bb445dfd5e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b5316081ba1d6d38c2592269f03639"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ab6b5316081ba1d6d38c2592269f03639">circumscribed_radius_</a></td></tr>
+<tr class="separator:ab6b5316081ba1d6d38c2592269f03639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d386ec12ecfc0540ab548f3483a0265"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a1d386ec12ecfc0540ab548f3483a0265">planner_patience_</a></td></tr>
+<tr class="separator:a1d386ec12ecfc0540ab548f3483a0265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62d36ca6d041318e450759866dc4e6a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ae62d36ca6d041318e450759866dc4e6a">controller_patience_</a></td></tr>
+<tr class="separator:ae62d36ca6d041318e450759866dc4e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4948942a33d1145569cb36f87476d5ef"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4948942a33d1145569cb36f87476d5ef">max_planning_retries_</a></td></tr>
+<tr class="separator:a4948942a33d1145569cb36f87476d5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d3768d8395be910ee8c94248910d13"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a54d3768d8395be910ee8c94248910d13">planning_retries_</a></td></tr>
+<tr class="separator:a54d3768d8395be910ee8c94248910d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572cb09cc8c8620e87863ab87b22f690"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a572cb09cc8c8620e87863ab87b22f690">conservative_reset_dist_</a></td></tr>
+<tr class="separator:a572cb09cc8c8620e87863ab87b22f690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23c1a593f407da1a76f27134abc2272"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aa23c1a593f407da1a76f27134abc2272">clearing_radius_</a></td></tr>
+<tr class="separator:aa23c1a593f407da1a76f27134abc2272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6ed65d88fd5c97ec1dfbe099c8432e"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a3b6ed65d88fd5c97ec1dfbe099c8432e">current_goal_pub_</a></td></tr>
+<tr class="separator:a3b6ed65d88fd5c97ec1dfbe099c8432e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa652faeab2a091b12a9de4d7a4d67d"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aaaa652faeab2a091b12a9de4d7a4d67d">vel_pub_</a></td></tr>
+<tr class="separator:aaaa652faeab2a091b12a9de4d7a4d67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3673dd4ff221886c815906b0b705e71"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ab3673dd4ff221886c815906b0b705e71">action_goal_pub_</a></td></tr>
+<tr class="separator:ab3673dd4ff221886c815906b0b705e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62ef541590e9448fda031185970de667"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a62ef541590e9448fda031185970de667">recovery_status_pub_</a></td></tr>
+<tr class="separator:a62ef541590e9448fda031185970de667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1b548900f137b360a2a85b54742a1b"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a2b1b548900f137b360a2a85b54742a1b">goal_sub_</a></td></tr>
+<tr class="separator:a2b1b548900f137b360a2a85b54742a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd0b654ef8136723b4a534569bf035b"><td class="memItemLeft" align="right" valign="top">ros::ServiceServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#affd0b654ef8136723b4a534569bf035b">make_plan_srv_</a></td></tr>
+<tr class="separator:affd0b654ef8136723b4a534569bf035b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71bc76c4949a4fa71b292df2377742f2"><td class="memItemLeft" align="right" valign="top">ros::ServiceServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a71bc76c4949a4fa71b292df2377742f2">clear_costmaps_srv_</a></td></tr>
+<tr class="separator:a71bc76c4949a4fa71b292df2377742f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98edccf31a71c90da18a44144cb4806b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a98edccf31a71c90da18a44144cb4806b">shutdown_costmaps_</a></td></tr>
+<tr class="separator:a98edccf31a71c90da18a44144cb4806b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0dd2f813316fcd53fe9cc00a1460679"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ae0dd2f813316fcd53fe9cc00a1460679">clearing_rotation_allowed_</a></td></tr>
+<tr class="separator:ae0dd2f813316fcd53fe9cc00a1460679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c78316058314b0a664c94890f13283"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a09c78316058314b0a664c94890f13283">recovery_behavior_enabled_</a></td></tr>
+<tr class="separator:a09c78316058314b0a664c94890f13283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61513b02830655684b7ac8bc08fcea4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ac61513b02830655684b7ac8bc08fcea4">make_plan_clear_costmap_</a></td></tr>
+<tr class="separator:ac61513b02830655684b7ac8bc08fcea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402d2b18591bf28495b27080b0f05104"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a402d2b18591bf28495b27080b0f05104">make_plan_add_unreachable_goal_</a></td></tr>
+<tr class="separator:a402d2b18591bf28495b27080b0f05104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55e6b2ed7171e916fed5b1068604e91"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aa55e6b2ed7171e916fed5b1068604e91">oscillation_timeout_</a></td></tr>
+<tr class="separator:aa55e6b2ed7171e916fed5b1068604e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27401426e7a02566549348ba70a2236"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ac27401426e7a02566549348ba70a2236">oscillation_distance_</a></td></tr>
+<tr class="separator:ac27401426e7a02566549348ba70a2236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8142e16d75b428f9d95ccf6d5cfa73b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemove__base.html#a834c14e8a0d367042661457a3278cf26">MoveBaseState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a8142e16d75b428f9d95ccf6d5cfa73b9">state_</a></td></tr>
+<tr class="separator:a8142e16d75b428f9d95ccf6d5cfa73b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee93a00f4ec16023b1517dbf83233684"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemove__base.html#ad1e7ef837dae3dd211a77e7d3a7d1548">RecoveryTrigger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aee93a00f4ec16023b1517dbf83233684">recovery_trigger_</a></td></tr>
+<tr class="separator:aee93a00f4ec16023b1517dbf83233684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b072f605beee9dc864a72b13f19534f"><td class="memItemLeft" align="right" valign="top">ros::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4b072f605beee9dc864a72b13f19534f">last_valid_plan_</a></td></tr>
+<tr class="separator:a4b072f605beee9dc864a72b13f19534f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df6ca6c2c19290a04faa50a837b3484"><td class="memItemLeft" align="right" valign="top">ros::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a9df6ca6c2c19290a04faa50a837b3484">last_valid_control_</a></td></tr>
+<tr class="separator:a9df6ca6c2c19290a04faa50a837b3484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04522db38598d7f86e696e3bf5fbac3c"><td class="memItemLeft" align="right" valign="top">ros::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a04522db38598d7f86e696e3bf5fbac3c">last_oscillation_reset_</a></td></tr>
+<tr class="separator:a04522db38598d7f86e696e3bf5fbac3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac105a1f4a81f5d3f503cb6b44d8289fb"><td class="memItemLeft" align="right" valign="top">geometry_msgs::PoseStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ac105a1f4a81f5d3f503cb6b44d8289fb">oscillation_pose_</a></td></tr>
+<tr class="separator:ac105a1f4a81f5d3f503cb6b44d8289fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab868dc3d278dff26a10adee6c476eca"><td class="memItemLeft" align="right" valign="top">pluginlib::ClassLoader&lt; <a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#aab868dc3d278dff26a10adee6c476eca">bgp_loader_</a></td></tr>
+<tr class="separator:aab868dc3d278dff26a10adee6c476eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d4773e77236e3bec4f530e7f59cb87"><td class="memItemLeft" align="right" valign="top">pluginlib::ClassLoader&lt; <a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a67d4773e77236e3bec4f530e7f59cb87">blp_loader_</a></td></tr>
+<tr class="separator:a67d4773e77236e3bec4f530e7f59cb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0364046a17210f7ae2003c86d47c7646"><td class="memItemLeft" align="right" valign="top">pluginlib::ClassLoader&lt; <a class="el" href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a0364046a17210f7ae2003c86d47c7646">recovery_loader_</a></td></tr>
+<tr class="separator:a0364046a17210f7ae2003c86d47c7646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae799defb3ae10421f59a676ed9928f4d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::PoseStamped &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ae799defb3ae10421f59a676ed9928f4d">planner_plan_</a></td></tr>
+<tr class="separator:ae799defb3ae10421f59a676ed9928f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af993602ac2c3b59bbfd2c3cf464e30a7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::PoseStamped &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#af993602ac2c3b59bbfd2c3cf464e30a7">latest_plan_</a></td></tr>
+<tr class="separator:af993602ac2c3b59bbfd2c3cf464e30a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1856c58f97950cb3d0c7f97bca74f30b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::PoseStamped &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a1856c58f97950cb3d0c7f97bca74f30b">controller_plan_</a></td></tr>
+<tr class="separator:a1856c58f97950cb3d0c7f97bca74f30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf1b6c604084c0a1895a2f1f6469b54"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4bf1b6c604084c0a1895a2f1f6469b54">runPlanner_</a></td></tr>
+<tr class="separator:a4bf1b6c604084c0a1895a2f1f6469b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5446009ae9a87ede0d10451876fc34b1"><td class="memItemLeft" align="right" valign="top">boost::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a5446009ae9a87ede0d10451876fc34b1">planner_mutex_</a></td></tr>
+<tr class="separator:a5446009ae9a87ede0d10451876fc34b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252ed7ae082dfc0d25334053076c9fc3"><td class="memItemLeft" align="right" valign="top">boost::condition_variable_any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a252ed7ae082dfc0d25334053076c9fc3">planner_cond_</a></td></tr>
+<tr class="separator:a252ed7ae082dfc0d25334053076c9fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae309d359124b3c6e4de745e15acaaf2c"><td class="memItemLeft" align="right" valign="top">geometry_msgs::PoseStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ae309d359124b3c6e4de745e15acaaf2c">planner_goal_</a></td></tr>
+<tr class="separator:ae309d359124b3c6e4de745e15acaaf2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b73801f97cf862f62bb4eb3784c3d7f"><td class="memItemLeft" align="right" valign="top">boost::thread *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4b73801f97cf862f62bb4eb3784c3d7f">planner_thread_</a></td></tr>
+<tr class="separator:a4b73801f97cf862f62bb4eb3784c3d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547956b81fede41fc392b1c39a5f0e76"><td class="memItemLeft" align="right" valign="top">boost::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a547956b81fede41fc392b1c39a5f0e76">configuration_mutex_</a></td></tr>
+<tr class="separator:a547956b81fede41fc392b1c39a5f0e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4148136ed8518f24b602ff512fa4329f"><td class="memItemLeft" align="right" valign="top">dynamic_reconfigure::Server&lt; move_base::MoveBaseConfig &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4148136ed8518f24b602ff512fa4329f">dsrv_</a></td></tr>
+<tr class="separator:a4148136ed8518f24b602ff512fa4329f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9bca68c30fe021c32b784f915e41f87"><td class="memItemLeft" align="right" valign="top">move_base::MoveBaseConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#af9bca68c30fe021c32b784f915e41f87">last_config_</a></td></tr>
+<tr class="separator:af9bca68c30fe021c32b784f915e41f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f221d00c23c9e39de04ad2eb88f63f"><td class="memItemLeft" align="right" valign="top">move_base::MoveBaseConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a40f221d00c23c9e39de04ad2eb88f63f">default_config_</a></td></tr>
+<tr class="separator:a40f221d00c23c9e39de04ad2eb88f63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4113b9d2c253a4af7a10b0d1d1415d89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a4113b9d2c253a4af7a10b0d1d1415d89">setup_</a></td></tr>
+<tr class="separator:a4113b9d2c253a4af7a10b0d1d1415d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8f20ebde3d39fd24855a97dbf03834"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#adb8f20ebde3d39fd24855a97dbf03834">p_freq_change_</a></td></tr>
+<tr class="separator:adb8f20ebde3d39fd24855a97dbf03834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e91250b8dd2406b6759e57a4bdb87d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#a9e91250b8dd2406b6759e57a4bdb87d7">c_freq_change_</a></td></tr>
+<tr class="separator:a9e91250b8dd2406b6759e57a4bdb87d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52a920158a187fb1aa73f5317b82cf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmove__base_1_1_move_base.html#ad52a920158a187fb1aa73f5317b82cf4">new_global_plan_</a></td></tr>
+<tr class="separator:ad52a920158a187fb1aa73f5317b82cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >A class that uses the actionlib::ActionServer interface that moves the robot base to a goal location. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a1132ccb47b3c514d52be347805eb31f5" name="a1132ccb47b3c514d52be347805eb31f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1132ccb47b3c514d52be347805eb31f5">&#9670;&nbsp;</a></span>MoveBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">move_base::MoveBase::MoveBase </td>
+          <td>(</td>
+          <td class="paramtype">tf2_ros::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>tf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the actions </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the action </td></tr>
+    <tr><td class="paramname">tf</td><td>A reference to a TransformListener </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5_cgraph" id="aclassmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5_cgraph">
+<area shape="rect" title="Constructor for the actions" alt="" coords="5,903,164,944"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098" title="A service call that clears the costmaps of obstacles" alt="" coords="486,536,647,577"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="237,903,395,944"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="959,821,1157,863"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a426e3bfc085f9534b908807d1d734396" title="Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the cos..." alt="" coords="468,601,665,643"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a6225709ac09918840a6ca78518617fb7" title=" " alt="" coords="237,1033,395,1075"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a559a81b839c06c7e69c00fe4a93cb213" title="Loads the default recovery behaviors for the navigation stack" alt="" coords="212,1099,420,1140"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#aa2ae63f18e3bbfb4465b1587d3a84a6f" title="Load the recovery behaviors for the navigation stack from the parameter server" alt="" coords="233,1164,399,1205"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9df641b15f263c18d7a39e55224d5df3" title="Stops the costmap from updating, but sensor data still comes in over the wire" alt="" coords="217,1229,415,1271"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="237,419,395,460"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="237,968,395,1009"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="237,837,395,879"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="713,483,911,524"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="727,665,897,707"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#af0370b7b97c5d8cfcc961abb8d190f21" title="Reset each individual layer" alt="" coords="713,392,911,433"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="959,483,1157,524"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="1205,541,1404,583"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="973,365,1143,407"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="973,235,1143,276"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="973,300,1143,341"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="487,784,646,825"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="959,1031,1157,1072"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a" title="Publishes a velocity command of zero to the base" alt="" coords="979,1117,1137,1159"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="733,965,891,1007"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ae2511210a27b06b9a515df783c074534" title=" " alt="" coords="733,1031,891,1072"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02e6417a642608d82f6d95f8eda0b72d" title=" " alt="" coords="487,903,646,944"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af6108fe562dce4cadb9dc15f9ef377c9" title=" " alt="" coords="733,848,891,889"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="733,600,891,641"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1c8735ead3c927906ca31e015bfc9ab7" title="Same as getLayeredCostmap()&#45;&gt;isCurrent()." alt="" coords="713,783,911,824"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="959,665,1157,707"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="959,600,1157,641"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a7fdc879ceb88df60b51ee4e5f4a1ec6e" title=" " alt="" coords="959,756,1157,797"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="485,353,648,395"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="482,419,651,460"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb8a42c3810e796107ed04c0ca3cbf90" title="Sets the cost of a convex polygon to a desired value" alt="" coords="727,137,897,179"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aa3c49f2d63f6edfb7396d1b0c79a4b12" title="Get the map cells that fill a convex polygon" alt="" coords="973,39,1143,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="973,104,1143,145"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="973,169,1143,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ad0c6f7cb8e11569a02f873c545acec90" title="Get the map cells that make up the outline of a polygon" alt="" coords="1220,39,1389,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#af1d619d9b49b6851cb0a33de4e39ec78" title="Raytrace a line and apply some action at each step" alt="" coords="1452,39,1621,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a54462e95337134adf0a59785b39b57f6" title="A 2D implementation of Bresenham&#39;s raytracing algorithm... applies an action at each step 实现了 对于离散的平面..." alt="" coords="1669,5,1839,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a947041f50d5fb1a44c3fd0601c4fc608" title=" " alt="" coords="1669,71,1839,112"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089" title="Make a new global plan" alt="" coords="487,667,646,708"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a8bdc13ba83e1281fba732980c7d5f225" title="This is used to wake the planner at periodic intervals." alt="" coords="487,1249,646,1291"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4eabd5e76e974cc7c7d4672b925ec4bf" name="a4eabd5e76e974cc7c7d4672b925ec4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eabd5e76e974cc7c7d4672b925ec4bf">&#9670;&nbsp;</a></span>~MoveBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">move_base::MoveBase::~MoveBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor - Cleans up </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa38fbbcfa91d3ee562fedd16a43bd098" name="aa38fbbcfa91d3ee562fedd16a43bd098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38fbbcfa91d3ee562fedd16a43bd098">&#9670;&nbsp;</a></span>clearCostmapsService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::clearCostmapsService </td>
+          <td>(</td>
+          <td class="paramtype">std_srvs::Empty::Request &amp;&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std_srvs::Empty::Response &amp;&#160;</td>
+          <td class="paramname"><em>resp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A service call that clears the costmaps of obstacles </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>The service request </td></tr>
+    <tr><td class="paramname">resp</td><td>The service response </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the service call succeeds, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_cgraph" id="aclassmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_cgraph">
+<area shape="rect" title="A service call that clears the costmaps of obstacles" alt="" coords="5,71,167,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="215,5,412,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="229,71,398,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#af0370b7b97c5d8cfcc961abb8d190f21" title="Reset each individual layer" alt="" coords="215,136,412,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="460,5,659,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="460,71,659,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="475,136,644,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="475,201,644,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="475,267,644,308"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_icgraph" id="aclassmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_icgraph">
+<area shape="rect" title="A service call that clears the costmaps of obstacles" alt="" coords="212,5,373,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac3ec5faa6a11697af52c061fd90907d2" name="ac3ec5faa6a11697af52c061fd90907d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ec5faa6a11697af52c061fd90907d2">&#9670;&nbsp;</a></span>clearCostmapWindows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::clearCostmapWindows </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>size_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>size_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clears obstacles within a window around the robot </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size_x</td><td>The x size of the window </td></tr>
+    <tr><td class="paramname">size_y</td><td>The y size of the window </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_cgraph" id="aclassmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_cgraph">
+<area shape="rect" title="Clears obstacles within a window around the robot" alt="" coords="5,136,168,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="216,39,413,80"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="235,136,394,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb8a42c3810e796107ed04c0ca3cbf90" title="Sets the cost of a convex polygon to a desired value" alt="" coords="230,299,399,340"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="461,5,660,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="462,71,659,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="462,136,659,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="462,201,659,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aa3c49f2d63f6edfb7396d1b0c79a4b12" title="Get the map cells that fill a convex polygon" alt="" coords="476,267,645,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="476,332,645,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="476,397,645,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ad0c6f7cb8e11569a02f873c545acec90" title="Get the map cells that make up the outline of a polygon" alt="" coords="708,267,877,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#af1d619d9b49b6851cb0a33de4e39ec78" title="Raytrace a line and apply some action at each step" alt="" coords="925,267,1095,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a54462e95337134adf0a59785b39b57f6" title="A 2D implementation of Bresenham&#39;s raytracing algorithm... applies an action at each step 实现了 对于离散的平面..." alt="" coords="1143,233,1312,275"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a947041f50d5fb1a44c3fd0601c4fc608" title=" " alt="" coords="1143,299,1312,340"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_icgraph" id="aclassmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_icgraph">
+<area shape="rect" title="Clears obstacles within a window around the robot" alt="" coords="419,5,581,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af6108fe562dce4cadb9dc15f9ef377c9" name="af6108fe562dce4cadb9dc15f9ef377c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6108fe562dce4cadb9dc15f9ef377c9">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::distance </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9_icgraph" id="aclassmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9_icgraph">
+<area shape="rect" title=" " alt="" coords="625,5,784,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="419,5,577,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02ac84b1ead88c0b9b0f361475c90401" name="a02ac84b1ead88c0b9b0f361475c90401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ac84b1ead88c0b9b0f361475c90401">&#9670;&nbsp;</a></span>executeCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::executeCb </td>
+          <td>(</td>
+          <td class="paramtype">const move_base_msgs::MoveBaseGoalConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>move_base_goal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_cgraph" id="aclassmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_cgraph">
+<area shape="rect" title=" " alt="" coords="5,493,164,535"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="231,352,390,393"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="703,57,901,99"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a" title="Publishes a velocity command of zero to the base" alt="" coords="723,487,881,528"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="477,552,635,593"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ae2511210a27b06b9a515df783c074534" title=" " alt="" coords="231,5,390,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02e6417a642608d82f6d95f8eda0b72d" title=" " alt="" coords="231,668,390,709"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a426e3bfc085f9534b908807d1d734396" title="Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the cos..." alt="" coords="212,603,409,644"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af6108fe562dce4cadb9dc15f9ef377c9" title=" " alt="" coords="477,319,635,360"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="457,253,655,295"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="471,188,641,229"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="477,123,635,164"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1c8735ead3c927906ca31e015bfc9ab7" title="Same as getLayeredCostmap()&#45;&gt;isCurrent()." alt="" coords="457,384,655,425"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="703,253,901,295"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="703,123,901,164"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="703,188,901,229"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a7fdc879ceb88df60b51ee4e5f4a1ec6e" title=" " alt="" coords="703,384,901,425"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="703,552,901,593"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="949,581,1148,623"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_icgraph" id="aclassmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4cde906bc7b501d5918f8482da5fbabe" name="a4cde906bc7b501d5918f8482da5fbabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cde906bc7b501d5918f8482da5fbabe">&#9670;&nbsp;</a></span>executeCycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::executeCycle </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Performs a control cycle </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">goal</td><td>A reference to the goal to pursue </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if processing of the goal is done, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_cgraph" id="aclassmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_cgraph">
+<area shape="rect" title="Performs a control cycle" alt="" coords="5,201,164,243"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af6108fe562dce4cadb9dc15f9ef377c9" title=" " alt="" coords="231,5,390,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="212,71,409,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="226,136,395,177"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="231,201,390,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1c8735ead3c927906ca31e015bfc9ab7" title="Same as getLayeredCostmap()&#45;&gt;isCurrent()." alt="" coords="212,267,409,308"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a" title="Publishes a velocity command of zero to the base" alt="" coords="477,357,636,399"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="231,384,390,425"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="457,31,656,72"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="458,96,655,137"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="458,161,655,203"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="458,227,655,268"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a7fdc879ceb88df60b51ee4e5f4a1ec6e" title=" " alt="" coords="457,292,656,333"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="458,423,655,464"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="704,423,903,464"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_icgraph" id="aclassmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_icgraph">
+<area shape="rect" title="Performs a control cycle" alt="" coords="419,5,577,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab267e8cd4697812fde4df300cb5902ac" name="ab267e8cd4697812fde4df300cb5902ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab267e8cd4697812fde4df300cb5902ac">&#9670;&nbsp;</a></span>getRobotPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::getRobotPose </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_cgraph" id="aclassmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_cgraph">
+<area shape="rect" title=" " alt="" coords="5,71,164,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="212,5,409,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="212,71,409,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="212,136,409,177"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_icgraph" id="aclassmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_icgraph">
+<area shape="rect" title=" " alt="" coords="629,93,788,135"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="419,5,581,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="212,57,371,99"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="421,123,579,164"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089" title="Make a new global plan" alt="" coords="421,188,579,229"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,123,164,164"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,123,371,164"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="212,188,371,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6225709ac09918840a6ca78518617fb7" name="a6225709ac09918840a6ca78518617fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6225709ac09918840a6ca78518617fb7">&#9670;&nbsp;</a></span>goalCB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::goalCB </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped::ConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>goal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7_icgraph" id="aclassmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae2511210a27b06b9a515df783c074534" name="ae2511210a27b06b9a515df783c074534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2511210a27b06b9a515df783c074534">&#9670;&nbsp;</a></span>goalToGlobalFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::PoseStamped move_base::MoveBase::goalToGlobalFrame </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal_pose_msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_cgraph" id="aclassmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,164,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="212,5,409,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_icgraph" id="aclassmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_icgraph">
+<area shape="rect" title=" " alt="" coords="419,5,577,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02e6417a642608d82f6d95f8eda0b72d" name="a02e6417a642608d82f6d95f8eda0b72d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e6417a642608d82f6d95f8eda0b72d">&#9670;&nbsp;</a></span>isQuaternionValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::isQuaternionValid </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Quaternion &amp;&#160;</td>
+          <td class="paramname"><em>q</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d_icgraph" id="aclassmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d_icgraph">
+<area shape="rect" title=" " alt="" coords="419,5,577,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a559a81b839c06c7e69c00fe4a93cb213" name="a559a81b839c06c7e69c00fe4a93cb213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559a81b839c06c7e69c00fe4a93cb213">&#9670;&nbsp;</a></span>loadDefaultRecoveryBehaviors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::loadDefaultRecoveryBehaviors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads the default recovery behaviors for the navigation stack </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213_icgraph" id="aclassmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213_icgraph">
+<area shape="rect" title="Loads the default recovery behaviors for the navigation stack" alt="" coords="212,5,420,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa2ae63f18e3bbfb4465b1587d3a84a6f" name="aa2ae63f18e3bbfb4465b1587d3a84a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ae63f18e3bbfb4465b1587d3a84a6f">&#9670;&nbsp;</a></span>loadRecoveryBehaviors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::loadRecoveryBehaviors </td>
+          <td>(</td>
+          <td class="paramtype">ros::NodeHandle&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load the recovery behaviors for the navigation stack from the parameter server </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>The ros::NodeHandle to be used for loading parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the recovery behaviors were loaded successfully, false otherwise </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f_icgraph" id="aclassmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f_icgraph">
+<area shape="rect" title="Load the recovery behaviors for the navigation stack from the parameter server" alt="" coords="212,5,379,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af48f0d98ba773f9799e0a970bf092089" name="af48f0d98ba773f9799e0a970bf092089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48f0d98ba773f9799e0a970bf092089">&#9670;&nbsp;</a></span>makePlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::makePlan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make a new global plan </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">goal</td><td>The goal to plan to </td></tr>
+    <tr><td class="paramname">plan</td><td>Will be filled in with the plan made by the planner </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if planning succeeds, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_cgraph" id="aclassmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_cgraph">
+<area shape="rect" title="Make a new global plan" alt="" coords="5,71,164,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="212,5,409,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="226,71,395,112"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="231,136,390,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="457,5,656,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="458,71,655,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="458,136,655,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="458,201,655,243"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_icgraph" id="aclassmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_icgraph">
+<area shape="rect" title="Make a new global plan" alt="" coords="419,5,577,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02b97ca12b73c0caf06aaafde2c930e7" name="a02b97ca12b73c0caf06aaafde2c930e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02b97ca12b73c0caf06aaafde2c930e7">&#9670;&nbsp;</a></span>planService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::planService </td>
+          <td>(</td>
+          <td class="paramtype">nav_msgs::GetPlan::Request &amp;&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nav_msgs::GetPlan::Response &amp;&#160;</td>
+          <td class="paramname"><em>resp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A service call that can be made when the action is inactive that will return a plan </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>The goal request </td></tr>
+    <tr><td class="paramname">resp</td><td>The plan request </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if planning succeeded, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_cgraph" id="aclassmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_cgraph">
+<area shape="rect" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="5,199,164,240"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="215,169,378,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="429,104,627,145"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="449,267,607,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="212,287,381,328"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb8a42c3810e796107ed04c0ca3cbf90" title="Sets the cost of a convex polygon to a desired value" alt="" coords="443,169,613,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="675,5,873,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="675,332,873,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="675,397,873,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="675,267,873,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aa3c49f2d63f6edfb7396d1b0c79a4b12" title="Get the map cells that fill a convex polygon" alt="" coords="689,136,859,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="689,201,859,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="689,71,859,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ad0c6f7cb8e11569a02f873c545acec90" title="Get the map cells that make up the outline of a polygon" alt="" coords="921,136,1091,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#af1d619d9b49b6851cb0a33de4e39ec78" title="Raytrace a line and apply some action at each step" alt="" coords="1139,136,1308,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a54462e95337134adf0a59785b39b57f6" title="A 2D implementation of Bresenham&#39;s raytracing algorithm... applies an action at each step 实现了 对于离散的平面..." alt="" coords="1356,103,1525,144"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a947041f50d5fb1a44c3fd0601c4fc608" title=" " alt="" coords="1356,168,1525,209"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_icgraph" id="aclassmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_icgraph">
+<area shape="rect" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12b28ebdf00058e1ffc8b29ec92c320a" name="a12b28ebdf00058e1ffc8b29ec92c320a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b28ebdf00058e1ffc8b29ec92c320a">&#9670;&nbsp;</a></span>planThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::planThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_cgraph" id="aclassmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,136,164,177"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089" title="Make a new global plan" alt="" coords="212,71,371,112"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a" title="Publishes a velocity command of zero to the base" alt="" coords="212,136,371,177"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a8bdc13ba83e1281fba732980c7d5f225" title="This is used to wake the planner at periodic intervals." alt="" coords="212,201,371,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="419,5,616,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="433,71,602,112"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="438,136,597,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="664,5,863,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="665,71,862,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="665,136,862,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="665,201,862,243"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_icgraph" id="aclassmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af31a9045b36350e06310c46eb138fc4a" name="af31a9045b36350e06310c46eb138fc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31a9045b36350e06310c46eb138fc4a">&#9670;&nbsp;</a></span>publishZeroVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::publishZeroVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publishes a velocity command of zero to the base </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a_icgraph" id="aclassmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a_icgraph">
+<area shape="rect" title="Publishes a velocity command of zero to the base" alt="" coords="832,59,991,100"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,92,371,133"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="419,92,577,133"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="625,147,784,188"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,92,164,133"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="419,209,577,251"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab67ea64882589c75055cc07bf4bd9aa1" name="ab67ea64882589c75055cc07bf4bd9aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67ea64882589c75055cc07bf4bd9aa1">&#9670;&nbsp;</a></span>reconfigureCB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::reconfigureCB </td>
+          <td>(</td>
+          <td class="paramtype">move_base::MoveBaseConfig &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_cgraph" id="aclassmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,164,80"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="212,39,371,80"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a" title="Publishes a velocity command of zero to the base" alt="" coords="438,5,597,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="419,71,616,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="664,71,863,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_icgraph" id="aclassmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a874fe3d747671d75dfafd26d7b36068d" name="a874fe3d747671d75dfafd26d7b36068d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874fe3d747671d75dfafd26d7b36068d">&#9670;&nbsp;</a></span>resetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::resetState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the state of the <a class="el" href="namespacemove__base.html">move_base</a> action and send a zero velocity command to the base </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_cgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_cgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_cgraph" id="aclassmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_cgraph">
+<area shape="rect" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="5,39,164,80"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a" title="Publishes a velocity command of zero to the base" alt="" coords="231,5,390,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="212,71,409,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="457,71,656,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_icgraph" id="aclassmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_icgraph">
+<area shape="rect" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="625,24,784,66"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,18,371,59"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="419,24,577,66"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="212,83,371,124"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,51,164,92"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8bdc13ba83e1281fba732980c7d5f225" name="a8bdc13ba83e1281fba732980c7d5f225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bdc13ba83e1281fba732980c7d5f225">&#9670;&nbsp;</a></span>wakePlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_base::MoveBase::wakePlanner </td>
+          <td>(</td>
+          <td class="paramtype">const ros::TimerEvent &amp;&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is used to wake the planner at periodic intervals. </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225_icgraph.png" border="0" usemap="#aclassmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225_icgraph" alt=""/></div>
+<map name="aclassmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225_icgraph" id="aclassmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225_icgraph">
+<area shape="rect" title="This is used to wake the planner at periodic intervals." alt="" coords="419,5,577,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab3673dd4ff221886c815906b0b705e71" name="ab3673dd4ff221886c815906b0b705e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3673dd4ff221886c815906b0b705e71">&#9670;&nbsp;</a></span>action_goal_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher move_base::MoveBase::action_goal_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0691561e18e14022c6c7c3f584b9ad8" name="aa0691561e18e14022c6c7c3f584b9ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0691561e18e14022c6c7c3f584b9ad8">&#9670;&nbsp;</a></span>as_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemove__base.html#ac8da40ec5525ddc900973cc3c6ced790">MoveBaseActionServer</a>* move_base::MoveBase::as_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab868dc3d278dff26a10adee6c476eca" name="aab868dc3d278dff26a10adee6c476eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab868dc3d278dff26a10adee6c476eca">&#9670;&nbsp;</a></span>bgp_loader_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pluginlib::ClassLoader&lt;<a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a>&gt; move_base::MoveBase::bgp_loader_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67d4773e77236e3bec4f530e7f59cb87" name="a67d4773e77236e3bec4f530e7f59cb87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d4773e77236e3bec4f530e7f59cb87">&#9670;&nbsp;</a></span>blp_loader_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pluginlib::ClassLoader&lt;<a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a>&gt; move_base::MoveBase::blp_loader_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e91250b8dd2406b6759e57a4bdb87d7" name="a9e91250b8dd2406b6759e57a4bdb87d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e91250b8dd2406b6759e57a4bdb87d7">&#9670;&nbsp;</a></span>c_freq_change_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::c_freq_change_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6b5316081ba1d6d38c2592269f03639" name="ab6b5316081ba1d6d38c2592269f03639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6b5316081ba1d6d38c2592269f03639">&#9670;&nbsp;</a></span>circumscribed_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::circumscribed_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71bc76c4949a4fa71b292df2377742f2" name="a71bc76c4949a4fa71b292df2377742f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71bc76c4949a4fa71b292df2377742f2">&#9670;&nbsp;</a></span>clear_costmaps_srv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::ServiceServer move_base::MoveBase::clear_costmaps_srv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa23c1a593f407da1a76f27134abc2272" name="aa23c1a593f407da1a76f27134abc2272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23c1a593f407da1a76f27134abc2272">&#9670;&nbsp;</a></span>clearing_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::clearing_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0dd2f813316fcd53fe9cc00a1460679" name="ae0dd2f813316fcd53fe9cc00a1460679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0dd2f813316fcd53fe9cc00a1460679">&#9670;&nbsp;</a></span>clearing_rotation_allowed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::clearing_rotation_allowed_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a547956b81fede41fc392b1c39a5f0e76" name="a547956b81fede41fc392b1c39a5f0e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547956b81fede41fc392b1c39a5f0e76">&#9670;&nbsp;</a></span>configuration_mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::recursive_mutex move_base::MoveBase::configuration_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a572cb09cc8c8620e87863ab87b22f690" name="a572cb09cc8c8620e87863ab87b22f690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572cb09cc8c8620e87863ab87b22f690">&#9670;&nbsp;</a></span>conservative_reset_dist_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::conservative_reset_dist_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9db6c791e5d92bd5280be83c908f90b" name="af9db6c791e5d92bd5280be83c908f90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9db6c791e5d92bd5280be83c908f90b">&#9670;&nbsp;</a></span>controller_costmap_ros_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> * move_base::MoveBase::controller_costmap_ros_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1a1a6d5934e7e79ed3162965e892c3f" name="ad1a1a6d5934e7e79ed3162965e892c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a1a6d5934e7e79ed3162965e892c3f">&#9670;&nbsp;</a></span>controller_frequency_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::controller_frequency_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae62d36ca6d041318e450759866dc4e6a" name="ae62d36ca6d041318e450759866dc4e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62d36ca6d041318e450759866dc4e6a">&#9670;&nbsp;</a></span>controller_patience_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::controller_patience_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1856c58f97950cb3d0c7f97bca74f30b" name="a1856c58f97950cb3d0c7f97bca74f30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1856c58f97950cb3d0c7f97bca74f30b">&#9670;&nbsp;</a></span>controller_plan_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::PoseStamped&gt;* move_base::MoveBase::controller_plan_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b6ed65d88fd5c97ec1dfbe099c8432e" name="a3b6ed65d88fd5c97ec1dfbe099c8432e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6ed65d88fd5c97ec1dfbe099c8432e">&#9670;&nbsp;</a></span>current_goal_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher move_base::MoveBase::current_goal_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40f221d00c23c9e39de04ad2eb88f63f" name="a40f221d00c23c9e39de04ad2eb88f63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f221d00c23c9e39de04ad2eb88f63f">&#9670;&nbsp;</a></span>default_config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">move_base::MoveBaseConfig move_base::MoveBase::default_config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4148136ed8518f24b602ff512fa4329f" name="a4148136ed8518f24b602ff512fa4329f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4148136ed8518f24b602ff512fa4329f">&#9670;&nbsp;</a></span>dsrv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic_reconfigure::Server&lt;move_base::MoveBaseConfig&gt;* move_base::MoveBase::dsrv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c8f515da67875f8badfd03d55183d8d" name="a8c8f515da67875f8badfd03d55183d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c8f515da67875f8badfd03d55183d8d">&#9670;&nbsp;</a></span>global_frame_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string move_base::MoveBase::global_frame_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1673fe852de40856760507118516be6" name="ab1673fe852de40856760507118516be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1673fe852de40856760507118516be6">&#9670;&nbsp;</a></span>global_pose_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::PoseStamped move_base::MoveBase::global_pose_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b1b548900f137b360a2a85b54742a1b" name="a2b1b548900f137b360a2a85b54742a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1b548900f137b360a2a85b54742a1b">&#9670;&nbsp;</a></span>goal_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Subscriber move_base::MoveBase::goal_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09d7236f88a70aef2555bb445dfd5e63" name="a09d7236f88a70aef2555bb445dfd5e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d7236f88a70aef2555bb445dfd5e63">&#9670;&nbsp;</a></span>inscribed_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::inscribed_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9bca68c30fe021c32b784f915e41f87" name="af9bca68c30fe021c32b784f915e41f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9bca68c30fe021c32b784f915e41f87">&#9670;&nbsp;</a></span>last_config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">move_base::MoveBaseConfig move_base::MoveBase::last_config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04522db38598d7f86e696e3bf5fbac3c" name="a04522db38598d7f86e696e3bf5fbac3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04522db38598d7f86e696e3bf5fbac3c">&#9670;&nbsp;</a></span>last_oscillation_reset_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Time move_base::MoveBase::last_oscillation_reset_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9df6ca6c2c19290a04faa50a837b3484" name="a9df6ca6c2c19290a04faa50a837b3484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df6ca6c2c19290a04faa50a837b3484">&#9670;&nbsp;</a></span>last_valid_control_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Time move_base::MoveBase::last_valid_control_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b072f605beee9dc864a72b13f19534f" name="a4b072f605beee9dc864a72b13f19534f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b072f605beee9dc864a72b13f19534f">&#9670;&nbsp;</a></span>last_valid_plan_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Time move_base::MoveBase::last_valid_plan_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af993602ac2c3b59bbfd2c3cf464e30a7" name="af993602ac2c3b59bbfd2c3cf464e30a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af993602ac2c3b59bbfd2c3cf464e30a7">&#9670;&nbsp;</a></span>latest_plan_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::PoseStamped&gt;* move_base::MoveBase::latest_plan_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a402d2b18591bf28495b27080b0f05104" name="a402d2b18591bf28495b27080b0f05104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402d2b18591bf28495b27080b0f05104">&#9670;&nbsp;</a></span>make_plan_add_unreachable_goal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::make_plan_add_unreachable_goal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac61513b02830655684b7ac8bc08fcea4" name="ac61513b02830655684b7ac8bc08fcea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61513b02830655684b7ac8bc08fcea4">&#9670;&nbsp;</a></span>make_plan_clear_costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::make_plan_clear_costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affd0b654ef8136723b4a534569bf035b" name="affd0b654ef8136723b4a534569bf035b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd0b654ef8136723b4a534569bf035b">&#9670;&nbsp;</a></span>make_plan_srv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::ServiceServer move_base::MoveBase::make_plan_srv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4948942a33d1145569cb36f87476d5ef" name="a4948942a33d1145569cb36f87476d5ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4948942a33d1145569cb36f87476d5ef">&#9670;&nbsp;</a></span>max_planning_retries_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t move_base::MoveBase::max_planning_retries_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad52a920158a187fb1aa73f5317b82cf4" name="ad52a920158a187fb1aa73f5317b82cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad52a920158a187fb1aa73f5317b82cf4">&#9670;&nbsp;</a></span>new_global_plan_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::new_global_plan_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac27401426e7a02566549348ba70a2236" name="ac27401426e7a02566549348ba70a2236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac27401426e7a02566549348ba70a2236">&#9670;&nbsp;</a></span>oscillation_distance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::oscillation_distance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac105a1f4a81f5d3f503cb6b44d8289fb" name="ac105a1f4a81f5d3f503cb6b44d8289fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac105a1f4a81f5d3f503cb6b44d8289fb">&#9670;&nbsp;</a></span>oscillation_pose_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::PoseStamped move_base::MoveBase::oscillation_pose_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa55e6b2ed7171e916fed5b1068604e91" name="aa55e6b2ed7171e916fed5b1068604e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55e6b2ed7171e916fed5b1068604e91">&#9670;&nbsp;</a></span>oscillation_timeout_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::oscillation_timeout_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb8f20ebde3d39fd24855a97dbf03834" name="adb8f20ebde3d39fd24855a97dbf03834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8f20ebde3d39fd24855a97dbf03834">&#9670;&nbsp;</a></span>p_freq_change_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::p_freq_change_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2564bdc40f3a74bb527e57efe8ad2238" name="a2564bdc40f3a74bb527e57efe8ad2238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2564bdc40f3a74bb527e57efe8ad2238">&#9670;&nbsp;</a></span>planner_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a>&gt; move_base::MoveBase::planner_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a252ed7ae082dfc0d25334053076c9fc3" name="a252ed7ae082dfc0d25334053076c9fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a252ed7ae082dfc0d25334053076c9fc3">&#9670;&nbsp;</a></span>planner_cond_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::condition_variable_any move_base::MoveBase::planner_cond_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a215e33801629f482dddb812928ff1e6c" name="a215e33801629f482dddb812928ff1e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215e33801629f482dddb812928ff1e6c">&#9670;&nbsp;</a></span>planner_costmap_ros_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* move_base::MoveBase::planner_costmap_ros_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeebbf28b03f764abd63d0b756a6c4e7e" name="aeebbf28b03f764abd63d0b756a6c4e7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebbf28b03f764abd63d0b756a6c4e7e">&#9670;&nbsp;</a></span>planner_frequency_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::planner_frequency_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae309d359124b3c6e4de745e15acaaf2c" name="ae309d359124b3c6e4de745e15acaaf2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae309d359124b3c6e4de745e15acaaf2c">&#9670;&nbsp;</a></span>planner_goal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::PoseStamped move_base::MoveBase::planner_goal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5446009ae9a87ede0d10451876fc34b1" name="a5446009ae9a87ede0d10451876fc34b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5446009ae9a87ede0d10451876fc34b1">&#9670;&nbsp;</a></span>planner_mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::recursive_mutex move_base::MoveBase::planner_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d386ec12ecfc0540ab548f3483a0265" name="a1d386ec12ecfc0540ab548f3483a0265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d386ec12ecfc0540ab548f3483a0265">&#9670;&nbsp;</a></span>planner_patience_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double move_base::MoveBase::planner_patience_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae799defb3ae10421f59a676ed9928f4d" name="ae799defb3ae10421f59a676ed9928f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae799defb3ae10421f59a676ed9928f4d">&#9670;&nbsp;</a></span>planner_plan_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::PoseStamped&gt;* move_base::MoveBase::planner_plan_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b73801f97cf862f62bb4eb3784c3d7f" name="a4b73801f97cf862f62bb4eb3784c3d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b73801f97cf862f62bb4eb3784c3d7f">&#9670;&nbsp;</a></span>planner_thread_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::thread* move_base::MoveBase::planner_thread_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54d3768d8395be910ee8c94248910d13" name="a54d3768d8395be910ee8c94248910d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d3768d8395be910ee8c94248910d13">&#9670;&nbsp;</a></span>planning_retries_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t move_base::MoveBase::planning_retries_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09c78316058314b0a664c94890f13283" name="a09c78316058314b0a664c94890f13283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c78316058314b0a664c94890f13283">&#9670;&nbsp;</a></span>recovery_behavior_enabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::recovery_behavior_enabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a976906c4fac47447efeae651b96db92b" name="a976906c4fac47447efeae651b96db92b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a976906c4fac47447efeae651b96db92b">&#9670;&nbsp;</a></span>recovery_behavior_names_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; move_base::MoveBase::recovery_behavior_names_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c7ab119183a6462de1c8ab60214a22f" name="a7c7ab119183a6462de1c8ab60214a22f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c7ab119183a6462de1c8ab60214a22f">&#9670;&nbsp;</a></span>recovery_behaviors_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;boost::shared_ptr&lt;<a class="el" href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a>&gt; &gt; move_base::MoveBase::recovery_behaviors_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff86447affb75f7f87c21cf8aa6b1e05" name="aff86447affb75f7f87c21cf8aa6b1e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff86447affb75f7f87c21cf8aa6b1e05">&#9670;&nbsp;</a></span>recovery_index_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int move_base::MoveBase::recovery_index_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0364046a17210f7ae2003c86d47c7646" name="a0364046a17210f7ae2003c86d47c7646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0364046a17210f7ae2003c86d47c7646">&#9670;&nbsp;</a></span>recovery_loader_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pluginlib::ClassLoader&lt;<a class="el" href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a>&gt; move_base::MoveBase::recovery_loader_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62ef541590e9448fda031185970de667" name="a62ef541590e9448fda031185970de667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ef541590e9448fda031185970de667">&#9670;&nbsp;</a></span>recovery_status_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher move_base::MoveBase::recovery_status_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee93a00f4ec16023b1517dbf83233684" name="aee93a00f4ec16023b1517dbf83233684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee93a00f4ec16023b1517dbf83233684">&#9670;&nbsp;</a></span>recovery_trigger_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemove__base.html#ad1e7ef837dae3dd211a77e7d3a7d1548">RecoveryTrigger</a> move_base::MoveBase::recovery_trigger_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb9bfde38f6ab462a12ac5d74e5a91c3" name="acb9bfde38f6ab462a12ac5d74e5a91c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9bfde38f6ab462a12ac5d74e5a91c3">&#9670;&nbsp;</a></span>robot_base_frame_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string move_base::MoveBase::robot_base_frame_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bf1b6c604084c0a1895a2f1f6469b54" name="a4bf1b6c604084c0a1895a2f1f6469b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf1b6c604084c0a1895a2f1f6469b54">&#9670;&nbsp;</a></span>runPlanner_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::runPlanner_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4113b9d2c253a4af7a10b0d1d1415d89" name="a4113b9d2c253a4af7a10b0d1d1415d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4113b9d2c253a4af7a10b0d1d1415d89">&#9670;&nbsp;</a></span>setup_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::setup_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98edccf31a71c90da18a44144cb4806b" name="a98edccf31a71c90da18a44144cb4806b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98edccf31a71c90da18a44144cb4806b">&#9670;&nbsp;</a></span>shutdown_costmaps_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_base::MoveBase::shutdown_costmaps_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8142e16d75b428f9d95ccf6d5cfa73b9" name="a8142e16d75b428f9d95ccf6d5cfa73b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8142e16d75b428f9d95ccf6d5cfa73b9">&#9670;&nbsp;</a></span>state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemove__base.html#a834c14e8a0d367042661457a3278cf26">MoveBaseState</a> move_base::MoveBase::state_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af756b3f1419d3fdbf1abd61066639811" name="af756b3f1419d3fdbf1abd61066639811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af756b3f1419d3fdbf1abd61066639811">&#9670;&nbsp;</a></span>tc_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a>&gt; move_base::MoveBase::tc_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c682b98057a8aba46c27e133c8639e1" name="a9c682b98057a8aba46c27e133c8639e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c682b98057a8aba46c27e133c8639e1">&#9670;&nbsp;</a></span>tf_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::Buffer&amp; move_base::MoveBase::tf_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaa652faeab2a091b12a9de4d7a4d67d" name="aaaa652faeab2a091b12a9de4d7a4d67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa652faeab2a091b12a9de4d7a4d67d">&#9670;&nbsp;</a></span>vel_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher move_base::MoveBase::vel_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>move_base/include/move_base/<a class="el" href="move__base_8h_source.html">move_base.h</a></li>
+<li>move_base/src/<a class="el" href="move__base_8cpp.html">move_base.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

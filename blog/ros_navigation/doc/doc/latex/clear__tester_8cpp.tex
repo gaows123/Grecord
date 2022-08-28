@@ -1,0 +1,179 @@
+\hypertarget{clear__tester_8cpp}{}\doxysection{clear\+\_\+costmap\+\_\+recovery/test/clear\+\_\+tester.cpp 文件参考}
+\label{clear__tester_8cpp}\index{clear\_costmap\_recovery/test/clear\_tester.cpp@{clear\_costmap\_recovery/test/clear\_tester.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$clear\+\_\+costmap\+\_\+recovery/clear\+\_\+costmap\+\_\+recovery.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/testing\+\_\+helper.\+h$>$}\newline
+{\ttfamily \#include $<$tf2\+\_\+ros/transform\+\_\+listener.\+h$>$}\newline
+clear\+\_\+tester.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{clear__tester_8cpp_a401dad5e820a56943c7223955000dc1b}{test\+Clear\+Behavior}} (std\+::string name, double \mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}}, bool obstacles, bool static\+\_\+map, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$global\+\_\+costmap, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$local\+\_\+costmap)
+\item 
+void \mbox{\hyperlink{clear__tester_8cpp_ae52f25afda509d6ef50c32f8feaae444}{test\+Count\+Lethal}} (std\+::string name, double \mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}}, bool obstacles, bool static\+\_\+map, int global\+\_\+lethal, int local\+\_\+lethal=0)
+\item 
+\mbox{\hyperlink{clear__tester_8cpp_abafd3249b8a1dc81312408e67fec172a}{TEST}} (Clear\+Tester, basic\+Test)
+\item 
+\mbox{\hyperlink{clear__tester_8cpp_aaf3724518fdd64f4d1ded51015d69e9e}{TEST}} (Clear\+Tester, big\+Radius\+Test)
+\item 
+\mbox{\hyperlink{clear__tester_8cpp_a42cd3668cf12389fc35bf80499bbda8c}{TEST}} (Clear\+Tester, clear\+No\+Layers\+Test)
+\item 
+\mbox{\hyperlink{clear__tester_8cpp_a70bfda0e7040d95bf8b907d4b538a975}{TEST}} (Clear\+Tester, clear\+Both\+Test)
+\item 
+\mbox{\hyperlink{clear__tester_8cpp_ab665a5213a668ee20f42bec98c0f823d}{TEST}} (Clear\+Tester, clear\+Both\+Test2)
+\item 
+int \mbox{\hyperlink{clear__tester_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+tf2\+\_\+ros\+::\+Buffer $\ast$ \mbox{\hyperlink{clear__tester_8cpp_aeb20f9be690c9f54ab88a84df0bd57e7}{transformer}}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Listener $\ast$ \mbox{\hyperlink{clear__tester_8cpp_a11d1a032f0c13f2cdb595138ecc17177}{tfl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{clear__tester_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{clear__tester_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!main@{main}}
+\index{main@{main}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{clear__tester_8cpp_abafd3249b8a1dc81312408e67fec172a}\label{clear__tester_8cpp_abafd3249b8a1dc81312408e67fec172a}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Clear\+Tester}]{,  }\item[{basic\+Test}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_abafd3249b8a1dc81312408e67fec172a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{clear__tester_8cpp_aaf3724518fdd64f4d1ded51015d69e9e}\label{clear__tester_8cpp_aaf3724518fdd64f4d1ded51015d69e9e}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Clear\+Tester}]{,  }\item[{big\+Radius\+Test}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_aaf3724518fdd64f4d1ded51015d69e9e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{clear__tester_8cpp_a70bfda0e7040d95bf8b907d4b538a975}\label{clear__tester_8cpp_a70bfda0e7040d95bf8b907d4b538a975}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Clear\+Tester}]{,  }\item[{clear\+Both\+Test}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_a70bfda0e7040d95bf8b907d4b538a975_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{clear__tester_8cpp_ab665a5213a668ee20f42bec98c0f823d}\label{clear__tester_8cpp_ab665a5213a668ee20f42bec98c0f823d}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Clear\+Tester}]{,  }\item[{clear\+Both\+Test2}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_ab665a5213a668ee20f42bec98c0f823d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{clear__tester_8cpp_a42cd3668cf12389fc35bf80499bbda8c}\label{clear__tester_8cpp_a42cd3668cf12389fc35bf80499bbda8c}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Clear\+Tester}]{,  }\item[{clear\+No\+Layers\+Test}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_a42cd3668cf12389fc35bf80499bbda8c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{clear__tester_8cpp_a401dad5e820a56943c7223955000dc1b}\label{clear__tester_8cpp_a401dad5e820a56943c7223955000dc1b}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!testClearBehavior@{testClearBehavior}}
+\index{testClearBehavior@{testClearBehavior}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{testClearBehavior()}{testClearBehavior()}}
+{\footnotesize\ttfamily void test\+Clear\+Behavior (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{distance,  }\item[{bool}]{obstacles,  }\item[{bool}]{static\+\_\+map,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{global\+\_\+costmap,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{local\+\_\+costmap }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_a401dad5e820a56943c7223955000dc1b_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_a401dad5e820a56943c7223955000dc1b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{clear__tester_8cpp_ae52f25afda509d6ef50c32f8feaae444}\label{clear__tester_8cpp_ae52f25afda509d6ef50c32f8feaae444}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!testCountLethal@{testCountLethal}}
+\index{testCountLethal@{testCountLethal}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{testCountLethal()}{testCountLethal()}}
+{\footnotesize\ttfamily void test\+Count\+Lethal (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{distance,  }\item[{bool}]{obstacles,  }\item[{bool}]{static\+\_\+map,  }\item[{int}]{global\+\_\+lethal,  }\item[{int}]{local\+\_\+lethal = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{clear__tester_8cpp_ae52f25afda509d6ef50c32f8feaae444_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{clear__tester_8cpp_ae52f25afda509d6ef50c32f8feaae444_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{clear__tester_8cpp_a11d1a032f0c13f2cdb595138ecc17177}\label{clear__tester_8cpp_a11d1a032f0c13f2cdb595138ecc17177}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!tfl@{tfl}}
+\index{tfl@{tfl}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{tfl}{tfl}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Transform\+Listener$\ast$ tfl}
+
+\mbox{\Hypertarget{clear__tester_8cpp_aeb20f9be690c9f54ab88a84df0bd57e7}\label{clear__tester_8cpp_aeb20f9be690c9f54ab88a84df0bd57e7}} 
+\index{clear\_tester.cpp@{clear\_tester.cpp}!transformer@{transformer}}
+\index{transformer@{transformer}!clear\_tester.cpp@{clear\_tester.cpp}}
+\doxysubsubsection{\texorpdfstring{transformer}{transformer}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer$\ast$ transformer}
+

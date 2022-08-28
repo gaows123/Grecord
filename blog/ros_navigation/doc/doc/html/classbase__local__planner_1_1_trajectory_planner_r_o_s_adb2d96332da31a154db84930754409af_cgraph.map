@@ -1,0 +1,52 @@
+<map id="base_local_planner::TrajectoryPlannerROS::computeVelocityCommands" name="base_local_planner::TrajectoryPlannerROS::computeVelocityCommands">
+<area shape="rect" id="node1" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,917,199,973"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="555,1184,688,1240"/>
+<area shape="rect" id="node32" href="$namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="247,429,477,470"/>
+<area shape="rect" id="node33" href="$namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="275,494,449,535"/>
+<area shape="rect" id="node34" href="$classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="289,560,435,616"/>
+<area shape="rect" id="node35" href="$classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="290,641,434,682"/>
+<area shape="rect" id="node36" href="$classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="273,706,451,747"/>
+<area shape="rect" id="node37" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="263,771,461,813"/>
+<area shape="rect" id="node38" href="$classbase__local__planner_1_1_odometry_helper_ros.html#ab70a70a7a3f3d8e6788e6e1f0503a717" title=" " alt="" coords="289,837,435,893"/>
+<area shape="rect" id="node39" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9" title=" " alt="" coords="282,917,442,973"/>
+<area shape="rect" id="node40" href="$namespacebase__local__planner.html#ac8ecc12b4595fc60fdbe4b936ce1a274" title="Trim off parts of the global plan that are far enough behind the robot" alt="" coords="295,998,429,1039"/>
+<area shape="rect" id="node41" href="$classbase__local__planner_1_1_map_grid_visualizer.html#abc768f1e16ce0cdf87dec9f25a60ee64" title="Build and publish a PointCloud if the publish_cost_grid_pc parameter was true. Only include points fo..." alt="" coords="795,1569,931,1625"/>
+<area shape="rect" id="node42" href="$namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="295,1145,429,1186"/>
+<area shape="rect" id="node43" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="282,1064,442,1120"/>
+<area shape="rect" id="node47" href="$namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="295,1262,429,1303"/>
+<area shape="rect" id="node48" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3" title="基于加速度限制让机器人停止" alt="" coords="282,348,442,404"/>
+<area shape="rect" id="node49" href="$namespacebase__local__planner.html#a962893e66167d44e22bd284e83e4383e" title="Transforms the global plan of the robot from the planner frame to the frame of the costmap,..." alt="" coords="789,1457,937,1498"/>
+<area shape="rect" id="node50" href="$classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="555,1291,688,1347"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory_planner.html#a44c8434c9df68efb24eef36fc670ae7c" title="Create the trajectories we wish to explore, score them, and return the best option" alt="" coords="795,556,930,612"/>
+<area shape="rect" id="node18" href="$classbase__local__planner_1_1_footprint_helper.html#ae808cb5daa8579714519073568709f15" title="获得组成机器人footprint的单元格" alt="" coords="765,119,960,175"/>
+<area shape="rect" id="node21" href="$classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11" title="reset path distance fields for all cells" alt="" coords="779,1181,946,1222"/>
+<area shape="rect" id="node23" href="$classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="781,1246,944,1287"/>
+<area shape="rect" id="node31" href="$classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="777,1311,948,1353"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory_planner.html#a78ea0a479b32f589f518c55a78dcb755" title="Generate and score a single trajectory" alt="" coords="1051,563,1190,619"/>
+<area shape="rect" id="node14" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="1515,631,1684,673"/>
+<area shape="rect" id="node16" href="$classbase__local__planner_1_1_trajectory.html#a7247858ecf5432a6557d8daf55e3e3f5" title="Get the last point of the trajectory" alt="" coords="1038,217,1203,258"/>
+<area shape="rect" id="node17" href="$classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="1035,643,1206,685"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="1301,497,1447,538"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_trajectory_planner.html#aadd3289b84c1c76778cc705250757c66" title="Compute orientation based on velocity" alt="" coords="1281,563,1467,619"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_trajectory_planner.html#a054ff7c497b332357979908f5df35031" title="Compute velocity based on acceleration" alt="" coords="1298,643,1450,699"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_trajectory_planner.html#a464d133b3ff7d997ff2de19ea769e0ef" title="Compute x position based on velocity" alt="" coords="1293,723,1455,779"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_trajectory_planner.html#a2177c9510ce5cb1a6564e4d39797b4a7" title="Compute y position based on velocity" alt="" coords="1293,803,1455,859"/>
+<area shape="rect" id="node10" href="$classbase__local__planner_1_1_trajectory_planner.html#ab3f9bae95f002f9a800f16feaffd460e" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="1307,300,1441,356"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="1289,1014,1459,1055"/>
+<area shape="rect" id="node12" href="$classbase__local__planner_1_1_trajectory_planner.html#a36016a332040ca88776ebf7f48b632b4" title=" " alt="" coords="1307,883,1441,939"/>
+<area shape="rect" id="node15" href="$classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="1293,431,1455,473"/>
+<area shape="rect" id="node13" href="$classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="1515,1073,1684,1114"/>
+<area shape="rect" id="node19" href="$classbase__local__planner_1_1_footprint_helper.html#a6bb46e8dcf95d5694a1aa5b03ab83892" title="填充多边形的轮廓，即机器人的footprint" alt="" coords="1040,5,1201,61"/>
+<area shape="rect" id="node20" href="$classbase__local__planner_1_1_footprint_helper.html#ab65128ff1acf0eb1d8b398ad0741ee55" title="Bresenham&#39;s 算法追踪网格中连接两点的线" alt="" coords="1037,85,1205,141"/>
+<area shape="rect" id="node22" href="$classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="1031,883,1210,939"/>
+<area shape="rect" id="node24" href="$classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a" title=" " alt="" coords="1016,1311,1225,1353"/>
+<area shape="rect" id="node25" href="$classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="1008,1115,1233,1157"/>
+<area shape="rect" id="node26" href="$classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="1054,1181,1187,1222"/>
+<area shape="rect" id="node27" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="1036,1377,1205,1418"/>
+<area shape="rect" id="node28" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="1036,1545,1205,1586"/>
+<area shape="rect" id="node29" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="1036,1610,1205,1651"/>
+<area shape="rect" id="node30" href="$classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="1047,1246,1195,1287"/>
+<area shape="rect" id="node44" href="$classbase__local__planner_1_1_trajectory_planner.html#a16f45df8237d94cafe714d4e5aa4eeb3" title="产生和打分单个局部路径" alt="" coords="555,636,688,692"/>
+<area shape="rect" id="node46" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ada7a715a0c6fb57fa5254b817519362b" title=" " alt="" coords="525,457,717,498"/>
+<area shape="rect" id="node45" href="$classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="796,636,929,692"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="pf_init_model" name="pf_init_model">
+<area shape="rect" id="node1" title=" " alt="" coords="456,31,555,57"/>
+<area shape="rect" id="node2" href="$class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="215,23,408,65"/>
+<area shape="rect" id="node3" href="$class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="11,5,161,32"/>
+<area shape="rect" id="node4" href="$class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="5,56,167,83"/>
+</map>

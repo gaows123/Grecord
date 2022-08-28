@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner/include/base_local_planner/voxel_grid_model.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_fc4ccca1cedd5ad98a9c5935ebe74b0e.html">base_local_planner</a></li><li class="navelem"><a class="el" href="dir_fb1526ef91c927002057b842ea75b919.html">include</a></li><li class="navelem"><a class="el" href="dir_022ab8b8b2793d2a4d98ca8ea9cb4917.html">base_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">voxel_grid_model.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;cfloat&gt;</code><br />
+<code>#include &lt;geometry_msgs/Point.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="observation_8h_source.html">costmap_2d/observation.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="world__model_8h_source.html">base_local_planner/world_model.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="voxel__grid_8h_source.html">voxel_grid/voxel_grid.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+voxel_grid_model.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="voxel__grid__model_8h__incl.png" border="0" usemap="#abase__local__planner_2include_2base__local__planner_2voxel__grid__model_8h" alt=""/></div>
+<map name="abase__local__planner_2include_2base__local__planner_2voxel__grid__model_8h" id="abase__local__planner_2include_2base__local__planner_2voxel__grid__model_8h">
+<area shape="rect" title=" " alt="" coords="461,5,647,61"/>
+<area shape="rect" title=" " alt="" coords="279,206,338,233"/>
+<area shape="rect" title=" " alt="" coords="645,117,684,143"/>
+<area shape="rect" title=" " alt="" coords="708,117,763,143"/>
+<area shape="rect" title=" " alt="" coords="215,288,375,315"/>
+<area shape="rect" href="observation_8h.html" title=" " alt="" coords="363,206,537,233"/>
+<area shape="rect" href="world__model_8h.html" title=" " alt="" coords="487,109,621,151"/>
+<area shape="rect" href="voxel__grid_8h.html" title=" " alt="" coords="1327,117,1482,143"/>
+<area shape="rect" title=" " alt="" coords="5,288,191,315"/>
+<area shape="rect" href="footprint_8h.html" title=" " alt="" coords="613,206,767,233"/>
+<area shape="rect" href="planar__laser__scan_8h.html" title=" " alt="" coords="880,199,1023,240"/>
+<area shape="rect" title=" " alt="" coords="653,288,727,315"/>
+<area shape="rect" title=" " alt="" coords="751,288,928,315"/>
+<area shape="rect" title=" " alt="" coords="399,288,629,315"/>
+<area shape="rect" title=" " alt="" coords="952,288,1127,315"/>
+<area shape="rect" title=" " alt="" coords="1151,288,1330,315"/>
+<area shape="rect" title=" " alt="" coords="1650,206,1711,233"/>
+<area shape="rect" title=" " alt="" coords="1736,206,1801,233"/>
+<area shape="rect" title=" " alt="" coords="1826,206,1890,233"/>
+<area shape="rect" title=" " alt="" coords="1047,206,1112,233"/>
+<area shape="rect" title=" " alt="" coords="1136,206,1199,233"/>
+<area shape="rect" title=" " alt="" coords="1223,206,1287,233"/>
+<area shape="rect" title=" " alt="" coords="1311,206,1386,233"/>
+<area shape="rect" title=" " alt="" coords="1411,206,1511,233"/>
+<area shape="rect" title=" " alt="" coords="1535,206,1626,233"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="voxel__grid__model_8h__dep__incl.png" border="0" usemap="#abase__local__planner_2include_2base__local__planner_2voxel__grid__model_8hdep" alt=""/></div>
+<map name="abase__local__planner_2include_2base__local__planner_2voxel__grid__model_8hdep" id="abase__local__planner_2include_2base__local__planner_2voxel__grid__model_8hdep">
+<area shape="rect" title=" " alt="" coords="129,5,315,61"/>
+<area shape="rect" href="trajectory__planner__ros_8h.html" title=" " alt="" coords="5,109,220,165"/>
+<area shape="rect" href="voxel__grid__model_8cpp.html" title=" " alt="" coords="244,117,419,158"/>
+<area shape="rect" href="trajectory__planner__ros_8cpp.html" title=" " alt="" coords="37,213,188,269"/>
+</map>
+</div>
+</div>
+<p><a href="voxel__grid__model_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_voxel_grid_model.html">base_local_planner::VoxelGridModel</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class that implements the <a class="el" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w...">WorldModel</a> interface to provide grid based collision checks for the trajectory controller using a 3D voxel grid.  <a href="classbase__local__planner_1_1_voxel_grid_model.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacebase__local__planner"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

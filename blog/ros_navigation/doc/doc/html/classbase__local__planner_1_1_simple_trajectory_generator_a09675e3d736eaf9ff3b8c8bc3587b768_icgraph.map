@@ -1,0 +1,6 @@
+<map id="base_local_planner::SimpleTrajectoryGenerator::generateTrajectory" name="base_local_planner::SimpleTrajectoryGenerator::generateTrajectory">
+<area shape="rect" id="node1" title=" " alt="" coords="528,43,713,99"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="283,13,480,54"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_simple_trajectory_generator.html#adb064b57ea297fc3810e185861e444e8" title=" " alt="" coords="289,79,474,135"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>

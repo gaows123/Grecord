@@ -1,0 +1,86 @@
+\hypertarget{latched__stop__rotate__controller_8h_source}{}\doxysection{latched\+\_\+stop\+\_\+rotate\+\_\+controller.\+h}
+\label{latched__stop__rotate__controller_8h_source}\index{base\_local\_planner/include/base\_local\_planner/latched\_stop\_rotate\_controller.h@{base\_local\_planner/include/base\_local\_planner/latched\_stop\_rotate\_controller.h}}
+\mbox{\hyperlink{latched__stop__rotate__controller_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * latched\_stop\_rotate\_controller.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Apr 16, 2012}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: tkruse}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef LATCHED\_STOP\_ROTATE\_CONTROLLER\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define LATCHED\_STOP\_ROTATE\_CONTROLLER\_H\_}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <Eigen/Core>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{local__planner__util_8h}{base\_local\_planner/local\_planner\_util.h}}>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{odometry__helper__ros_8h}{base\_local\_planner/odometry\_helper\_ros.h}}>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{comment}{// 当机器人里目标点足够近的时候，LatchedStopRotateController控制器会被调用}}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller}{LatchedStopRotateController}} \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23   \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a217e37ce23f57c28f157d2287d9ad02a}{LatchedStopRotateController}}(\textcolor{keyword}{const} std::string\& name = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{24   \textcolor{keyword}{virtual} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a11a816ca2255215d346a5ea56e91edad}{\string~LatchedStopRotateController}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3}{isPositionReached}}(\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{LocalPlannerUtil}}* planner\_util,}
+\DoxyCodeLine{27                          \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8}{isGoalReached}}(\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{LocalPlannerUtil}}* planner\_util,}
+\DoxyCodeLine{30       \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{OdometryHelperRos}}\& odom\_helper,}
+\DoxyCodeLine{31       \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b}{resetLatching}}() \{}
+\DoxyCodeLine{34     \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a7a965f0ef85f1103ad80b6bbfc0f2b1b}{xy\_tolerance\_latch\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{35   \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{44   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75}{stopWithAccLimits}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose,}
+\DoxyCodeLine{45       \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& robot\_vel,}
+\DoxyCodeLine{46       geometry\_msgs::Twist\& cmd\_vel,}
+\DoxyCodeLine{47       Eigen::Vector3f acc\_lim,}
+\DoxyCodeLine{48       \textcolor{keywordtype}{double} sim\_period,}
+\DoxyCodeLine{49       boost::function<\textcolor{keywordtype}{bool} (Eigen::Vector3f pos,}
+\DoxyCodeLine{50                             Eigen::Vector3f vel,}
+\DoxyCodeLine{51                             Eigen::Vector3f vel\_samples)> obstacle\_check);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{61   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda}{rotateToGoal}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose,}
+\DoxyCodeLine{62       \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& robot\_vel,}
+\DoxyCodeLine{63       \textcolor{keywordtype}{double} goal\_th,}
+\DoxyCodeLine{64       geometry\_msgs::Twist\& cmd\_vel,}
+\DoxyCodeLine{65       Eigen::Vector3f acc\_lim,}
+\DoxyCodeLine{66       \textcolor{keywordtype}{double} sim\_period,}
+\DoxyCodeLine{67       \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\_local\_planner::LocalPlannerLimits}}\& limits,}
+\DoxyCodeLine{68       boost::function<\textcolor{keywordtype}{bool} (Eigen::Vector3f pos,}
+\DoxyCodeLine{69                             Eigen::Vector3f vel,}
+\DoxyCodeLine{70                             Eigen::Vector3f vel\_samples)> obstacle\_check);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be}{computeVelocityCommandsStopRotate}}(geometry\_msgs::Twist\& cmd\_vel,}
+\DoxyCodeLine{73       Eigen::Vector3f acc\_lim,}
+\DoxyCodeLine{74       \textcolor{keywordtype}{double} sim\_period,}
+\DoxyCodeLine{75       \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{LocalPlannerUtil}}* planner\_util,}
+\DoxyCodeLine{76       \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{OdometryHelperRos}}\& odom\_helper,}
+\DoxyCodeLine{77       \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose,}
+\DoxyCodeLine{78       boost::function<\textcolor{keywordtype}{bool} (Eigen::Vector3f pos,}
+\DoxyCodeLine{79                             Eigen::Vector3f vel,}
+\DoxyCodeLine{80                             Eigen::Vector3f vel\_samples)> obstacle\_check);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{keyword}{private}:}
+\DoxyCodeLine{83   \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18}{sign}}(\textcolor{keywordtype}{double} x)\{}
+\DoxyCodeLine{84     \textcolor{keywordflow}{return} x < 0.0 ? -\/1.0 : 1.0;}
+\DoxyCodeLine{85   \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88   \textcolor{comment}{// latch\_xy\_goal\_tolerance\_ 是否有latch机器人的需求,}}
+\DoxyCodeLine{89   \textcolor{comment}{// xy\_tolerance\_latch\_ 状态反馈机器人是否已经到了目标区域，只需要旋转就行}}
+\DoxyCodeLine{90   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_adfd4e505101739501cf59d1a7129ced4}{latch\_xy\_goal\_tolerance\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a7a965f0ef85f1103ad80b6bbfc0f2b1b}{xy\_tolerance\_latch\_}};}
+\DoxyCodeLine{91   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_afb20eb5fc414868654de760ad6666412}{rotating\_to\_goal\_}};}
+\DoxyCodeLine{92 \};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \} \textcolor{comment}{/* namespace base\_local\_planner */}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LATCHED\_STOP\_ROTATE\_CONTROLLER\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

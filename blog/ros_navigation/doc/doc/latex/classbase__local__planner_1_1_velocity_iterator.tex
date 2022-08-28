@@ -1,0 +1,109 @@
+\hypertarget{classbase__local__planner_1_1_velocity_iterator}{}\doxysection{base\+\_\+local\+\_\+planner\+::Velocity\+Iterator类 参考}
+\label{classbase__local__planner_1_1_velocity_iterator}\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+
+
+{\ttfamily \#include $<$velocity\+\_\+iterator.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator_a89cfc0293213b0248d91ad9bcf560fe1}{Velocity\+Iterator}} (double min, double max, int num\+\_\+samples)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator_aa89af2f5352eda024084506787e45a01}{get\+Velocity}} ()
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator}{Velocity\+Iterator}} \& \mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator_a29592be1d7f06ed6a606cbdea5188f91}{operator++}} (int)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator_a305df916173f8e725ae5cd81e75d2306}{reset}} ()
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator_a26feadcdf741e954dd8551028a4ed204}{is\+Finished}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator_a2c1ed4a4d14ec5b80e37374ad97c3fa0}{samples\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator_acc95e1b6b3a81f1c0081def2f6a096f0}{current\+\_\+index}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Velocity\+Iterator用于获得相同大小的最大和最小值, inluding zero if it is not included (and range goes from negative to positive 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_velocity_iterator_a89cfc0293213b0248d91ad9bcf560fe1}\label{classbase__local__planner_1_1_velocity_iterator_a89cfc0293213b0248d91ad9bcf560fe1}} 
+\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}!VelocityIterator@{VelocityIterator}}
+\index{VelocityIterator@{VelocityIterator}!base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+\doxysubsubsection{\texorpdfstring{VelocityIterator()}{VelocityIterator()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Velocity\+Iterator\+::\+Velocity\+Iterator (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max,  }\item[{int}]{num\+\_\+samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_velocity_iterator_aa89af2f5352eda024084506787e45a01}\label{classbase__local__planner_1_1_velocity_iterator_aa89af2f5352eda024084506787e45a01}} 
+\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Velocity\+Iterator\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_velocity_iterator_aa89af2f5352eda024084506787e45a01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_velocity_iterator_a26feadcdf741e954dd8551028a4ed204}\label{classbase__local__planner_1_1_velocity_iterator_a26feadcdf741e954dd8551028a4ed204}} 
+\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Velocity\+Iterator\+::is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_velocity_iterator_a26feadcdf741e954dd8551028a4ed204_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_velocity_iterator_a29592be1d7f06ed6a606cbdea5188f91}\label{classbase__local__planner_1_1_velocity_iterator_a29592be1d7f06ed6a606cbdea5188f91}} 
+\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_velocity_iterator}{Velocity\+Iterator}} \& base\+\_\+local\+\_\+planner\+::\+Velocity\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_velocity_iterator_a305df916173f8e725ae5cd81e75d2306}\label{classbase__local__planner_1_1_velocity_iterator_a305df916173f8e725ae5cd81e75d2306}} 
+\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}!reset@{reset}}
+\index{reset@{reset}!base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Velocity\+Iterator\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_velocity_iterator_a305df916173f8e725ae5cd81e75d2306_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_velocity_iterator_acc95e1b6b3a81f1c0081def2f6a096f0}\label{classbase__local__planner_1_1_velocity_iterator_acc95e1b6b3a81f1c0081def2f6a096f0}} 
+\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}!current\_index@{current\_index}}
+\index{current\_index@{current\_index}!base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+\doxysubsubsection{\texorpdfstring{current\_index}{current\_index}}
+{\footnotesize\ttfamily unsigned int base\+\_\+local\+\_\+planner\+::\+Velocity\+Iterator\+::current\+\_\+index\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_velocity_iterator_a2c1ed4a4d14ec5b80e37374ad97c3fa0}\label{classbase__local__planner_1_1_velocity_iterator_a2c1ed4a4d14ec5b80e37374ad97c3fa0}} 
+\index{base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}!samples\_@{samples\_}}
+\index{samples\_@{samples\_}!base\_local\_planner::VelocityIterator@{base\_local\_planner::VelocityIterator}}
+\doxysubsubsection{\texorpdfstring{samples\_}{samples\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ base\+\_\+local\+\_\+planner\+::\+Velocity\+Iterator\+::samples\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{velocity__iterator_8h}{velocity\+\_\+iterator.\+h}}\end{DoxyCompactItemize}

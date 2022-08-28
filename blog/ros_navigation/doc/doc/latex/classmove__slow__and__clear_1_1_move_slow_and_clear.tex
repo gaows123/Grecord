@@ -1,0 +1,347 @@
+\hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear}{}\doxysection{move\+\_\+slow\+\_\+and\+\_\+clear\+::Move\+Slow\+And\+Clear类 参考}
+\label{classmove__slow__and__clear_1_1_move_slow_and_clear}\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+
+
+{\ttfamily \#include $<$move\+\_\+slow\+\_\+and\+\_\+clear.\+h$>$}
+
+
+
+类 move\+\_\+slow\+\_\+and\+\_\+clear\+::Move\+Slow\+And\+Clear 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classmove__slow__and__clear_1_1_move_slow_and_clear__inherit__graph}
+\end{center}
+\end{figure}
+
+
+move\+\_\+slow\+\_\+and\+\_\+clear\+::Move\+Slow\+And\+Clear 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__slow__and__clear_1_1_move_slow_and_clear__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a91ca493b4fba3b1259c763b866ca941f}{Move\+Slow\+And\+Clear}} ()
+\item 
+\mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a71c2c276493acf62e2f31ab1770e0033}{$\sim$\+Move\+Slow\+And\+Clear}} ()
+\item 
+void \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a8c3abf7314837b065c79f55947ebabf5}{initialize}} (std\+::string \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$global\+\_\+costmap, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$local\+\_\+costmap)
+\begin{DoxyCompactList}\small\item\em Initialize the parameters of the behavior \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_abf32e06b525c141d8b7afcac857c241a}{run\+Behavior}} ()
+\begin{DoxyCompactList}\small\item\em Run the behavior \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a04fa319b6f46d429937aa1e00a1b3dba}{set\+Robot\+Speed}} (double trans\+\_\+speed, double rot\+\_\+speed)
+\item 
+void \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a35a4c0d845dd8b4d0c85a57f3d2d5b1e}{distance\+Check}} (const ros\+::\+Timer\+Event \&e)
+\item 
+double \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a2fe9f869a53b89056d292ce47833a68c}{get\+Sq\+Distance}} ()
+\item 
+void \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ae41f9c43f9e585844b732da55de298f9}{remove\+Speed\+Limit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_aa1985d2186775ee057752ea22d32c860}{private\+\_\+nh\+\_\+}}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a252bd9d26a56f0cd224e966fbc7f969b}{planner\+\_\+nh\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ae5654055ace91d16f1dce9b9a683a1ba}{global\+\_\+costmap\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a0915aa5d423a757bbfa337dbf98ee35b}{local\+\_\+costmap\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ae1ed3e0581983a59d0d25ff005a912af}{initialized\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_aa116f74c651b145552f95ea554da9a4e}{clearing\+\_\+distance\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a78168673b49504cd9f0594a51b9a7b9c}{limited\+\_\+distance\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a26b98fe2d53fe1bd5013ae242252e391}{limited\+\_\+trans\+\_\+speed\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a4dc72c70a907dd3d2d5b0a8d8e01ccc5}{limited\+\_\+rot\+\_\+speed\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a5ff83e37a6c51ec2c958f5fffad3deef}{old\+\_\+trans\+\_\+speed\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_aa5a82d4a70cf2bc2a53a863cc040f4c3}{old\+\_\+rot\+\_\+speed\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_acc9cacbe882693cb88ae101da2416740}{max\+\_\+trans\+\_\+param\+\_\+name\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ac79651772c9d267e9500b8770eb20133}{max\+\_\+rot\+\_\+param\+\_\+name\+\_\+}}
+\item 
+ros\+::\+Timer \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a569bed78421733c6a318397629079fa7}{distance\+\_\+check\+\_\+timer\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a907be4f27bc0921cb99a11821759004a}{speed\+\_\+limit\+\_\+pose\+\_\+}}
+\item 
+boost\+::thread $\ast$ \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a5c4d93947c60461050632757f8a7d10e}{remove\+\_\+limit\+\_\+thread\+\_\+}}
+\item 
+boost\+::mutex \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_afb06ba75117f893ae6822f1222b4af2a}{mutex\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a14257c82762158ca277ece2176f2eae8}{limit\+\_\+set\+\_\+}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a6c8cb54e07bebed8258587f081516531}{planner\+\_\+dynamic\+\_\+reconfigure\+\_\+service\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a91ca493b4fba3b1259c763b866ca941f}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a91ca493b4fba3b1259c763b866ca941f}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!MoveSlowAndClear@{MoveSlowAndClear}}
+\index{MoveSlowAndClear@{MoveSlowAndClear}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{MoveSlowAndClear()}{MoveSlowAndClear()}}
+{\footnotesize\ttfamily move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::\+Move\+Slow\+And\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a71c2c276493acf62e2f31ab1770e0033}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a71c2c276493acf62e2f31ab1770e0033}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!````~MoveSlowAndClear@{$\sim$MoveSlowAndClear}}
+\index{````~MoveSlowAndClear@{$\sim$MoveSlowAndClear}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{$\sim$MoveSlowAndClear()}{~MoveSlowAndClear()}}
+{\footnotesize\ttfamily move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::$\sim$\+Move\+Slow\+And\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a35a4c0d845dd8b4d0c85a57f3d2d5b1e}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a35a4c0d845dd8b4d0c85a57f3d2d5b1e}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!distanceCheck@{distanceCheck}}
+\index{distanceCheck@{distanceCheck}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{distanceCheck()}{distanceCheck()}}
+{\footnotesize\ttfamily void move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::distance\+Check (\begin{DoxyParamCaption}\item[{const ros\+::\+Timer\+Event \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_a35a4c0d845dd8b4d0c85a57f3d2d5b1e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_a35a4c0d845dd8b4d0c85a57f3d2d5b1e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a2fe9f869a53b89056d292ce47833a68c}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a2fe9f869a53b89056d292ce47833a68c}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!getSqDistance@{getSqDistance}}
+\index{getSqDistance@{getSqDistance}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{getSqDistance()}{getSqDistance()}}
+{\footnotesize\ttfamily double move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::get\+Sq\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_a2fe9f869a53b89056d292ce47833a68c_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_a2fe9f869a53b89056d292ce47833a68c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a8c3abf7314837b065c79f55947ebabf5}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a8c3abf7314837b065c79f55947ebabf5}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!initialize@{initialize}}
+\index{initialize@{initialize}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{global\+\_\+costmap,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{local\+\_\+costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the parameters of the behavior 
+
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_recovery_behavior_ab35332f465b3d2509c9e73d4d95c7b5d}{nav\+\_\+core\+::\+Recovery\+Behavior}}.
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_ae41f9c43f9e585844b732da55de298f9}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_ae41f9c43f9e585844b732da55de298f9}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!removeSpeedLimit@{removeSpeedLimit}}
+\index{removeSpeedLimit@{removeSpeedLimit}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{removeSpeedLimit()}{removeSpeedLimit()}}
+{\footnotesize\ttfamily void move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::remove\+Speed\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_ae41f9c43f9e585844b732da55de298f9_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_ae41f9c43f9e585844b732da55de298f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_abf32e06b525c141d8b7afcac857c241a}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_abf32e06b525c141d8b7afcac857c241a}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!runBehavior@{runBehavior}}
+\index{runBehavior@{runBehavior}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{runBehavior()}{runBehavior()}}
+{\footnotesize\ttfamily void move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::run\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Run the behavior 
+
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_recovery_behavior_a6d8e1eec7a483e530e48b2593ea4fc03}{nav\+\_\+core\+::\+Recovery\+Behavior}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_abf32e06b525c141d8b7afcac857c241a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a04fa319b6f46d429937aa1e00a1b3dba}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a04fa319b6f46d429937aa1e00a1b3dba}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!setRobotSpeed@{setRobotSpeed}}
+\index{setRobotSpeed@{setRobotSpeed}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{setRobotSpeed()}{setRobotSpeed()}}
+{\footnotesize\ttfamily void move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::set\+Robot\+Speed (\begin{DoxyParamCaption}\item[{double}]{trans\+\_\+speed,  }\item[{double}]{rot\+\_\+speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__slow__and__clear_1_1_move_slow_and_clear_a04fa319b6f46d429937aa1e00a1b3dba_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_aa116f74c651b145552f95ea554da9a4e}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_aa116f74c651b145552f95ea554da9a4e}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!clearing\_distance\_@{clearing\_distance\_}}
+\index{clearing\_distance\_@{clearing\_distance\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{clearing\_distance\_}{clearing\_distance\_}}
+{\footnotesize\ttfamily double move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::clearing\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a569bed78421733c6a318397629079fa7}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a569bed78421733c6a318397629079fa7}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!distance\_check\_timer\_@{distance\_check\_timer\_}}
+\index{distance\_check\_timer\_@{distance\_check\_timer\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{distance\_check\_timer\_}{distance\_check\_timer\_}}
+{\footnotesize\ttfamily ros\+::\+Timer move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::distance\+\_\+check\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_ae5654055ace91d16f1dce9b9a683a1ba}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_ae5654055ace91d16f1dce9b9a683a1ba}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!global\_costmap\_@{global\_costmap\_}}
+\index{global\_costmap\_@{global\_costmap\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{global\_costmap\_}{global\_costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::global\+\_\+costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_ae1ed3e0581983a59d0d25ff005a912af}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_ae1ed3e0581983a59d0d25ff005a912af}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a14257c82762158ca277ece2176f2eae8}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a14257c82762158ca277ece2176f2eae8}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!limit\_set\_@{limit\_set\_}}
+\index{limit\_set\_@{limit\_set\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{limit\_set\_}{limit\_set\_}}
+{\footnotesize\ttfamily bool move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::limit\+\_\+set\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a78168673b49504cd9f0594a51b9a7b9c}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a78168673b49504cd9f0594a51b9a7b9c}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!limited\_distance\_@{limited\_distance\_}}
+\index{limited\_distance\_@{limited\_distance\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{limited\_distance\_}{limited\_distance\_}}
+{\footnotesize\ttfamily double move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::limited\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a4dc72c70a907dd3d2d5b0a8d8e01ccc5}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a4dc72c70a907dd3d2d5b0a8d8e01ccc5}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!limited\_rot\_speed\_@{limited\_rot\_speed\_}}
+\index{limited\_rot\_speed\_@{limited\_rot\_speed\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{limited\_rot\_speed\_}{limited\_rot\_speed\_}}
+{\footnotesize\ttfamily double move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::limited\+\_\+rot\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a26b98fe2d53fe1bd5013ae242252e391}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a26b98fe2d53fe1bd5013ae242252e391}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!limited\_trans\_speed\_@{limited\_trans\_speed\_}}
+\index{limited\_trans\_speed\_@{limited\_trans\_speed\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{limited\_trans\_speed\_}{limited\_trans\_speed\_}}
+{\footnotesize\ttfamily double move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::limited\+\_\+trans\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a0915aa5d423a757bbfa337dbf98ee35b}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a0915aa5d423a757bbfa337dbf98ee35b}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!local\_costmap\_@{local\_costmap\_}}
+\index{local\_costmap\_@{local\_costmap\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{local\_costmap\_}{local\_costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::local\+\_\+costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_ac79651772c9d267e9500b8770eb20133}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_ac79651772c9d267e9500b8770eb20133}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!max\_rot\_param\_name\_@{max\_rot\_param\_name\_}}
+\index{max\_rot\_param\_name\_@{max\_rot\_param\_name\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{max\_rot\_param\_name\_}{max\_rot\_param\_name\_}}
+{\footnotesize\ttfamily std\+::string move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::max\+\_\+rot\+\_\+param\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_acc9cacbe882693cb88ae101da2416740}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_acc9cacbe882693cb88ae101da2416740}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!max\_trans\_param\_name\_@{max\_trans\_param\_name\_}}
+\index{max\_trans\_param\_name\_@{max\_trans\_param\_name\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{max\_trans\_param\_name\_}{max\_trans\_param\_name\_}}
+{\footnotesize\ttfamily std\+::string move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::max\+\_\+trans\+\_\+param\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_afb06ba75117f893ae6822f1222b4af2a}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_afb06ba75117f893ae6822f1222b4af2a}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily boost\+::mutex move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_aa5a82d4a70cf2bc2a53a863cc040f4c3}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_aa5a82d4a70cf2bc2a53a863cc040f4c3}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!old\_rot\_speed\_@{old\_rot\_speed\_}}
+\index{old\_rot\_speed\_@{old\_rot\_speed\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{old\_rot\_speed\_}{old\_rot\_speed\_}}
+{\footnotesize\ttfamily double move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::old\+\_\+rot\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a5ff83e37a6c51ec2c958f5fffad3deef}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a5ff83e37a6c51ec2c958f5fffad3deef}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!old\_trans\_speed\_@{old\_trans\_speed\_}}
+\index{old\_trans\_speed\_@{old\_trans\_speed\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{old\_trans\_speed\_}{old\_trans\_speed\_}}
+{\footnotesize\ttfamily double move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::old\+\_\+trans\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a6c8cb54e07bebed8258587f081516531}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a6c8cb54e07bebed8258587f081516531}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!planner\_dynamic\_reconfigure\_service\_@{planner\_dynamic\_reconfigure\_service\_}}
+\index{planner\_dynamic\_reconfigure\_service\_@{planner\_dynamic\_reconfigure\_service\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{planner\_dynamic\_reconfigure\_service\_}{planner\_dynamic\_reconfigure\_service\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::planner\+\_\+dynamic\+\_\+reconfigure\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a252bd9d26a56f0cd224e966fbc7f969b}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a252bd9d26a56f0cd224e966fbc7f969b}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!planner\_nh\_@{planner\_nh\_}}
+\index{planner\_nh\_@{planner\_nh\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{planner\_nh\_}{planner\_nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::planner\+\_\+nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_aa1985d2186775ee057752ea22d32c860}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_aa1985d2186775ee057752ea22d32c860}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!private\_nh\_@{private\_nh\_}}
+\index{private\_nh\_@{private\_nh\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{private\_nh\_}{private\_nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::private\+\_\+nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a5c4d93947c60461050632757f8a7d10e}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a5c4d93947c60461050632757f8a7d10e}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!remove\_limit\_thread\_@{remove\_limit\_thread\_}}
+\index{remove\_limit\_thread\_@{remove\_limit\_thread\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{remove\_limit\_thread\_}{remove\_limit\_thread\_}}
+{\footnotesize\ttfamily boost\+::thread$\ast$ move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::remove\+\_\+limit\+\_\+thread\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__slow__and__clear_1_1_move_slow_and_clear_a907be4f27bc0921cb99a11821759004a}\label{classmove__slow__and__clear_1_1_move_slow_and_clear_a907be4f27bc0921cb99a11821759004a}} 
+\index{move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}!speed\_limit\_pose\_@{speed\_limit\_pose\_}}
+\index{speed\_limit\_pose\_@{speed\_limit\_pose\_}!move\_slow\_and\_clear::MoveSlowAndClear@{move\_slow\_and\_clear::MoveSlowAndClear}}
+\doxysubsubsection{\texorpdfstring{speed\_limit\_pose\_}{speed\_limit\_pose\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear\+::speed\+\_\+limit\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+move\+\_\+slow\+\_\+and\+\_\+clear/include/move\+\_\+slow\+\_\+and\+\_\+clear/\mbox{\hyperlink{move__slow__and__clear_8h}{move\+\_\+slow\+\_\+and\+\_\+clear.\+h}}\item 
+move\+\_\+slow\+\_\+and\+\_\+clear/src/\mbox{\hyperlink{move__slow__and__clear_8cpp}{move\+\_\+slow\+\_\+and\+\_\+clear.\+cpp}}\end{DoxyCompactItemize}

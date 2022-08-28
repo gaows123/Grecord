@@ -1,0 +1,106 @@
+\hypertarget{classbase__local__planner_1_1_wavefront_map_accessor}{}\doxysection{base\+\_\+local\+\_\+planner\+::Wavefront\+Map\+Accessor类 参考}
+\label{classbase__local__planner_1_1_wavefront_map_accessor}\index{base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}}
+
+
+{\ttfamily \#include $<$wavefront\+\_\+map\+\_\+accessor.\+h$>$}
+
+
+
+类 base\+\_\+local\+\_\+planner\+::Wavefront\+Map\+Accessor 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classbase__local__planner_1_1_wavefront_map_accessor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+base\+\_\+local\+\_\+planner\+::Wavefront\+Map\+Accessor 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classbase__local__planner_1_1_wavefront_map_accessor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a31116ccd4b8c9fa55916c57bd5e80c6e}{Wavefront\+Map\+Accessor}} (\mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} $\ast$map, double outer\+\_\+radius)
+\item 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_aacf3ec8556be6b053c003593658dd38b}{$\sim$\+Wavefront\+Map\+Accessor}} ()
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a22a6ea335309603f580cac039bc8871c}{synchronize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a799a0b05e6b36696bf4f790bee9d5893}{map\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a37c744569edbaa7c226bca3d046844d4}{outer\+\_\+radius\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Map\+\_\+grids rely on costmaps to identify obstacles. We need a costmap that we can easily manipulate for unit tests. This class has a grid map where we can set grid cell state, and a synchronize method to make the costmap match. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_wavefront_map_accessor_a31116ccd4b8c9fa55916c57bd5e80c6e}\label{classbase__local__planner_1_1_wavefront_map_accessor_a31116ccd4b8c9fa55916c57bd5e80c6e}} 
+\index{base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}!WavefrontMapAccessor@{WavefrontMapAccessor}}
+\index{WavefrontMapAccessor@{WavefrontMapAccessor}!base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}}
+\doxysubsubsection{\texorpdfstring{WavefrontMapAccessor()}{WavefrontMapAccessor()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Wavefront\+Map\+Accessor\+::\+Wavefront\+Map\+Accessor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} $\ast$}]{map,  }\item[{double}]{outer\+\_\+radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_wavefront_map_accessor_a31116ccd4b8c9fa55916c57bd5e80c6e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_wavefront_map_accessor_aacf3ec8556be6b053c003593658dd38b}\label{classbase__local__planner_1_1_wavefront_map_accessor_aacf3ec8556be6b053c003593658dd38b}} 
+\index{base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}!````~WavefrontMapAccessor@{$\sim$WavefrontMapAccessor}}
+\index{````~WavefrontMapAccessor@{$\sim$WavefrontMapAccessor}!base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}}
+\doxysubsubsection{\texorpdfstring{$\sim$WavefrontMapAccessor()}{~WavefrontMapAccessor()}}
+{\footnotesize\ttfamily virtual base\+\_\+local\+\_\+planner\+::\+Wavefront\+Map\+Accessor\+::$\sim$\+Wavefront\+Map\+Accessor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_wavefront_map_accessor_a22a6ea335309603f580cac039bc8871c}\label{classbase__local__planner_1_1_wavefront_map_accessor_a22a6ea335309603f580cac039bc8871c}} 
+\index{base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}!synchronize@{synchronize}}
+\index{synchronize@{synchronize}!base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}}
+\doxysubsubsection{\texorpdfstring{synchronize()}{synchronize()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Wavefront\+Map\+Accessor\+::synchronize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_wavefront_map_accessor_a22a6ea335309603f580cac039bc8871c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_wavefront_map_accessor_a799a0b05e6b36696bf4f790bee9d5893}\label{classbase__local__planner_1_1_wavefront_map_accessor_a799a0b05e6b36696bf4f790bee9d5893}} 
+\index{base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}!map\_@{map\_}}
+\index{map\_@{map\_}!base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}}
+\doxysubsubsection{\texorpdfstring{map\_}{map\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Wavefront\+Map\+Accessor\+::map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_wavefront_map_accessor_a37c744569edbaa7c226bca3d046844d4}\label{classbase__local__planner_1_1_wavefront_map_accessor_a37c744569edbaa7c226bca3d046844d4}} 
+\index{base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}!outer\_radius\_@{outer\_radius\_}}
+\index{outer\_radius\_@{outer\_radius\_}!base\_local\_planner::WavefrontMapAccessor@{base\_local\_planner::WavefrontMapAccessor}}
+\doxysubsubsection{\texorpdfstring{outer\_radius\_}{outer\_radius\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Wavefront\+Map\+Accessor\+::outer\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/test/\mbox{\hyperlink{wavefront__map__accessor_8h}{wavefront\+\_\+map\+\_\+accessor.\+h}}\end{DoxyCompactItemize}

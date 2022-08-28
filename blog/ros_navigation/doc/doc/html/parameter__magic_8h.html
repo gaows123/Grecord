@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: nav_core/include/nav_core/parameter_magic.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1e047e018d94fd522aa4d39a833f44d9.html">nav_core</a></li><li class="navelem"><a class="el" href="dir_7292cf3acd45067597b783cd9889d331.html">include</a></li><li class="navelem"><a class="el" href="dir_df768dfce38bfdf48f4d72d6c5cb0398.html">nav_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">parameter_magic.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="parameter__magic_8h__dep__incl.png" border="0" usemap="#anav__core_2include_2nav__core_2parameter__magic_8hdep" alt=""/></div>
+<map name="anav__core_2include_2nav__core_2parameter__magic_8hdep" id="anav__core_2include_2nav__core_2parameter__magic_8hdep">
+<area shape="rect" title=" " alt="" coords="171,5,340,47"/>
+<area shape="rect" href="trajectory__planner__ros_8cpp.html" title=" " alt="" coords="5,95,156,151"/>
+<area shape="rect" href="dwa__planner__ros_8cpp.html" title=" " alt="" coords="180,102,331,143"/>
+<area shape="rect" href="rotate__recovery_8cpp.html" title=" " alt="" coords="355,102,497,143"/>
+</map>
+</div>
+</div>
+<p><a href="parameter__magic_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacenav__core"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenav__core.html">nav_core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ac1bc19a8eabb092a097d54d334066814"><td class="memTemplParams" colspan="2">template&lt;class param_t &gt; </td></tr>
+<tr class="memitem:ac1bc19a8eabb092a097d54d334066814"><td class="memTemplItemLeft" align="right" valign="top">param_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenav__core.html#ac1bc19a8eabb092a097d54d334066814">nav_core::loadParameterWithDeprecation</a> (const ros::NodeHandle &amp;nh, const std::string current_name, const std::string old_name, const param_t &amp;default_value)</td></tr>
+<tr class="memdesc:ac1bc19a8eabb092a097d54d334066814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a parameter from one of two namespaces. Complain if it uses the old name.  <a href="namespacenav__core.html#ac1bc19a8eabb092a097d54d334066814">更多...</a><br /></td></tr>
+<tr class="separator:ac1bc19a8eabb092a097d54d334066814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae2b94985fa0d1a0f4c9269ba073327"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenav__core.html#a6ae2b94985fa0d1a0f4c9269ba073327">nav_core::warnRenamedParameter</a> (const ros::NodeHandle &amp;nh, const std::string current_name, const std::string old_name)</td></tr>
+<tr class="memdesc:a6ae2b94985fa0d1a0f4c9269ba073327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warn if a parameter exists under a deprecated (and unsupported) name.  <a href="namespacenav__core.html#a6ae2b94985fa0d1a0f4c9269ba073327">更多...</a><br /></td></tr>
+<tr class="separator:a6ae2b94985fa0d1a0f4c9269ba073327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

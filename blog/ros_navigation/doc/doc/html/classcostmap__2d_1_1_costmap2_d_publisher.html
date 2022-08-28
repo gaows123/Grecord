@@ -1,0 +1,816 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d::Costmap2DPublisher类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecostmap__2d.html">costmap_2d</a></li><li class="navelem"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html">Costmap2DPublisher</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classcostmap__2d_1_1_costmap2_d_publisher-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">costmap_2d::Costmap2DPublisher类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A tool to periodically publish visualization data from a <a class="el" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.">Costmap2D</a>  
+ <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="costmap__2d__publisher_8h_source.html">costmap_2d_publisher.h</a>&gt;</code></p>
+<div class="dynheader">
+costmap_2d::Costmap2DPublisher 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher__coll__graph.png" border="0" usemap="#acostmap__2d_1_1_costmap2_d_publisher_coll__map" alt="Collaboration graph"/></div>
+<map name="acostmap__2d_1_1_costmap2_d_publisher_coll__map" id="acostmap__2d_1_1_costmap2_d_publisher_coll__map">
+<area shape="rect" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="47,95,269,121"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,5,175,32"/>
+<area shape="rect" title=" " alt="" coords="199,5,253,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a56d27ca488f09b70a8698b2491d036e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a56d27ca488f09b70a8698b2491d036e7">Costmap2DPublisher</a> (ros::NodeHandle *ros_node, <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a> *costmap, std::string global_frame, std::string topic_name, bool always_send_full_costmap=false)</td></tr>
+<tr class="memdesc:a56d27ca488f09b70a8698b2491d036e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D">Costmap2DPublisher</a>  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#a56d27ca488f09b70a8698b2491d036e7">更多...</a><br /></td></tr>
+<tr class="separator:a56d27ca488f09b70a8698b2491d036e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38077dace67c7ca6aff8fb09ac81e17d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a38077dace67c7ca6aff8fb09ac81e17d">~Costmap2DPublisher</a> ()</td></tr>
+<tr class="memdesc:a38077dace67c7ca6aff8fb09ac81e17d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#a38077dace67c7ca6aff8fb09ac81e17d">更多...</a><br /></td></tr>
+<tr class="separator:a38077dace67c7ca6aff8fb09ac81e17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c026184908fb427babad570150df30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a51c026184908fb427babad570150df30">updateBounds</a> (unsigned int x0, unsigned int xn, unsigned int y0, unsigned int yn)</td></tr>
+<tr class="memdesc:a51c026184908fb427babad570150df30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include the given bounds in the changed-rectangle.  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#a51c026184908fb427babad570150df30">更多...</a><br /></td></tr>
+<tr class="separator:a51c026184908fb427babad570150df30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e5b5d93113f39786112919a6981953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a47e5b5d93113f39786112919a6981953">publishCostmap</a> ()</td></tr>
+<tr class="memdesc:a47e5b5d93113f39786112919a6981953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes the visualization data over ROS  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#a47e5b5d93113f39786112919a6981953">更多...</a><br /></td></tr>
+<tr class="separator:a47e5b5d93113f39786112919a6981953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3948a48e3f77d44f0600077470788c38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a3948a48e3f77d44f0600077470788c38">active</a> ()</td></tr>
+<tr class="memdesc:a3948a48e3f77d44f0600077470788c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the publisher is active  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#a3948a48e3f77d44f0600077470788c38">更多...</a><br /></td></tr>
+<tr class="separator:a3948a48e3f77d44f0600077470788c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a2bb9ed054a418a59554668a9d1bc723a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a2bb9ed054a418a59554668a9d1bc723a">prepareGrid</a> ()</td></tr>
+<tr class="memdesc:a2bb9ed054a418a59554668a9d1bc723a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare grid_ message for publication.  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#a2bb9ed054a418a59554668a9d1bc723a">更多...</a><br /></td></tr>
+<tr class="separator:a2bb9ed054a418a59554668a9d1bc723a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee87acfd9d19093239ec59a88e3e4add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#aee87acfd9d19093239ec59a88e3e4add">onNewSubscription</a> (const ros::SingleSubscriberPublisher &amp;pub)</td></tr>
+<tr class="memdesc:aee87acfd9d19093239ec59a88e3e4add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish the latest full costmap to the new subscriber.  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#aee87acfd9d19093239ec59a88e3e4add">更多...</a><br /></td></tr>
+<tr class="separator:aee87acfd9d19093239ec59a88e3e4add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:acb9fb47efd7d85f081ea76a7e79f2f10"><td class="memItemLeft" align="right" valign="top">ros::NodeHandle *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#acb9fb47efd7d85f081ea76a7e79f2f10">node</a></td></tr>
+<tr class="separator:acb9fb47efd7d85f081ea76a7e79f2f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82210756911015a30f981a680be2c651"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a82210756911015a30f981a680be2c651">costmap_</a></td></tr>
+<tr class="separator:a82210756911015a30f981a680be2c651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13debc4c4c26a8d0c9b088dd0a2f0b53"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a13debc4c4c26a8d0c9b088dd0a2f0b53">global_frame_</a></td></tr>
+<tr class="separator:a13debc4c4c26a8d0c9b088dd0a2f0b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03e091625a7e64c47d620f001a8778f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#ad03e091625a7e64c47d620f001a8778f">x0_</a></td></tr>
+<tr class="separator:ad03e091625a7e64c47d620f001a8778f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5bc284341db6fd3c34d505c09f00bbf"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#aa5bc284341db6fd3c34d505c09f00bbf">xn_</a></td></tr>
+<tr class="separator:aa5bc284341db6fd3c34d505c09f00bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddb9a9625f8c1da0d069d3d23b36731"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#abddb9a9625f8c1da0d069d3d23b36731">y0_</a></td></tr>
+<tr class="separator:abddb9a9625f8c1da0d069d3d23b36731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94802918199a360332554b83200339cc"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a94802918199a360332554b83200339cc">yn_</a></td></tr>
+<tr class="separator:a94802918199a360332554b83200339cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4601aa9c0a3ae436b679757e4bf23804"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a4601aa9c0a3ae436b679757e4bf23804">saved_origin_x_</a></td></tr>
+<tr class="separator:a4601aa9c0a3ae436b679757e4bf23804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71533d4ce497adc9b2acda72127ed65c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a71533d4ce497adc9b2acda72127ed65c">saved_origin_y_</a></td></tr>
+<tr class="separator:a71533d4ce497adc9b2acda72127ed65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3ba6c3afb098e790fa35bd7dee2b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a2c3ba6c3afb098e790fa35bd7dee2b65">active_</a></td></tr>
+<tr class="separator:a2c3ba6c3afb098e790fa35bd7dee2b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b61b35136fca4959ffff8a560f93041"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a0b61b35136fca4959ffff8a560f93041">always_send_full_costmap_</a></td></tr>
+<tr class="separator:a0b61b35136fca4959ffff8a560f93041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ccf18bd721fb672419de1abf491118b"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a4ccf18bd721fb672419de1abf491118b">costmap_pub_</a></td></tr>
+<tr class="separator:a4ccf18bd721fb672419de1abf491118b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261f5681cd6342a074271438d74b8d3e"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a261f5681cd6342a074271438d74b8d3e">costmap_update_pub_</a></td></tr>
+<tr class="separator:a261f5681cd6342a074271438d74b8d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19b0300daf08759d4fd8ad4b0792a4b"><td class="memItemLeft" align="right" valign="top">nav_msgs::OccupancyGrid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#ae19b0300daf08759d4fd8ad4b0792a4b">grid_</a></td></tr>
+<tr class="separator:ae19b0300daf08759d4fd8ad4b0792a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a925a0131bf6d351f7c0f145473322800"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a925a0131bf6d351f7c0f145473322800">cost_translation_table_</a> = NULL</td></tr>
+<tr class="memdesc:a925a0131bf6d351f7c0f145473322800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate from 0-255 values in costmap to -1 to 100 values in message.  <a href="classcostmap__2d_1_1_costmap2_d_publisher.html#a925a0131bf6d351f7c0f145473322800">更多...</a><br /></td></tr>
+<tr class="separator:a925a0131bf6d351f7c0f145473322800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >A tool to periodically publish visualization data from a <a class="el" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.">Costmap2D</a> </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a56d27ca488f09b70a8698b2491d036e7" name="a56d27ca488f09b70a8698b2491d036e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d27ca488f09b70a8698b2491d036e7">&#9670;&nbsp;</a></span>Costmap2DPublisher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">costmap_2d::Costmap2DPublisher::Costmap2DPublisher </td>
+          <td>(</td>
+          <td class="paramtype">ros::NodeHandle *&#160;</td>
+          <td class="paramname"><em>ros_node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>global_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>topic_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>always_send_full_costmap</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for the <a class="el" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D">Costmap2DPublisher</a> </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7_cgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7_cgraph">
+<area shape="rect" title="Constructor for the Costmap2DPublisher" alt="" coords="5,71,228,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="817,5,987,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="817,71,987,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#aee87acfd9d19093239ec59a88e3e4add" title="Publish the latest full costmap to the new subscriber." alt="" coords="276,165,499,207"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a2bb9ed054a418a59554668a9d1bc723a" title="Prepare grid_ message for publication." alt="" coords="547,201,769,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="817,136,987,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="817,201,987,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="817,267,987,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="817,332,987,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="817,397,987,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="817,463,987,504"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a38077dace67c7ca6aff8fb09ac81e17d" name="a38077dace67c7ca6aff8fb09ac81e17d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38077dace67c7ca6aff8fb09ac81e17d">&#9670;&nbsp;</a></span>~Costmap2DPublisher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">costmap_2d::Costmap2DPublisher::~Costmap2DPublisher </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a3948a48e3f77d44f0600077470788c38" name="a3948a48e3f77d44f0600077470788c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3948a48e3f77d44f0600077470788c38">&#9670;&nbsp;</a></span>active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::Costmap2DPublisher::active </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the publisher is active </p>
+<dl class="section return"><dt>返回</dt><dd>True if the frequency for the publisher is non-zero, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aee87acfd9d19093239ec59a88e3e4add" name="aee87acfd9d19093239ec59a88e3e4add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee87acfd9d19093239ec59a88e3e4add">&#9670;&nbsp;</a></span>onNewSubscription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::Costmap2DPublisher::onNewSubscription </td>
+          <td>(</td>
+          <td class="paramtype">const ros::SingleSubscriberPublisher &amp;&#160;</td>
+          <td class="paramname"><em>pub</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publish the latest full costmap to the new subscriber. </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_cgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_cgraph">
+<area shape="rect" title="Publish the latest full costmap to the new subscriber." alt="" coords="5,235,228,276"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a2bb9ed054a418a59554668a9d1bc723a" title="Prepare grid_ message for publication." alt="" coords="276,235,499,276"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="547,5,716,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="547,71,716,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="547,136,716,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="547,201,716,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="547,267,716,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="547,332,716,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="547,397,716,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="547,463,716,504"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_icgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_icgraph">
+<area shape="rect" title="Publish the latest full costmap to the new subscriber." alt="" coords="276,5,499,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a56d27ca488f09b70a8698b2491d036e7" title="Constructor for the Costmap2DPublisher" alt="" coords="5,5,228,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2bb9ed054a418a59554668a9d1bc723a" name="a2bb9ed054a418a59554668a9d1bc723a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb9ed054a418a59554668a9d1bc723a">&#9670;&nbsp;</a></span>prepareGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::Costmap2DPublisher::prepareGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepare grid_ message for publication. </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_cgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_cgraph">
+<area shape="rect" title="Prepare grid_ message for publication." alt="" coords="5,235,228,276"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="276,5,445,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="276,71,445,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="276,136,445,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="276,201,445,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="276,267,445,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="276,332,445,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="276,397,445,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="276,463,445,504"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_icgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_icgraph">
+<area shape="rect" title="Prepare grid_ message for publication." alt="" coords="1037,39,1260,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#aee87acfd9d19093239ec59a88e3e4add" title="Publish the latest full costmap to the new subscriber." alt="" coords="767,5,989,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a47e5b5d93113f39786112919a6981953" title="Publishes the visualization data over ROS" alt="" coords="767,71,989,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a56d27ca488f09b70a8698b2491d036e7" title="Constructor for the Costmap2DPublisher" alt="" coords="496,5,719,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="509,71,706,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,71,448,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,71,203,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47e5b5d93113f39786112919a6981953" name="a47e5b5d93113f39786112919a6981953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e5b5d93113f39786112919a6981953">&#9670;&nbsp;</a></span>publishCostmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::Costmap2DPublisher::publishCostmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Publishes the visualization data over ROS </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_cgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_cgraph">
+<area shape="rect" title="Publishes the visualization data over ROS" alt="" coords="5,237,228,279"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="303,15,472,56"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="547,71,716,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="547,136,716,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="547,201,716,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="547,397,716,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="547,463,716,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="547,528,716,569"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html#a2bb9ed054a418a59554668a9d1bc723a" title="Prepare grid_ message for publication." alt="" coords="276,267,499,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="547,5,716,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="547,332,716,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="547,267,716,308"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_icgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_icgraph">
+<area shape="rect" title="Publishes the visualization data over ROS" alt="" coords="741,5,964,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="496,5,693,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,5,448,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,5,203,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51c026184908fb427babad570150df30" name="a51c026184908fb427babad570150df30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c026184908fb427babad570150df30">&#9670;&nbsp;</a></span>updateBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::Costmap2DPublisher::updateBounds </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>xn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>yn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Include the given bounds in the changed-rectangle. </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30_icgraph" id="aclasscostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30_icgraph">
+<area shape="rect" title="Include the given bounds in the changed&#45;rectangle." alt="" coords="741,5,964,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="496,5,693,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,5,448,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,5,203,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a2c3ba6c3afb098e790fa35bd7dee2b65" name="a2c3ba6c3afb098e790fa35bd7dee2b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c3ba6c3afb098e790fa35bd7dee2b65">&#9670;&nbsp;</a></span>active_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::Costmap2DPublisher::active_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b61b35136fca4959ffff8a560f93041" name="a0b61b35136fca4959ffff8a560f93041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b61b35136fca4959ffff8a560f93041">&#9670;&nbsp;</a></span>always_send_full_costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::Costmap2DPublisher::always_send_full_costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a925a0131bf6d351f7c0f145473322800" name="a925a0131bf6d351f7c0f145473322800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925a0131bf6d351f7c0f145473322800">&#9670;&nbsp;</a></span>cost_translation_table_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * costmap_2d::Costmap2DPublisher::cost_translation_table_ = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Translate from 0-255 values in costmap to -1 to 100 values in message. </p>
+
+</div>
+</div>
+<a id="a82210756911015a30f981a680be2c651" name="a82210756911015a30f981a680be2c651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82210756911015a30f981a680be2c651">&#9670;&nbsp;</a></span>costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a>* costmap_2d::Costmap2DPublisher::costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ccf18bd721fb672419de1abf491118b" name="a4ccf18bd721fb672419de1abf491118b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ccf18bd721fb672419de1abf491118b">&#9670;&nbsp;</a></span>costmap_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher costmap_2d::Costmap2DPublisher::costmap_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a261f5681cd6342a074271438d74b8d3e" name="a261f5681cd6342a074271438d74b8d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261f5681cd6342a074271438d74b8d3e">&#9670;&nbsp;</a></span>costmap_update_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher costmap_2d::Costmap2DPublisher::costmap_update_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13debc4c4c26a8d0c9b088dd0a2f0b53" name="a13debc4c4c26a8d0c9b088dd0a2f0b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13debc4c4c26a8d0c9b088dd0a2f0b53">&#9670;&nbsp;</a></span>global_frame_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string costmap_2d::Costmap2DPublisher::global_frame_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae19b0300daf08759d4fd8ad4b0792a4b" name="ae19b0300daf08759d4fd8ad4b0792a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19b0300daf08759d4fd8ad4b0792a4b">&#9670;&nbsp;</a></span>grid_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nav_msgs::OccupancyGrid costmap_2d::Costmap2DPublisher::grid_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb9fb47efd7d85f081ea76a7e79f2f10" name="acb9fb47efd7d85f081ea76a7e79f2f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9fb47efd7d85f081ea76a7e79f2f10">&#9670;&nbsp;</a></span>node</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::NodeHandle* costmap_2d::Costmap2DPublisher::node</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4601aa9c0a3ae436b679757e4bf23804" name="a4601aa9c0a3ae436b679757e4bf23804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4601aa9c0a3ae436b679757e4bf23804">&#9670;&nbsp;</a></span>saved_origin_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::Costmap2DPublisher::saved_origin_x_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71533d4ce497adc9b2acda72127ed65c" name="a71533d4ce497adc9b2acda72127ed65c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71533d4ce497adc9b2acda72127ed65c">&#9670;&nbsp;</a></span>saved_origin_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::Costmap2DPublisher::saved_origin_y_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad03e091625a7e64c47d620f001a8778f" name="ad03e091625a7e64c47d620f001a8778f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03e091625a7e64c47d620f001a8778f">&#9670;&nbsp;</a></span>x0_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::Costmap2DPublisher::x0_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5bc284341db6fd3c34d505c09f00bbf" name="aa5bc284341db6fd3c34d505c09f00bbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5bc284341db6fd3c34d505c09f00bbf">&#9670;&nbsp;</a></span>xn_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::Costmap2DPublisher::xn_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abddb9a9625f8c1da0d069d3d23b36731" name="abddb9a9625f8c1da0d069d3d23b36731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abddb9a9625f8c1da0d069d3d23b36731">&#9670;&nbsp;</a></span>y0_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::Costmap2DPublisher::y0_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94802918199a360332554b83200339cc" name="a94802918199a360332554b83200339cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94802918199a360332554b83200339cc">&#9670;&nbsp;</a></span>yn_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::Costmap2DPublisher::yn_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>costmap_2d/include/costmap_2d/<a class="el" href="costmap__2d__publisher_8h_source.html">costmap_2d_publisher.h</a></li>
+<li>costmap_2d/src/<a class="el" href="costmap__2d__publisher_8cpp.html">costmap_2d_publisher.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

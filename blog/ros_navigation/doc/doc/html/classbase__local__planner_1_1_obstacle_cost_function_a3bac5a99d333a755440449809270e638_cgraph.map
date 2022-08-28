@@ -1,0 +1,11 @@
+<map id="base_local_planner::ObstacleCostFunction::scoreTrajectory" name="base_local_planner::ObstacleCostFunction::scoreTrajectory">
+<area shape="rect" id="node1" title=" " alt="" coords="5,170,164,226"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_obstacle_cost_function.html#a1f6a1fa580a775f11226ca346b8dcc33" title=" " alt="" coords="221,63,380,119"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="229,144,373,185"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="212,209,389,251"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_obstacle_cost_function.html#aff41f9f317c9e375d0945bda8b9f8970" title=" " alt="" coords="221,275,380,331"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="437,5,617,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="443,71,612,112"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="443,136,612,177"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="665,71,835,112"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="costmap_2d::Costmap2D::updateOrigin" name="costmap_2d::Costmap2D::updateOrigin">
+<area shape="rect" id="node1" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="1337,39,1507,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="1097,5,1283,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="1091,71,1289,112"/>
+<area shape="rect" id="node4" href="$inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="916,49,972,75"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9c3aa244e7890b363a6317500d66e900" title=" " alt="" coords="845,100,1043,141"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="600,27,797,68"/>
+<area shape="rect" id="node9" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4" title="Run the ClearCostmapRecovery recovery behavior. Reverts the costmap to the static map outside of a us..." alt="" coords="615,93,782,149"/>
+<area shape="rect" id="node11" href="$clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="151,143,265,170"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="355,27,552,68"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="109,27,307,68"/>
+<area shape="rect" id="node10" href="$clear__tester_8cpp.html#a401dad5e820a56943c7223955000dc1b" title=" " alt="" coords="391,114,516,141"/>
+<area shape="rect" id="node12" href="$clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,143,61,170"/>
+</map>

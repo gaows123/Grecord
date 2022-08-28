@@ -1,0 +1,5 @@
+<map id="costmap_2d::ObstacleLayer::laserScanValidInfCallback" name="costmap_2d::ObstacleLayer::laserScanValidInfCallback">
+<area shape="rect" id="node1" title="处理缓冲激光数据的回调函数，该函数可以处理有无穷大值Inf的激光数据" alt="" coords="453,5,639,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,5,405,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="5,5,172,47"/>
+</map>

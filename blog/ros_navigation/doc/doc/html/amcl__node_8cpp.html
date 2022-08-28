@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/src/amcl_node.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_c8302149f3d926a37c0623aef124ef9c.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">amcl_node.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;boost/bind.hpp&gt;</code><br />
+<code>#include &lt;boost/thread/mutex.hpp&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="map_8h_source.html">amcl/map/map.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pf_8h_source.html">amcl/pf/pf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="amcl__odom_8h_source.html">amcl/sensors/amcl_odom.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="amcl__laser_8h_source.html">amcl/sensors/amcl_laser.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="portable__utils_8hpp_source.html">portable_utils.hpp</a>&quot;</code><br />
+<code>#include &quot;ros/assert.h&quot;</code><br />
+<code>#include &quot;ros/ros.h&quot;</code><br />
+<code>#include &quot;sensor_msgs/LaserScan.h&quot;</code><br />
+<code>#include &quot;geometry_msgs/PoseWithCovarianceStamped.h&quot;</code><br />
+<code>#include &quot;geometry_msgs/PoseArray.h&quot;</code><br />
+<code>#include &quot;geometry_msgs/Pose.h&quot;</code><br />
+<code>#include &quot;geometry_msgs/PoseStamped.h&quot;</code><br />
+<code>#include &quot;nav_msgs/GetMap.h&quot;</code><br />
+<code>#include &quot;nav_msgs/SetMap.h&quot;</code><br />
+<code>#include &quot;std_srvs/Empty.h&quot;</code><br />
+<code>#include &quot;tf2/LinearMath/Transform.h&quot;</code><br />
+<code>#include &quot;tf2/convert.h&quot;</code><br />
+<code>#include &quot;tf2/utils.h&quot;</code><br />
+<code>#include &quot;tf2_geometry_msgs/tf2_geometry_msgs.h&quot;</code><br />
+<code>#include &quot;tf2_ros/buffer.h&quot;</code><br />
+<code>#include &quot;tf2_ros/message_filter.h&quot;</code><br />
+<code>#include &quot;tf2_ros/transform_broadcaster.h&quot;</code><br />
+<code>#include &quot;tf2_ros/transform_listener.h&quot;</code><br />
+<code>#include &quot;message_filters/subscriber.h&quot;</code><br />
+<code>#include &quot;dynamic_reconfigure/server.h&quot;</code><br />
+<code>#include &quot;amcl/AMCLConfig.h&quot;</code><br />
+<code>#include &lt;rosbag/bag.h&gt;</code><br />
+<code>#include &lt;rosbag/view.h&gt;</code><br />
+<code>#include &lt;boost/foreach.hpp&gt;</code><br />
+<code>#include &lt;diagnostic_updater/diagnostic_updater.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+amcl_node.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="amcl__node_8cpp__incl.png" border="0" usemap="#aamcl_2src_2amcl__node_8cpp" alt=""/></div>
+<map name="aamcl_2src_2amcl__node_8cpp" id="aamcl_2src_2amcl__node_8cpp">
+<area shape="rect" title=" " alt="" coords="2498,5,2662,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,80,114"/>
+<area shape="rect" title=" " alt="" coords="104,87,163,114"/>
+<area shape="rect" title=" " alt="" coords="187,87,234,114"/>
+<area shape="rect" title=" " alt="" coords="259,87,317,114"/>
+<area shape="rect" title=" " alt="" coords="341,87,411,114"/>
+<area shape="rect" title=" " alt="" coords="435,87,541,114"/>
+<area shape="rect" title=" " alt="" coords="566,87,725,114"/>
+<area shape="rect" title=" " alt="" coords="749,87,816,114"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="807,169,926,196"/>
+<area shape="rect" href="pf_8h.html" title=" " alt="" coords="1061,244,1152,271"/>
+<area shape="rect" href="amcl__odom_8h.html" title=" " alt="" coords="1145,87,1327,114"/>
+<area shape="rect" href="amcl__laser_8h.html" title=" " alt="" coords="891,87,1069,114"/>
+<area shape="rect" href="portable__utils_8hpp.html" title=" " alt="" coords="1351,87,1475,114"/>
+<area shape="rect" title=" " alt="" coords="1500,87,1591,114"/>
+<area shape="rect" title=" " alt="" coords="1615,87,1689,114"/>
+<area shape="rect" title=" " alt="" coords="1713,87,1890,114"/>
+<area shape="rect" title=" " alt="" coords="1915,80,2155,121"/>
+<area shape="rect" title=" " alt="" coords="2179,87,2370,114"/>
+<area shape="rect" title=" " alt="" coords="2395,87,2555,114"/>
+<area shape="rect" title=" " alt="" coords="2579,87,2791,114"/>
+<area shape="rect" title=" " alt="" coords="2815,87,2958,114"/>
+<area shape="rect" title=" " alt="" coords="2982,87,3125,114"/>
+<area shape="rect" title=" " alt="" coords="3149,87,3275,114"/>
+<area shape="rect" title=" " alt="" coords="3299,87,3477,114"/>
+<area shape="rect" title=" " alt="" coords="3502,87,3597,114"/>
+<area shape="rect" title=" " alt="" coords="3621,87,3697,114"/>
+<area shape="rect" title=" " alt="" coords="3721,80,3877,121"/>
+<area shape="rect" title=" " alt="" coords="3901,87,4011,114"/>
+<area shape="rect" title=" " alt="" coords="4036,87,4199,114"/>
+<area shape="rect" title=" " alt="" coords="4223,87,4430,114"/>
+<area shape="rect" title=" " alt="" coords="4455,87,4636,114"/>
+<area shape="rect" title=" " alt="" coords="4660,87,4849,114"/>
+<area shape="rect" title=" " alt="" coords="4874,80,5017,121"/>
+<area shape="rect" title=" " alt="" coords="5041,87,5180,114"/>
+<area shape="rect" title=" " alt="" coords="5205,87,5302,114"/>
+<area shape="rect" title=" " alt="" coords="5326,87,5429,114"/>
+<area shape="rect" title=" " alt="" coords="5453,87,5579,114"/>
+<area shape="rect" title=" " alt="" coords="5604,80,5751,121"/>
+<area shape="rect" title=" " alt="" coords="834,244,899,271"/>
+<area shape="rect" href="pf__vector_8h.html" title=" " alt="" coords="1177,319,1263,345"/>
+<area shape="rect" href="pf__kdtree_8h.html" title=" " alt="" coords="1063,319,1150,345"/>
+<area shape="rect" title=" " alt="" coords="1189,393,1251,420"/>
+<area shape="rect" href="amcl__sensor_8h.html" title=" " alt="" coords="963,169,1069,196"/>
+<area shape="rect" href="pf__pdf_8h.html" title=" " alt="" coords="1181,244,1277,271"/>
+<area shape="rect" title=" " alt="" coords="1381,169,1445,196"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structamcl__hyp__t.html">amcl_hyp_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_amcl_node.html">AmclNode</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a75af3afadf140f0fa58181515af6ac07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#a75af3afadf140f0fa58181515af6ac07">NEW_UNIFORM_SAMPLING</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a75af3afadf140f0fa58181515af6ac07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fe9bff0a1be75aae2da3e593053e2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#a56fe9bff0a1be75aae2da3e593053e2c">USAGE</a>&#160;&#160;&#160;&quot;USAGE: amcl&quot;</td></tr>
+<tr class="separator:a56fe9bff0a1be75aae2da3e593053e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aa7a3531e33998b7883dec8951cff5ade"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#aa7a3531e33998b7883dec8951cff5ade">normalize</a> (double z)</td></tr>
+<tr class="separator:aa7a3531e33998b7883dec8951cff5ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4245ab25f5d431e40eafba39bc25ed1c"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#a4245ab25f5d431e40eafba39bc25ed1c">angle_diff</a> (double a, double b)</td></tr>
+<tr class="separator:a4245ab25f5d431e40eafba39bc25ed1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf96e2284f11ea6e78e1956967aa503"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#aaaf96e2284f11ea6e78e1956967aa503">stripSlash</a> (const std::string &amp;in)</td></tr>
+<tr class="separator:aaaf96e2284f11ea6e78e1956967aa503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458379afdbad052bb3077d6b425d2fee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#a458379afdbad052bb3077d6b425d2fee">sigintHandler</a> (int sig)</td></tr>
+<tr class="separator:a458379afdbad052bb3077d6b425d2fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a7210cd83e45f121f6f24e345dd68f3fa"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#a7210cd83e45f121f6f24e345dd68f3fa">scan_topic_</a> = &quot;scan&quot;</td></tr>
+<tr class="separator:a7210cd83e45f121f6f24e345dd68f3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161f2b637d2995fbebe3560c37416877"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="class_amcl_node.html">AmclNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="amcl__node_8cpp.html#a161f2b637d2995fbebe3560c37416877">amcl_node_ptr</a></td></tr>
+<tr class="separator:a161f2b637d2995fbebe3560c37416877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a75af3afadf140f0fa58181515af6ac07" name="a75af3afadf140f0fa58181515af6ac07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75af3afadf140f0fa58181515af6ac07">&#9670;&nbsp;</a></span>NEW_UNIFORM_SAMPLING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEW_UNIFORM_SAMPLING&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56fe9bff0a1be75aae2da3e593053e2c" name="a56fe9bff0a1be75aae2da3e593053e2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56fe9bff0a1be75aae2da3e593053e2c">&#9670;&nbsp;</a></span>USAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USAGE&#160;&#160;&#160;&quot;USAGE: amcl&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a4245ab25f5d431e40eafba39bc25ed1c" name="a4245ab25f5d431e40eafba39bc25ed1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4245ab25f5d431e40eafba39bc25ed1c">&#9670;&nbsp;</a></span>angle_diff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double angle_diff </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="amcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_cgraph.png" border="0" usemap="#aamcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_cgraph" alt=""/></div>
+<map name="aamcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_cgraph" id="aamcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,84,32"/>
+<area shape="rect" href="amcl__node_8cpp.html#aa7a3531e33998b7883dec8951cff5ade" title=" " alt="" coords="132,5,211,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="amcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_icgraph.png" border="0" usemap="#aamcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_icgraph" alt=""/></div>
+<map name="aamcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_icgraph" id="aamcl__node_8cpp_a4245ab25f5d431e40eafba39bc25ed1c_icgraph">
+<area shape="rect" title=" " alt="" coords="644,5,723,32"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="424,5,596,32"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,31,376,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="amcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#aamcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="aamcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="aamcl__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" href="amcl__node_8cpp.html#a458379afdbad052bb3077d6b425d2fee" title=" " alt="" coords="104,5,201,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa7a3531e33998b7883dec8951cff5ade" name="aa7a3531e33998b7883dec8951cff5ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7a3531e33998b7883dec8951cff5ade">&#9670;&nbsp;</a></span>normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double normalize </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="amcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade_icgraph.png" border="0" usemap="#aamcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade_icgraph" alt=""/></div>
+<map name="aamcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade_icgraph" id="aamcl__node_8cpp_aa7a3531e33998b7883dec8951cff5ade_icgraph">
+<area shape="rect" title=" " alt="" coords="771,5,849,32"/>
+<area shape="rect" href="amcl__node_8cpp.html#a4245ab25f5d431e40eafba39bc25ed1c" title=" " alt="" coords="644,5,723,32"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="424,5,596,32"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,31,376,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a458379afdbad052bb3077d6b425d2fee" name="a458379afdbad052bb3077d6b425d2fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458379afdbad052bb3077d6b425d2fee">&#9670;&nbsp;</a></span>sigintHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sigintHandler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="amcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee_icgraph.png" border="0" usemap="#aamcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee_icgraph" alt=""/></div>
+<map name="aamcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee_icgraph" id="aamcl__node_8cpp_a458379afdbad052bb3077d6b425d2fee_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,201,32"/>
+<area shape="rect" href="amcl__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaaf96e2284f11ea6e78e1956967aa503" name="aaaf96e2284f11ea6e78e1956967aa503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf96e2284f11ea6e78e1956967aa503">&#9670;&nbsp;</a></span>stripSlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string stripSlash </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="amcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503_icgraph.png" border="0" usemap="#aamcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503_icgraph" alt=""/></div>
+<map name="aamcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503_icgraph" id="aamcl__node_8cpp_aaaf96e2284f11ea6e78e1956967aa503_icgraph">
+<area shape="rect" title=" " alt="" coords="924,83,1004,110"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,134,156,161"/>
+<area shape="rect" href="class_amcl_node.html#a3c4e7d02b1dae91cfa328e149a61c908" title=" " alt="" coords="695,33,868,59"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="451,83,623,110"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="209,134,381,161"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="687,185,876,227"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="435,185,639,211"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,235,387,262"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a161f2b637d2995fbebe3560c37416877" name="a161f2b637d2995fbebe3560c37416877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a161f2b637d2995fbebe3560c37416877">&#9670;&nbsp;</a></span>amcl_node_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="class_amcl_node.html">AmclNode</a>&gt; amcl_node_ptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7210cd83e45f121f6f24e345dd68f3fa" name="a7210cd83e45f121f6f24e345dd68f3fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7210cd83e45f121f6f24e345dd68f3fa">&#9670;&nbsp;</a></span>scan_topic_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string scan_topic_ = &quot;scan&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

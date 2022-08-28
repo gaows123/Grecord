@@ -1,0 +1,119 @@
+\hypertarget{classglobal__planner_1_1_a_star_expansion}{}\doxysection{global\+\_\+planner\+::AStar\+Expansion类 参考}
+\label{classglobal__planner_1_1_a_star_expansion}\index{global\_planner::AStarExpansion@{global\_planner::AStarExpansion}}
+
+
+{\ttfamily \#include $<$astar.\+h$>$}
+
+
+
+类 global\+\_\+planner\+::AStar\+Expansion 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classglobal__planner_1_1_a_star_expansion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+global\+\_\+planner\+::AStar\+Expansion 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classglobal__planner_1_1_a_star_expansion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_a_star_expansion_a3a1f2f9b946d0e69afce5886cf7d56fa}{AStar\+Expansion}} (\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$p\+\_\+calc, int nx, int ny)
+\item 
+virtual \mbox{\hyperlink{classglobal__planner_1_1_a_star_expansion_a26c44db6dd6346463c52e8dda0665985}{$\sim$\+AStar\+Expansion}} ()
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371}{calculate\+Potentials}} (unsigned char $\ast$costs, double start\+\_\+x, double start\+\_\+y, double end\+\_\+x, double end\+\_\+y, int cycles, float $\ast$potential)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874}{add}} (unsigned char $\ast$costs, float $\ast$potential, float prev\+\_\+potential, int next\+\_\+i, int end\+\_\+x, int end\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classglobal__planner_1_1_index}{Index}} $>$ \mbox{\hyperlink{classglobal__planner_1_1_a_star_expansion_acb298a6cba9ef7313eee585a7c5fdebc}{queue\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_a_star_expansion_a3a1f2f9b946d0e69afce5886cf7d56fa}\label{classglobal__planner_1_1_a_star_expansion_a3a1f2f9b946d0e69afce5886cf7d56fa}} 
+\index{global\_planner::AStarExpansion@{global\_planner::AStarExpansion}!AStarExpansion@{AStarExpansion}}
+\index{AStarExpansion@{AStarExpansion}!global\_planner::AStarExpansion@{global\_planner::AStarExpansion}}
+\doxysubsubsection{\texorpdfstring{AStarExpansion()}{AStarExpansion()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+AStar\+Expansion\+::\+AStar\+Expansion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$}]{p\+\_\+calc,  }\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_a_star_expansion_a26c44db6dd6346463c52e8dda0665985}\label{classglobal__planner_1_1_a_star_expansion_a26c44db6dd6346463c52e8dda0665985}} 
+\index{global\_planner::AStarExpansion@{global\_planner::AStarExpansion}!````~AStarExpansion@{$\sim$AStarExpansion}}
+\index{````~AStarExpansion@{$\sim$AStarExpansion}!global\_planner::AStarExpansion@{global\_planner::AStarExpansion}}
+\doxysubsubsection{\texorpdfstring{$\sim$AStarExpansion()}{~AStarExpansion()}}
+{\footnotesize\ttfamily virtual global\+\_\+planner\+::\+AStar\+Expansion\+::$\sim$\+AStar\+Expansion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874}\label{classglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874}} 
+\index{global\_planner::AStarExpansion@{global\_planner::AStarExpansion}!add@{add}}
+\index{add@{add}!global\_planner::AStarExpansion@{global\_planner::AStarExpansion}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+AStar\+Expansion\+::add (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costs,  }\item[{float $\ast$}]{potential,  }\item[{float}]{prev\+\_\+potential,  }\item[{int}]{next\+\_\+i,  }\item[{int}]{end\+\_\+x,  }\item[{int}]{end\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371}\label{classglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371}} 
+\index{global\_planner::AStarExpansion@{global\_planner::AStarExpansion}!calculatePotentials@{calculatePotentials}}
+\index{calculatePotentials@{calculatePotentials}!global\_planner::AStarExpansion@{global\_planner::AStarExpansion}}
+\doxysubsubsection{\texorpdfstring{calculatePotentials()}{calculatePotentials()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+AStar\+Expansion\+::calculate\+Potentials (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costs,  }\item[{double}]{start\+\_\+x,  }\item[{double}]{start\+\_\+y,  }\item[{double}]{end\+\_\+x,  }\item[{double}]{end\+\_\+y,  }\item[{int}]{cycles,  }\item[{float $\ast$}]{potential }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+实现了 \mbox{\hyperlink{classglobal__planner_1_1_expander_a7c352121a2ea1e1b650b219004c98786}{global\+\_\+planner\+::\+Expander}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_a_star_expansion_acb298a6cba9ef7313eee585a7c5fdebc}\label{classglobal__planner_1_1_a_star_expansion_acb298a6cba9ef7313eee585a7c5fdebc}} 
+\index{global\_planner::AStarExpansion@{global\_planner::AStarExpansion}!queue\_@{queue\_}}
+\index{queue\_@{queue\_}!global\_planner::AStarExpansion@{global\_planner::AStarExpansion}}
+\doxysubsubsection{\texorpdfstring{queue\_}{queue\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classglobal__planner_1_1_index}{Index}}$>$ global\+\_\+planner\+::\+AStar\+Expansion\+::queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+global\+\_\+planner/include/global\+\_\+planner/\mbox{\hyperlink{astar_8h}{astar.\+h}}\item 
+global\+\_\+planner/src/\mbox{\hyperlink{astar_8cpp}{astar.\+cpp}}\end{DoxyCompactItemize}

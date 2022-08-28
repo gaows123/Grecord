@@ -1,0 +1,5 @@
+<map id="amcl::AMCLSensor" name="amcl::AMCLSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="77,5,212,32"/>
+<area shape="rect" id="node2" href="$classamcl_1_1_a_m_c_l_laser.html" title=" " alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$classamcl_1_1_a_m_c_l_odom.html" title=" " alt="" coords="156,80,285,107"/>
+</map>

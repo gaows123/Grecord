@@ -1,0 +1,144 @@
+\hypertarget{planner__core_8h_source}{}\doxysection{planner\+\_\+core.\+h}
+\label{planner__core_8h_source}\index{global\_planner/include/global\_planner/planner\_core.h@{global\_planner/include/global\_planner/planner\_core.h}}
+\mbox{\hyperlink{planner__core_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_PLANNERCORE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_PLANNERCORE\_H}}
+\DoxyCodeLine{3 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{6 \textcolor{comment}{ *}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{13 \textcolor{comment}{ *}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{16 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{18 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{20 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{21 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{22 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{23 \textcolor{comment}{ *}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{34 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{35 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{36 \textcolor{comment}{ *}}
+\DoxyCodeLine{37 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{38 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{39 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define POT\_HIGH 1.0e10        }\textcolor{comment}{// unassigned cell potential}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <nav\_msgs/Path.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base__global__planner_8h}{nav\_core/base\_global\_planner.h}}>}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <nav\_msgs/GetPlan.h>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/server.h>}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{potential__calculator_8h}{global\_planner/potential\_calculator.h}}>}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{expander_8h}{global\_planner/expander.h}}>}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{traceback_8h}{global\_planner/traceback.h}}>}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{orientation__filter_8h}{global\_planner/orientation\_filter.h}}>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <global\_planner/GlobalPlannerConfig.h>}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglobal__planner}{global\_planner}} \{}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{class }Expander;}
+\DoxyCodeLine{59 \textcolor{keyword}{class }GridPath;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66 \textcolor{keyword}{class }\mbox{\hyperlink{classglobal__planner_1_1_global_planner}{GlobalPlanner}} : \textcolor{keyword}{public} \mbox{\hyperlink{classnav__core_1_1_base_global_planner}{nav\_core::BaseGlobalPlanner}} \{}
+\DoxyCodeLine{67     \textcolor{keyword}{public}:}
+\DoxyCodeLine{71         \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}{GlobalPlanner}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79         \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}{GlobalPlanner}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap, std::string frame\_id);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{84         \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa49ab75794afdbec6aa7c6c3902de4c0}{\string~GlobalPlanner}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{91         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}{initialize}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap\_ros);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}{initialize}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap, std::string frame\_id);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{102         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}},}
+\DoxyCodeLine{103                       std::vector<geometry\_msgs::PoseStamped>\& plan);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{113         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, \textcolor{keywordtype}{double} tolerance,}
+\DoxyCodeLine{114                       std::vector<geometry\_msgs::PoseStamped>\& plan);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{121         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa64e1114c4a78980256bd04bd0e79efa}{computePotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{133         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5}{getPlanFromPotential}}(\textcolor{keywordtype}{double} start\_x, \textcolor{keywordtype}{double} start\_y, \textcolor{keywordtype}{double} end\_x, \textcolor{keywordtype}{double} end\_y,}
+\DoxyCodeLine{134                                   \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}},}
+\DoxyCodeLine{135                                   std::vector<geometry\_msgs::PoseStamped>\& plan);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{142         \textcolor{keywordtype}{double} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7f0a8eaf0e715f682480ef447a63cd67}{getPointPotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{149         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7c50827ebb21a48825d55bda56dd38ac}{validPointPotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{157         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a27405d9450075e6dcc7fc73bd56fb6dc}{validPointPotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point, \textcolor{keywordtype}{double} tolerance);}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{162         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f}{publishPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& path);}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208}{makePlanService}}(nav\_msgs::GetPlan::Request\& req, nav\_msgs::GetPlan::Response\& resp);}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{171         \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a790fb19fb46e1a1edc15f98b1075e849}{costmap\_}};}
+\DoxyCodeLine{172         std::string \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4a8bf49e32dcae69b02adabe35b99ed0}{frame\_id\_}};}
+\DoxyCodeLine{173         ros::Publisher \mbox{\hyperlink{classglobal__planner_1_1_global_planner_ae90f4043291a203f62ad9259796792dc}{plan\_pub\_}};}
+\DoxyCodeLine{174         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_abd54fe2b4a6f92fec92e49da3739e016}{initialized\_}}, \mbox{\hyperlink{classglobal__planner_1_1_global_planner_adc356fbcaa27c897710becc5f7ad9777}{allow\_unknown\_}};}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176     \textcolor{keyword}{private}:}
+\DoxyCodeLine{177         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a39a4e51153df87f6373d091084235720}{mapToWorld}}(\textcolor{keywordtype}{double} mx, \textcolor{keywordtype}{double} my, \textcolor{keywordtype}{double}\& wx, \textcolor{keywordtype}{double}\& wy);}
+\DoxyCodeLine{178         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aec6ebc007afc963fec1eaed68e05bdf7}{worldToMap}}(\textcolor{keywordtype}{double} wx, \textcolor{keywordtype}{double} wy, \textcolor{keywordtype}{double}\& mx, \textcolor{keywordtype}{double}\& my);}
+\DoxyCodeLine{179         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a04cb531dc0326cc5bdcce752175ee030}{clearRobotCell}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my);}
+\DoxyCodeLine{180         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a91c22ec25e6e8232ef2d73e6738f3857}{publishPotential}}(\textcolor{keywordtype}{float}* potential);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182         \textcolor{keywordtype}{double} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a0038740762c928c508b6650f3eaa9bf5}{planner\_window\_x\_}}, \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a98d9f22a34a6522abecf360b59d9e29d}{planner\_window\_y\_}}, \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a111644f8646ee899752df06f8f5d9344}{default\_tolerance\_}};}
+\DoxyCodeLine{183         boost::mutex \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4be9e56d865efa801b5ad4a9c4e4ac4e}{mutex\_}};}
+\DoxyCodeLine{184         ros::ServiceServer \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a00c4876b5681cccdef93ac180b792439}{make\_plan\_srv\_}};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186         \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{PotentialCalculator}}* \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a9196cb2ef93cc1d25647bcc6d1f3c051}{p\_calc\_}};}
+\DoxyCodeLine{187         \mbox{\hyperlink{classglobal__planner_1_1_expander}{Expander}}* \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a79a3e9afebbcfff9bb3960aa7b57062f}{planner\_}};}
+\DoxyCodeLine{188         \mbox{\hyperlink{classglobal__planner_1_1_traceback}{Traceback}}* \mbox{\hyperlink{classglobal__planner_1_1_global_planner_ac67a13a5e6be407ea15b24f4ac424e59}{path\_maker\_}};}
+\DoxyCodeLine{189         \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter}{OrientationFilter}}* \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a006d8a100ff49cca9a076822f6c1403b}{orientation\_filter\_}};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7a69e8248b531de15c2429239f3d4228}{publish\_potential\_}};}
+\DoxyCodeLine{192         ros::Publisher \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a8c7179eb971553a465eb2dd4a73c0197}{potential\_pub\_}};}
+\DoxyCodeLine{193         \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa487da002de486bb50e3959a36f591be}{publish\_scale\_}};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a166082482ed5973406af72a52f7cab20}{outlineMap}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* costarr, \textcolor{keywordtype}{int} nx, \textcolor{keywordtype}{int} ny, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value);}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197         \textcolor{keywordtype}{float}* \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a5c12f3c514ac17b13c30ab91795bc427}{potential\_array\_}}; \textcolor{comment}{// 可行点矩阵}}
+\DoxyCodeLine{198         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_afb12fc492007c12d84147ed07f792c7e}{start\_x\_}}, \mbox{\hyperlink{classglobal__planner_1_1_global_planner_ae82d95a4c703fbff8de529ff0c893fdb}{start\_y\_}}, \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a181cc3fec157f84a44a4125a6440f6a7}{end\_x\_}}, \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7858d8bad5a65ce6b2809c104312e04d}{end\_y\_}};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4fa7c15cefc10553b6b3080a72d64201}{old\_navfn\_behavior\_}};}
+\DoxyCodeLine{201         \textcolor{keywordtype}{float} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a37202a2306bebdc0cc0326820700bbc0}{convert\_offset\_}};}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a442403698c352db9d20335768d258be9}{outline\_map\_}};}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205         dynamic\_reconfigure::Server<global\_planner::GlobalPlannerConfig> *\mbox{\hyperlink{classglobal__planner_1_1_global_planner_a02d7c6a1d3736d4a19fa53391a286b73}{dsrv\_}};}
+\DoxyCodeLine{206         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a466844ce6660d09e06c1dc1f87c03d30}{reconfigureCB}}(global\_planner::GlobalPlannerConfig \&config, uint32\_t level);}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208 \};}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210 \} \textcolor{comment}{//end namespace global\_planner}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+<map id="base_local_planner::TrajectoryPlannerROS" name="base_local_planner::TrajectoryPlannerROS">
+<area shape="rect" id="node1" title="A ROS wrapper for the trajectory controller that queries the param server to construct a controller" alt="" coords="19,80,179,121"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_base_local_planner.html" title="提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口." alt="" coords="5,5,193,32"/>
+</map>

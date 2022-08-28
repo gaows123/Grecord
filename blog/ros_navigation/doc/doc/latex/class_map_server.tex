@@ -1,0 +1,235 @@
+\hypertarget{class_map_server}{}\doxysection{Map\+Server类 参考}
+\label{class_map_server}\index{MapServer@{MapServer}}
+
+
+Map\+Server 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{class_map_server__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_server_ae1c28a36205ae2d7fc2faa7e9d53b3e9}{Map\+Server}} (const std\+::string \&fname, double res)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_map_server_adb1ee040f9e2eaf855ba4f76bfc10260}{map\+Callback}} (nav\+\_\+msgs\+::\+Get\+Map\+::\+Request \&req, nav\+\_\+msgs\+::\+Get\+Map\+::\+Response \&res)
+\item 
+bool \mbox{\hyperlink{class_map_server_a3c6808b81ad71ac7e82d4aa8e3ac34df}{change\+Map\+Callback}} (nav\+\_\+msgs\+::\+Load\+Map\+::\+Request \&request, nav\+\_\+msgs\+::\+Load\+Map\+::\+Response \&response)
+\item 
+bool \mbox{\hyperlink{class_map_server_a97a151da4f0c2457e4465cbf5e72e389}{load\+Map\+From\+Values}} (std\+::string map\+\_\+file\+\_\+name, double resolution, int negate, double occ\+\_\+th, double free\+\_\+th, double origin\mbox{[}3\mbox{]}, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}} mode)
+\item 
+bool \mbox{\hyperlink{class_map_server_ad11fadd1892f9fc826010ee3478cc13a}{load\+Map\+From\+Params}} (std\+::string map\+\_\+file\+\_\+name, double resolution)
+\item 
+bool \mbox{\hyperlink{class_map_server_a3ff2a7171c8d3cc381506c8347e5fae6}{load\+Map\+From\+Yaml}} (std\+::string path\+\_\+to\+\_\+yaml)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{class_map_server_a1c344815b4e16b3eec3a3ab6861254b2}{nh\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{class_map_server_a953adff66910267ca470e341e810abd7}{map\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{class_map_server_a259d9f9b6c76f1ed7aeb819776c1d2fc}{metadata\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{class_map_server_a004a9bcfd9f1ce649f8099cf75580d42}{get\+\_\+map\+\_\+service\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{class_map_server_a2df40968208cb3ee5e5dd9194f17822c}{change\+\_\+map\+\_\+srv\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_map_server_a70e827021556d06bcf6939816fe84ffb}{deprecated\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_map_server_aff7dda91189acd37a193039d92bb955b}{frame\+\_\+id\+\_\+}}
+\item 
+nav\+\_\+msgs\+::\+Map\+Meta\+Data \mbox{\hyperlink{class_map_server_a5aca513fe2a230e89e41f700703ee477}{meta\+\_\+data\+\_\+message\+\_\+}}
+\item 
+nav\+\_\+msgs\+::\+Get\+Map\+::\+Response \mbox{\hyperlink{class_map_server_ac1be64f4c32a295b8a0bd09e716aeb42}{map\+\_\+resp\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_map_server_ae1c28a36205ae2d7fc2faa7e9d53b3e9}\label{class_map_server_ae1c28a36205ae2d7fc2faa7e9d53b3e9}} 
+\index{MapServer@{MapServer}!MapServer@{MapServer}}
+\index{MapServer@{MapServer}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{MapServer()}{MapServer()}}
+{\footnotesize\ttfamily Map\+Server\+::\+Map\+Server (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fname,  }\item[{double}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Trivial constructor 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_ae1c28a36205ae2d7fc2faa7e9d53b3e9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_map_server_a3c6808b81ad71ac7e82d4aa8e3ac34df}\label{class_map_server_a3c6808b81ad71ac7e82d4aa8e3ac34df}} 
+\index{MapServer@{MapServer}!changeMapCallback@{changeMapCallback}}
+\index{changeMapCallback@{changeMapCallback}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{changeMapCallback()}{changeMapCallback()}}
+{\footnotesize\ttfamily bool Map\+Server\+::change\+Map\+Callback (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Load\+Map\+::\+Request \&}]{request,  }\item[{nav\+\_\+msgs\+::\+Load\+Map\+::\+Response \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Callback invoked when someone requests to change the map 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_a3c6808b81ad71ac7e82d4aa8e3ac34df_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_a3c6808b81ad71ac7e82d4aa8e3ac34df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_server_ad11fadd1892f9fc826010ee3478cc13a}\label{class_map_server_ad11fadd1892f9fc826010ee3478cc13a}} 
+\index{MapServer@{MapServer}!loadMapFromParams@{loadMapFromParams}}
+\index{loadMapFromParams@{loadMapFromParams}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{loadMapFromParams()}{loadMapFromParams()}}
+{\footnotesize\ttfamily bool Map\+Server\+::load\+Map\+From\+Params (\begin{DoxyParamCaption}\item[{std\+::string}]{map\+\_\+file\+\_\+name,  }\item[{double}]{resolution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Load a map using the deprecated method 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_ad11fadd1892f9fc826010ee3478cc13a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_ad11fadd1892f9fc826010ee3478cc13a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_server_a97a151da4f0c2457e4465cbf5e72e389}\label{class_map_server_a97a151da4f0c2457e4465cbf5e72e389}} 
+\index{MapServer@{MapServer}!loadMapFromValues@{loadMapFromValues}}
+\index{loadMapFromValues@{loadMapFromValues}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{loadMapFromValues()}{loadMapFromValues()}}
+{\footnotesize\ttfamily bool Map\+Server\+::load\+Map\+From\+Values (\begin{DoxyParamCaption}\item[{std\+::string}]{map\+\_\+file\+\_\+name,  }\item[{double}]{resolution,  }\item[{int}]{negate,  }\item[{double}]{occ\+\_\+th,  }\item[{double}]{free\+\_\+th,  }\item[{double}]{origin\mbox{[}3\mbox{]},  }\item[{\mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Load a map given all the values needed to understand it 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_a97a151da4f0c2457e4465cbf5e72e389_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_a97a151da4f0c2457e4465cbf5e72e389_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_server_a3ff2a7171c8d3cc381506c8347e5fae6}\label{class_map_server_a3ff2a7171c8d3cc381506c8347e5fae6}} 
+\index{MapServer@{MapServer}!loadMapFromYaml@{loadMapFromYaml}}
+\index{loadMapFromYaml@{loadMapFromYaml}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{loadMapFromYaml()}{loadMapFromYaml()}}
+{\footnotesize\ttfamily bool Map\+Server\+::load\+Map\+From\+Yaml (\begin{DoxyParamCaption}\item[{std\+::string}]{path\+\_\+to\+\_\+yaml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Load a map given a path to a yaml file 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_a3ff2a7171c8d3cc381506c8347e5fae6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_a3ff2a7171c8d3cc381506c8347e5fae6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_server_adb1ee040f9e2eaf855ba4f76bfc10260}\label{class_map_server_adb1ee040f9e2eaf855ba4f76bfc10260}} 
+\index{MapServer@{MapServer}!mapCallback@{mapCallback}}
+\index{mapCallback@{mapCallback}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{mapCallback()}{mapCallback()}}
+{\footnotesize\ttfamily bool Map\+Server\+::map\+Callback (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Get\+Map\+::\+Request \&}]{req,  }\item[{nav\+\_\+msgs\+::\+Get\+Map\+::\+Response \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Callback invoked when someone requests our service 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_server_adb1ee040f9e2eaf855ba4f76bfc10260_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_map_server_a2df40968208cb3ee5e5dd9194f17822c}\label{class_map_server_a2df40968208cb3ee5e5dd9194f17822c}} 
+\index{MapServer@{MapServer}!change\_map\_srv\_@{change\_map\_srv\_}}
+\index{change\_map\_srv\_@{change\_map\_srv\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{change\_map\_srv\_}{change\_map\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server Map\+Server\+::change\+\_\+map\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_map_server_a70e827021556d06bcf6939816fe84ffb}\label{class_map_server_a70e827021556d06bcf6939816fe84ffb}} 
+\index{MapServer@{MapServer}!deprecated\_@{deprecated\_}}
+\index{deprecated\_@{deprecated\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{deprecated\_}{deprecated\_}}
+{\footnotesize\ttfamily bool Map\+Server\+::deprecated\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_map_server_aff7dda91189acd37a193039d92bb955b}\label{class_map_server_aff7dda91189acd37a193039d92bb955b}} 
+\index{MapServer@{MapServer}!frame\_id\_@{frame\_id\_}}
+\index{frame\_id\_@{frame\_id\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{frame\_id\_}{frame\_id\_}}
+{\footnotesize\ttfamily std\+::string Map\+Server\+::frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_map_server_a004a9bcfd9f1ce649f8099cf75580d42}\label{class_map_server_a004a9bcfd9f1ce649f8099cf75580d42}} 
+\index{MapServer@{MapServer}!get\_map\_service\_@{get\_map\_service\_}}
+\index{get\_map\_service\_@{get\_map\_service\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{get\_map\_service\_}{get\_map\_service\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server Map\+Server\+::get\+\_\+map\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_map_server_a953adff66910267ca470e341e810abd7}\label{class_map_server_a953adff66910267ca470e341e810abd7}} 
+\index{MapServer@{MapServer}!map\_pub\_@{map\_pub\_}}
+\index{map\_pub\_@{map\_pub\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{map\_pub\_}{map\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher Map\+Server\+::map\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_map_server_ac1be64f4c32a295b8a0bd09e716aeb42}\label{class_map_server_ac1be64f4c32a295b8a0bd09e716aeb42}} 
+\index{MapServer@{MapServer}!map\_resp\_@{map\_resp\_}}
+\index{map\_resp\_@{map\_resp\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{map\_resp\_}{map\_resp\_}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Get\+Map\+::\+Response Map\+Server\+::map\+\_\+resp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_map_server_a5aca513fe2a230e89e41f700703ee477}\label{class_map_server_a5aca513fe2a230e89e41f700703ee477}} 
+\index{MapServer@{MapServer}!meta\_data\_message\_@{meta\_data\_message\_}}
+\index{meta\_data\_message\_@{meta\_data\_message\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{meta\_data\_message\_}{meta\_data\_message\_}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Map\+Meta\+Data Map\+Server\+::meta\+\_\+data\+\_\+message\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The map data is cached here, to be sent out to service callers \mbox{\Hypertarget{class_map_server_a259d9f9b6c76f1ed7aeb819776c1d2fc}\label{class_map_server_a259d9f9b6c76f1ed7aeb819776c1d2fc}} 
+\index{MapServer@{MapServer}!metadata\_pub\_@{metadata\_pub\_}}
+\index{metadata\_pub\_@{metadata\_pub\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{metadata\_pub\_}{metadata\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher Map\+Server\+::metadata\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_map_server_a1c344815b4e16b3eec3a3ab6861254b2}\label{class_map_server_a1c344815b4e16b3eec3a3ab6861254b2}} 
+\index{MapServer@{MapServer}!nh\_@{nh\_}}
+\index{nh\_@{nh\_}!MapServer@{MapServer}}
+\doxysubsubsection{\texorpdfstring{nh\_}{nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle Map\+Server\+::nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+map\+\_\+server/src/\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

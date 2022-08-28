@@ -1,0 +1,133 @@
+\hypertarget{costmap__2d__markers_8cpp}{}\doxysection{costmap\+\_\+2d/src/costmap\+\_\+2d\+\_\+markers.cpp 文件参考}
+\label{costmap__2d__markers_8cpp}\index{costmap\_2d/src/costmap\_2d\_markers.cpp@{costmap\_2d/src/costmap\_2d\_markers.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$visualization\+\_\+msgs/\+Marker\+Array.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/\+Voxel\+Grid.\+h$>$}\newline
+{\ttfamily \#include $<$voxel\+\_\+grid/voxel\+\_\+grid.\+h$>$}\newline
+costmap\+\_\+2d\+\_\+markers.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__2d__markers_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cell}{Cell}}
+\end{DoxyCompactItemize}
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{struct_cell}{Cell}} $>$ \mbox{\hyperlink{costmap__2d__markers_8cpp_a9160334f5431d469eb3170c95663efa7}{V\+\_\+\+Cell}}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{costmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279}{voxel\+Callback}} (const ros\+::\+Publisher \&pub, const costmap\+\_\+2d\+::\+Voxel\+Grid\+Const\+Ptr \&grid)
+\item 
+int \mbox{\hyperlink{costmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{costmap__2d__markers_8cpp_a78afaf1e4f0d582f44a4bd7e59997f4f}{g\+\_\+colors\+\_\+r}} \mbox{[}$\,$\mbox{]} = \{0.\+0f, 0.\+0f, 1.\+0f\}
+\item 
+float \mbox{\hyperlink{costmap__2d__markers_8cpp_aad0a3b44471e2ffc0aceb67acaf283ab}{g\+\_\+colors\+\_\+g}} \mbox{[}$\,$\mbox{]} = \{0.\+0f, 0.\+0f, 0.\+0f\}
+\item 
+float \mbox{\hyperlink{costmap__2d__markers_8cpp_a99cf9cb8de21cce5b837cb388869e47d}{g\+\_\+colors\+\_\+b}} \mbox{[}$\,$\mbox{]} = \{0.\+0f, 1.\+0f, 0.\+0f\}
+\item 
+float \mbox{\hyperlink{costmap__2d__markers_8cpp_a7306e31f20b6069ada3ccd04a2dee8fb}{g\+\_\+colors\+\_\+a}} \mbox{[}$\,$\mbox{]} = \{0.\+0f, 0.\+5f, 1.\+0f\}
+\item 
+std\+::string \mbox{\hyperlink{costmap__2d__markers_8cpp_a7087a2e3e8de3485a859283b3a560524}{g\+\_\+marker\+\_\+ns}}
+\item 
+\mbox{\hyperlink{costmap__2d__cloud_8cpp_a9160334f5431d469eb3170c95663efa7}{V\+\_\+\+Cell}} \mbox{\hyperlink{costmap__2d__markers_8cpp_ab0bf85964bfc51e68e1fd5a9ce836778}{g\+\_\+cells}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{类型定义说明}
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_a9160334f5431d469eb3170c95663efa7}\label{costmap__2d__markers_8cpp_a9160334f5431d469eb3170c95663efa7}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!V\_Cell@{V\_Cell}}
+\index{V\_Cell@{V\_Cell}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{V\_Cell}{V\_Cell}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{struct_cell}{Cell}}$>$ \mbox{\hyperlink{costmap__2d__cloud_8cpp_a9160334f5431d469eb3170c95663efa7}{V\+\_\+\+Cell}}}
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{costmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!main@{main}}
+\index{main@{main}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279}\label{costmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!voxelCallback@{voxelCallback}}
+\index{voxelCallback@{voxelCallback}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{voxelCallback()}{voxelCallback()}}
+{\footnotesize\ttfamily void voxel\+Callback (\begin{DoxyParamCaption}\item[{const ros\+::\+Publisher \&}]{pub,  }\item[{const costmap\+\_\+2d\+::\+Voxel\+Grid\+Const\+Ptr \&}]{grid }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{costmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_ab0bf85964bfc51e68e1fd5a9ce836778}\label{costmap__2d__markers_8cpp_ab0bf85964bfc51e68e1fd5a9ce836778}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!g\_cells@{g\_cells}}
+\index{g\_cells@{g\_cells}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_cells}{g\_cells}}
+{\footnotesize\ttfamily \mbox{\hyperlink{costmap__2d__cloud_8cpp_a9160334f5431d469eb3170c95663efa7}{V\+\_\+\+Cell}} g\+\_\+cells}
+
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_a7306e31f20b6069ada3ccd04a2dee8fb}\label{costmap__2d__markers_8cpp_a7306e31f20b6069ada3ccd04a2dee8fb}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!g\_colors\_a@{g\_colors\_a}}
+\index{g\_colors\_a@{g\_colors\_a}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_colors\_a}{g\_colors\_a}}
+{\footnotesize\ttfamily float g\+\_\+colors\+\_\+a\mbox{[}$\,$\mbox{]} = \{0.\+0f, 0.\+5f, 1.\+0f\}}
+
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_a99cf9cb8de21cce5b837cb388869e47d}\label{costmap__2d__markers_8cpp_a99cf9cb8de21cce5b837cb388869e47d}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!g\_colors\_b@{g\_colors\_b}}
+\index{g\_colors\_b@{g\_colors\_b}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_colors\_b}{g\_colors\_b}}
+{\footnotesize\ttfamily float g\+\_\+colors\+\_\+b\mbox{[}$\,$\mbox{]} = \{0.\+0f, 1.\+0f, 0.\+0f\}}
+
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_aad0a3b44471e2ffc0aceb67acaf283ab}\label{costmap__2d__markers_8cpp_aad0a3b44471e2ffc0aceb67acaf283ab}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!g\_colors\_g@{g\_colors\_g}}
+\index{g\_colors\_g@{g\_colors\_g}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_colors\_g}{g\_colors\_g}}
+{\footnotesize\ttfamily float g\+\_\+colors\+\_\+g\mbox{[}$\,$\mbox{]} = \{0.\+0f, 0.\+0f, 0.\+0f\}}
+
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_a78afaf1e4f0d582f44a4bd7e59997f4f}\label{costmap__2d__markers_8cpp_a78afaf1e4f0d582f44a4bd7e59997f4f}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!g\_colors\_r@{g\_colors\_r}}
+\index{g\_colors\_r@{g\_colors\_r}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_colors\_r}{g\_colors\_r}}
+{\footnotesize\ttfamily float g\+\_\+colors\+\_\+r\mbox{[}$\,$\mbox{]} = \{0.\+0f, 0.\+0f, 1.\+0f\}}
+
+\mbox{\Hypertarget{costmap__2d__markers_8cpp_a7087a2e3e8de3485a859283b3a560524}\label{costmap__2d__markers_8cpp_a7087a2e3e8de3485a859283b3a560524}} 
+\index{costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}!g\_marker\_ns@{g\_marker\_ns}}
+\index{g\_marker\_ns@{g\_marker\_ns}!costmap\_2d\_markers.cpp@{costmap\_2d\_markers.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_marker\_ns}{g\_marker\_ns}}
+{\footnotesize\ttfamily std\+::string g\+\_\+marker\+\_\+ns}
+

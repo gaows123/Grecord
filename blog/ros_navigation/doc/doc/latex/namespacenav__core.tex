@@ -1,0 +1,72 @@
+\hypertarget{namespacenav__core}{}\doxysection{nav\+\_\+core 命名空间参考}
+\label{namespacenav__core}\index{nav\_core@{nav\_core}}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnav__core_1_1_base_global_planner}{Base\+Global\+Planner}}
+\begin{DoxyCompactList}\small\item\em 提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnav__core_1_1_base_local_planner}{Base\+Local\+Planner}}
+\begin{DoxyCompactList}\small\item\em 提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{Recovery\+Behavior}}
+\begin{DoxyCompactList}\small\item\em 提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class param\+\_\+t $>$ }\\param\+\_\+t \mbox{\hyperlink{namespacenav__core_ac1bc19a8eabb092a097d54d334066814}{load\+Parameter\+With\+Deprecation}} (const ros\+::\+Node\+Handle \&nh, const std\+::string current\+\_\+name, const std\+::string old\+\_\+name, const param\+\_\+t \&default\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Load a parameter from one of two namespaces. Complain if it uses the old name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacenav__core_a6ae2b94985fa0d1a0f4c9269ba073327}{warn\+Renamed\+Parameter}} (const ros\+::\+Node\+Handle \&nh, const std\+::string current\+\_\+name, const std\+::string old\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Warn if a parameter exists under a deprecated (and unsupported) name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{namespacenav__core_ac1bc19a8eabb092a097d54d334066814}\label{namespacenav__core_ac1bc19a8eabb092a097d54d334066814}} 
+\index{nav\_core@{nav\_core}!loadParameterWithDeprecation@{loadParameterWithDeprecation}}
+\index{loadParameterWithDeprecation@{loadParameterWithDeprecation}!nav\_core@{nav\_core}}
+\doxysubsubsection{\texorpdfstring{loadParameterWithDeprecation()}{loadParameterWithDeprecation()}}
+{\footnotesize\ttfamily template$<$class param\+\_\+t $>$ \\
+param\+\_\+t nav\+\_\+core\+::load\+Parameter\+With\+Deprecation (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh,  }\item[{const std\+::string}]{current\+\_\+name,  }\item[{const std\+::string}]{old\+\_\+name,  }\item[{const param\+\_\+t \&}]{default\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Load a parameter from one of two namespaces. Complain if it uses the old name. 
+
+
+\begin{DoxyParams}{参数}
+{\em nh} & Node\+Handle to look for the parameter in \\
+\hline
+{\em current\+\_\+name} & Parameter name that is current, i.\+e. not deprecated \\
+\hline
+{\em old\+\_\+name} & Deprecated parameter name \\
+\hline
+{\em default\+\_\+value} & If neither parameter is present, return this value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The value of the parameter or the default value 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacenav__core_ac1bc19a8eabb092a097d54d334066814_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacenav__core_a6ae2b94985fa0d1a0f4c9269ba073327}\label{namespacenav__core_a6ae2b94985fa0d1a0f4c9269ba073327}} 
+\index{nav\_core@{nav\_core}!warnRenamedParameter@{warnRenamedParameter}}
+\index{warnRenamedParameter@{warnRenamedParameter}!nav\_core@{nav\_core}}
+\doxysubsubsection{\texorpdfstring{warnRenamedParameter()}{warnRenamedParameter()}}
+{\footnotesize\ttfamily void nav\+\_\+core\+::warn\+Renamed\+Parameter (\begin{DoxyParamCaption}\item[{const ros\+::\+Node\+Handle \&}]{nh,  }\item[{const std\+::string}]{current\+\_\+name,  }\item[{const std\+::string}]{old\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Warn if a parameter exists under a deprecated (and unsupported) name. 
+
+Parameters loaded exclusively through dynamic reconfigure can\textquotesingle{}t really use load\+Param\+With\+Deprecation. 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacenav__core_a6ae2b94985fa0d1a0f4c9269ba073327_icgraph}
+\end{center}
+\end{figure}

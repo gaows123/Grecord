@@ -1,0 +1,4 @@
+<map id="global_planner::DijkstraExpansion::setSize" name="global_planner::DijkstraExpansion::setSize">
+<area shape="rect" id="node1" title="Sets or resets the size of the map" alt="" coords="5,5,163,47"/>
+<area shape="rect" id="node2" href="$classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094" title="Sets or resets the size of the map" alt="" coords="211,5,379,47"/>
+</map>

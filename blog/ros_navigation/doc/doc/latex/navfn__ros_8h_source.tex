@@ -1,0 +1,117 @@
+\hypertarget{navfn__ros_8h_source}{}\doxysection{navfn\+\_\+ros.\+h}
+\label{navfn__ros_8h_source}\index{navfn/include/navfn/navfn\_ros.h@{navfn/include/navfn/navfn\_ros.h}}
+\mbox{\hyperlink{navfn__ros_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef NAVFN\_NAVFN\_ROS\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define NAVFN\_NAVFN\_ROS\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{navfn_8h}{navfn/navfn.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <nav\_msgs/Path.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base__global__planner_8h}{nav\_core/base\_global\_planner.h}}>}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <nav\_msgs/GetPlan.h>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{potarr__point_8h}{navfn/potarr\_point.h}}>}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenavfn}{navfn}} \{}
+\DoxyCodeLine{56   \textcolor{keyword}{class }\mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s}{NavfnROS}} : \textcolor{keyword}{public} \mbox{\hyperlink{classnav__core_1_1_base_global_planner}{nav\_core::BaseGlobalPlanner}} \{}
+\DoxyCodeLine{57     \textcolor{keyword}{public}:}
+\DoxyCodeLine{61       \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a1b21c7105bc040df6e5d8f6c8adfb6a6}{NavfnROS}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{68       \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a1b21c7105bc040df6e5d8f6c8adfb6a6}{NavfnROS}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap\_ros);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{76       \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a1b21c7105bc040df6e5d8f6c8adfb6a6}{NavfnROS}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap, std::string global\_frame);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{83       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a7f1e06b4e3b390aaaa3e4733a0668c4d}{initialize}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap\_ros);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{91       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a7f1e06b4e3b390aaaa3e4733a0668c4d}{initialize}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap, std::string global\_frame);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{100       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_aa8cec6d49a902ace7e71ffc7125b29a9}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}},}
+\DoxyCodeLine{101           \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std::vector<geometry\_msgs::PoseStamped>\& plan);}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{111       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_aa8cec6d49a902ace7e71ffc7125b29a9}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}},}
+\DoxyCodeLine{112           \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, \textcolor{keywordtype}{double} tolerance, std::vector<geometry\_msgs::PoseStamped>\& plan);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{119       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a01635a5d9947ae1b51ce70603db0c843}{computePotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{127       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_ad645a775f99aa2a120bb0b7f6cd08fd5}{getPlanFromPotential}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std::vector<geometry\_msgs::PoseStamped>\& plan);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{134       \textcolor{keywordtype}{double} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a51f40b93d0f1c181f94fb7da28a476e2}{getPointPotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{141       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_ad2b915897586064db5c861658133e909}{validPointPotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{149       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_ad2b915897586064db5c861658133e909}{validPointPotential}}(\textcolor{keyword}{const} geometry\_msgs::Point\& world\_point, \textcolor{keywordtype}{double} tolerance);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{154       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a05b4ca9b40c385791f4cb7be8237e4bb}{publishPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& path, \textcolor{keywordtype}{double} r, \textcolor{keywordtype}{double} g, \textcolor{keywordtype}{double} b, \textcolor{keywordtype}{double} a);}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156       \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a157abea36af92ed9ad78e79328eb0489}{\string~NavfnROS}}()\{\}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a81643ac812bc02a5652f691c30834c27}{makePlanService}}(nav\_msgs::GetPlan::Request\& req, nav\_msgs::GetPlan::Response\& resp);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{165       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_aee612188ce6bbae6daa19353499bcf1c}{costmap\_}};}
+\DoxyCodeLine{166       boost::shared\_ptr<NavFn> \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a36ba1f9fa50ad74e2c41a8c93f9b74e0}{planner\_}};}
+\DoxyCodeLine{167       ros::Publisher \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a2e7e371d85298da82ad4e2f7965efe4f}{plan\_pub\_}};}
+\DoxyCodeLine{168       ros::Publisher \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a2fa70e7aeb1abdcbcd0787a87d11c464}{potarr\_pub\_}};}
+\DoxyCodeLine{169       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_affd08548cdff16315eef20424b1203dc}{initialized\_}}, \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a4003d3313fc2e0ede53223559c0ed9c5}{allow\_unknown\_}}, \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a17cf4a3a4d61adfc9276cc2ef7cc5f4d}{visualize\_potential\_}};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{keyword}{private}:}
+\DoxyCodeLine{173       \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a51ca146d8780724b2349f08c10b771b0}{sq\_distance}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& p1, \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& p2)\{}
+\DoxyCodeLine{174         \textcolor{keywordtype}{double} dx = p1.pose.position.x -\/ p2.pose.position.x;}
+\DoxyCodeLine{175         \textcolor{keywordtype}{double} dy = p1.pose.position.y -\/ p2.pose.position.y;}
+\DoxyCodeLine{176         \textcolor{keywordflow}{return} dx*dx +dy*dy;}
+\DoxyCodeLine{177       \}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{179       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_afa5d363d19a0451e2f0f1b4bdf9f878f}{mapToWorld}}(\textcolor{keywordtype}{double} mx, \textcolor{keywordtype}{double} my, \textcolor{keywordtype}{double}\& wx, \textcolor{keywordtype}{double}\& wy);}
+\DoxyCodeLine{180       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_abcd849ed9ec685971d6015e8d4056a83}{clearRobotCell}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my);}
+\DoxyCodeLine{181       \textcolor{keywordtype}{double} \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a27fe9f639f54d99432f43064708091aa}{planner\_window\_x\_}}, \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a86579ced0c7b4b3e4bf61312af5b241c}{planner\_window\_y\_}}, \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a12e32bc1b7f324e8bcf3a8de366b8dd6}{default\_tolerance\_}};}
+\DoxyCodeLine{182       boost::mutex \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_ac3d5ae44bb22af3400afd1f1f09e94e6}{mutex\_}};}
+\DoxyCodeLine{183       ros::ServiceServer \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a0c90cf46e240e99f3ce71236781fb96b}{make\_plan\_srv\_}};}
+\DoxyCodeLine{184       std::string \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a406f9ce3a8b44f376ea1fb5acaef27c3}{global\_frame\_}};}
+\DoxyCodeLine{185   \};}
+\DoxyCodeLine{186 \};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

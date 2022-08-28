@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::CostmapModel类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_costmap_model.html">CostmapModel</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_costmap_model-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::CostmapModel类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A class that implements the <a class="el" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w...">WorldModel</a> interface to provide grid based collision checks for the trajectory controller using the costmap.  
+ <a href="classbase__local__planner_1_1_costmap_model.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="costmap__model_8h_source.html">costmap_model.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::CostmapModel 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model__inherit__graph.png" border="0" usemap="#abase__local__planner_1_1_costmap_model_inherit__map" alt="Inheritance graph"/></div>
+<map name="abase__local__planner_1_1_costmap_model_inherit__map" id="abase__local__planner_1_1_costmap_model_inherit__map">
+<area shape="rect" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje..." alt="" coords="5,95,139,136"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="5,5,139,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+base_local_planner::CostmapModel 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model__coll__graph.png" border="0" usemap="#abase__local__planner_1_1_costmap_model_coll__map" alt="Collaboration graph"/></div>
+<map name="abase__local__planner_1_1_costmap_model_coll__map" id="abase__local__planner_1_1_costmap_model_coll__map">
+<area shape="rect" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje..." alt="" coords="93,109,227,151"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="5,5,139,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="163,13,333,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7f785fd68a7d341c41a5c2397e7b8a06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#a7f785fd68a7d341c41a5c2397e7b8a06">CostmapModel</a> (const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap)</td></tr>
+<tr class="memdesc:a7f785fd68a7d341c41a5c2397e7b8a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造代价地图模型  <a href="classbase__local__planner_1_1_costmap_model.html#a7f785fd68a7d341c41a5c2397e7b8a06">更多...</a><br /></td></tr>
+<tr class="separator:a7f785fd68a7d341c41a5c2397e7b8a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec575505589c1816559a563b34cd682"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#a0ec575505589c1816559a563b34cd682">~CostmapModel</a> ()</td></tr>
+<tr class="memdesc:a0ec575505589c1816559a563b34cd682"><td class="mdescLeft">&#160;</td><td class="mdescRight">世界模型的析构函数  <a href="classbase__local__planner_1_1_costmap_model.html#a0ec575505589c1816559a563b34cd682">更多...</a><br /></td></tr>
+<tr class="separator:a0ec575505589c1816559a563b34cd682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d896d06af4f1c0bd5b61cd758743af"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#a80d896d06af4f1c0bd5b61cd758743af">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)</td></tr>
+<tr class="memdesc:a80d896d06af4f1c0bd5b61cd758743af"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格  <a href="classbase__local__planner_1_1_costmap_model.html#a80d896d06af4f1c0bd5b61cd758743af">更多...</a><br /></td></tr>
+<tr class="separator:a80d896d06af4f1c0bd5b61cd758743af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c65ee26aa8032afb635c3cb544e57cf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#a8c65ee26aa8032afb635c3cb544e57cf">lineCost</a> (int x0, int x1, int y0, int y1) const</td></tr>
+<tr class="memdesc:a8c65ee26aa8032afb635c3cb544e57cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">栅格化一条线段到代价地图网格并且进行碰撞检测  <a href="classbase__local__planner_1_1_costmap_model.html#a8c65ee26aa8032afb635c3cb544e57cf">更多...</a><br /></td></tr>
+<tr class="separator:a8c65ee26aa8032afb635c3cb544e57cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd021e995f9493ddeb64184a0bd3cf8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#abfd021e995f9493ddeb64184a0bd3cf8">pointCost</a> (int x, int y) const</td></tr>
+<tr class="memdesc:abfd021e995f9493ddeb64184a0bd3cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查某个点在代价地图中的代价  <a href="classbase__local__planner_1_1_costmap_model.html#abfd021e995f9493ddeb64184a0bd3cf8">更多...</a><br /></td></tr>
+<tr class="separator:abfd021e995f9493ddeb64184a0bd3cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d4c808bc441e2b87b0ac038099993a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#a36d4c808bc441e2b87b0ac038099993a">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)=0</td></tr>
+<tr class="memdesc:a36d4c808bc441e2b87b0ac038099993a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement this method to check a footprint at a given position and orientation for legality in the world  <a href="classbase__local__planner_1_1_costmap_model.html#a36d4c808bc441e2b87b0ac038099993a">更多...</a><br /></td></tr>
+<tr class="separator:a36d4c808bc441e2b87b0ac038099993a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#ac7e8dc9c77a2dd2fa77f5a27d812fd43">footprintCost</a> (double x, double y, double theta, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0)</td></tr>
+<tr class="separator:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358fe0d75fefe46dda134ee6e3305f71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#a358fe0d75fefe46dda134ee6e3305f71">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius, double extra)</td></tr>
+<tr class="memdesc:a358fe0d75fefe46dda134ee6e3305f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1_costmap_model.html#a358fe0d75fefe46dda134ee6e3305f71">更多...</a><br /></td></tr>
+<tr class="separator:a358fe0d75fefe46dda134ee6e3305f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1_world_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1_world_model')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a></td></tr>
+<tr class="memitem:a36d4c808bc441e2b87b0ac038099993a inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)=0</td></tr>
+<tr class="memdesc:a36d4c808bc441e2b87b0ac038099993a inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement this method to check a footprint at a given position and orientation for legality in the world  <a href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">更多...</a><br /></td></tr>
+<tr class="separator:a36d4c808bc441e2b87b0ac038099993a inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e8dc9c77a2dd2fa77f5a27d812fd43 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#ac7e8dc9c77a2dd2fa77f5a27d812fd43">footprintCost</a> (double x, double y, double theta, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0)</td></tr>
+<tr class="separator:ac7e8dc9c77a2dd2fa77f5a27d812fd43 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a358fe0d75fefe46dda134ee6e3305f71">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius, double extra)</td></tr>
+<tr class="memdesc:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1_world_model.html#a358fe0d75fefe46dda134ee6e3305f71">更多...</a><br /></td></tr>
+<tr class="separator:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a87c45611143fde55c4a2efb4d078471d">~WorldModel</a> ()</td></tr>
+<tr class="memdesc:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement a destructor  <a href="classbase__local__planner_1_1_world_model.html#a87c45611143fde55c4a2efb4d078471d">更多...</a><br /></td></tr>
+<tr class="separator:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aed9c90777aa55143075132648dee3b03"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_costmap_model.html#aed9c90777aa55143075132648dee3b03">costmap_</a></td></tr>
+<tr class="memdesc:aed9c90777aa55143075132648dee3b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows access of costmap obstacle information  <a href="classbase__local__planner_1_1_costmap_model.html#aed9c90777aa55143075132648dee3b03">更多...</a><br /></td></tr>
+<tr class="separator:aed9c90777aa55143075132648dee3b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classbase__local__planner_1_1_world_model"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbase__local__planner_1_1_world_model')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a></td></tr>
+<tr class="memitem:a577351de9f26b9fc6f702e1cceed84e4 inherit pro_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a577351de9f26b9fc6f702e1cceed84e4">WorldModel</a> ()</td></tr>
+<tr class="separator:a577351de9f26b9fc6f702e1cceed84e4 inherit pro_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >A class that implements the <a class="el" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w...">WorldModel</a> interface to provide grid based collision checks for the trajectory controller using the costmap. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a7f785fd68a7d341c41a5c2397e7b8a06" name="a7f785fd68a7d341c41a5c2397e7b8a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f785fd68a7d341c41a5c2397e7b8a06">&#9670;&nbsp;</a></span>CostmapModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::CostmapModel::CostmapModel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造代价地图模型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costmap</td><td>用到的代价函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0ec575505589c1816559a563b34cd682" name="a0ec575505589c1816559a563b34cd682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec575505589c1816559a563b34cd682">&#9670;&nbsp;</a></span>~CostmapModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual base_local_planner::CostmapModel::~CostmapModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>世界模型的析构函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a80d896d06af4f1c0bd5b61cd758743af" name="a80d896d06af4f1c0bd5b61cd758743af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d896d06af4f1c0bd5b61cd758743af">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::CostmapModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>机器人位置 </td></tr>
+    <tr><td class="paramname">footprint</td><td>机器人的footprint </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>机器人的内切圆半径 </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>机器人的外接圆半径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回正数如果所有的点都在footprint外部，负数则分别代表: -1 代表 footprint 碰到至少一个致命的障碍物单元格(lethal obstacle cell) -2 代表 footprint 碰到至少一个无信息单元格 (no-information cell) -3 代表 footprint 有一部分在地图外面 </dd></dl>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">base_local_planner::WorldModel</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_cgraph" id="aclassbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_cgraph">
+<area shape="rect" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="5,35,204,76"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="700,39,869,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#a8c65ee26aa8032afb635c3cb544e57cf" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="252,35,424,76"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="253,100,423,142"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="917,39,1087,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_line_iterator.html#a603d638882063ab678c2a75911591080" title=" " alt="" coords="491,35,633,76"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#abfd021e995f9493ddeb64184a0bd3cf8" title="检查某个点在代价地图中的代价" alt="" coords="472,100,652,142"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_icgraph" id="aclassbase__local__planner_1_1_costmap_model_a80d896d06af4f1c0bd5b61cd758743af_icgraph">
+<area shape="rect" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="267,5,465,47"/>
+<area shape="rect" href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9" title="启动旋转恢复行为" alt="" coords="5,5,219,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a36d4c808bc441e2b87b0ac038099993a" name="a36d4c808bc441e2b87b0ac038099993a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d4c808bc441e2b87b0ac038099993a">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subclass will implement this method to check a footprint at a given position and orientation for legality in the world </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise: -1 if footprint covers at least a lethal obstacle cell, or -2 if footprint covers at least a no-information cell, or -3 if footprint is partially or totally outside of the map </dd></dl>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">base_local_planner::WorldModel</a>.</p>
+
+</div>
+</div>
+<a id="a358fe0d75fefe46dda134ee6e3305f71" name="a358fe0d75fefe46dda134ee6e3305f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358fe0d75fefe46dda134ee6e3305f71">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>extra</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ac7e8dc9c77a2dd2fa77f5a27d812fd43" name="ac7e8dc9c77a2dd2fa77f5a27d812fd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e8dc9c77a2dd2fa77f5a27d812fd43">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c65ee26aa8032afb635c3cb544e57cf" name="a8c65ee26aa8032afb635c3cb544e57cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c65ee26aa8032afb635c3cb544e57cf">&#9670;&nbsp;</a></span>lineCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::CostmapModel::lineCost </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>栅格化一条线段到代价地图网格并且进行碰撞检测 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>网格坐标系中第一个单元格的x坐标 </td></tr>
+    <tr><td class="paramname">y0</td><td>网格坐标系中第一个单元格的y坐标 </td></tr>
+    <tr><td class="paramname">x1</td><td>网格坐标系中第二个单元格的x坐标 </td></tr>
+    <tr><td class="paramname">y1</td><td>网格坐标系中第二个单元格的y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对于合法的线段返回正值的代价 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_cgraph" id="aclassbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_cgraph">
+<area shape="rect" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="5,39,177,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_line_iterator.html#a603d638882063ab678c2a75911591080" title=" " alt="" coords="244,5,387,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#abfd021e995f9493ddeb64184a0bd3cf8" title="检查某个点在代价地图中的代价" alt="" coords="225,71,405,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="453,71,623,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="671,71,840,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_icgraph" id="aclassbase__local__planner_1_1_costmap_model_a8c65ee26aa8032afb635c3cb544e57cf_icgraph">
+<area shape="rect" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="513,5,685,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#a80d896d06af4f1c0bd5b61cd758743af" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="267,5,465,47"/>
+<area shape="rect" href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9" title="启动旋转恢复行为" alt="" coords="5,5,219,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abfd021e995f9493ddeb64184a0bd3cf8" name="abfd021e995f9493ddeb64184a0bd3cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfd021e995f9493ddeb64184a0bd3cf8">&#9670;&nbsp;</a></span>pointCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::CostmapModel::pointCost </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查某个点在代价地图中的代价 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>点在单元格坐标系中的x坐标 </td></tr>
+    <tr><td class="paramname">y</td><td>点在单元格坐标系中的y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对于合法的线段返回正值的代价 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_cgraph" id="aclassbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_cgraph">
+<area shape="rect" title="检查某个点在代价地图中的代价" alt="" coords="5,5,185,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="233,5,403,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="451,5,620,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_icgraph" id="aclassbase__local__planner_1_1_costmap_model_abfd021e995f9493ddeb64184a0bd3cf8_icgraph">
+<area shape="rect" title="检查某个点在代价地图中的代价" alt="" coords="733,5,913,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#a8c65ee26aa8032afb635c3cb544e57cf" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="513,5,685,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#a80d896d06af4f1c0bd5b61cd758743af" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="267,5,465,47"/>
+<area shape="rect" href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9" title="启动旋转恢复行为" alt="" coords="5,5,219,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aed9c90777aa55143075132648dee3b03" name="aed9c90777aa55143075132648dee3b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed9c90777aa55143075132648dee3b03">&#9670;&nbsp;</a></span>costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>&amp; base_local_planner::CostmapModel::costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allows access of costmap obstacle information </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="costmap__model_8h_source.html">costmap_model.h</a></li>
+<li>base_local_planner/src/<a class="el" href="costmap__model_8cpp.html">costmap_model.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

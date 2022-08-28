@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: navfn/include/navfn/navfn.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_37c3fdb110b9b6478e1e0080ccb091a7.html">navfn</a></li><li class="navelem"><a class="el" href="dir_773b1c3592338693f75f4ce93e08d0b8.html">include</a></li><li class="navelem"><a class="el" href="dir_4879f7a78a381c082c394f1c97d6fca0.html">navfn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">navfn.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+navfn.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navfn_8h__incl.png" border="0" usemap="#anavfn_2include_2navfn_2navfn_8h" alt=""/></div>
+<map name="anavfn_2include_2navfn_2navfn_8h" id="anavfn_2include_2navfn_2navfn_8h">
+<area shape="rect" title=" " alt="" coords="101,5,236,47"/>
+<area shape="rect" title=" " alt="" coords="5,95,68,121"/>
+<area shape="rect" title=" " alt="" coords="92,95,157,121"/>
+<area shape="rect" title=" " alt="" coords="181,95,247,121"/>
+<area shape="rect" title=" " alt="" coords="271,95,333,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="navfn_8h__dep__incl.png" border="0" usemap="#anavfn_2include_2navfn_2navfn_8hdep" alt=""/></div>
+<map name="anavfn_2include_2navfn_2navfn_8hdep" id="anavfn_2include_2navfn_2navfn_8hdep">
+<area shape="rect" title=" " alt="" coords="513,5,648,47"/>
+<area shape="rect" href="navfn__ros_8h.html" title=" " alt="" coords="184,95,319,136"/>
+<area shape="rect" href="navfn_8cpp.html" title=" " alt="" coords="343,102,480,129"/>
+<area shape="rect" href="navtest_8cpp.html" title=" " alt="" coords="421,184,615,211"/>
+<area shape="rect" href="navwin_8h.html" title=" " alt="" coords="555,102,734,129"/>
+<area shape="rect" href="read__pgm__costmap_8cpp.html" title=" " alt="" coords="759,95,896,136"/>
+<area shape="rect" href="path__calc__test_8cpp.html" title=" " alt="" coords="920,95,1060,136"/>
+<area shape="rect" href="navfn__node_8cpp.html" title=" " alt="" coords="5,184,177,211"/>
+<area shape="rect" href="navfn__ros_8cpp.html" title=" " alt="" coords="202,184,365,211"/>
+<area shape="rect" href="navwin_8cpp.html" title=" " alt="" coords="639,184,831,211"/>
+</map>
+</div>
+</div>
+<p><a href="navfn_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html">navfn::NavFn</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Navigation function class. Holds buffers for costmap, navfn map.代价地图和NavFn地图是基于像素的，他们的原点在左上方，x 轴向右，y 轴向下  <a href="classnavfn_1_1_nav_fn.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacenavfn"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenavfn.html">navfn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a08d08a154e8e694883ae1162d2edf938"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#a08d08a154e8e694883ae1162d2edf938">COST_UNKNOWN_ROS</a>&#160;&#160;&#160;255</td></tr>
+<tr class="separator:a08d08a154e8e694883ae1162d2edf938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3f51fbc354670e6c61f8e6f9c9b949"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#afe3f51fbc354670e6c61f8e6f9c9b949">COST_OBS</a>&#160;&#160;&#160;254</td></tr>
+<tr class="separator:afe3f51fbc354670e6c61f8e6f9c9b949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8945359447256feae1e51609e9a9ce50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#a8945359447256feae1e51609e9a9ce50">COST_OBS_ROS</a>&#160;&#160;&#160;253</td></tr>
+<tr class="separator:a8945359447256feae1e51609e9a9ce50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5039fec8588b6e3b45e5d0f98dbffe24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#a5039fec8588b6e3b45e5d0f98dbffe24">COST_NEUTRAL</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a5039fec8588b6e3b45e5d0f98dbffe24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11548876fdd7ca7181d143df88578847"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#a11548876fdd7ca7181d143df88578847">COST_FACTOR</a>&#160;&#160;&#160;0.8</td></tr>
+<tr class="separator:a11548876fdd7ca7181d143df88578847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137fdfc9b1a4312004400270e5f999ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a>&#160;&#160;&#160;unsigned char</td></tr>
+<tr class="separator:a137fdfc9b1a4312004400270e5f999ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba71eeabfe9ba85c91393f562db6a33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#a1ba71eeabfe9ba85c91393f562db6a33">POT_HIGH</a>&#160;&#160;&#160;1.0e10</td></tr>
+<tr class="separator:a1ba71eeabfe9ba85c91393f562db6a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc292a3d616d167e6b5f3e33cd9dad54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8h.html#acc292a3d616d167e6b5f3e33cd9dad54">PRIORITYBUFSIZE</a>&#160;&#160;&#160;10000</td></tr>
+<tr class="separator:acc292a3d616d167e6b5f3e33cd9dad54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a43e1cf99d005f4c0b40ce27c85ac3a0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f">navfn::create_nav_plan_astar</a> (<a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *costmap, int nx, int ny, int *<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, int *<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, float *plan, int nplan)</td></tr>
+<tr class="separator:a43e1cf99d005f4c0b40ce27c85ac3a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a11548876fdd7ca7181d143df88578847" name="a11548876fdd7ca7181d143df88578847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11548876fdd7ca7181d143df88578847">&#9670;&nbsp;</a></span>COST_FACTOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COST_FACTOR&#160;&#160;&#160;0.8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5039fec8588b6e3b45e5d0f98dbffe24" name="a5039fec8588b6e3b45e5d0f98dbffe24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5039fec8588b6e3b45e5d0f98dbffe24">&#9670;&nbsp;</a></span>COST_NEUTRAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COST_NEUTRAL&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe3f51fbc354670e6c61f8e6f9c9b949" name="afe3f51fbc354670e6c61f8e6f9c9b949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3f51fbc354670e6c61f8e6f9c9b949">&#9670;&nbsp;</a></span>COST_OBS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COST_OBS&#160;&#160;&#160;254</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8945359447256feae1e51609e9a9ce50" name="a8945359447256feae1e51609e9a9ce50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8945359447256feae1e51609e9a9ce50">&#9670;&nbsp;</a></span>COST_OBS_ROS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COST_OBS_ROS&#160;&#160;&#160;253</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08d08a154e8e694883ae1162d2edf938" name="a08d08a154e8e694883ae1162d2edf938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d08a154e8e694883ae1162d2edf938">&#9670;&nbsp;</a></span>COST_UNKNOWN_ROS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COST_UNKNOWN_ROS&#160;&#160;&#160;255</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a137fdfc9b1a4312004400270e5f999ea" name="a137fdfc9b1a4312004400270e5f999ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137fdfc9b1a4312004400270e5f999ea">&#9670;&nbsp;</a></span>COSTTYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COSTTYPE&#160;&#160;&#160;unsigned char</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ba71eeabfe9ba85c91393f562db6a33" name="a1ba71eeabfe9ba85c91393f562db6a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba71eeabfe9ba85c91393f562db6a33">&#9670;&nbsp;</a></span>POT_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POT_HIGH&#160;&#160;&#160;1.0e10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc292a3d616d167e6b5f3e33cd9dad54" name="acc292a3d616d167e6b5f3e33cd9dad54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc292a3d616d167e6b5f3e33cd9dad54">&#9670;&nbsp;</a></span>PRIORITYBUFSIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PRIORITYBUFSIZE&#160;&#160;&#160;10000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

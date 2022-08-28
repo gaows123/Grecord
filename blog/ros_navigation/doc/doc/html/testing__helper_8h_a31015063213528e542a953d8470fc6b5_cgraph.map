@@ -1,0 +1,7 @@
+<map id="printMap" name="printMap">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,77,105"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="125,5,295,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="125,71,295,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="125,136,295,177"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="343,5,512,47"/>
+</map>

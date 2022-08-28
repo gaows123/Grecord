@@ -1,0 +1,16 @@
+<map id="base_local_planner::PointGrid::updateWorld" name="base_local_planner::PointGrid::updateWorld">
+<area shape="rect" id="node1" title="插入传感器观察值到point grid" alt="" coords="5,281,169,322"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="242,190,375,232"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="217,274,400,330"/>
+<area shape="rect" id="node13" href="$classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="217,354,400,410"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="707,166,862,208"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="935,225,1081,266"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="452,94,639,150"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_point_grid.html#aa98a155058a5045be350a89eb3858f41" title="Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called" alt="" coords="697,101,873,142"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="691,36,879,77"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830" title="Compute the squared distance between two points" alt="" coords="927,6,1089,48"/>
+<area shape="rect" id="node10" href="$classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="448,281,643,322"/>
+<area shape="rect" id="node11" href="$classbase__local__planner_1_1_point_grid.html#a7d813f2a10631747b458377fdd4a2a4f" title="Check if a point is in a polygon" alt="" coords="465,346,626,388"/>
+<area shape="rect" id="node12" href="$classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="718,378,851,420"/>
+<area shape="rect" id="node14" href="$classbase__local__planner_1_1_point_grid.html#a763e1d4207cc1ecbc670936074211155" title="Checks to see if a point is within a laser scan specification" alt="" coords="473,412,617,453"/>
+</map>

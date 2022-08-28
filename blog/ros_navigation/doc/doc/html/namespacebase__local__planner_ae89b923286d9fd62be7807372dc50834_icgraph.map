@@ -1,0 +1,8 @@
+<map id="base_local_planner::publishPlan" name="base_local_planner::publishPlan">
+<area shape="rect" id="node1" title="Publish a plan for visualization purposes" alt="" coords="864,78,997,119"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="604,5,797,61"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#acf570c8f336f17667f8a068b77aa9c48" title=" " alt="" coords="292,78,528,119"/>
+<area shape="rect" id="node5" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3ed5e8084732aae21c15adc1f98a68ca" title=" " alt="" coords="585,137,816,178"/>
+<area shape="rect" id="node4" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,129,235,185"/>
+<area shape="rect" id="node6" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="283,195,537,251"/>
+</map>

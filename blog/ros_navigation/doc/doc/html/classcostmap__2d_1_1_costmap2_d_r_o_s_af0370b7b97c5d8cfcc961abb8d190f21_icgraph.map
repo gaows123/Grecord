@@ -1,0 +1,5 @@
+<map id="costmap_2d::Costmap2DROS::resetLayers" name="costmap_2d::Costmap2DROS::resetLayers">
+<area shape="rect" id="node1" title="Reset each individual layer" alt="" coords="421,5,619,47"/>
+<area shape="rect" id="node2" href="$classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098" title="A service call that clears the costmaps of obstacles" alt="" coords="212,5,373,47"/>
+<area shape="rect" id="node3" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>

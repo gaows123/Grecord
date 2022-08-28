@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d/include/costmap_2d/testing_helper.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_9023f81029f0cf9e898f85623bcdf0cf.html">include</a></li><li class="navelem"><a class="el" href="dir_16510bf0b8e4dfa92912bb2cd2c73724.html">costmap_2d</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">testing_helper.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="cost__values_8h_source.html">costmap_2d/cost_values.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="costmap__2d_8h_source.html">costmap_2d/costmap_2d.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="static__layer_8h_source.html">costmap_2d/static_layer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="obstacle__layer_8h_source.html">costmap_2d/obstacle_layer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="inflation__layer_8h_source.html">costmap_2d/inflation_layer.h</a>&gt;</code><br />
+<code>#include &lt;sensor_msgs/point_cloud2_iterator.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+testing_helper.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h__incl.png" border="0" usemap="#acostmap__2d_2include_2costmap__2d_2testing__helper_8h" alt=""/></div>
+<map name="acostmap__2d_2include_2costmap__2d_2testing__helper_8h" id="acostmap__2d_2include_2costmap__2d_2testing__helper_8h">
+<area shape="rect" title=" " alt="" coords="560,5,700,61"/>
+<area shape="rect" href="cost__values_8h.html" title=" " alt="" coords="435,467,614,493"/>
+<area shape="rect" href="costmap__2d_8h.html" title=" " alt="" coords="819,467,998,493"/>
+<area shape="rect" href="static__layer_8h.html" title=" " alt="" coords="697,117,872,143"/>
+<area shape="rect" href="obstacle__layer_8h.html" title=" " alt="" coords="1719,109,1866,151"/>
+<area shape="rect" href="inflation__layer_8h.html" title=" " alt="" coords="94,199,237,240"/>
+<area shape="rect" title=" " alt="" coords="1890,109,2068,151"/>
+<area shape="rect" title=" " alt="" coords="1006,541,1064,568"/>
+<area shape="rect" title=" " alt="" coords="902,541,960,568"/>
+<area shape="rect" title=" " alt="" coords="1562,541,1722,568"/>
+<area shape="rect" title=" " alt="" coords="760,541,878,568"/>
+<area shape="rect" title=" " alt="" coords="1384,295,1457,322"/>
+<area shape="rect" href="costmap__layer_8h.html" title=" " alt="" coords="1347,199,1494,240"/>
+<area shape="rect" href="layered__costmap_8h.html" title=" " alt="" coords="874,377,1012,419"/>
+<area shape="rect" title=" " alt="" coords="568,199,747,240"/>
+<area shape="rect" title=" " alt="" coords="713,288,856,329"/>
+<area shape="rect" title=" " alt="" coords="872,206,1059,233"/>
+<area shape="rect" title=" " alt="" coords="262,206,494,233"/>
+<area shape="rect" title=" " alt="" coords="1083,206,1272,233"/>
+<area shape="rect" href="layer_8h.html" title=" " alt="" coords="982,295,1118,322"/>
+<area shape="rect" title=" " alt="" coords="1073,467,1128,493"/>
+<area shape="rect" title=" " alt="" coords="1152,467,1262,493"/>
+<area shape="rect" href="observation__buffer_8h.html" title=" " alt="" coords="1326,377,1490,419"/>
+<area shape="rect" title=" " alt="" coords="1746,541,1932,568"/>
+<area shape="rect" title=" " alt="" coords="2110,206,2288,233"/>
+<area shape="rect" title=" " alt="" coords="2312,199,2454,240"/>
+<area shape="rect" title=" " alt="" coords="2479,206,2658,233"/>
+<area shape="rect" title=" " alt="" coords="2682,199,2852,240"/>
+<area shape="rect" title=" " alt="" coords="2876,206,3039,233"/>
+<area shape="rect" title=" " alt="" coords="1518,199,1704,240"/>
+<area shape="rect" href="footprint_8h.html" title=" " alt="" coords="1880,206,2035,233"/>
+<area shape="rect" title=" " alt="" coords="1389,467,1428,493"/>
+<area shape="rect" title=" " alt="" coords="1452,467,1532,493"/>
+<area shape="rect" href="observation_8h.html" title=" " alt="" coords="1557,467,1732,493"/>
+<area shape="rect" title=" " alt="" coords="1818,295,1996,322"/>
+<area shape="rect" title=" " alt="" coords="2020,295,2250,322"/>
+<area shape="rect" title=" " alt="" coords="2274,295,2449,322"/>
+<area shape="rect" title=" " alt="" coords="203,288,382,329"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h__dep__incl.png" border="0" usemap="#acostmap__2d_2include_2costmap__2d_2testing__helper_8hdep" alt=""/></div>
+<map name="acostmap__2d_2include_2costmap__2d_2testing__helper_8hdep" id="acostmap__2d_2include_2costmap__2d_2testing__helper_8hdep">
+<area shape="rect" title=" " alt="" coords="305,5,445,61"/>
+<area shape="rect" href="clear__tester_8cpp.html" title=" " alt="" coords="5,109,169,151"/>
+<area shape="rect" href="inflation__tests_8cpp.html" title=" " alt="" coords="194,109,362,151"/>
+<area shape="rect" href="obstacle__tests_8cpp.html" title=" " alt="" coords="387,109,559,151"/>
+<area shape="rect" href="static__tests_8cpp.html" title=" " alt="" coords="583,109,738,151"/>
+</map>
+</div>
+</div>
+<p><a href="testing__helper_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a80945e4c9ec06fccdb5342cacfea6e3d"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#a80945e4c9ec06fccdb5342cacfea6e3d">MAX_Z</a> (1.0)</td></tr>
+<tr class="separator:a80945e4c9ec06fccdb5342cacfea6e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67d48c3e97782150aac66598f768972"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#ab67d48c3e97782150aac66598f768972">printableCost</a> (unsigned char cost)</td></tr>
+<tr class="separator:ab67d48c3e97782150aac66598f768972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31015063213528e542a953d8470fc6b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#a31015063213528e542a953d8470fc6b5">printMap</a> (<a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap)</td></tr>
+<tr class="separator:a31015063213528e542a953d8470fc6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d497e66d7195f0a4b02ce26603c5c8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#af4d497e66d7195f0a4b02ce26603c5c8">countValues</a> (<a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap, unsigned char value, bool equal=true)</td></tr>
+<tr class="separator:af4d497e66d7195f0a4b02ce26603c5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d779d80cd1879d61ab1e32e179a806"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#a44d779d80cd1879d61ab1e32e179a806">addStaticLayer</a> (<a class="el" href="classcostmap__2d_1_1_layered_costmap.html">costmap_2d::LayeredCostmap</a> &amp;layers, tf2_ros::Buffer &amp;tf)</td></tr>
+<tr class="separator:a44d779d80cd1879d61ab1e32e179a806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd328050d3b7af24194fabf58454f91a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_obstacle_layer.html">costmap_2d::ObstacleLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a">addObstacleLayer</a> (<a class="el" href="classcostmap__2d_1_1_layered_costmap.html">costmap_2d::LayeredCostmap</a> &amp;layers, tf2_ros::Buffer &amp;tf)</td></tr>
+<tr class="separator:afd328050d3b7af24194fabf58454f91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043c2232e047ce2a6c03a493e5e31ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#a043c2232e047ce2a6c03a493e5e31ee9">addObservation</a> (<a class="el" href="classcostmap__2d_1_1_obstacle_layer.html">costmap_2d::ObstacleLayer</a> *olayer, double x, double y, double z=0.0, double ox=0.0, double oy=0.0, double oz=<a class="el" href="module__tests_8cpp.html#a80945e4c9ec06fccdb5342cacfea6e3d">MAX_Z</a>)</td></tr>
+<tr class="separator:a043c2232e047ce2a6c03a493e5e31ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba5d33cfd5bb6ee59e0fdbf44251d81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html">costmap_2d::InflationLayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__helper_8h.html#a1ba5d33cfd5bb6ee59e0fdbf44251d81">addInflationLayer</a> (<a class="el" href="classcostmap__2d_1_1_layered_costmap.html">costmap_2d::LayeredCostmap</a> &amp;layers, tf2_ros::Buffer &amp;tf)</td></tr>
+<tr class="separator:a1ba5d33cfd5bb6ee59e0fdbf44251d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a1ba5d33cfd5bb6ee59e0fdbf44251d81" name="a1ba5d33cfd5bb6ee59e0fdbf44251d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba5d33cfd5bb6ee59e0fdbf44251d81">&#9670;&nbsp;</a></span>addInflationLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html">costmap_2d::InflationLayer</a> * addInflationLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html">costmap_2d::LayeredCostmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>layers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>tf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_cgraph.png" border="0" usemap="#atesting__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_cgraph" alt=""/></div>
+<map name="atesting__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_cgraph" id="atesting__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_cgraph">
+<area shape="rect" title=" " alt="" coords="5,46,127,73"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="175,5,373,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="203,71,345,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="421,71,563,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_icgraph.png" border="0" usemap="#atesting__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_icgraph" alt=""/></div>
+<map name="atesting__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_icgraph" id="atesting__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_icgraph">
+<area shape="rect" title=" " alt="" coords="109,5,231,32"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="5,5,61,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a043c2232e047ce2a6c03a493e5e31ee9" name="a043c2232e047ce2a6c03a493e5e31ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043c2232e047ce2a6c03a493e5e31ee9">&#9670;&nbsp;</a></span>addObservation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addObservation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_obstacle_layer.html">costmap_2d::ObstacleLayer</a> *&#160;</td>
+          <td class="paramname"><em>olayer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ox</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oy</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oz</em> = <code><a class="el" href="module__tests_8cpp.html#a80945e4c9ec06fccdb5342cacfea6e3d">MAX_Z</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_cgraph.png" border="0" usemap="#atesting__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_cgraph" alt=""/></div>
+<map name="atesting__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_cgraph" id="atesting__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,119,39"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac835aba4f43e4c8a2a8ed66c97899b5f" title=" " alt="" coords="167,5,352,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_icgraph.png" border="0" usemap="#atesting__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_icgraph" alt=""/></div>
+<map name="atesting__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_icgraph" id="atesting__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_icgraph">
+<area shape="rect" title=" " alt="" coords="271,31,384,57"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="138,5,194,32"/>
+<area shape="rect" href="clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="109,56,223,83"/>
+<area shape="rect" href="clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afd328050d3b7af24194fabf58454f91a" name="afd328050d3b7af24194fabf58454f91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd328050d3b7af24194fabf58454f91a">&#9670;&nbsp;</a></span>addObstacleLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_obstacle_layer.html">costmap_2d::ObstacleLayer</a> * addObstacleLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html">costmap_2d::LayeredCostmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>layers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>tf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_afd328050d3b7af24194fabf58454f91a_cgraph.png" border="0" usemap="#atesting__helper_8h_afd328050d3b7af24194fabf58454f91a_cgraph" alt=""/></div>
+<map name="atesting__helper_8h_afd328050d3b7af24194fabf58454f91a_cgraph" id="atesting__helper_8h_afd328050d3b7af24194fabf58454f91a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,46,132,73"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="180,5,379,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="209,71,350,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="427,71,568,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_afd328050d3b7af24194fabf58454f91a_icgraph.png" border="0" usemap="#atesting__helper_8h_afd328050d3b7af24194fabf58454f91a_icgraph" alt=""/></div>
+<map name="atesting__helper_8h_afd328050d3b7af24194fabf58454f91a_icgraph" id="atesting__helper_8h_afd328050d3b7af24194fabf58454f91a_icgraph">
+<area shape="rect" title=" " alt="" coords="109,5,236,32"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="5,5,61,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44d779d80cd1879d61ab1e32e179a806" name="a44d779d80cd1879d61ab1e32e179a806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44d779d80cd1879d61ab1e32e179a806">&#9670;&nbsp;</a></span>addStaticLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addStaticLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html">costmap_2d::LayeredCostmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>layers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>tf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806_cgraph.png" border="0" usemap="#atesting__helper_8h_a44d779d80cd1879d61ab1e32e179a806_cgraph" alt=""/></div>
+<map name="atesting__helper_8h_a44d779d80cd1879d61ab1e32e179a806_cgraph" id="atesting__helper_8h_a44d779d80cd1879d61ab1e32e179a806_cgraph">
+<area shape="rect" title=" " alt="" coords="5,46,115,73"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="163,5,361,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="191,71,333,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="409,71,551,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806_icgraph.png" border="0" usemap="#atesting__helper_8h_a44d779d80cd1879d61ab1e32e179a806_icgraph" alt=""/></div>
+<map name="atesting__helper_8h_a44d779d80cd1879d61ab1e32e179a806_icgraph" id="atesting__helper_8h_a44d779d80cd1879d61ab1e32e179a806_icgraph">
+<area shape="rect" title=" " alt="" coords="109,5,219,32"/>
+<area shape="rect" href="inflation__tests_8cpp.html#a790b8d46b7472f667bc70b1ac2b485e1" title=" " alt="" coords="5,5,61,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af4d497e66d7195f0a4b02ce26603c5c8" name="af4d497e66d7195f0a4b02ce26603c5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d497e66d7195f0a4b02ce26603c5c8">&#9670;&nbsp;</a></span>countValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int countValues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>equal</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_cgraph.png" border="0" usemap="#atesting__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_cgraph" alt=""/></div>
+<map name="atesting__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_cgraph" id="atesting__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,100,105"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="148,5,317,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="148,71,317,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="148,136,317,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="365,5,535,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_icgraph.png" border="0" usemap="#atesting__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_icgraph" alt=""/></div>
+<map name="atesting__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_icgraph" id="atesting__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_icgraph">
+<area shape="rect" title=" " alt="" coords="271,31,365,57"/>
+<area shape="rect" href="inflation__tests_8cpp.html#a7944d546ff12543615d752c882c1ae12" title=" " alt="" coords="138,5,194,32"/>
+<area shape="rect" href="clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="109,56,223,83"/>
+<area shape="rect" href="clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a80945e4c9ec06fccdb5342cacfea6e3d" name="a80945e4c9ec06fccdb5342cacfea6e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80945e4c9ec06fccdb5342cacfea6e3d">&#9670;&nbsp;</a></span>MAX_Z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double MAX_Z </td>
+          <td>(</td>
+          <td class="paramtype">1.&#160;</td>
+          <td class="paramname"><em>0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d_icgraph.png" border="0" usemap="#atesting__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d_icgraph" alt=""/></div>
+<map name="atesting__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d_icgraph" id="atesting__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d_icgraph">
+<area shape="rect" title=" " alt="" coords="271,31,337,57"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="138,5,194,32"/>
+<area shape="rect" href="clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="109,56,223,83"/>
+<area shape="rect" href="clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab67d48c3e97782150aac66598f768972" name="ab67d48c3e97782150aac66598f768972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67d48c3e97782150aac66598f768972">&#9670;&nbsp;</a></span>printableCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char printableCost </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>cost</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31015063213528e542a953d8470fc6b5" name="a31015063213528e542a953d8470fc6b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31015063213528e542a953d8470fc6b5">&#9670;&nbsp;</a></span>printMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printMap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a31015063213528e542a953d8470fc6b5_cgraph.png" border="0" usemap="#atesting__helper_8h_a31015063213528e542a953d8470fc6b5_cgraph" alt=""/></div>
+<map name="atesting__helper_8h_a31015063213528e542a953d8470fc6b5_cgraph" id="atesting__helper_8h_a31015063213528e542a953d8470fc6b5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,77,105"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="125,5,295,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="125,71,295,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="125,136,295,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="343,5,512,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="testing__helper_8h_a31015063213528e542a953d8470fc6b5_icgraph.png" border="0" usemap="#atesting__helper_8h_a31015063213528e542a953d8470fc6b5_icgraph" alt=""/></div>
+<map name="atesting__helper_8h_a31015063213528e542a953d8470fc6b5_icgraph" id="atesting__helper_8h_a31015063213528e542a953d8470fc6b5_icgraph">
+<area shape="rect" title=" " alt="" coords="271,31,343,57"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad0876c1fbe3e36f9dbcfddcd309a2838" title=" " alt="" coords="138,5,194,32"/>
+<area shape="rect" href="clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="109,56,223,83"/>
+<area shape="rect" href="clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

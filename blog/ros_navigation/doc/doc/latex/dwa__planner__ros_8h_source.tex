@@ -1,0 +1,125 @@
+\hypertarget{dwa__planner__ros_8h_source}{}\doxysection{dwa\+\_\+planner\+\_\+ros.\+h}
+\label{dwa__planner__ros_8h_source}\index{dwa\_local\_planner/include/dwa\_local\_planner/dwa\_planner\_ros.h@{dwa\_local\_planner/include/dwa\_local\_planner/dwa\_planner\_ros.h}}
+\mbox{\hyperlink{dwa__planner__ros_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2009, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef DWA\_LOCAL\_PLANNER\_DWA\_PLANNER\_ROS\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define DWA\_LOCAL\_PLANNER\_DWA\_PLANNER\_ROS\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <boost/shared\_ptr.hpp>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <tf2\_ros/buffer.h>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/server.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <dwa\_local\_planner/DWAPlannerConfig.h>}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <angles/angles.h>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include <nav\_msgs/Odometry.h>}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__ros_8h}{costmap\_2d/costmap\_2d\_ros.h}}>}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base__local__planner_8h}{nav\_core/base\_local\_planner.h}}>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{latched__stop__rotate__controller_8h}{base\_local\_planner/latched\_stop\_rotate\_controller.h}}>}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{odometry__helper__ros_8h}{base\_local\_planner/odometry\_helper\_ros.h}}>}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{dwa__planner_8h}{dwa\_local\_planner/dwa\_planner.h}}>}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacedwa__local__planner}{dwa\_local\_planner}} \{}
+\DoxyCodeLine{65   \textcolor{keyword}{class }\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s}{DWAPlannerROS}} : \textcolor{keyword}{public} \mbox{\hyperlink{classnav__core_1_1_base_local_planner}{nav\_core::BaseLocalPlanner}} \{}
+\DoxyCodeLine{66     \textcolor{keyword}{public}:}
+\DoxyCodeLine{70       \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a53854eb5a69270d2935db6115da00b07}{DWAPlannerROS}}();}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{78       \textcolor{keywordtype}{void} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85}{initialize}}(std::string name, tf2\_ros::Buffer* tf,}
+\DoxyCodeLine{79           \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap\_ros);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{84       \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ab4a313f013569f71f59101ba8529640a}{\string~DWAPlannerROS}}();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{91       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0}{computeVelocityCommands}}(geometry\_msgs::Twist\& cmd\_vel);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 }
+\DoxyCodeLine{99       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e}{dwaComputeVelocityCommands}}(geometry\_msgs::PoseStamped\& global\_pose, geometry\_msgs::Twist\& cmd\_vel);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{106       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce}{setPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& orig\_global\_plan);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{112       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941}{isGoalReached}}();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8}{isInitialized}}() \{}
+\DoxyCodeLine{117         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3f9060b4d745f7ff5cc0ac6e0869cfda}{initialized\_}};}
+\DoxyCodeLine{118       \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{keyword}{private}:}
+\DoxyCodeLine{124       \textcolor{keywordtype}{void} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695}{reconfigureCB}}(DWAPlannerConfig \&config, uint32\_t level);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126       \textcolor{keywordtype}{void} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca}{publishLocalPlan}}(std::vector<geometry\_msgs::PoseStamped>\& path);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128       \textcolor{keywordtype}{void} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48}{publishGlobalPlan}}(std::vector<geometry\_msgs::PoseStamped>\& path);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130       tf2\_ros::Buffer* \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_aac8917d72216bad23d03aae6d9b05a4b}{tf\_}}; }
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132       \textcolor{comment}{// 全局和局部路径的可视化}}
+\DoxyCodeLine{133       ros::Publisher \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a858610dbe18fa5f37f1da9dbeaa47af6}{g\_plan\_pub\_}}, \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a7756f098cafda35d4acc1f4ff6af0a28}{l\_plan\_pub\_}};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135       \textcolor{comment}{// 用来存储运动控制参数以及costmap2d、tf等，会被传入dp\_}}
+\DoxyCodeLine{136       \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\_local\_planner::LocalPlannerUtil}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_af153046111302f3258ebd2bf2d2aa505}{planner\_util\_}};}
+\DoxyCodeLine{137       \textcolor{comment}{// 指向dwa局部路径规划器类的共享指针}}
+\DoxyCodeLine{138       boost::shared\_ptr<DWAPlanner> \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e786447ddb9daccacf0df6fceadd71f}{dp\_}};}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4122daf0cf82134cc935ba26e16969ab}{costmap\_ros\_}};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142       dynamic\_reconfigure::Server<DWAPlannerConfig> *\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a2719957a5e10b456a2044b01eebfdb9d}{dsrv\_}};}
+\DoxyCodeLine{143       dwa\_local\_planner::DWAPlannerConfig \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a5d7933f2f2a867eccc49626cc870fd34}{default\_config\_}};}
+\DoxyCodeLine{144       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a721d5e2364754273a369a32d445ca771}{setup\_}};}
+\DoxyCodeLine{145       geometry\_msgs::PoseStamped \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a622801b690be44d668b967d29708c58c}{current\_pose\_}};}
+\DoxyCodeLine{146       \textcolor{comment}{// 到达目标点后的停止然后旋转的运动控制类}}
+\DoxyCodeLine{147       \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller}{base\_local\_planner::LatchedStopRotateController}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6132be586af38569fd58f75da07dc6e0}{latchedStopRotateController\_}};}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3f9060b4d745f7ff5cc0ac6e0869cfda}{initialized\_}};}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152       \textcolor{comment}{// 用来辅助获取odom信息，会被传入dp\_}}
+\DoxyCodeLine{153       \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{base\_local\_planner::OdometryHelperRos}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4fd27149428a4010d44439caa2d749de}{odom\_helper\_}};}
+\DoxyCodeLine{154       std::string \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e81ef8eb8c07c08c031b74c9f68bc6e}{odom\_topic\_}};}
+\DoxyCodeLine{155   \};}
+\DoxyCodeLine{156 \};}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

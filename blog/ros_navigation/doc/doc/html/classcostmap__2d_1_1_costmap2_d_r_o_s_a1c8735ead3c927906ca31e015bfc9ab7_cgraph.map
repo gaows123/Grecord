@@ -1,0 +1,4 @@
+<map id="costmap_2d::Costmap2DROS::isCurrent" name="costmap_2d::Costmap2DROS::isCurrent">
+<area shape="rect" id="node1" title="Same as getLayeredCostmap()&#45;&gt;isCurrent()." alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_layered_costmap.html#a7fdc879ceb88df60b51ee4e5f4a1ec6e" title=" " alt="" coords="251,5,449,47"/>
+</map>

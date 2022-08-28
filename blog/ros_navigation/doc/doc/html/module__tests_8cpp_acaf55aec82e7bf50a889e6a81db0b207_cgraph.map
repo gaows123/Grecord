@@ -1,0 +1,5 @@
+<map id="worldToIndex" name="worldToIndex">
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,104,73"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="152,5,321,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="152,71,321,112"/>
+</map>

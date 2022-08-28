@@ -1,0 +1,9 @@
+<map id="costmap_2d::Costmap2DPublisher::prepareGrid" name="costmap_2d::Costmap2DPublisher::prepareGrid">
+<area shape="rect" id="node1" title="Prepare grid_ message for publication." alt="" coords="1037,39,1260,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_publisher.html#aee87acfd9d19093239ec59a88e3e4add" title="Publish the latest full costmap to the new subscriber." alt="" coords="767,5,989,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d_publisher.html#a47e5b5d93113f39786112919a6981953" title="Publishes the visualization data over ROS" alt="" coords="767,71,989,112"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_publisher.html#a56d27ca488f09b70a8698b2491d036e7" title="Constructor for the Costmap2DPublisher" alt="" coords="496,5,719,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="509,71,706,112"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,71,448,112"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,71,203,112"/>
+</map>

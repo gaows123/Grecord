@@ -1,0 +1,5 @@
+<map id="navfn::NavfnWithCostmap::poseCallback" name="navfn::NavfnWithCostmap::poseCallback">
+<area shape="rect" id="node1" title=" " alt="" coords="5,47,180,88"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="228,5,425,47"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9" title="根据目标位姿计算全局路径" alt="" coords="231,95,422,122"/>
+</map>

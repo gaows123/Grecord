@@ -1,0 +1,4 @@
+<map id="costmap_2d::Costmap2D::getCost" name="costmap_2d::Costmap2D::getCost">
+<area shape="rect" id="node1" title="Get the cost of a cell in the costmap" alt="" coords="5,5,175,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="223,5,392,47"/>
+</map>

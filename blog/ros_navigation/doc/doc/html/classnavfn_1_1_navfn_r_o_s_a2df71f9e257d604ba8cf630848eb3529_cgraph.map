@@ -1,0 +1,6 @@
+<map id="navfn::NavfnROS::validPointPotential" name="navfn::NavfnROS::validPointPotential">
+<area shape="rect" id="node1" title="检查potential值是否有效 (注意: 要先调用 computePotential)" alt="" coords="5,39,195,80"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_navfn_r_o_s.html#a51f40b93d0f1c181f94fb7da28a476e2" title="获得 potential 或者 导航的代价 (注意: 要先调用 computePotential)" alt="" coords="243,5,423,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="248,71,417,112"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="471,5,640,47"/>
+</map>

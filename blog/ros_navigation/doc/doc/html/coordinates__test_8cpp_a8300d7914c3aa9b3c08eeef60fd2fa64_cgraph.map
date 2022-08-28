@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,111,61,138"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="119,5,289,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="119,71,289,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="109,136,299,177"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a2da39cb06d192795614df9c2bf00692f" title="Convert from world coordinates to map coordinates without checking for legal bounds" alt="" coords="119,201,289,243"/>
+</map>

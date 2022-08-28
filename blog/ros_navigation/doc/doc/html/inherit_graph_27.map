@@ -1,0 +1,10 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,30,175,57"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_wavefront_map_accessor.html" title=" " alt="" coords="231,5,400,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap_layer.html" title=" " alt="" coords="223,71,408,98"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_obstacle_layer.html" title=" " alt="" coords="456,46,641,73"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_static_layer.html" title=" " alt="" coords="465,97,632,123"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_voxel_layer.html" title=" " alt="" coords="689,46,856,73"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_layer.html" title=" " alt="" coords="23,97,157,123"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_inflation_layer.html" title=" " alt="" coords="226,122,405,149"/>
+</map>

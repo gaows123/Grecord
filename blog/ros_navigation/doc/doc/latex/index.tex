@@ -1,0 +1,32 @@
+\begin{DoxyAuthor}{作者}
+Ioan Sucan
+\end{DoxyAuthor}
+
+
+{\bfseries{odom\+\_\+localization}} Takes in ground truth pose information for a robot base (e.\+g., from a simulator or motion capture system) and republishes it as if a localization system were in use.
+
+\DoxyHorRuler{0}
+\hypertarget{index_usage}{}\doxysection{Usage}\label{index_usage}
+\begin{DoxyVerb}$ fake_localization
+\end{DoxyVerb}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_topic}{}\doxysection{ROS topics}\label{index_topic}
+Subscribes to (name/type)\+:
+\begin{DoxyItemize}
+\item {\bfseries{\char`\"{}base\+\_\+pose\+\_\+ground\+\_\+truth\char`\"{}}} nav\+\_\+msgs/\+Odometry \+: robot\textquotesingle{}s odometric pose. Only the position information is used (velocity is ignored).
+\end{DoxyItemize}
+
+Publishes to (name / type)\+:
+\begin{DoxyItemize}
+\item {\bfseries{\char`\"{}amcl\+\_\+pose\char`\"{}}} geometry\+\_\+msgs/\+Pose\+With\+Covariance\+Stamped \+: 简单转发仿真器来的位姿 robot\textquotesingle{}s estimated pose in the map, with covariance
+\item {\bfseries{\char`\"{}particlecloud\char`\"{}}} geometry\+\_\+msgs/\+Pose\+Array \+: 在rviz和nav\+\_\+view中使用，来可视化机器人位姿的粒子云 fake set of poses being maintained by the filter (one paricle only).
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_parameters}{}\doxysection{ROS parameters}\label{index_parameters}
+
+\begin{DoxyItemize}
+\item \char`\"{}$\sim$odom\+\_\+frame\+\_\+id\char`\"{} (string) \+: The odometry frame to be used, default\+: \char`\"{}odom\char`\"{} 
+\end{DoxyItemize}

@@ -1,0 +1,4 @@
+<map id="clear_costmap_recovery::ClearCostmapRecovery" name="clear_costmap_recovery::ClearCostmapRecovery">
+<area shape="rect" id="node1" title="A recovery behavior that reverts the navigation stack&#39;s costmaps to the static map outside of a user&#45;..." alt="" coords="17,80,183,121"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="5,5,195,32"/>
+</map>

@@ -1,0 +1,137 @@
+\hypertarget{costmap__layer_8h_source}{}\doxysection{costmap\+\_\+layer.\+h}
+\label{costmap__layer_8h_source}\index{costmap\_2d/include/costmap\_2d/costmap\_layer.h@{costmap\_2d/include/costmap\_2d/costmap\_layer.h}}
+\mbox{\hyperlink{costmap__layer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_COSTMAP\_LAYER\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_COSTMAP\_LAYER\_H\_}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layer_8h}{costmap\_2d/layer.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layered__costmap_8h}{costmap\_2d/layered\_costmap.h}}>}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer}{CostmapLayer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classcostmap__2d_1_1_layer}{Layer}}, \textcolor{keyword}{public} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50   \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_af55005495db76f6ab20e14bcd3390a41}{CostmapLayer}}() : \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_aa38d857976a16df71fbc47a353114a8a}{has\_extra\_bounds\_}}(false),}
+\DoxyCodeLine{51     \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a4ee3c2716934395239e706f62ff5a426}{extra\_min\_x\_}}(1e6), \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_ae7601f476e57307e02a4886fd1b42efd}{extra\_max\_x\_}}(-\/1e6),}
+\DoxyCodeLine{52     \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a06ee2a873c5b2e69aee98721137f2da2}{extra\_min\_y\_}}(1e6), \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_adc341d502cb5d6beebc771896058fd2c}{extra\_max\_y\_}}(-\/1e6) \{\}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a7a595c59ef61a168c71e63360b9b1501}{isDiscretized}}()}
+\DoxyCodeLine{55   \{}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{57   \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a9260d210630b6522cad87397506f9696}{matchSize}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a2d7de3edced6d1c27a678ab0ebc10f50}{clearArea}}(\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y, \textcolor{keywordtype}{int} end\_x, \textcolor{keywordtype}{int} end\_y, \textcolor{keywordtype}{bool} invert\_area=\textcolor{keyword}{false});}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{72   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_acc0f84edaa1742899a9a96b06ad8f683}{addExtraBounds}}(\textcolor{keywordtype}{double} mx0, \textcolor{keywordtype}{double} my0, \textcolor{keywordtype}{double} mx1, \textcolor{keywordtype}{double} my1);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{75   \textcolor{comment}{/*}}
+\DoxyCodeLine{76 \textcolor{comment}{   * Updates the master\_grid within the specified}}
+\DoxyCodeLine{77 \textcolor{comment}{   * bounding box using this layer's values.}}
+\DoxyCodeLine{78 \textcolor{comment}{   *}}
+\DoxyCodeLine{79 \textcolor{comment}{   * TrueOverwrite means every value from this layer}}
+\DoxyCodeLine{80 \textcolor{comment}{   * is written into the master grid.}}
+\DoxyCodeLine{81 \textcolor{comment}{   */}}
+\DoxyCodeLine{82   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_adc52dfe36cea8be621d560231e861dbd}{updateWithTrueOverwrite}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& master\_grid, \textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84   \textcolor{comment}{/*}}
+\DoxyCodeLine{85 \textcolor{comment}{   * Updates the master\_grid within the specified}}
+\DoxyCodeLine{86 \textcolor{comment}{   * bounding box using this layer's values.}}
+\DoxyCodeLine{87 \textcolor{comment}{   *}}
+\DoxyCodeLine{88 \textcolor{comment}{   * Overwrite means every valid value from this layer}}
+\DoxyCodeLine{89 \textcolor{comment}{   * is written into the master grid (does not copy NO\_INFORMATION)}}
+\DoxyCodeLine{90 \textcolor{comment}{   */}}
+\DoxyCodeLine{91   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_ac01cf9ead24877e522dece2254c87632}{updateWithOverwrite}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& master\_grid, \textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93   \textcolor{comment}{/*}}
+\DoxyCodeLine{94 \textcolor{comment}{   * Updates the master\_grid within the specified}}
+\DoxyCodeLine{95 \textcolor{comment}{   * bounding box using this layer's values.}}
+\DoxyCodeLine{96 \textcolor{comment}{   *}}
+\DoxyCodeLine{97 \textcolor{comment}{   * Sets the new value to the maximum of the master\_grid's value}}
+\DoxyCodeLine{98 \textcolor{comment}{   * and this layer's value. If the master value is NO\_INFORMATION,}}
+\DoxyCodeLine{99 \textcolor{comment}{   * it is overwritten. If the layer's value is NO\_INFORMATION,}}
+\DoxyCodeLine{100 \textcolor{comment}{   * the master value does not change.}}
+\DoxyCodeLine{101 \textcolor{comment}{   */}}
+\DoxyCodeLine{102   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_acd9d236d8d16c8b4a004ae3b1709aa92}{updateWithMax}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& master\_grid, \textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104   \textcolor{comment}{/*}}
+\DoxyCodeLine{105 \textcolor{comment}{   * Updates the master\_grid within the specified}}
+\DoxyCodeLine{106 \textcolor{comment}{   * bounding box using this layer's values.}}
+\DoxyCodeLine{107 \textcolor{comment}{   *}}
+\DoxyCodeLine{108 \textcolor{comment}{   * Sets the new value to the sum of the master grid's value}}
+\DoxyCodeLine{109 \textcolor{comment}{   * and this layer's value. If the master value is NO\_INFORMATION,}}
+\DoxyCodeLine{110 \textcolor{comment}{   * it is overwritten with the layer's value. If the layer's value}}
+\DoxyCodeLine{111 \textcolor{comment}{   * is NO\_INFORMATION, then the master value does not change.}}
+\DoxyCodeLine{112 \textcolor{comment}{   *}}
+\DoxyCodeLine{113 \textcolor{comment}{   * If the sum value is larger than INSCRIBED\_INFLATED\_OBSTACLE,}}
+\DoxyCodeLine{114 \textcolor{comment}{   * the master value is set to (INSCRIBED\_INFLATED\_OBSTACLE -\/ 1).}}
+\DoxyCodeLine{115 \textcolor{comment}{   */}}
+\DoxyCodeLine{116   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_ab76205b8052d66f0096e5942a3ed1530}{updateWithAddition}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& master\_grid, \textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j);}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{129   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a7ae82ac5b75c5627ded6cda139849f6c}{touch}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double}* min\_x, \textcolor{keywordtype}{double}* min\_y, \textcolor{keywordtype}{double}* max\_x, \textcolor{keywordtype}{double}* max\_y);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131   \textcolor{comment}{/*}}
+\DoxyCodeLine{132 \textcolor{comment}{   * Updates the bounding box specified in the parameters}}
+\DoxyCodeLine{133 \textcolor{comment}{   * to include the bounding box from the addExtraBounds}}
+\DoxyCodeLine{134 \textcolor{comment}{   * call. If addExtraBounds was not called, the method will do nothing.}}
+\DoxyCodeLine{135 \textcolor{comment}{   *}}
+\DoxyCodeLine{136 \textcolor{comment}{   * Should be called at the beginning of the updateBounds method}}
+\DoxyCodeLine{137 \textcolor{comment}{   *}}
+\DoxyCodeLine{138 \textcolor{comment}{   * @param min\_x bounding box (input and output)}}
+\DoxyCodeLine{139 \textcolor{comment}{   * @param min\_y bounding box (input and output)}}
+\DoxyCodeLine{140 \textcolor{comment}{   * @param max\_x bounding box (input and output)}}
+\DoxyCodeLine{141 \textcolor{comment}{   * @param max\_y bounding box (input and output)}}
+\DoxyCodeLine{142 \textcolor{comment}{   */}}
+\DoxyCodeLine{143   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_aeca7c78b12489bcfff974cd60753a6f1}{useExtraBounds}}(\textcolor{keywordtype}{double}* min\_x, \textcolor{keywordtype}{double}* min\_y, \textcolor{keywordtype}{double}* max\_x, \textcolor{keywordtype}{double}* max\_y);}
+\DoxyCodeLine{144   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_aa38d857976a16df71fbc47a353114a8a}{has\_extra\_bounds\_}};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{keyword}{private}:}
+\DoxyCodeLine{147   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a4ee3c2716934395239e706f62ff5a426}{extra\_min\_x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_ae7601f476e57307e02a4886fd1b42efd}{extra\_max\_x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a06ee2a873c5b2e69aee98721137f2da2}{extra\_min\_y\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_adc341d502cb5d6beebc771896058fd2c}{extra\_max\_y\_}};}
+\DoxyCodeLine{148 \};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_COSTMAP\_LAYER\_H\_}}
+
+\end{DoxyCode}

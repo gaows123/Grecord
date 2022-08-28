@@ -1,0 +1,6 @@
+<map id="navfn::NavfnROS::initialize" name="navfn::NavfnROS::initialize">
+<area shape="rect" id="node1" title="NavFnROS 对象的初始化函数" alt="" coords="5,46,184,73"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="232,5,429,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="232,71,429,112"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="477,5,676,47"/>
+</map>

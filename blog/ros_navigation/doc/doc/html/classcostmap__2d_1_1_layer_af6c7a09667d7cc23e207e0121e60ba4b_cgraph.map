@@ -1,0 +1,4 @@
+<map id="costmap_2d::Layer::initialize" name="costmap_2d::Layer::initialize">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,147,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="195,5,336,47"/>
+</map>

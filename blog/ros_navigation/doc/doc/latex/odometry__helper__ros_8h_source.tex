@@ -1,0 +1,84 @@
+\hypertarget{odometry__helper__ros_8h_source}{}\doxysection{odometry\+\_\+helper\+\_\+ros.\+h}
+\label{odometry__helper__ros_8h_source}\index{base\_local\_planner/include/base\_local\_planner/odometry\_helper\_ros.h@{base\_local\_planner/include/base\_local\_planner/odometry\_helper\_ros.h}}
+\mbox{\hyperlink{odometry__helper__ros_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: TKruse}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef ODOMETRY\_HELPER\_ROS2\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define ODOMETRY\_HELPER\_ROS2\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <nav\_msgs/Odometry.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{OdometryHelperRos}} \{}
+\DoxyCodeLine{49 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55   \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_af6ea30bc773864015dd3d243dc375d0b}{OdometryHelperRos}}(std::string odom\_topic = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{56   \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a03cc609ab67e45a06d58f9829c304554}{\string~OdometryHelperRos}}() \{\}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{62   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a0eeb49d061e05d16d43cac5196552c01}{odomCallback}}(\textcolor{keyword}{const} nav\_msgs::Odometry::ConstPtr\& msg);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ada88271c5b81d4a97b81eb51de64f67c}{getOdom}}(nav\_msgs::Odometry\& base\_odom);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ab70a70a7a3f3d8e6788e6e1f0503a717}{getRobotVel}}(geometry\_msgs::PoseStamped\& robot\_vel);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{73   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a3405fc02265edac001b3f4c8802c983d}{setOdomTopic}}(std::string odom\_topic);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76   std::string \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ab83cff19dc91ac7f8d3b3bb56c568fe2}{getOdomTopic}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a3de27ebd28e3293036c35b642e563496}{odom\_topic\_}}; \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{keyword}{private}:}
+\DoxyCodeLine{79   \textcolor{comment}{//odom topic}}
+\DoxyCodeLine{80   std::string \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a3de27ebd28e3293036c35b642e563496}{odom\_topic\_}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82   \textcolor{comment}{// we listen on odometry on the odom topic}}
+\DoxyCodeLine{83   ros::Subscriber \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a0a00a1221aabf80ee58ad253ec85c84e}{odom\_sub\_}};}
+\DoxyCodeLine{84   nav\_msgs::Odometry \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_aaf14228e89f9367ea460050b50d1f7e4}{base\_odom\_}};}
+\DoxyCodeLine{85   boost::mutex \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_adc6244c7f47d59891739380647b18e09}{odom\_mutex\_}};}
+\DoxyCodeLine{86   \textcolor{comment}{// global tf frame id}}
+\DoxyCodeLine{87   std::string \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ab30dbe21e21be0195790dba807e3ecf4}{frame\_id\_}}; }
+\DoxyCodeLine{88 \};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \} \textcolor{comment}{/* namespace base\_local\_planner */}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define CHUNKY 1}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ODOMETRY\_HELPER\_ROS2\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

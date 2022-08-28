@@ -1,0 +1,9 @@
+<map id="costmap_2d::InflationLayer::cellDistance" name="costmap_2d::InflationLayer::cellDistance">
+<area shape="rect" id="node1" title=" " alt="" coords="912,49,1091,91"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,5,637,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="685,49,864,91"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="685,115,864,156"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,53,411,95"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,53,184,95"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,85,637,127"/>
+</map>

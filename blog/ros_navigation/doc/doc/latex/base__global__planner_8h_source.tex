@@ -1,0 +1,72 @@
+\hypertarget{base__global__planner_8h_source}{}\doxysection{base\+\_\+global\+\_\+planner.\+h}
+\label{base__global__planner_8h_source}\index{nav\_core/include/nav\_core/base\_global\_planner.h@{nav\_core/include/nav\_core/base\_global\_planner.h}}
+\mbox{\hyperlink{base__global__planner_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef NAV\_CORE\_BASE\_GLOBAL\_PLANNER\_H}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define NAV\_CORE\_BASE\_GLOBAL\_PLANNER\_H}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__ros_8h}{costmap\_2d/costmap\_2d\_ros.h}}>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenav__core}{nav\_core}} \{}
+\DoxyCodeLine{48   \textcolor{keyword}{class }\mbox{\hyperlink{classnav__core_1_1_base_global_planner}{BaseGlobalPlanner}}\{}
+\DoxyCodeLine{49     \textcolor{keyword}{public}:}
+\DoxyCodeLine{57       \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}},}
+\DoxyCodeLine{58           \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std::vector<geometry\_msgs::PoseStamped>\& plan) = 0;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{68       \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnav__core_1_1_base_global_planner_afbc2b0f16bdd55a8b619f9fb5b7aa8da}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}},}
+\DoxyCodeLine{69                             \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std::vector<geometry\_msgs::PoseStamped>\& plan,}
+\DoxyCodeLine{70                             \textcolor{keywordtype}{double}\& cost)}
+\DoxyCodeLine{71       \{}
+\DoxyCodeLine{72         cost = 0;}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} \mbox{\hyperlink{classnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c}{makePlan}}(\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, plan);}
+\DoxyCodeLine{74       \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{81       \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnav__core_1_1_base_global_planner_a485461ff314103dac95744f771107c43}{initialize}}(std::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap\_ros) = 0;}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86       \textcolor{keyword}{virtual} \mbox{\hyperlink{classnav__core_1_1_base_global_planner_a98120c1d76f7a5badb74adef9694a06d}{\string~BaseGlobalPlanner}}()\{\}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{89       \mbox{\hyperlink{classnav__core_1_1_base_global_planner_a9a5877f3f1c7c09dca8ddb735487ef61}{BaseGlobalPlanner}}()\{\}}
+\DoxyCodeLine{90   \};}
+\DoxyCodeLine{91 \};  \textcolor{comment}{// namespace nav\_core}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// NAV\_CORE\_BASE\_GLOBAL\_PLANNER\_H}}
+
+\end{DoxyCode}

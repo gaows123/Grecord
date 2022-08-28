@@ -1,0 +1,4 @@
+<map id="costmap_2d::Costmap2D::PolygonOutlineCells::operator()" name="costmap_2d::Costmap2D::PolygonOutlineCells::operator()">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,175,61"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#aa10c1734472f485473302598113fcddc" title="Given an index... compute the associated map coordinates" alt="" coords="223,13,392,54"/>
+</map>

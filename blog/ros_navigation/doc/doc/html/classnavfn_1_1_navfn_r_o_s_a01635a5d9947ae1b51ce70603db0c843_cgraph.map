@@ -1,0 +1,7 @@
+<map id="navfn::NavfnROS::computePotential" name="navfn::NavfnROS::computePotential">
+<area shape="rect" id="node1" title="计算全局地图的导航函数，从已知的起始点到目标点" alt="" coords="5,104,188,145"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="236,5,405,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="236,71,405,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="236,136,405,177"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="236,201,405,243"/>
+</map>

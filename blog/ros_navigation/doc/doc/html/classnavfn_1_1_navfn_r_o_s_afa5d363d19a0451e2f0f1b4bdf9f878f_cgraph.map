@@ -1,0 +1,6 @@
+<map id="navfn::NavfnROS::mapToWorld" name="navfn::NavfnROS::mapToWorld">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,211,105"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="259,5,428,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="259,71,428,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="259,136,428,177"/>
+</map>

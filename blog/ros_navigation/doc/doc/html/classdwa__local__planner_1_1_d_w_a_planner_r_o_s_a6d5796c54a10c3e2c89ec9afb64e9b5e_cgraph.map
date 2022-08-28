@@ -1,0 +1,11 @@
+<map id="dwa_local_planner::DWAPlannerROS::dwaComputeVelocityCommands" name="dwa_local_planner::DWAPlannerROS::dwaComputeVelocityCommands">
+<area shape="rect" id="node1" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="5,194,260,250"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9d02596d6352e0153a579427bbc2c394" title="Returns the local frame of the costmap" alt="" coords="325,5,522,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="325,71,522,112"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="351,136,495,177"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="335,201,512,243"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_odometry_helper_ros.html#ab70a70a7a3f3d8e6788e6e1f0503a717" title=" " alt="" coords="350,267,497,323"/>
+<area shape="rect" id="node7" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8" title=" " alt="" coords="325,348,522,389"/>
+<area shape="rect" id="node8" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3ed5e8084732aae21c15adc1f98a68ca" title=" " alt="" coords="308,413,539,455"/>
+<area shape="rect" id="node9" href="$namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="587,413,720,455"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="base_local_planner/include/base_local_planner/simple_trajectory_generator.h" name="base_local_planner/include/base_local_planner/simple_trajectory_generator.h">
+<area shape="rect" id="node1" title=" " alt="" coords="219,5,393,76"/>
+<area shape="rect" id="node2" href="$trajectory__sample__generator_8h.html" title=" " alt="" coords="5,124,207,165"/>
+<area shape="rect" id="node5" href="$local__planner__limits_8h.html" title=" " alt="" coords="231,124,381,165"/>
+<area shape="rect" id="node6" title=" " alt="" coords="319,221,405,247"/>
+<area shape="rect" id="node3" href="$trajectory_8h.html" title=" " alt="" coords="39,213,173,255"/>
+<area shape="rect" id="node4" title=" " alt="" coords="77,303,135,329"/>
+</map>

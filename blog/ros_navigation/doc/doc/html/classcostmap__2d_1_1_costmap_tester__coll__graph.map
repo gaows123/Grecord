@@ -1,0 +1,9 @@
+<map id="costmap_2d::CostmapTester" name="costmap_2d::CostmapTester">
+<area shape="rect" id="node1" title=" " alt="" coords="107,291,297,317"/>
+<area shape="rect" id="node2" title=" " alt="" coords="133,201,228,228"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="253,201,450,228"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="252,103,451,130"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="56,5,225,32"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="5,103,228,130"/>
+<area shape="rect" id="node6" title=" " alt="" coords="367,5,421,32"/>
+</map>

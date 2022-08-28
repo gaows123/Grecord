@@ -1,0 +1,8 @@
+<map id="costmap_2d::LayeredCostmap::getGlobalFrameID" name="costmap_2d::LayeredCostmap::getGlobalFrameID">
+<area shape="rect" id="node1" title=" " alt="" coords="453,39,652,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,5,405,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="229,71,396,112"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="5,71,172,112"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="5,136,172,177"/>
+</map>

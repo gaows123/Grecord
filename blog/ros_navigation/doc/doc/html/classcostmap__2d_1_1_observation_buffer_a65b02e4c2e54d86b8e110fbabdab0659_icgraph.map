@@ -1,0 +1,5 @@
+<map id="costmap_2d::ObservationBuffer::purgeStaleObservations" name="costmap_2d::ObservationBuffer::purgeStaleObservations">
+<area shape="rect" id="node1" title="Removes any stale observations from the buffer list" alt="" coords="260,39,467,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_observation_buffer.html#af1bdb755c1ed181b2108fc26826bc273" title="Transforms a PointCloud to the global frame and buffers it Note: The burden is on the user to make su..." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_observation_buffer.html#aa89ff474cd6785349e3c0b2f49e2d738" title="Pushes copies of all current observations onto the end of the vector passed in" alt="" coords="5,71,212,112"/>
+</map>

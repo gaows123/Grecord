@@ -1,0 +1,668 @@
+\hypertarget{classnavfn_1_1_navfn_r_o_s}{}\doxysection{navfn\+::Navfn\+ROS类 参考}
+\label{classnavfn_1_1_navfn_r_o_s}\index{navfn::NavfnROS@{navfn::NavfnROS}}
+
+
+Navfn 全局规划器的\+ROS封装类  
+
+
+
+
+{\ttfamily \#include $<$navfn\+\_\+ros.\+h$>$}
+
+
+
+类 navfn\+::Navfn\+ROS 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classnavfn_1_1_navfn_r_o_s__inherit__graph}
+\end{center}
+\end{figure}
+
+
+navfn\+::Navfn\+ROS 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a1b21c7105bc040df6e5d8f6c8adfb6a6}{Navfn\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em Nav\+Fn\+ROS对象的默认构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a06ba0ae6bd1cac9ee89110290c5b86e6}{Navfn\+ROS}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Nav\+Fn\+ROS对象的构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_af405588d08b37d071e72d85dc33c6523}{Navfn\+ROS}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em 还是\+Nav\+Fn\+ROS对象的构造函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a7f1e06b4e3b390aaaa3e4733a0668c4d}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Nav\+Fn\+ROS 对象的初始化函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a935ac2d5a76a101a3521cb078ee4ba4d}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em av\+Fn\+ROS 对象的初始化函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_aa8cec6d49a902ace7e71ffc7125b29a9}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em 根据目标位姿计算全局路径 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a1925183250dd36115daadd91b14656aa}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, double tolerance, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em 根据目标位姿计算全局路径 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a01635a5d9947ae1b51ce70603db0c843}{compute\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em 计算全局地图的导航函数，从已知的起始点到目标点 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_ad645a775f99aa2a120bb0b7f6cd08fd5}{get\+Plan\+From\+Potential}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em 当起始点的potential被计算出来后，计算全局路径 (注意\+: 要先调用 compute\+Potential) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a51f40b93d0f1c181f94fb7da28a476e2}{get\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em 获得 potential 或者 导航的代价 (注意\+: 要先调用 compute\+Potential) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_ad2b915897586064db5c861658133e909}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em 检查potential值是否有效 (注意\+: 要先调用 compute\+Potential) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a2df71f9e257d604ba8cf630848eb3529}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point, double tolerance)
+\begin{DoxyCompactList}\small\item\em 检查potential值是否有效 (注意\+: 要先调用 compute\+Potential) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a05b4ca9b40c385791f4cb7be8237e4bb}{publish\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path, double r, double g, double b, double a)
+\begin{DoxyCompactList}\small\item\em 可视化路径 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a157abea36af92ed9ad78e79328eb0489}{$\sim$\+Navfn\+ROS}} ()
+\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a81643ac812bc02a5652f691c30834c27}{make\+Plan\+Service}} (nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&req, nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&resp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_aee612188ce6bbae6daa19353499bcf1c}{costmap\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Store a copy of the current costmap in {\itshape costmap}. Called by make\+Plan. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnavfn_1_1_nav_fn}{Nav\+Fn}} $>$ \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a36ba1f9fa50ad74e2c41a8c93f9b74e0}{planner\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a2e7e371d85298da82ad4e2f7965efe4f}{plan\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a2fa70e7aeb1abdcbcd0787a87d11c464}{potarr\+\_\+pub\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_affd08548cdff16315eef20424b1203dc}{initialized\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a4003d3313fc2e0ede53223559c0ed9c5}{allow\+\_\+unknown\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a17cf4a3a4d61adfc9276cc2ef7cc5f4d}{visualize\+\_\+potential\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a51ca146d8780724b2349f08c10b771b0}{sq\+\_\+distance}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&p1, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&p2)
+\item 
+void \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_afa5d363d19a0451e2f0f1b4bdf9f878f}{map\+To\+World}} (double mx, double my, double \&wx, double \&wy)
+\item 
+void \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_abcd849ed9ec685971d6015e8d4056a83}{clear\+Robot\+Cell}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, unsigned int mx, unsigned int my)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a27fe9f639f54d99432f43064708091aa}{planner\+\_\+window\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a86579ced0c7b4b3e4bf61312af5b241c}{planner\+\_\+window\+\_\+y\+\_\+}}
+\item 
+double \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a12e32bc1b7f324e8bcf3a8de366b8dd6}{default\+\_\+tolerance\+\_\+}}
+\item 
+boost\+::mutex \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_ac3d5ae44bb22af3400afd1f1f09e94e6}{mutex\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a0c90cf46e240e99f3ce71236781fb96b}{make\+\_\+plan\+\_\+srv\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s_a406f9ce3a8b44f376ea1fb5acaef27c3}{global\+\_\+frame\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Navfn 全局规划器的\+ROS封装类 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a1b21c7105bc040df6e5d8f6c8adfb6a6}\label{classnavfn_1_1_navfn_r_o_s_a1b21c7105bc040df6e5d8f6c8adfb6a6}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!NavfnROS@{NavfnROS}}
+\index{NavfnROS@{NavfnROS}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{NavfnROS()}{NavfnROS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily navfn\+::\+Navfn\+ROS\+::\+Navfn\+ROS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nav\+Fn\+ROS对象的默认构造函数 
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a06ba0ae6bd1cac9ee89110290c5b86e6}\label{classnavfn_1_1_navfn_r_o_s_a06ba0ae6bd1cac9ee89110290c5b86e6}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!NavfnROS@{NavfnROS}}
+\index{NavfnROS@{NavfnROS}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{NavfnROS()}{NavfnROS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily navfn\+::\+Navfn\+ROS\+::\+Navfn\+ROS (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})}
+
+
+
+Nav\+Fn\+ROS对象的构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 全局规划器名字 \\
+\hline
+{\em costmap} & 代价地图的指针 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a06ba0ae6bd1cac9ee89110290c5b86e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_af405588d08b37d071e72d85dc33c6523}\label{classnavfn_1_1_navfn_r_o_s_af405588d08b37d071e72d85dc33c6523}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!NavfnROS@{NavfnROS}}
+\index{NavfnROS@{NavfnROS}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{NavfnROS()}{NavfnROS()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily navfn\+::\+Navfn\+ROS\+::\+Navfn\+ROS (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{global\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+还是\+Nav\+Fn\+ROS对象的构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 全局规划器名字 \\
+\hline
+{\em costmap} & 代价地图的指针 \\
+\hline
+{\em global\+\_\+frame} & 代价地图的全局坐标系 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_af405588d08b37d071e72d85dc33c6523_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a157abea36af92ed9ad78e79328eb0489}\label{classnavfn_1_1_navfn_r_o_s_a157abea36af92ed9ad78e79328eb0489}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!````~NavfnROS@{$\sim$NavfnROS}}
+\index{````~NavfnROS@{$\sim$NavfnROS}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{$\sim$NavfnROS()}{~NavfnROS()}}
+{\footnotesize\ttfamily navfn\+::\+Navfn\+ROS\+::$\sim$\+Navfn\+ROS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_abcd849ed9ec685971d6015e8d4056a83}\label{classnavfn_1_1_navfn_r_o_s_abcd849ed9ec685971d6015e8d4056a83}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!clearRobotCell@{clearRobotCell}}
+\index{clearRobotCell@{clearRobotCell}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{clearRobotCell()}{clearRobotCell()}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+ROS\+::clear\+Robot\+Cell (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_abcd849ed9ec685971d6015e8d4056a83_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_abcd849ed9ec685971d6015e8d4056a83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a01635a5d9947ae1b51ce70603db0c843}\label{classnavfn_1_1_navfn_r_o_s_a01635a5d9947ae1b51ce70603db0c843}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!computePotential@{computePotential}}
+\index{computePotential@{computePotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{computePotential()}{computePotential()}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::compute\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+计算全局地图的导航函数，从已知的起始点到目标点 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to use for seeding the navigation function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表 navigation function 成功的计算出来 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a01635a5d9947ae1b51ce70603db0c843_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_ad645a775f99aa2a120bb0b7f6cd08fd5}\label{classnavfn_1_1_navfn_r_o_s_ad645a775f99aa2a120bb0b7f6cd08fd5}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!getPlanFromPotential@{getPlanFromPotential}}
+\index{getPlanFromPotential@{getPlanFromPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{getPlanFromPotential()}{getPlanFromPotential()}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::get\+Plan\+From\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+当起始点的potential被计算出来后，计算全局路径 (注意\+: 要先调用 compute\+Potential) 
+
+
+\begin{DoxyParams}{参数}
+{\em goal} & 目标点位姿 \\
+\hline
+{\em plan} & 计算出的全局路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表找到全局路径 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_ad645a775f99aa2a120bb0b7f6cd08fd5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_ad645a775f99aa2a120bb0b7f6cd08fd5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a51f40b93d0f1c181f94fb7da28a476e2}\label{classnavfn_1_1_navfn_r_o_s_a51f40b93d0f1c181f94fb7da28a476e2}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!getPointPotential@{getPointPotential}}
+\index{getPointPotential@{getPointPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{getPointPotential()}{getPointPotential()}}
+{\footnotesize\ttfamily double navfn\+::\+Navfn\+ROS\+::get\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+获得 potential 或者 导航的代价 (注意\+: 要先调用 compute\+Potential) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & 被检查的点 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+该点在navigation function的值 （全局坐标系下） 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a51f40b93d0f1c181f94fb7da28a476e2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a51f40b93d0f1c181f94fb7da28a476e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a935ac2d5a76a101a3521cb078ee4ba4d}\label{classnavfn_1_1_navfn_r_o_s_a935ac2d5a76a101a3521cb078ee4ba4d}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!initialize@{initialize}}
+\index{initialize@{initialize}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{global\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+av\+Fn\+ROS 对象的初始化函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 全局规划器名字 \\
+\hline
+{\em costmap} & 代价地图的指针 \\
+\hline
+{\em global\+\_\+frame} & 代价地图的全局坐标系 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a935ac2d5a76a101a3521cb078ee4ba4d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a7f1e06b4e3b390aaaa3e4733a0668c4d}\label{classnavfn_1_1_navfn_r_o_s_a7f1e06b4e3b390aaaa3e4733a0668c4d}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!initialize@{initialize}}
+\index{initialize@{initialize}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Nav\+Fn\+ROS 对象的初始化函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 全局规划器名字 \\
+\hline
+{\em costmap} & 代价地图的指针 \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_global_planner_a485461ff314103dac95744f771107c43}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a7f1e06b4e3b390aaaa3e4733a0668c4d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a7f1e06b4e3b390aaaa3e4733a0668c4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a1925183250dd36115daadd91b14656aa}\label{classnavfn_1_1_navfn_r_o_s_a1925183250dd36115daadd91b14656aa}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{double}]{tolerance,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+根据目标位姿计算全局路径 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & 起始位姿 \\
+\hline
+{\em goal} & 目标位姿 \\
+\hline
+{\em tolerance} & 目标点的容忍误差 \\
+\hline
+{\em plan} & 计算出的全局路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表找到全局路径 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a1925183250dd36115daadd91b14656aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_aa8cec6d49a902ace7e71ffc7125b29a9}\label{classnavfn_1_1_navfn_r_o_s_aa8cec6d49a902ace7e71ffc7125b29a9}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+根据目标位姿计算全局路径 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & 起始位姿 \\
+\hline
+{\em goal} & 目标位姿 \\
+\hline
+{\em plan} & 计算出的全局路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表找到全局路径 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classnavfn_1_1_navfn_r_o_s_aa8cec6d49a902ace7e71ffc7125b29a9_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_aa8cec6d49a902ace7e71ffc7125b29a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a81643ac812bc02a5652f691c30834c27}\label{classnavfn_1_1_navfn_r_o_s_a81643ac812bc02a5652f691c30834c27}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!makePlanService@{makePlanService}}
+\index{makePlanService@{makePlanService}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{makePlanService()}{makePlanService()}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::make\+Plan\+Service (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&}]{req,  }\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&}]{resp }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a81643ac812bc02a5652f691c30834c27_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a81643ac812bc02a5652f691c30834c27_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_afa5d363d19a0451e2f0f1b4bdf9f878f}\label{classnavfn_1_1_navfn_r_o_s_afa5d363d19a0451e2f0f1b4bdf9f878f}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!mapToWorld@{mapToWorld}}
+\index{mapToWorld@{mapToWorld}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{mapToWorld()}{mapToWorld()}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+ROS\+::map\+To\+World (\begin{DoxyParamCaption}\item[{double}]{mx,  }\item[{double}]{my,  }\item[{double \&}]{wx,  }\item[{double \&}]{wy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_afa5d363d19a0451e2f0f1b4bdf9f878f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_afa5d363d19a0451e2f0f1b4bdf9f878f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a05b4ca9b40c385791f4cb7be8237e4bb}\label{classnavfn_1_1_navfn_r_o_s_a05b4ca9b40c385791f4cb7be8237e4bb}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!publishPlan@{publishPlan}}
+\index{publishPlan@{publishPlan}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{publishPlan()}{publishPlan()}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+ROS\+::publish\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{a }\end{DoxyParamCaption})}
+
+
+
+可视化路径 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a05b4ca9b40c385791f4cb7be8237e4bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a51ca146d8780724b2349f08c10b771b0}\label{classnavfn_1_1_navfn_r_o_s_a51ca146d8780724b2349f08c10b771b0}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!sq\_distance@{sq\_distance}}
+\index{sq\_distance@{sq\_distance}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{sq\_distance()}{sq\_distance()}}
+{\footnotesize\ttfamily double navfn\+::\+Navfn\+ROS\+::sq\+\_\+distance (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{p1,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a51ca146d8780724b2349f08c10b771b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_ad2b915897586064db5c861658133e909}\label{classnavfn_1_1_navfn_r_o_s_ad2b915897586064db5c861658133e909}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!validPointPotential@{validPointPotential}}
+\index{validPointPotential@{validPointPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{validPointPotential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+检查potential值是否有效 (注意\+: 要先调用 compute\+Potential) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & 被检查的点 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表 navigation function 在该点是有效的 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classnavfn_1_1_navfn_r_o_s_ad2b915897586064db5c861658133e909_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classnavfn_1_1_navfn_r_o_s_ad2b915897586064db5c861658133e909_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a2df71f9e257d604ba8cf630848eb3529}\label{classnavfn_1_1_navfn_r_o_s_a2df71f9e257d604ba8cf630848eb3529}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!validPointPotential@{validPointPotential}}
+\index{validPointPotential@{validPointPotential}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{validPointPotential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point,  }\item[{double}]{tolerance }\end{DoxyParamCaption})}
+
+
+
+检查potential值是否有效 (注意\+: 要先调用 compute\+Potential) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & 被检查的点 \\
+\hline
+{\em tolerance} & 在world\+\_\+point附近搜索的容忍误差 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表 navigation function 在该点是有效的 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_r_o_s_a2df71f9e257d604ba8cf630848eb3529_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a4003d3313fc2e0ede53223559c0ed9c5}\label{classnavfn_1_1_navfn_r_o_s_a4003d3313fc2e0ede53223559c0ed9c5}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!allow\_unknown\_@{allow\_unknown\_}}
+\index{allow\_unknown\_@{allow\_unknown\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{allow\_unknown\_}{allow\_unknown\_}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::allow\+\_\+unknown\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_aee612188ce6bbae6daa19353499bcf1c}\label{classnavfn_1_1_navfn_r_o_s_aee612188ce6bbae6daa19353499bcf1c}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}}$\ast$ navfn\+::\+Navfn\+ROS\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Store a copy of the current costmap in {\itshape costmap}. Called by make\+Plan. 
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a12e32bc1b7f324e8bcf3a8de366b8dd6}\label{classnavfn_1_1_navfn_r_o_s_a12e32bc1b7f324e8bcf3a8de366b8dd6}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!default\_tolerance\_@{default\_tolerance\_}}
+\index{default\_tolerance\_@{default\_tolerance\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{default\_tolerance\_}{default\_tolerance\_}}
+{\footnotesize\ttfamily double navfn\+::\+Navfn\+ROS\+::default\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a406f9ce3a8b44f376ea1fb5acaef27c3}\label{classnavfn_1_1_navfn_r_o_s_a406f9ce3a8b44f376ea1fb5acaef27c3}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string navfn\+::\+Navfn\+ROS\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_affd08548cdff16315eef20424b1203dc}\label{classnavfn_1_1_navfn_r_o_s_affd08548cdff16315eef20424b1203dc}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a0c90cf46e240e99f3ce71236781fb96b}\label{classnavfn_1_1_navfn_r_o_s_a0c90cf46e240e99f3ce71236781fb96b}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!make\_plan\_srv\_@{make\_plan\_srv\_}}
+\index{make\_plan\_srv\_@{make\_plan\_srv\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{make\_plan\_srv\_}{make\_plan\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server navfn\+::\+Navfn\+ROS\+::make\+\_\+plan\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_ac3d5ae44bb22af3400afd1f1f09e94e6}\label{classnavfn_1_1_navfn_r_o_s_ac3d5ae44bb22af3400afd1f1f09e94e6}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily boost\+::mutex navfn\+::\+Navfn\+ROS\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a2e7e371d85298da82ad4e2f7965efe4f}\label{classnavfn_1_1_navfn_r_o_s_a2e7e371d85298da82ad4e2f7965efe4f}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!plan\_pub\_@{plan\_pub\_}}
+\index{plan\_pub\_@{plan\_pub\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{plan\_pub\_}{plan\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher navfn\+::\+Navfn\+ROS\+::plan\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a36ba1f9fa50ad74e2c41a8c93f9b74e0}\label{classnavfn_1_1_navfn_r_o_s_a36ba1f9fa50ad74e2c41a8c93f9b74e0}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!planner\_@{planner\_}}
+\index{planner\_@{planner\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{planner\_}{planner\_}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classnavfn_1_1_nav_fn}{Nav\+Fn}}$>$ navfn\+::\+Navfn\+ROS\+::planner\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a27fe9f639f54d99432f43064708091aa}\label{classnavfn_1_1_navfn_r_o_s_a27fe9f639f54d99432f43064708091aa}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!planner\_window\_x\_@{planner\_window\_x\_}}
+\index{planner\_window\_x\_@{planner\_window\_x\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{planner\_window\_x\_}{planner\_window\_x\_}}
+{\footnotesize\ttfamily double navfn\+::\+Navfn\+ROS\+::planner\+\_\+window\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a86579ced0c7b4b3e4bf61312af5b241c}\label{classnavfn_1_1_navfn_r_o_s_a86579ced0c7b4b3e4bf61312af5b241c}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!planner\_window\_y\_@{planner\_window\_y\_}}
+\index{planner\_window\_y\_@{planner\_window\_y\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{planner\_window\_y\_}{planner\_window\_y\_}}
+{\footnotesize\ttfamily double navfn\+::\+Navfn\+ROS\+::planner\+\_\+window\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a2fa70e7aeb1abdcbcd0787a87d11c464}\label{classnavfn_1_1_navfn_r_o_s_a2fa70e7aeb1abdcbcd0787a87d11c464}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!potarr\_pub\_@{potarr\_pub\_}}
+\index{potarr\_pub\_@{potarr\_pub\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{potarr\_pub\_}{potarr\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher navfn\+::\+Navfn\+ROS\+::potarr\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_r_o_s_a17cf4a3a4d61adfc9276cc2ef7cc5f4d}\label{classnavfn_1_1_navfn_r_o_s_a17cf4a3a4d61adfc9276cc2ef7cc5f4d}} 
+\index{navfn::NavfnROS@{navfn::NavfnROS}!visualize\_potential\_@{visualize\_potential\_}}
+\index{visualize\_potential\_@{visualize\_potential\_}!navfn::NavfnROS@{navfn::NavfnROS}}
+\doxysubsubsection{\texorpdfstring{visualize\_potential\_}{visualize\_potential\_}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+ROS\+::visualize\+\_\+potential\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+navfn/include/navfn/\mbox{\hyperlink{navfn__ros_8h}{navfn\+\_\+ros.\+h}}\item 
+navfn/src/\mbox{\hyperlink{navfn__ros_8cpp}{navfn\+\_\+ros.\+cpp}}\end{DoxyCompactItemize}

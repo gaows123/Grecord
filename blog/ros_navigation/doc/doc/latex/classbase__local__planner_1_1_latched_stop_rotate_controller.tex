@@ -1,0 +1,248 @@
+\hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller}{}\doxysection{base\+\_\+local\+\_\+planner\+::Latched\+Stop\+Rotate\+Controller类 参考}
+\label{classbase__local__planner_1_1_latched_stop_rotate_controller}\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+
+
+{\ttfamily \#include $<$latched\+\_\+stop\+\_\+rotate\+\_\+controller.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a217e37ce23f57c28f157d2287d9ad02a}{Latched\+Stop\+Rotate\+Controller}} (const std\+::string \&name=\char`\"{}\char`\"{})
+\item 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a11a816ca2255215d346a5ea56e91edad}{$\sim$\+Latched\+Stop\+Rotate\+Controller}} ()
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3}{is\+Position\+Reached}} (\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{Local\+Planner\+Util}} $\ast$planner\+\_\+util, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8}{is\+Goal\+Reached}} (\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{Local\+Planner\+Util}} $\ast$planner\+\_\+util, \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{Odometry\+Helper\+Ros}} \&odom\+\_\+helper, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b}{reset\+Latching}} ()
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75}{stop\+With\+Acc\+Limits}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel, Eigen\+::\+Vector3f acc\+\_\+lim, double sim\+\_\+period, boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$ obstacle\+\_\+check)
+\begin{DoxyCompactList}\small\item\em 停止机器人同时考虑加速度的限制 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda}{rotate\+To\+Goal}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel, double goal\+\_\+th, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel, Eigen\+::\+Vector3f acc\+\_\+lim, double sim\+\_\+period, \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} \&limits, boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$ obstacle\+\_\+check)
+\begin{DoxyCompactList}\small\item\em Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be}{compute\+Velocity\+Commands\+Stop\+Rotate}} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel, Eigen\+::\+Vector3f acc\+\_\+lim, double sim\+\_\+period, \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{Local\+Planner\+Util}} $\ast$planner\+\_\+util, \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{Odometry\+Helper\+Ros}} \&odom\+\_\+helper, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$ obstacle\+\_\+check)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18}{sign}} (double x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_adfd4e505101739501cf59d1a7129ced4}{latch\+\_\+xy\+\_\+goal\+\_\+tolerance\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_a7a965f0ef85f1103ad80b6bbfc0f2b1b}{xy\+\_\+tolerance\+\_\+latch\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller_afb20eb5fc414868654de760ad6666412}{rotating\+\_\+to\+\_\+goal\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a217e37ce23f57c28f157d2287d9ad02a}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a217e37ce23f57c28f157d2287d9ad02a}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!LatchedStopRotateController@{LatchedStopRotateController}}
+\index{LatchedStopRotateController@{LatchedStopRotateController}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{LatchedStopRotateController()}{LatchedStopRotateController()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::\+Latched\+Stop\+Rotate\+Controller (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a11a816ca2255215d346a5ea56e91edad}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a11a816ca2255215d346a5ea56e91edad}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!````~LatchedStopRotateController@{$\sim$LatchedStopRotateController}}
+\index{````~LatchedStopRotateController@{$\sim$LatchedStopRotateController}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{$\sim$LatchedStopRotateController()}{~LatchedStopRotateController()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::$\sim$\+Latched\+Stop\+Rotate\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!computeVelocityCommandsStopRotate@{computeVelocityCommandsStopRotate}}
+\index{computeVelocityCommandsStopRotate@{computeVelocityCommandsStopRotate}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommandsStopRotate()}{computeVelocityCommandsStopRotate()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::compute\+Velocity\+Commands\+Stop\+Rotate (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel,  }\item[{Eigen\+::\+Vector3f}]{acc\+\_\+lim,  }\item[{double}]{sim\+\_\+period,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{Local\+Planner\+Util}} $\ast$}]{planner\+\_\+util,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{Odometry\+Helper\+Ros}} \&}]{odom\+\_\+helper,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$}]{obstacle\+\_\+check }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!isGoalReached@{isGoalReached}}
+\index{isGoalReached@{isGoalReached}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{isGoalReached()}{isGoalReached()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::is\+Goal\+Reached (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{Local\+Planner\+Util}} $\ast$}]{planner\+\_\+util,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{Odometry\+Helper\+Ros}} \&}]{odom\+\_\+helper,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose }\end{DoxyParamCaption})}
+
+returns true if we have passed the goal position and have reached goal orientation. Meaning we might have overshot on the position beyond tolerance, yet still return true. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!isPositionReached@{isPositionReached}}
+\index{isPositionReached@{isPositionReached}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{isPositionReached()}{isPositionReached()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::is\+Position\+Reached (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{Local\+Planner\+Util}} $\ast$}]{planner\+\_\+util,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose }\end{DoxyParamCaption})}
+
+returns true if we have passed the goal position. Meaning we might have overshot on the position beyond tolerance, yet still return true. Also goal orientation might not yet be true 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!resetLatching@{resetLatching}}
+\index{resetLatching@{resetLatching}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{resetLatching()}{resetLatching()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::reset\+Latching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!rotateToGoal@{rotateToGoal}}
+\index{rotateToGoal@{rotateToGoal}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{rotateToGoal()}{rotateToGoal()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::rotate\+To\+Goal (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{robot\+\_\+vel,  }\item[{double}]{goal\+\_\+th,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel,  }\item[{Eigen\+::\+Vector3f}]{acc\+\_\+lim,  }\item[{double}]{sim\+\_\+period,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Limits}} \&}]{limits,  }\item[{boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$}]{obstacle\+\_\+check }\end{DoxyParamCaption})}
+
+
+
+Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & 机器人位置 \\
+\hline
+{\em robot\+\_\+vel} & 机器人速度 \\
+\hline
+{\em goal\+\_\+th} & 期望的朝向角度 \\
+\hline
+{\em cmd\+\_\+vel} & 下发速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True \+: 找到有效路径 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!sign@{sign}}
+\index{sign@{sign}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::sign (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!stopWithAccLimits@{stopWithAccLimits}}
+\index{stopWithAccLimits@{stopWithAccLimits}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{stopWithAccLimits()}{stopWithAccLimits()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::stop\+With\+Acc\+Limits (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{robot\+\_\+vel,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel,  }\item[{Eigen\+::\+Vector3f}]{acc\+\_\+lim,  }\item[{double}]{sim\+\_\+period,  }\item[{boost\+::function$<$ bool(Eigen\+::\+Vector3f pos, Eigen\+::\+Vector3f vel, Eigen\+::\+Vector3f vel\+\_\+samples)$>$}]{obstacle\+\_\+check }\end{DoxyParamCaption})}
+
+
+
+停止机器人同时考虑加速度的限制 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & 机器人位姿 \\
+\hline
+{\em robot\+\_\+vel} & 机器人速度 \\
+\hline
+{\em cmd\+\_\+vel} & 下发速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True \+: 找到有效路径 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_adfd4e505101739501cf59d1a7129ced4}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_adfd4e505101739501cf59d1a7129ced4}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!latch\_xy\_goal\_tolerance\_@{latch\_xy\_goal\_tolerance\_}}
+\index{latch\_xy\_goal\_tolerance\_@{latch\_xy\_goal\_tolerance\_}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{latch\_xy\_goal\_tolerance\_}{latch\_xy\_goal\_tolerance\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::latch\+\_\+xy\+\_\+goal\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_afb20eb5fc414868654de760ad6666412}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_afb20eb5fc414868654de760ad6666412}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!rotating\_to\_goal\_@{rotating\_to\_goal\_}}
+\index{rotating\_to\_goal\_@{rotating\_to\_goal\_}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{rotating\_to\_goal\_}{rotating\_to\_goal\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::rotating\+\_\+to\+\_\+goal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_latched_stop_rotate_controller_a7a965f0ef85f1103ad80b6bbfc0f2b1b}\label{classbase__local__planner_1_1_latched_stop_rotate_controller_a7a965f0ef85f1103ad80b6bbfc0f2b1b}} 
+\index{base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}!xy\_tolerance\_latch\_@{xy\_tolerance\_latch\_}}
+\index{xy\_tolerance\_latch\_@{xy\_tolerance\_latch\_}!base\_local\_planner::LatchedStopRotateController@{base\_local\_planner::LatchedStopRotateController}}
+\doxysubsubsection{\texorpdfstring{xy\_tolerance\_latch\_}{xy\_tolerance\_latch\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller\+::xy\+\_\+tolerance\+\_\+latch\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{latched__stop__rotate__controller_8h}{latched\+\_\+stop\+\_\+rotate\+\_\+controller.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{latched__stop__rotate__controller_8cpp}{latched\+\_\+stop\+\_\+rotate\+\_\+controller.\+cpp}}\end{DoxyCompactItemize}

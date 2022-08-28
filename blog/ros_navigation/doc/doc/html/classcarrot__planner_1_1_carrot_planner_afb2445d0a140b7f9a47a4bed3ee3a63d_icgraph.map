@@ -1,0 +1,4 @@
+<map id="carrot_planner::CarrotPlanner::footprintCost" name="carrot_planner::CarrotPlanner::footprintCost">
+<area shape="rect" id="node1" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node2" href="$classcarrot__planner_1_1_carrot_planner.html#a59c64d61f2e992d08b32438116614ab5" title="Given a goal pose in the world, compute a plan" alt="" coords="5,5,196,47"/>
+</map>

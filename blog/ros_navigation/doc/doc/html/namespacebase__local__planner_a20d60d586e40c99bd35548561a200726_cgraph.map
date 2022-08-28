@@ -1,0 +1,4 @@
+<map id="base_local_planner::TEST" name="base_local_planner::TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,139,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid.html#a3fd22c28f3c45c9336ec7f1ecb33d423" title="Returns a 1D index into the MapCell array for a 2D index" alt="" coords="187,5,324,47"/>
+</map>

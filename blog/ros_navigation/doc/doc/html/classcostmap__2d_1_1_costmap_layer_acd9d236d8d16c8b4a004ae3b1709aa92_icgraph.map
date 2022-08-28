@@ -1,0 +1,5 @@
+<map id="costmap_2d::CostmapLayer::updateWithMax" name="costmap_2d::CostmapLayer::updateWithMax">
+<area shape="rect" id="node1" title=" " alt="" coords="239,39,424,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a02fbdf76db69ddc03c400b2c00e903ee" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_static_layer.html#a9ebed8f042ee945073031e51f82229f1" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="15,71,181,112"/>
+</map>

@@ -1,0 +1,198 @@
+\hypertarget{testing__helper_8h}{}\doxysection{costmap\+\_\+2d/include/costmap\+\_\+2d/testing\+\_\+helper.h 文件参考}
+\label{testing__helper_8h}\index{costmap\_2d/include/costmap\_2d/testing\_helper.h@{costmap\_2d/include/costmap\_2d/testing\_helper.h}}
+{\ttfamily \#include $<$costmap\+\_\+2d/cost\+\_\+values.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/static\+\_\+layer.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/obstacle\+\_\+layer.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/inflation\+\_\+layer.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/point\+\_\+cloud2\+\_\+iterator.\+h$>$}\newline
+testing\+\_\+helper.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{testing__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d}{MAX\+\_\+Z}} (1.\+0)
+\item 
+char \mbox{\hyperlink{testing__helper_8h_ab67d48c3e97782150aac66598f768972}{printable\+Cost}} (unsigned char cost)
+\item 
+void \mbox{\hyperlink{testing__helper_8h_a31015063213528e542a953d8470fc6b5}{print\+Map}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap)
+\item 
+unsigned int \mbox{\hyperlink{testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8}{count\+Values}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap, unsigned char value, bool equal=true)
+\item 
+void \mbox{\hyperlink{testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806}{add\+Static\+Layer}} (\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\+\_\+2d\+::\+Layered\+Costmap}} \&layers, tf2\+\_\+ros\+::\+Buffer \&tf)
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} $\ast$ \mbox{\hyperlink{testing__helper_8h_afd328050d3b7af24194fabf58454f91a}{add\+Obstacle\+Layer}} (\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\+\_\+2d\+::\+Layered\+Costmap}} \&layers, tf2\+\_\+ros\+::\+Buffer \&tf)
+\item 
+void \mbox{\hyperlink{testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9}{add\+Observation}} (\mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} $\ast$olayer, double x, double y, double z=0.\+0, double ox=0.\+0, double oy=0.\+0, double oz=\mbox{\hyperlink{module__tests_8cpp_a80945e4c9ec06fccdb5342cacfea6e3d}{MAX\+\_\+Z}})
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{costmap\+\_\+2d\+::\+Inflation\+Layer}} $\ast$ \mbox{\hyperlink{testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81}{add\+Inflation\+Layer}} (\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\+\_\+2d\+::\+Layered\+Costmap}} \&layers, tf2\+\_\+ros\+::\+Buffer \&tf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81}\label{testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81}} 
+\index{testing\_helper.h@{testing\_helper.h}!addInflationLayer@{addInflationLayer}}
+\index{addInflationLayer@{addInflationLayer}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{addInflationLayer()}{addInflationLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{costmap\+\_\+2d\+::\+Inflation\+Layer}} $\ast$ add\+Inflation\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\+\_\+2d\+::\+Layered\+Costmap}} \&}]{layers,  }\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9}\label{testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9}} 
+\index{testing\_helper.h@{testing\_helper.h}!addObservation@{addObservation}}
+\index{addObservation@{addObservation}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{addObservation()}{addObservation()}}
+{\footnotesize\ttfamily void add\+Observation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} $\ast$}]{olayer,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z = {\ttfamily 0.0},  }\item[{double}]{ox = {\ttfamily 0.0},  }\item[{double}]{oy = {\ttfamily 0.0},  }\item[{double}]{oz = {\ttfamily \mbox{\hyperlink{module__tests_8cpp_a80945e4c9ec06fccdb5342cacfea6e3d}{MAX\+\_\+Z}}} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{testing__helper_8h_afd328050d3b7af24194fabf58454f91a}\label{testing__helper_8h_afd328050d3b7af24194fabf58454f91a}} 
+\index{testing\_helper.h@{testing\_helper.h}!addObstacleLayer@{addObstacleLayer}}
+\index{addObstacleLayer@{addObstacleLayer}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{addObstacleLayer()}{addObstacleLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} $\ast$ add\+Obstacle\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\+\_\+2d\+::\+Layered\+Costmap}} \&}]{layers,  }\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h_afd328050d3b7af24194fabf58454f91a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{testing__helper_8h_afd328050d3b7af24194fabf58454f91a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806}\label{testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806}} 
+\index{testing\_helper.h@{testing\_helper.h}!addStaticLayer@{addStaticLayer}}
+\index{addStaticLayer@{addStaticLayer}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{addStaticLayer()}{addStaticLayer()}}
+{\footnotesize\ttfamily void add\+Static\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\+\_\+2d\+::\+Layered\+Costmap}} \&}]{layers,  }\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8}\label{testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8}} 
+\index{testing\_helper.h@{testing\_helper.h}!countValues@{countValues}}
+\index{countValues@{countValues}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{countValues()}{countValues()}}
+{\footnotesize\ttfamily unsigned int count\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{costmap,  }\item[{unsigned char}]{value,  }\item[{bool}]{equal = {\ttfamily true} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{testing__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d}\label{testing__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d}} 
+\index{testing\_helper.h@{testing\_helper.h}!MAX\_Z@{MAX\_Z}}
+\index{MAX\_Z@{MAX\_Z}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_Z()}{MAX\_Z()}}
+{\footnotesize\ttfamily const double MAX\+\_\+Z (\begin{DoxyParamCaption}\item[{1.}]{0 }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{testing__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{testing__helper_8h_ab67d48c3e97782150aac66598f768972}\label{testing__helper_8h_ab67d48c3e97782150aac66598f768972}} 
+\index{testing\_helper.h@{testing\_helper.h}!printableCost@{printableCost}}
+\index{printableCost@{printableCost}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{printableCost()}{printableCost()}}
+{\footnotesize\ttfamily char printable\+Cost (\begin{DoxyParamCaption}\item[{unsigned char}]{cost }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{testing__helper_8h_a31015063213528e542a953d8470fc6b5}\label{testing__helper_8h_a31015063213528e542a953d8470fc6b5}} 
+\index{testing\_helper.h@{testing\_helper.h}!printMap@{printMap}}
+\index{printMap@{printMap}!testing\_helper.h@{testing\_helper.h}}
+\doxysubsubsection{\texorpdfstring{printMap()}{printMap()}}
+{\footnotesize\ttfamily void print\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{costmap }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testing__helper_8h_a31015063213528e542a953d8470fc6b5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{testing__helper_8h_a31015063213528e542a953d8470fc6b5_icgraph}
+\end{center}
+\end{figure}

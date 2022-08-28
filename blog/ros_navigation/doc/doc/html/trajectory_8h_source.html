@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner/include/base_local_planner/trajectory.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_fc4ccca1cedd5ad98a9c5935ebe74b0e.html">base_local_planner</a></li><li class="navelem"><a class="el" href="dir_fb1526ef91c927002057b842ea75b919.html">include</a></li><li class="navelem"><a class="el" href="dir_022ab8b8b2793d2a4d98ca8ea9cb4917.html">base_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">trajectory.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="trajectory_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  are met:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *   * Neither the name of the Willow Garage nor the names of its</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef TRAJECTORY_ROLLOUT_TRAJECTORY_H_</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define TRAJECTORY_ROLLOUT_TRAJECTORY_H_</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebase__local__planner.html">base_local_planner</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_trajectory.html">   44</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#a38089bc04dc5c68da14083dacb4d8bb7">Trajectory</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#a38089bc04dc5c68da14083dacb4d8bb7">Trajectory</a>(<span class="keywordtype">double</span> xv, <span class="keywordtype">double</span> yv, <span class="keywordtype">double</span> thetav, <span class="keywordtype">double</span> time_delta, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_pts);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_trajectory.html#a9a93bfe9bb3c3b1d65b3627ce7cbae33">   60</a></span>      <span class="keywordtype">double</span> <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#a228fb59ff438692ebedddb6899c8d957">xv_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#abb4fc9493587f61f888f2cdfec62b89a">yv_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#a9a93bfe9bb3c3b1d65b3627ce7cbae33">thetav_</a>; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_trajectory.html#ab4d255b7614df1a8f381d4e7eb44d385">   62</a></span>      <span class="keywordtype">double</span> <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#ab4d255b7614df1a8f381d4e7eb44d385">cost_</a>; </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_trajectory.html#a48b175bc769a70d1182a48996d068c25">   64</a></span>      <span class="keywordtype">double</span> <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#a48b175bc769a70d1182a48996d068c25">time_delta_</a>; </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14">getPoint</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index, <span class="keywordtype">double</span>&amp; x, <span class="keywordtype">double</span>&amp; y, <span class="keywordtype">double</span>&amp; th) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#a36da2c9c1cc3e13facc6bc258d2e91e2">setPoint</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> th);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204">addPoint</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> th);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#a7247858ecf5432a6557d8daf55e3e3f5">getEndpoint</a>(<span class="keywordtype">double</span>&amp; x, <span class="keywordtype">double</span>&amp; y, <span class="keywordtype">double</span>&amp; th) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3">resetPoints</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5">getPointsSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_trajectory.html#aceba1ac2da65c147f18120eb18c2cb50">  112</a></span>      std::vector&lt;double&gt; <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#aceba1ac2da65c147f18120eb18c2cb50">x_pts_</a>; </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_trajectory.html#aeb5297a196ec8d7190278a8aa9a1289a">  113</a></span>      std::vector&lt;double&gt; <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#aeb5297a196ec8d7190278a8aa9a1289a">y_pts_</a>; </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_trajectory.html#aeb1b21476d54b700d52ef914ab101476">  114</a></span>      std::vector&lt;double&gt; <a class="code hl_variable" href="classbase__local__planner_1_1_trajectory.html#aeb1b21476d54b700d52ef914ab101476">th_pts_</a>; </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  };</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html">base_local_planner::Trajectory</a></div><div class="ttdoc">Holds a trajectory generated by considering an x, y, and theta velocity</div><div class="ttdef"><b>Definition:</b> trajectory.h:44</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a228fb59ff438692ebedddb6899c8d957"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a228fb59ff438692ebedddb6899c8d957">base_local_planner::Trajectory::xv_</a></div><div class="ttdeci">double xv_</div><div class="ttdef"><b>Definition:</b> trajectory.h:60</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a35c05c071ce0f8e54c18f0f8816315d3"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3">base_local_planner::Trajectory::resetPoints</a></div><div class="ttdeci">void resetPoints()</div><div class="ttdoc">Clear the trajectory's points</div><div class="ttdef"><b>Definition:</b> trajectory.cpp:65</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a36da2c9c1cc3e13facc6bc258d2e91e2"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a36da2c9c1cc3e13facc6bc258d2e91e2">base_local_planner::Trajectory::setPoint</a></div><div class="ttdeci">void setPoint(unsigned int index, double x, double y, double th)</div><div class="ttdoc">Set a point within the trajectory 设置局部轨迹的某个点</div><div class="ttdef"><b>Definition:</b> trajectory.cpp:53</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a38089bc04dc5c68da14083dacb4d8bb7"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a38089bc04dc5c68da14083dacb4d8bb7">base_local_planner::Trajectory::Trajectory</a></div><div class="ttdeci">Trajectory()</div><div class="ttdoc">Default constructor</div><div class="ttdef"><b>Definition:</b> trajectory.cpp:37</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a48b175bc769a70d1182a48996d068c25"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a48b175bc769a70d1182a48996d068c25">base_local_planner::Trajectory::time_delta_</a></div><div class="ttdeci">double time_delta_</div><div class="ttdoc">The time gap between points</div><div class="ttdef"><b>Definition:</b> trajectory.h:64</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a7247858ecf5432a6557d8daf55e3e3f5"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a7247858ecf5432a6557d8daf55e3e3f5">base_local_planner::Trajectory::getEndpoint</a></div><div class="ttdeci">void getEndpoint(double &amp;x, double &amp;y, double &amp;th) const</div><div class="ttdoc">Get the last point of the trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.cpp:71</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a825364365ad68291ce701c0e97bef3d5"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5">base_local_planner::Trajectory::getPointsSize</a></div><div class="ttdeci">unsigned int getPointsSize() const</div><div class="ttdoc">Return the number of points in the trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.cpp:77</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a94ff45de82ae4417fdbb1158c5c2b204"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204">base_local_planner::Trajectory::addPoint</a></div><div class="ttdeci">void addPoint(double x, double y, double th)</div><div class="ttdoc">Add a point to the end of a trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.cpp:59</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_a9a93bfe9bb3c3b1d65b3627ce7cbae33"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#a9a93bfe9bb3c3b1d65b3627ce7cbae33">base_local_planner::Trajectory::thetav_</a></div><div class="ttdeci">double thetav_</div><div class="ttdoc">The x, y, and theta velocities of the trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.h:60</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_ab4d255b7614df1a8f381d4e7eb44d385"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#ab4d255b7614df1a8f381d4e7eb44d385">base_local_planner::Trajectory::cost_</a></div><div class="ttdeci">double cost_</div><div class="ttdoc">The cost/score of the trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.h:62</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_abb4fc9493587f61f888f2cdfec62b89a"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#abb4fc9493587f61f888f2cdfec62b89a">base_local_planner::Trajectory::yv_</a></div><div class="ttdeci">double yv_</div><div class="ttdef"><b>Definition:</b> trajectory.h:60</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_aceba1ac2da65c147f18120eb18c2cb50"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#aceba1ac2da65c147f18120eb18c2cb50">base_local_planner::Trajectory::x_pts_</a></div><div class="ttdeci">std::vector&lt; double &gt; x_pts_</div><div class="ttdoc">The x points in the trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.h:112</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_aeb1b21476d54b700d52ef914ab101476"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#aeb1b21476d54b700d52ef914ab101476">base_local_planner::Trajectory::th_pts_</a></div><div class="ttdeci">std::vector&lt; double &gt; th_pts_</div><div class="ttdoc">The theta points in the trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.h:114</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_aeb5297a196ec8d7190278a8aa9a1289a"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#aeb5297a196ec8d7190278a8aa9a1289a">base_local_planner::Trajectory::y_pts_</a></div><div class="ttdeci">std::vector&lt; double &gt; y_pts_</div><div class="ttdoc">The y points in the trajectory</div><div class="ttdef"><b>Definition:</b> trajectory.h:113</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html_aefeea7b81d210b228cfe041938be6a14"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14">base_local_planner::Trajectory::getPoint</a></div><div class="ttdeci">void getPoint(unsigned int index, double &amp;x, double &amp;y, double &amp;th) const</div><div class="ttdoc">Get a point within the trajectory 获取局部轨迹某个点的信息</div><div class="ttdef"><b>Definition:</b> trajectory.cpp:47</div></div>
+<div class="ttc" id="anamespacebase__local__planner_html"><div class="ttname"><a href="namespacebase__local__planner.html">base_local_planner</a></div><div class="ttdef"><b>Definition:</b> costmap_model.h:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

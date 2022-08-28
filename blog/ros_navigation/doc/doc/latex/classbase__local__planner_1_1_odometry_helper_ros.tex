@@ -1,0 +1,213 @@
+\hypertarget{classbase__local__planner_1_1_odometry_helper_ros}{}\doxysection{base\+\_\+local\+\_\+planner\+::Odometry\+Helper\+Ros类 参考}
+\label{classbase__local__planner_1_1_odometry_helper_ros}\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+
+
+{\ttfamily \#include $<$odometry\+\_\+helper\+\_\+ros.\+h$>$}
+
+
+
+base\+\_\+local\+\_\+planner\+::Odometry\+Helper\+Ros 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classbase__local__planner_1_1_odometry_helper_ros__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_af6ea30bc773864015dd3d243dc375d0b}{Odometry\+Helper\+Ros}} (std\+::string odom\+\_\+topic=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a03cc609ab67e45a06d58f9829c304554}{$\sim$\+Odometry\+Helper\+Ros}} ()
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a0eeb49d061e05d16d43cac5196552c01}{odom\+Callback}} (const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em Callback for receiving odometry data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ada88271c5b81d4a97b81eb51de64f67c}{get\+Odom}} (nav\+\_\+msgs\+::\+Odometry \&base\+\_\+odom)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ab70a70a7a3f3d8e6788e6e1f0503a717}{get\+Robot\+Vel}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a3405fc02265edac001b3f4c8802c983d}{set\+Odom\+Topic}} (std\+::string odom\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Set the odometry topic. This overrides what was set in the constructor, if anything. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ab83cff19dc91ac7f8d3b3bb56c568fe2}{get\+Odom\+Topic}} () const
+\begin{DoxyCompactList}\small\item\em Return the current odometry topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a3de27ebd28e3293036c35b642e563496}{odom\+\_\+topic\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_a0a00a1221aabf80ee58ad253ec85c84e}{odom\+\_\+sub\+\_\+}}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_aaf14228e89f9367ea460050b50d1f7e4}{base\+\_\+odom\+\_\+}}
+\item 
+boost\+::mutex \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_adc6244c7f47d59891739380647b18e09}{odom\+\_\+mutex\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros_ab30dbe21e21be0195790dba807e3ecf4}{frame\+\_\+id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The frame\+\_\+id associated this data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_af6ea30bc773864015dd3d243dc375d0b}\label{classbase__local__planner_1_1_odometry_helper_ros_af6ea30bc773864015dd3d243dc375d0b}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!OdometryHelperRos@{OdometryHelperRos}}
+\index{OdometryHelperRos@{OdometryHelperRos}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{OdometryHelperRos()}{OdometryHelperRos()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::\+Odometry\+Helper\+Ros (\begin{DoxyParamCaption}\item[{std\+::string}]{odom\+\_\+topic = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{参数}
+{\em odom\+\_\+topic} & The topic on which to subscribe to Odometry messages. If the empty string is given (the default), no subscription is done. \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_odometry_helper_ros_af6ea30bc773864015dd3d243dc375d0b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_a03cc609ab67e45a06d58f9829c304554}\label{classbase__local__planner_1_1_odometry_helper_ros_a03cc609ab67e45a06d58f9829c304554}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!````~OdometryHelperRos@{$\sim$OdometryHelperRos}}
+\index{````~OdometryHelperRos@{$\sim$OdometryHelperRos}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{$\sim$OdometryHelperRos()}{~OdometryHelperRos()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::$\sim$\+Odometry\+Helper\+Ros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_ada88271c5b81d4a97b81eb51de64f67c}\label{classbase__local__planner_1_1_odometry_helper_ros_ada88271c5b81d4a97b81eb51de64f67c}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!getOdom@{getOdom}}
+\index{getOdom@{getOdom}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{getOdom()}{getOdom()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::get\+Odom (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Odometry \&}]{base\+\_\+odom }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_odometry_helper_ros_ada88271c5b81d4a97b81eb51de64f67c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_ab83cff19dc91ac7f8d3b3bb56c568fe2}\label{classbase__local__planner_1_1_odometry_helper_ros_ab83cff19dc91ac7f8d3b3bb56c568fe2}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!getOdomTopic@{getOdomTopic}}
+\index{getOdomTopic@{getOdomTopic}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{getOdomTopic()}{getOdomTopic()}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::get\+Odom\+Topic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the current odometry topic. 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_ab70a70a7a3f3d8e6788e6e1f0503a717}\label{classbase__local__planner_1_1_odometry_helper_ros_ab70a70a7a3f3d8e6788e6e1f0503a717}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!getRobotVel@{getRobotVel}}
+\index{getRobotVel@{getRobotVel}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{getRobotVel()}{getRobotVel()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::get\+Robot\+Vel (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{robot\+\_\+vel }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_odometry_helper_ros_ab70a70a7a3f3d8e6788e6e1f0503a717_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_a0eeb49d061e05d16d43cac5196552c01}\label{classbase__local__planner_1_1_odometry_helper_ros_a0eeb49d061e05d16d43cac5196552c01}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!odomCallback@{odomCallback}}
+\index{odomCallback@{odomCallback}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{odomCallback()}{odomCallback()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::odom\+Callback (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Callback for receiving odometry data 
+
+
+\begin{DoxyParams}{参数}
+{\em msg} & An Odometry message \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_odometry_helper_ros_a0eeb49d061e05d16d43cac5196552c01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_a3405fc02265edac001b3f4c8802c983d}\label{classbase__local__planner_1_1_odometry_helper_ros_a3405fc02265edac001b3f4c8802c983d}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!setOdomTopic@{setOdomTopic}}
+\index{setOdomTopic@{setOdomTopic}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{setOdomTopic()}{setOdomTopic()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::set\+Odom\+Topic (\begin{DoxyParamCaption}\item[{std\+::string}]{odom\+\_\+topic }\end{DoxyParamCaption})}
+
+
+
+Set the odometry topic. This overrides what was set in the constructor, if anything. 
+
+This unsubscribes from the old topic (if any) and subscribes to the new one (if any).
+
+If odom\+\_\+topic is the empty string, this just unsubscribes from the previous topic. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classbase__local__planner_1_1_odometry_helper_ros_a3405fc02265edac001b3f4c8802c983d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_odometry_helper_ros_a3405fc02265edac001b3f4c8802c983d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_aaf14228e89f9367ea460050b50d1f7e4}\label{classbase__local__planner_1_1_odometry_helper_ros_aaf14228e89f9367ea460050b50d1f7e4}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!base\_odom\_@{base\_odom\_}}
+\index{base\_odom\_@{base\_odom\_}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{base\_odom\_}{base\_odom\_}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::base\+\_\+odom\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_ab30dbe21e21be0195790dba807e3ecf4}\label{classbase__local__planner_1_1_odometry_helper_ros_ab30dbe21e21be0195790dba807e3ecf4}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!frame\_id\_@{frame\_id\_}}
+\index{frame\_id\_@{frame\_id\_}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{frame\_id\_}{frame\_id\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The frame\+\_\+id associated this data 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_adc6244c7f47d59891739380647b18e09}\label{classbase__local__planner_1_1_odometry_helper_ros_adc6244c7f47d59891739380647b18e09}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!odom\_mutex\_@{odom\_mutex\_}}
+\index{odom\_mutex\_@{odom\_mutex\_}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{odom\_mutex\_}{odom\_mutex\_}}
+{\footnotesize\ttfamily boost\+::mutex base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::odom\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_a0a00a1221aabf80ee58ad253ec85c84e}\label{classbase__local__planner_1_1_odometry_helper_ros_a0a00a1221aabf80ee58ad253ec85c84e}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!odom\_sub\_@{odom\_sub\_}}
+\index{odom\_sub\_@{odom\_sub\_}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{odom\_sub\_}{odom\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::odom\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_odometry_helper_ros_a3de27ebd28e3293036c35b642e563496}\label{classbase__local__planner_1_1_odometry_helper_ros_a3de27ebd28e3293036c35b642e563496}} 
+\index{base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}!odom\_topic\_@{odom\_topic\_}}
+\index{odom\_topic\_@{odom\_topic\_}!base\_local\_planner::OdometryHelperRos@{base\_local\_planner::OdometryHelperRos}}
+\doxysubsubsection{\texorpdfstring{odom\_topic\_}{odom\_topic\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros\+::odom\+\_\+topic\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{odometry__helper__ros_8h}{odometry\+\_\+helper\+\_\+ros.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{odometry__helper__ros_8cpp}{odometry\+\_\+helper\+\_\+ros.\+cpp}}\end{DoxyCompactItemize}

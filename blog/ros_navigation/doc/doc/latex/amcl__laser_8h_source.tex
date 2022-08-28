@@ -1,0 +1,160 @@
+\hypertarget{amcl__laser_8h_source}{}\doxysection{amcl\+\_\+laser.\+h}
+\label{amcl__laser_8h_source}\index{amcl/include/amcl/sensors/amcl\_laser.h@{amcl/include/amcl/sensors/amcl\_laser.h}}
+\mbox{\hyperlink{amcl__laser_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  Player -\/ One Hell of a Robot Server}}
+\DoxyCodeLine{3 \textcolor{comment}{ *  Copyright (C) 2000  Brian Gerkey et al.}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  This library is free software; you can redistribute it and/or}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  modify it under the terms of the GNU Lesser General Public}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  License as published by the Free Software Foundation; either}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  version 2.1 of the License, or (at your option) any later version.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  This library is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU}}
+\DoxyCodeLine{13 \textcolor{comment}{ *  Lesser General Public License for more details.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *}}
+\DoxyCodeLine{15 \textcolor{comment}{ *  You should have received a copy of the GNU Lesser General Public}}
+\DoxyCodeLine{16 \textcolor{comment}{ *  License along with this library; if not, write to the Free Software}}
+\DoxyCodeLine{17 \textcolor{comment}{ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-\/1307  USA}}
+\DoxyCodeLine{18 \textcolor{comment}{ *}}
+\DoxyCodeLine{19 \textcolor{comment}{ */}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{// Desc: LASER sensor model for AMCL}}
+\DoxyCodeLine{23 \textcolor{comment}{// Author: Andrew Howard}}
+\DoxyCodeLine{24 \textcolor{comment}{// Date: 17 Aug 2003}}
+\DoxyCodeLine{25 \textcolor{comment}{// CVS: \$Id: amcl\_laser.h 6443 2008-\/05-\/15 19:46:11Z gerkey \$}}
+\DoxyCodeLine{26 \textcolor{comment}{//}}
+\DoxyCodeLine{28 \textcolor{comment}{}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#ifndef AMCL\_LASER\_H}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define AMCL\_LASER\_H}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{amcl__sensor_8h}{amcl\_sensor.h}}"{}}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include "{}../map/map.h"{}}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceamcl}{amcl}}}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40   \mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9ca19139993408699dbfa812377f68e6c6a}{LASER\_MODEL\_BEAM}},}
+\DoxyCodeLine{41   \mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9ca243a504dda2beb7cb966498d32551f74}{LASER\_MODEL\_LIKELIHOOD\_FIELD}},}
+\DoxyCodeLine{42   \mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9ca23f70bca37b4063c08777f4b4733d5b0}{LASER\_MODEL\_LIKELIHOOD\_FIELD\_PROB}}}
+\DoxyCodeLine{43 \} \mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9c}{laser\_model\_t}};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{// Laser sensor data}}
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaserData}} : \textcolor{keyword}{public} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   \textcolor{keyword}{public}:}
+\DoxyCodeLine{49     \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data_a877b2a1f2b05df754a3da8f9eebfb6e6}{AMCLLaserData}} () \{\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data_ac7869f4796f658075c6d9d3241f6bbd6}{ranges}}=NULL;\};}
+\DoxyCodeLine{50     \textcolor{keyword}{virtual} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data_acf14476c956b451ef4bddbe4b0ee4717}{\string~AMCLLaserData}}() \{\textcolor{keyword}{delete} [] \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data_ac7869f4796f658075c6d9d3241f6bbd6}{ranges}};\};}
+\DoxyCodeLine{51   \textcolor{comment}{// Laser range data (range, bearing tuples)}}
+\DoxyCodeLine{52   \textcolor{keyword}{public}: \textcolor{keywordtype}{int} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data_ae6968554551b9141cd7c770101f54c7f}{range\_count}};}
+\DoxyCodeLine{53   \textcolor{keyword}{public}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data_a139b6f6199380347fd9101d809f2f3cf}{range\_max}};}
+\DoxyCodeLine{54   \textcolor{keyword}{public}: double (*\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data_ac7869f4796f658075c6d9d3241f6bbd6}{ranges}})[2];}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{comment}{// Laseretric sensor model}}
+\DoxyCodeLine{59 \textcolor{keyword}{class }\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser}{AMCLLaser}} : \textcolor{keyword}{public} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor}{AMCLSensor}}}
+\DoxyCodeLine{60 \{}
+\DoxyCodeLine{61   \textcolor{comment}{// Default constructor}}
+\DoxyCodeLine{62   \textcolor{keyword}{public}: \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a0d360f75989d1378130c7d6112093f99}{AMCLLaser}}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a835da7db1c326bf22bdfac480f757586}{max\_beams}}, \mbox{\hyperlink{structmap__t}{map\_t}}* \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a5bd2fca718a57e75ae943501ba6c39e9}{map}});}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a048db5ebf58d50b126e7c58cb0ee856c}{\string~AMCLLaser}}(); }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   \textcolor{keyword}{public}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e}{SetModelBeam}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\_hit}},}
+\DoxyCodeLine{67                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_aeb158fe1146ff61768e56c816d9b9a65}{z\_short}},}
+\DoxyCodeLine{68                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a8d238fa084dd954c6416a5b522d7c476}{z\_max}},}
+\DoxyCodeLine{69                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\_rand}},}
+\DoxyCodeLine{70                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\_hit}},}
+\DoxyCodeLine{71                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57f1c5ae05afe2446e8c18dc49fd7fde}{lambda\_short}},}
+\DoxyCodeLine{72                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ac057ee3f2684d7925b120455ca7fa4b9}{chi\_outlier}});}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{keyword}{public}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f}{SetModelLikelihoodField}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\_hit}},}
+\DoxyCodeLine{75                                        \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\_rand}},}
+\DoxyCodeLine{76                                        \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\_hit}},}
+\DoxyCodeLine{77                                        \textcolor{keywordtype}{double} max\_occ\_dist);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79   \textcolor{comment}{//a more probabilistically correct model -\/ also with the option to do beam skipping}}
+\DoxyCodeLine{80   \textcolor{keyword}{public}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09}{SetModelLikelihoodFieldProb}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\_hit}},}
+\DoxyCodeLine{81                        \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\_rand}},}
+\DoxyCodeLine{82                        \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\_hit}},}
+\DoxyCodeLine{83                        \textcolor{keywordtype}{double} max\_occ\_dist, }
+\DoxyCodeLine{84                        \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a136604601e713521c949eef56cea4bcb}{do\_beamskip}}, }
+\DoxyCodeLine{85                        \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a09096056f75e634eeb06bc788fbb4f32}{beam\_skip\_distance}}, }
+\DoxyCodeLine{86                        \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab8d9ad94c5815ee4a5614f7592d4842f}{beam\_skip\_threshold}}, }
+\DoxyCodeLine{87                        \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57e7d9451d88daec73966558117129eb}{beam\_skip\_error\_threshold}});}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \textcolor{comment}{// Update the filter based on the sensor model.  Returns true if the}}
+\DoxyCodeLine{90   \textcolor{comment}{// filter has been updated.}}
+\DoxyCodeLine{91   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7}{UpdateSensor}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}} *data);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93   \textcolor{comment}{// Set the laser's pose after construction}}
+\DoxyCodeLine{94   \textcolor{keyword}{public}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a6803650b65b0ece79767ee64490fa5e8}{SetLaserPose}}(\mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}}\& \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a53383765386d9aba71db8bef973a00b6}{laser\_pose}}) }
+\DoxyCodeLine{95           \{this-\/>laser\_pose = \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a53383765386d9aba71db8bef973a00b6}{laser\_pose}};\}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97   \textcolor{comment}{// Determine the probability for the given pose}}
+\DoxyCodeLine{98   \textcolor{keyword}{private}: \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35}{BeamModel}}(\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaserData}} *data, }
+\DoxyCodeLine{99                                    \mbox{\hyperlink{struct__pf__sample__set__t}{pf\_sample\_set\_t}}* set);}
+\DoxyCodeLine{100   \textcolor{comment}{// Determine the probability for the given pose}}
+\DoxyCodeLine{101   \textcolor{keyword}{private}: \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc}{LikelihoodFieldModel}}(\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaserData}} *data, }
+\DoxyCodeLine{102                                               \mbox{\hyperlink{struct__pf__sample__set__t}{pf\_sample\_set\_t}}* set);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104   \textcolor{comment}{// Determine the probability for the given pose -\/ more probablistic model }}
+\DoxyCodeLine{105   \textcolor{keyword}{private}: \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2}{LikelihoodFieldModelProb}}(\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaserData}} *data, }
+\DoxyCodeLine{106                          \mbox{\hyperlink{struct__pf__sample__set__t}{pf\_sample\_set\_t}}* set);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108   \textcolor{keyword}{private}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13}{reallocTempData}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ad00b22f35fbdcb2d4ea9574d0acdcbd1}{max\_samples}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_acd97aabb72e32f8b8f14c496168c2ecd}{max\_obs}});}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110   \textcolor{keyword}{private}: \mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9c}{laser\_model\_t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab8e5528c2b2eca4cd49fb8caebe4efeb}{model\_type}};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   \textcolor{comment}{// Current data timestamp}}
+\DoxyCodeLine{113   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_abf6949cb5201e9416de6a8da5bd392be}{time}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115   \textcolor{comment}{// The laser map}}
+\DoxyCodeLine{116   \textcolor{keyword}{private}: \mbox{\hyperlink{structmap__t}{map\_t}} *\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a5bd2fca718a57e75ae943501ba6c39e9}{map}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118   \textcolor{comment}{// Laser offset relative to robot}}
+\DoxyCodeLine{119   \textcolor{keyword}{private}: \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a53383765386d9aba71db8bef973a00b6}{laser\_pose}};}
+\DoxyCodeLine{120   }
+\DoxyCodeLine{121   \textcolor{comment}{// Max beams to consider}}
+\DoxyCodeLine{122   \textcolor{keyword}{private}: \textcolor{keywordtype}{int} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a835da7db1c326bf22bdfac480f757586}{max\_beams}};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124   \textcolor{comment}{// Beam skipping parameters (used by LikelihoodFieldModelProb model)}}
+\DoxyCodeLine{125   \textcolor{keyword}{private}: \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a136604601e713521c949eef56cea4bcb}{do\_beamskip}}; }
+\DoxyCodeLine{126   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a09096056f75e634eeb06bc788fbb4f32}{beam\_skip\_distance}}; }
+\DoxyCodeLine{127   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab8d9ad94c5815ee4a5614f7592d4842f}{beam\_skip\_threshold}}; }
+\DoxyCodeLine{128   \textcolor{comment}{//threshold for the ratio of invalid beams -\/ at which all beams are integrated to the likelihoods }}
+\DoxyCodeLine{129   \textcolor{comment}{//this would be an error condition }}
+\DoxyCodeLine{130   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57e7d9451d88daec73966558117129eb}{beam\_skip\_error\_threshold}};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132   \textcolor{comment}{//temp data that is kept before observations are integrated to each particle (requried for beam skipping)}}
+\DoxyCodeLine{133   \textcolor{keyword}{private}: \textcolor{keywordtype}{int} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ad00b22f35fbdcb2d4ea9574d0acdcbd1}{max\_samples}};}
+\DoxyCodeLine{134   \textcolor{keyword}{private}: \textcolor{keywordtype}{int} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_acd97aabb72e32f8b8f14c496168c2ecd}{max\_obs}};}
+\DoxyCodeLine{135   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} **\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a2ab6c8f338eea17b16557fd577e20719}{temp\_obs}};}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137   \textcolor{comment}{// Laser model params}}
+\DoxyCodeLine{138   \textcolor{comment}{//}}
+\DoxyCodeLine{139   \textcolor{comment}{// Mixture params for the components of the model; must sum to 1}}
+\DoxyCodeLine{140   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\_hit}};}
+\DoxyCodeLine{141   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_aeb158fe1146ff61768e56c816d9b9a65}{z\_short}};}
+\DoxyCodeLine{142   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a8d238fa084dd954c6416a5b522d7c476}{z\_max}};}
+\DoxyCodeLine{143   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\_rand}};}
+\DoxyCodeLine{144   \textcolor{comment}{//}}
+\DoxyCodeLine{145   \textcolor{comment}{// Stddev of Gaussian model for laser hits.}}
+\DoxyCodeLine{146   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\_hit}};}
+\DoxyCodeLine{147   \textcolor{comment}{// Decay rate of exponential model for short readings.}}
+\DoxyCodeLine{148   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57f1c5ae05afe2446e8c18dc49fd7fde}{lambda\_short}};}
+\DoxyCodeLine{149   \textcolor{comment}{// Threshold for outlier rejection (unused)}}
+\DoxyCodeLine{150   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ac057ee3f2684d7925b120455ca7fa4b9}{chi\_outlier}};}
+\DoxyCodeLine{151 \};}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

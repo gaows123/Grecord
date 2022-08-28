@@ -1,0 +1,4 @@
+<map id="costmap_2d::ObservationBuffer::getObservations" name="costmap_2d::ObservationBuffer::getObservations">
+<area shape="rect" id="node1" title="Pushes copies of all current observations onto the end of the vector passed in" alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_observation_buffer.html#a65b02e4c2e54d86b8e110fbabdab0659" title="Removes any stale observations from the buffer list" alt="" coords="260,5,467,47"/>
+</map>

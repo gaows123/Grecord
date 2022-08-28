@@ -1,0 +1,179 @@
+\hypertarget{classglobal__planner_1_1_orientation_filter}{}\doxysection{global\+\_\+planner\+::Orientation\+Filter类 参考}
+\label{classglobal__planner_1_1_orientation_filter}\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+
+
+{\ttfamily \#include $<$orientation\+\_\+filter.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_ab4a576fb0224492885d69a734bacfc5e}{Orientation\+Filter}} ()
+\item 
+virtual void \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1}{process\+Path}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1}{set\+Angle\+Based\+On\+Position\+Derivative}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path, int index)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf}{interpolate}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path, int start\+\_\+index, int end\+\_\+index)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a1934b57509ac8d2074695bee82c8e178}{set\+Mode}} (\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{Orientation\+Mode}} new\+\_\+mode)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333}{set\+Mode}} (int new\+\_\+mode)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_acf2026f87791f87970220d7a42e42422}{set\+Window\+Size}} (size\+\_\+t window\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{Orientation\+Mode}} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}{omode\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_aed9456a588e42436e590db2a4f0c98dc}{window\+\_\+size\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_ab4a576fb0224492885d69a734bacfc5e}\label{classglobal__planner_1_1_orientation_filter_ab4a576fb0224492885d69a734bacfc5e}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!OrientationFilter@{OrientationFilter}}
+\index{OrientationFilter@{OrientationFilter}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{OrientationFilter()}{OrientationFilter()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Orientation\+Filter\+::\+Orientation\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf}\label{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{interpolate()}{interpolate()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Orientation\+Filter\+::interpolate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path,  }\item[{int}]{start\+\_\+index,  }\item[{int}]{end\+\_\+index }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1}\label{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!processPath@{processPath}}
+\index{processPath@{processPath}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{processPath()}{processPath()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Orientation\+Filter\+::process\+Path (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1}\label{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!setAngleBasedOnPositionDerivative@{setAngleBasedOnPositionDerivative}}
+\index{setAngleBasedOnPositionDerivative@{setAngleBasedOnPositionDerivative}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{setAngleBasedOnPositionDerivative()}{setAngleBasedOnPositionDerivative()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Orientation\+Filter\+::set\+Angle\+Based\+On\+Position\+Derivative (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333}\label{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!setMode@{setMode}}
+\index{setMode@{setMode}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Orientation\+Filter\+::set\+Mode (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a1934b57509ac8d2074695bee82c8e178}\label{classglobal__planner_1_1_orientation_filter_a1934b57509ac8d2074695bee82c8e178}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!setMode@{setMode}}
+\index{setMode@{setMode}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Orientation\+Filter\+::set\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{Orientation\+Mode}}}]{new\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_orientation_filter_a1934b57509ac8d2074695bee82c8e178_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_acf2026f87791f87970220d7a42e42422}\label{classglobal__planner_1_1_orientation_filter_acf2026f87791f87970220d7a42e42422}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!setWindowSize@{setWindowSize}}
+\index{setWindowSize@{setWindowSize}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{setWindowSize()}{setWindowSize()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Orientation\+Filter\+::set\+Window\+Size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{window\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_orientation_filter_acf2026f87791f87970220d7a42e42422_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}\label{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!omode\_@{omode\_}}
+\index{omode\_@{omode\_}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{omode\_}{omode\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{Orientation\+Mode}} global\+\_\+planner\+::\+Orientation\+Filter\+::omode\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_orientation_filter_aed9456a588e42436e590db2a4f0c98dc}\label{classglobal__planner_1_1_orientation_filter_aed9456a588e42436e590db2a4f0c98dc}} 
+\index{global\_planner::OrientationFilter@{global\_planner::OrientationFilter}!window\_size\_@{window\_size\_}}
+\index{window\_size\_@{window\_size\_}!global\_planner::OrientationFilter@{global\_planner::OrientationFilter}}
+\doxysubsubsection{\texorpdfstring{window\_size\_}{window\_size\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Orientation\+Filter\+::window\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+global\+\_\+planner/include/global\+\_\+planner/\mbox{\hyperlink{orientation__filter_8h}{orientation\+\_\+filter.\+h}}\item 
+global\+\_\+planner/src/\mbox{\hyperlink{orientation__filter_8cpp}{orientation\+\_\+filter.\+cpp}}\end{DoxyCompactItemize}

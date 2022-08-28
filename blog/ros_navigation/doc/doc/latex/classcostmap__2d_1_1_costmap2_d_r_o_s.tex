@@ -1,0 +1,981 @@
+\hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s}{}\doxysection{costmap\+\_\+2d\+::Costmap2\+DROS类 参考}
+\label{classcostmap__2d_1_1_costmap2_d_r_o_s}\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+
+
+A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacles in either the form of Point\+Cloud or Laser\+Scan messages.  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+2d\+\_\+ros.\+h$>$}
+
+
+
+costmap\+\_\+2d\+::Costmap2\+DROS 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8e6acdb79ef3eb738e8f4d9a5197a9ed}{Costmap2\+DROS}} (const std\+::string \&name, tf2\+\_\+ros\+::\+Buffer \&tf)
+\begin{DoxyCompactList}\small\item\em Constructor for the wrapper \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a22cf571bfd4cd4434c2d203cd341d2c7}{$\sim$\+Costmap2\+DROS}} ()
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a426e3bfc085f9534b908807d1d734396}{start}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the costmap after calls to either \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670}{stop()}} or \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9df641b15f263c18d7a39e55224d5df3}{pause()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops costmap updates and unsubscribes from sensor topics \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9df641b15f263c18d7a39e55224d5df3}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Stops the costmap from updating, but sensor data still comes in over the wire \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a881910f6dbefabddbf012b8c51c4dd0a}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Resumes costmap updates \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9c3aa244e7890b363a6317500d66e900}{update\+Map}} ()
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af0370b7b97c5d8cfcc961abb8d190f21}{reset\+Layers}} ()
+\begin{DoxyCompactList}\small\item\em Reset each individual layer \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7}{is\+Current}} () const
+\begin{DoxyCompactList}\small\item\em Same as \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba}{get\+Layered\+Costmap()}}-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7}{is\+Current()}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a46937f798f630d7d17efc4754743cf70}{is\+Stopped}} () const
+\begin{DoxyCompactList}\small\item\em Is the costmap stopped \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_adcf3512b555a02dbbe2f57e784defce9}{get\+Robot\+Pose}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose) const
+\begin{DoxyCompactList}\small\item\em Get the pose of the robot in the global frame of the costmap \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a94655d85e11b8c1e542a26674bcdc9b2}{get\+Name}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns costmap name \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa96116a5847c4cbbe872e7ace18dc67c}{get\+Transform\+Tolerance}} () const
+\begin{DoxyCompactList}\small\item\em Returns the delay in transform (tf) data that is tolerable in seconds \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a1fe322e03f6a103e3fbf9beeef530c0f}{get\+Costmap}} () const
+\begin{DoxyCompactList}\small\item\em Return a pointer to the \char`\"{}master\char`\"{} costmap which receives updates from all the layers. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa2942240e1eb2ecadf166c56f8e79bd7}{get\+Global\+Frame\+ID}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the global frame of the costmap \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d02596d6352e0153a579427bbc2c394}{get\+Base\+Frame\+ID}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns the local frame of the costmap \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba}{get\+Layered\+Costmap}} () const
+\item 
+geometry\+\_\+msgs\+::\+Polygon \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ae3688f38a8066eb3b6867f224edcc697}{get\+Robot\+Footprint\+Polygon}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current padded footprint as a geometry\+\_\+msgs\+::\+Polygon. \end{DoxyCompactList}\item 
+const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a4688b58dc94afe64bdaed02dceab5afd}{get\+Robot\+Footprint}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Return the current footprint of the robot as a vector of points. \end{DoxyCompactList}\item 
+const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ade62170037e2d39e69a611206efce4d5}{get\+Unpadded\+Robot\+Footprint}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Return the current unpadded footprint of the robot as a vector of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a66b8eaac1ba4252fd663adfddfecbb7e}{get\+Oriented\+Footprint}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&oriented\+\_\+footprint) const
+\begin{DoxyCompactList}\small\item\em Build the oriented footprint of the robot at the robot\textquotesingle{}s current pose \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a220a578102cf3592a744ad5264bf09ed}{set\+Unpadded\+Robot\+Footprint}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Set the footprint of the robot to be the given set of points, padded by footprint\+\_\+padding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a05c662c0ad169c124480ed3d9ee500e8}{set\+Unpadded\+Robot\+Footprint\+Polygon}} (const geometry\+\_\+msgs\+::\+Polygon \&footprint)
+\begin{DoxyCompactList}\small\item\em Set the footprint of the robot to be the given polygon, padded by footprint\+\_\+padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_acab094b1a98d6ab5b598123aa9b88640}{layered\+\_\+costmap\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8db674938a25c40af469413238c25dca}{name\+\_\+}}
+\item 
+tf2\+\_\+ros\+::\+Buffer \& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ac93f26f0c6816cb16e4b17b2aa4d5ff8}{tf\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used for transforming point clouds \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aee5cf95f348f42b83a7b5733b452a4b1}{global\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The global frame for the costmap \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_abd4149bf56e6935f1adc9114c2db162c}{robot\+\_\+base\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The frame\+\_\+id of the robot base \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a285fdb30fb75f5bc94091e4f40de4b0b}{transform\+\_\+tolerance\+\_\+}}
+\begin{DoxyCompactList}\small\item\em timeout before transform errors \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ae68ab88626d6d5f7a8b3f9dd44d60ff2}{read\+Footprint\+From\+Config}} (const costmap\+\_\+2d\+::\+Costmap2\+DConfig \&new\+\_\+config, const costmap\+\_\+2d\+::\+Costmap2\+DConfig \&old\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Set the footprint from the new\+\_\+config object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_abb434405d6047ba76c6cbe4eeaa17d6f}{load\+Old\+Parameters}} (ros\+::\+Node\+Handle \&nh)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a202e22282dc4902dcde5b51e8a467268}{warn\+For\+Old\+Parameters}} (ros\+::\+Node\+Handle \&nh)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a2a604f02c2216cb8c18e0a224016dd37}{check\+Old\+Param}} (ros\+::\+Node\+Handle \&nh, const std\+::string \&param\+\_\+name)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6109471406414a981d79f582082687af}{copy\+Parent\+Parameters}} (const std\+::string \&plugin\+\_\+name, const std\+::string \&plugin\+\_\+type, ros\+::\+Node\+Handle \&nh)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a600b1395b84f782470c4c7a7fa661834}{reconfigure\+CB}} (costmap\+\_\+2d\+::\+Costmap2\+DConfig \&config, uint32\+\_\+t level)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ad6876d803a3eaa3006984e94b5a82397}{movement\+CB}} (const ros\+::\+Timer\+Event \&event)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a82872c177faeaaf9c5e0c93039329391}{map\+Update\+Loop}} (double frequency)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a4b26022f7ce51516c8118f501e707472}{map\+\_\+update\+\_\+thread\+\_\+shutdown\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ae63a5864cc6e5411d2aa2c05d2187b42}{stop\+\_\+updates\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af9bc9850199403564dab557ebb8e8a70}{initialized\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a18881202657a9b25c7ce0703aa0dbac9}{stopped\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a66735fcdeccd24253a35d50759c60bbe}{robot\+\_\+stopped\+\_\+}}
+\item 
+boost\+::thread $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af08941ccf0414c7f04937a4f3f8bacf3}{map\+\_\+update\+\_\+thread\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A thread for updating the map \end{DoxyCompactList}\item 
+ros\+::\+Timer \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a46b444123eebb59220bc09f4f4feae24}{timer\+\_\+}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_add8201c3048fc6f509fd872dc695b16d}{last\+\_\+publish\+\_\+}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a3b2996a47b417758d52b0947361bde8b}{publish\+\_\+cycle}}
+\item 
+pluginlib\+::\+Class\+Loader$<$ \mbox{\hyperlink{classcostmap__2d_1_1_layer}{Layer}} $>$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a21aa388f4c63a6406788a2446f369779}{plugin\+\_\+loader\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a5a7e28ac8ccb1b560fda113a727b35e4}{old\+\_\+pose\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher}{Costmap2\+DPublisher}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ade91d9d7967ad7fc2ccc0a508267448d}{publisher\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ costmap\+\_\+2d\+::\+Costmap2\+DConfig $>$ $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a04bc8bb389192a495f40e947559cca43}{dsrv\+\_\+}}
+\item 
+boost\+::recursive\+\_\+mutex \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6e5eee71f1e1bf650bfe333906640d85}{configuration\+\_\+mutex\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a28859e2fc52ed24ff719a83744044156}{footprint\+\_\+sub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_afa085eecd1043d3b21888081f8a4d2d2}{footprint\+\_\+pub\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8718514d98191c6f0ebba9381ed33798}{unpadded\+\_\+footprint\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa6a97f23c2388faf3ff348af597882db}{padded\+\_\+footprint\+\_\+}}
+\item 
+float \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d3599834c81da03f864d4de3799bf00}{footprint\+\_\+padding\+\_\+}}
+\item 
+costmap\+\_\+2d\+::\+Costmap2\+DConfig \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af0aa50eee701701c079b09137eaf7df8}{old\+\_\+config\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacles in either the form of Point\+Cloud or Laser\+Scan messages. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a8e6acdb79ef3eb738e8f4d9a5197a9ed}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a8e6acdb79ef3eb738e8f4d9a5197a9ed}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!Costmap2DROS@{Costmap2DROS}}
+\index{Costmap2DROS@{Costmap2DROS}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{Costmap2DROS()}{Costmap2DROS()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+DROS\+::\+Costmap2\+DROS (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf }\end{DoxyParamCaption})}
+
+
+
+Constructor for the wrapper 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name for this costmap \\
+\hline
+{\em tf} & A reference to a Transform\+Listener \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a8e6acdb79ef3eb738e8f4d9a5197a9ed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a22cf571bfd4cd4434c2d203cd341d2c7}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a22cf571bfd4cd4434c2d203cd341d2c7}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!````~Costmap2DROS@{$\sim$Costmap2DROS}}
+\index{````~Costmap2DROS@{$\sim$Costmap2DROS}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{$\sim$Costmap2DROS()}{~Costmap2DROS()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+DROS\+::$\sim$\+Costmap2\+DROS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a2a604f02c2216cb8c18e0a224016dd37}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a2a604f02c2216cb8c18e0a224016dd37}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!checkOldParam@{checkOldParam}}
+\index{checkOldParam@{checkOldParam}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{checkOldParam()}{checkOldParam()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::check\+Old\+Param (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh,  }\item[{const std\+::string \&}]{param\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a2a604f02c2216cb8c18e0a224016dd37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a6109471406414a981d79f582082687af}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a6109471406414a981d79f582082687af}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!copyParentParameters@{copyParentParameters}}
+\index{copyParentParameters@{copyParentParameters}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{copyParentParameters()}{copyParentParameters()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::copy\+Parent\+Parameters (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plugin\+\_\+name,  }\item[{const std\+::string \&}]{plugin\+\_\+type,  }\item[{ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a6109471406414a981d79f582082687af_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a6109471406414a981d79f582082687af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d02596d6352e0153a579427bbc2c394}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d02596d6352e0153a579427bbc2c394}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getBaseFrameID@{getBaseFrameID}}
+\index{getBaseFrameID@{getBaseFrameID}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getBaseFrameID()}{getBaseFrameID()}}
+{\footnotesize\ttfamily const std\+::string \& costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Base\+Frame\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the local frame of the costmap 
+
+\begin{DoxyReturn}{返回}
+The local frame of the costmap 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d02596d6352e0153a579427bbc2c394_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a1fe322e03f6a103e3fbf9beeef530c0f}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a1fe322e03f6a103e3fbf9beeef530c0f}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getCostmap@{getCostmap}}
+\index{getCostmap@{getCostmap}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getCostmap()}{getCostmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} $\ast$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Costmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a pointer to the \char`\"{}master\char`\"{} costmap which receives updates from all the layers. 
+
+Same as calling \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba}{get\+Layered\+Costmap()}}-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a1fe322e03f6a103e3fbf9beeef530c0f}{get\+Costmap()}}. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a1fe322e03f6a103e3fbf9beeef530c0f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a1fe322e03f6a103e3fbf9beeef530c0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_aa2942240e1eb2ecadf166c56f8e79bd7}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_aa2942240e1eb2ecadf166c56f8e79bd7}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getGlobalFrameID@{getGlobalFrameID}}
+\index{getGlobalFrameID@{getGlobalFrameID}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getGlobalFrameID()}{getGlobalFrameID()}}
+{\footnotesize\ttfamily const std\+::string \& costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Global\+Frame\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the global frame of the costmap 
+
+\begin{DoxyReturn}{返回}
+The global frame of the costmap 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_aa2942240e1eb2ecadf166c56f8e79bd7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getLayeredCostmap@{getLayeredCostmap}}
+\index{getLayeredCostmap@{getLayeredCostmap}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getLayeredCostmap()}{getLayeredCostmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} $\ast$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Layered\+Costmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a94655d85e11b8c1e542a26674bcdc9b2}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a94655d85e11b8c1e542a26674bcdc9b2}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getName@{getName}}
+\index{getName@{getName}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Returns costmap name 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a94655d85e11b8c1e542a26674bcdc9b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a66b8eaac1ba4252fd663adfddfecbb7e}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a66b8eaac1ba4252fd663adfddfecbb7e}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getOrientedFootprint@{getOrientedFootprint}}
+\index{getOrientedFootprint@{getOrientedFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getOrientedFootprint()}{getOrientedFootprint()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Oriented\+Footprint (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{oriented\+\_\+footprint }\end{DoxyParamCaption}) const}
+
+
+
+Build the oriented footprint of the robot at the robot\textquotesingle{}s current pose 
+
+
+\begin{DoxyParams}{参数}
+{\em oriented\+\_\+footprint} & Will be filled with the points in the oriented footprint of the robot \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a66b8eaac1ba4252fd663adfddfecbb7e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a4688b58dc94afe64bdaed02dceab5afd}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a4688b58dc94afe64bdaed02dceab5afd}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getRobotFootprint@{getRobotFootprint}}
+\index{getRobotFootprint@{getRobotFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getRobotFootprint()}{getRobotFootprint()}}
+{\footnotesize\ttfamily const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Robot\+Footprint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Return the current footprint of the robot as a vector of points. 
+
+This version of the footprint is padded by the footprint\+\_\+padding\+\_\+ distance, set in the rosparam \char`\"{}footprint\+\_\+padding\char`\"{}.
+
+The footprint initially comes from the rosparam \char`\"{}footprint\char`\"{} but can be overwritten by dynamic reconfigure or by messages received on the \char`\"{}footprint\char`\"{} topic. 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a4688b58dc94afe64bdaed02dceab5afd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ae3688f38a8066eb3b6867f224edcc697}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ae3688f38a8066eb3b6867f224edcc697}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getRobotFootprintPolygon@{getRobotFootprintPolygon}}
+\index{getRobotFootprintPolygon@{getRobotFootprintPolygon}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getRobotFootprintPolygon()}{getRobotFootprintPolygon()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Polygon costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Robot\+Footprint\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current padded footprint as a geometry\+\_\+msgs\+::\+Polygon. 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_ae3688f38a8066eb3b6867f224edcc697_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_adcf3512b555a02dbbe2f57e784defce9}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_adcf3512b555a02dbbe2f57e784defce9}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getRobotPose@{getRobotPose}}
+\index{getRobotPose@{getRobotPose}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getRobotPose()}{getRobotPose()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Robot\+Pose (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose }\end{DoxyParamCaption}) const}
+
+
+
+Get the pose of the robot in the global frame of the costmap 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & Will be set to the pose of the robot in the global frame of the costmap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the pose was set successfully, false otherwise 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_adcf3512b555a02dbbe2f57e784defce9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_aa96116a5847c4cbbe872e7ace18dc67c}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_aa96116a5847c4cbbe872e7ace18dc67c}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getTransformTolerance@{getTransformTolerance}}
+\index{getTransformTolerance@{getTransformTolerance}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getTransformTolerance()}{getTransformTolerance()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Transform\+Tolerance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the delay in transform (tf) data that is tolerable in seconds 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_aa96116a5847c4cbbe872e7ace18dc67c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ade62170037e2d39e69a611206efce4d5}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ade62170037e2d39e69a611206efce4d5}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!getUnpaddedRobotFootprint@{getUnpaddedRobotFootprint}}
+\index{getUnpaddedRobotFootprint@{getUnpaddedRobotFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{getUnpaddedRobotFootprint()}{getUnpaddedRobotFootprint()}}
+{\footnotesize\ttfamily const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& costmap\+\_\+2d\+::\+Costmap2\+DROS\+::get\+Unpadded\+Robot\+Footprint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Return the current unpadded footprint of the robot as a vector of points. 
+
+This is the raw version of the footprint without padding.
+
+The footprint initially comes from the rosparam \char`\"{}footprint\char`\"{} but can be overwritten by dynamic reconfigure or by messages received on the \char`\"{}footprint\char`\"{} topic. \mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!isCurrent@{isCurrent}}
+\index{isCurrent@{isCurrent}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{isCurrent()}{isCurrent()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::is\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Same as \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba}{get\+Layered\+Costmap()}}-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7}{is\+Current()}}. 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a46937f798f630d7d17efc4754743cf70}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a46937f798f630d7d17efc4754743cf70}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!isStopped@{isStopped}}
+\index{isStopped@{isStopped}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{isStopped()}{isStopped()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::is\+Stopped (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Is the costmap stopped 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_abb434405d6047ba76c6cbe4eeaa17d6f}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_abb434405d6047ba76c6cbe4eeaa17d6f}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!loadOldParameters@{loadOldParameters}}
+\index{loadOldParameters@{loadOldParameters}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{loadOldParameters()}{loadOldParameters()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::load\+Old\+Parameters (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_abb434405d6047ba76c6cbe4eeaa17d6f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_abb434405d6047ba76c6cbe4eeaa17d6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a82872c177faeaaf9c5e0c93039329391}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a82872c177faeaaf9c5e0c93039329391}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!mapUpdateLoop@{mapUpdateLoop}}
+\index{mapUpdateLoop@{mapUpdateLoop}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{mapUpdateLoop()}{mapUpdateLoop()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::map\+Update\+Loop (\begin{DoxyParamCaption}\item[{double}]{frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a82872c177faeaaf9c5e0c93039329391_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a82872c177faeaaf9c5e0c93039329391_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ad6876d803a3eaa3006984e94b5a82397}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ad6876d803a3eaa3006984e94b5a82397}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!movementCB@{movementCB}}
+\index{movementCB@{movementCB}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{movementCB()}{movementCB()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::movement\+CB (\begin{DoxyParamCaption}\item[{const ros\+::\+Timer\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_ad6876d803a3eaa3006984e94b5a82397_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_ad6876d803a3eaa3006984e94b5a82397_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a9df641b15f263c18d7a39e55224d5df3}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a9df641b15f263c18d7a39e55224d5df3}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!pause@{pause}}
+\index{pause@{pause}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the costmap from updating, but sensor data still comes in over the wire 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a9df641b15f263c18d7a39e55224d5df3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ae68ab88626d6d5f7a8b3f9dd44d60ff2}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ae68ab88626d6d5f7a8b3f9dd44d60ff2}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!readFootprintFromConfig@{readFootprintFromConfig}}
+\index{readFootprintFromConfig@{readFootprintFromConfig}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{readFootprintFromConfig()}{readFootprintFromConfig()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::read\+Footprint\+From\+Config (\begin{DoxyParamCaption}\item[{const costmap\+\_\+2d\+::\+Costmap2\+DConfig \&}]{new\+\_\+config,  }\item[{const costmap\+\_\+2d\+::\+Costmap2\+DConfig \&}]{old\+\_\+config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set the footprint from the new\+\_\+config object. 
+
+If the values of footprint and robot\+\_\+radius are the same in new\+\_\+config and old\+\_\+config, nothing is changed. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_ae68ab88626d6d5f7a8b3f9dd44d60ff2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_ae68ab88626d6d5f7a8b3f9dd44d60ff2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a600b1395b84f782470c4c7a7fa661834}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a600b1395b84f782470c4c7a7fa661834}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{costmap\+\_\+2d\+::\+Costmap2\+DConfig \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a600b1395b84f782470c4c7a7fa661834_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a600b1395b84f782470c4c7a7fa661834_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_af0370b7b97c5d8cfcc961abb8d190f21}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_af0370b7b97c5d8cfcc961abb8d190f21}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!resetLayers@{resetLayers}}
+\index{resetLayers@{resetLayers}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{resetLayers()}{resetLayers()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::reset\+Layers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset each individual layer 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_af0370b7b97c5d8cfcc961abb8d190f21_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_af0370b7b97c5d8cfcc961abb8d190f21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a881910f6dbefabddbf012b8c51c4dd0a}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a881910f6dbefabddbf012b8c51c4dd0a}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!resume@{resume}}
+\index{resume@{resume}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resumes costmap updates 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a220a578102cf3592a744ad5264bf09ed}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a220a578102cf3592a744ad5264bf09ed}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!setUnpaddedRobotFootprint@{setUnpaddedRobotFootprint}}
+\index{setUnpaddedRobotFootprint@{setUnpaddedRobotFootprint}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{setUnpaddedRobotFootprint()}{setUnpaddedRobotFootprint()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::set\+Unpadded\+Robot\+Footprint (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{points }\end{DoxyParamCaption})}
+
+
+
+Set the footprint of the robot to be the given set of points, padded by footprint\+\_\+padding. 
+
+Should be a convex polygon, though this is not enforced.
+
+First expands the given polygon by footprint\+\_\+padding\+\_\+ and then sets padded\+\_\+footprint\+\_\+ and calls layered\+\_\+costmap\+\_\+-\/\texorpdfstring{$>$}{>}set\+Footprint(). Also saves the unpadded footprint, which is available from \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ade62170037e2d39e69a611206efce4d5}{get\+Unpadded\+Robot\+Footprint()}}. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a220a578102cf3592a744ad5264bf09ed_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a220a578102cf3592a744ad5264bf09ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a05c662c0ad169c124480ed3d9ee500e8}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a05c662c0ad169c124480ed3d9ee500e8}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!setUnpaddedRobotFootprintPolygon@{setUnpaddedRobotFootprintPolygon}}
+\index{setUnpaddedRobotFootprintPolygon@{setUnpaddedRobotFootprintPolygon}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{setUnpaddedRobotFootprintPolygon()}{setUnpaddedRobotFootprintPolygon()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::set\+Unpadded\+Robot\+Footprint\+Polygon (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Polygon \&}]{footprint }\end{DoxyParamCaption})}
+
+
+
+Set the footprint of the robot to be the given polygon, padded by footprint\+\_\+padding. 
+
+Should be a convex polygon, though this is not enforced.
+
+First expands the given polygon by footprint\+\_\+padding\+\_\+ and then sets padded\+\_\+footprint\+\_\+ and calls layered\+\_\+costmap\+\_\+-\/\texorpdfstring{$>$}{>}set\+Footprint(). Also saves the unpadded footprint, which is available from \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ade62170037e2d39e69a611206efce4d5}{get\+Unpadded\+Robot\+Footprint()}}. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a05c662c0ad169c124480ed3d9ee500e8_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a05c662c0ad169c124480ed3d9ee500e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a426e3bfc085f9534b908807d1d734396}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a426e3bfc085f9534b908807d1d734396}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!start@{start}}
+\index{start@{start}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the costmap after calls to either \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670}{stop()}} or \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9df641b15f263c18d7a39e55224d5df3}{pause()}} 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a426e3bfc085f9534b908807d1d734396_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a426e3bfc085f9534b908807d1d734396_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!stop@{stop}}
+\index{stop@{stop}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops costmap updates and unsubscribes from sensor topics 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a9c3aa244e7890b363a6317500d66e900}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a9c3aa244e7890b363a6317500d66e900}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!updateMap@{updateMap}}
+\index{updateMap@{updateMap}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{updateMap()}{updateMap()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::update\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a9c3aa244e7890b363a6317500d66e900_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a9c3aa244e7890b363a6317500d66e900_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a202e22282dc4902dcde5b51e8a467268}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a202e22282dc4902dcde5b51e8a467268}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!warnForOldParameters@{warnForOldParameters}}
+\index{warnForOldParameters@{warnForOldParameters}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{warnForOldParameters()}{warnForOldParameters()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DROS\+::warn\+For\+Old\+Parameters (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a202e22282dc4902dcde5b51e8a467268_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_r_o_s_a202e22282dc4902dcde5b51e8a467268_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a6e5eee71f1e1bf650bfe333906640d85}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a6e5eee71f1e1bf650bfe333906640d85}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!configuration\_mutex\_@{configuration\_mutex\_}}
+\index{configuration\_mutex\_@{configuration\_mutex\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{configuration\_mutex\_}{configuration\_mutex\_}}
+{\footnotesize\ttfamily boost\+::recursive\+\_\+mutex costmap\+\_\+2d\+::\+Costmap2\+DROS\+::configuration\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a04bc8bb389192a495f40e947559cca43}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a04bc8bb389192a495f40e947559cca43}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$costmap\+\_\+2d\+::\+Costmap2\+DConfig$>$$\ast$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d3599834c81da03f864d4de3799bf00}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d3599834c81da03f864d4de3799bf00}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!footprint\_padding\_@{footprint\_padding\_}}
+\index{footprint\_padding\_@{footprint\_padding\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{footprint\_padding\_}{footprint\_padding\_}}
+{\footnotesize\ttfamily float costmap\+\_\+2d\+::\+Costmap2\+DROS\+::footprint\+\_\+padding\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_afa085eecd1043d3b21888081f8a4d2d2}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_afa085eecd1043d3b21888081f8a4d2d2}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!footprint\_pub\_@{footprint\_pub\_}}
+\index{footprint\_pub\_@{footprint\_pub\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{footprint\_pub\_}{footprint\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher costmap\+\_\+2d\+::\+Costmap2\+DROS\+::footprint\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a28859e2fc52ed24ff719a83744044156}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a28859e2fc52ed24ff719a83744044156}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!footprint\_sub\_@{footprint\_sub\_}}
+\index{footprint\_sub\_@{footprint\_sub\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{footprint\_sub\_}{footprint\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber costmap\+\_\+2d\+::\+Costmap2\+DROS\+::footprint\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_aee5cf95f348f42b83a7b5733b452a4b1}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_aee5cf95f348f42b83a7b5733b452a4b1}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Costmap2\+DROS\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The global frame for the costmap 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_af9bc9850199403564dab557ebb8e8a70}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_af9bc9850199403564dab557ebb8e8a70}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_add8201c3048fc6f509fd872dc695b16d}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_add8201c3048fc6f509fd872dc695b16d}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!last\_publish\_@{last\_publish\_}}
+\index{last\_publish\_@{last\_publish\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{last\_publish\_}{last\_publish\_}}
+{\footnotesize\ttfamily ros\+::\+Time costmap\+\_\+2d\+::\+Costmap2\+DROS\+::last\+\_\+publish\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_acab094b1a98d6ab5b598123aa9b88640}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_acab094b1a98d6ab5b598123aa9b88640}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!layered\_costmap\_@{layered\_costmap\_}}
+\index{layered\_costmap\_@{layered\_costmap\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{layered\_costmap\_}{layered\_costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}}$\ast$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::layered\+\_\+costmap\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_af08941ccf0414c7f04937a4f3f8bacf3}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_af08941ccf0414c7f04937a4f3f8bacf3}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!map\_update\_thread\_@{map\_update\_thread\_}}
+\index{map\_update\_thread\_@{map\_update\_thread\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{map\_update\_thread\_}{map\_update\_thread\_}}
+{\footnotesize\ttfamily boost\+::thread$\ast$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::map\+\_\+update\+\_\+thread\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A thread for updating the map 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a4b26022f7ce51516c8118f501e707472}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a4b26022f7ce51516c8118f501e707472}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!map\_update\_thread\_shutdown\_@{map\_update\_thread\_shutdown\_}}
+\index{map\_update\_thread\_shutdown\_@{map\_update\_thread\_shutdown\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{map\_update\_thread\_shutdown\_}{map\_update\_thread\_shutdown\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::map\+\_\+update\+\_\+thread\+\_\+shutdown\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a8db674938a25c40af469413238c25dca}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a8db674938a25c40af469413238c25dca}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!name\_@{name\_}}
+\index{name\_@{name\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Costmap2\+DROS\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_af0aa50eee701701c079b09137eaf7df8}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_af0aa50eee701701c079b09137eaf7df8}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!old\_config\_@{old\_config\_}}
+\index{old\_config\_@{old\_config\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{old\_config\_}{old\_config\_}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+DConfig costmap\+\_\+2d\+::\+Costmap2\+DROS\+::old\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a5a7e28ac8ccb1b560fda113a727b35e4}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a5a7e28ac8ccb1b560fda113a727b35e4}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!old\_pose\_@{old\_pose\_}}
+\index{old\_pose\_@{old\_pose\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{old\_pose\_}{old\_pose\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped costmap\+\_\+2d\+::\+Costmap2\+DROS\+::old\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_aa6a97f23c2388faf3ff348af597882db}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_aa6a97f23c2388faf3ff348af597882db}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!padded\_footprint\_@{padded\_footprint\_}}
+\index{padded\_footprint\_@{padded\_footprint\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{padded\_footprint\_}{padded\_footprint\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::padded\+\_\+footprint\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a21aa388f4c63a6406788a2446f369779}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a21aa388f4c63a6406788a2446f369779}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!plugin\_loader\_@{plugin\_loader\_}}
+\index{plugin\_loader\_@{plugin\_loader\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{plugin\_loader\_}{plugin\_loader\_}}
+{\footnotesize\ttfamily pluginlib\+::\+Class\+Loader$<$\mbox{\hyperlink{classcostmap__2d_1_1_layer}{Layer}}$>$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::plugin\+\_\+loader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a3b2996a47b417758d52b0947361bde8b}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a3b2996a47b417758d52b0947361bde8b}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!publish\_cycle@{publish\_cycle}}
+\index{publish\_cycle@{publish\_cycle}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{publish\_cycle}{publish\_cycle}}
+{\footnotesize\ttfamily ros\+::\+Duration costmap\+\_\+2d\+::\+Costmap2\+DROS\+::publish\+\_\+cycle\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ade91d9d7967ad7fc2ccc0a508267448d}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ade91d9d7967ad7fc2ccc0a508267448d}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!publisher\_@{publisher\_}}
+\index{publisher\_@{publisher\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{publisher\_}{publisher\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher}{Costmap2\+DPublisher}}$\ast$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::publisher\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_abd4149bf56e6935f1adc9114c2db162c}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_abd4149bf56e6935f1adc9114c2db162c}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!robot\_base\_frame\_@{robot\_base\_frame\_}}
+\index{robot\_base\_frame\_@{robot\_base\_frame\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{robot\_base\_frame\_}{robot\_base\_frame\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Costmap2\+DROS\+::robot\+\_\+base\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The frame\+\_\+id of the robot base 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a66735fcdeccd24253a35d50759c60bbe}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a66735fcdeccd24253a35d50759c60bbe}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!robot\_stopped\_@{robot\_stopped\_}}
+\index{robot\_stopped\_@{robot\_stopped\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{robot\_stopped\_}{robot\_stopped\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::robot\+\_\+stopped\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ae63a5864cc6e5411d2aa2c05d2187b42}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ae63a5864cc6e5411d2aa2c05d2187b42}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!stop\_updates\_@{stop\_updates\_}}
+\index{stop\_updates\_@{stop\_updates\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{stop\_updates\_}{stop\_updates\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::stop\+\_\+updates\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a18881202657a9b25c7ce0703aa0dbac9}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a18881202657a9b25c7ce0703aa0dbac9}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!stopped\_@{stopped\_}}
+\index{stopped\_@{stopped\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{stopped\_}{stopped\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DROS\+::stopped\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_ac93f26f0c6816cb16e4b17b2aa4d5ff8}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_ac93f26f0c6816cb16e4b17b2aa4d5ff8}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer\& costmap\+\_\+2d\+::\+Costmap2\+DROS\+::tf\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Used for transforming point clouds 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a46b444123eebb59220bc09f4f4feae24}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a46b444123eebb59220bc09f4f4feae24}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!timer\_@{timer\_}}
+\index{timer\_@{timer\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{timer\_}{timer\_}}
+{\footnotesize\ttfamily ros\+::\+Timer costmap\+\_\+2d\+::\+Costmap2\+DROS\+::timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a285fdb30fb75f5bc94091e4f40de4b0b}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a285fdb30fb75f5bc94091e4f40de4b0b}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!transform\_tolerance\_@{transform\_tolerance\_}}
+\index{transform\_tolerance\_@{transform\_tolerance\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{transform\_tolerance\_}{transform\_tolerance\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+DROS\+::transform\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+timeout before transform errors 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_r_o_s_a8718514d98191c6f0ebba9381ed33798}\label{classcostmap__2d_1_1_costmap2_d_r_o_s_a8718514d98191c6f0ebba9381ed33798}} 
+\index{costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}!unpadded\_footprint\_@{unpadded\_footprint\_}}
+\index{unpadded\_footprint\_@{unpadded\_footprint\_}!costmap\_2d::Costmap2DROS@{costmap\_2d::Costmap2DROS}}
+\doxysubsubsection{\texorpdfstring{unpadded\_footprint\_}{unpadded\_footprint\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ costmap\+\_\+2d\+::\+Costmap2\+DROS\+::unpadded\+\_\+footprint\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{costmap__2d__ros_8h}{costmap\+\_\+2d\+\_\+ros.\+h}}\item 
+costmap\+\_\+2d/src/\mbox{\hyperlink{costmap__2d__ros_8cpp}{costmap\+\_\+2d\+\_\+ros.\+cpp}}\end{DoxyCompactItemize}

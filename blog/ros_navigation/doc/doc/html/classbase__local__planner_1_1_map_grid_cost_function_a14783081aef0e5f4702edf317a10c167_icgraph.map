@@ -1,0 +1,5 @@
+<map id="base_local_planner::MapGridCostFunction::obstacleCosts" name="base_local_planner::MapGridCostFunction::obstacleCosts">
+<area shape="rect" id="node1" title=" " alt="" coords="459,5,615,61"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner.html#ab62d6664d13e90e42327de34a2ed1cfb" title="Compute the components and total cost for a map grid cell 计算地图网格单元的代价" alt="" coords="232,13,411,54"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="5,13,184,54"/>
+</map>

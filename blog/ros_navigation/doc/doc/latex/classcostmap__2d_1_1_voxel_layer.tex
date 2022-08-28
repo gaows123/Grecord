@@ -1,0 +1,498 @@
+\hypertarget{classcostmap__2d_1_1_voxel_layer}{}\doxysection{costmap\+\_\+2d\+::Voxel\+Layer类 参考}
+\label{classcostmap__2d_1_1_voxel_layer}\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+
+
+{\ttfamily \#include $<$voxel\+\_\+layer.\+h$>$}
+
+
+
+类 costmap\+\_\+2d\+::Voxel\+Layer 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classcostmap__2d_1_1_voxel_layer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+costmap\+\_\+2d\+::Voxel\+Layer 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a02a7f51ba2b09b61f6ada3d10acf5a20}{Voxel\+Layer}} ()
+\item 
+virtual \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a783343776ec9c85b62c882b7739fc2b0}{$\sim$\+Voxel\+Layer}} ()
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a7b0d5249f27fd757f206493b491fd37a}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_ab28185cd71c8e42f72880b779ef08ae2}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a91dc901da59c768aea0b25037bf46fef}{update\+Origin}} (double new\+\_\+origin\+\_\+x, double new\+\_\+origin\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Move the origin of the costmap to a new location.... keeping data when it can \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a3987d72bcc1891335c474b060e404329}{is\+Discretized}} ()
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a0528c59b3cbe4c1b81748284ae0a3dc5}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_af5f57588c57a8a5c8dff065b5a76a0db}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a7e9b75bd9cee13aa9f893a17d549fbee}{setup\+Dynamic\+Reconfigure}} (ros\+::\+Node\+Handle \&nh)
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a56c9a252631b5d4af75c1d17eac8e052}{reset\+Maps}} ()
+\begin{DoxyCompactList}\small\item\em Resets the costmap and static\+\_\+map to be unknown space \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a2361abd50823db1734c1cc05a70d0c97}{reconfigure\+CB}} (costmap\+\_\+2d\+::\+Voxel\+Plugin\+Config \&config, uint32\+\_\+t level)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_ae0f13b98d89b26ab2283882cae023e04}{clear\+Non\+Lethal}} (double wx, double wy, double w\+\_\+size\+\_\+x, double w\+\_\+size\+\_\+y, bool clear\+\_\+no\+\_\+info)
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a6f7c914d410df715e01253b3584d9f21}{raytrace\+Freespace}} (const \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} \&clearing\+\_\+observation, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em 根据单次的观测来清除自由空间 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_afe388a3645ce14998d2ae2a98a166ad0}{world\+To\+Map3\+DFloat}} (double wx, double wy, double wz, double \&mx, double \&my, double \&mz)
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a0c310e849291ea0c2cde7ca7b3a9e1e1}{world\+To\+Map3D}} (double wx, double wy, double wz, unsigned int \&mx, unsigned int \&my, unsigned int \&mz)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a10137142c39215dae8d252d6325e1992}{map\+To\+World3D}} (unsigned int mx, unsigned int my, unsigned int mz, double \&wx, double \&wy, double \&wz)
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_abd5944de6300c41e539f745c71dbf00d}{dist}} (double x0, double y0, double z0, double x1, double y1, double z1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ costmap\+\_\+2d\+::\+Voxel\+Plugin\+Config $>$ $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_ac069771fd6860767a629f5ac0ab833a4}{voxel\+\_\+dsrv\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_adc6784f95a286962ca829f2b44a4bde5}{publish\+\_\+voxel\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_abc6ca1174128cfc2aca90817128f8ee0}{voxel\+\_\+pub\+\_\+}}
+\item 
+\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid}{voxel\+\_\+grid\+::\+Voxel\+Grid}} \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_aa91df83ab59e1b9ecfbe9f4991bd2eef}{voxel\+\_\+grid\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_ac5493b9ea645719260900007cf28e610}{z\+\_\+resolution\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_aad266904a064b8ad6b405069247197c7}{origin\+\_\+z\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a148fc0c859ad2f91a38da4e0f9b221d7}{unknown\+\_\+threshold\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a2691efbeed67c0505dcbf30b32de6bd2}{mark\+\_\+threshold\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a2e2db3f79b15d5de8cedb620ee9f7ac0}{size\+\_\+z\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_ac1981d52f95e49a18b1b01324695b98f}{clearing\+\_\+endpoints\+\_\+pub\+\_\+}}
+\item 
+sensor\+\_\+msgs\+::\+Point\+Cloud \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a23e8e84e92f684354a7c2a762cf8fa2d}{clearing\+\_\+endpoints\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a02a7f51ba2b09b61f6ada3d10acf5a20}\label{classcostmap__2d_1_1_voxel_layer_a02a7f51ba2b09b61f6ada3d10acf5a20}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!VoxelLayer@{VoxelLayer}}
+\index{VoxelLayer@{VoxelLayer}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{VoxelLayer()}{VoxelLayer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Voxel\+Layer\+::\+Voxel\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a783343776ec9c85b62c882b7739fc2b0}\label{classcostmap__2d_1_1_voxel_layer_a783343776ec9c85b62c882b7739fc2b0}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!````~VoxelLayer@{$\sim$VoxelLayer}}
+\index{````~VoxelLayer@{$\sim$VoxelLayer}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{$\sim$VoxelLayer()}{~VoxelLayer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Voxel\+Layer\+::$\sim$\+Voxel\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_ae0f13b98d89b26ab2283882cae023e04}\label{classcostmap__2d_1_1_voxel_layer_ae0f13b98d89b26ab2283882cae023e04}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!clearNonLethal@{clearNonLethal}}
+\index{clearNonLethal@{clearNonLethal}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{clearNonLethal()}{clearNonLethal()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::clear\+Non\+Lethal (\begin{DoxyParamCaption}\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{double}]{w\+\_\+size\+\_\+x,  }\item[{double}]{w\+\_\+size\+\_\+y,  }\item[{bool}]{clear\+\_\+no\+\_\+info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_ae0f13b98d89b26ab2283882cae023e04_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_abd5944de6300c41e539f745c71dbf00d}\label{classcostmap__2d_1_1_voxel_layer_abd5944de6300c41e539f745c71dbf00d}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!dist@{dist}}
+\index{dist@{dist}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{dist()}{dist()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Voxel\+Layer\+::dist (\begin{DoxyParamCaption}\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{z0,  }\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{z1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_abd5944de6300c41e539f745c71dbf00d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a3987d72bcc1891335c474b060e404329}\label{classcostmap__2d_1_1_voxel_layer_a3987d72bcc1891335c474b060e404329}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!isDiscretized@{isDiscretized}}
+\index{isDiscretized@{isDiscretized}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{isDiscretized()}{isDiscretized()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Voxel\+Layer\+::is\+Discretized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a10137142c39215dae8d252d6325e1992}\label{classcostmap__2d_1_1_voxel_layer_a10137142c39215dae8d252d6325e1992}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!mapToWorld3D@{mapToWorld3D}}
+\index{mapToWorld3D@{mapToWorld3D}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{mapToWorld3D()}{mapToWorld3D()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::map\+To\+World3D (\begin{DoxyParamCaption}\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my,  }\item[{unsigned int}]{mz,  }\item[{double \&}]{wx,  }\item[{double \&}]{wy,  }\item[{double \&}]{wz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a0528c59b3cbe4c1b81748284ae0a3dc5}\label{classcostmap__2d_1_1_voxel_layer_a0528c59b3cbe4c1b81748284ae0a3dc5}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!matchSize@{matchSize}}
+\index{matchSize@{matchSize}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{matchSize()}{matchSize()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::match\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implement this to make this layer match the size of the parent costmap. 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a9260d210630b6522cad87397506f9696}{costmap\+\_\+2d\+::\+Costmap\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a0528c59b3cbe4c1b81748284ae0a3dc5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a0528c59b3cbe4c1b81748284ae0a3dc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a7b0d5249f27fd757f206493b491fd37a}\label{classcostmap__2d_1_1_voxel_layer_a7b0d5249f27fd757f206493b491fd37a}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a370822e3b19d717ef04311b7b967f496}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a7b0d5249f27fd757f206493b491fd37a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a6f7c914d410df715e01253b3584d9f21}\label{classcostmap__2d_1_1_voxel_layer_a6f7c914d410df715e01253b3584d9f21}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!raytraceFreespace@{raytraceFreespace}}
+\index{raytraceFreespace@{raytraceFreespace}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{raytraceFreespace()}{raytraceFreespace()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::raytrace\+Freespace (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} \&}]{clearing\+\_\+observation,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+根据单次的观测来清除自由空间 
+
+
+\begin{DoxyParams}{参数}
+{\em clearing\+\_\+observation} & 用于raytrace的观测 \\
+\hline
+{\em min\+\_\+x} & \\
+\hline
+{\em min\+\_\+y} & \\
+\hline
+{\em max\+\_\+x} & \\
+\hline
+{\em max\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a50dac229133e7c22981b0c7e0eafc910}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a6f7c914d410df715e01253b3584d9f21_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a6f7c914d410df715e01253b3584d9f21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a2361abd50823db1734c1cc05a70d0c97}\label{classcostmap__2d_1_1_voxel_layer_a2361abd50823db1734c1cc05a70d0c97}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{costmap\+\_\+2d\+::\+Voxel\+Plugin\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a2361abd50823db1734c1cc05a70d0c97_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a2361abd50823db1734c1cc05a70d0c97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_af5f57588c57a8a5c8dff065b5a76a0db}\label{classcostmap__2d_1_1_voxel_layer_af5f57588c57a8a5c8dff065b5a76a0db}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!reset@{reset}}
+\index{reset@{reset}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a9eca6114b3d54c93504058a1754103e4}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_af5f57588c57a8a5c8dff065b5a76a0db_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a56c9a252631b5d4af75c1d17eac8e052}\label{classcostmap__2d_1_1_voxel_layer_a56c9a252631b5d4af75c1d17eac8e052}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!resetMaps@{resetMaps}}
+\index{resetMaps@{resetMaps}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{resetMaps()}{resetMaps()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::reset\+Maps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Resets the costmap and static\+\_\+map to be unknown space 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ab4424e85f6daaf91eaf455e4bb241c19}{costmap\+\_\+2d\+::\+Costmap2D}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a56c9a252631b5d4af75c1d17eac8e052_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a56c9a252631b5d4af75c1d17eac8e052_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a7e9b75bd9cee13aa9f893a17d549fbee}\label{classcostmap__2d_1_1_voxel_layer_a7e9b75bd9cee13aa9f893a17d549fbee}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!setupDynamicReconfigure@{setupDynamicReconfigure}}
+\index{setupDynamicReconfigure@{setupDynamicReconfigure}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{setupDynamicReconfigure()}{setupDynamicReconfigure()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::setup\+Dynamic\+Reconfigure (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a8a24f6bb0bd8600154c21af4638708c2}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a7e9b75bd9cee13aa9f893a17d549fbee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_ab28185cd71c8e42f72880b779ef08ae2}\label{classcostmap__2d_1_1_voxel_layer_ab28185cd71c8e42f72880b779ef08ae2}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a1bfef13f020e8aa64a33743f72824ebd}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_ab28185cd71c8e42f72880b779ef08ae2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a91dc901da59c768aea0b25037bf46fef}\label{classcostmap__2d_1_1_voxel_layer_a91dc901da59c768aea0b25037bf46fef}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!updateOrigin@{updateOrigin}}
+\index{updateOrigin@{updateOrigin}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{updateOrigin()}{updateOrigin()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Voxel\+Layer\+::update\+Origin (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+origin\+\_\+x,  }\item[{double}]{new\+\_\+origin\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move the origin of the costmap to a new location.... keeping data when it can 
+
+
+\begin{DoxyParams}{参数}
+{\em new\+\_\+origin\+\_\+x} & The x coordinate of the new origin \\
+\hline
+{\em new\+\_\+origin\+\_\+y} & The y coordinate of the new origin \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a5ca05c95f95e1408ca9e23d2e7f8987a}{costmap\+\_\+2d\+::\+Costmap2D}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a91dc901da59c768aea0b25037bf46fef_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a91dc901da59c768aea0b25037bf46fef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a0c310e849291ea0c2cde7ca7b3a9e1e1}\label{classcostmap__2d_1_1_voxel_layer_a0c310e849291ea0c2cde7ca7b3a9e1e1}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!worldToMap3D@{worldToMap3D}}
+\index{worldToMap3D@{worldToMap3D}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{worldToMap3D()}{worldToMap3D()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Voxel\+Layer\+::world\+To\+Map3D (\begin{DoxyParamCaption}\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{double}]{wz,  }\item[{unsigned int \&}]{mx,  }\item[{unsigned int \&}]{my,  }\item[{unsigned int \&}]{mz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_a0c310e849291ea0c2cde7ca7b3a9e1e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_afe388a3645ce14998d2ae2a98a166ad0}\label{classcostmap__2d_1_1_voxel_layer_afe388a3645ce14998d2ae2a98a166ad0}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!worldToMap3DFloat@{worldToMap3DFloat}}
+\index{worldToMap3DFloat@{worldToMap3DFloat}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{worldToMap3DFloat()}{worldToMap3DFloat()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Voxel\+Layer\+::world\+To\+Map3\+DFloat (\begin{DoxyParamCaption}\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{double}]{wz,  }\item[{double \&}]{mx,  }\item[{double \&}]{my,  }\item[{double \&}]{mz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_voxel_layer_afe388a3645ce14998d2ae2a98a166ad0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a23e8e84e92f684354a7c2a762cf8fa2d}\label{classcostmap__2d_1_1_voxel_layer_a23e8e84e92f684354a7c2a762cf8fa2d}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!clearing\_endpoints\_@{clearing\_endpoints\_}}
+\index{clearing\_endpoints\_@{clearing\_endpoints\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{clearing\_endpoints\_}{clearing\_endpoints\_}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Point\+Cloud costmap\+\_\+2d\+::\+Voxel\+Layer\+::clearing\+\_\+endpoints\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_ac1981d52f95e49a18b1b01324695b98f}\label{classcostmap__2d_1_1_voxel_layer_ac1981d52f95e49a18b1b01324695b98f}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!clearing\_endpoints\_pub\_@{clearing\_endpoints\_pub\_}}
+\index{clearing\_endpoints\_pub\_@{clearing\_endpoints\_pub\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{clearing\_endpoints\_pub\_}{clearing\_endpoints\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher costmap\+\_\+2d\+::\+Voxel\+Layer\+::clearing\+\_\+endpoints\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a2691efbeed67c0505dcbf30b32de6bd2}\label{classcostmap__2d_1_1_voxel_layer_a2691efbeed67c0505dcbf30b32de6bd2}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!mark\_threshold\_@{mark\_threshold\_}}
+\index{mark\_threshold\_@{mark\_threshold\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{mark\_threshold\_}{mark\_threshold\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Voxel\+Layer\+::mark\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_aad266904a064b8ad6b405069247197c7}\label{classcostmap__2d_1_1_voxel_layer_aad266904a064b8ad6b405069247197c7}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!origin\_z\_@{origin\_z\_}}
+\index{origin\_z\_@{origin\_z\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{origin\_z\_}{origin\_z\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Voxel\+Layer\+::origin\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_adc6784f95a286962ca829f2b44a4bde5}\label{classcostmap__2d_1_1_voxel_layer_adc6784f95a286962ca829f2b44a4bde5}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!publish\_voxel\_@{publish\_voxel\_}}
+\index{publish\_voxel\_@{publish\_voxel\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{publish\_voxel\_}{publish\_voxel\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Voxel\+Layer\+::publish\+\_\+voxel\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a2e2db3f79b15d5de8cedb620ee9f7ac0}\label{classcostmap__2d_1_1_voxel_layer_a2e2db3f79b15d5de8cedb620ee9f7ac0}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!size\_z\_@{size\_z\_}}
+\index{size\_z\_@{size\_z\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{size\_z\_}{size\_z\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Voxel\+Layer\+::size\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_a148fc0c859ad2f91a38da4e0f9b221d7}\label{classcostmap__2d_1_1_voxel_layer_a148fc0c859ad2f91a38da4e0f9b221d7}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!unknown\_threshold\_@{unknown\_threshold\_}}
+\index{unknown\_threshold\_@{unknown\_threshold\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{unknown\_threshold\_}{unknown\_threshold\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Voxel\+Layer\+::unknown\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_ac069771fd6860767a629f5ac0ab833a4}\label{classcostmap__2d_1_1_voxel_layer_ac069771fd6860767a629f5ac0ab833a4}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!voxel\_dsrv\_@{voxel\_dsrv\_}}
+\index{voxel\_dsrv\_@{voxel\_dsrv\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{voxel\_dsrv\_}{voxel\_dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$costmap\+\_\+2d\+::\+Voxel\+Plugin\+Config$>$$\ast$ costmap\+\_\+2d\+::\+Voxel\+Layer\+::voxel\+\_\+dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_aa91df83ab59e1b9ecfbe9f4991bd2eef}\label{classcostmap__2d_1_1_voxel_layer_aa91df83ab59e1b9ecfbe9f4991bd2eef}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!voxel\_grid\_@{voxel\_grid\_}}
+\index{voxel\_grid\_@{voxel\_grid\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{voxel\_grid\_}{voxel\_grid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid}{voxel\+\_\+grid\+::\+Voxel\+Grid}} costmap\+\_\+2d\+::\+Voxel\+Layer\+::voxel\+\_\+grid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_abc6ca1174128cfc2aca90817128f8ee0}\label{classcostmap__2d_1_1_voxel_layer_abc6ca1174128cfc2aca90817128f8ee0}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!voxel\_pub\_@{voxel\_pub\_}}
+\index{voxel\_pub\_@{voxel\_pub\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{voxel\_pub\_}{voxel\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher costmap\+\_\+2d\+::\+Voxel\+Layer\+::voxel\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_voxel_layer_ac5493b9ea645719260900007cf28e610}\label{classcostmap__2d_1_1_voxel_layer_ac5493b9ea645719260900007cf28e610}} 
+\index{costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}!z\_resolution\_@{z\_resolution\_}}
+\index{z\_resolution\_@{z\_resolution\_}!costmap\_2d::VoxelLayer@{costmap\_2d::VoxelLayer}}
+\doxysubsubsection{\texorpdfstring{z\_resolution\_}{z\_resolution\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Voxel\+Layer\+::z\+\_\+resolution\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{voxel__layer_8h}{voxel\+\_\+layer.\+h}}\item 
+costmap\+\_\+2d/plugins/\mbox{\hyperlink{voxel__layer_8cpp}{voxel\+\_\+layer.\+cpp}}\end{DoxyCompactItemize}

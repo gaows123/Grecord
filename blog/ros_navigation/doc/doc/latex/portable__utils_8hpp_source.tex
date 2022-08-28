@@ -1,0 +1,34 @@
+\hypertarget{portable__utils_8hpp_source}{}\doxysection{portable\+\_\+utils.\+hpp}
+\label{portable__utils_8hpp_source}\index{amcl/src/include/portable\_utils.hpp@{amcl/src/include/portable\_utils.hpp}}
+\mbox{\hyperlink{portable__utils_8hpp}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PORTABLE\_UTILS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PORTABLE\_UTILS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{7 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef HAVE\_DRAND48}}
+\DoxyCodeLine{11 \textcolor{comment}{// Some system (e.g., Windows) doesn't come with drand48(), srand48().}}
+\DoxyCodeLine{12 \textcolor{comment}{// Use rand, and srand for such system.}}
+\DoxyCodeLine{13 \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{portable__utils_8hpp_a134edc5d76023c865d406094d70a9764}{drand48}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} ((\textcolor{keywordtype}{double})rand())/RAND\_MAX;}
+\DoxyCodeLine{16 \}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{portable__utils_8hpp_abface9f370a8b39282c86e1d7d27f332}{srand48}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} seedval)}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     srand(seedval);}
+\DoxyCodeLine{21 \}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{25 \}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

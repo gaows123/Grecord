@@ -1,0 +1,211 @@
+\hypertarget{classrotate__recovery_1_1_rotate_recovery}{}\doxysection{rotate\+\_\+recovery\+::Rotate\+Recovery类 参考}
+\label{classrotate__recovery_1_1_rotate_recovery}\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+
+
+恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物  
+
+
+
+
+{\ttfamily \#include $<$rotate\+\_\+recovery.\+h$>$}
+
+
+
+类 rotate\+\_\+recovery\+::Rotate\+Recovery 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classrotate__recovery_1_1_rotate_recovery__inherit__graph}
+\end{center}
+\end{figure}
+
+
+rotate\+\_\+recovery\+::Rotate\+Recovery 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrotate__recovery_1_1_rotate_recovery__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a783abdd0af0c982eeaac51f8032005c7}{Rotate\+Recovery}} ()
+\begin{DoxyCompactList}\small\item\em Constructor, make sure to call initialize in addition to actually initialize the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$local\+\_\+costmap)
+\begin{DoxyCompactList}\small\item\em 恢复行为的初始化函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9}{run\+Behavior}} ()
+\begin{DoxyCompactList}\small\item\em 启动旋转恢复行为 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a71067cd6e9b261a37b6cd52ac33e41b4}{$\sim$\+Rotate\+Recovery}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a74a92df840d2e5fa5cadd27250fcd7ca}{local\+\_\+costmap\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a90c717275985636f3154ee08bc726e45}{initialized\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_aa1b541b963d3409168b6c428445b3ff6}{sim\+\_\+granularity\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a89ed5b08934db5665f7e5a5ae7435f95}{min\+\_\+rotational\+\_\+vel\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a475480288dc80dd1ddc83cea95927782}{max\+\_\+rotational\+\_\+vel\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a83a0bfe2d336bc45afe710d4a906d8d5}{acc\+\_\+lim\+\_\+th\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a31ee929ac22fcd7b304db75787c00645}{tolerance\+\_\+}}
+\item 
+double \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_ab3734f38f8aebbacd7b50b0293d00b22}{frequency\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_costmap_model}{base\+\_\+local\+\_\+planner\+::\+Costmap\+Model}} $\ast$ \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a14f4f958977686f37a135f1e05d6bdda}{world\+\_\+model\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a783abdd0af0c982eeaac51f8032005c7}\label{classrotate__recovery_1_1_rotate_recovery_a783abdd0af0c982eeaac51f8032005c7}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!RotateRecovery@{RotateRecovery}}
+\index{RotateRecovery@{RotateRecovery}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{RotateRecovery()}{RotateRecovery()}}
+{\footnotesize\ttfamily rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::\+Rotate\+Recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor, make sure to call initialize in addition to actually initialize the object 
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a71067cd6e9b261a37b6cd52ac33e41b4}\label{classrotate__recovery_1_1_rotate_recovery_a71067cd6e9b261a37b6cd52ac33e41b4}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!````~RotateRecovery@{$\sim$RotateRecovery}}
+\index{````~RotateRecovery@{$\sim$RotateRecovery}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{$\sim$RotateRecovery()}{~RotateRecovery()}}
+{\footnotesize\ttfamily rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::$\sim$\+Rotate\+Recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+析构函数 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204}\label{classrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!initialize@{initialize}}
+\index{initialize@{initialize}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{local\+\_\+costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+恢复行为的初始化函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & Namespace used in initialization \\
+\hline
+{\em tf} & (unused) \\
+\hline
+{\em global\+\_\+costmap} & (unused) \\
+\hline
+{\em local\+\_\+costmap} & 指向局部代价地图的指针 \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_recovery_behavior_ab35332f465b3d2509c9e73d4d95c7b5d}{nav\+\_\+core\+::\+Recovery\+Behavior}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9}\label{classrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!runBehavior@{runBehavior}}
+\index{runBehavior@{runBehavior}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{runBehavior()}{runBehavior()}}
+{\footnotesize\ttfamily void rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::run\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+启动旋转恢复行为 
+
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_recovery_behavior_a6d8e1eec7a483e530e48b2593ea4fc03}{nav\+\_\+core\+::\+Recovery\+Behavior}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a83a0bfe2d336bc45afe710d4a906d8d5}\label{classrotate__recovery_1_1_rotate_recovery_a83a0bfe2d336bc45afe710d4a906d8d5}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!acc\_lim\_th\_@{acc\_lim\_th\_}}
+\index{acc\_lim\_th\_@{acc\_lim\_th\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{acc\_lim\_th\_}{acc\_lim\_th\_}}
+{\footnotesize\ttfamily double rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::acc\+\_\+lim\+\_\+th\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_ab3734f38f8aebbacd7b50b0293d00b22}\label{classrotate__recovery_1_1_rotate_recovery_ab3734f38f8aebbacd7b50b0293d00b22}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!frequency\_@{frequency\_}}
+\index{frequency\_@{frequency\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{frequency\_}{frequency\_}}
+{\footnotesize\ttfamily double rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::frequency\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a90c717275985636f3154ee08bc726e45}\label{classrotate__recovery_1_1_rotate_recovery_a90c717275985636f3154ee08bc726e45}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a74a92df840d2e5fa5cadd27250fcd7ca}\label{classrotate__recovery_1_1_rotate_recovery_a74a92df840d2e5fa5cadd27250fcd7ca}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!local\_costmap\_@{local\_costmap\_}}
+\index{local\_costmap\_@{local\_costmap\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{local\_costmap\_}{local\_costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::local\+\_\+costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a475480288dc80dd1ddc83cea95927782}\label{classrotate__recovery_1_1_rotate_recovery_a475480288dc80dd1ddc83cea95927782}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!max\_rotational\_vel\_@{max\_rotational\_vel\_}}
+\index{max\_rotational\_vel\_@{max\_rotational\_vel\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{max\_rotational\_vel\_}{max\_rotational\_vel\_}}
+{\footnotesize\ttfamily double rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::max\+\_\+rotational\+\_\+vel\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a89ed5b08934db5665f7e5a5ae7435f95}\label{classrotate__recovery_1_1_rotate_recovery_a89ed5b08934db5665f7e5a5ae7435f95}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!min\_rotational\_vel\_@{min\_rotational\_vel\_}}
+\index{min\_rotational\_vel\_@{min\_rotational\_vel\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{min\_rotational\_vel\_}{min\_rotational\_vel\_}}
+{\footnotesize\ttfamily double rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::min\+\_\+rotational\+\_\+vel\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_aa1b541b963d3409168b6c428445b3ff6}\label{classrotate__recovery_1_1_rotate_recovery_aa1b541b963d3409168b6c428445b3ff6}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!sim\_granularity\_@{sim\_granularity\_}}
+\index{sim\_granularity\_@{sim\_granularity\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{sim\_granularity\_}{sim\_granularity\_}}
+{\footnotesize\ttfamily double rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::sim\+\_\+granularity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a31ee929ac22fcd7b304db75787c00645}\label{classrotate__recovery_1_1_rotate_recovery_a31ee929ac22fcd7b304db75787c00645}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!tolerance\_@{tolerance\_}}
+\index{tolerance\_@{tolerance\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{tolerance\_}{tolerance\_}}
+{\footnotesize\ttfamily double rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrotate__recovery_1_1_rotate_recovery_a14f4f958977686f37a135f1e05d6bdda}\label{classrotate__recovery_1_1_rotate_recovery_a14f4f958977686f37a135f1e05d6bdda}} 
+\index{rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}!world\_model\_@{world\_model\_}}
+\index{world\_model\_@{world\_model\_}!rotate\_recovery::RotateRecovery@{rotate\_recovery::RotateRecovery}}
+\doxysubsubsection{\texorpdfstring{world\_model\_}{world\_model\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_costmap_model}{base\+\_\+local\+\_\+planner\+::\+Costmap\+Model}}$\ast$ rotate\+\_\+recovery\+::\+Rotate\+Recovery\+::world\+\_\+model\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+rotate\+\_\+recovery/include/rotate\+\_\+recovery/\mbox{\hyperlink{rotate__recovery_8h}{rotate\+\_\+recovery.\+h}}\item 
+rotate\+\_\+recovery/src/\mbox{\hyperlink{rotate__recovery_8cpp}{rotate\+\_\+recovery.\+cpp}}\end{DoxyCompactItemize}

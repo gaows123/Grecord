@@ -1,0 +1,4 @@
+<map id="base_local_planner::MapGridCostFunction::obstacleCosts" name="base_local_planner::MapGridCostFunction::obstacleCosts">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,161,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="209,13,380,54"/>
+</map>

@@ -1,0 +1,167 @@
+\hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner}{}\doxysection{base\+\_\+local\+\_\+planner\+::Simple\+Scored\+Sampling\+Planner类 参考}
+\label{classbase__local__planner_1_1_simple_scored_sampling_planner}\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+
+
+根据给定的产生器和代价函数计算一个局部轨迹.\+这里假设代价越小越好同时负值的代价意味着无穷大  
+
+
+
+
+{\ttfamily \#include $<$simple\+\_\+scored\+\_\+sampling\+\_\+planner.\+h$>$}
+
+
+
+类 base\+\_\+local\+\_\+planner\+::Simple\+Scored\+Sampling\+Planner 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classbase__local__planner_1_1_simple_scored_sampling_planner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+base\+\_\+local\+\_\+planner\+::Simple\+Scored\+Sampling\+Planner 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classbase__local__planner_1_1_simple_scored_sampling_planner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a4dffffbf7e5d4c1e4d5865918c1c1657}{$\sim$\+Simple\+Scored\+Sampling\+Planner}} ()
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ac8bab73a6a79cdd949422a8bed79f78d}{Simple\+Scored\+Sampling\+Planner}} ()
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a4e587086b74e151e38c6a81905924772}{Simple\+Scored\+Sampling\+Planner}} (std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator}{Trajectory\+Sample\+Generator}} $\ast$ $>$ gen\+\_\+list, std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function}{Trajectory\+Cost\+Function}} $\ast$ $>$ \&critics, int max\+\_\+samples=-\/1)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ac11a2d2fbf69d6ed55f720c5ebe1b541}{score\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj, double best\+\_\+traj\+\_\+cost)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ad1a365b0504879a2e57f1a9d713acdc4}{find\+Best\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj, std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} $>$ $\ast$all\+\_\+explored=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator}{Trajectory\+Sample\+Generator}} $\ast$ $>$ \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a0e8aa59b1ee780643bf69a1a5c244f73}{gen\+\_\+list\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function}{Trajectory\+Cost\+Function}} $\ast$ $>$ \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a4fb36e288fad8bb6a817faa12df4d35c}{critics\+\_\+}}
+\item 
+int \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a0ab97bd66287f1d2258ce5f7a70e83ea}{max\+\_\+samples\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+根据给定的产生器和代价函数计算一个局部轨迹.\+这里假设代价越小越好同时负值的代价意味着无穷大 
+
+Trajectory\+Search接口的简单和鲁棒的实现，如果想用更有效率的搜索，可以考虑search heuristics, parallel search 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_a4dffffbf7e5d4c1e4d5865918c1c1657}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_a4dffffbf7e5d4c1e4d5865918c1c1657}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!````~SimpleScoredSamplingPlanner@{$\sim$SimpleScoredSamplingPlanner}}
+\index{````~SimpleScoredSamplingPlanner@{$\sim$SimpleScoredSamplingPlanner}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{$\sim$SimpleScoredSamplingPlanner()}{~SimpleScoredSamplingPlanner()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::$\sim$\+Simple\+Scored\+Sampling\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_ac8bab73a6a79cdd949422a8bed79f78d}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_ac8bab73a6a79cdd949422a8bed79f78d}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!SimpleScoredSamplingPlanner@{SimpleScoredSamplingPlanner}}
+\index{SimpleScoredSamplingPlanner@{SimpleScoredSamplingPlanner}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{SimpleScoredSamplingPlanner()}{SimpleScoredSamplingPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::\+Simple\+Scored\+Sampling\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_a4e587086b74e151e38c6a81905924772}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_a4e587086b74e151e38c6a81905924772}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!SimpleScoredSamplingPlanner@{SimpleScoredSamplingPlanner}}
+\index{SimpleScoredSamplingPlanner@{SimpleScoredSamplingPlanner}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{SimpleScoredSamplingPlanner()}{SimpleScoredSamplingPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::\+Simple\+Scored\+Sampling\+Planner (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator}{Trajectory\+Sample\+Generator}} $\ast$ $>$}]{gen\+\_\+list,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function}{Trajectory\+Cost\+Function}} $\ast$ $>$ \&}]{critics,  }\item[{int}]{max\+\_\+samples = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+处理一系列的产生器和评分器。评分器返回代价大于0，如果小于0意味着无效路径 产生器不是之前的那个，是fallback产生器，只有在先前的产生器没有找到有效路径时，他们才去计算 将会用到每个产生器直到不在返回局部路径或者计数满足了要求 然后重置计数并且尝试列表中的下一个 如果max\+\_\+samples = -\/1 (默认值)：每一个采样规划器会持续的调用产生器直到产生器遍历了所有的样本 Takes a list of generators and critics. Critics return costs \texorpdfstring{$>$}{>} 0, or negative costs for invalid trajectories. Generators other than the first are fallback generators, meaning they only get to generate if the previous generator did not find a valid trajectory. Will use every generator until it stops returning trajectories or count reaches max\+\_\+samples. Then resets count and tries for the next in the list. passing max\+\_\+samples = -\/1 (default)\+: Each Sampling planner will continue to call generator until generator runs out of samples (or forever if that never happens) 
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_ad1a365b0504879a2e57f1a9d713acdc4}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_ad1a365b0504879a2e57f1a9d713acdc4}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!findBestTrajectory@{findBestTrajectory}}
+\index{findBestTrajectory@{findBestTrajectory}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{findBestTrajectory()}{findBestTrajectory()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::find\+Best\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&}]{traj,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} $>$ $\ast$}]{all\+\_\+explored = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calls generator until generator has no more samples or max\+\_\+samples is reached. For each generated traj, calls critics in turn. If any critic returns negative value, that value is assumed as costs, else the costs are the sum of all critics result. Returns true and sets the traj parameter to the first trajectory with minimal non-\/negative costs if sampling yields trajectories with non-\/negative costs, else returns false.
+
+
+\begin{DoxyParams}{参数}
+{\em traj} & The container to write the result to \\
+\hline
+{\em all\+\_\+explored} & pass NULL or a container to collect all trajectories for debugging (has a penalty) \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_search_a75fd0f1e0c72b6ba6f6edabe569e8271}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Search}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_scored_sampling_planner_ad1a365b0504879a2e57f1a9d713acdc4_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_scored_sampling_planner_ad1a365b0504879a2e57f1a9d713acdc4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_ac11a2d2fbf69d6ed55f720c5ebe1b541}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_ac11a2d2fbf69d6ed55f720c5ebe1b541}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!scoreTrajectory@{scoreTrajectory}}
+\index{scoreTrajectory@{scoreTrajectory}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{scoreTrajectory()}{scoreTrajectory()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::score\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&}]{traj,  }\item[{double}]{best\+\_\+traj\+\_\+cost }\end{DoxyParamCaption})}
+
+runs all scoring functions over the trajectory creating a weigthed sum of positive costs, aborting as soon as a negative cost are found or costs greater than positive best\+\_\+traj\+\_\+cost accumulated 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_scored_sampling_planner_ac11a2d2fbf69d6ed55f720c5ebe1b541_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_simple_scored_sampling_planner_ac11a2d2fbf69d6ed55f720c5ebe1b541_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_a4fb36e288fad8bb6a817faa12df4d35c}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_a4fb36e288fad8bb6a817faa12df4d35c}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!critics\_@{critics\_}}
+\index{critics\_@{critics\_}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{critics\_}{critics\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function}{Trajectory\+Cost\+Function}}$\ast$$>$ base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::critics\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_a0e8aa59b1ee780643bf69a1a5c244f73}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_a0e8aa59b1ee780643bf69a1a5c244f73}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!gen\_list\_@{gen\_list\_}}
+\index{gen\_list\_@{gen\_list\_}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{gen\_list\_}{gen\_list\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator}{Trajectory\+Sample\+Generator}}$\ast$$>$ base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::gen\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_simple_scored_sampling_planner_a0ab97bd66287f1d2258ce5f7a70e83ea}\label{classbase__local__planner_1_1_simple_scored_sampling_planner_a0ab97bd66287f1d2258ce5f7a70e83ea}} 
+\index{base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}!max\_samples\_@{max\_samples\_}}
+\index{max\_samples\_@{max\_samples\_}!base\_local\_planner::SimpleScoredSamplingPlanner@{base\_local\_planner::SimpleScoredSamplingPlanner}}
+\doxysubsubsection{\texorpdfstring{max\_samples\_}{max\_samples\_}}
+{\footnotesize\ttfamily int base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner\+::max\+\_\+samples\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{simple__scored__sampling__planner_8h}{simple\+\_\+scored\+\_\+sampling\+\_\+planner.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{simple__scored__sampling__planner_8cpp}{simple\+\_\+scored\+\_\+sampling\+\_\+planner.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{planar__laser__scan_8h_source}{}\doxysection{planar\+\_\+laser\+\_\+scan.\+h}
+\label{planar__laser__scan_8h_source}\index{base\_local\_planner/include/base\_local\_planner/planar\_laser\_scan.h@{base\_local\_planner/include/base\_local\_planner/planar\_laser\_scan.h}}
+\mbox{\hyperlink{planar__laser__scan_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef TRAJECTORY\_ROLLOUT\_PLANAR\_LASER\_SCAN\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define TRAJECTORY\_ROLLOUT\_PLANAR\_LASER\_SCAN\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <geometry\_msgs/Point32.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <sensor\_msgs/PointCloud.h>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{48   \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan}{PlanarLaserScan}} \{}
+\DoxyCodeLine{49     \textcolor{keyword}{public}:}
+\DoxyCodeLine{50       \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan_a87f29de40d0656ac69ae45bc8bdacdfa}{PlanarLaserScan}}() \{\}}
+\DoxyCodeLine{51       geometry\_msgs::Point32 \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan_a8a7c9dfb5c0975314fdadcdd6945c649}{origin}};}
+\DoxyCodeLine{52       sensor\_msgs::PointCloud \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan_aa2ccb24be3682bc073ec36434c47c2e6}{cloud}};}
+\DoxyCodeLine{53       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan_a52f69fb966a09c01bbf5e72667ea1dc8}{angle\_min}}, \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan_abbbf0894a7df63fec0bcb887199ad6f3}{angle\_max}}, \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan_a80995db924e221f254c60a0d5fb05c98}{angle\_increment}};}
+\DoxyCodeLine{54   \};}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

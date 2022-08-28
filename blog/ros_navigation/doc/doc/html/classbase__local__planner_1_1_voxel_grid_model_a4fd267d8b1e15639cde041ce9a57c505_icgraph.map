@@ -1,0 +1,5 @@
+<map id="base_local_planner::VoxelGridModel::pointCost" name="base_local_planner::VoxelGridModel::pointCost">
+<area shape="rect" id="node1" title="Checks the cost of a point in the costmap" alt="" coords="483,5,668,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_voxel_grid_model.html#a5d23209def60ddb1e49b2ab5b38b57b1" title="Rasterizes a line in the costmap grid and checks for collisions" alt="" coords="257,5,435,47"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_voxel_grid_model.html#affcef4b1c4c95dd4209d36bd0d24fc14" title="Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the g..." alt="" coords="5,5,209,47"/>
+</map>

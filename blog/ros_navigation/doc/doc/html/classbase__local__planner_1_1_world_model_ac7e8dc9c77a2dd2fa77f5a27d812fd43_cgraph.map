@@ -1,0 +1,7 @@
+<map id="base_local_planner::WorldModel::footprintCost" name="base_local_planner::WorldModel::footprintCost">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,185,80"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#a6eeafbd231ad1ec2de69e61754773742" title="Calculate the extreme distances for the footprint" alt="" coords="236,5,411,47"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="233,71,413,112"/>
+<area shape="rect" id="node3" href="$costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="620,13,691,39"/>
+<area shape="rect" id="node4" href="$costmap__math_8cpp.html#a31fe9c9633687b41b7c65a18dcab85f9" title=" " alt="" coords="461,38,572,65"/>
+</map>

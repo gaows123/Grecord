@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/src/amcl/map/map.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_c8302149f3d926a37c0623aef124ef9c.html">src</a></li><li class="navelem"><a class="el" href="dir_709eacdfadde2a606107dabe152f0121.html">amcl</a></li><li class="navelem"><a class="el" href="dir_166050d027104fb79e6acf6c70265c3f.html">map</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">map.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="map_8h_source.html">amcl/map/map.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+map.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8c__incl.png" border="0" usemap="#aamcl_2src_2amcl_2map_2map_8c" alt=""/></div>
+<map name="aamcl_2src_2amcl_2map_2map_8c" id="aamcl_2src_2amcl_2map_2map_8c">
+<area shape="rect" title=" " alt="" coords="176,5,349,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" title=" " alt="" coords="99,80,162,107"/>
+<area shape="rect" title=" " alt="" coords="187,80,251,107"/>
+<area shape="rect" title=" " alt="" coords="275,80,341,107"/>
+<area shape="rect" title=" " alt="" coords="365,80,427,107"/>
+<area shape="rect" href="map_8h.html" title=" " alt="" coords="451,80,570,107"/>
+<area shape="rect" title=" " alt="" coords="478,155,543,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a69abcca9449dcd0b4a74db33827e5a6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#a69abcca9449dcd0b4a74db33827e5a6c">map_alloc</a> (void)</td></tr>
+<tr class="separator:a69abcca9449dcd0b4a74db33827e5a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24d01dffc5a376977089830b93c9254"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#ae24d01dffc5a376977089830b93c9254">map_free</a> (<a class="el" href="structmap__t.html">map_t</a> *map)</td></tr>
+<tr class="separator:ae24d01dffc5a376977089830b93c9254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2856320c165a29ac7ccd53d567030a9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmap__cell__t.html">map_cell_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8c.html#a2856320c165a29ac7ccd53d567030a9b">map_get_cell</a> (<a class="el" href="structmap__t.html">map_t</a> *map, double ox, double oy, double oa)</td></tr>
+<tr class="separator:a2856320c165a29ac7ccd53d567030a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a69abcca9449dcd0b4a74db33827e5a6c" name="a69abcca9449dcd0b4a74db33827e5a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69abcca9449dcd0b4a74db33827e5a6c">&#9670;&nbsp;</a></span>map_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmap__t.html">map_t</a> * map_alloc </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8c_a69abcca9449dcd0b4a74db33827e5a6c_icgraph.png" border="0" usemap="#amap_8c_a69abcca9449dcd0b4a74db33827e5a6c_icgraph" alt=""/></div>
+<map name="amap_8c_a69abcca9449dcd0b4a74db33827e5a6c_icgraph" id="amap_8c_a69abcca9449dcd0b4a74db33827e5a6c_icgraph">
+<area shape="rect" title=" " alt="" coords="896,56,977,83"/>
+<area shape="rect" href="class_amcl_node.html#a2a81d4aceba212bde82ce4044d18a55d" title=" " alt="" coords="689,56,848,83"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,56,641,83"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,56,156,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae24d01dffc5a376977089830b93c9254" name="ae24d01dffc5a376977089830b93c9254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24d01dffc5a376977089830b93c9254">&#9670;&nbsp;</a></span>map_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8c_ae24d01dffc5a376977089830b93c9254_icgraph.png" border="0" usemap="#amap_8c_ae24d01dffc5a376977089830b93c9254_icgraph" alt=""/></div>
+<map name="amap_8c_ae24d01dffc5a376977089830b93c9254_icgraph" id="amap_8c_ae24d01dffc5a376977089830b93c9254_icgraph">
+<area shape="rect" title=" " alt="" coords="936,81,1012,108"/>
+<area shape="rect" href="class_amcl_node.html#a6ee0c6604650ae544c08be36df176e4d" title=" " alt="" coords="689,74,888,115"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,56,641,83"/>
+<area shape="rect" href="class_amcl_node.html#a3aaabb3a67f2a4f8637c64c99e55087e" title=" " alt="" coords="459,107,617,133"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,56,156,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2856320c165a29ac7ccd53d567030a9b" name="a2856320c165a29ac7ccd53d567030a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2856320c165a29ac7ccd53d567030a9b">&#9670;&nbsp;</a></span>map_get_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmap__cell__t.html">map_cell_t</a> * map_get_cell </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

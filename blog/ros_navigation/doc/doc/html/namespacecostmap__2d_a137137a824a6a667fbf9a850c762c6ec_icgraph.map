@@ -1,0 +1,5 @@
+<map id="costmap_2d::toPolygon" name="costmap_2d::toPolygon">
+<area shape="rect" id="node1" title="Convert vector of Points to Polygon msg" alt="" coords="251,57,409,84"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner.html#a3349ee9e66e3943b48a8c75189e1e0cc" title="Return the footprint specification of the robot." alt="" coords="31,5,177,61"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#ae3688f38a8066eb3b6867f224edcc697" title="Returns the current padded footprint as a geometry_msgs::Polygon." alt="" coords="5,86,203,127"/>
+</map>

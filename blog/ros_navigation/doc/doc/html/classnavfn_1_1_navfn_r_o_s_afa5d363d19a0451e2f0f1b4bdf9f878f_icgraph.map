@@ -1,0 +1,5 @@
+<map id="navfn::NavfnROS::mapToWorld" name="navfn::NavfnROS::mapToWorld">
+<area shape="rect" id="node1" title=" " alt="" coords="468,42,673,69"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_navfn_r_o_s.html#ad645a775f99aa2a120bb0b7f6cd08fd5" title="当起始点的potential被计算出来后，计算全局路径 (注意: 要先调用 computePotential)" alt="" coords="244,5,420,47"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_navfn_r_o_s.html#a1925183250dd36115daadd91b14656aa" title="根据目标位姿计算全局路径" alt="" coords="5,42,196,69"/>
+</map>

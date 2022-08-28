@@ -1,0 +1,169 @@
+\hypertarget{trajectory__planner__ros_8h_source}{}\doxysection{trajectory\+\_\+planner\+\_\+ros.\+h}
+\label{trajectory__planner__ros_8h_source}\index{base\_local\_planner/include/base\_local\_planner/trajectory\_planner\_ros.h@{base\_local\_planner/include/base\_local\_planner/trajectory\_planner\_ros.h}}
+\mbox{\hyperlink{trajectory__planner__ros_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef TRAJECTORY\_ROLLOUT\_TRAJECTORY\_PLANNER\_ROS\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define TRAJECTORY\_ROLLOUT\_TRAJECTORY\_PLANNER\_ROS\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__publisher_8h}{costmap\_2d/costmap\_2d\_publisher.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__ros_8h}{costmap\_2d/costmap\_2d\_ros.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{world__model_8h}{base\_local\_planner/world\_model.h}}>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{point__grid_8h}{base\_local\_planner/point\_grid.h}}>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__model_8h}{base\_local\_planner/costmap\_model.h}}>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{voxel__grid__model_8h}{base\_local\_planner/voxel\_grid\_model.h}}>}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__planner_8h}{base\_local\_planner/trajectory\_planner.h}}>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{map__grid__visualizer_8h}{base\_local\_planner/map\_grid\_visualizer.h}}>}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{planar__laser__scan_8h}{base\_local\_planner/planar\_laser\_scan.h}}>}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <nav\_msgs/Odometry.h>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <geometry\_msgs/Twist.h>}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <tf2\_ros/buffer.h>}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#include <angles/angles.h>}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base__local__planner_8h}{nav\_core/base\_local\_planner.h}}>}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/server.h>}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#include <base\_local\_planner/BaseLocalPlannerConfig.h>}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{odometry__helper__ros_8h}{base\_local\_planner/odometry\_helper\_ros.h}}>}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{78   \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s}{TrajectoryPlannerROS}} : \textcolor{keyword}{public} \mbox{\hyperlink{classnav__core_1_1_base_local_planner}{nav\_core::BaseLocalPlanner}} \{}
+\DoxyCodeLine{79     \textcolor{keyword}{public}:}
+\DoxyCodeLine{83       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3b6817c8d9f2a49b00ccdda3bc166548}{TrajectoryPlannerROS}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{91       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3b6817c8d9f2a49b00ccdda3bc166548}{TrajectoryPlannerROS}}(std::string name,}
+\DoxyCodeLine{92                            tf2\_ros::Buffer* tf,}
+\DoxyCodeLine{93                            \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap\_ros);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{101       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03}{initialize}}(std::string name, tf2\_ros::Buffer* tf,}
+\DoxyCodeLine{102           \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap\_ros);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a79384acb51a894dbcec4447bee1ca90f}{\string~TrajectoryPlannerROS}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{114       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af}{computeVelocityCommands}}(geometry\_msgs::Twist\& cmd\_vel);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{121       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934}{setPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& orig\_global\_plan);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123       \textcolor{comment}{// 判断是否到达目标点}}
+\DoxyCodeLine{124       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541}{isGoalReached}}();}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{137       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6}{checkTrajectory}}(\textcolor{keywordtype}{double} vx\_samp, \textcolor{keywordtype}{double} vy\_samp, \textcolor{keywordtype}{double} vtheta\_samp, \textcolor{keywordtype}{bool} update\_map = \textcolor{keyword}{true});}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{150       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5}{scoreTrajectory}}(\textcolor{keywordtype}{double} vx\_samp, \textcolor{keywordtype}{double} vy\_samp, \textcolor{keywordtype}{double} vtheta\_samp, \textcolor{keywordtype}{bool} update\_map = \textcolor{keyword}{true});}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9}{isInitialized}}() \{}
+\DoxyCodeLine{153         \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a49c099ecf00a17b0d01b8dd0707897b8}{initialized\_}};}
+\DoxyCodeLine{154       \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{157       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner}{TrajectoryPlanner}}* \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af232d29db5af486516c48cf10c3b3ad6}{getPlanner}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a46e956dac438ffd88c237d3dd2964869}{tc\_}}; \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     \textcolor{keyword}{private}:}
+\DoxyCodeLine{163       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630}{reconfigureCB}}(BaseLocalPlannerConfig \&config, uint32\_t level);}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{173       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6}{rotateToGoal}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose, \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& robot\_vel, \textcolor{keywordtype}{double} goal\_th, geometry\_msgs::Twist\& cmd\_vel);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{182       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3}{stopWithAccLimits}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose, \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& robot\_vel, geometry\_msgs::Twist\& cmd\_vel);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184       std::vector<double> \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414}{loadYVels}}(ros::NodeHandle node);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b}{sign}}(\textcolor{keywordtype}{double} x)\{}
+\DoxyCodeLine{187         \textcolor{keywordflow}{return} x < 0.0 ? -\/1.0 : 1.0;}
+\DoxyCodeLine{188       \}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190       \mbox{\hyperlink{classbase__local__planner_1_1_world_model}{WorldModel}}* \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5b05092eccb2fb636c597265d5ed40b2}{world\_model\_}}; \textcolor{comment}{// 局部规划器用到的世界模型}}
+\DoxyCodeLine{191       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner}{TrajectoryPlanner}}* \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a46e956dac438ffd88c237d3dd2964869}{tc\_}}; }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193       \textcolor{comment}{// 局部规划器使用的关于代价地图的ROS封装类}}
+\DoxyCodeLine{194       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a88bcbda99e0430a9674784b7e6e552e5}{costmap\_ros\_}};}
+\DoxyCodeLine{195       \textcolor{comment}{// 局部规划器用到的代价地图}}
+\DoxyCodeLine{196       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a91ac556f41430e2f77e4b3e363174955}{costmap\_}};}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198       \textcolor{comment}{// 地图网格可视化代价地图产生的势场}}
+\DoxyCodeLine{199       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{MapGridVisualizer}} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac473c8569b7c79663162376818a2b353}{map\_viz\_}};}
+\DoxyCodeLine{200       \textcolor{comment}{// 用于点云转换}}
+\DoxyCodeLine{201       tf2\_ros::Buffer* \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_afbe6f3cc698dfcc7afb3d89d321e4550}{tf\_}};}
+\DoxyCodeLine{202       \textcolor{comment}{// 全局坐标系}}
+\DoxyCodeLine{203       std::string \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae1ef03662ad6972629e2f40db458ed79}{global\_frame\_}};}
+\DoxyCodeLine{204       \textcolor{comment}{// 传感器的有效感知距离}}
+\DoxyCodeLine{205       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ad870ec0a030496c3f00570d5b7492947}{max\_sensor\_range\_}};}
+\DoxyCodeLine{206       \textcolor{comment}{// 用于得到机器人的速度}}
+\DoxyCodeLine{207       nav\_msgs::Odometry \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1696ab6bd7f735c93a1bc0ed71713f78}{base\_odom\_}};}
+\DoxyCodeLine{208       \textcolor{comment}{// 机器人的基坐标系}}
+\DoxyCodeLine{209       std::string \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae76406da45ddc78af258c3c514edd6f2}{robot\_base\_frame\_}};}
+\DoxyCodeLine{210       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a09ff11c255348f097b206d5bbb407f4d}{rot\_stopped\_velocity\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2d24f42ed1e07067887fd1745b0c13c}{trans\_stopped\_velocity\_}};}
+\DoxyCodeLine{211       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3c00302b7da1fa156f5041ae41c1b493}{xy\_goal\_tolerance\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a21f3bfe629bbe670733042823f49584e}{yaw\_goal\_tolerance\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_aab87187e1f93b2202ca5b2ccdc54a133}{min\_in\_place\_vel\_th\_}};}
+\DoxyCodeLine{212       std::vector<geometry\_msgs::PoseStamped> \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a226445fba5513d89198ff40f8673b1ad}{global\_plan\_}};}
+\DoxyCodeLine{213       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af604f4e53309a3c6bced47e540c22e78}{prune\_plan\_}};}
+\DoxyCodeLine{214       boost::recursive\_mutex \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6b8c9cb6ff03cb4a88ef3c43662bef91}{odom\_lock\_}};}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2942f48b2c9fecff51b1889daf5e5d4}{max\_vel\_th\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a64133d6019a4dcf33eec70a71830ee1c}{min\_vel\_th\_}};}
+\DoxyCodeLine{217       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a56643b042c9ab1f755c01690153b24fb}{acc\_lim\_x\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a69c43326c04a92417c9daaf212ce4bda}{acc\_lim\_y\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a41ba3f1430e5c76121e82fae51d3e8b2}{acc\_lim\_theta\_}};}
+\DoxyCodeLine{218       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae40f0600cfee52046c949523aef364b7}{sim\_period\_}};}
+\DoxyCodeLine{219       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a53a875c2c222307d1cbc06679164f214}{rotating\_to\_goal\_}};}
+\DoxyCodeLine{220       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a221b620ba41f3e3bc499d7b30a36de63}{reached\_goal\_}};}
+\DoxyCodeLine{221       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a688aca3f50ec29a81f048e1e49017abf}{latch\_xy\_goal\_tolerance\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3ab2b17659e6233084ebb0856f7d801a}{xy\_tolerance\_latch\_}};}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223       ros::Publisher \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3d15245f94d7d5ba0c00bd09823e32d3}{g\_plan\_pub\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a33f0bdeafb5bd4e2097afaf193cecdc9}{l\_plan\_pub\_}};}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225       dynamic\_reconfigure::Server<BaseLocalPlannerConfig> *\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a4d459ec3873d93b98a43747dafc1644e}{dsrv\_}};}
+\DoxyCodeLine{226       base\_local\_planner::BaseLocalPlannerConfig \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a8a236aa31c9c2336f6bcf71c86adbf89}{default\_config\_}};}
+\DoxyCodeLine{227       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a027afe3c5cb208ede6b5ac7a10ef819e}{setup\_}};}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a49c099ecf00a17b0d01b8dd0707897b8}{initialized\_}};}
+\DoxyCodeLine{231       \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{base\_local\_planner::OdometryHelperRos}} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af9e936569e83535c63bf5a3b8a7a8c73}{odom\_helper\_}};}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233       std::vector<geometry\_msgs::Point> \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6c8582d06e60dce9e1f0edc22fef3272}{footprint\_spec\_}};}
+\DoxyCodeLine{234   \};}
+\DoxyCodeLine{235 \};}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

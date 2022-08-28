@@ -1,0 +1,5 @@
+<map id="base_local_planner::PointGrid::removePointsInPolygon" name="base_local_planner::PointGrid::removePointsInPolygon">
+<area shape="rect" id="node1" title="Removes points from the grid that lie within the polygon" alt="" coords="316,5,499,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,13,268,54"/>
+<area shape="rect" id="node3" href="$point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>

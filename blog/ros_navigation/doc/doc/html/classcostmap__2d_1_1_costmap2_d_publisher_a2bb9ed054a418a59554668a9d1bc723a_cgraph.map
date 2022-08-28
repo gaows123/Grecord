@@ -1,0 +1,11 @@
+<map id="costmap_2d::Costmap2DPublisher::prepareGrid" name="costmap_2d::Costmap2DPublisher::prepareGrid">
+<area shape="rect" id="node1" title="Prepare grid_ message for publication." alt="" coords="5,235,228,276"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="276,5,445,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="276,71,445,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="276,136,445,177"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="276,201,445,243"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="276,267,445,308"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="276,332,445,373"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="276,397,445,439"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="276,463,445,504"/>
+</map>

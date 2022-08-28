@@ -1,0 +1,56 @@
+\hypertarget{map__saver_8cpp}{}\doxysection{map\+\_\+server/src/map\+\_\+saver.cpp 文件参考}
+\label{map__saver_8cpp}\index{map\_server/src/map\_saver.cpp@{map\_server/src/map\_saver.cpp}}
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ros/console.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Get\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tf2/\+Linear\+Math/\+Matrix3x3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}geometry\+\_\+msgs/\+Quaternion.\+h\char`\"{}}\newline
+map\+\_\+saver.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map__saver_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_map_generator}{Map\+Generator}}
+\begin{DoxyCompactList}\small\item\em Map generation node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{map__saver_8cpp_a56fe9bff0a1be75aae2da3e593053e2c}{USAGE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{map__saver_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{map__saver_8cpp_a56fe9bff0a1be75aae2da3e593053e2c}\label{map__saver_8cpp_a56fe9bff0a1be75aae2da3e593053e2c}} 
+\index{map\_saver.cpp@{map\_saver.cpp}!USAGE@{USAGE}}
+\index{USAGE@{USAGE}!map\_saver.cpp@{map\_saver.cpp}}
+\doxysubsubsection{\texorpdfstring{USAGE}{USAGE}}
+{\footnotesize\ttfamily \#define USAGE}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{              \textcolor{stringliteral}{"{}Usage: \(\backslash\)n"{}} \(\backslash\)}
+\DoxyCodeLine{              \textcolor{stringliteral}{"{}  map\_saver -\/h\(\backslash\)n"{}}\(\backslash\)}
+\DoxyCodeLine{              \textcolor{stringliteral}{"{}  map\_saver [-\/-\/occ <threshold\_occupied>] [-\/-\/free <threshold\_free>] [-\/f <mapname>] [ROS remapping args]"{}}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{map__saver_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{map__saver_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{map\_saver.cpp@{map\_saver.cpp}!main@{main}}
+\index{main@{main}!map\_saver.cpp@{map\_saver.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+

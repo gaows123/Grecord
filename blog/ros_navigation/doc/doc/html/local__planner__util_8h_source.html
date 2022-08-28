@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner/include/base_local_planner/local_planner_util.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_fc4ccca1cedd5ad98a9c5935ebe74b0e.html">base_local_planner</a></li><li class="navelem"><a class="el" href="dir_fb1526ef91c927002057b842ea75b919.html">include</a></li><li class="navelem"><a class="el" href="dir_022ab8b8b2793d2a4d98ca8ea9cb4917.html">base_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">local_planner_util.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="local__planner__util_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef ABSTRACT_LOCAL_PLANNER_ODOM_H_</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define ABSTRACT_LOCAL_PLANNER_ODOM_H_</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="base__local__planner_8h.html">nav_core/base_local_planner.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;boost/thread.hpp&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__2d_8h.html">costmap_2d/costmap_2d.h</a>&gt;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;tf2_ros/buffer.h&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &lt;<a class="code" href="local__planner__limits_8h.html">base_local_planner/local_planner_limits.h</a>&gt;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebase__local__planner.html">base_local_planner</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html">   57</a></span><span class="keyword">class </span><a class="code hl_class" href="classbase__local__planner_1_1_local_planner_util.html">LocalPlannerUtil</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// things we get from move_base</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#a3f5ac7c944ef593b3dbfc16fa086fd99">   61</a></span>  std::string <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a3f5ac7c944ef593b3dbfc16fa086fd99">name_</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#a9a90d33ba8cb74115d0fe7c10e8b43aa">   62</a></span>  std::string <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a9a90d33ba8cb74115d0fe7c10e8b43aa">global_frame_</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#a7ba7a900fb226af8a1f4692a84b03754">   64</a></span>  <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a7ba7a900fb226af8a1f4692a84b03754">costmap_</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#a68722f79013d0b0f84cefa1eaeef560a">   65</a></span>  tf2_ros::Buffer* <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a68722f79013d0b0f84cefa1eaeef560a">tf_</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#ac4e6de10f12cb8a00f38e82de02db4ea">   68</a></span>  std::vector&lt;geometry_msgs::PoseStamped&gt; <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#ac4e6de10f12cb8a00f38e82de02db4ea">global_plan_</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#a6125321f7ff074d6261cb34d94797265">   71</a></span>  boost::mutex <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a6125321f7ff074d6261cb34d94797265">limits_configuration_mutex_</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#ad4a59530d806c5e6f0adf35b843ce16a">   72</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#ad4a59530d806c5e6f0adf35b843ce16a">setup_</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#af033b08607865ddfc1126f8204011a65">   73</a></span>  <a class="code hl_class" href="classbase__local__planner_1_1_local_planner_limits.html">LocalPlannerLimits</a> <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#af033b08607865ddfc1126f8204011a65">default_limits_</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#aceaa38407121d1e78969013b2686a236">   74</a></span>  <a class="code hl_class" href="classbase__local__planner_1_1_local_planner_limits.html">LocalPlannerLimits</a> <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#aceaa38407121d1e78969013b2686a236">limits_</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#a908bf32f9021d95ede64145a657f5603">   75</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a908bf32f9021d95ede64145a657f5603">initialized_</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#a84581c07b821dbdb93f78a6def7f8850">reconfigureCB</a>(<a class="code hl_class" href="classbase__local__planner_1_1_local_planner_limits.html">LocalPlannerLimits</a> &amp;config, <span class="keywordtype">bool</span> restore_defaults);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#a2dcf1b1b2e55e587f65d289ce3ebdc9a">   84</a></span>  <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#a2dcf1b1b2e55e587f65d289ce3ebdc9a">LocalPlannerUtil</a>() : <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a908bf32f9021d95ede64145a657f5603">initialized_</a>(false) {}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#ac34e4f518922c568863f53006d5cfcca">   86</a></span>  <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#ac34e4f518922c568863f53006d5cfcca">~LocalPlannerUtil</a>() {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#aef146076f0095773cb6e89827ff06b4b">initialize</a>(tf2_ros::Buffer* tf,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* costmap,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      std::string global_frame);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41">getGoal</a>(geometry_msgs::PoseStamped&amp; goal_pose);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#af0eb515ddb49387ac87153ed4401a248">setPlan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; orig_global_plan);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#adb22b6981dc80e9159298c8f3dc738eb">getLocalPlan</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; global_pose, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; transformed_plan);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#aba7095b7858de54294341d4a916c2555">getCostmap</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_class" href="classbase__local__planner_1_1_local_planner_limits.html">LocalPlannerLimits</a> <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd">getCurrentLimits</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_local_planner_util.html#ac3e2070b5a7adcc1ba141d41d3f6865c">  103</a></span>  std::string <a class="code hl_function" href="classbase__local__planner_1_1_local_planner_util.html#ac3e2070b5a7adcc1ba141d41d3f6865c">getGlobalFrame</a>(){ <span class="keywordflow">return</span> <a class="code hl_variable" href="classbase__local__planner_1_1_local_planner_util.html#a9a90d33ba8cb74115d0fe7c10e8b43aa">global_frame_</a>; }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>};</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif </span><span class="comment">/* ABSTRACT_LOCAL_PLANNER_ODOM_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="abase__local__planner_8h_html"><div class="ttname"><a href="base__local__planner_8h.html">base_local_planner.h</a></div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_limits_html"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a></div><div class="ttdef"><b>Definition:</b> local_planner_limits.h:44</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html">base_local_planner::LocalPlannerUtil</a></div><div class="ttdoc">Helper class implementing infrastructure code many local planner implementations may need.</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:57</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a2dcf1b1b2e55e587f65d289ce3ebdc9a"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a2dcf1b1b2e55e587f65d289ce3ebdc9a">base_local_planner::LocalPlannerUtil::LocalPlannerUtil</a></div><div class="ttdeci">LocalPlannerUtil()</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:84</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a3f5ac7c944ef593b3dbfc16fa086fd99"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a3f5ac7c944ef593b3dbfc16fa086fd99">base_local_planner::LocalPlannerUtil::name_</a></div><div class="ttdeci">std::string name_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:61</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a40a75811cc424cb2f4e205a0ec18cb41"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41">base_local_planner::LocalPlannerUtil::getGoal</a></div><div class="ttdeci">bool getGoal(geometry_msgs::PoseStamped &amp;goal_pose)</div><div class="ttdef"><b>Definition:</b> local_planner_util.cpp:83</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a6125321f7ff074d6261cb34d94797265"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a6125321f7ff074d6261cb34d94797265">base_local_planner::LocalPlannerUtil::limits_configuration_mutex_</a></div><div class="ttdeci">boost::mutex limits_configuration_mutex_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:71</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a68722f79013d0b0f84cefa1eaeef560a"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a68722f79013d0b0f84cefa1eaeef560a">base_local_planner::LocalPlannerUtil::tf_</a></div><div class="ttdeci">tf2_ros::Buffer * tf_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:65</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a7ba7a900fb226af8a1f4692a84b03754"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a7ba7a900fb226af8a1f4692a84b03754">base_local_planner::LocalPlannerUtil::costmap_</a></div><div class="ttdeci">costmap_2d::Costmap2D * costmap_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:64</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a84581c07b821dbdb93f78a6def7f8850"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a84581c07b821dbdb93f78a6def7f8850">base_local_planner::LocalPlannerUtil::reconfigureCB</a></div><div class="ttdeci">void reconfigureCB(LocalPlannerLimits &amp;config, bool restore_defaults)</div><div class="ttdoc">更新局部规划器参数的回调函数</div><div class="ttdef"><b>Definition:</b> local_planner_util.cpp:59</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a908bf32f9021d95ede64145a657f5603"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a908bf32f9021d95ede64145a657f5603">base_local_planner::LocalPlannerUtil::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:75</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_a9a90d33ba8cb74115d0fe7c10e8b43aa"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#a9a90d33ba8cb74115d0fe7c10e8b43aa">base_local_planner::LocalPlannerUtil::global_frame_</a></div><div class="ttdeci">std::string global_frame_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:62</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_ab872bb31110cc8cf9d1fa7f5b339c6fd"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd">base_local_planner::LocalPlannerUtil::getCurrentLimits</a></div><div class="ttdeci">LocalPlannerLimits getCurrentLimits()</div><div class="ttdef"><b>Definition:</b> local_planner_util.cpp:77</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_aba7095b7858de54294341d4a916c2555"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#aba7095b7858de54294341d4a916c2555">base_local_planner::LocalPlannerUtil::getCostmap</a></div><div class="ttdeci">costmap_2d::Costmap2D * getCostmap()</div><div class="ttdef"><b>Definition:</b> local_planner_util.cpp:73</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_ac34e4f518922c568863f53006d5cfcca"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#ac34e4f518922c568863f53006d5cfcca">base_local_planner::LocalPlannerUtil::~LocalPlannerUtil</a></div><div class="ttdeci">~LocalPlannerUtil()</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:86</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_ac3e2070b5a7adcc1ba141d41d3f6865c"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#ac3e2070b5a7adcc1ba141d41d3f6865c">base_local_planner::LocalPlannerUtil::getGlobalFrame</a></div><div class="ttdeci">std::string getGlobalFrame()</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:103</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_ac4e6de10f12cb8a00f38e82de02db4ea"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#ac4e6de10f12cb8a00f38e82de02db4ea">base_local_planner::LocalPlannerUtil::global_plan_</a></div><div class="ttdeci">std::vector&lt; geometry_msgs::PoseStamped &gt; global_plan_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:68</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_aceaa38407121d1e78969013b2686a236"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#aceaa38407121d1e78969013b2686a236">base_local_planner::LocalPlannerUtil::limits_</a></div><div class="ttdeci">LocalPlannerLimits limits_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:74</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_ad4a59530d806c5e6f0adf35b843ce16a"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#ad4a59530d806c5e6f0adf35b843ce16a">base_local_planner::LocalPlannerUtil::setup_</a></div><div class="ttdeci">bool setup_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:72</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_adb22b6981dc80e9159298c8f3dc738eb"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#adb22b6981dc80e9159298c8f3dc738eb">base_local_planner::LocalPlannerUtil::getLocalPlan</a></div><div class="ttdeci">bool getLocalPlan(const geometry_msgs::PoseStamped &amp;global_pose, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;transformed_plan)</div><div class="ttdef"><b>Definition:</b> local_planner_util.cpp:105</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_aef146076f0095773cb6e89827ff06b4b"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#aef146076f0095773cb6e89827ff06b4b">base_local_planner::LocalPlannerUtil::initialize</a></div><div class="ttdeci">void initialize(tf2_ros::Buffer *tf, costmap_2d::Costmap2D *costmap, std::string global_frame)</div><div class="ttdef"><b>Definition:</b> local_planner_util.cpp:44</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_af033b08607865ddfc1126f8204011a65"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#af033b08607865ddfc1126f8204011a65">base_local_planner::LocalPlannerUtil::default_limits_</a></div><div class="ttdeci">LocalPlannerLimits default_limits_</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:73</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html_af0eb515ddb49387ac87153ed4401a248"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html#af0eb515ddb49387ac87153ed4401a248">base_local_planner::LocalPlannerUtil::setPlan</a></div><div class="ttdeci">bool setPlan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</div><div class="ttdef"><b>Definition:</b> local_planner_util.cpp:91</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1_costmap2_d_html"><div class="ttname"><a href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:62</div></div>
+<div class="ttc" id="acostmap__2d_8h_html"><div class="ttname"><a href="costmap__2d_8h.html">costmap_2d.h</a></div></div>
+<div class="ttc" id="alocal__planner__limits_8h_html"><div class="ttname"><a href="local__planner__limits_8h.html">local_planner_limits.h</a></div></div>
+<div class="ttc" id="anamespacebase__local__planner_html"><div class="ttname"><a href="namespacebase__local__planner.html">base_local_planner</a></div><div class="ttdef"><b>Definition:</b> costmap_model.h:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner/include/global_planner/astar.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_414b209fa36dd1433a9bb8cd280add1a.html">global_planner</a></li><li class="navelem"><a class="el" href="dir_7b76dca46bce552b8fb66bb9e9404d32.html">include</a></li><li class="navelem"><a class="el" href="dir_b2f73a2221e56eeb39c8f87f953e2d4b.html">global_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">astar.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="astar_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  Copyright (c) 2008, 2013, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *         David V. Lu!!</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef _ASTAR_H</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define _ASTAR_H</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="planner__core_8h.html">global_planner/planner_core.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;<a class="code" href="expander_8h.html">global_planner/expander.h</a>&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespaceglobal__planner.html">   46</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceglobal__planner.html">global_planner</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_index.html">   47</a></span><span class="keyword">class </span><a class="code hl_class" href="classglobal__planner_1_1_index.html">Index</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_index.html#a52b5549609f2fbdf06a5e47b3b335492">   49</a></span>        <a class="code hl_function" href="classglobal__planner_1_1_index.html#a52b5549609f2fbdf06a5e47b3b335492">Index</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">float</span> b) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_variable" href="classglobal__planner_1_1_index.html#a5eaa92e0b2baa2b4e5b93ff2c5ad2514">i</a> = a;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_variable" href="classglobal__planner_1_1_index.html#a014931e74c546a0315feeb4c619f7ee1">cost</a> = b;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_index.html#a5eaa92e0b2baa2b4e5b93ff2c5ad2514">   53</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classglobal__planner_1_1_index.html#a5eaa92e0b2baa2b4e5b93ff2c5ad2514">i</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_index.html#a014931e74c546a0315feeb4c619f7ee1">   54</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classglobal__planner_1_1_index.html#a014931e74c546a0315feeb4c619f7ee1">cost</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structglobal__planner_1_1greater1.html">   57</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structglobal__planner_1_1greater1.html">greater1</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structglobal__planner_1_1greater1.html#a8efdd33231191d4b1178fa16f49eaf17">   58</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="structglobal__planner_1_1greater1.html#a8efdd33231191d4b1178fa16f49eaf17">operator()</a>(<span class="keyword">const</span> <a class="code hl_class" href="classglobal__planner_1_1_index.html">Index</a>&amp; a, <span class="keyword">const</span> <a class="code hl_class" href="classglobal__planner_1_1_index.html">Index</a>&amp; b)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">return</span> a.<a class="code hl_variable" href="classglobal__planner_1_1_index.html#a014931e74c546a0315feeb4c619f7ee1">cost</a> &gt; b.<a class="code hl_variable" href="classglobal__planner_1_1_index.html#a014931e74c546a0315feeb4c619f7ee1">cost</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_a_star_expansion.html">   63</a></span><span class="keyword">class </span><a class="code hl_class" href="classglobal__planner_1_1_a_star_expansion.html">AStarExpansion</a> : <span class="keyword">public</span> <a class="code hl_class" href="classglobal__planner_1_1_expander.html">Expander</a> {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_function" href="classglobal__planner_1_1_a_star_expansion.html#a3a1f2f9b946d0e69afce5886cf7d56fa">AStarExpansion</a>(<a class="code hl_class" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a>* p_calc, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_a_star_expansion.html#a26c44db6dd6346463c52e8dda0665985">   66</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classglobal__planner_1_1_a_star_expansion.html#a26c44db6dd6346463c52e8dda0665985">~AStarExpansion</a>() {}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classglobal__planner_1_1_a_star_expansion.html#a71ddf1440a2f487c6f10af7a25757371">calculatePotentials</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costs, <span class="keywordtype">double</span> start_x, <span class="keywordtype">double</span> start_y, <span class="keywordtype">double</span> end_x, <span class="keywordtype">double</span> end_y, <span class="keywordtype">int</span> cycles,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                <span class="keywordtype">float</span>* potential);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_a_star_expansion.html#a14922f2bde1222050478a4c6289ea874">add</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costs, <span class="keywordtype">float</span>* potential, <span class="keywordtype">float</span> prev_potential, <span class="keywordtype">int</span> next_i, <span class="keywordtype">int</span> end_x, <span class="keywordtype">int</span> end_y);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_a_star_expansion.html#acb298a6cba9ef7313eee585a7c5fdebc">   71</a></span>        std::vector&lt;Index&gt; <a class="code hl_variable" href="classglobal__planner_1_1_a_star_expansion.html#acb298a6cba9ef7313eee585a7c5fdebc">queue_</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">//end namespace global_planner</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="ttc" id="aclassglobal__planner_1_1_a_star_expansion_html"><div class="ttname"><a href="classglobal__planner_1_1_a_star_expansion.html">global_planner::AStarExpansion</a></div><div class="ttdef"><b>Definition:</b> astar.h:63</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_a_star_expansion_html_a14922f2bde1222050478a4c6289ea874"><div class="ttname"><a href="classglobal__planner_1_1_a_star_expansion.html#a14922f2bde1222050478a4c6289ea874">global_planner::AStarExpansion::add</a></div><div class="ttdeci">void add(unsigned char *costs, float *potential, float prev_potential, int next_i, int end_x, int end_y)</div><div class="ttdef"><b>Definition:</b> astar.cpp:91</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_a_star_expansion_html_a26c44db6dd6346463c52e8dda0665985"><div class="ttname"><a href="classglobal__planner_1_1_a_star_expansion.html#a26c44db6dd6346463c52e8dda0665985">global_planner::AStarExpansion::~AStarExpansion</a></div><div class="ttdeci">virtual ~AStarExpansion()</div><div class="ttdef"><b>Definition:</b> astar.h:66</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_a_star_expansion_html_a3a1f2f9b946d0e69afce5886cf7d56fa"><div class="ttname"><a href="classglobal__planner_1_1_a_star_expansion.html#a3a1f2f9b946d0e69afce5886cf7d56fa">global_planner::AStarExpansion::AStarExpansion</a></div><div class="ttdeci">AStarExpansion(PotentialCalculator *p_calc, int nx, int ny)</div><div class="ttdef"><b>Definition:</b> astar.cpp:43</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_a_star_expansion_html_a71ddf1440a2f487c6f10af7a25757371"><div class="ttname"><a href="classglobal__planner_1_1_a_star_expansion.html#a71ddf1440a2f487c6f10af7a25757371">global_planner::AStarExpansion::calculatePotentials</a></div><div class="ttdeci">bool calculatePotentials(unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)</div><div class="ttdef"><b>Definition:</b> astar.cpp:48</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_a_star_expansion_html_acb298a6cba9ef7313eee585a7c5fdebc"><div class="ttname"><a href="classglobal__planner_1_1_a_star_expansion.html#acb298a6cba9ef7313eee585a7c5fdebc">global_planner::AStarExpansion::queue_</a></div><div class="ttdeci">std::vector&lt; Index &gt; queue_</div><div class="ttdef"><b>Definition:</b> astar.h:71</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html"><div class="ttname"><a href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></div><div class="ttdef"><b>Definition:</b> expander.h:45</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_index_html"><div class="ttname"><a href="classglobal__planner_1_1_index.html">global_planner::Index</a></div><div class="ttdef"><b>Definition:</b> astar.h:47</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_index_html_a014931e74c546a0315feeb4c619f7ee1"><div class="ttname"><a href="classglobal__planner_1_1_index.html#a014931e74c546a0315feeb4c619f7ee1">global_planner::Index::cost</a></div><div class="ttdeci">float cost</div><div class="ttdef"><b>Definition:</b> astar.h:54</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_index_html_a52b5549609f2fbdf06a5e47b3b335492"><div class="ttname"><a href="classglobal__planner_1_1_index.html#a52b5549609f2fbdf06a5e47b3b335492">global_planner::Index::Index</a></div><div class="ttdeci">Index(int a, float b)</div><div class="ttdef"><b>Definition:</b> astar.h:49</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_index_html_a5eaa92e0b2baa2b4e5b93ff2c5ad2514"><div class="ttname"><a href="classglobal__planner_1_1_index.html#a5eaa92e0b2baa2b4e5b93ff2c5ad2514">global_planner::Index::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> astar.h:53</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_potential_calculator_html"><div class="ttname"><a href="classglobal__planner_1_1_potential_calculator.html">global_planner::PotentialCalculator</a></div><div class="ttdef"><b>Definition:</b> potential_calculator.h:45</div></div>
+<div class="ttc" id="aexpander_8h_html"><div class="ttname"><a href="expander_8h.html">expander.h</a></div></div>
+<div class="ttc" id="anamespaceglobal__planner_html"><div class="ttname"><a href="namespaceglobal__planner.html">global_planner</a></div><div class="ttdef"><b>Definition:</b> astar.h:46</div></div>
+<div class="ttc" id="aplanner__core_8h_html"><div class="ttname"><a href="planner__core_8h.html">planner_core.h</a></div></div>
+<div class="ttc" id="astructglobal__planner_1_1greater1_html"><div class="ttname"><a href="structglobal__planner_1_1greater1.html">global_planner::greater1</a></div><div class="ttdef"><b>Definition:</b> astar.h:57</div></div>
+<div class="ttc" id="astructglobal__planner_1_1greater1_html_a8efdd33231191d4b1178fa16f49eaf17"><div class="ttname"><a href="structglobal__planner_1_1greater1.html#a8efdd33231191d4b1178fa16f49eaf17">global_planner::greater1::operator()</a></div><div class="ttdeci">bool operator()(const Index &amp;a, const Index &amp;b) const</div><div class="ttdef"><b>Definition:</b> astar.h:58</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

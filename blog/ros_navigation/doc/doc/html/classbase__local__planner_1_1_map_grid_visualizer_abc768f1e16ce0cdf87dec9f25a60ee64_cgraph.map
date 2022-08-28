@@ -1,0 +1,6 @@
+<map id="base_local_planner::MapGridVisualizer::publishCostCloud" name="base_local_planner::MapGridVisualizer::publishCostCloud">
+<area shape="rect" id="node1" title="Build and publish a PointCloud if the publish_cost_grid_pc parameter was true. Only include points fo..." alt="" coords="5,63,141,119"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="189,5,359,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="189,71,359,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="189,136,359,177"/>
+</map>

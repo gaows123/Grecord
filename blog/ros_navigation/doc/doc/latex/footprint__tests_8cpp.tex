@@ -1,0 +1,107 @@
+\hypertarget{footprint__tests_8cpp}{}\doxysection{costmap\+\_\+2d/test/footprint\+\_\+tests.cpp 文件参考}
+\label{footprint__tests_8cpp}\index{costmap\_2d/test/footprint\_tests.cpp@{costmap\_2d/test/footprint\_tests.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d\+\_\+ros.\+h$>$}\newline
+{\ttfamily \#include $<$tf2\+\_\+geometry\+\_\+msgs/tf2\+\_\+geometry\+\_\+msgs.\+h$>$}\newline
+{\ttfamily \#include $<$tf2\+\_\+ros/transform\+\_\+listener.\+h$>$}\newline
+footprint\+\_\+tests.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{footprint__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{footprint__tests_8cpp_aeb9facd9b1f8c5afe801ca9ab2e46d06}{TEST}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}, unpadded\+\_\+footprint\+\_\+from\+\_\+string\+\_\+param)
+\item 
+\mbox{\hyperlink{footprint__tests_8cpp_a538f4624b1ab36401b63a33b8da2f27b}{TEST}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}, padded\+\_\+footprint\+\_\+from\+\_\+string\+\_\+param)
+\item 
+\mbox{\hyperlink{footprint__tests_8cpp_a7813e4ee86d0b9949d728dffe8c7c17f}{TEST}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}, radius\+\_\+param)
+\item 
+\mbox{\hyperlink{footprint__tests_8cpp_a29866a76d7fc8ff30b50eb1fb4b65fa9}{TEST}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}, footprint\+\_\+from\+\_\+xmlrpc\+\_\+param)
+\item 
+\mbox{\hyperlink{footprint__tests_8cpp_a615ffdc5b74a5b6ab9cb4d068547b161}{TEST}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}, footprint\+\_\+from\+\_\+same\+\_\+level\+\_\+param)
+\item 
+\mbox{\hyperlink{footprint__tests_8cpp_a22bebdc8c8e4f13b7dfecfe3b644c8eb}{TEST}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}, footprint\+\_\+from\+\_\+xmlrpc\+\_\+param\+\_\+failure)
+\item 
+\mbox{\hyperlink{footprint__tests_8cpp_aa76863c07b2e2af1f076d795e3193d20}{TEST}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}, footprint\+\_\+empty)
+\item 
+int \mbox{\hyperlink{footprint__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Listener $\ast$ \mbox{\hyperlink{footprint__tests_8cpp_a9e8f61146c0661a46b05ee1a518ecdd2}{tfl\+\_\+}}
+\item 
+tf2\+\_\+ros\+::\+Buffer $\ast$ \mbox{\hyperlink{footprint__tests_8cpp_aad5469d90cc5661bafe780d1920256b1}{tf\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{footprint__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{footprint__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!main@{main}}
+\index{main@{main}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_aa76863c07b2e2af1f076d795e3193d20}\label{footprint__tests_8cpp_aa76863c07b2e2af1f076d795e3193d20}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}}]{,  }\item[{footprint\+\_\+empty}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_a615ffdc5b74a5b6ab9cb4d068547b161}\label{footprint__tests_8cpp_a615ffdc5b74a5b6ab9cb4d068547b161}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}}]{,  }\item[{footprint\+\_\+from\+\_\+same\+\_\+level\+\_\+param}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_a29866a76d7fc8ff30b50eb1fb4b65fa9}\label{footprint__tests_8cpp_a29866a76d7fc8ff30b50eb1fb4b65fa9}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}}]{,  }\item[{footprint\+\_\+from\+\_\+xmlrpc\+\_\+param}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_a22bebdc8c8e4f13b7dfecfe3b644c8eb}\label{footprint__tests_8cpp_a22bebdc8c8e4f13b7dfecfe3b644c8eb}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}}]{,  }\item[{footprint\+\_\+from\+\_\+xmlrpc\+\_\+param\+\_\+failure}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_a538f4624b1ab36401b63a33b8da2f27b}\label{footprint__tests_8cpp_a538f4624b1ab36401b63a33b8da2f27b}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}}]{,  }\item[{padded\+\_\+footprint\+\_\+from\+\_\+string\+\_\+param}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_a7813e4ee86d0b9949d728dffe8c7c17f}\label{footprint__tests_8cpp_a7813e4ee86d0b9949d728dffe8c7c17f}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}}]{,  }\item[{radius\+\_\+param}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_aeb9facd9b1f8c5afe801ca9ab2e46d06}\label{footprint__tests_8cpp_aeb9facd9b1f8c5afe801ca9ab2e46d06}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}}]{,  }\item[{unpadded\+\_\+footprint\+\_\+from\+\_\+string\+\_\+param}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{footprint__tests_8cpp_aad5469d90cc5661bafe780d1920256b1}\label{footprint__tests_8cpp_aad5469d90cc5661bafe780d1920256b1}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer$\ast$ tf\+\_\+}
+
+\mbox{\Hypertarget{footprint__tests_8cpp_a9e8f61146c0661a46b05ee1a518ecdd2}\label{footprint__tests_8cpp_a9e8f61146c0661a46b05ee1a518ecdd2}} 
+\index{footprint\_tests.cpp@{footprint\_tests.cpp}!tfl\_@{tfl\_}}
+\index{tfl\_@{tfl\_}!footprint\_tests.cpp@{footprint\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{tfl\_}{tfl\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Transform\+Listener$\ast$ tfl\+\_\+}
+

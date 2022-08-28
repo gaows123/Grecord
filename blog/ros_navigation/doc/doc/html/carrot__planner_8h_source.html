@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: carrot_planner/include/carrot_planner/carrot_planner.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_88d063f72b0129f55f90d248765ec6e4.html">carrot_planner</a></li><li class="navelem"><a class="el" href="dir_49df9b7a505909e828d27438238a065a.html">include</a></li><li class="navelem"><a class="el" href="dir_2cd5873885b082aa89f9d7ca91e17321.html">carrot_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">carrot_planner.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="carrot__planner_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">*</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">*</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">*  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">*</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">*  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">*  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">*</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">*   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">*     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">* Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*********************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef CARROT_PLANNER_H_</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define CARROT_PLANNER_H_</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;ros/ros.h&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__2d__ros_8h.html">costmap_2d/costmap_2d_ros.h</a>&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__2d_8h.html">costmap_2d/costmap_2d.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;<a class="code" href="base__global__planner_8h.html">nav_core/base_global_planner.h</a>&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;<a class="code" href="world__model_8h.html">base_local_planner/world_model.h</a>&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__model_8h.html">base_local_planner/costmap_model.h</a>&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacecarrot__planner.html">   49</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecarrot__planner.html">carrot_planner</a>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classcarrot__planner_1_1_carrot_planner.html">   54</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classcarrot__planner_1_1_carrot_planner.html">CarrotPlanner</a> : <span class="keyword">public</span> <a class="code hl_class" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <a class="code hl_function" href="classcarrot__planner_1_1_carrot_planner.html#a2eac68d979bbb34c07b7b196b107f10f">CarrotPlanner</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <a class="code hl_function" href="classcarrot__planner_1_1_carrot_planner.html#a2eac68d979bbb34c07b7b196b107f10f">CarrotPlanner</a>(std::string name, <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* costmap_ros);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <a class="code hl_function" href="classcarrot__planner_1_1_carrot_planner.html#aee00be1c31b1a1c50cb4f8cca7f4c511">~CarrotPlanner</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classcarrot__planner_1_1_carrot_planner.html#a83b1bb77b4ef4a2719dcc29bf90d077e">initialize</a>(std::string name, <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* costmap_ros);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classcarrot__planner_1_1_carrot_planner.html#a59c64d61f2e992d08b32438116614ab5">makePlan</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; <a class="code hl_variable" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>          <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; <a class="code hl_variable" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classcarrot__planner_1_1_carrot_planner.html#a3c4cb15296e81e4febc8e27e553b707e">   90</a></span>      <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* <a class="code hl_variable" href="classcarrot__planner_1_1_carrot_planner.html#a3c4cb15296e81e4febc8e27e553b707e">costmap_ros_</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classcarrot__planner_1_1_carrot_planner.html#a3c22dd484a2c315152d6a01e32fddec3">   91</a></span>      <span class="keywordtype">double</span> <a class="code hl_variable" href="classcarrot__planner_1_1_carrot_planner.html#a379b3b3aab84c3d18b7eca60624ee2d1">step_size_</a>, <a class="code hl_variable" href="classcarrot__planner_1_1_carrot_planner.html#a3c22dd484a2c315152d6a01e32fddec3">min_dist_from_robot_</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classcarrot__planner_1_1_carrot_planner.html#ae11f6b454515c6385e22cfdf888834e4">   92</a></span>      <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* <a class="code hl_variable" href="classcarrot__planner_1_1_carrot_planner.html#ae11f6b454515c6385e22cfdf888834e4">costmap_</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classcarrot__planner_1_1_carrot_planner.html#a48476275b6f153e0d9cf9c4bb5846374">   93</a></span>      <a class="code hl_class" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a>* <a class="code hl_variable" href="classcarrot__planner_1_1_carrot_planner.html#a48476275b6f153e0d9cf9c4bb5846374">world_model_</a>; </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="classcarrot__planner_1_1_carrot_planner.html#afb2445d0a140b7f9a47a4bed3ee3a63d">footprintCost</a>(<span class="keywordtype">double</span> x_i, <span class="keywordtype">double</span> y_i, <span class="keywordtype">double</span> theta_i);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classcarrot__planner_1_1_carrot_planner.html#a8b15bd6c58334d75007fea3d9c6146a0">  104</a></span>      <span class="keywordtype">bool</span> <a class="code hl_variable" href="classcarrot__planner_1_1_carrot_planner.html#a8b15bd6c58334d75007fea3d9c6146a0">initialized_</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  };</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>};  </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abase__global__planner_8h_html"><div class="ttname"><a href="base__global__planner_8h.html">base_global_planner.h</a></div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_world_model_html"><div class="ttname"><a href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a></div><div class="ttdoc">An interface the trajectory controller uses to interact with the world regardless of the underlying w...</div><div class="ttdef"><b>Definition:</b> world_model.h:52</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html">carrot_planner::CarrotPlanner</a></div><div class="ttdoc">Provides a simple global planner that will compute a valid goal point for the local planner by walkin...</div><div class="ttdef"><b>Definition:</b> carrot_planner.h:54</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a2eac68d979bbb34c07b7b196b107f10f"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a2eac68d979bbb34c07b7b196b107f10f">carrot_planner::CarrotPlanner::CarrotPlanner</a></div><div class="ttdeci">CarrotPlanner()</div><div class="ttdoc">Constructor for the CarrotPlanner</div><div class="ttdef"><b>Definition:</b> carrot_planner.cpp:49</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a379b3b3aab84c3d18b7eca60624ee2d1"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a379b3b3aab84c3d18b7eca60624ee2d1">carrot_planner::CarrotPlanner::step_size_</a></div><div class="ttdeci">double step_size_</div><div class="ttdef"><b>Definition:</b> carrot_planner.h:91</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a3c22dd484a2c315152d6a01e32fddec3"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a3c22dd484a2c315152d6a01e32fddec3">carrot_planner::CarrotPlanner::min_dist_from_robot_</a></div><div class="ttdeci">double min_dist_from_robot_</div><div class="ttdef"><b>Definition:</b> carrot_planner.h:91</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a3c4cb15296e81e4febc8e27e553b707e"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a3c4cb15296e81e4febc8e27e553b707e">carrot_planner::CarrotPlanner::costmap_ros_</a></div><div class="ttdeci">costmap_2d::Costmap2DROS * costmap_ros_</div><div class="ttdef"><b>Definition:</b> carrot_planner.h:90</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a48476275b6f153e0d9cf9c4bb5846374"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a48476275b6f153e0d9cf9c4bb5846374">carrot_planner::CarrotPlanner::world_model_</a></div><div class="ttdeci">base_local_planner::WorldModel * world_model_</div><div class="ttdoc">The world model that the controller will use</div><div class="ttdef"><b>Definition:</b> carrot_planner.h:93</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a59c64d61f2e992d08b32438116614ab5"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a59c64d61f2e992d08b32438116614ab5">carrot_planner::CarrotPlanner::makePlan</a></div><div class="ttdeci">bool makePlan(const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</div><div class="ttdoc">Given a goal pose in the world, compute a plan</div><div class="ttdef"><b>Definition:</b> carrot_planner.cpp:96</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a83b1bb77b4ef4a2719dcc29bf90d077e"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a83b1bb77b4ef4a2719dcc29bf90d077e">carrot_planner::CarrotPlanner::initialize</a></div><div class="ttdeci">void initialize(std::string name, costmap_2d::Costmap2DROS *costmap_ros)</div><div class="ttdoc">Initialization function for the CarrotPlanner</div><div class="ttdef"><b>Definition:</b> carrot_planner.cpp:62</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_a8b15bd6c58334d75007fea3d9c6146a0"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#a8b15bd6c58334d75007fea3d9c6146a0">carrot_planner::CarrotPlanner::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition:</b> carrot_planner.h:104</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_ae11f6b454515c6385e22cfdf888834e4"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#ae11f6b454515c6385e22cfdf888834e4">carrot_planner::CarrotPlanner::costmap_</a></div><div class="ttdeci">costmap_2d::Costmap2D * costmap_</div><div class="ttdef"><b>Definition:</b> carrot_planner.h:92</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_aee00be1c31b1a1c50cb4f8cca7f4c511"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#aee00be1c31b1a1c50cb4f8cca7f4c511">carrot_planner::CarrotPlanner::~CarrotPlanner</a></div><div class="ttdeci">~CarrotPlanner()</div><div class="ttdoc">Destructor</div><div class="ttdef"><b>Definition:</b> carrot_planner.cpp:57</div></div>
+<div class="ttc" id="aclasscarrot__planner_1_1_carrot_planner_html_afb2445d0a140b7f9a47a4bed3ee3a63d"><div class="ttname"><a href="classcarrot__planner_1_1_carrot_planner.html#afb2445d0a140b7f9a47a4bed3ee3a63d">carrot_planner::CarrotPlanner::footprintCost</a></div><div class="ttdeci">double footprintCost(double x_i, double y_i, double theta_i)</div><div class="ttdoc">Checks the legality of the robot footprint at a position and orientation using the world model</div><div class="ttdef"><b>Definition:</b> carrot_planner.cpp:79</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1_costmap2_d_html"><div class="ttname"><a href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:62</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1_costmap2_d_r_o_s_html"><div class="ttname"><a href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_global_planner_html"><div class="ttname"><a href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a></div><div class="ttdoc">提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口.</div><div class="ttdef"><b>Definition:</b> base_global_planner.h:48</div></div>
+<div class="ttc" id="acostmap__2d_8h_html"><div class="ttname"><a href="costmap__2d_8h.html">costmap_2d.h</a></div></div>
+<div class="ttc" id="acostmap__2d__ros_8h_html"><div class="ttname"><a href="costmap__2d__ros_8h.html">costmap_2d_ros.h</a></div></div>
+<div class="ttc" id="acostmap__model_8h_html"><div class="ttname"><a href="costmap__model_8h.html">costmap_model.h</a></div></div>
+<div class="ttc" id="anamespacecarrot__planner_html"><div class="ttname"><a href="namespacecarrot__planner.html">carrot_planner</a></div><div class="ttdef"><b>Definition:</b> carrot_planner.h:49</div></div>
+<div class="ttc" id="anavtest_8cpp_html_a035d2eadd3e54f4a028144044585cd71"><div class="ttname"><a href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a></div><div class="ttdeci">int start[2]</div><div class="ttdef"><b>Definition:</b> navtest.cpp:34</div></div>
+<div class="ttc" id="anavtest_8cpp_html_a924427d23a7d971370018f8d3dc452cf"><div class="ttname"><a href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a></div><div class="ttdeci">int goal[2]</div><div class="ttdef"><b>Definition:</b> navtest.cpp:33</div></div>
+<div class="ttc" id="aworld__model_8h_html"><div class="ttname"><a href="world__model_8h.html">world_model.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

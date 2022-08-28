@@ -1,0 +1,419 @@
+\hypertarget{voxel__grid_8h_source}{}\doxysection{voxel\+\_\+grid.\+h}
+\label{voxel__grid_8h_source}\index{voxel\_grid/include/voxel\_grid/voxel\_grid.h@{voxel\_grid/include/voxel\_grid/voxel\_grid.h}}
+\mbox{\hyperlink{voxel__grid_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef VOXEL\_GRID\_VOXEL\_GRID\_H}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define VOXEL\_GRID\_VOXEL\_GRID\_H}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <limits.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <ros/console.h>}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <ros/assert.h>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{56 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacevoxel__grid}{voxel\_grid}}}
+\DoxyCodeLine{57 \{}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{keyword}{enum} \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{VoxelStatus}} \{}
+\DoxyCodeLine{60   \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100a7680dd7d2dd04988fdf327ae171549ae}{FREE}} = 0,}
+\DoxyCodeLine{61   \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100ad7a356a4732bf370a66191f3d36f4bc2}{UNKNOWN}} = 1,}
+\DoxyCodeLine{62   \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100a0d5a1618c63afbd1a7ed10984dfdadf5}{MARKED}} = 2,}
+\DoxyCodeLine{63 \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid}{VoxelGrid}}}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67 \textcolor{keyword}{public}:}
+\DoxyCodeLine{74   \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9ac2c185df470078fc1915523eb70bf5}{VoxelGrid}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_z);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76   \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a782766e01b75da6d6a2f155e78a14998}{\string~VoxelGrid}}();}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{84   \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a5b03e57131d3ae12440c701cb1216688}{resize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_z);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86   \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_aab30ed5d435c878574d0769186d196ac}{reset}}();}
+\DoxyCodeLine{87   uint32\_t* \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ae298c07e3b613c065271c11417f8e951}{getData}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\_}}; \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_af05c08221c341915183f8b78bb267b89}{markVoxel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z)}
+\DoxyCodeLine{90   \{}
+\DoxyCodeLine{91     \textcolor{keywordflow}{if} (x >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} || y >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}{size\_y\_}} || z >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}{size\_z\_}})}
+\DoxyCodeLine{92     \{}
+\DoxyCodeLine{93       ROS\_DEBUG(\textcolor{stringliteral}{"{}Error, voxel out of bounds.\(\backslash\)n"{}});}
+\DoxyCodeLine{94       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{96     uint32\_t full\_mask = ((uint32\_t)1<<z<<16) | (1<<z);}
+\DoxyCodeLine{97     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\_}}[y * \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} + x] |= full\_mask; \textcolor{comment}{//clear unknown and mark cell}}
+\DoxyCodeLine{98   \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100   \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a115003f6d22524e8221e286eae51b784}{markVoxelInMap}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} marked\_threshold)}
+\DoxyCodeLine{101   \{}
+\DoxyCodeLine{102     \textcolor{keywordflow}{if} (x >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} || y >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}{size\_y\_}} || z >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}{size\_z\_}})}
+\DoxyCodeLine{103     \{}
+\DoxyCodeLine{104       ROS\_DEBUG(\textcolor{stringliteral}{"{}Error, voxel out of bounds.\(\backslash\)n"{}});}
+\DoxyCodeLine{105       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108     \textcolor{keywordtype}{int} index = y * \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} + x;}
+\DoxyCodeLine{109     uint32\_t* col = \&\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\_}}[index];}
+\DoxyCodeLine{110     uint32\_t full\_mask = ((uint32\_t)1<<z<<16) | (1<<z);}
+\DoxyCodeLine{111     *col |= full\_mask; \textcolor{comment}{//clear unknown and mark cell}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} marked\_bits = *col>>16;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     \textcolor{comment}{//make sure the number of bits in each is below our thesholds}}
+\DoxyCodeLine{116     \textcolor{keywordflow}{return} !\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2}{bitsBelowThreshold}}(marked\_bits, marked\_threshold);}
+\DoxyCodeLine{117   \}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ac90c8569576f1fa952070af6576b92f7}{clearVoxel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z)}
+\DoxyCodeLine{120   \{}
+\DoxyCodeLine{121     \textcolor{keywordflow}{if} (x >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} || y >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}{size\_y\_}} || z >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}{size\_z\_}})}
+\DoxyCodeLine{122     \{}
+\DoxyCodeLine{123       ROS\_DEBUG(\textcolor{stringliteral}{"{}Error, voxel out of bounds.\(\backslash\)n"{}});}
+\DoxyCodeLine{124       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126     uint32\_t full\_mask = ((uint32\_t)1<<z<<16) | (1<<z);}
+\DoxyCodeLine{127     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\_}}[y * \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} + x] \&= \string~(full\_mask); \textcolor{comment}{//clear unknown and clear cell}}
+\DoxyCodeLine{128   \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a74857af17abfe3158048a169ee87252a}{clearVoxelColumn}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index)}
+\DoxyCodeLine{131   \{}
+\DoxyCodeLine{132     ROS\_ASSERT(index < \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} * \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}{size\_y\_}});}
+\DoxyCodeLine{133     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\_}}[index] = 0;}
+\DoxyCodeLine{134   \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a744c735aea9d22e68c43c07baa88d9fa}{clearVoxelInMap}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z)}
+\DoxyCodeLine{137   \{}
+\DoxyCodeLine{138     \textcolor{keywordflow}{if}(x >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} || y >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}{size\_y\_}} || z >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}{size\_z\_}})}
+\DoxyCodeLine{139     \{}
+\DoxyCodeLine{140       ROS\_DEBUG(\textcolor{stringliteral}{"{}Error, voxel out of bounds.\(\backslash\)n"{}});}
+\DoxyCodeLine{141       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{143     \textcolor{keywordtype}{int} index = y * \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} + x;}
+\DoxyCodeLine{144     uint32\_t* col = \&\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\_}}[index];}
+\DoxyCodeLine{145     uint32\_t full\_mask = ((uint32\_t)1<<z<<16) | (1<<z);}
+\DoxyCodeLine{146     *col \&= \string~(full\_mask); \textcolor{comment}{//clear unknown and clear cell}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} unknown\_bits = uint16\_t(*col>>16) \string^ uint16\_t(*col);}
+\DoxyCodeLine{149     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} marked\_bits = *col>>16;}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{comment}{//make sure the number of bits in each is below our thesholds}}
+\DoxyCodeLine{152     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2}{bitsBelowThreshold}}(unknown\_bits, 1) \&\& \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2}{bitsBelowThreshold}}(marked\_bits, 1))}
+\DoxyCodeLine{153     \{}
+\DoxyCodeLine{154       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}{costmap}}[index] = 0;}
+\DoxyCodeLine{155     \}}
+\DoxyCodeLine{156   \}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158   \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2}{bitsBelowThreshold}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bit\_threshold)}
+\DoxyCodeLine{159   \{}
+\DoxyCodeLine{160     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bit\_count;}
+\DoxyCodeLine{161     \textcolor{keywordflow}{for} (bit\_count = 0; \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};)}
+\DoxyCodeLine{162     \{}
+\DoxyCodeLine{163       ++bit\_count;}
+\DoxyCodeLine{164       \textcolor{keywordflow}{if} (bit\_count > bit\_threshold)}
+\DoxyCodeLine{165       \{}
+\DoxyCodeLine{166         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{167       \}}
+\DoxyCodeLine{168       \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} \&= \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} -\/ 1; \textcolor{comment}{//clear the least significant bit set}}
+\DoxyCodeLine{169     \}}
+\DoxyCodeLine{170     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{171   \}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173   \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_aa2bd3d5ac9d1b1aaea15728978b203db}{numBits}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})}
+\DoxyCodeLine{174   \{}
+\DoxyCodeLine{175     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bit\_count;}
+\DoxyCodeLine{176     \textcolor{keywordflow}{for} (bit\_count = 0; \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; ++bit\_count)}
+\DoxyCodeLine{177     \{}
+\DoxyCodeLine{178       \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} \&= \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} -\/ 1; \textcolor{comment}{//clear the least significant bit set}}
+\DoxyCodeLine{179     \}}
+\DoxyCodeLine{180     \textcolor{keywordflow}{return} bit\_count;}
+\DoxyCodeLine{181   \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   \textcolor{keyword}{static} \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{VoxelStatus}} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a82798a1492156f1c23801e0c486743a3}{getVoxel}}(}
+\DoxyCodeLine{184     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z,}
+\DoxyCodeLine{185     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_z, \textcolor{keyword}{const} uint32\_t* data)}
+\DoxyCodeLine{186   \{}
+\DoxyCodeLine{187     \textcolor{keywordflow}{if} (x >= size\_x || y >= size\_y || z >= size\_z)}
+\DoxyCodeLine{188     \{}
+\DoxyCodeLine{189       ROS\_DEBUG(\textcolor{stringliteral}{"{}Error, voxel out of bounds. (\%d, \%d, \%d)\(\backslash\)n"{}}, x, y, z);}
+\DoxyCodeLine{190       \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100ad7a356a4732bf370a66191f3d36f4bc2}{UNKNOWN}};}
+\DoxyCodeLine{191     \}}
+\DoxyCodeLine{192     uint32\_t full\_mask = ((uint32\_t)1<<z<<16) | (1<<z);}
+\DoxyCodeLine{193     uint32\_t result = data[y * size\_x + x] \& full\_mask;}
+\DoxyCodeLine{194     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bits = \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_aa2bd3d5ac9d1b1aaea15728978b203db}{numBits}}(result);}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196     \textcolor{comment}{// known marked: 11 = 2 bits, unknown: 01 = 1 bit, known free: 00 = 0 bits}}
+\DoxyCodeLine{197     \textcolor{keywordflow}{if} (bits < 2)}
+\DoxyCodeLine{198     \{}
+\DoxyCodeLine{199       \textcolor{keywordflow}{if} (bits < 1)}
+\DoxyCodeLine{200       \{}
+\DoxyCodeLine{201         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100a7680dd7d2dd04988fdf327ae171549ae}{FREE}};}
+\DoxyCodeLine{202       \}}
+\DoxyCodeLine{203       \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100ad7a356a4732bf370a66191f3d36f4bc2}{UNKNOWN}};}
+\DoxyCodeLine{204     \}}
+\DoxyCodeLine{205     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100a0d5a1618c63afbd1a7ed10984dfdadf5}{MARKED}};}
+\DoxyCodeLine{206   \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208   \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a77c35197ba21a2c5b6ce3c9ea5ba5877}{markVoxelLine}}(\textcolor{keywordtype}{double} x0, \textcolor{keywordtype}{double} y0, \textcolor{keywordtype}{double} z0, \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1, \textcolor{keywordtype}{double} z1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_length = UINT\_MAX);}
+\DoxyCodeLine{209   \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_af64ffc7bcf9f4c2ca4c8c7473f15d51e}{clearVoxelLine}}(\textcolor{keywordtype}{double} x0, \textcolor{keywordtype}{double} y0, \textcolor{keywordtype}{double} z0, \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1, \textcolor{keywordtype}{double} z1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_length = UINT\_MAX);}
+\DoxyCodeLine{210   \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a204172dfa4c1d101aab0cac064f24a6f}{clearVoxelLineInMap}}(\textcolor{keywordtype}{double} x0, \textcolor{keywordtype}{double} y0, \textcolor{keywordtype}{double} z0, \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1, \textcolor{keywordtype}{double} z1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *map\_2d,}
+\DoxyCodeLine{211                            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} unknown\_threshold, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mark\_threshold,}
+\DoxyCodeLine{212                            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} free\_cost = 0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} unknown\_cost = 255, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_length = UINT\_MAX);}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214   \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{VoxelStatus}} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a82798a1492156f1c23801e0c486743a3}{getVoxel}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z);}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216   \textcolor{comment}{//Are there any obstacles at that (x, y) location in the grid?}}
+\DoxyCodeLine{217   \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{VoxelStatus}} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1cb19a239dd48a4df82e664f8dd53a36}{getVoxelColumn}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y,}
+\DoxyCodeLine{218                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} unknown\_threshold = 0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} marked\_threshold = 0);}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220   \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a23f965c26a19c8eeddaedab7640999a0}{printVoxelGrid}}();}
+\DoxyCodeLine{221   \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_af784f39681d85eb758b04d5d6db4700a}{printColumnGrid}}();}
+\DoxyCodeLine{222   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a443198a401b95b15c75c3f33c7064646}{sizeX}}();}
+\DoxyCodeLine{223   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a53c39103a03b74959a128b6df7343aaa}{sizeY}}();}
+\DoxyCodeLine{224   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1c624a3440de0db222caf0f675ff614d}{sizeZ}}();}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226   \textcolor{keyword}{template} <\textcolor{keyword}{class} ActionType>}
+\DoxyCodeLine{227   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_abde2d6af5b3bd1c027171c1553308cc2}{raytraceLine}}(}
+\DoxyCodeLine{228     ActionType at, \textcolor{keywordtype}{double} x0, \textcolor{keywordtype}{double} y0, \textcolor{keywordtype}{double} z0,}
+\DoxyCodeLine{229     \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1, \textcolor{keywordtype}{double} z1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_length = UINT\_MAX)}
+\DoxyCodeLine{230   \{}
+\DoxyCodeLine{231     \textcolor{keywordtype}{int} dx = int(x1) -\/ int(x0);}
+\DoxyCodeLine{232     \textcolor{keywordtype}{int} dy = int(y1) -\/ int(y0);}
+\DoxyCodeLine{233     \textcolor{keywordtype}{int} dz = int(z1) -\/ int(z0);}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_dx = abs(dx);}
+\DoxyCodeLine{236     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_dy = abs(dy);}
+\DoxyCodeLine{237     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_dz = abs(dz);}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239     \textcolor{keywordtype}{int} offset\_dx = \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea}{sign}}(dx);}
+\DoxyCodeLine{240     \textcolor{keywordtype}{int} offset\_dy = \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea}{sign}}(dy) * \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}};}
+\DoxyCodeLine{241     \textcolor{keywordtype}{int} offset\_dz = \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea}{sign}}(dz);}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z\_mask = ((1 << 16) | 1) << (\textcolor{keywordtype}{unsigned} int)z0;}
+\DoxyCodeLine{244     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset = (\textcolor{keywordtype}{unsigned} int)y0 * \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}} + (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})x0;}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset}{GridOffset}} grid\_off(offset);}
+\DoxyCodeLine{247     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_z_offset}{ZOffset}} z\_off(z\_mask);}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249     \textcolor{comment}{//we need to chose how much to scale our dominant dimension, based on the maximum length of the line}}
+\DoxyCodeLine{250     \textcolor{keywordtype}{double} dist = sqrt((x0 -\/ x1) * (x0 -\/ x1) + (y0 -\/ y1) * (y0 -\/ y1) + (z0 -\/ z1) * (z0 -\/ z1));}
+\DoxyCodeLine{251     \textcolor{keywordtype}{double} scale = std::min(1.0,  max\_length / dist);}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253     \textcolor{comment}{//is x dominant}}
+\DoxyCodeLine{254     \textcolor{keywordflow}{if} (abs\_dx >= \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a4a7315df7b9fd6cf64b9055742fa693f}{max}}(abs\_dy, abs\_dz))}
+\DoxyCodeLine{255     \{}
+\DoxyCodeLine{256       \textcolor{keywordtype}{int} error\_y = abs\_dx / 2;}
+\DoxyCodeLine{257       \textcolor{keywordtype}{int} error\_z = abs\_dx / 2;}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db}{bresenham3D}}(at, grid\_off, grid\_off, z\_off, abs\_dx, abs\_dy, abs\_dz, error\_y, error\_z, offset\_dx, offset\_dy, offset\_dz, offset, z\_mask, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(scale * abs\_dx));}
+\DoxyCodeLine{260       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{261     \}}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263     \textcolor{comment}{//y is dominant}}
+\DoxyCodeLine{264     \textcolor{keywordflow}{if} (abs\_dy >= abs\_dz)}
+\DoxyCodeLine{265     \{}
+\DoxyCodeLine{266       \textcolor{keywordtype}{int} error\_x = abs\_dy / 2;}
+\DoxyCodeLine{267       \textcolor{keywordtype}{int} error\_z = abs\_dy / 2;}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{269       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db}{bresenham3D}}(at, grid\_off, grid\_off, z\_off, abs\_dy, abs\_dx, abs\_dz, error\_x, error\_z, offset\_dy, offset\_dx, offset\_dz, offset, z\_mask, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(scale * abs\_dy));}
+\DoxyCodeLine{270       \textcolor{keywordflow}{return};}
+\DoxyCodeLine{271     \}}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273     \textcolor{comment}{//otherwise, z is dominant}}
+\DoxyCodeLine{274     \textcolor{keywordtype}{int} error\_x = abs\_dz / 2;}
+\DoxyCodeLine{275     \textcolor{keywordtype}{int} error\_y = abs\_dz / 2;}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{277     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db}{bresenham3D}}(at, z\_off, grid\_off, grid\_off, abs\_dz, abs\_dx, abs\_dy, error\_x, error\_y, offset\_dz, offset\_dx, offset\_dy, offset, z\_mask, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(scale * abs\_dz));}
+\DoxyCodeLine{278   \}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280 \textcolor{keyword}{private}:}
+\DoxyCodeLine{281   \textcolor{comment}{//the real work is done here... 3D bresenham implementation}}
+\DoxyCodeLine{282   \textcolor{keyword}{template} <\textcolor{keyword}{class} ActionType, \textcolor{keyword}{class} OffA, \textcolor{keyword}{class} OffB, \textcolor{keyword}{class} OffC>}
+\DoxyCodeLine{283   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db}{bresenham3D}}(}
+\DoxyCodeLine{284     ActionType at, OffA off\_a, OffB off\_b, OffC off\_c,}
+\DoxyCodeLine{285     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_da, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_db, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_dc,}
+\DoxyCodeLine{286     \textcolor{keywordtype}{int} error\_b, \textcolor{keywordtype}{int} error\_c, \textcolor{keywordtype}{int} offset\_a, \textcolor{keywordtype}{int} offset\_b, \textcolor{keywordtype}{int} offset\_c, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \&offset,}
+\DoxyCodeLine{287     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \&z\_mask, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_length = UINT\_MAX)}
+\DoxyCodeLine{288   \{}
+\DoxyCodeLine{289     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} end = std::min(max\_length, abs\_da);}
+\DoxyCodeLine{290     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < end; ++i)}
+\DoxyCodeLine{291     \{}
+\DoxyCodeLine{292       at(offset, z\_mask);}
+\DoxyCodeLine{293       off\_a(offset\_a);}
+\DoxyCodeLine{294       error\_b += abs\_db;}
+\DoxyCodeLine{295       error\_c += abs\_dc;}
+\DoxyCodeLine{296       \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})error\_b >= abs\_da)}
+\DoxyCodeLine{297       \{}
+\DoxyCodeLine{298         off\_b(offset\_b);}
+\DoxyCodeLine{299         error\_b -\/= abs\_da;}
+\DoxyCodeLine{300       \}}
+\DoxyCodeLine{301       \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})error\_c >= abs\_da)}
+\DoxyCodeLine{302       \{}
+\DoxyCodeLine{303         off\_c(offset\_c);}
+\DoxyCodeLine{304         error\_c -\/= abs\_da;}
+\DoxyCodeLine{305       \}}
+\DoxyCodeLine{306     \}}
+\DoxyCodeLine{307     at(offset, z\_mask);}
+\DoxyCodeLine{308   \}}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310   \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea}{sign}}(\textcolor{keywordtype}{int} i)}
+\DoxyCodeLine{311   \{}
+\DoxyCodeLine{312     \textcolor{keywordflow}{return} i > 0 ? 1 : -\/1;}
+\DoxyCodeLine{313   \}}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315   \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a4a7315df7b9fd6cf64b9055742fa693f}{max}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{316   \{}
+\DoxyCodeLine{317     \textcolor{keywordflow}{return} x > y ? x : y;}
+\DoxyCodeLine{318   \}}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\_x\_}}, \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}{size\_y\_}}, \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}{size\_z\_}};}
+\DoxyCodeLine{321   uint32\_t *\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\_}};}
+\DoxyCodeLine{322   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}{costmap}};}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324   \textcolor{comment}{//Aren't functors so much fun... used to recreate the Bresenham macro Eric wrote in the original version, but in "{}proper"{} c++}}
+\DoxyCodeLine{325   \textcolor{keyword}{class }\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel}{MarkVoxel}}}
+\DoxyCodeLine{326   \{}
+\DoxyCodeLine{327   \textcolor{keyword}{public}:}
+\DoxyCodeLine{328     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel_a7ce1ef6d2a22d01ebaa47e5bd985b98d}{MarkVoxel}}(uint32\_t* data): \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel_a8a33342e6bdc487c32ec20b520474310}{data\_}}(data)\{\}}
+\DoxyCodeLine{329     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel_a2ae302d6088a195b7d077ab9358dd450}{operator()}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z\_mask)}
+\DoxyCodeLine{330     \{}
+\DoxyCodeLine{331       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel_a8a33342e6bdc487c32ec20b520474310}{data\_}}[offset] |= z\_mask; \textcolor{comment}{//clear unknown and mark cell}}
+\DoxyCodeLine{332     \}}
+\DoxyCodeLine{333   \textcolor{keyword}{private}:}
+\DoxyCodeLine{334     uint32\_t* \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel_a8a33342e6bdc487c32ec20b520474310}{data\_}};}
+\DoxyCodeLine{335   \};}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337   \textcolor{keyword}{class }\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel}{ClearVoxel}}}
+\DoxyCodeLine{338   \{}
+\DoxyCodeLine{339   \textcolor{keyword}{public}:}
+\DoxyCodeLine{340     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_a6cafe1723dff08137e5bba49157c201c}{ClearVoxel}}(uint32\_t* data): \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_a06278bd01d085cf3b3cc94221e82ee2e}{data\_}}(data)\{\}}
+\DoxyCodeLine{341     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_a318421a2dfc25f55d02263ff75ff7dce}{operator()}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z\_mask)}
+\DoxyCodeLine{342     \{}
+\DoxyCodeLine{343       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_a06278bd01d085cf3b3cc94221e82ee2e}{data\_}}[offset] \&= \string~(z\_mask); \textcolor{comment}{//clear unknown and clear cell}}
+\DoxyCodeLine{344     \}}
+\DoxyCodeLine{345   \textcolor{keyword}{private}:}
+\DoxyCodeLine{346     uint32\_t* \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_a06278bd01d085cf3b3cc94221e82ee2e}{data\_}};}
+\DoxyCodeLine{347   \};}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{349   \textcolor{keyword}{class }\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map}{ClearVoxelInMap}}}
+\DoxyCodeLine{350   \{}
+\DoxyCodeLine{351   \textcolor{keyword}{public}:}
+\DoxyCodeLine{352     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a91418638749a342326efeeaea2a5621d}{ClearVoxelInMap}}(}
+\DoxyCodeLine{353       uint32\_t* data, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}{costmap}},}
+\DoxyCodeLine{354       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} unknown\_clear\_threshold, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} marked\_clear\_threshold,}
+\DoxyCodeLine{355       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} free\_cost = 0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} unknown\_cost = 255): \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a56dddaf67c47caf6d57ad05863f7756b}{data\_}}(data), \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_aa7c29128bd268869ea418ac577c46b8e}{costmap\_}}(\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}{costmap}}),}
+\DoxyCodeLine{356       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_ab6a88319eaa04936b5efab554a7dae6e}{unknown\_clear\_threshold\_}}(unknown\_clear\_threshold), \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a155879eba5d82c9919fb29eafadc8414}{marked\_clear\_threshold\_}}(marked\_clear\_threshold),}
+\DoxyCodeLine{357       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a1c5c96982daeaa1e5570a21f0fdca059}{free\_cost\_}}(free\_cost), \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a4e35e2e646512924aaa70f18eed0cef3}{unknown\_cost\_}}(unknown\_cost)}
+\DoxyCodeLine{358     \{}
+\DoxyCodeLine{359     \}}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{361     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a5a61c2c6bdddaee95bc38e770507761b}{operator()}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} z\_mask)}
+\DoxyCodeLine{362     \{}
+\DoxyCodeLine{363       uint32\_t* col = \&\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a56dddaf67c47caf6d57ad05863f7756b}{data\_}}[offset];}
+\DoxyCodeLine{364       *col \&= \string~(z\_mask); \textcolor{comment}{//clear unknown and clear cell}}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} unknown\_bits = uint16\_t(*col>>16) \string^ uint16\_t(*col);}
+\DoxyCodeLine{367       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} marked\_bits = *col>>16;}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{369       \textcolor{comment}{//make sure the number of bits in each is below our thesholds}}
+\DoxyCodeLine{370       \textcolor{keywordflow}{if} (\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_af795f0b432e2d627e7eb92c05f3a1898}{bitsBelowThreshold}}(marked\_bits, \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a155879eba5d82c9919fb29eafadc8414}{marked\_clear\_threshold\_}}))}
+\DoxyCodeLine{371       \{}
+\DoxyCodeLine{372         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_af795f0b432e2d627e7eb92c05f3a1898}{bitsBelowThreshold}}(unknown\_bits, \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_ab6a88319eaa04936b5efab554a7dae6e}{unknown\_clear\_threshold\_}}))}
+\DoxyCodeLine{373         \{}
+\DoxyCodeLine{374           \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_aa7c29128bd268869ea418ac577c46b8e}{costmap\_}}[offset] = \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a1c5c96982daeaa1e5570a21f0fdca059}{free\_cost\_}};}
+\DoxyCodeLine{375         \}}
+\DoxyCodeLine{376         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{377         \{}
+\DoxyCodeLine{378           \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_aa7c29128bd268869ea418ac577c46b8e}{costmap\_}}[offset] = \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a4e35e2e646512924aaa70f18eed0cef3}{unknown\_cost\_}};}
+\DoxyCodeLine{379         \}}
+\DoxyCodeLine{380       \}}
+\DoxyCodeLine{381     \}}
+\DoxyCodeLine{382   \textcolor{keyword}{private}:}
+\DoxyCodeLine{383     \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_af795f0b432e2d627e7eb92c05f3a1898}{bitsBelowThreshold}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bit\_threshold)}
+\DoxyCodeLine{384     \{}
+\DoxyCodeLine{385       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} bit\_count;}
+\DoxyCodeLine{386       \textcolor{keywordflow}{for} (bit\_count = 0; \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};)}
+\DoxyCodeLine{387       \{}
+\DoxyCodeLine{388         ++bit\_count;}
+\DoxyCodeLine{389         \textcolor{keywordflow}{if} (bit\_count > bit\_threshold)}
+\DoxyCodeLine{390         \{}
+\DoxyCodeLine{391           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{392         \}}
+\DoxyCodeLine{393         \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} \&= \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} -\/ 1; \textcolor{comment}{//clear the least significant bit set}}
+\DoxyCodeLine{394       \}}
+\DoxyCodeLine{395       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{396     \}}
+\DoxyCodeLine{397 }
+\DoxyCodeLine{398     uint32\_t* \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a56dddaf67c47caf6d57ad05863f7756b}{data\_}};}
+\DoxyCodeLine{399     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_aa7c29128bd268869ea418ac577c46b8e}{costmap\_}};}
+\DoxyCodeLine{400     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_ab6a88319eaa04936b5efab554a7dae6e}{unknown\_clear\_threshold\_}}, \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a155879eba5d82c9919fb29eafadc8414}{marked\_clear\_threshold\_}};}
+\DoxyCodeLine{401     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a1c5c96982daeaa1e5570a21f0fdca059}{free\_cost\_}}, \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a4e35e2e646512924aaa70f18eed0cef3}{unknown\_cost\_}};}
+\DoxyCodeLine{402   \};}
+\DoxyCodeLine{403 }
+\DoxyCodeLine{404   \textcolor{keyword}{class }\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset}{GridOffset}}}
+\DoxyCodeLine{405   \{}
+\DoxyCodeLine{406   \textcolor{keyword}{public}:}
+\DoxyCodeLine{407     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset_ac2cdb378b825f71b34cd99f7814ef403}{GridOffset}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \&offset) : \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset_ab1ba184a0918124ecb6b119af6e396ef}{offset\_}}(offset) \{\}}
+\DoxyCodeLine{408     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset_a342e9e3e07eb450e11328d4a797cfbea}{operator()}}(\textcolor{keywordtype}{int} offset\_val)}
+\DoxyCodeLine{409     \{}
+\DoxyCodeLine{410       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset_ab1ba184a0918124ecb6b119af6e396ef}{offset\_}} += offset\_val;}
+\DoxyCodeLine{411     \}}
+\DoxyCodeLine{412   \textcolor{keyword}{private}:}
+\DoxyCodeLine{413     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \&\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset_ab1ba184a0918124ecb6b119af6e396ef}{offset\_}};}
+\DoxyCodeLine{414   \};}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416   \textcolor{keyword}{class }\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_z_offset}{ZOffset}}}
+\DoxyCodeLine{417   \{}
+\DoxyCodeLine{418   \textcolor{keyword}{public}:}
+\DoxyCodeLine{419     \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_z_offset_a1060a28bfc27df3805febf5bf2d5bc36}{ZOffset}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \&z\_mask) : \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_z_offset_a17ee03862d395635cf1ba6c6b2267dda}{z\_mask\_}}(z\_mask) \{\}}
+\DoxyCodeLine{420     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_z_offset_ade87b683d569f371f6dadc47edfd85a2}{operator()}}(\textcolor{keywordtype}{int} offset\_val)}
+\DoxyCodeLine{421     \{}
+\DoxyCodeLine{422       offset\_val > 0 ? z\_mask\_ <<= 1 : z\_mask\_ >>= 1;}
+\DoxyCodeLine{423     \}}
+\DoxyCodeLine{424   \textcolor{keyword}{private}:}
+\DoxyCodeLine{425     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \& \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_z_offset_a17ee03862d395635cf1ba6c6b2267dda}{z\_mask\_}};}
+\DoxyCodeLine{426   \};}
+\DoxyCodeLine{427 \};}
+\DoxyCodeLine{428 }
+\DoxyCodeLine{429 \}  \textcolor{comment}{// namespace voxel\_grid}}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// VOXEL\_GRID\_VOXEL\_GRID\_H}}
+
+\end{DoxyCode}

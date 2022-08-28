@@ -1,0 +1,4 @@
+<map id="base_local_planner::TrajectoryPlanner::reconfigure" name="base_local_planner::TrajectoryPlanner::reconfigure">
+<area shape="rect" id="node1" title="Reconfigures the trajectory planner" alt="" coords="5,5,139,61"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="187,13,356,54"/>
+</map>

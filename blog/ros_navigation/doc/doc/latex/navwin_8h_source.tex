@@ -1,0 +1,51 @@
+\hypertarget{navwin_8h_source}{}\doxysection{navwin.\+h}
+\label{navwin_8h_source}\index{navfn/src/navtest/navwin.h@{navfn/src/navtest/navwin.h}}
+\mbox{\hyperlink{navwin_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// drawing fns for nav fn}}
+\DoxyCodeLine{3 \textcolor{comment}{// }}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <sys/time.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <FL/Fl.H>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <FL/Fl\_Double\_Window.H>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <FL/Fl\_Group.H>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <FL/Fl\_Window.H>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <FL/fl\_draw.H>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{navfn_8h}{navfn/navfn.h}}>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenavfn}{navfn}} \{}
+\DoxyCodeLine{18   \textcolor{keyword}{class }\mbox{\hyperlink{classnavfn_1_1_nav_win}{NavWin}} }
+\DoxyCodeLine{19     : \textcolor{keyword}{public} Fl\_Double\_Window}
+\DoxyCodeLine{20   \{}
+\DoxyCodeLine{21     \textcolor{keyword}{public}:}
+\DoxyCodeLine{22       \mbox{\hyperlink{classnavfn_1_1_nav_win_af9c306108217958806769b78658bd674}{NavWin}}(\textcolor{keywordtype}{int} w, \textcolor{keywordtype}{int} h, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{23       \mbox{\hyperlink{classnavfn_1_1_nav_win_a3955de712c60ab013fc350057db0dc90}{\string~NavWin}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_a8d126676f790c33bc7230fae6356162e}{nw}},\mbox{\hyperlink{classnavfn_1_1_nav_win_ae3a688c3f61f854965da9cd447bd4abf}{nh}};            \textcolor{comment}{// width and height of image}}
+\DoxyCodeLine{26       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_a3290e52351990d535efa626dcd21eaa6}{pw}},\mbox{\hyperlink{classnavfn_1_1_nav_win_a1299586bf1ad1e762cd4b15f43d3b975}{ph}};            \textcolor{comment}{// width and height of pot field}}
+\DoxyCodeLine{27       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_afdec8bb4714b304dd7a10144393281ed}{dec}}, \mbox{\hyperlink{classnavfn_1_1_nav_win_aa2bb98b419350e04e7e0b52ff8c4e2c0}{inc}};           \textcolor{comment}{// decimation or expansion for display}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29       \textcolor{keywordtype}{float} \mbox{\hyperlink{classnavfn_1_1_nav_win_a8eee4c405961c8d960afbad18f1abdef}{maxval}};           \textcolor{comment}{// max potential value}}
+\DoxyCodeLine{30       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_win_a7b08b1ff35ee825d53a9ca50148884f9}{drawPot}}(\mbox{\hyperlink{classnavfn_1_1_nav_fn}{NavFn}} *nav); \textcolor{comment}{// draw everything...}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_win_ab798d08a7b8bda455651dce23220b433}{drawOverlay}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34       uchar *\mbox{\hyperlink{classnavfn_1_1_nav_win_aa4f67aefd66085cc997b9a223fc249a1}{im}};          \textcolor{comment}{// image for drawing}}
+\DoxyCodeLine{35       \textcolor{keywordtype}{int} *\mbox{\hyperlink{classnavfn_1_1_nav_win_a74fe893372a3feecf8e1420e01337a42}{pc}}, *\mbox{\hyperlink{classnavfn_1_1_nav_win_ac79d3122385b61ab94a05fb26a7865d9}{pn}}, *\mbox{\hyperlink{classnavfn_1_1_nav_win_a923eafccf96f08fe39e38751346f70bb}{po}};      \textcolor{comment}{// priority buffers}}
+\DoxyCodeLine{36       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_ab22825f532103da12ff9d66abb6eea28}{pce}}, \mbox{\hyperlink{classnavfn_1_1_nav_win_a109273ff1660a09ce3c786054a4e3d1f}{pne}}, \mbox{\hyperlink{classnavfn_1_1_nav_win_a5acf4fad5bff7a7ffafb2b33a888ab90}{poe}};       \textcolor{comment}{// buffer sizes}}
+\DoxyCodeLine{37       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_accbe194987290aac5c435b349af99696}{goal}}[2];}
+\DoxyCodeLine{38       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_ab323c36f51f8bca7f8e465eb9e557951}{start}}[2];}
+\DoxyCodeLine{39       \textcolor{keywordtype}{int} *\mbox{\hyperlink{classnavfn_1_1_nav_win_a958ca655e44006902dfb74b8d0e6ccd0}{path}};            \textcolor{comment}{// path buffer, cell indices}}
+\DoxyCodeLine{40       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_a131ada267b469a3c235df122ea5e4890}{pathlen}};           \textcolor{comment}{// how many we have}}
+\DoxyCodeLine{41       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_win_ae9a6a4277f9a9504790afc89b3d1799e}{pathbuflen}};     \textcolor{comment}{// how big the path buffer is}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_win_a13eedcb0a2af0309e3fe8610aaee352f}{draw}}();          \textcolor{comment}{// draw the image}}
+\DoxyCodeLine{44   \};}
+\DoxyCodeLine{45 \};}
+
+\end{DoxyCode}

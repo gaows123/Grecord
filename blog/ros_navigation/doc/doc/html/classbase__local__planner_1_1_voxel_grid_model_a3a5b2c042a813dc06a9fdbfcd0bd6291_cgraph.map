@@ -1,0 +1,14 @@
+<map id="base_local_planner::VoxelGridModel::updateWorld" name="base_local_planner::VoxelGridModel::updateWorld">
+<area shape="rect" id="node1" title="The costmap already keeps track of world observations, so for this world model this method does nothi..." alt="" coords="5,104,208,145"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_voxel_grid_model.html#a393524da3d207d7d7d1ac4979fa759ac" title=" " alt="" coords="280,67,443,108"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_voxel_grid_model.html#a1ec57951ccb153b2a2a2e997e703e13f" title=" " alt="" coords="256,133,467,189"/>
+<area shape="rect" id="node3" href="$classvoxel__grid_1_1_voxel_grid.html#af05c08221c341915183f8b78bb267b89" title=" " alt="" coords="549,5,696,47"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_voxel_grid_model.html#a3a709a7c0a5b7715cc4ffd3f5b9ce739" title=" " alt="" coords="515,71,731,112"/>
+<area shape="rect" id="node6" href="$classvoxel__grid_1_1_voxel_grid.html#af64ffc7bcf9f4c2ca4c8c7473f15d51e" title=" " alt="" coords="549,136,696,177"/>
+<area shape="rect" id="node11" href="$classbase__local__planner_1_1_voxel_grid_model.html#a1c2c7a677f931ae95969ebf5bfcccd3d" title=" " alt="" coords="547,201,698,243"/>
+<area shape="rect" id="node12" href="$costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="587,267,658,294"/>
+<area shape="rect" id="node7" href="$classvoxel__grid_1_1_voxel_grid.html#abde2d6af5b3bd1c027171c1553308cc2" title=" " alt="" coords="779,136,925,177"/>
+<area shape="rect" id="node8" href="$classvoxel__grid_1_1_voxel_grid.html#a6162764691b8e3966d31348e459486db" title=" " alt="" coords="989,77,1136,119"/>
+<area shape="rect" id="node9" href="$classvoxel__grid_1_1_voxel_grid.html#a4a7315df7b9fd6cf64b9055742fa693f" title=" " alt="" coords="973,143,1152,170"/>
+<area shape="rect" id="node10" href="$classvoxel__grid_1_1_voxel_grid.html#ad9c87a014630da9252f62cef62319cea" title=" " alt="" coords="989,195,1136,236"/>
+</map>

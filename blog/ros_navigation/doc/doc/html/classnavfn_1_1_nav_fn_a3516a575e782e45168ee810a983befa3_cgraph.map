@@ -1,0 +1,9 @@
+<map id="navfn::NavFn::calcNavFnDijkstra" name="navfn::NavFn::calcNavFnDijkstra">
+<area shape="rect" id="node1" title="Caclulates the full navigation function using Dijkstra" alt="" coords="5,56,220,83"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_nav_fn.html#a672ab629393be0eb4b91696cb1b6c01a" title="Calculates the path for at mose &lt;n&gt; cycles" alt="" coords="296,5,455,32"/>
+<area shape="rect" id="node4" href="$classnavfn_1_1_nav_fn.html#a076842de1d6d76769040f21856b7cb55" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth&#45;first Dijkstra metho..." alt="" coords="268,56,483,83"/>
+<area shape="rect" id="node6" href="$classnavfn_1_1_nav_fn.html#a233063ad5d082e7e86802c194a9a322a" title=" " alt="" coords="286,107,465,133"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_nav_fn.html#a28b709d5ffb7619f9f2083415a5c96ab" title=" " alt="" coords="538,5,693,32"/>
+<area shape="rect" id="node5" href="$classnavfn_1_1_nav_fn.html#a5246a7901de2865ac90b19d2434f22c1" title="Updates the cell at index n" alt="" coords="531,56,700,83"/>
+<area shape="rect" id="node7" href="$classnavfn_1_1_nav_fn.html#a18a538679f3b968ef741dd6ad76f7753" title="Initialize cell k with cost v for propagation" alt="" coords="539,107,691,133"/>
+</map>

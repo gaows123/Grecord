@@ -1,0 +1,12 @@
+<map id="costmap_2d::Costmap2D::raytraceLine" name="costmap_2d::Costmap2D::raytraceLine">
+<area shape="rect" id="node1" title="Raytrace a line and apply some action at each step" alt="" coords="1336,72,1505,113"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#ad0c6f7cb8e11569a02f873c545acec90" title="Get the map cells that make up the outline of a polygon" alt="" coords="1111,39,1280,80"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_obstacle_layer.html#a50dac229133e7c22981b0c7e0eafc910" title="根据单次的观测来清除自由空间" alt="" coords="1103,104,1288,145"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#aa3c49f2d63f6edfb7396d1b0c79a4b12" title="Get the map cells that fill a convex polygon" alt="" coords="877,39,1047,80"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#afb8a42c3810e796107ed04c0ca3cbf90" title="Sets the cost of a convex polygon to a desired value" alt="" coords="652,39,821,80"/>
+<area shape="rect" id="node5" href="$classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="430,5,593,47"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_obstacle_layer.html#a02fbdf76db69ddc03c400b2c00e903ee" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="419,71,604,112"/>
+<area shape="rect" id="node6" href="$classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="212,5,371,47"/>
+<area shape="rect" id="node7" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="869,104,1055,145"/>
+</map>

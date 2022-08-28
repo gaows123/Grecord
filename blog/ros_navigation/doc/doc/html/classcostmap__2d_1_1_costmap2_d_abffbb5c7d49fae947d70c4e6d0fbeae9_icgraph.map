@@ -1,0 +1,14 @@
+<map id="costmap_2d::Costmap2D::cellDistance" name="costmap_2d::Costmap2D::cellDistance">
+<area shape="rect" id="node1" title="Given distance in the world... convert it to cells" alt="" coords="1152,180,1321,221"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="922,83,1101,124"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_obstacle_layer.html#a50dac229133e7c22981b0c7e0eafc910" title="根据单次的观测来清除自由空间" alt="" coords="919,180,1104,221"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_voxel_layer.html#a6f7c914d410df715e01253b3584d9f21" title="根据单次的观测来清除自由空间" alt="" coords="928,245,1095,287"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,5,637,47"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="689,49,867,91"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="689,115,867,156"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,53,411,95"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,53,184,95"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,85,637,127"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="685,180,871,221"/>
+<area shape="rect" id="node12" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="695,245,861,287"/>
+</map>

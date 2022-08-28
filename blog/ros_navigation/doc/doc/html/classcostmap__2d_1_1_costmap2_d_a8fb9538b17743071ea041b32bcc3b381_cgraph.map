@@ -1,0 +1,7 @@
+<map id="costmap_2d::Costmap2D::copyCostmapWindow" name="costmap_2d::Costmap2D::copyCostmapWindow">
+<area shape="rect" id="node1" title="Turn this costmap into a copy of a window of a costmap passed in" alt="" coords="5,104,175,145"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="223,5,392,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#af536407a80cef61e20226c28dbef9eee" title="Deletes the costmap, static_map, and markers data structures" alt="" coords="223,71,392,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a1da91220df45a19376a3e3df3a517c27" title="Initializes the costmap, static_map, and markers data structures" alt="" coords="223,136,392,177"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="223,201,392,243"/>
+</map>

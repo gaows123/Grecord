@@ -1,0 +1,107 @@
+\hypertarget{static__layer_8h_source}{}\doxysection{static\+\_\+layer.\+h}
+\label{static__layer_8h_source}\index{costmap\_2d/include/costmap\_2d/static\_layer.h@{costmap\_2d/include/costmap\_2d/static\_layer.h}}
+\mbox{\hyperlink{static__layer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_STATIC\_LAYER\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_STATIC\_LAYER\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__layer_8h}{costmap\_2d/costmap\_layer.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layered__costmap_8h}{costmap\_2d/layered\_costmap.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <costmap\_2d/GenericPluginConfig.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/server.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <nav\_msgs/OccupancyGrid.h>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <map\_msgs/OccupancyGridUpdate.h>}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <message\_filters/subscriber.h>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{51 \{}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_static_layer}{StaticLayer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer}{CostmapLayer}}}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56   \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a22852e37990d52d6c2d4fa72720f0b57}{StaticLayer}}();}
+\DoxyCodeLine{57   \textcolor{keyword}{virtual} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a476c82181484c980b4fe2329b11461b2}{\string~StaticLayer}}();}
+\DoxyCodeLine{58   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a05ac3b3a903d45c76d076fed8ae220f6}{onInitialize}}();}
+\DoxyCodeLine{59   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a4b70375c6f9b105dd2fa765657cc46f8}{activate}}();}
+\DoxyCodeLine{60   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a861c1b31d3314e3f551ef94c8cee92c5}{deactivate}}();}
+\DoxyCodeLine{61   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a80083e19e7d50881f3d46c79e324dd93}{reset}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_ad433844bcb32418450e0fcb763173b6a}{updateBounds}}(\textcolor{keywordtype}{double} robot\_x, \textcolor{keywordtype}{double} robot\_y, \textcolor{keywordtype}{double} robot\_yaw, \textcolor{keywordtype}{double}* min\_x, \textcolor{keywordtype}{double}* min\_y,}
+\DoxyCodeLine{64                             \textcolor{keywordtype}{double}* max\_x, \textcolor{keywordtype}{double}* max\_y);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{75   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a9ebed8f042ee945073031e51f82229f1}{updateCosts}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& master\_grid, \textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a3c8a9c7ea061ad416e09d2f1f18cdc8a}{matchSize}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{private}:}
+\DoxyCodeLine{86   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_aa9d8d26c675b2ecebeb1f2ba2a7ccfd6}{incomingMap}}(\textcolor{keyword}{const} nav\_msgs::OccupancyGridConstPtr\& new\_map);}
+\DoxyCodeLine{87   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a07ac2871f5f93542598677f06ba0b5b2}{incomingUpdate}}(\textcolor{keyword}{const} map\_msgs::OccupancyGridUpdateConstPtr\& update);}
+\DoxyCodeLine{88   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_acbe132f678864e1e0f04ab07e71c7883}{reconfigureCB}}(costmap\_2d::GenericPluginConfig \&config, uint32\_t level);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a8d578a3eff5f630557ea28be27346029}{interpretValue}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92   std::string \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a927e369aaee082ed5bdd1af557198381}{global\_frame\_}};  \textcolor{comment}{// 代价地图全局坐标系}}
+\DoxyCodeLine{93   std::string \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_aad624b73c8c92aa2b89e41e29244ece3}{map\_frame\_}};  \textcolor{comment}{// 地图坐标系}}
+\DoxyCodeLine{94   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_aa910e8b08db91351a137c5bed06919f0}{subscribe\_to\_updates\_}};}
+\DoxyCodeLine{95   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a5b913db89839c17b9c615ffe542beda6}{map\_received\_}};}
+\DoxyCodeLine{96   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a3f4bddc74693c57721e08311a0afa90a}{has\_updated\_data\_}};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98   \textcolor{comment}{// 在接收到地图时，x\_, y\_被置为0,width\_, height\_ 被设为地图宽高}}
+\DoxyCodeLine{99   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a7bf1eab26c6ab3a40e7dba22fc60f059}{x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a69d9974ff40bdcae5a700d46c9c9117a}{y\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a7c90c9a574a512dd82eff6fab8767d2a}{width\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a792581cd45ba52717c7eef4c70281c26}{height\_}};}
+\DoxyCodeLine{100   \textcolor{comment}{// 默认没有配置，使用true}}
+\DoxyCodeLine{101   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a05db7da9660957f3b2e2a1db4a832cf0}{track\_unknown\_space\_}};}
+\DoxyCodeLine{102   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a436f6efa8132032ddcbe4720347cd7f3}{use\_maximum\_}};}
+\DoxyCodeLine{103   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_ab6687870232dcf7e0caacaa543d3c60d}{first\_map\_only\_}};      }
+\DoxyCodeLine{104   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_ab9b1d34924035072bb012793addde426}{trinary\_costmap\_}};}
+\DoxyCodeLine{105   ros::Subscriber \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a385facbd4da3c3504f8be890d18b26f8}{map\_sub\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a3105d0cbf7ef82fa1135f908b44c6348}{map\_update\_sub\_}};}
+\DoxyCodeLine{106   \textcolor{comment}{// lethal\_threshold\_：致命cost的阈值，使用默认的为100}}
+\DoxyCodeLine{107   \textcolor{comment}{// unknown\_cost\_value\_：未知的区域，cost 值为255}}
+\DoxyCodeLine{108   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a92ddd45220c4d1edb517722f80e4fe27}{lethal\_threshold\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_abc06310847b129be867e57bfe1a8ac3b}{unknown\_cost\_value\_}};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110   dynamic\_reconfigure::Server<costmap\_2d::GenericPluginConfig> *\mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a9eba9217c885c3786c74cad08278be9c}{dsrv\_}};}
+\DoxyCodeLine{111 \};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_STATIC\_LAYER\_H\_}}
+
+\end{DoxyCode}

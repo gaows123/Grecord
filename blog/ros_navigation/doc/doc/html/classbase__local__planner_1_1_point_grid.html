@@ -1,0 +1,1922 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::PointGrid类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_point_grid.html">PointGrid</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_point_grid-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::PointGrid类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>实现WorldModel接口的类，提供自由空间的碰撞检测， 该类存储网格的点并且检查多边形中的点是否碰撞(通过把机器人的footprint映射到给定的位姿，看有没有和障碍物重合)  
+ <a href="classbase__local__planner_1_1_point_grid.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="point__grid_8h_source.html">point_grid.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::PointGrid 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid__inherit__graph.png" border="0" usemap="#abase__local__planner_1_1_point_grid_inherit__map" alt="Inheritance graph"/></div>
+<map name="abase__local__planner_1_1_point_grid_inherit__map" id="abase__local__planner_1_1_point_grid_inherit__map">
+<area shape="rect" title="实现WorldModel接口的类，提供自由空间的碰撞检测， 该类存储网格的点并且检查多边形中的点是否碰撞(通过把机器人的footprint映射到给定的位姿，看有没有和障碍物重合)" alt="" coords="5,95,139,136"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="5,5,139,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+base_local_planner::PointGrid 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid__coll__graph.png" border="0" usemap="#abase__local__planner_1_1_point_grid_coll__map" alt="Collaboration graph"/></div>
+<map name="abase__local__planner_1_1_point_grid_coll__map" id="abase__local__planner_1_1_point_grid_coll__map">
+<area shape="rect" title="实现WorldModel接口的类，提供自由空间的碰撞检测， 该类存储网格的点并且检查多边形中的点是否碰撞(通过把机器人的footprint映射到给定的位姿，看有没有和障碍物重合)" alt="" coords="64,109,197,151"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="5,5,139,47"/>
+<area shape="rect" title=" " alt="" coords="163,13,215,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:adaccd0818cd5b3334f1410f6cfca93dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#adaccd0818cd5b3334f1410f6cfca93dc">PointGrid</a> (double width, double height, double resolution, geometry_msgs::Point origin, double max_z, double obstacle_range, double min_separation)</td></tr>
+<tr class="memdesc:adaccd0818cd5b3334f1410f6cfca93dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造存储平面点的网格  <a href="classbase__local__planner_1_1_point_grid.html#adaccd0818cd5b3334f1410f6cfca93dc">更多...</a><br /></td></tr>
+<tr class="separator:adaccd0818cd5b3334f1410f6cfca93dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf3cf7ebf7d52a909fb2744560bf1e4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#adcf3cf7ebf7d52a909fb2744560bf1e4">~PointGrid</a> ()</td></tr>
+<tr class="memdesc:adcf3cf7ebf7d52a909fb2744560bf1e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <a href="classbase__local__planner_1_1_point_grid.html#adcf3cf7ebf7d52a909fb2744560bf1e4">更多...</a><br /></td></tr>
+<tr class="separator:adcf3cf7ebf7d52a909fb2744560bf1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af222229f74f1bc4e14536548c316e755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755">getPointsInRange</a> (const geometry_msgs::Point &amp;lower_left, const geometry_msgs::Point &amp;upper_right, std::vector&lt; std::list&lt; geometry_msgs::Point32 &gt; * &gt; &amp;points)</td></tr>
+<tr class="memdesc:af222229f74f1bc4e14536548c316e755"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回位于特定范围内单元格中的点，有些点可能超过了特定的范围.  <a href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755">更多...</a><br /></td></tr>
+<tr class="separator:af222229f74f1bc4e14536548c316e755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9398ded210128450fbdb86f231cf588"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)</td></tr>
+<tr class="memdesc:ae9398ded210128450fbdb86f231cf588"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查有没有网格点落在机器人footprint中  <a href="classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588">更多...</a><br /></td></tr>
+<tr class="separator:ae9398ded210128450fbdb86f231cf588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8a9a0665445fe274510a86dd0e8277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277">updateWorld</a> (const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, const std::vector&lt; <a class="el" href="classcostmap__2d_1_1_observation.html">costmap_2d::Observation</a> &gt; &amp;observations, const std::vector&lt; <a class="el" href="classbase__local__planner_1_1_planar_laser_scan.html">PlanarLaserScan</a> &gt; &amp;laser_scans)</td></tr>
+<tr class="memdesc:adb8a9a0665445fe274510a86dd0e8277"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入传感器观察值到point grid  <a href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277">更多...</a><br /></td></tr>
+<tr class="separator:adb8a9a0665445fe274510a86dd0e8277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f9826c14353e9a75696be52d438554"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554">gridCoords</a> (geometry_msgs::Point pt, unsigned int &amp;gx, unsigned int &amp;gy) const</td></tr>
+<tr class="memdesc:a85f9826c14353e9a75696be52d438554"><td class="mdescLeft">&#160;</td><td class="mdescRight">从世界坐标系转换到网格坐标系  <a href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554">更多...</a><br /></td></tr>
+<tr class="separator:a85f9826c14353e9a75696be52d438554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98a155058a5045be350a89eb3858f41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#aa98a155058a5045be350a89eb3858f41">getCellBounds</a> (unsigned int gx, unsigned int gy, geometry_msgs::Point &amp;lower_left, geometry_msgs::Point &amp;upper_right) const</td></tr>
+<tr class="memdesc:aa98a155058a5045be350a89eb3858f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called  <a href="classbase__local__planner_1_1_point_grid.html#aa98a155058a5045be350a89eb3858f41">更多...</a><br /></td></tr>
+<tr class="separator:aa98a155058a5045be350a89eb3858f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70991650fe65105f90f31acdab32a830"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830">sq_distance</a> (const geometry_msgs::Point32 &amp;pt1, const geometry_msgs::Point32 &amp;pt2)</td></tr>
+<tr class="memdesc:a70991650fe65105f90f31acdab32a830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the squared distance between two points  <a href="classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830">更多...</a><br /></td></tr>
+<tr class="separator:a70991650fe65105f90f31acdab32a830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35f097e6894731b7d9963e46b16d0d6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a35f097e6894731b7d9963e46b16d0d6f">gridCoords</a> (const geometry_msgs::Point32 &amp;pt, unsigned int &amp;gx, unsigned int &amp;gy) const</td></tr>
+<tr class="memdesc:a35f097e6894731b7d9963e46b16d0d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert from world coordinates to grid coordinates  <a href="classbase__local__planner_1_1_point_grid.html#a35f097e6894731b7d9963e46b16d0d6f">更多...</a><br /></td></tr>
+<tr class="separator:a35f097e6894731b7d9963e46b16d0d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a107ea768298e5560e962498692674d5a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a">gridIndex</a> (unsigned int gx, unsigned int gy) const</td></tr>
+<tr class="memdesc:a107ea768298e5560e962498692674d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts cell coordinates to an index value that can be used to look up the correct grid cell  <a href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a">更多...</a><br /></td></tr>
+<tr class="separator:a107ea768298e5560e962498692674d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3604c15e0eebb45dcaf4ae5403c5f7e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e">orient</a> (const geometry_msgs::Point &amp;a, const geometry_msgs::Point &amp;b, const geometry_msgs::Point32 &amp;c)</td></tr>
+<tr class="memdesc:ab3604c15e0eebb45dcaf4ae5403c5f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the orientation of a pt c with respect to the vector a-&gt;b  <a href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e">更多...</a><br /></td></tr>
+<tr class="separator:ab3604c15e0eebb45dcaf4ae5403c5f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8558a1d185f1299007cb4a92726f8541"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8558a1d185f1299007cb4a92726f8541"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a8558a1d185f1299007cb4a92726f8541">orient</a> (const T &amp;a, const T &amp;b, const T &amp;c)</td></tr>
+<tr class="memdesc:a8558a1d185f1299007cb4a92726f8541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the orientation of a pt c with respect to the vector a-&gt;b  <a href="classbase__local__planner_1_1_point_grid.html#a8558a1d185f1299007cb4a92726f8541">更多...</a><br /></td></tr>
+<tr class="separator:a8558a1d185f1299007cb4a92726f8541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11952049cf710f3e49d27181a7c09e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#af11952049cf710f3e49d27181a7c09e9">segIntersect</a> (const geometry_msgs::Point32 &amp;v1, const geometry_msgs::Point32 &amp;v2, const geometry_msgs::Point32 &amp;u1, const geometry_msgs::Point32 &amp;u2)</td></tr>
+<tr class="memdesc:af11952049cf710f3e49d27181a7c09e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two line segmenst intersect  <a href="classbase__local__planner_1_1_point_grid.html#af11952049cf710f3e49d27181a7c09e9">更多...</a><br /></td></tr>
+<tr class="separator:af11952049cf710f3e49d27181a7c09e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d9b62516e5e401669b618e790979ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a42d9b62516e5e401669b618e790979ad">intersectionPoint</a> (const geometry_msgs::Point &amp;v1, const geometry_msgs::Point &amp;v2, const geometry_msgs::Point &amp;u1, const geometry_msgs::Point &amp;u2, geometry_msgs::Point &amp;result)</td></tr>
+<tr class="memdesc:a42d9b62516e5e401669b618e790979ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the intersection point of two lines  <a href="classbase__local__planner_1_1_point_grid.html#a42d9b62516e5e401669b618e790979ad">更多...</a><br /></td></tr>
+<tr class="separator:a42d9b62516e5e401669b618e790979ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d813f2a10631747b458377fdd4a2a4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a7d813f2a10631747b458377fdd4a2a4f">ptInPolygon</a> (const geometry_msgs::Point32 &amp;pt, const std::vector&lt; geometry_msgs::Point &gt; &amp;poly)</td></tr>
+<tr class="memdesc:a7d813f2a10631747b458377fdd4a2a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a point is in a polygon  <a href="classbase__local__planner_1_1_point_grid.html#a7d813f2a10631747b458377fdd4a2a4f">更多...</a><br /></td></tr>
+<tr class="separator:a7d813f2a10631747b458377fdd4a2a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5276643487b1ab03a4a9602b3f338ba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8">insert</a> (const geometry_msgs::Point32 &amp;pt)</td></tr>
+<tr class="memdesc:a5276643487b1ab03a4a9602b3f338ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert a point into the point grid  <a href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8">更多...</a><br /></td></tr>
+<tr class="separator:a5276643487b1ab03a4a9602b3f338ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd6e4378342589f07e5700aac825550"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550">nearestNeighborDistance</a> (const geometry_msgs::Point32 &amp;pt)</td></tr>
+<tr class="memdesc:aebd6e4378342589f07e5700aac825550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the distance between a point and its nearest neighbor in the grid  <a href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550">更多...</a><br /></td></tr>
+<tr class="separator:aebd6e4378342589f07e5700aac825550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace5884f03d444ee13dffd0dbe866678"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678">getNearestInCell</a> (const geometry_msgs::Point32 &amp;pt, unsigned int gx, unsigned int gy)</td></tr>
+<tr class="memdesc:aace5884f03d444ee13dffd0dbe866678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the distance between a point and its nearest neighbor in a cell  <a href="classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678">更多...</a><br /></td></tr>
+<tr class="separator:aace5884f03d444ee13dffd0dbe866678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb743eed27facd44c2ed0e59e9f04449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449">removePointsInPolygon</a> (const std::vector&lt; geometry_msgs::Point &gt; poly)</td></tr>
+<tr class="memdesc:afb743eed27facd44c2ed0e59e9f04449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes points from the grid that lie within the polygon  <a href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449">更多...</a><br /></td></tr>
+<tr class="separator:afb743eed27facd44c2ed0e59e9f04449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693cf4b2962ea0ffb4e74daf44a317a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4">removePointsInScanBoundry</a> (const <a class="el" href="classbase__local__planner_1_1_planar_laser_scan.html">PlanarLaserScan</a> &amp;laser_scan)</td></tr>
+<tr class="memdesc:a693cf4b2962ea0ffb4e74daf44a317a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes points from the grid that lie within a laser scan  <a href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4">更多...</a><br /></td></tr>
+<tr class="separator:a693cf4b2962ea0ffb4e74daf44a317a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763e1d4207cc1ecbc670936074211155"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a763e1d4207cc1ecbc670936074211155">ptInScan</a> (const geometry_msgs::Point32 &amp;pt, const <a class="el" href="classbase__local__planner_1_1_planar_laser_scan.html">PlanarLaserScan</a> &amp;laser_scan)</td></tr>
+<tr class="memdesc:a763e1d4207cc1ecbc670936074211155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if a point is within a laser scan specification  <a href="classbase__local__planner_1_1_point_grid.html#a763e1d4207cc1ecbc670936074211155">更多...</a><br /></td></tr>
+<tr class="separator:a763e1d4207cc1ecbc670936074211155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a0ccb34b0468c2249c32ebad03623c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a60a0ccb34b0468c2249c32ebad03623c">getPoints</a> (sensor_msgs::PointCloud2 &amp;cloud)</td></tr>
+<tr class="memdesc:a60a0ccb34b0468c2249c32ebad03623c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the points in the point grid  <a href="classbase__local__planner_1_1_point_grid.html#a60a0ccb34b0468c2249c32ebad03623c">更多...</a><br /></td></tr>
+<tr class="separator:a60a0ccb34b0468c2249c32ebad03623c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d4c808bc441e2b87b0ac038099993a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a36d4c808bc441e2b87b0ac038099993a">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)=0</td></tr>
+<tr class="memdesc:a36d4c808bc441e2b87b0ac038099993a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement this method to check a footprint at a given position and orientation for legality in the world  <a href="classbase__local__planner_1_1_point_grid.html#a36d4c808bc441e2b87b0ac038099993a">更多...</a><br /></td></tr>
+<tr class="separator:a36d4c808bc441e2b87b0ac038099993a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#ac7e8dc9c77a2dd2fa77f5a27d812fd43">footprintCost</a> (double x, double y, double theta, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0)</td></tr>
+<tr class="separator:ac7e8dc9c77a2dd2fa77f5a27d812fd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358fe0d75fefe46dda134ee6e3305f71"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a358fe0d75fefe46dda134ee6e3305f71">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius, double extra)</td></tr>
+<tr class="memdesc:a358fe0d75fefe46dda134ee6e3305f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1_point_grid.html#a358fe0d75fefe46dda134ee6e3305f71">更多...</a><br /></td></tr>
+<tr class="separator:a358fe0d75fefe46dda134ee6e3305f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1_world_model"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1_world_model')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a></td></tr>
+<tr class="memitem:a36d4c808bc441e2b87b0ac038099993a inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius)=0</td></tr>
+<tr class="memdesc:a36d4c808bc441e2b87b0ac038099993a inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement this method to check a footprint at a given position and orientation for legality in the world  <a href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">更多...</a><br /></td></tr>
+<tr class="separator:a36d4c808bc441e2b87b0ac038099993a inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e8dc9c77a2dd2fa77f5a27d812fd43 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#ac7e8dc9c77a2dd2fa77f5a27d812fd43">footprintCost</a> (double x, double y, double theta, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec, double inscribed_radius=0.0, double circumscribed_radius=0.0)</td></tr>
+<tr class="separator:ac7e8dc9c77a2dd2fa77f5a27d812fd43 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a358fe0d75fefe46dda134ee6e3305f71">footprintCost</a> (const geometry_msgs::Point &amp;position, const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint, double inscribed_radius, double circumscribed_radius, double extra)</td></tr>
+<tr class="memdesc:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid  <a href="classbase__local__planner_1_1_world_model.html#a358fe0d75fefe46dda134ee6e3305f71">更多...</a><br /></td></tr>
+<tr class="separator:a358fe0d75fefe46dda134ee6e3305f71 inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a87c45611143fde55c4a2efb4d078471d">~WorldModel</a> ()</td></tr>
+<tr class="memdesc:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subclass will implement a destructor  <a href="classbase__local__planner_1_1_world_model.html#a87c45611143fde55c4a2efb4d078471d">更多...</a><br /></td></tr>
+<tr class="separator:a87c45611143fde55c4a2efb4d078471d inherit pub_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a2232220cabac42c77df3651ef8706c5b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a2232220cabac42c77df3651ef8706c5b">resolution_</a></td></tr>
+<tr class="memdesc:a2232220cabac42c77df3651ef8706c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resolution of the grid in meters/cell  <a href="classbase__local__planner_1_1_point_grid.html#a2232220cabac42c77df3651ef8706c5b">更多...</a><br /></td></tr>
+<tr class="separator:a2232220cabac42c77df3651ef8706c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49056e465b626fd351301147a697b6aa"><td class="memItemLeft" align="right" valign="top">geometry_msgs::Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a49056e465b626fd351301147a697b6aa">origin_</a></td></tr>
+<tr class="memdesc:a49056e465b626fd351301147a697b6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The origin point of the grid  <a href="classbase__local__planner_1_1_point_grid.html#a49056e465b626fd351301147a697b6aa">更多...</a><br /></td></tr>
+<tr class="separator:a49056e465b626fd351301147a697b6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8cfcc3891fd32ab51f0a10bcc7edd62"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#ae8cfcc3891fd32ab51f0a10bcc7edd62">width_</a></td></tr>
+<tr class="memdesc:ae8cfcc3891fd32ab51f0a10bcc7edd62"><td class="mdescLeft">&#160;</td><td class="mdescRight">The width of the grid in cells  <a href="classbase__local__planner_1_1_point_grid.html#ae8cfcc3891fd32ab51f0a10bcc7edd62">更多...</a><br /></td></tr>
+<tr class="separator:ae8cfcc3891fd32ab51f0a10bcc7edd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c02ee4d4ef45459067a91f2288911a6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a1c02ee4d4ef45459067a91f2288911a6">height_</a></td></tr>
+<tr class="memdesc:a1c02ee4d4ef45459067a91f2288911a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the grid in cells  <a href="classbase__local__planner_1_1_point_grid.html#a1c02ee4d4ef45459067a91f2288911a6">更多...</a><br /></td></tr>
+<tr class="separator:a1c02ee4d4ef45459067a91f2288911a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a231b46dbba3e029edf94d5cc122147e9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::list&lt; geometry_msgs::Point32 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a231b46dbba3e029edf94d5cc122147e9">cells_</a></td></tr>
+<tr class="memdesc:a231b46dbba3e029edf94d5cc122147e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage for the cells in the grid  <a href="classbase__local__planner_1_1_point_grid.html#a231b46dbba3e029edf94d5cc122147e9">更多...</a><br /></td></tr>
+<tr class="separator:a231b46dbba3e029edf94d5cc122147e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2036620b9d1149e833273c43c5a727eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a2036620b9d1149e833273c43c5a727eb">max_z_</a></td></tr>
+<tr class="memdesc:a2036620b9d1149e833273c43c5a727eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height cutoff for adding points as obstacles  <a href="classbase__local__planner_1_1_point_grid.html#a2036620b9d1149e833273c43c5a727eb">更多...</a><br /></td></tr>
+<tr class="separator:a2036620b9d1149e833273c43c5a727eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753727a1119075f27b7a840bc6f1be0a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a753727a1119075f27b7a840bc6f1be0a">sq_obstacle_range_</a></td></tr>
+<tr class="memdesc:a753727a1119075f27b7a840bc6f1be0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The square distance at which we no longer add obstacles to the grid  <a href="classbase__local__planner_1_1_point_grid.html#a753727a1119075f27b7a840bc6f1be0a">更多...</a><br /></td></tr>
+<tr class="separator:a753727a1119075f27b7a840bc6f1be0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3688e671583e2ff4ff50308226477111"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a3688e671583e2ff4ff50308226477111">sq_min_separation_</a></td></tr>
+<tr class="memdesc:a3688e671583e2ff4ff50308226477111"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum square distance required between points in the grid  <a href="classbase__local__planner_1_1_point_grid.html#a3688e671583e2ff4ff50308226477111">更多...</a><br /></td></tr>
+<tr class="separator:a3688e671583e2ff4ff50308226477111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc679229c93a4507d4b50144f7b6d32"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::list&lt; geometry_msgs::Point32 &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_point_grid.html#a2fc679229c93a4507d4b50144f7b6d32">points_</a></td></tr>
+<tr class="memdesc:a2fc679229c93a4507d4b50144f7b6d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lists of points returned by a range search, made a member to save on memory allocation  <a href="classbase__local__planner_1_1_point_grid.html#a2fc679229c93a4507d4b50144f7b6d32">更多...</a><br /></td></tr>
+<tr class="separator:a2fc679229c93a4507d4b50144f7b6d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classbase__local__planner_1_1_world_model"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbase__local__planner_1_1_world_model')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a></td></tr>
+<tr class="memitem:a577351de9f26b9fc6f702e1cceed84e4 inherit pro_methods_classbase__local__planner_1_1_world_model"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_world_model.html#a577351de9f26b9fc6f702e1cceed84e4">WorldModel</a> ()</td></tr>
+<tr class="separator:a577351de9f26b9fc6f702e1cceed84e4 inherit pro_methods_classbase__local__planner_1_1_world_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >实现WorldModel接口的类，提供自由空间的碰撞检测， 该类存储网格的点并且检查多边形中的点是否碰撞(通过把机器人的footprint映射到给定的位姿，看有没有和障碍物重合) </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="adaccd0818cd5b3334f1410f6cfca93dc" name="adaccd0818cd5b3334f1410f6cfca93dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaccd0818cd5b3334f1410f6cfca93dc">&#9670;&nbsp;</a></span>PointGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::PointGrid::PointGrid </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Point&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>obstacle_range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min_separation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造存储平面点的网格 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>网格的宽(米) </td></tr>
+    <tr><td class="paramname">height</td><td>网格的高(米) </td></tr>
+    <tr><td class="paramname">resolution</td><td>网格分辨率 meters/cell </td></tr>
+    <tr><td class="paramname">origin</td><td>The origin of the bottom left corner of the grid 网格的左下角原点位姿 </td></tr>
+    <tr><td class="paramname">max_z</td><td>网格中障碍物的最大高度 </td></tr>
+    <tr><td class="paramname">obstacle_range</td><td>网格中障碍物的最大距离 </td></tr>
+    <tr><td class="paramname">min_separation</td><td>网格中点之间最小距离 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adcf3cf7ebf7d52a909fb2744560bf1e4" name="adcf3cf7ebf7d52a909fb2744560bf1e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf3cf7ebf7d52a909fb2744560bf1e4">&#9670;&nbsp;</a></span>~PointGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual base_local_planner::PointGrid::~PointGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ae9398ded210128450fbdb86f231cf588" name="ae9398ded210128450fbdb86f231cf588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9398ded210128450fbdb86f231cf588">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查有没有网格点落在机器人footprint中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>位置 </td></tr>
+    <tr><td class="paramname">footprint</td><td>机器人footprint </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>机器人内切圆半径 </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>机器人外接圆半径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>正值代表所有点在footprint外，负值则有点在里面 </dd></dl>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">base_local_planner::WorldModel</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_cgraph" id="aclassbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_cgraph">
+<area shape="rect" title="检查有没有网格点落在机器人footprint中" alt="" coords="5,104,172,145"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="220,71,415,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a7d813f2a10631747b458377fdd4a2a4f" title="Check if a point is in a polygon" alt="" coords="237,136,398,177"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="463,5,617,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="467,71,613,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="473,136,607,177"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_icgraph" id="aclassbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588_icgraph">
+<area shape="rect" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,5,271,47"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a36d4c808bc441e2b87b0ac038099993a" name="a36d4c808bc441e2b87b0ac038099993a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d4c808bc441e2b87b0ac038099993a">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subclass will implement this method to check a footprint at a given position and orientation for legality in the world </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise: -1 if footprint covers at least a lethal obstacle cell, or -2 if footprint covers at least a no-information cell, or -3 if footprint is partially or totally outside of the map </dd></dl>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a">base_local_planner::WorldModel</a>.</p>
+
+</div>
+</div>
+<a id="a358fe0d75fefe46dda134ee6e3305f71" name="a358fe0d75fefe46dda134ee6e3305f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358fe0d75fefe46dda134ee6e3305f71">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>extra</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The position of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">footprint</td><td>The specification of the footprint of the robot in world coordinates </td></tr>
+    <tr><td class="paramname">inscribed_radius</td><td>The radius of the inscribed circle of the robot </td></tr>
+    <tr><td class="paramname">circumscribed_radius</td><td>The radius of the circumscribed circle of the robot </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>Positive if all the points lie outside the footprint, negative otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ac7e8dc9c77a2dd2fa77f5a27d812fd43" name="ac7e8dc9c77a2dd2fa77f5a27d812fd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e8dc9c77a2dd2fa77f5a27d812fd43">&#9670;&nbsp;</a></span>footprintCost() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::WorldModel::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inscribed_radius</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>circumscribed_radius</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa98a155058a5045be350a89eb3858f41" name="aa98a155058a5045be350a89eb3858f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98a155058a5045be350a89eb3858f41">&#9670;&nbsp;</a></span>getCellBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::getCellBounds </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>gx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>gy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>lower_left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>upper_right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gx</td><td>The x coordinate of the grid cell </td></tr>
+    <tr><td class="paramname">gy</td><td>The y coordinate of the grid cell </td></tr>
+    <tr><td class="paramname">lower_left</td><td>The lower left bounds of the cell in world coordinates to be filled in </td></tr>
+    <tr><td class="paramname">upper_right</td><td>The upper right bounds of the cell in world coordinates to be filled in </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_aa98a155058a5045be350a89eb3858f41_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_aa98a155058a5045be350a89eb3858f41_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_aa98a155058a5045be350a89eb3858f41_icgraph" id="aclassbase__local__planner_1_1_point_grid_aa98a155058a5045be350a89eb3858f41_icgraph">
+<area shape="rect" title="Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called" alt="" coords="732,13,908,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="497,5,684,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="316,13,449,54"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,42,268,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aace5884f03d444ee13dffd0dbe866678" name="aace5884f03d444ee13dffd0dbe866678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace5884f03d444ee13dffd0dbe866678">&#9670;&nbsp;</a></span>getNearestInCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::getNearestInCell </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>gx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>gy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the distance between a point and its nearest neighbor in a cell </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>The point used for comparison </td></tr>
+    <tr><td class="paramname">gx</td><td>The x coordinate of the cell </td></tr>
+    <tr><td class="paramname">gy</td><td>The y coordinate of the cell </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The distance between the point passed in and its nearest neighbor in the cell </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_cgraph" id="aclassbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_cgraph">
+<area shape="rect" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="5,39,193,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="250,5,395,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830" title="Compute the squared distance between two points" alt="" coords="241,71,404,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_icgraph" id="aclassbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678_icgraph">
+<area shape="rect" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="732,13,920,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="497,5,684,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="316,13,449,54"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,42,268,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60a0ccb34b0468c2249c32ebad03623c" name="a60a0ccb34b0468c2249c32ebad03623c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60a0ccb34b0468c2249c32ebad03623c">&#9670;&nbsp;</a></span>getPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::getPoints </td>
+          <td>(</td>
+          <td class="paramtype">sensor_msgs::PointCloud2 &amp;&#160;</td>
+          <td class="paramname"><em>cloud</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the points in the point grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cloud</td><td>The point cloud to insert the points into </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af222229f74f1bc4e14536548c316e755" name="af222229f74f1bc4e14536548c316e755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af222229f74f1bc4e14536548c316e755">&#9670;&nbsp;</a></span>getPointsInRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::getPointsInRange </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>lower_left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>upper_right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::list&lt; geometry_msgs::Point32 &gt; * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回位于特定范围内单元格中的点，有些点可能超过了特定的范围. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lower_left</td><td>范围搜索的左下角 </td></tr>
+    <tr><td class="paramname">upper_right</td><td>范围搜索的右上角 </td></tr>
+    <tr><td class="paramname">points</td><td>一系列点的指针向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_cgraph" id="aclassbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_cgraph">
+<area shape="rect" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="5,39,200,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="248,5,403,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="253,71,398,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_icgraph" id="aclassbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755_icgraph">
+<area shape="rect" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="549,71,744,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,5,271,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="319,63,501,119"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="319,143,501,199"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,46,56,73"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="105,71,269,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35f097e6894731b7d9963e46b16d0d6f" name="a35f097e6894731b7d9963e46b16d0d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35f097e6894731b7d9963e46b16d0d6f">&#9670;&nbsp;</a></span>gridCoords() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::PointGrid::gridCoords </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>gx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>gy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert from world coordinates to grid coordinates </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>A point in world space </td></tr>
+    <tr><td class="paramname">gx</td><td>The x coordinate of the corresponding grid cell to be set by the function </td></tr>
+    <tr><td class="paramname">gy</td><td>The y coordinate of the corresponding grid cell to be set by the function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the conversion was successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a85f9826c14353e9a75696be52d438554" name="a85f9826c14353e9a75696be52d438554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85f9826c14353e9a75696be52d438554">&#9670;&nbsp;</a></span>gridCoords() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::PointGrid::gridCoords </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Point&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>gx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>gy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从世界坐标系转换到网格坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>世界坐标系下的点 </td></tr>
+    <tr><td class="paramname">gx</td><td>网格坐标系下的点x轴 </td></tr>
+    <tr><td class="paramname">gy</td><td>网格坐标系下的点y轴 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True 意味着转换成功 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a85f9826c14353e9a75696be52d438554_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a85f9826c14353e9a75696be52d438554_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a85f9826c14353e9a75696be52d438554_icgraph" id="aclassbase__local__planner_1_1_point_grid_a85f9826c14353e9a75696be52d438554_icgraph">
+<area shape="rect" title="从世界坐标系转换到网格坐标系" alt="" coords="792,121,947,163"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="549,48,744,89"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="343,187,477,228"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="553,179,740,235"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,8,271,49"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="319,26,501,82"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="319,106,501,162"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,121,56,147"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="105,113,269,155"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a107ea768298e5560e962498692674d5a" name="a107ea768298e5560e962498692674d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a107ea768298e5560e962498692674d5a">&#9670;&nbsp;</a></span>gridIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int base_local_planner::PointGrid::gridIndex </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>gx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>gy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts cell coordinates to an index value that can be used to look up the correct grid cell </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gx</td><td>The x coordinate of the cell </td></tr>
+    <tr><td class="paramname">gy</td><td>The y coordinate of the cell </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The index of the cell in the stored cell list </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a107ea768298e5560e962498692674d5a_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a107ea768298e5560e962498692674d5a_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a107ea768298e5560e962498692674d5a_icgraph" id="aclassbase__local__planner_1_1_point_grid_a107ea768298e5560e962498692674d5a_icgraph">
+<area shape="rect" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="1028,78,1173,119"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="792,17,980,58"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="343,13,477,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="549,151,744,193"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="553,5,740,61"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,93,56,120"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="105,86,269,127"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,191,271,233"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="319,79,501,135"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="319,159,501,215"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5276643487b1ab03a4a9602b3f338ba8" name="a5276643487b1ab03a4a9602b3f338ba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5276643487b1ab03a4a9602b3f338ba8">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::insert </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insert a point into the point grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>The point to be inserted </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_cgraph" id="aclassbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_cgraph">
+<area shape="rect" title="Insert a point into the point grid" alt="" coords="5,25,139,67"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="438,25,593,67"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="666,11,811,52"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="187,83,373,139"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aa98a155058a5045be350a89eb3858f41" title="Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called" alt="" coords="427,208,603,249"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="421,91,609,132"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830" title="Compute the squared distance between two points" alt="" coords="657,120,820,161"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_icgraph" id="aclassbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8_icgraph">
+<area shape="rect" title="Insert a point into the point grid" alt="" coords="316,5,449,47"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,35,268,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a42d9b62516e5e401669b618e790979ad" name="a42d9b62516e5e401669b618e790979ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d9b62516e5e401669b618e790979ad">&#9670;&nbsp;</a></span>intersectionPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::intersectionPoint </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>u1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>u2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the intersection point of two lines </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>The first point of the first segment </td></tr>
+    <tr><td class="paramname">v2</td><td>The second point of the first segment </td></tr>
+    <tr><td class="paramname">u1</td><td>The first point of the second segment </td></tr>
+    <tr><td class="paramname">u2</td><td>The second point of the second segment </td></tr>
+    <tr><td class="paramname">result</td><td>The point to be filled in </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aebd6e4378342589f07e5700aac825550" name="aebd6e4378342589f07e5700aac825550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd6e4378342589f07e5700aac825550">&#9670;&nbsp;</a></span>nearestNeighborDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::nearestNeighborDistance </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find the distance between a point and its nearest neighbor in the grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>The point used for comparison </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The distance between the point passed in and its nearest neighbor in the point grid </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_cgraph" id="aclassbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_cgraph">
+<area shape="rect" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="5,93,192,149"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aa98a155058a5045be350a89eb3858f41" title="Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called" alt="" coords="246,5,422,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="240,71,428,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830" title="Compute the squared distance between two points" alt="" coords="476,129,639,171"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="257,188,411,229"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="485,64,630,105"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_icgraph" id="aclassbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550_icgraph">
+<area shape="rect" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="497,5,684,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="316,13,449,54"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,42,268,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab3604c15e0eebb45dcaf4ae5403c5f7e" name="ab3604c15e0eebb45dcaf4ae5403c5f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3604c15e0eebb45dcaf4ae5403c5f7e">&#9670;&nbsp;</a></span>orient() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::orient </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the orientation of a pt c with respect to the vector a-&gt;b </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The start point of the vector </td></tr>
+    <tr><td class="paramname">b</td><td>The end point of the vector </td></tr>
+    <tr><td class="paramname">c</td><td>The point to compute orientation for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>orient(a, b, c) &lt; 0 -&mdash;&gt; Right, orient(a, b, c) &gt; 0 -&mdash;&gt; Left </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e_icgraph" id="aclassbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e_icgraph">
+<area shape="rect" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="761,143,895,184"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a7d813f2a10631747b458377fdd4a2a4f" title="Check if a point is in a polygon" alt="" coords="551,71,712,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a763e1d4207cc1ecbc670936074211155" title="Checks to see if a point is within a laser scan specification" alt="" coords="559,143,703,184"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#af11952049cf710f3e49d27181a7c09e9" title="Check if two line segmenst intersect" alt="" coords="549,208,713,249"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,5,271,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="319,63,501,119"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,46,56,73"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="105,71,269,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="319,143,501,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8558a1d185f1299007cb4a92726f8541" name="a8558a1d185f1299007cb4a92726f8541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8558a1d185f1299007cb4a92726f8541">&#9670;&nbsp;</a></span>orient() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::orient </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the orientation of a pt c with respect to the vector a-&gt;b </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The start point of the vector </td></tr>
+    <tr><td class="paramname">b</td><td>The end point of the vector </td></tr>
+    <tr><td class="paramname">c</td><td>The point to compute orientation for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>orient(a, b, c) &lt; 0 -&mdash;&gt; Right, orient(a, b, c) &gt; 0 -&mdash;&gt; Left </dd></dl>
+
+</div>
+</div>
+<a id="a7d813f2a10631747b458377fdd4a2a4f" name="a7d813f2a10631747b458377fdd4a2a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d813f2a10631747b458377fdd4a2a4f">&#9670;&nbsp;</a></span>ptInPolygon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::PointGrid::ptInPolygon </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>poly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a point is in a polygon </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>The point to be checked </td></tr>
+    <tr><td class="paramname">poly</td><td>The polygon to check against </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the point is in the polygon, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_cgraph" id="aclassbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_cgraph">
+<area shape="rect" title="Check if a point is in a polygon" alt="" coords="5,5,167,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="215,5,348,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_icgraph" id="aclassbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f_icgraph">
+<area shape="rect" title="Check if a point is in a polygon" alt="" coords="549,39,711,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,5,271,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="319,63,501,119"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,46,56,73"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="105,71,269,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a763e1d4207cc1ecbc670936074211155" name="a763e1d4207cc1ecbc670936074211155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763e1d4207cc1ecbc670936074211155">&#9670;&nbsp;</a></span>ptInScan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::PointGrid::ptInScan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classbase__local__planner_1_1_planar_laser_scan.html">PlanarLaserScan</a> &amp;&#160;</td>
+          <td class="paramname"><em>laser_scan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks to see if a point is within a laser scan specification </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt</td><td>The point to check </td></tr>
+    <tr><td class="paramname">laser_scan</td><td>The specification of the scan to check against </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the point is contained within the scan, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_cgraph" id="aclassbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_cgraph">
+<area shape="rect" title="Checks to see if a point is within a laser scan specification" alt="" coords="5,5,149,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="197,5,331,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_icgraph" id="aclassbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155_icgraph">
+<area shape="rect" title="Checks to see if a point is within a laser scan specification" alt="" coords="547,13,691,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="316,5,499,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,13,268,54"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb743eed27facd44c2ed0e59e9f04449" name="afb743eed27facd44c2ed0e59e9f04449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb743eed27facd44c2ed0e59e9f04449">&#9670;&nbsp;</a></span>removePointsInPolygon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::removePointsInPolygon </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt;&#160;</td>
+          <td class="paramname"><em>poly</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes points from the grid that lie within the polygon </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">poly</td><td>A specification of the polygon to clear from the grid </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_cgraph" id="aclassbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_cgraph">
+<area shape="rect" title="Removes points from the grid that lie within the polygon" alt="" coords="5,97,188,153"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="236,71,431,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a7d813f2a10631747b458377fdd4a2a4f" title="Check if a point is in a polygon" alt="" coords="253,136,414,177"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="479,5,633,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="483,71,629,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="489,136,623,177"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_icgraph" id="aclassbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449_icgraph">
+<area shape="rect" title="Removes points from the grid that lie within the polygon" alt="" coords="316,5,499,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,13,268,54"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a693cf4b2962ea0ffb4e74daf44a317a4" name="a693cf4b2962ea0ffb4e74daf44a317a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a693cf4b2962ea0ffb4e74daf44a317a4">&#9670;&nbsp;</a></span>removePointsInScanBoundry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::removePointsInScanBoundry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbase__local__planner_1_1_planar_laser_scan.html">PlanarLaserScan</a> &amp;&#160;</td>
+          <td class="paramname"><em>laser_scan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes points from the grid that lie within a laser scan </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">laser_scan</td><td>A specification of the laser scan to use for clearing </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_cgraph" id="aclassbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_cgraph">
+<area shape="rect" title="Removes points from the grid that lie within a laser scan" alt="" coords="5,97,188,153"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="236,71,431,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a763e1d4207cc1ecbc670936074211155" title="Checks to see if a point is within a laser scan specification" alt="" coords="261,136,405,177"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="479,5,633,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="483,71,629,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="489,136,623,177"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_icgraph" id="aclassbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4_icgraph">
+<area shape="rect" title="Removes points from the grid that lie within a laser scan" alt="" coords="316,5,499,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,13,268,54"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af11952049cf710f3e49d27181a7c09e9" name="af11952049cf710f3e49d27181a7c09e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11952049cf710f3e49d27181a7c09e9">&#9670;&nbsp;</a></span>segIntersect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::PointGrid::segIntersect </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>u1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>u2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if two line segmenst intersect </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v1</td><td>The first point of the first segment </td></tr>
+    <tr><td class="paramname">v2</td><td>The second point of the first segment </td></tr>
+    <tr><td class="paramname">u1</td><td>The first point of the second segment </td></tr>
+    <tr><td class="paramname">u2</td><td>The second point of the second segment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True if the segments intersect, false otherwise </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_af11952049cf710f3e49d27181a7c09e9_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_af11952049cf710f3e49d27181a7c09e9_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_af11952049cf710f3e49d27181a7c09e9_cgraph" id="aclassbase__local__planner_1_1_point_grid_af11952049cf710f3e49d27181a7c09e9_cgraph">
+<area shape="rect" title="Check if two line segmenst intersect" alt="" coords="5,5,169,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="217,5,351,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a70991650fe65105f90f31acdab32a830" name="a70991650fe65105f90f31acdab32a830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70991650fe65105f90f31acdab32a830">&#9670;&nbsp;</a></span>sq_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::sq_distance </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point32 &amp;&#160;</td>
+          <td class="paramname"><em>pt2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the squared distance between two points </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pt1</td><td>The first point </td></tr>
+    <tr><td class="paramname">pt2</td><td>The second point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The squared distance between the two points </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_a70991650fe65105f90f31acdab32a830_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_a70991650fe65105f90f31acdab32a830_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_a70991650fe65105f90f31acdab32a830_icgraph" id="aclassbase__local__planner_1_1_point_grid_a70991650fe65105f90f31acdab32a830_icgraph">
+<area shape="rect" title="Compute the squared distance between two points" alt="" coords="968,35,1131,76"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="732,5,920,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="497,27,684,83"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="316,35,449,76"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,42,56,69"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,64,268,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb8a9a0665445fe274510a86dd0e8277" name="adb8a9a0665445fe274510a86dd0e8277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8a9a0665445fe274510a86dd0e8277">&#9670;&nbsp;</a></span>updateWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::PointGrid::updateWorld </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcostmap__2d_1_1_observation.html">costmap_2d::Observation</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>observations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classbase__local__planner_1_1_planar_laser_scan.html">PlanarLaserScan</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>laser_scans</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>插入传感器观察值到point grid </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">footprint</td><td>机器人当前位置的footprint </td></tr>
+    <tr><td class="paramname">observations</td><td>不同传感器的观测量 </td></tr>
+    <tr><td class="paramname">laser_scans</td><td>用于清扫自由空间的laser扫描 (the point grid only uses the first scan which is assumed to be the base laser) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_cgraph" id="aclassbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_cgraph">
+<area shape="rect" title="插入传感器观察值到point grid" alt="" coords="5,281,169,322"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="242,190,375,232"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="217,274,400,330"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="217,354,400,410"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="707,166,862,208"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="935,225,1081,266"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="452,94,639,150"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aa98a155058a5045be350a89eb3858f41" title="Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called" alt="" coords="697,101,873,142"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="691,36,879,77"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830" title="Compute the squared distance between two points" alt="" coords="927,6,1089,48"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="448,281,643,322"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a7d813f2a10631747b458377fdd4a2a4f" title="Check if a point is in a polygon" alt="" coords="465,346,626,388"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="718,378,851,420"/>
+<area shape="rect" href="classbase__local__planner_1_1_point_grid.html#a763e1d4207cc1ecbc670936074211155" title="Checks to see if a point is within a laser scan specification" alt="" coords="473,412,617,453"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_icgraph" id="aclassbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277_icgraph">
+<area shape="rect" title="插入传感器观察值到point grid" alt="" coords="104,5,268,47"/>
+<area shape="rect" href="point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a231b46dbba3e029edf94d5cc122147e9" name="a231b46dbba3e029edf94d5cc122147e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a231b46dbba3e029edf94d5cc122147e9">&#9670;&nbsp;</a></span>cells_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::list&lt;geometry_msgs::Point32&gt; &gt; base_local_planner::PointGrid::cells_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Storage for the cells in the grid </p>
+
+</div>
+</div>
+<a id="a1c02ee4d4ef45459067a91f2288911a6" name="a1c02ee4d4ef45459067a91f2288911a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c02ee4d4ef45459067a91f2288911a6">&#9670;&nbsp;</a></span>height_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int base_local_planner::PointGrid::height_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The height of the grid in cells </p>
+
+</div>
+</div>
+<a id="a2036620b9d1149e833273c43c5a727eb" name="a2036620b9d1149e833273c43c5a727eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2036620b9d1149e833273c43c5a727eb">&#9670;&nbsp;</a></span>max_z_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::max_z_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The height cutoff for adding points as obstacles </p>
+
+</div>
+</div>
+<a id="a49056e465b626fd351301147a697b6aa" name="a49056e465b626fd351301147a697b6aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49056e465b626fd351301147a697b6aa">&#9670;&nbsp;</a></span>origin_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::Point base_local_planner::PointGrid::origin_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The origin point of the grid </p>
+
+</div>
+</div>
+<a id="a2fc679229c93a4507d4b50144f7b6d32" name="a2fc679229c93a4507d4b50144f7b6d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc679229c93a4507d4b50144f7b6d32">&#9670;&nbsp;</a></span>points_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::list&lt;geometry_msgs::Point32&gt;* &gt; base_local_planner::PointGrid::points_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The lists of points returned by a range search, made a member to save on memory allocation </p>
+
+</div>
+</div>
+<a id="a2232220cabac42c77df3651ef8706c5b" name="a2232220cabac42c77df3651ef8706c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2232220cabac42c77df3651ef8706c5b">&#9670;&nbsp;</a></span>resolution_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::resolution_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The resolution of the grid in meters/cell </p>
+
+</div>
+</div>
+<a id="a3688e671583e2ff4ff50308226477111" name="a3688e671583e2ff4ff50308226477111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3688e671583e2ff4ff50308226477111">&#9670;&nbsp;</a></span>sq_min_separation_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::sq_min_separation_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The minimum square distance required between points in the grid </p>
+
+</div>
+</div>
+<a id="a753727a1119075f27b7a840bc6f1be0a" name="a753727a1119075f27b7a840bc6f1be0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753727a1119075f27b7a840bc6f1be0a">&#9670;&nbsp;</a></span>sq_obstacle_range_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::PointGrid::sq_obstacle_range_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The square distance at which we no longer add obstacles to the grid </p>
+
+</div>
+</div>
+<a id="ae8cfcc3891fd32ab51f0a10bcc7edd62" name="ae8cfcc3891fd32ab51f0a10bcc7edd62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8cfcc3891fd32ab51f0a10bcc7edd62">&#9670;&nbsp;</a></span>width_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int base_local_planner::PointGrid::width_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The width of the grid in cells </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="point__grid_8h_source.html">point_grid.h</a></li>
+<li>base_local_planner/src/<a class="el" href="point__grid_8cpp.html">point_grid.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

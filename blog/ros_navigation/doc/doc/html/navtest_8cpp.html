@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: navfn/src/navtest/navtest.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_37c3fdb110b9b6478e1e0080ccb091a7.html">navfn</a></li><li class="navelem"><a class="el" href="dir_d12c39641e9748393ac54d10371e6bc9.html">src</a></li><li class="navelem"><a class="el" href="dir_6231e428c3ba801895738a7701bad82f.html">navtest</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">navtest.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="navfn_8h_source.html">navfn/navfn.h</a>&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="navwin_8h_source.html">navwin.h</a>&quot;</code><br />
+<code>#include &lt;pgm.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+navtest.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp__incl.png" border="0" usemap="#anavfn_2src_2navtest_2navtest_8cpp" alt=""/></div>
+<map name="anavfn_2src_2navtest_2navtest_8cpp" id="anavfn_2src_2navtest_2navtest_8cpp">
+<area shape="rect" title=" " alt="" coords="542,5,737,32"/>
+<area shape="rect" href="navfn_8h.html" title=" " alt="" coords="75,155,177,181"/>
+<area shape="rect" title=" " alt="" coords="5,229,71,256"/>
+<area shape="rect" title=" " alt="" coords="533,229,594,256"/>
+<area shape="rect" title=" " alt="" coords="201,155,265,181"/>
+<area shape="rect" title=" " alt="" coords="960,80,1015,107"/>
+<area shape="rect" title=" " alt="" coords="1039,80,1106,107"/>
+<area shape="rect" href="navwin_8h.html" title=" " alt="" coords="565,80,639,107"/>
+<area shape="rect" title=" " alt="" coords="1130,80,1189,107"/>
+<area shape="rect" title=" " alt="" coords="184,229,247,256"/>
+<area shape="rect" title=" " alt="" coords="95,229,160,256"/>
+<area shape="rect" title=" " alt="" coords="601,155,683,181"/>
+<area shape="rect" title=" " alt="" coords="708,155,773,181"/>
+<area shape="rect" title=" " alt="" coords="797,155,961,181"/>
+<area shape="rect" title=" " alt="" coords="986,155,1093,181"/>
+<area shape="rect" title=" " alt="" coords="289,155,406,181"/>
+<area shape="rect" title=" " alt="" coords="431,155,525,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a6eba94ef0ee9b78c14e3926a0643f4d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#a6eba94ef0ee9b78c14e3926a0643f4d5">unknown_gray</a>&#160;&#160;&#160;0xCC</td></tr>
+<tr class="separator:a6eba94ef0ee9b78c14e3926a0643f4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ab1a8ed925b36720afb4df2ed29d1fb0c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#ab1a8ed925b36720afb4df2ed29d1fb0c">get_ms</a> ()</td></tr>
+<tr class="separator:ab1a8ed925b36720afb4df2ed29d1fb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467f6e28bdb16df250528f1daa41751f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#a467f6e28bdb16df250528f1daa41751f">dispPot</a> (<a class="el" href="classnavfn_1_1_nav_fn.html">NavFn</a> *nav)</td></tr>
+<tr class="separator:a467f6e28bdb16df250528f1daa41751f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1116faf9c12b574e1b58a41e9d35a1c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#a1116faf9c12b574e1b58a41e9d35a1c2">readPGM</a> (const char *fname, int *width, int *height, bool raw=false)</td></tr>
+<tr class="separator:a1116faf9c12b574e1b58a41e9d35a1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace863d8925ca590c1f53eb63ff29a680"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#ace863d8925ca590c1f53eb63ff29a680">setcostobs</a> (<a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *cmap, int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>, int w)</td></tr>
+<tr class="separator:ace863d8925ca590c1f53eb63ff29a680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be847867182c4112b953ae0f7ee5a5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#a0be847867182c4112b953ae0f7ee5a5a">setcostunk</a> (<a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *cmap, int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>, int w)</td></tr>
+<tr class="separator:a0be847867182c4112b953ae0f7ee5a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a924427d23a7d971370018f8d3dc452cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a> [2]</td></tr>
+<tr class="separator:a924427d23a7d971370018f8d3dc452cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035d2eadd3e54f4a028144044585cd71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a> [2]</td></tr>
+<tr class="separator:a035d2eadd3e54f4a028144044585cd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0fd31a885376dad3beac0f13b131713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnavfn_1_1_nav_win.html">NavWin</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#ad0fd31a885376dad3beac0f13b131713">nwin</a></td></tr>
+<tr class="separator:ad0fd31a885376dad3beac0f13b131713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb1c8b80d92527208410cfd13abb55d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navtest_8cpp.html#addb1c8b80d92527208410cfd13abb55d">CS</a></td></tr>
+<tr class="separator:addb1c8b80d92527208410cfd13abb55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a6eba94ef0ee9b78c14e3926a0643f4d5" name="a6eba94ef0ee9b78c14e3926a0643f4d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eba94ef0ee9b78c14e3926a0643f4d5">&#9670;&nbsp;</a></span>unknown_gray</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define unknown_gray&#160;&#160;&#160;0xCC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a467f6e28bdb16df250528f1daa41751f" name="a467f6e28bdb16df250528f1daa41751f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467f6e28bdb16df250528f1daa41751f">&#9670;&nbsp;</a></span>dispPot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dispPot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnavfn_1_1_nav_fn.html">NavFn</a> *&#160;</td>
+          <td class="paramname"><em>nav</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp_a467f6e28bdb16df250528f1daa41751f_cgraph.png" border="0" usemap="#anavtest_8cpp_a467f6e28bdb16df250528f1daa41751f_cgraph" alt=""/></div>
+<map name="anavtest_8cpp_a467f6e28bdb16df250528f1daa41751f_cgraph" id="anavtest_8cpp_a467f6e28bdb16df250528f1daa41751f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,72,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_win.html#a7b08b1ff35ee825d53a9ca50148884f9" title=" " alt="" coords="120,5,283,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_win.html#ab798d08a7b8bda455651dce23220b433" title=" " alt="" coords="331,5,517,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp_a467f6e28bdb16df250528f1daa41751f_icgraph.png" border="0" usemap="#anavtest_8cpp_a467f6e28bdb16df250528f1daa41751f_icgraph" alt=""/></div>
+<map name="anavtest_8cpp_a467f6e28bdb16df250528f1daa41751f_icgraph" id="anavtest_8cpp_a467f6e28bdb16df250528f1daa41751f_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,171,32"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab1a8ed925b36720afb4df2ed29d1fb0c" name="ab1a8ed925b36720afb4df2ed29d1fb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a8ed925b36720afb4df2ed29d1fb0c">&#9670;&nbsp;</a></span>get_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double get_ms </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c_icgraph.png" border="0" usemap="#anavtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c_icgraph" alt=""/></div>
+<map name="anavtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c_icgraph" id="anavtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,169,32"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#anavtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="anavtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="anavtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,233,56,260"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="104,56,319,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a233063ad5d082e7e86802c194a9a322a" title=" " alt="" coords="385,107,563,133"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#ab42572b5439ae4510a1a261d704082f0" title=" " alt="" coords="137,157,286,184"/>
+<area shape="rect" href="navtest_8cpp.html#a467f6e28bdb16df250528f1daa41751f" title=" " alt="" coords="178,208,245,235"/>
+<area shape="rect" href="navtest_8cpp.html#ab1a8ed925b36720afb4df2ed29d1fb0c" title=" " alt="" coords="179,259,244,285"/>
+<area shape="rect" href="navtest_8cpp.html#a1116faf9c12b574e1b58a41e9d35a1c2" title=" " alt="" coords="173,309,250,336"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a11224bd6ba1392f59e2b8e053c29e19f" title="Sets the goal position for the planner. Note: the navigation cost field computed gives the cost to ge..." alt="" coords="135,360,288,387"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#aae372dff3862f5fddc7de05a8ec9729c" title="Sets the start position for the planner. Note: the navigation cost field computed gives the cost to g..." alt="" coords="134,411,289,437"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a672ab629393be0eb4b91696cb1b6c01a" title="Calculates the path for at mose &lt;n&gt; cycles" alt="" coords="395,5,553,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a076842de1d6d76769040f21856b7cb55" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth&#45;first Dijkstra metho..." alt="" coords="367,56,581,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a28b709d5ffb7619f9f2083415a5c96ab" title=" " alt="" coords="645,5,800,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a5246a7901de2865ac90b19d2434f22c1" title="Updates the cell at index n" alt="" coords="638,56,807,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a18a538679f3b968ef741dd6ad76f7753" title="Initialize cell k with cost v for propagation" alt="" coords="647,107,799,133"/>
+<area shape="rect" href="classnavfn_1_1_nav_win.html#a7b08b1ff35ee825d53a9ca50148884f9" title=" " alt="" coords="393,208,555,235"/>
+<area shape="rect" href="classnavfn_1_1_nav_win.html#ab798d08a7b8bda455651dce23220b433" title=" " alt="" coords="629,208,816,235"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1116faf9c12b574e1b58a41e9d35a1c2" name="a1116faf9c12b574e1b58a41e9d35a1c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1116faf9c12b574e1b58a41e9d35a1c2">&#9670;&nbsp;</a></span>readPGM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> * readPGM </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>raw</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2_icgraph.png" border="0" usemap="#anavtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2_icgraph" alt=""/></div>
+<map name="anavtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2_icgraph" id="anavtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,181,32"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ace863d8925ca590c1f53eb63ff29a680" name="ace863d8925ca590c1f53eb63ff29a680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace863d8925ca590c1f53eb63ff29a680">&#9670;&nbsp;</a></span>setcostobs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setcostobs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *&#160;</td>
+          <td class="paramname"><em>cmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp_ace863d8925ca590c1f53eb63ff29a680_icgraph.png" border="0" usemap="#anavtest_8cpp_ace863d8925ca590c1f53eb63ff29a680_icgraph" alt=""/></div>
+<map name="anavtest_8cpp_ace863d8925ca590c1f53eb63ff29a680_icgraph" id="anavtest_8cpp_ace863d8925ca590c1f53eb63ff29a680_icgraph">
+<area shape="rect" title=" " alt="" coords="405,31,492,57"/>
+<area shape="rect" href="read__pgm__costmap_8cpp.html#a94ea5bf3c2cba2446229df61476b1a8d" title=" " alt="" coords="280,31,357,57"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="145,5,196,32"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a18cc150909ae06555089aa404a19e402" title=" " alt="" coords="109,56,232,83"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0be847867182c4112b953ae0f7ee5a5a" name="a0be847867182c4112b953ae0f7ee5a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be847867182c4112b953ae0f7ee5a5a">&#9670;&nbsp;</a></span>setcostunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setcostunk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *&#160;</td>
+          <td class="paramname"><em>cmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a_icgraph.png" border="0" usemap="#anavtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a_icgraph" alt=""/></div>
+<map name="anavtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a_icgraph" id="anavtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a_icgraph">
+<area shape="rect" title=" " alt="" coords="405,31,492,57"/>
+<area shape="rect" href="read__pgm__costmap_8cpp.html#a94ea5bf3c2cba2446229df61476b1a8d" title=" " alt="" coords="280,31,357,57"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="145,5,196,32"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a18cc150909ae06555089aa404a19e402" title=" " alt="" coords="109,56,232,83"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="addb1c8b80d92527208410cfd13abb55d" name="addb1c8b80d92527208410cfd13abb55d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb1c8b80d92527208410cfd13abb55d">&#9670;&nbsp;</a></span>CS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a924427d23a7d971370018f8d3dc452cf" name="a924427d23a7d971370018f8d3dc452cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924427d23a7d971370018f8d3dc452cf">&#9670;&nbsp;</a></span>goal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int goal[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0fd31a885376dad3beac0f13b131713" name="ad0fd31a885376dad3beac0f13b131713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0fd31a885376dad3beac0f13b131713">&#9670;&nbsp;</a></span>nwin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnavfn_1_1_nav_win.html">NavWin</a>* nwin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a035d2eadd3e54f4a028144044585cd71" name="a035d2eadd3e54f4a028144044585cd71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a035d2eadd3e54f4a028144044585cd71">&#9670;&nbsp;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int start[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

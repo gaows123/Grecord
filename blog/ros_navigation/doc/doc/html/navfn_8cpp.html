@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: navfn/src/navfn.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_37c3fdb110b9b6478e1e0080ccb091a7.html">navfn</a></li><li class="navelem"><a class="el" href="dir_d12c39641e9748393ac54d10371e6bc9.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">navfn.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="navfn_8h_source.html">navfn/navfn.h</a>&gt;</code><br />
+<code>#include &lt;ros/console.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+navfn.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="navfn_8cpp__incl.png" border="0" usemap="#anavfn_2src_2navfn_8cpp" alt=""/></div>
+<map name="anavfn_2src_2navfn_8cpp" id="anavfn_2src_2navfn_8cpp">
+<area shape="rect" title=" " alt="" coords="163,5,300,32"/>
+<area shape="rect" href="navfn_8h.html" title=" " alt="" coords="118,80,219,107"/>
+<area shape="rect" title=" " alt="" coords="244,80,344,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,68,181"/>
+<area shape="rect" title=" " alt="" coords="92,155,157,181"/>
+<area shape="rect" title=" " alt="" coords="181,155,247,181"/>
+<area shape="rect" title=" " alt="" coords="271,155,333,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacenavfn"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenavfn.html">navfn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a0d84ad97d9e5cbb6547781c77e034df1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8cpp.html#a0d84ad97d9e5cbb6547781c77e034df1">push_cur</a>(<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="separator:a0d84ad97d9e5cbb6547781c77e034df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a251060a5b8d30b785c40cc337d6fb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8cpp.html#a5a251060a5b8d30b785c40cc337d6fb2">push_next</a>(<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="separator:a5a251060a5b8d30b785c40cc337d6fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f319625e73c43d623645edec18b90de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8cpp.html#a9f319625e73c43d623645edec18b90de">push_over</a>(<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="separator:a9f319625e73c43d623645edec18b90de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e26e9a27c188d602305ec0bc13149a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8cpp.html#a58e26e9a27c188d602305ec0bc13149a">INVSQRT2</a>&#160;&#160;&#160;0.707106781</td></tr>
+<tr class="separator:a58e26e9a27c188d602305ec0bc13149a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e26e9a27c188d602305ec0bc13149a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="navfn_8cpp.html#a58e26e9a27c188d602305ec0bc13149a">INVSQRT2</a>&#160;&#160;&#160;0.707106781</td></tr>
+<tr class="separator:a58e26e9a27c188d602305ec0bc13149a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a43e1cf99d005f4c0b40ce27c85ac3a0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f">navfn::create_nav_plan_astar</a> (<a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *costmap, int nx, int ny, int *<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, int *<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, float *plan, int nplan)</td></tr>
+<tr class="separator:a43e1cf99d005f4c0b40ce27c85ac3a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a58e26e9a27c188d602305ec0bc13149a" name="a58e26e9a27c188d602305ec0bc13149a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e26e9a27c188d602305ec0bc13149a">&#9670;&nbsp;</a></span>INVSQRT2 <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INVSQRT2&#160;&#160;&#160;0.707106781</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58e26e9a27c188d602305ec0bc13149a" name="a58e26e9a27c188d602305ec0bc13149a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e26e9a27c188d602305ec0bc13149a">&#9670;&nbsp;</a></span>INVSQRT2 <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INVSQRT2&#160;&#160;&#160;0.707106781</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d84ad97d9e5cbb6547781c77e034df1" name="a0d84ad97d9e5cbb6547781c77e034df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d84ad97d9e5cbb6547781c77e034df1">&#9670;&nbsp;</a></span>push_cur</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define push_cur</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    { <span class="keywordflow">if</span> (<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>&gt;=0 &amp;&amp; <a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>&lt;ns &amp;&amp; !pending[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>] &amp;&amp; \</div>
+<div class="line">    costarr[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]&lt;<a class="code hl_define" href="navfn_8h.html#afe3f51fbc354670e6c61f8e6f9c9b949">COST_OBS</a> &amp;&amp; curPe&lt;<a class="code hl_define" href="dijkstra_8h.html#acc292a3d616d167e6b5f3e33cd9dad54">PRIORITYBUFSIZE</a>) \</div>
+<div class="line">  { curP[curPe++]=<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>; pending[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]=<span class="keyword">true</span>; }}</div>
+<div class="ttc" id="adijkstra_8h_html_acc292a3d616d167e6b5f3e33cd9dad54"><div class="ttname"><a href="dijkstra_8h.html#acc292a3d616d167e6b5f3e33cd9dad54">PRIORITYBUFSIZE</a></div><div class="ttdeci">#define PRIORITYBUFSIZE</div><div class="ttdef"><b>Definition:</b> dijkstra.h:41</div></div>
+<div class="ttc" id="aeig3_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">static int n</div><div class="ttdef"><b>Definition:</b> eig3.c:14</div></div>
+<div class="ttc" id="anavfn_8h_html_afe3f51fbc354670e6c61f8e6f9c9b949"><div class="ttname"><a href="navfn_8h.html#afe3f51fbc354670e6c61f8e6f9c9b949">COST_OBS</a></div><div class="ttdeci">#define COST_OBS</div><div class="ttdef"><b>Definition:</b> navfn.h:51</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a251060a5b8d30b785c40cc337d6fb2" name="a5a251060a5b8d30b785c40cc337d6fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a251060a5b8d30b785c40cc337d6fb2">&#9670;&nbsp;</a></span>push_next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define push_next</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    { <span class="keywordflow">if</span> (<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>&gt;=0 &amp;&amp; <a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>&lt;ns &amp;&amp; !pending[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>] &amp;&amp; \</div>
+<div class="line">    costarr[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]&lt;<a class="code hl_define" href="navfn_8h.html#afe3f51fbc354670e6c61f8e6f9c9b949">COST_OBS</a> &amp;&amp; nextPe&lt;<a class="code hl_define" href="dijkstra_8h.html#acc292a3d616d167e6b5f3e33cd9dad54">PRIORITYBUFSIZE</a>) \</div>
+<div class="line">  { nextP[nextPe++]=<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>; pending[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]=<span class="keyword">true</span>; }}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f319625e73c43d623645edec18b90de" name="a9f319625e73c43d623645edec18b90de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f319625e73c43d623645edec18b90de">&#9670;&nbsp;</a></span>push_over</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define push_over</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">    { <span class="keywordflow">if</span> (<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>&gt;=0 &amp;&amp; <a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>&lt;ns &amp;&amp; !pending[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>] &amp;&amp; \</div>
+<div class="line">    costarr[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]&lt;<a class="code hl_define" href="navfn_8h.html#afe3f51fbc354670e6c61f8e6f9c9b949">COST_OBS</a> &amp;&amp; overPe&lt;<a class="code hl_define" href="dijkstra_8h.html#acc292a3d616d167e6b5f3e33cd9dad54">PRIORITYBUFSIZE</a>) \</div>
+<div class="line">  { overP[overPe++]=<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>; pending[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]=<span class="keyword">true</span>; }}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

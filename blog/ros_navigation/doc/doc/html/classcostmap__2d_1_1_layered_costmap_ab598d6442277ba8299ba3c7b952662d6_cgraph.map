@@ -1,0 +1,13 @@
+<map id="costmap_2d::LayeredCostmap::updateMap" name="costmap_2d::LayeredCostmap::updateMap">
+<area shape="rect" id="node1" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="5,235,204,276"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="262,5,431,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="262,71,431,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="262,136,431,177"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="262,201,431,243"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="262,267,431,308"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="262,332,431,373"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="262,397,431,439"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="252,463,441,504"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="489,365,659,407"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="489,431,659,472"/>
+</map>

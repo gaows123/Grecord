@@ -1,0 +1,116 @@
+\hypertarget{rtest_8cpp}{}\doxysection{map\+\_\+server/test/rtest.cpp 文件参考}
+\label{rtest_8cpp}\index{map\_server/test/rtest.cpp@{map\_server/test/rtest.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$ros/service.\+h$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$ros/package.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Get\+Map.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Occupancy\+Grid.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Map\+Meta\+Data.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Load\+Map.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}test\+\_\+constants.\+h\char`\"{}}\newline
+rtest.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtest_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rtest_8cpp_a06044f3d09ece2976bdf90c959b894a7}{TEST\+\_\+F}} (\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}, call\+\_\+service)
+\item 
+\mbox{\hyperlink{rtest_8cpp_af2bbe99f957717c9309c5ff70359916e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}, subscribe\+\_\+topic)
+\item 
+\mbox{\hyperlink{rtest_8cpp_ad4dc6db000a2a83b734f182942974a00}{TEST\+\_\+F}} (\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}, subscribe\+\_\+topic\+\_\+metadata)
+\item 
+\mbox{\hyperlink{rtest_8cpp_a44d4b4f2e8aaecbfb64cd0e6e3b0f370}{TEST\+\_\+F}} (\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}, change\+\_\+map)
+\item 
+int \mbox{\hyperlink{rtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rtest_8cpp_a56a0ec58e8a4c0f144ab10e9eabc8934}{g\+\_\+argc}}
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{rtest_8cpp_a42cc1f3030bc4fced497d4a33ac59959}{g\+\_\+argv}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{rtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{rtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{rtest.cpp@{rtest.cpp}!main@{main}}
+\index{main@{main}!rtest.cpp@{rtest.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rtest_8cpp_a06044f3d09ece2976bdf90c959b894a7}\label{rtest_8cpp_a06044f3d09ece2976bdf90c959b894a7}} 
+\index{rtest.cpp@{rtest.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!rtest.cpp@{rtest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}}]{,  }\item[{call\+\_\+service}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rtest_8cpp_a44d4b4f2e8aaecbfb64cd0e6e3b0f370}\label{rtest_8cpp_a44d4b4f2e8aaecbfb64cd0e6e3b0f370}} 
+\index{rtest.cpp@{rtest.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!rtest.cpp@{rtest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}}]{,  }\item[{change\+\_\+map}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{rtest_8cpp_a44d4b4f2e8aaecbfb64cd0e6e3b0f370_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtest_8cpp_af2bbe99f957717c9309c5ff70359916e}\label{rtest_8cpp_af2bbe99f957717c9309c5ff70359916e}} 
+\index{rtest.cpp@{rtest.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!rtest.cpp@{rtest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}}]{,  }\item[{subscribe\+\_\+topic}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{rtest_8cpp_af2bbe99f957717c9309c5ff70359916e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtest_8cpp_ad4dc6db000a2a83b734f182942974a00}\label{rtest_8cpp_ad4dc6db000a2a83b734f182942974a00}} 
+\index{rtest.cpp@{rtest.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!rtest.cpp@{rtest.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map_client_test}{Map\+Client\+Test}}}]{,  }\item[{subscribe\+\_\+topic\+\_\+metadata}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{rtest_8cpp_ad4dc6db000a2a83b734f182942974a00_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{rtest_8cpp_a56a0ec58e8a4c0f144ab10e9eabc8934}\label{rtest_8cpp_a56a0ec58e8a4c0f144ab10e9eabc8934}} 
+\index{rtest.cpp@{rtest.cpp}!g\_argc@{g\_argc}}
+\index{g\_argc@{g\_argc}!rtest.cpp@{rtest.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_argc}{g\_argc}}
+{\footnotesize\ttfamily int g\+\_\+argc}
+
+\mbox{\Hypertarget{rtest_8cpp_a42cc1f3030bc4fced497d4a33ac59959}\label{rtest_8cpp_a42cc1f3030bc4fced497d4a33ac59959}} 
+\index{rtest.cpp@{rtest.cpp}!g\_argv@{g\_argv}}
+\index{g\_argv@{g\_argv}!rtest.cpp@{rtest.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_argv}{g\_argv}}
+{\footnotesize\ttfamily char$\ast$$\ast$ g\+\_\+argv}
+

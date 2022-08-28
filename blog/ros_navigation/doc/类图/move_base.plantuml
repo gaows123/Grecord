@@ -1,0 +1,38 @@
+@startuml
+scale 2
+package "navigation" #green{
+
+	namespace move_base #Yellow{
+		enum MoveBaseState {
+			PLANNING
+			CONTROLLING
+			CLEARING
+		}
+
+		enum RecoveryTrigger {
+ 			PLANNING_R
+			CONTROLLING_R
+			OSCILLATION_R
+		} 
+		
+		class MoveBase {
+			+MoveBase()
+			+virtual ~MoveBase() 
+			+bool executeCycle()
+			-bool makePlan() 
+			-void planThread() 
+			-void executeCb()
+			-MoveBaseActionServer *  as_ 
+			-boost::shared_ptr< nav_core::BaseLocalPlanner >  tc_ 
+			-costmap_2d::Costmap2DROS *  planner_costmap_ros_ 
+			-costmap_2d::Costmap2DROS *  controller_costmap_ros_ 
+			-boost::shared_ptr< nav_core::BaseGlobalPlanner >  planner_  
+			-std::vector< boost::shared_ptr< nav_core::RecoveryBehavior > >  recovery_behaviors_ 
+			-boost::thread *  planner_thread_ 
+			-dynamic_reconfigure::Server< move_base::MoveBaseConfig > *  dsrv_ 
+		}
+
+	}
+
+}
+@enduml

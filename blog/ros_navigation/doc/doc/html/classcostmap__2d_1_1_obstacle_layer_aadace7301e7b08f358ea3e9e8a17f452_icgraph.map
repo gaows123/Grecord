@@ -1,0 +1,7 @@
+<map id="costmap_2d::ObstacleLayer::updateRaytraceBounds" name="costmap_2d::ObstacleLayer::updateRaytraceBounds">
+<area shape="rect" id="node1" title=" " alt="" coords="472,39,657,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a50dac229133e7c22981b0c7e0eafc910" title="根据单次的观测来清除自由空间" alt="" coords="239,5,424,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_voxel_layer.html#a6f7c914d410df715e01253b3584d9f21" title="根据单次的观测来清除自由空间" alt="" coords="248,71,415,112"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="15,71,181,112"/>
+</map>

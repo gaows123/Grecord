@@ -1,0 +1,50 @@
+\hypertarget{namespacemap__server}{}\doxysection{map\+\_\+server 命名空间参考}
+\label{namespacemap__server}\index{map\_server@{map\_server}}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d}{load\+Map\+From\+File}} (nav\+\_\+msgs\+::\+Get\+Map\+::\+Response $\ast$resp, const char $\ast$fname, double res, bool negate, double occ\+\_\+th, double free\+\_\+th, double $\ast$origin, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}} mode=\mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}{TRINARY}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d}\label{namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d}} 
+\index{map\_server@{map\_server}!loadMapFromFile@{loadMapFromFile}}
+\index{loadMapFromFile@{loadMapFromFile}!map\_server@{map\_server}}
+\doxysubsubsection{\texorpdfstring{loadMapFromFile()}{loadMapFromFile()}}
+{\footnotesize\ttfamily void map\+\_\+server\+::load\+Map\+From\+File (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Get\+Map\+::\+Response $\ast$}]{resp,  }\item[{const char $\ast$}]{fname,  }\item[{double}]{res,  }\item[{bool}]{negate,  }\item[{double}]{occ\+\_\+th,  }\item[{double}]{free\+\_\+th,  }\item[{double $\ast$}]{origin,  }\item[{\mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}}}]{mode = {\ttfamily \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}{TRINARY}}} }\end{DoxyParamCaption})}
+
+Read the image from file and fill out the resp object, for later use when our services are requested.
+
+
+\begin{DoxyParams}{参数}
+{\em resp} & The map wil be written into here \\
+\hline
+{\em fname} & The image file to read from \\
+\hline
+{\em res} & The resolution of the map (gets stored in resp) \\
+\hline
+{\em negate} & If true, then whiter pixels are occupied, and blacker pixels are free \\
+\hline
+{\em occ\+\_\+th} & Threshold above which pixels are occupied \\
+\hline
+{\em free\+\_\+th} & Threshold below which pixels are free \\
+\hline
+{\em origin} & Triple specifying 2-\/D pose of lower-\/left corner of image \\
+\hline
+{\em mode} & Map mode \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{异常}
+{\em std\+::runtime\+\_\+error} & If the image file can\textquotesingle{}t be loaded \\
+\hline
+\end{DoxyExceptions}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d_icgraph}
+\end{center}
+\end{figure}

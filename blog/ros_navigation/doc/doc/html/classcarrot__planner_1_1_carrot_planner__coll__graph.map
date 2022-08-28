@@ -1,0 +1,10 @@
+<map id="carrot_planner::CarrotPlanner" name="carrot_planner::CarrotPlanner">
+<area shape="rect" id="node1" title="Provides a simple global planner that will compute a valid goal point for the local planner by walkin..." alt="" coords="1021,193,1212,220"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="691,117,885,144"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="689,168,887,195"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="320,168,519,195"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,175,175,201"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="308,117,531,144"/>
+<area shape="rect" id="node6" title=" " alt="" coords="63,39,117,65"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="721,270,855,311"/>
+</map>

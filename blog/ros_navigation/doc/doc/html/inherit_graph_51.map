@@ -1,0 +1,5 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$classnav__core_1_1_base_local_planner.html" title="提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口." alt="" coords="5,46,193,73"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html" title="A ROS wrapper for the trajectory controller that queries the param server to construct a controller" alt="" coords="241,5,401,47"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html" title="DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件" alt="" coords="253,71,389,112"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="nav_core::BaseGlobalPlanner" name="nav_core::BaseGlobalPlanner">
+<area shape="rect" id="node1" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="221,5,415,32"/>
+<area shape="rect" id="node2" href="$classcarrot__planner_1_1_carrot_planner.html" title="Provides a simple global planner that will compute a valid goal point for the local planner by walkin..." alt="" coords="5,80,196,107"/>
+<area shape="rect" id="node3" href="$classglobal__planner_1_1_global_planner.html" title=" " alt="" coords="221,80,415,107"/>
+<area shape="rect" id="node5" href="$classnavfn_1_1_navfn_r_o_s.html" title="Navfn 全局规划器的ROS封装类" alt="" coords="449,80,573,107"/>
+<area shape="rect" id="node4" href="$classglobal__planner_1_1_planner_with_costmap.html" title=" " alt="" coords="221,155,404,196"/>
+<area shape="rect" id="node6" href="$classnavfn_1_1_navfn_with_costmap.html" title=" " alt="" coords="428,162,603,189"/>
+</map>

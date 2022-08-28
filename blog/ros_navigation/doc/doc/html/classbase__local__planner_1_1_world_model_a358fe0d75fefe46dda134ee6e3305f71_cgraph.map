@@ -1,0 +1,4 @@
+<map id="base_local_planner::WorldModel::footprintCost" name="base_local_planner::WorldModel::footprintCost">
+<area shape="rect" id="node1" title="Checks if any obstacles in the costmap lie inside a convex footprint that is rasterized into the grid" alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="233,5,413,47"/>
+</map>

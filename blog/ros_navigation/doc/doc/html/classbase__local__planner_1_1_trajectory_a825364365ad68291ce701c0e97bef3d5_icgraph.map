@@ -1,0 +1,10 @@
+<map id="base_local_planner::Trajectory::getPointsSize" name="base_local_planner::Trajectory::getPointsSize">
+<area shape="rect" id="node1" title="Return the number of points in the trajectory" alt="" coords="585,173,763,214"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="313,5,507,61"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="283,85,537,141"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_simple_scored_sampling_planner.html#ad1a365b0504879a2e57f1a9d713acdc4" title=" " alt="" coords="305,165,515,221"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_map_grid_cost_function.html#a4332b1fd1c72795c87fb5d3a427df476" title=" " alt="" coords="332,245,488,301"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_obstacle_cost_function.html#a3bac5a99d333a755440449809270e638" title=" " alt="" coords="331,325,489,381"/>
+<area shape="rect" id="node4" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,85,235,141"/>
+<area shape="rect" id="node6" href="$classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="31,173,209,214"/>
+</map>

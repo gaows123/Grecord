@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d/test/costmap_tester.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_937d906ccfe5ef58b0167ee489be34b2.html">test</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">costmap_tester.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br />
+<code>#include &lt;ros/ros.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="costmap__2d__ros_8h_source.html">costmap_2d/costmap_2d_ros.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="cost__values_8h_source.html">costmap_2d/cost_values.h</a>&gt;</code><br />
+<code>#include &lt;tf2_ros/transform_listener.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+costmap_tester.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__tester_8cpp__incl.png" border="0" usemap="#acostmap__2d_2test_2costmap__tester_8cpp" alt=""/></div>
+<map name="acostmap__2d_2test_2costmap__tester_8cpp" id="acostmap__2d_2test_2costmap__tester_8cpp">
+<area shape="rect" title=" " alt="" coords="1043,5,1216,47"/>
+<area shape="rect" title=" " alt="" coords="335,102,430,129"/>
+<area shape="rect" title=" " alt="" coords="523,273,597,300"/>
+<area shape="rect" href="costmap__2d__ros_8h.html" title=" " alt="" coords="1056,95,1203,136"/>
+<area shape="rect" href="cost__values_8h.html" title=" " alt="" coords="2005,273,2184,300"/>
+<area shape="rect" title=" " alt="" coords="2088,102,2269,129"/>
+<area shape="rect" href="layered__costmap_8h.html" title=" " alt="" coords="1875,184,2013,225"/>
+<area shape="rect" href="layer_8h.html" title=" " alt="" coords="1744,273,1880,300"/>
+<area shape="rect" href="costmap__2d__publisher_8h.html" title=" " alt="" coords="284,184,431,225"/>
+<area shape="rect" title=" " alt="" coords="505,191,719,218"/>
+<area shape="rect" href="footprint_8h.html" title=" " alt="" coords="743,191,897,218"/>
+<area shape="rect" title=" " alt="" coords="871,273,1049,300"/>
+<area shape="rect" title=" " alt="" coords="1073,273,1303,300"/>
+<area shape="rect" title=" " alt="" coords="1023,191,1235,218"/>
+<area shape="rect" title=" " alt="" coords="1259,184,1402,225"/>
+<area shape="rect" title=" " alt="" coords="1427,191,1597,218"/>
+<area shape="rect" title=" " alt="" coords="1621,191,1800,218"/>
+<area shape="rect" href="costmap__2d_8h.html" title=" " alt="" coords="1537,348,1716,375"/>
+<area shape="rect" title=" " alt="" coords="1809,423,1868,449"/>
+<area shape="rect" title=" " alt="" coords="1875,348,1930,375"/>
+<area shape="rect" title=" " alt="" coords="1741,348,1851,375"/>
+<area shape="rect" title=" " alt="" coords="1654,423,1711,449"/>
+<area shape="rect" title=" " alt="" coords="937,423,1097,449"/>
+<area shape="rect" title=" " alt="" coords="1511,423,1630,449"/>
+<area shape="rect" title=" " alt="" coords="5,273,192,300"/>
+<area shape="rect" title=" " alt="" coords="216,273,448,300"/>
+<area shape="rect" title=" " alt="" coords="673,273,847,300"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_costmap_tester.html">costmap_2d::CostmapTester</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacecostmap__2d"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecostmap__2d.html">costmap_2d</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ab6234649e9137a2ece384ae5e9ea9263"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__tester_8cpp.html#ab6234649e9137a2ece384ae5e9ea9263">TEST</a> (CostmapTester, checkConsistentCosts)</td></tr>
+<tr class="separator:ab6234649e9137a2ece384ae5e9ea9263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa085d1c70dc9415a41cf3bc99344a6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__tester_8cpp.html#afa085d1c70dc9415a41cf3bc99344a6d">testCallback</a> (const ros::TimerEvent &amp;e)</td></tr>
+<tr class="separator:afa085d1c70dc9415a41cf3bc99344a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__tester_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:aefcbdf7ac9a44085587ea12895d6dfe1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap_tester.html">costmap_2d::CostmapTester</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__tester_8cpp.html#aefcbdf7ac9a44085587ea12895d6dfe1">map_tester</a> = NULL</td></tr>
+<tr class="separator:aefcbdf7ac9a44085587ea12895d6dfe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__tester_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#acostmap__tester_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="acostmap__tester_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="acostmap__tester_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" href="costmap__tester_8cpp.html#afa085d1c70dc9415a41cf3bc99344a6d" title=" " alt="" coords="104,5,199,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab6234649e9137a2ece384ae5e9ea9263" name="ab6234649e9137a2ece384ae5e9ea9263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6234649e9137a2ece384ae5e9ea9263">&#9670;&nbsp;</a></span>TEST()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">CostmapTester&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checkConsistentCosts&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__tester_8cpp_ab6234649e9137a2ece384ae5e9ea9263_cgraph.png" border="0" usemap="#acostmap__tester_8cpp_ab6234649e9137a2ece384ae5e9ea9263_cgraph" alt=""/></div>
+<map name="acostmap__tester_8cpp_ab6234649e9137a2ece384ae5e9ea9263_cgraph" id="acostmap__tester_8cpp_ab6234649e9137a2ece384ae5e9ea9263_cgraph">
+<area shape="rect" title=" " alt="" coords="5,143,61,170"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap_tester.html#a73e0c2048004f4c99a2cc868aed060b3" title=" " alt="" coords="109,136,300,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap_tester.html#abaef05f8bb941945e031a4f5c70d9402" title=" " alt="" coords="351,75,542,116"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a04cd3558a672159a3ad1b151b1d19661" title="Save the costmap out to a pgm file" alt="" coords="840,129,1009,171"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="608,5,777,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="608,136,777,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="348,253,545,295"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap_tester.html#a027acc4743f9e864ac5216ef32bd4a79" title=" " alt="" coords="597,71,788,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="1057,100,1227,141"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1275,100,1444,141"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="593,253,792,295"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afa085d1c70dc9415a41cf3bc99344a6d" name="afa085d1c70dc9415a41cf3bc99344a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa085d1c70dc9415a41cf3bc99344a6d">&#9670;&nbsp;</a></span>testCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testCallback </td>
+          <td>(</td>
+          <td class="paramtype">const ros::TimerEvent &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__tester_8cpp_afa085d1c70dc9415a41cf3bc99344a6d_icgraph.png" border="0" usemap="#acostmap__tester_8cpp_afa085d1c70dc9415a41cf3bc99344a6d_icgraph" alt=""/></div>
+<map name="acostmap__tester_8cpp_afa085d1c70dc9415a41cf3bc99344a6d_icgraph" id="acostmap__tester_8cpp_afa085d1c70dc9415a41cf3bc99344a6d_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,199,32"/>
+<area shape="rect" href="costmap__tester_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="aefcbdf7ac9a44085587ea12895d6dfe1" name="aefcbdf7ac9a44085587ea12895d6dfe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefcbdf7ac9a44085587ea12895d6dfe1">&#9670;&nbsp;</a></span>map_tester</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap_tester.html">costmap_2d::CostmapTester</a>* map_tester = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

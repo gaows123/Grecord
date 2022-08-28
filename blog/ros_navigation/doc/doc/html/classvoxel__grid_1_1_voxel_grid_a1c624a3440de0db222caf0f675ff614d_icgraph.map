@@ -1,0 +1,6 @@
+<map id="voxel_grid::VoxelGrid::sizeZ" name="voxel_grid::VoxelGrid::sizeZ">
+<area shape="rect" id="node1" title=" " alt="" coords="239,64,385,105"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_voxel_grid_model.html#ae64342a63e8e7360997aba566b5f0ed1" title="Function copying the Voxel points into a point cloud" alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node3" href="$voxel__grid__tests_8cpp.html#a4ed1e65f04eb231a04beb7c3cd79983d" title=" " alt="" coords="70,71,126,98"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="15,123,181,164"/>
+</map>

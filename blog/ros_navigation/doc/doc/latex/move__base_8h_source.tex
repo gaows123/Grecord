@@ -1,0 +1,195 @@
+\hypertarget{move__base_8h_source}{}\doxysection{move\+\_\+base.\+h}
+\label{move__base_8h_source}\index{move\_base/include/move\_base/move\_base.h@{move\_base/include/move\_base/move\_base.h}}
+\mbox{\hyperlink{move__base_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef NAV\_MOVE\_BASE\_ACTION\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define NAV\_MOVE\_BASE\_ACTION\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <actionlib/server/simple\_action\_server.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <move\_base\_msgs/MoveBaseAction.h>}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base__local__planner_8h}{nav\_core/base\_local\_planner.h}}>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base__global__planner_8h}{nav\_core/base\_global\_planner.h}}>}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{recovery__behavior_8h}{nav\_core/recovery\_behavior.h}}>}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__ros_8h}{costmap\_2d/costmap\_2d\_ros.h}}>}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <nav\_msgs/GetPlan.h>}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#include <pluginlib/class\_loader.hpp>}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#include <std\_srvs/Empty.h>}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/server.h>}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include "{}move\_base/MoveBaseConfig.h"{}}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemove__base}{move\_base}} \{}
+\DoxyCodeLine{63   \textcolor{comment}{//typedefs to help us out with the action server so that we don't hace to type so much}}
+\DoxyCodeLine{64   \textcolor{keyword}{typedef} actionlib::SimpleActionServer<move\_base\_msgs::MoveBaseAction> \mbox{\hyperlink{namespacemove__base_ac8da40ec5525ddc900973cc3c6ced790}{MoveBaseActionServer}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   \textcolor{keyword}{enum} \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26}{MoveBaseState}} \{}
+\DoxyCodeLine{67     \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26a1bb8a67349b4edf976140f78efd1a7e6}{PLANNING}}, \textcolor{comment}{// 正在规划路径的状态}}
+\DoxyCodeLine{68     \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26ab4e93792615711bdc7cee7e8643a441c}{CONTROLLING}}, \textcolor{comment}{// 控制机器人运动的状态}}
+\DoxyCodeLine{69     \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26a667b5668dc058d5e7cf4e8e313d26a27}{CLEARING}}  \textcolor{comment}{// 规划路径或者控制失败，处于恢复或者清除}}
+\DoxyCodeLine{70   \};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72   \textcolor{keyword}{enum} \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548}{RecoveryTrigger}}}
+\DoxyCodeLine{73   \{}
+\DoxyCodeLine{74     \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548a833edae0a0dc88c8953ce211ae2be2a8}{PLANNING\_R}},  \textcolor{comment}{// 全局规划失败}}
+\DoxyCodeLine{75     \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548a8f7a7afa2cd39bacddd2eb4ff4833d09}{CONTROLLING\_R}}, \textcolor{comment}{// 局部轨迹规划失败}}
+\DoxyCodeLine{76     \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548a6eb6a3211dc9649f160fe738589559da}{OSCILLATION\_R}} \textcolor{comment}{// 长时间在小区域运动}}
+\DoxyCodeLine{77   \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83   \textcolor{comment}{// move\_base是路径与速度规划的大类}}
+\DoxyCodeLine{84   \textcolor{keyword}{class }\mbox{\hyperlink{classmove__base_1_1_move_base}{MoveBase}} \{}
+\DoxyCodeLine{85     \textcolor{keyword}{public}:}
+\DoxyCodeLine{91       \mbox{\hyperlink{classmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5}{MoveBase}}(tf2\_ros::Buffer\& tf);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{96       \textcolor{keyword}{virtual} \mbox{\hyperlink{classmove__base_1_1_move_base_a4eabd5e76e974cc7c7d4672b925ec4bf}{\string~MoveBase}}();}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{103       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe}{executeCycle}}(geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}});}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \textcolor{keyword}{private}:}
+\DoxyCodeLine{112       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098}{clearCostmapsService}}(std\_srvs::Empty::Request \&req, std\_srvs::Empty::Response \&resp);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{120       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7}{planService}}(nav\_msgs::GetPlan::Request \&req, nav\_msgs::GetPlan::Response \&resp);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{128       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std::vector<geometry\_msgs::PoseStamped>\& plan);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{135       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f}{loadRecoveryBehaviors}}(ros::NodeHandle node);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{140       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213}{loadDefaultRecoveryBehaviors}}();}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{147       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2}{clearCostmapWindows}}(\textcolor{keywordtype}{double} size\_x, \textcolor{keywordtype}{double} size\_y);}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{152       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a}{publishZeroVelocity}}();}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{157       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d}{resetState}}();}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7}{goalCB}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped::ConstPtr\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}});}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a}{planThread}}();}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401}{executeCb}}(\textcolor{keyword}{const} move\_base\_msgs::MoveBaseGoalConstPtr\& move\_base\_goal);}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d}{isQuaternionValid}}(\textcolor{keyword}{const} geometry\_msgs::Quaternion\& q);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac}{getRobotPose}}(geometry\_msgs::PoseStamped\& global\_pose, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* costmap);}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9}{distance}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& p1, \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& p2);}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171       geometry\_msgs::PoseStamped \mbox{\hyperlink{classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534}{goalToGlobalFrame}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& goal\_pose\_msg);}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{176       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225}{wakePlanner}}(\textcolor{keyword}{const} ros::TimerEvent\& event);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178       tf2\_ros::Buffer\& \mbox{\hyperlink{classmove__base_1_1_move_base_a9c682b98057a8aba46c27e133c8639e1}{tf\_}};}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180       \mbox{\hyperlink{namespacemove__base_ac8da40ec5525ddc900973cc3c6ced790}{MoveBaseActionServer}}* \mbox{\hyperlink{classmove__base_1_1_move_base_aa0691561e18e14022c6c7c3f584b9ad8}{as\_}};  \textcolor{comment}{// actionlib的服务器}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182       boost::shared\_ptr<nav\_core::BaseLocalPlanner> \mbox{\hyperlink{classmove__base_1_1_move_base_af756b3f1419d3fdbf1abd61066639811}{tc\_}};  \textcolor{comment}{// 局部路径规划器加载并创建实例后的指针}}
+\DoxyCodeLine{183       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* \mbox{\hyperlink{classmove__base_1_1_move_base_a215e33801629f482dddb812928ff1e6c}{planner\_costmap\_ros\_}}, *\mbox{\hyperlink{classmove__base_1_1_move_base_af9db6c791e5d92bd5280be83c908f90b}{controller\_costmap\_ros\_}};}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185       boost::shared\_ptr<nav\_core::BaseGlobalPlanner> \mbox{\hyperlink{classmove__base_1_1_move_base_a2564bdc40f3a74bb527e57efe8ad2238}{planner\_}};   \textcolor{comment}{// 全局路径规划器}}
+\DoxyCodeLine{186       std::string \mbox{\hyperlink{classmove__base_1_1_move_base_acb9bfde38f6ab462a12ac5d74e5a91c3}{robot\_base\_frame\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a8c8f515da67875f8badfd03d55183d8d}{global\_frame\_}};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188       std::vector<boost::shared\_ptr<nav\_core::RecoveryBehavior> > \mbox{\hyperlink{classmove__base_1_1_move_base_a7c7ab119183a6462de1c8ab60214a22f}{recovery\_behaviors\_}};  \textcolor{comment}{// 恢复行为，一般默认是转圈圈，也可以自定义其他的行为}}
+\DoxyCodeLine{189       std::vector<std::string> \mbox{\hyperlink{classmove__base_1_1_move_base_a976906c4fac47447efeae651b96db92b}{recovery\_behavior\_names\_}};}
+\DoxyCodeLine{190       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmove__base_1_1_move_base_aff86447affb75f7f87c21cf8aa6b1e05}{recovery\_index\_}};}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192       geometry\_msgs::PoseStamped \mbox{\hyperlink{classmove__base_1_1_move_base_ab1673fe852de40856760507118516be6}{global\_pose\_}};}
+\DoxyCodeLine{193       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__base_1_1_move_base_aeebbf28b03f764abd63d0b756a6c4e7e}{planner\_frequency\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_ad1a1a6d5934e7e79ed3162965e892c3f}{controller\_frequency\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a09d7236f88a70aef2555bb445dfd5e63}{inscribed\_radius\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_ab6b5316081ba1d6d38c2592269f03639}{circumscribed\_radius\_}};}
+\DoxyCodeLine{194       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__base_1_1_move_base_a1d386ec12ecfc0540ab548f3483a0265}{planner\_patience\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_ae62d36ca6d041318e450759866dc4e6a}{controller\_patience\_}};}
+\DoxyCodeLine{195       int32\_t \mbox{\hyperlink{classmove__base_1_1_move_base_a4948942a33d1145569cb36f87476d5ef}{max\_planning\_retries\_}};}
+\DoxyCodeLine{196       uint32\_t \mbox{\hyperlink{classmove__base_1_1_move_base_a54d3768d8395be910ee8c94248910d13}{planning\_retries\_}};}
+\DoxyCodeLine{197       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__base_1_1_move_base_a572cb09cc8c8620e87863ab87b22f690}{conservative\_reset\_dist\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_aa23c1a593f407da1a76f27134abc2272}{clearing\_radius\_}};}
+\DoxyCodeLine{198       ros::Publisher \mbox{\hyperlink{classmove__base_1_1_move_base_a3b6ed65d88fd5c97ec1dfbe099c8432e}{current\_goal\_pub\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_aaaa652faeab2a091b12a9de4d7a4d67d}{vel\_pub\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_ab3673dd4ff221886c815906b0b705e71}{action\_goal\_pub\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a62ef541590e9448fda031185970de667}{recovery\_status\_pub\_}};}
+\DoxyCodeLine{199       ros::Subscriber \mbox{\hyperlink{classmove__base_1_1_move_base_a2b1b548900f137b360a2a85b54742a1b}{goal\_sub\_}};}
+\DoxyCodeLine{200       ros::ServiceServer \mbox{\hyperlink{classmove__base_1_1_move_base_affd0b654ef8136723b4a534569bf035b}{make\_plan\_srv\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a71bc76c4949a4fa71b292df2377742f2}{clear\_costmaps\_srv\_}};}
+\DoxyCodeLine{201       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_a98edccf31a71c90da18a44144cb4806b}{shutdown\_costmaps\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_ae0dd2f813316fcd53fe9cc00a1460679}{clearing\_rotation\_allowed\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a09c78316058314b0a664c94890f13283}{recovery\_behavior\_enabled\_}};}
+\DoxyCodeLine{202       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_ac61513b02830655684b7ac8bc08fcea4}{make\_plan\_clear\_costmap\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a402d2b18591bf28495b27080b0f05104}{make\_plan\_add\_unreachable\_goal\_}};}
+\DoxyCodeLine{203       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__base_1_1_move_base_aa55e6b2ed7171e916fed5b1068604e91}{oscillation\_timeout\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_ac27401426e7a02566549348ba70a2236}{oscillation\_distance\_}};}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205       \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26}{MoveBaseState}} \mbox{\hyperlink{classmove__base_1_1_move_base_a8142e16d75b428f9d95ccf6d5cfa73b9}{state\_}};}
+\DoxyCodeLine{206       \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548}{RecoveryTrigger}} \mbox{\hyperlink{classmove__base_1_1_move_base_aee93a00f4ec16023b1517dbf83233684}{recovery\_trigger\_}};}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208       ros::Time \mbox{\hyperlink{classmove__base_1_1_move_base_a4b072f605beee9dc864a72b13f19534f}{last\_valid\_plan\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a9df6ca6c2c19290a04faa50a837b3484}{last\_valid\_control\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a04522db38598d7f86e696e3bf5fbac3c}{last\_oscillation\_reset\_}};}
+\DoxyCodeLine{209       geometry\_msgs::PoseStamped \mbox{\hyperlink{classmove__base_1_1_move_base_ac105a1f4a81f5d3f503cb6b44d8289fb}{oscillation\_pose\_}};}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211       \textcolor{comment}{// 以插件形式实现全局规划器、局部规划器和丢失时恢复规划器。}}
+\DoxyCodeLine{212       \textcolor{comment}{// 插件形式可以实现随时动态地加载C++类库，但需要在包中注册该插件，不用这个的话需要提前链接（相当于运行时加载）}}
+\DoxyCodeLine{213       pluginlib::ClassLoader<nav\_core::BaseGlobalPlanner> \mbox{\hyperlink{classmove__base_1_1_move_base_aab868dc3d278dff26a10adee6c476eca}{bgp\_loader\_}};}
+\DoxyCodeLine{214       pluginlib::ClassLoader<nav\_core::BaseLocalPlanner> \mbox{\hyperlink{classmove__base_1_1_move_base_a67d4773e77236e3bec4f530e7f59cb87}{blp\_loader\_}};}
+\DoxyCodeLine{215       pluginlib::ClassLoader<nav\_core::RecoveryBehavior> \mbox{\hyperlink{classmove__base_1_1_move_base_a0364046a17210f7ae2003c86d47c7646}{recovery\_loader\_}};}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217       \textcolor{comment}{// 保存规划器中刚刚算出的路径，然后传递planner\_plan\_ -\/-\/> latest\_plan\_ -\/-\/> controller\_plan\_}}
+\DoxyCodeLine{218       std::vector<geometry\_msgs::PoseStamped>* \mbox{\hyperlink{classmove__base_1_1_move_base_ae799defb3ae10421f59a676ed9928f4d}{planner\_plan\_}};}
+\DoxyCodeLine{219       \textcolor{comment}{//作为一个桥梁，在MoveBase::executeCycle中传递给controller\_plan\_}}
+\DoxyCodeLine{220       std::vector<geometry\_msgs::PoseStamped>* \mbox{\hyperlink{classmove__base_1_1_move_base_af993602ac2c3b59bbfd2c3cf464e30a7}{latest\_plan\_}};}
+\DoxyCodeLine{221       std::vector<geometry\_msgs::PoseStamped>* \mbox{\hyperlink{classmove__base_1_1_move_base_a1856c58f97950cb3d0c7f97bca74f30b}{controller\_plan\_}};}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223       \textcolor{comment}{// 全局规划线程相关的变量}}
+\DoxyCodeLine{224       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_a4bf1b6c604084c0a1895a2f1f6469b54}{runPlanner\_}};}
+\DoxyCodeLine{225       \textcolor{comment}{// boost的一种结合了互斥锁的用法，可以使一个线程进入睡眠状态，然后在另一个线程触发唤醒。}}
+\DoxyCodeLine{226       boost::recursive\_mutex \mbox{\hyperlink{classmove__base_1_1_move_base_a5446009ae9a87ede0d10451876fc34b1}{planner\_mutex\_}};}
+\DoxyCodeLine{227       \textcolor{comment}{// 通过这个值将goal在MoveBase::executeCb与MoveBase::planThread()之间传递}}
+\DoxyCodeLine{228       \textcolor{comment}{// boost::condition\_variable\_any用来实现多线程同步，它必须与互斥量配合使用。}}
+\DoxyCodeLine{229       boost::condition\_variable\_any \mbox{\hyperlink{classmove__base_1_1_move_base_a252ed7ae082dfc0d25334053076c9fc3}{planner\_cond\_}};}
+\DoxyCodeLine{230       geometry\_msgs::PoseStamped \mbox{\hyperlink{classmove__base_1_1_move_base_ae309d359124b3c6e4de745e15acaaf2c}{planner\_goal\_}};}
+\DoxyCodeLine{231       boost::thread* \mbox{\hyperlink{classmove__base_1_1_move_base_a4b73801f97cf862f62bb4eb3784c3d7f}{planner\_thread\_}};}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234       boost::recursive\_mutex \mbox{\hyperlink{classmove__base_1_1_move_base_a547956b81fede41fc392b1c39a5f0e76}{configuration\_mutex\_}};}
+\DoxyCodeLine{235       dynamic\_reconfigure::Server<move\_base::MoveBaseConfig> *\mbox{\hyperlink{classmove__base_1_1_move_base_a4148136ed8518f24b602ff512fa4329f}{dsrv\_}};}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1}{reconfigureCB}}(move\_base::MoveBaseConfig \&config, uint32\_t level);}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239       move\_base::MoveBaseConfig \mbox{\hyperlink{classmove__base_1_1_move_base_af9bca68c30fe021c32b784f915e41f87}{last\_config\_}};}
+\DoxyCodeLine{240       move\_base::MoveBaseConfig \mbox{\hyperlink{classmove__base_1_1_move_base_a40f221d00c23c9e39de04ad2eb88f63f}{default\_config\_}};}
+\DoxyCodeLine{241       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_a4113b9d2c253a4af7a10b0d1d1415d89}{setup\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_adb8f20ebde3d39fd24855a97dbf03834}{p\_freq\_change\_}}, \mbox{\hyperlink{classmove__base_1_1_move_base_a9e91250b8dd2406b6759e57a4bdb87d7}{c\_freq\_change\_}};}
+\DoxyCodeLine{242       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__base_1_1_move_base_ad52a920158a187fb1aa73f5317b82cf4}{new\_global\_plan\_}};}
+\DoxyCodeLine{243   \};}
+\DoxyCodeLine{244 \};}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{246 }
+
+\end{DoxyCode}

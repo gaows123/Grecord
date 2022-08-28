@@ -1,0 +1,277 @@
+\hypertarget{classcarrot__planner_1_1_carrot_planner}{}\doxysection{carrot\+\_\+planner\+::Carrot\+Planner类 参考}
+\label{classcarrot__planner_1_1_carrot_planner}\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+
+
+Provides a simple global planner that will compute a valid goal point for the local planner by walking back along the vector between the robot and the user-\/specified goal point until a valid cost is found.  
+
+
+
+
+{\ttfamily \#include $<$carrot\+\_\+planner.\+h$>$}
+
+
+
+类 carrot\+\_\+planner\+::Carrot\+Planner 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classcarrot__planner_1_1_carrot_planner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+carrot\+\_\+planner\+::Carrot\+Planner 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcarrot__planner_1_1_carrot_planner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a2eac68d979bbb34c07b7b196b107f10f}{Carrot\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner}{Carrot\+Planner}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a4046ba14bc9523f59305115c530dfc0b}{Carrot\+Planner}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner}{Carrot\+Planner}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_aee00be1c31b1a1c50cb4f8cca7f4c511}{$\sim$\+Carrot\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a83b1bb77b4ef4a2719dcc29bf90d077e}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em Initialization function for the \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner}{Carrot\+Planner}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a59c64d61f2e992d08b32438116614ab5}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Given a goal pose in the world, compute a plan \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_afb2445d0a140b7f9a47a4bed3ee3a63d}{footprint\+Cost}} (double x\+\_\+i, double y\+\_\+i, double theta\+\_\+i)
+\begin{DoxyCompactList}\small\item\em Checks the legality of the robot footprint at a position and orientation using the world model \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a3c4cb15296e81e4febc8e27e553b707e}{costmap\+\_\+ros\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a379b3b3aab84c3d18b7eca60624ee2d1}{step\+\_\+size\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a3c22dd484a2c315152d6a01e32fddec3}{min\+\_\+dist\+\_\+from\+\_\+robot\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_ae11f6b454515c6385e22cfdf888834e4}{costmap\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_world_model}{base\+\_\+local\+\_\+planner\+::\+World\+Model}} $\ast$ \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a48476275b6f153e0d9cf9c4bb5846374}{world\+\_\+model\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The world model that the controller will use \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner_a8b15bd6c58334d75007fea3d9c6146a0}{initialized\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+Provides a simple global planner that will compute a valid goal point for the local planner by walking back along the vector between the robot and the user-\/specified goal point until a valid cost is found. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a2eac68d979bbb34c07b7b196b107f10f}\label{classcarrot__planner_1_1_carrot_planner_a2eac68d979bbb34c07b7b196b107f10f}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!CarrotPlanner@{CarrotPlanner}}
+\index{CarrotPlanner@{CarrotPlanner}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{CarrotPlanner()}{CarrotPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily carrot\+\_\+planner\+::\+Carrot\+Planner\+::\+Carrot\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner}{Carrot\+Planner}} 
+
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a4046ba14bc9523f59305115c530dfc0b}\label{classcarrot__planner_1_1_carrot_planner_a4046ba14bc9523f59305115c530dfc0b}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!CarrotPlanner@{CarrotPlanner}}
+\index{CarrotPlanner@{CarrotPlanner}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{CarrotPlanner()}{CarrotPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily carrot\+\_\+planner\+::\+Carrot\+Planner\+::\+Carrot\+Planner (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner}{Carrot\+Planner}} 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap\+\_\+ros} & A pointer to the ROS wrapper of the costmap to use for planning \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcarrot__planner_1_1_carrot_planner_a4046ba14bc9523f59305115c530dfc0b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_aee00be1c31b1a1c50cb4f8cca7f4c511}\label{classcarrot__planner_1_1_carrot_planner_aee00be1c31b1a1c50cb4f8cca7f4c511}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!````~CarrotPlanner@{$\sim$CarrotPlanner}}
+\index{````~CarrotPlanner@{$\sim$CarrotPlanner}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{$\sim$CarrotPlanner()}{~CarrotPlanner()}}
+{\footnotesize\ttfamily carrot\+\_\+planner\+::\+Carrot\+Planner\+::$\sim$\+Carrot\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_afb2445d0a140b7f9a47a4bed3ee3a63d}\label{classcarrot__planner_1_1_carrot_planner_afb2445d0a140b7f9a47a4bed3ee3a63d}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!footprintCost@{footprintCost}}
+\index{footprintCost@{footprintCost}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{footprintCost()}{footprintCost()}}
+{\footnotesize\ttfamily double carrot\+\_\+planner\+::\+Carrot\+Planner\+::footprint\+Cost (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+i,  }\item[{double}]{y\+\_\+i,  }\item[{double}]{theta\+\_\+i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks the legality of the robot footprint at a position and orientation using the world model 
+
+
+\begin{DoxyParams}{参数}
+{\em x\+\_\+i} & The x position of the robot \\
+\hline
+{\em y\+\_\+i} & The y position of the robot \\
+\hline
+{\em theta\+\_\+i} & The orientation of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcarrot__planner_1_1_carrot_planner_afb2445d0a140b7f9a47a4bed3ee3a63d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcarrot__planner_1_1_carrot_planner_afb2445d0a140b7f9a47a4bed3ee3a63d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a83b1bb77b4ef4a2719dcc29bf90d077e}\label{classcarrot__planner_1_1_carrot_planner_a83b1bb77b4ef4a2719dcc29bf90d077e}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void carrot\+\_\+planner\+::\+Carrot\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialization function for the \mbox{\hyperlink{classcarrot__planner_1_1_carrot_planner}{Carrot\+Planner}} 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of this planner \\
+\hline
+{\em costmap\+\_\+ros} & A pointer to the ROS wrapper of the costmap to use for planning \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_global_planner_a485461ff314103dac95744f771107c43}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcarrot__planner_1_1_carrot_planner_a83b1bb77b4ef4a2719dcc29bf90d077e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcarrot__planner_1_1_carrot_planner_a83b1bb77b4ef4a2719dcc29bf90d077e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a59c64d61f2e992d08b32438116614ab5}\label{classcarrot__planner_1_1_carrot_planner_a59c64d61f2e992d08b32438116614ab5}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}}
+{\footnotesize\ttfamily bool carrot\+\_\+planner\+::\+Carrot\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Given a goal pose in the world, compute a plan 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & The start pose \\
+\hline
+{\em goal} & The goal pose \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcarrot__planner_1_1_carrot_planner_a59c64d61f2e992d08b32438116614ab5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_ae11f6b454515c6385e22cfdf888834e4}\label{classcarrot__planner_1_1_carrot_planner_ae11f6b454515c6385e22cfdf888834e4}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}}$\ast$ carrot\+\_\+planner\+::\+Carrot\+Planner\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a3c4cb15296e81e4febc8e27e553b707e}\label{classcarrot__planner_1_1_carrot_planner_a3c4cb15296e81e4febc8e27e553b707e}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!costmap\_ros\_@{costmap\_ros\_}}
+\index{costmap\_ros\_@{costmap\_ros\_}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{costmap\_ros\_}{costmap\_ros\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ carrot\+\_\+planner\+::\+Carrot\+Planner\+::costmap\+\_\+ros\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a8b15bd6c58334d75007fea3d9c6146a0}\label{classcarrot__planner_1_1_carrot_planner_a8b15bd6c58334d75007fea3d9c6146a0}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool carrot\+\_\+planner\+::\+Carrot\+Planner\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a3c22dd484a2c315152d6a01e32fddec3}\label{classcarrot__planner_1_1_carrot_planner_a3c22dd484a2c315152d6a01e32fddec3}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!min\_dist\_from\_robot\_@{min\_dist\_from\_robot\_}}
+\index{min\_dist\_from\_robot\_@{min\_dist\_from\_robot\_}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{min\_dist\_from\_robot\_}{min\_dist\_from\_robot\_}}
+{\footnotesize\ttfamily double carrot\+\_\+planner\+::\+Carrot\+Planner\+::min\+\_\+dist\+\_\+from\+\_\+robot\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a379b3b3aab84c3d18b7eca60624ee2d1}\label{classcarrot__planner_1_1_carrot_planner_a379b3b3aab84c3d18b7eca60624ee2d1}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!step\_size\_@{step\_size\_}}
+\index{step\_size\_@{step\_size\_}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{step\_size\_}{step\_size\_}}
+{\footnotesize\ttfamily double carrot\+\_\+planner\+::\+Carrot\+Planner\+::step\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcarrot__planner_1_1_carrot_planner_a48476275b6f153e0d9cf9c4bb5846374}\label{classcarrot__planner_1_1_carrot_planner_a48476275b6f153e0d9cf9c4bb5846374}} 
+\index{carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}!world\_model\_@{world\_model\_}}
+\index{world\_model\_@{world\_model\_}!carrot\_planner::CarrotPlanner@{carrot\_planner::CarrotPlanner}}
+\doxysubsubsection{\texorpdfstring{world\_model\_}{world\_model\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_world_model}{base\+\_\+local\+\_\+planner\+::\+World\+Model}}$\ast$ carrot\+\_\+planner\+::\+Carrot\+Planner\+::world\+\_\+model\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The world model that the controller will use 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+carrot\+\_\+planner/include/carrot\+\_\+planner/\mbox{\hyperlink{carrot__planner_8h}{carrot\+\_\+planner.\+h}}\item 
+carrot\+\_\+planner/src/\mbox{\hyperlink{carrot__planner_8cpp}{carrot\+\_\+planner.\+cpp}}\end{DoxyCompactItemize}

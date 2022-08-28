@@ -1,0 +1,12 @@
+<map id="base_local_planner::PointGrid::gridIndex" name="base_local_planner::PointGrid::gridIndex">
+<area shape="rect" id="node1" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="1028,78,1173,119"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="792,17,980,58"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="343,13,477,54"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="549,151,744,193"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="553,5,740,61"/>
+<area shape="rect" id="node5" href="$point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,93,56,120"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="105,86,269,127"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,191,271,233"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="319,79,501,135"/>
+<area shape="rect" id="node10" href="$classbase__local__planner_1_1_point_grid.html#a693cf4b2962ea0ffb4e74daf44a317a4" title="Removes points from the grid that lie within a laser scan" alt="" coords="319,159,501,215"/>
+</map>

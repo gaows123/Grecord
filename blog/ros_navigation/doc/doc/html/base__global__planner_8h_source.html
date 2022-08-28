@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: nav_core/include/nav_core/base_global_planner.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1e047e018d94fd522aa4d39a833f44d9.html">nav_core</a></li><li class="navelem"><a class="el" href="dir_7292cf3acd45067597b783cd9889d331.html">include</a></li><li class="navelem"><a class="el" href="dir_df768dfce38bfdf48f4d72d6c5cb0398.html">nav_core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">base_global_planner.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="base__global__planner_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">*</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">*</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">*  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">*</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">*  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">*  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">*</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">*   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">*     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">* Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*********************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef NAV_CORE_BASE_GLOBAL_PLANNER_H</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define NAV_CORE_BASE_GLOBAL_PLANNER_H</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;geometry_msgs/PoseStamped.h&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__2d__ros_8h.html">costmap_2d/costmap_2d_ros.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacenav__core.html">   43</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenav__core.html">nav_core</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classnav__core_1_1_base_global_planner.html">   48</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classnav__core_1_1_base_global_planner.html">BaseGlobalPlanner</a>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">   57</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">makePlan</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; <a class="code hl_variable" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>          <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; <a class="code hl_variable" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan) = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">   68</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">makePlan</a>(<span class="keyword">const</span> geometry_msgs::PoseStamped&amp; <a class="code hl_variable" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                            <span class="keyword">const</span> geometry_msgs::PoseStamped&amp; <a class="code hl_variable" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; plan,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                            <span class="keywordtype">double</span>&amp; cost)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        cost = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">makePlan</a>(<a class="code hl_variable" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, <a class="code hl_variable" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, plan);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">   81</a></span>      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">initialize</a>(std::string name, <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* costmap_ros) = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">   86</a></span>      <span class="keyword">virtual</span> <a class="code hl_function" href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">~BaseGlobalPlanner</a>(){}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classnav__core_1_1_base_global_planner.html#a9a5877f3f1c7c09dca8ddb735487ef61">   89</a></span>      <a class="code hl_function" href="classnav__core_1_1_base_global_planner.html#a9a5877f3f1c7c09dca8ddb735487ef61">BaseGlobalPlanner</a>(){}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  };</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};  <span class="comment">// namespace nav_core</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif  </span><span class="comment">// NAV_CORE_BASE_GLOBAL_PLANNER_H</span></div>
+<div class="ttc" id="aclasscostmap__2d_1_1_costmap2_d_r_o_s_html"><div class="ttname"><a href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_global_planner_html"><div class="ttname"><a href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a></div><div class="ttdoc">提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口.</div><div class="ttdef"><b>Definition:</b> base_global_planner.h:48</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_global_planner_html_a485461ff314103dac95744f771107c43"><div class="ttname"><a href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">nav_core::BaseGlobalPlanner::initialize</a></div><div class="ttdeci">virtual void initialize(std::string name, costmap_2d::Costmap2DROS *costmap_ros)=0</div><div class="ttdoc">BaseGlobalPlanner 的初始化函数</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_global_planner_html_a98120c1d76f7a5badb74adef9694a06d"><div class="ttname"><a href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">nav_core::BaseGlobalPlanner::~BaseGlobalPlanner</a></div><div class="ttdeci">virtual ~BaseGlobalPlanner()</div><div class="ttdoc">虚析构</div><div class="ttdef"><b>Definition:</b> base_global_planner.h:86</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_global_planner_html_a9a5877f3f1c7c09dca8ddb735487ef61"><div class="ttname"><a href="classnav__core_1_1_base_global_planner.html#a9a5877f3f1c7c09dca8ddb735487ef61">nav_core::BaseGlobalPlanner::BaseGlobalPlanner</a></div><div class="ttdeci">BaseGlobalPlanner()</div><div class="ttdef"><b>Definition:</b> base_global_planner.h:89</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_global_planner_html_ae34a7c7cf96ebdfaf6b33f24a646156c"><div class="ttname"><a href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">nav_core::BaseGlobalPlanner::makePlan</a></div><div class="ttdeci">virtual bool makePlan(const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</div><div class="ttdoc">已知世界坐标系下的目标点，计算全局路径</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_global_planner_html_afbc2b0f16bdd55a8b619f9fb5b7aa8da"><div class="ttname"><a href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">nav_core::BaseGlobalPlanner::makePlan</a></div><div class="ttdeci">virtual bool makePlan(const geometry_msgs::PoseStamped &amp;start, const geometry_msgs::PoseStamped &amp;goal, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double &amp;cost)</div><div class="ttdoc">已知世界坐标系下的目标点，计算全局路径</div><div class="ttdef"><b>Definition:</b> base_global_planner.h:68</div></div>
+<div class="ttc" id="acostmap__2d__ros_8h_html"><div class="ttname"><a href="costmap__2d__ros_8h.html">costmap_2d_ros.h</a></div></div>
+<div class="ttc" id="anamespacenav__core_html"><div class="ttname"><a href="namespacenav__core.html">nav_core</a></div><div class="ttdef"><b>Definition:</b> base_global_planner.h:43</div></div>
+<div class="ttc" id="anavtest_8cpp_html_a035d2eadd3e54f4a028144044585cd71"><div class="ttname"><a href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a></div><div class="ttdeci">int start[2]</div><div class="ttdef"><b>Definition:</b> navtest.cpp:34</div></div>
+<div class="ttc" id="anavtest_8cpp_html_a924427d23a7d971370018f8d3dc452cf"><div class="ttname"><a href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a></div><div class="ttdeci">int goal[2]</div><div class="ttdef"><b>Definition:</b> navtest.cpp:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

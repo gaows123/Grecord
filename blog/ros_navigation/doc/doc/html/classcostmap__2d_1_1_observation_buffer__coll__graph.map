@@ -1,0 +1,4 @@
+<map id="costmap_2d::ObservationBuffer" name="costmap_2d::ObservationBuffer">
+<area shape="rect" id="node1" title="Takes in point clouds from sensors, transforms them to the desired frame, and stores them" alt="" coords="5,124,212,151"/>
+<area shape="rect" id="node2" title=" " alt="" coords="81,5,136,32"/>
+</map>

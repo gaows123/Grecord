@@ -1,0 +1,132 @@
+\hypertarget{costmap__math_8h}{}\doxysection{costmap\+\_\+2d/include/costmap\+\_\+2d/costmap\+\_\+math.h 文件参考}
+\label{costmap__math_8h}\index{costmap\_2d/include/costmap\_2d/costmap\_math.h@{costmap\_2d/include/costmap\_2d/costmap\_math.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Point.\+h$>$}\newline
+costmap\+\_\+math.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__math_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__math_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{costmap__math_8h_a8f3cba07aa75b7320ae8bd6c0aeac498}{sign}} (double x)
+\begin{DoxyCompactList}\small\item\em Return -\/1 if x \texorpdfstring{$<$}{<} 0, +1 otherwise. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{costmap__math_8h_a07fdddafa7ce762bfda59e7146a194ae}{sign0}} (double x)
+\begin{DoxyCompactList}\small\item\em Same as sign(x) but returns 0 if x is 0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}} (double x0, double y0, double x1, double y1)
+\item 
+double \mbox{\hyperlink{costmap__math_8h_a31fe9c9633687b41b7c65a18dcab85f9}{distance\+To\+Line}} (double pX, double pY, double x0, double y0, double x1, double y1)
+\item 
+bool \mbox{\hyperlink{costmap__math_8h_a567784da85da753bdd72f7faf2bdf7b6}{intersects}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&polygon, float testx, float testy)
+\item 
+bool \mbox{\hyperlink{costmap__math_8h_a73fceb516298f9b095d8ee0a61957695}{intersects}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&polygon1, std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&polygon2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}\label{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}} 
+\index{costmap\_math.h@{costmap\_math.h}!distance@{distance}}
+\index{distance@{distance}!costmap\_math.h@{costmap\_math.h}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double distance (\begin{DoxyParamCaption}\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{x1,  }\item[{double}]{y1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{costmap__math_8h_a31fe9c9633687b41b7c65a18dcab85f9}\label{costmap__math_8h_a31fe9c9633687b41b7c65a18dcab85f9}} 
+\index{costmap\_math.h@{costmap\_math.h}!distanceToLine@{distanceToLine}}
+\index{distanceToLine@{distanceToLine}!costmap\_math.h@{costmap\_math.h}}
+\doxysubsubsection{\texorpdfstring{distanceToLine()}{distanceToLine()}}
+{\footnotesize\ttfamily double distance\+To\+Line (\begin{DoxyParamCaption}\item[{double}]{pX,  }\item[{double}]{pY,  }\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{x1,  }\item[{double}]{y1 }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{costmap__math_8h_a31fe9c9633687b41b7c65a18dcab85f9_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__math_8h_a31fe9c9633687b41b7c65a18dcab85f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{costmap__math_8h_a567784da85da753bdd72f7faf2bdf7b6}\label{costmap__math_8h_a567784da85da753bdd72f7faf2bdf7b6}} 
+\index{costmap\_math.h@{costmap\_math.h}!intersects@{intersects}}
+\index{intersects@{intersects}!costmap\_math.h@{costmap\_math.h}}
+\doxysubsubsection{\texorpdfstring{intersects()}{intersects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool intersects (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{polygon,  }\item[{float}]{testx,  }\item[{float}]{testy }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__math_8h_a567784da85da753bdd72f7faf2bdf7b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{costmap__math_8h_a73fceb516298f9b095d8ee0a61957695}\label{costmap__math_8h_a73fceb516298f9b095d8ee0a61957695}} 
+\index{costmap\_math.h@{costmap\_math.h}!intersects@{intersects}}
+\index{intersects@{intersects}!costmap\_math.h@{costmap\_math.h}}
+\doxysubsubsection{\texorpdfstring{intersects()}{intersects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool intersects (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{polygon1,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{polygon2 }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__math_8h_a73fceb516298f9b095d8ee0a61957695_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{costmap__math_8h_a8f3cba07aa75b7320ae8bd6c0aeac498}\label{costmap__math_8h_a8f3cba07aa75b7320ae8bd6c0aeac498}} 
+\index{costmap\_math.h@{costmap\_math.h}!sign@{sign}}
+\index{sign@{sign}!costmap\_math.h@{costmap\_math.h}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily double sign (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return -\/1 if x \texorpdfstring{$<$}{<} 0, +1 otherwise. 
+
+\mbox{\Hypertarget{costmap__math_8h_a07fdddafa7ce762bfda59e7146a194ae}\label{costmap__math_8h_a07fdddafa7ce762bfda59e7146a194ae}} 
+\index{costmap\_math.h@{costmap\_math.h}!sign0@{sign0}}
+\index{sign0@{sign0}!costmap\_math.h@{costmap\_math.h}}
+\doxysubsubsection{\texorpdfstring{sign0()}{sign0()}}
+{\footnotesize\ttfamily double sign0 (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Same as sign(x) but returns 0 if x is 0. 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{costmap__math_8h_a07fdddafa7ce762bfda59e7146a194ae_icgraph}
+\end{center}
+\end{figure}

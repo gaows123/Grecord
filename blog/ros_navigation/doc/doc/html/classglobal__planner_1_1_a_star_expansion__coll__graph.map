@@ -1,0 +1,5 @@
+<map id="global_planner::AStarExpansion" name="global_planner::AStarExpansion">
+<area shape="rect" id="node1" title=" " alt="" coords="5,185,212,212"/>
+<area shape="rect" id="node2" href="$classglobal__planner_1_1_expander.html" title=" " alt="" coords="25,109,193,136"/>
+<area shape="rect" id="node3" href="$classglobal__planner_1_1_potential_calculator.html" title=" " alt="" coords="27,5,191,47"/>
+</map>

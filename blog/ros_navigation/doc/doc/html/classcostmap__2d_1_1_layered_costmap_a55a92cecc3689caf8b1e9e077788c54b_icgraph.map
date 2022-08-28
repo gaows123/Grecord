@@ -1,0 +1,4 @@
+<map id="costmap_2d::LayeredCostmap::getInscribedRadius" name="costmap_2d::LayeredCostmap::getInscribedRadius">
+<area shape="rect" id="node1" title="The radius of a circle centered at the origin of the robot which is just within all points and edges ..." alt="" coords="232,5,431,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="5,5,184,47"/>
+</map>

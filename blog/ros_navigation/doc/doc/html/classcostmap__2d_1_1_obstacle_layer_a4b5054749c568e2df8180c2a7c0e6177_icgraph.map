@@ -1,0 +1,5 @@
+<map id="costmap_2d::ObstacleLayer::deactivate" name="costmap_2d::ObstacleLayer::deactivate">
+<area shape="rect" id="node1" title="Stop publishers." alt="" coords="239,39,424,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a9eca6114b3d54c93504058a1754103e4" title=" " alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_voxel_layer.html#af5f57588c57a8a5c8dff065b5a76a0db" title=" " alt="" coords="15,71,181,112"/>
+</map>

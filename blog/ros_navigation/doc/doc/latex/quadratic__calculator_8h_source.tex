@@ -1,0 +1,60 @@
+\hypertarget{quadratic__calculator_8h_source}{}\doxysection{quadratic\+\_\+calculator.\+h}
+\label{quadratic__calculator_8h_source}\index{global\_planner/include/global\_planner/quadratic\_calculator.h@{global\_planner/include/global\_planner/quadratic\_calculator.h}}
+\mbox{\hyperlink{quadratic__calculator_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_QUADRATIC\_CALCULATOR\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_QUADRATIC\_CALCULATOR\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include<\mbox{\hyperlink{potential__calculator_8h}{global\_planner/potential\_calculator.h}}>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglobal__planner}{global\_planner}} \{}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{classglobal__planner_1_1_quadratic_calculator}{QuadraticCalculator}} : \textcolor{keyword}{public} \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{PotentialCalculator}} \{}
+\DoxyCodeLine{46     \textcolor{keyword}{public}:}
+\DoxyCodeLine{47         \mbox{\hyperlink{classglobal__planner_1_1_quadratic_calculator_a4b4e966d382c85d0212121c674587f60}{QuadraticCalculator}}(\textcolor{keywordtype}{int} nx, \textcolor{keywordtype}{int} ny): \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{PotentialCalculator}}(nx,ny) \{\}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keywordtype}{float} \mbox{\hyperlink{classglobal__planner_1_1_quadratic_calculator_a5cb0a0126df397b4b5d86d871ddab1d4}{calculatePotential}}(\textcolor{keywordtype}{float}* potential, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cost, \textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, \textcolor{keywordtype}{float} prev\_potential);}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \} \textcolor{comment}{//end namespace global\_planner}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

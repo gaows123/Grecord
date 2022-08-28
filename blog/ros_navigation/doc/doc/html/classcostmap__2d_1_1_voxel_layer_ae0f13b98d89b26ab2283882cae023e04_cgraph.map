@@ -1,0 +1,8 @@
+<map id="costmap_2d::VoxelLayer::clearNonLethal" name="costmap_2d::VoxelLayer::clearNonLethal">
+<area shape="rect" id="node1" title=" " alt="" coords="5,136,172,177"/>
+<area shape="rect" id="node2" href="$classvoxel__grid_1_1_voxel_grid.html#a74857af17abfe3158048a169ee87252a" title=" " alt="" coords="231,5,378,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="220,71,389,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="220,136,389,177"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="220,201,389,243"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="220,267,389,308"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="costmap_2d::Costmap2DROS::movementCB" name="costmap_2d::Costmap2DROS::movementCB">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="251,5,448,47"/>
+</map>

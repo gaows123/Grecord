@@ -1,0 +1,124 @@
+\hypertarget{pf__pdf_8c}{}\doxysection{amcl/src/amcl/pf/pf\+\_\+pdf.c 文件参考}
+\label{pf__pdf_8c}\index{amcl/src/amcl/pf/pf\_pdf.c@{amcl/src/amcl/pf/pf\_pdf.c}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}amcl/pf/pf\+\_\+pdf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}portable\+\_\+utils.\+hpp\char`\"{}}\newline
+pf\+\_\+pdf.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__pdf_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\+\_\+pdf\+\_\+gaussian\+\_\+t}} $\ast$ \mbox{\hyperlink{pf__pdf_8c_a12898e7b473af8d3441c66baf203c7e1}{pf\+\_\+pdf\+\_\+gaussian\+\_\+alloc}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} x, \mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} cx)
+\item 
+void \mbox{\hyperlink{pf__pdf_8c_a6a02cc46438e272cbb9d5f80ef4581e9}{pf\+\_\+pdf\+\_\+gaussian\+\_\+free}} (\mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\+\_\+pdf\+\_\+gaussian\+\_\+t}} $\ast$pdf)
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{pf__pdf_8c_ae5c36efbbf482e91fe7ec9fa31747770}{pf\+\_\+pdf\+\_\+gaussian\+\_\+sample}} (\mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\+\_\+pdf\+\_\+gaussian\+\_\+t}} $\ast$pdf)
+\item 
+double \mbox{\hyperlink{pf__pdf_8c_abdfc0a4cb6ab83434b698504774ef885}{pf\+\_\+ran\+\_\+gaussian}} (double sigma)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{pf__pdf_8c_a00b523609f66297f8b118a254e284387}{pf\+\_\+pdf\+\_\+seed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{pf__pdf_8c_a12898e7b473af8d3441c66baf203c7e1}\label{pf__pdf_8c_a12898e7b473af8d3441c66baf203c7e1}} 
+\index{pf\_pdf.c@{pf\_pdf.c}!pf\_pdf\_gaussian\_alloc@{pf\_pdf\_gaussian\_alloc}}
+\index{pf\_pdf\_gaussian\_alloc@{pf\_pdf\_gaussian\_alloc}!pf\_pdf.c@{pf\_pdf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_pdf\_gaussian\_alloc()}{pf\_pdf\_gaussian\_alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\+\_\+pdf\+\_\+gaussian\+\_\+t}} $\ast$ pf\+\_\+pdf\+\_\+gaussian\+\_\+alloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{x,  }\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}}}]{cx }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__pdf_8c_a12898e7b473af8d3441c66baf203c7e1_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__pdf_8c_a12898e7b473af8d3441c66baf203c7e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf__pdf_8c_a6a02cc46438e272cbb9d5f80ef4581e9}\label{pf__pdf_8c_a6a02cc46438e272cbb9d5f80ef4581e9}} 
+\index{pf\_pdf.c@{pf\_pdf.c}!pf\_pdf\_gaussian\_free@{pf\_pdf\_gaussian\_free}}
+\index{pf\_pdf\_gaussian\_free@{pf\_pdf\_gaussian\_free}!pf\_pdf.c@{pf\_pdf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_pdf\_gaussian\_free()}{pf\_pdf\_gaussian\_free()}}
+{\footnotesize\ttfamily void pf\+\_\+pdf\+\_\+gaussian\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\+\_\+pdf\+\_\+gaussian\+\_\+t}} $\ast$}]{pdf }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__pdf_8c_a6a02cc46438e272cbb9d5f80ef4581e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf__pdf_8c_ae5c36efbbf482e91fe7ec9fa31747770}\label{pf__pdf_8c_ae5c36efbbf482e91fe7ec9fa31747770}} 
+\index{pf\_pdf.c@{pf\_pdf.c}!pf\_pdf\_gaussian\_sample@{pf\_pdf\_gaussian\_sample}}
+\index{pf\_pdf\_gaussian\_sample@{pf\_pdf\_gaussian\_sample}!pf\_pdf.c@{pf\_pdf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_pdf\_gaussian\_sample()}{pf\_pdf\_gaussian\_sample()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} pf\+\_\+pdf\+\_\+gaussian\+\_\+sample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\+\_\+pdf\+\_\+gaussian\+\_\+t}} $\ast$}]{pdf }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__pdf_8c_ae5c36efbbf482e91fe7ec9fa31747770_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__pdf_8c_ae5c36efbbf482e91fe7ec9fa31747770_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf__pdf_8c_abdfc0a4cb6ab83434b698504774ef885}\label{pf__pdf_8c_abdfc0a4cb6ab83434b698504774ef885}} 
+\index{pf\_pdf.c@{pf\_pdf.c}!pf\_ran\_gaussian@{pf\_ran\_gaussian}}
+\index{pf\_ran\_gaussian@{pf\_ran\_gaussian}!pf\_pdf.c@{pf\_pdf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_ran\_gaussian()}{pf\_ran\_gaussian()}}
+{\footnotesize\ttfamily double pf\+\_\+ran\+\_\+gaussian (\begin{DoxyParamCaption}\item[{double}]{sigma }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{pf__pdf_8c_abdfc0a4cb6ab83434b698504774ef885_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__pdf_8c_abdfc0a4cb6ab83434b698504774ef885_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{pf__pdf_8c_a00b523609f66297f8b118a254e284387}\label{pf__pdf_8c_a00b523609f66297f8b118a254e284387}} 
+\index{pf\_pdf.c@{pf\_pdf.c}!pf\_pdf\_seed@{pf\_pdf\_seed}}
+\index{pf\_pdf\_seed@{pf\_pdf\_seed}!pf\_pdf.c@{pf\_pdf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_pdf\_seed}{pf\_pdf\_seed}}
+{\footnotesize\ttfamily unsigned int pf\+\_\+pdf\+\_\+seed\hspace{0.3cm}{\ttfamily [static]}}
+

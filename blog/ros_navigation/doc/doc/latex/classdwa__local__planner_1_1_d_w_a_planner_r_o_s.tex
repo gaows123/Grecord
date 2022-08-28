@@ -1,0 +1,451 @@
+\hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s}{}\doxysection{dwa\+\_\+local\+\_\+planner\+::DWAPlanner\+ROS类 参考}
+\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s}\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+
+
+DWAPlanner\+ROS是封装类，提供了与move\+\_\+base的接口，作为move\+\_\+base的插件  
+
+
+
+
+{\ttfamily \#include $<$dwa\+\_\+planner\+\_\+ros.\+h$>$}
+
+
+
+类 dwa\+\_\+local\+\_\+planner\+::DWAPlanner\+ROS 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s__inherit__graph}
+\end{center}
+\end{figure}
+
+
+dwa\+\_\+local\+\_\+planner\+::DWAPlanner\+ROS 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a53854eb5a69270d2935db6115da00b07}{DWAPlanner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s}{DWAPlanner\+ROS}} 封装类的构造 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em 构建ros的封装 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ab4a313f013569f71f59101ba8529640a}{$\sim$\+DWAPlanner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em 封装类的析构 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0}{compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em 计算下发速度根据机器人的位姿，当前速度和目标点 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e}{dwa\+Compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em 根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em 更新全局路径 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941}{is\+Goal\+Reached}} ()
+\begin{DoxyCompactList}\small\item\em 是否到达目标点 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8}{is\+Initialized}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695}{reconfigure\+CB}} (DWAPlanner\+Config \&config, uint32\+\_\+t level)
+\begin{DoxyCompactList}\small\item\em 动态更新局部规划器参数的回调函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca}{publish\+Local\+Plan}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path)
+\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48}{publish\+Global\+Plan}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+tf2\+\_\+ros\+::\+Buffer $\ast$ \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_aac8917d72216bad23d03aae6d9b05a4b}{tf\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 用于点云转换 \end{DoxyCompactList}\item 
+ros\+::\+Publisher \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a858610dbe18fa5f37f1da9dbeaa47af6}{g\+\_\+plan\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a7756f098cafda35d4acc1f4ff6af0a28}{l\+\_\+plan\+\_\+pub\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_af153046111302f3258ebd2bf2d2aa505}{planner\+\_\+util\+\_\+}}
+\item 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner}{DWAPlanner}} $>$ \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e786447ddb9daccacf0df6fceadd71f}{dp\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4122daf0cf82134cc935ba26e16969ab}{costmap\+\_\+ros\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ DWAPlanner\+Config $>$ $\ast$ \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a2719957a5e10b456a2044b01eebfdb9d}{dsrv\+\_\+}}
+\item 
+dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+Config \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a5d7933f2f2a867eccc49626cc870fd34}{default\+\_\+config\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a721d5e2364754273a369a32d445ca771}{setup\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a622801b690be44d668b967d29708c58c}{current\+\_\+pose\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller}{base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6132be586af38569fd58f75da07dc6e0}{latched\+Stop\+Rotate\+Controller\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3f9060b4d745f7ff5cc0ac6e0869cfda}{initialized\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4fd27149428a4010d44439caa2d749de}{odom\+\_\+helper\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e81ef8eb8c07c08c031b74c9f68bc6e}{odom\+\_\+topic\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+DWAPlanner\+ROS是封装类，提供了与move\+\_\+base的接口，作为move\+\_\+base的插件 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a53854eb5a69270d2935db6115da00b07}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a53854eb5a69270d2935db6115da00b07}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!DWAPlannerROS@{DWAPlannerROS}}
+\index{DWAPlannerROS@{DWAPlannerROS}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{DWAPlannerROS()}{DWAPlannerROS()}}
+{\footnotesize\ttfamily dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::\+DWAPlanner\+ROS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_r_o_s}{DWAPlanner\+ROS}} 封装类的构造 
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ab4a313f013569f71f59101ba8529640a}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ab4a313f013569f71f59101ba8529640a}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!````~DWAPlannerROS@{$\sim$DWAPlannerROS}}
+\index{````~DWAPlannerROS@{$\sim$DWAPlannerROS}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{$\sim$DWAPlannerROS()}{~DWAPlannerROS()}}
+{\footnotesize\ttfamily dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::$\sim$\+DWAPlanner\+ROS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+封装类的析构 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!computeVelocityCommands@{computeVelocityCommands}}
+\index{computeVelocityCommands@{computeVelocityCommands}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommands()}{computeVelocityCommands()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+计算下发速度根据机器人的位姿，当前速度和目标点 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & 下发速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True\+:找到有效路径 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_aa02dad5e3be910ae7d5159b7a53c0188}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!dwaComputeVelocityCommands@{dwaComputeVelocityCommands}}
+\index{dwaComputeVelocityCommands@{dwaComputeVelocityCommands}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{dwaComputeVelocityCommands()}{dwaComputeVelocityCommands()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::dwa\+Compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})}
+
+
+
+根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & 下发速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True\+:找到有效路径 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!initialize@{initialize}}
+\index{initialize@{initialize}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+构建ros的封装 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 局部规划器名字 \\
+\hline
+{\em tf} & transform listener 的指针 \\
+\hline
+{\em costmap} & 代价地图 \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_a488521ac3d0ff67000aed87ab3fea84b}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!isGoalReached@{isGoalReached}}
+\index{isGoalReached@{isGoalReached}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{isGoalReached()}{isGoalReached()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::is\+Goal\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+是否到达目标点 
+
+\begin{DoxyReturn}{返回}
+True \+: 到达目标点 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_a27b2312d3218496be06a298767b26716}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!isInitialized@{isInitialized}}
+\index{isInitialized@{isInitialized}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{isInitialized()}{isInitialized()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!publishGlobalPlan@{publishGlobalPlan}}
+\index{publishGlobalPlan@{publishGlobalPlan}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{publishGlobalPlan()}{publishGlobalPlan()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::publish\+Global\+Plan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!publishLocalPlan@{publishLocalPlan}}
+\index{publishLocalPlan@{publishLocalPlan}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{publishLocalPlan()}{publishLocalPlan()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::publish\+Local\+Plan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{DWAPlanner\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+动态更新局部规划器参数的回调函数 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新全局路径 
+
+
+\begin{DoxyParams}{参数}
+{\em orig\+\_\+global\+\_\+plan} & 传递给局部规划器的全局路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True\+: 更新成功 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_ac30adc27a5c123f129ef7046ffbb0f3e}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4122daf0cf82134cc935ba26e16969ab}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4122daf0cf82134cc935ba26e16969ab}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!costmap\_ros\_@{costmap\_ros\_}}
+\index{costmap\_ros\_@{costmap\_ros\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{costmap\_ros\_}{costmap\_ros\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::costmap\+\_\+ros\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a622801b690be44d668b967d29708c58c}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a622801b690be44d668b967d29708c58c}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!current\_pose\_@{current\_pose\_}}
+\index{current\_pose\_@{current\_pose\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{current\_pose\_}{current\_pose\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::current\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a5d7933f2f2a867eccc49626cc870fd34}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a5d7933f2f2a867eccc49626cc870fd34}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!default\_config\_@{default\_config\_}}
+\index{default\_config\_@{default\_config\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{default\_config\_}{default\_config\_}}
+{\footnotesize\ttfamily dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+Config dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::default\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e786447ddb9daccacf0df6fceadd71f}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e786447ddb9daccacf0df6fceadd71f}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!dp\_@{dp\_}}
+\index{dp\_@{dp\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{dp\_}{dp\_}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner}{DWAPlanner}}$>$ dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::dp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a2719957a5e10b456a2044b01eebfdb9d}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a2719957a5e10b456a2044b01eebfdb9d}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$DWAPlanner\+Config$>$$\ast$ dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a858610dbe18fa5f37f1da9dbeaa47af6}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a858610dbe18fa5f37f1da9dbeaa47af6}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!g\_plan\_pub\_@{g\_plan\_pub\_}}
+\index{g\_plan\_pub\_@{g\_plan\_pub\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{g\_plan\_pub\_}{g\_plan\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::g\+\_\+plan\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3f9060b4d745f7ff5cc0ac6e0869cfda}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3f9060b4d745f7ff5cc0ac6e0869cfda}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a7756f098cafda35d4acc1f4ff6af0a28}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a7756f098cafda35d4acc1f4ff6af0a28}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!l\_plan\_pub\_@{l\_plan\_pub\_}}
+\index{l\_plan\_pub\_@{l\_plan\_pub\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{l\_plan\_pub\_}{l\_plan\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::l\+\_\+plan\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6132be586af38569fd58f75da07dc6e0}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6132be586af38569fd58f75da07dc6e0}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!latchedStopRotateController\_@{latchedStopRotateController\_}}
+\index{latchedStopRotateController\_@{latchedStopRotateController\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{latchedStopRotateController\_}{latchedStopRotateController\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_latched_stop_rotate_controller}{base\+\_\+local\+\_\+planner\+::\+Latched\+Stop\+Rotate\+Controller}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::latched\+Stop\+Rotate\+Controller\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4fd27149428a4010d44439caa2d749de}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a4fd27149428a4010d44439caa2d749de}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!odom\_helper\_@{odom\_helper\_}}
+\index{odom\_helper\_@{odom\_helper\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{odom\_helper\_}{odom\_helper\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::odom\+\_\+helper\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e81ef8eb8c07c08c031b74c9f68bc6e}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a1e81ef8eb8c07c08c031b74c9f68bc6e}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!odom\_topic\_@{odom\_topic\_}}
+\index{odom\_topic\_@{odom\_topic\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{odom\_topic\_}{odom\_topic\_}}
+{\footnotesize\ttfamily std\+::string dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::odom\+\_\+topic\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_af153046111302f3258ebd2bf2d2aa505}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_af153046111302f3258ebd2bf2d2aa505}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!planner\_util\_@{planner\_util\_}}
+\index{planner\_util\_@{planner\_util\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{planner\_util\_}{planner\_util\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::planner\+\_\+util\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a721d5e2364754273a369a32d445ca771}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a721d5e2364754273a369a32d445ca771}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!setup\_@{setup\_}}
+\index{setup\_@{setup\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{setup\_}{setup\_}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::setup\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_aac8917d72216bad23d03aae6d9b05a4b}\label{classdwa__local__planner_1_1_d_w_a_planner_r_o_s_aac8917d72216bad23d03aae6d9b05a4b}} 
+\index{dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!dwa\_local\_planner::DWAPlannerROS@{dwa\_local\_planner::DWAPlannerROS}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer$\ast$ dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+ROS\+::tf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+用于点云转换 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+dwa\+\_\+local\+\_\+planner/include/dwa\+\_\+local\+\_\+planner/\mbox{\hyperlink{dwa__planner__ros_8h}{dwa\+\_\+planner\+\_\+ros.\+h}}\item 
+dwa\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{dwa__planner__ros_8cpp}{dwa\+\_\+planner\+\_\+ros.\+cpp}}\end{DoxyCompactItemize}

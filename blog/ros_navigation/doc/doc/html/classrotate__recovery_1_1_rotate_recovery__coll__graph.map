@@ -1,0 +1,11 @@
+<map id="rotate_recovery::RotateRecovery" name="rotate_recovery::RotateRecovery">
+<area shape="rect" id="node1" title="恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物" alt="" coords="1031,77,1244,103"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="693,25,883,51"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="689,155,887,182"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="320,123,519,150"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,93,175,119"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="308,174,531,201"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_costmap_model.html" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje..." alt="" coords="353,40,486,81"/>
+<area shape="rect" id="node6" title=" " alt="" coords="63,229,117,255"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="23,5,157,47"/>
+</map>

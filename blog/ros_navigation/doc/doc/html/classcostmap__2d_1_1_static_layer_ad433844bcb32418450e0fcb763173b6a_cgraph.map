@@ -1,0 +1,6 @@
+<map id="costmap_2d::StaticLayer::updateBounds" name="costmap_2d::StaticLayer::updateBounds">
+<area shape="rect" id="node1" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="5,71,172,112"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_layered_costmap.html#a60ff509ec4e5464d6e6952c282b8e6bf" title=" " alt="" coords="220,5,419,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="235,71,404,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap_layer.html#aeca7c78b12489bcfff974cd60753a6f1" title=" " alt="" coords="227,136,412,177"/>
+</map>

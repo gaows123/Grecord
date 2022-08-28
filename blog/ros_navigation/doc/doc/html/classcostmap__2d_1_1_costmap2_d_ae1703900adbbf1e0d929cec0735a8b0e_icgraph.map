@@ -1,0 +1,9 @@
+<map id="costmap_2d::Costmap2D::setCost" name="costmap_2d::Costmap2D::setCost">
+<area shape="rect" id="node1" title="Set the cost of a cell in the costmap" alt="" coords="512,89,681,131"/>
+<area shape="rect" id="node2" href="$classglobal__planner_1_1_global_planner.html#a04cb531dc0326cc5bdcce752175ee030" title=" " alt="" coords="259,5,453,47"/>
+<area shape="rect" id="node4" href="$classnavfn_1_1_navfn_r_o_s.html#abcd849ed9ec685971d6015e8d4056a83" title=" " alt="" coords="248,71,464,98"/>
+<area shape="rect" id="node6" href="$obstacle__tests_8cpp.html#a9a60e8b8b1e2774d5d94b0b402ea9d34" title=" " alt="" coords="328,122,384,149"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_static_layer.html#a9ebed8f042ee945073031e51f82229f1" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="273,173,439,215"/>
+<area shape="rect" id="node3" href="$classglobal__planner_1_1_global_planner.html#a4f6bfa5acf58670c01a5b8c684a2f20c" title="根据目标点规划处全局路径" alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node5" href="$classnavfn_1_1_navfn_r_o_s.html#a1925183250dd36115daadd91b14656aa" title="根据目标位姿计算全局路径" alt="" coords="7,71,198,98"/>
+</map>

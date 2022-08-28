@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: nav_core::BaseGlobalPlanner类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacenav__core.html">nav_core</a></li><li class="navelem"><a class="el" href="classnav__core_1_1_base_global_planner.html">BaseGlobalPlanner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classnav__core_1_1_base_global_planner-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">nav_core::BaseGlobalPlanner类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口.  
+ <a href="classnav__core_1_1_base_global_planner.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="base__global__planner_8h_source.html">base_global_planner.h</a>&gt;</code></p>
+<div class="dynheader">
+类 nav_core::BaseGlobalPlanner 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnav__core_1_1_base_global_planner__inherit__graph.png" border="0" usemap="#anav__core_1_1_base_global_planner_inherit__map" alt="Inheritance graph"/></div>
+<map name="anav__core_1_1_base_global_planner_inherit__map" id="anav__core_1_1_base_global_planner_inherit__map">
+<area shape="rect" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="221,5,415,32"/>
+<area shape="rect" href="classcarrot__planner_1_1_carrot_planner.html" title="Provides a simple global planner that will compute a valid goal point for the local planner by walkin..." alt="" coords="5,80,196,107"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html" title=" " alt="" coords="221,80,415,107"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html" title="Navfn 全局规划器的ROS封装类" alt="" coords="449,80,573,107"/>
+<area shape="rect" href="classglobal__planner_1_1_planner_with_costmap.html" title=" " alt="" coords="221,155,404,196"/>
+<area shape="rect" href="classnavfn_1_1_navfn_with_costmap.html" title=" " alt="" coords="428,162,603,189"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae34a7c7cf96ebdfaf6b33f24a646156c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</td></tr>
+<tr class="memdesc:ae34a7c7cf96ebdfaf6b33f24a646156c"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知世界坐标系下的目标点，计算全局路径  <a href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">更多...</a><br /></td></tr>
+<tr class="separator:ae34a7c7cf96ebdfaf6b33f24a646156c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc2b0f16bdd55a8b619f9fb5b7aa8da"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double &amp;cost)</td></tr>
+<tr class="memdesc:afbc2b0f16bdd55a8b619f9fb5b7aa8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知世界坐标系下的目标点，计算全局路径  <a href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">更多...</a><br /></td></tr>
+<tr class="separator:afbc2b0f16bdd55a8b619f9fb5b7aa8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485461ff314103dac95744f771107c43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)=0</td></tr>
+<tr class="memdesc:a485461ff314103dac95744f771107c43"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口.">BaseGlobalPlanner</a> 的初始化函数  <a href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">更多...</a><br /></td></tr>
+<tr class="separator:a485461ff314103dac95744f771107c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98120c1d76f7a5badb74adef9694a06d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">~BaseGlobalPlanner</a> ()</td></tr>
+<tr class="memdesc:a98120c1d76f7a5badb74adef9694a06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚析构  <a href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">更多...</a><br /></td></tr>
+<tr class="separator:a98120c1d76f7a5badb74adef9694a06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a9a5877f3f1c7c09dca8ddb735487ef61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a9a5877f3f1c7c09dca8ddb735487ef61">BaseGlobalPlanner</a> ()</td></tr>
+<tr class="separator:a9a5877f3f1c7c09dca8ddb735487ef61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a98120c1d76f7a5badb74adef9694a06d" name="a98120c1d76f7a5badb74adef9694a06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98120c1d76f7a5badb74adef9694a06d">&#9670;&nbsp;</a></span>~BaseGlobalPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual nav_core::BaseGlobalPlanner::~BaseGlobalPlanner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>虚析构 </p>
+
+</div>
+</div>
+<a id="a9a5877f3f1c7c09dca8ddb735487ef61" name="a9a5877f3f1c7c09dca8ddb735487ef61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a5877f3f1c7c09dca8ddb735487ef61">&#9670;&nbsp;</a></span>BaseGlobalPlanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nav_core::BaseGlobalPlanner::BaseGlobalPlanner </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a485461ff314103dac95744f771107c43" name="a485461ff314103dac95744f771107c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485461ff314103dac95744f771107c43">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nav_core::BaseGlobalPlanner::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口.">BaseGlobalPlanner</a> 的初始化函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>全局规划器名字 </td></tr>
+    <tr><td class="paramname">costmap_ros</td><td>指向代价地图ROS封装类的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classcarrot__planner_1_1_carrot_planner.html#a83b1bb77b4ef4a2719dcc29bf90d077e">carrot_planner::CarrotPlanner</a>, <a class="el" href="classglobal__planner_1_1_global_planner.html#a280ebb6723d46b462eb66ec73a2fe266">global_planner::GlobalPlanner</a> , 以及 <a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a7f1e06b4e3b390aaaa3e4733a0668c4d">navfn::NavfnROS</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ae34a7c7cf96ebdfaf6b33f24a646156c" name="ae34a7c7cf96ebdfaf6b33f24a646156c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34a7c7cf96ebdfaf6b33f24a646156c">&#9670;&nbsp;</a></span>makePlan() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nav_core::BaseGlobalPlanner::makePlan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已知世界坐标系下的目标点，计算全局路径 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>起始位姿 </td></tr>
+    <tr><td class="paramname">goal</td><td>目标位姿 </td></tr>
+    <tr><td class="paramname">plan</td><td>被填充的全局路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True 表示找到有效路径 </dd></dl>
+
+<p>在 <a class="el" href="classcarrot__planner_1_1_carrot_planner.html#a59c64d61f2e992d08b32438116614ab5">carrot_planner::CarrotPlanner</a>, <a class="el" href="classglobal__planner_1_1_global_planner.html#abb7f40f6a851f88e6b7668a38571712a">global_planner::GlobalPlanner</a> , 以及 <a class="el" href="classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9">navfn::NavfnROS</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c_icgraph.png" border="0" usemap="#aclassnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c_icgraph" alt=""/></div>
+<map name="aclassnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c_icgraph" id="aclassnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c_icgraph">
+<area shape="rect" title="已知世界坐标系下的目标点，计算全局路径" alt="" coords="248,5,443,47"/>
+<area shape="rect" href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da" title="已知世界坐标系下的目标点，计算全局路径" alt="" coords="5,5,200,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afbc2b0f16bdd55a8b619f9fb5b7aa8da" name="afbc2b0f16bdd55a8b619f9fb5b7aa8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc2b0f16bdd55a8b619f9fb5b7aa8da">&#9670;&nbsp;</a></span>makePlan() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool nav_core::BaseGlobalPlanner::makePlan </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>cost</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>已知世界坐标系下的目标点，计算全局路径 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>起始位姿 </td></tr>
+    <tr><td class="paramname">goal</td><td>目标位姿 </td></tr>
+    <tr><td class="paramname">plan</td><td>被填充的全局路径 </td></tr>
+    <tr><td class="paramname">cost</td><td>该全局路径的代价 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True 表示找到有效路径 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnav__core_1_1_base_global_planner_afbc2b0f16bdd55a8b619f9fb5b7aa8da_cgraph.png" border="0" usemap="#aclassnav__core_1_1_base_global_planner_afbc2b0f16bdd55a8b619f9fb5b7aa8da_cgraph" alt=""/></div>
+<map name="aclassnav__core_1_1_base_global_planner_afbc2b0f16bdd55a8b619f9fb5b7aa8da_cgraph" id="aclassnav__core_1_1_base_global_planner_afbc2b0f16bdd55a8b619f9fb5b7aa8da_cgraph">
+<area shape="rect" title="已知世界坐标系下的目标点，计算全局路径" alt="" coords="5,5,200,47"/>
+<area shape="rect" href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c" title="已知世界坐标系下的目标点，计算全局路径" alt="" coords="248,5,443,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>nav_core/include/nav_core/<a class="el" href="base__global__planner_8h_source.html">base_global_planner.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

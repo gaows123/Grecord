@@ -1,0 +1,10 @@
+<map id="costmap_2d::LayeredCostmap::resizeMap" name="costmap_2d::LayeredCostmap::resizeMap">
+<area shape="rect" id="node1" title=" " alt="" coords="711,103,909,144"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_static_layer.html#aa9d8d26c675b2ecebeb1f2ba2a7ccfd6" title="Callback to update the costmap&#39;s map from the map_server" alt="" coords="481,37,647,79"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="465,103,663,144"/>
+<area shape="rect" id="node8" href="$inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="536,169,592,195"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="235,37,402,79"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="5,71,172,112"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="220,103,417,144"/>
+</map>

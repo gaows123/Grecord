@@ -1,0 +1,4 @@
+<map id="base_local_planner::MapGridCostFunction::setStopOnFailure" name="base_local_planner::MapGridCostFunction::setStopOnFailure">
+<area shape="rect" id="node1" title="If true, failures along the path cause the entire path to be rejected." alt="" coords="232,5,388,61"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="5,13,184,54"/>
+</map>

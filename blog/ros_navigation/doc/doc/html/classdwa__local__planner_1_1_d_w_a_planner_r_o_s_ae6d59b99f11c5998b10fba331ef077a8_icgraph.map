@@ -1,0 +1,8 @@
+<map id="dwa_local_planner::DWAPlannerROS::isInitialized" name="dwa_local_planner::DWAPlannerROS::isInitialized">
+<area shape="rect" id="node1" title=" " alt="" coords="585,119,783,161"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="283,5,537,61"/>
+<area shape="rect" id="node4" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85" title="构建ros的封装" alt="" coords="321,86,499,127"/>
+<area shape="rect" id="node5" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941" title="是否到达目标点" alt="" coords="300,151,520,193"/>
+<area shape="rect" id="node6" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a0cfcf517c3112678a7eabeb498d9b2ce" title="更新全局路径" alt="" coords="322,217,498,258"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>

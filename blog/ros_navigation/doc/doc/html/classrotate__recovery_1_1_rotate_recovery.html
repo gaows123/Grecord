@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: rotate_recovery::RotateRecovery类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacerotate__recovery.html">rotate_recovery</a></li><li class="navelem"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html">RotateRecovery</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classrotate__recovery_1_1_rotate_recovery-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">rotate_recovery::RotateRecovery类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物  
+ <a href="classrotate__recovery_1_1_rotate_recovery.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="rotate__recovery_8h_source.html">rotate_recovery.h</a>&gt;</code></p>
+<div class="dynheader">
+类 rotate_recovery::RotateRecovery 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrotate__recovery_1_1_rotate_recovery__inherit__graph.png" border="0" usemap="#arotate__recovery_1_1_rotate_recovery_inherit__map" alt="Inheritance graph"/></div>
+<map name="arotate__recovery_1_1_rotate_recovery_inherit__map" id="arotate__recovery_1_1_rotate_recovery_inherit__map">
+<area shape="rect" title="恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物" alt="" coords="5,80,219,107"/>
+<area shape="rect" href="classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="17,5,207,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+rotate_recovery::RotateRecovery 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrotate__recovery_1_1_rotate_recovery__coll__graph.png" border="0" usemap="#arotate__recovery_1_1_rotate_recovery_coll__map" alt="Collaboration graph"/></div>
+<map name="arotate__recovery_1_1_rotate_recovery_coll__map" id="arotate__recovery_1_1_rotate_recovery_coll__map">
+<area shape="rect" title="恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物" alt="" coords="1031,77,1244,103"/>
+<area shape="rect" href="classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="693,25,883,51"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="689,155,887,182"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="320,123,519,150"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,93,175,119"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="308,174,531,201"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html" title="A class that implements the WorldModel interface to provide grid based collision checks for the traje..." alt="" coords="353,40,486,81"/>
+<area shape="rect" title=" " alt="" coords="63,229,117,255"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="23,5,157,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a783abdd0af0c982eeaac51f8032005c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a783abdd0af0c982eeaac51f8032005c7">RotateRecovery</a> ()</td></tr>
+<tr class="memdesc:a783abdd0af0c982eeaac51f8032005c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, make sure to call initialize in addition to actually initialize the object  <a href="classrotate__recovery_1_1_rotate_recovery.html#a783abdd0af0c982eeaac51f8032005c7">更多...</a><br /></td></tr>
+<tr class="separator:a783abdd0af0c982eeaac51f8032005c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609f496f7a9f916f526a40a517c69204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a609f496f7a9f916f526a40a517c69204">initialize</a> (std::string name, tf2_ros::Buffer *, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *local_costmap)</td></tr>
+<tr class="memdesc:a609f496f7a9f916f526a40a517c69204"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复行为的初始化函数  <a href="classrotate__recovery_1_1_rotate_recovery.html#a609f496f7a9f916f526a40a517c69204">更多...</a><br /></td></tr>
+<tr class="separator:a609f496f7a9f916f526a40a517c69204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a95adca66937ca4d01fb7a584b905f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9">runBehavior</a> ()</td></tr>
+<tr class="memdesc:a8a95adca66937ca4d01fb7a584b905f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动旋转恢复行为  <a href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9">更多...</a><br /></td></tr>
+<tr class="separator:a8a95adca66937ca4d01fb7a584b905f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71067cd6e9b261a37b6cd52ac33e41b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a71067cd6e9b261a37b6cd52ac33e41b4">~RotateRecovery</a> ()</td></tr>
+<tr class="memdesc:a71067cd6e9b261a37b6cd52ac33e41b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <a href="classrotate__recovery_1_1_rotate_recovery.html#a71067cd6e9b261a37b6cd52ac33e41b4">更多...</a><br /></td></tr>
+<tr class="separator:a71067cd6e9b261a37b6cd52ac33e41b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnav__core_1_1_recovery_behavior"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnav__core_1_1_recovery_behavior')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a></td></tr>
+<tr class="memitem:ab35332f465b3d2509c9e73d4d95c7b5d inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#ab35332f465b3d2509c9e73d4d95c7b5d">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *global_costmap, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *local_costmap)=0</td></tr>
+<tr class="memdesc:ab35332f465b3d2509c9e73d4d95c7b5d inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口.">RecoveryBehavior</a> 的初始化函数  <a href="classnav__core_1_1_recovery_behavior.html#ab35332f465b3d2509c9e73d4d95c7b5d">更多...</a><br /></td></tr>
+<tr class="separator:ab35332f465b3d2509c9e73d4d95c7b5d inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8e1eec7a483e530e48b2593ea4fc03 inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#a6d8e1eec7a483e530e48b2593ea4fc03">runBehavior</a> ()=0</td></tr>
+<tr class="memdesc:a6d8e1eec7a483e530e48b2593ea4fc03 inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行RecoveryBehavior  <a href="classnav__core_1_1_recovery_behavior.html#a6d8e1eec7a483e530e48b2593ea4fc03">更多...</a><br /></td></tr>
+<tr class="separator:a6d8e1eec7a483e530e48b2593ea4fc03 inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add375f2ed722549afd00b7dae9874ac6 inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#add375f2ed722549afd00b7dae9874ac6">~RecoveryBehavior</a> ()</td></tr>
+<tr class="memdesc:add375f2ed722549afd00b7dae9874ac6 inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口的虚析构  <a href="classnav__core_1_1_recovery_behavior.html#add375f2ed722549afd00b7dae9874ac6">更多...</a><br /></td></tr>
+<tr class="separator:add375f2ed722549afd00b7dae9874ac6 inherit pub_methods_classnav__core_1_1_recovery_behavior"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a74a92df840d2e5fa5cadd27250fcd7ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a74a92df840d2e5fa5cadd27250fcd7ca">local_costmap_</a></td></tr>
+<tr class="separator:a74a92df840d2e5fa5cadd27250fcd7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c717275985636f3154ee08bc726e45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a90c717275985636f3154ee08bc726e45">initialized_</a></td></tr>
+<tr class="separator:a90c717275985636f3154ee08bc726e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b541b963d3409168b6c428445b3ff6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#aa1b541b963d3409168b6c428445b3ff6">sim_granularity_</a></td></tr>
+<tr class="separator:aa1b541b963d3409168b6c428445b3ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ed5b08934db5665f7e5a5ae7435f95"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a89ed5b08934db5665f7e5a5ae7435f95">min_rotational_vel_</a></td></tr>
+<tr class="separator:a89ed5b08934db5665f7e5a5ae7435f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475480288dc80dd1ddc83cea95927782"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a475480288dc80dd1ddc83cea95927782">max_rotational_vel_</a></td></tr>
+<tr class="separator:a475480288dc80dd1ddc83cea95927782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a0bfe2d336bc45afe710d4a906d8d5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a83a0bfe2d336bc45afe710d4a906d8d5">acc_lim_th_</a></td></tr>
+<tr class="separator:a83a0bfe2d336bc45afe710d4a906d8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ee929ac22fcd7b304db75787c00645"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a31ee929ac22fcd7b304db75787c00645">tolerance_</a></td></tr>
+<tr class="separator:a31ee929ac22fcd7b304db75787c00645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3734f38f8aebbacd7b50b0293d00b22"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#ab3734f38f8aebbacd7b50b0293d00b22">frequency_</a></td></tr>
+<tr class="separator:ab3734f38f8aebbacd7b50b0293d00b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f4f958977686f37a135f1e05d6bdda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_costmap_model.html">base_local_planner::CostmapModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a14f4f958977686f37a135f1e05d6bdda">world_model_</a></td></tr>
+<tr class="separator:a14f4f958977686f37a135f1e05d6bdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classnav__core_1_1_recovery_behavior"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classnav__core_1_1_recovery_behavior')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a></td></tr>
+<tr class="memitem:a7518e621154c10ad9cc5a060af4fa81e inherit pro_methods_classnav__core_1_1_recovery_behavior"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#a7518e621154c10ad9cc5a060af4fa81e">RecoveryBehavior</a> ()</td></tr>
+<tr class="separator:a7518e621154c10ad9cc5a060af4fa81e inherit pro_methods_classnav__core_1_1_recovery_behavior"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a783abdd0af0c982eeaac51f8032005c7" name="a783abdd0af0c982eeaac51f8032005c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783abdd0af0c982eeaac51f8032005c7">&#9670;&nbsp;</a></span>RotateRecovery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rotate_recovery::RotateRecovery::RotateRecovery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor, make sure to call initialize in addition to actually initialize the object </p>
+
+</div>
+</div>
+<a id="a71067cd6e9b261a37b6cd52ac33e41b4" name="a71067cd6e9b261a37b6cd52ac33e41b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71067cd6e9b261a37b6cd52ac33e41b4">&#9670;&nbsp;</a></span>~RotateRecovery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rotate_recovery::RotateRecovery::~RotateRecovery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>析构函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a609f496f7a9f916f526a40a517c69204" name="a609f496f7a9f916f526a40a517c69204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609f496f7a9f916f526a40a517c69204">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rotate_recovery::RotateRecovery::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>local_costmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>恢复行为的初始化函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Namespace used in initialization </td></tr>
+    <tr><td class="paramname">tf</td><td>(unused) </td></tr>
+    <tr><td class="paramname">global_costmap</td><td>(unused) </td></tr>
+    <tr><td class="paramname">local_costmap</td><td>指向局部代价地图的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_recovery_behavior.html#ab35332f465b3d2509c9e73d4d95c7b5d">nav_core::RecoveryBehavior</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204_cgraph.png" border="0" usemap="#aclassrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204_cgraph" alt=""/></div>
+<map name="aclassrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204_cgraph" id="aclassrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204_cgraph">
+<area shape="rect" title="恢复行为的初始化函数" alt="" coords="5,39,219,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="267,5,464,47"/>
+<area shape="rect" href="namespacenav__core.html#ac1bc19a8eabb092a097d54d334066814" title="Load a parameter from one of two namespaces. Complain if it uses the old name." alt="" coords="269,71,462,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="512,5,711,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8a95adca66937ca4d01fb7a584b905f9" name="a8a95adca66937ca4d01fb7a584b905f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a95adca66937ca4d01fb7a584b905f9">&#9670;&nbsp;</a></span>runBehavior()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rotate_recovery::RotateRecovery::runBehavior </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动旋转恢复行为 </p>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_recovery_behavior.html#a6d8e1eec7a483e530e48b2593ea4fc03">nav_core::RecoveryBehavior</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9_cgraph.png" border="0" usemap="#aclassrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9_cgraph" alt=""/></div>
+<map name="aclassrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9_cgraph" id="aclassrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9_cgraph">
+<area shape="rect" title="启动旋转恢复行为" alt="" coords="5,100,219,142"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#a80d896d06af4f1c0bd5b61cd758743af" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="267,35,465,76"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a4688b58dc94afe64bdaed02dceab5afd" title="Return the current footprint of the robot as a vector of points." alt="" coords="267,100,465,142"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="267,166,465,207"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="961,39,1131,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#a8c65ee26aa8032afb635c3cb544e57cf" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="513,35,685,76"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="515,100,684,142"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1179,39,1348,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_line_iterator.html#a603d638882063ab678c2a75911591080" title=" " alt="" coords="752,35,895,76"/>
+<area shape="rect" href="classbase__local__planner_1_1_costmap_model.html#abfd021e995f9493ddeb64184a0bd3cf8" title="检查某个点在代价地图中的代价" alt="" coords="733,100,913,142"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a83a0bfe2d336bc45afe710d4a906d8d5" name="a83a0bfe2d336bc45afe710d4a906d8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a0bfe2d336bc45afe710d4a906d8d5">&#9670;&nbsp;</a></span>acc_lim_th_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rotate_recovery::RotateRecovery::acc_lim_th_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3734f38f8aebbacd7b50b0293d00b22" name="ab3734f38f8aebbacd7b50b0293d00b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3734f38f8aebbacd7b50b0293d00b22">&#9670;&nbsp;</a></span>frequency_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rotate_recovery::RotateRecovery::frequency_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90c717275985636f3154ee08bc726e45" name="a90c717275985636f3154ee08bc726e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c717275985636f3154ee08bc726e45">&#9670;&nbsp;</a></span>initialized_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rotate_recovery::RotateRecovery::initialized_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74a92df840d2e5fa5cadd27250fcd7ca" name="a74a92df840d2e5fa5cadd27250fcd7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a92df840d2e5fa5cadd27250fcd7ca">&#9670;&nbsp;</a></span>local_costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* rotate_recovery::RotateRecovery::local_costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a475480288dc80dd1ddc83cea95927782" name="a475480288dc80dd1ddc83cea95927782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475480288dc80dd1ddc83cea95927782">&#9670;&nbsp;</a></span>max_rotational_vel_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rotate_recovery::RotateRecovery::max_rotational_vel_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89ed5b08934db5665f7e5a5ae7435f95" name="a89ed5b08934db5665f7e5a5ae7435f95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ed5b08934db5665f7e5a5ae7435f95">&#9670;&nbsp;</a></span>min_rotational_vel_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rotate_recovery::RotateRecovery::min_rotational_vel_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1b541b963d3409168b6c428445b3ff6" name="aa1b541b963d3409168b6c428445b3ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b541b963d3409168b6c428445b3ff6">&#9670;&nbsp;</a></span>sim_granularity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rotate_recovery::RotateRecovery::sim_granularity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31ee929ac22fcd7b304db75787c00645" name="a31ee929ac22fcd7b304db75787c00645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ee929ac22fcd7b304db75787c00645">&#9670;&nbsp;</a></span>tolerance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rotate_recovery::RotateRecovery::tolerance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14f4f958977686f37a135f1e05d6bdda" name="a14f4f958977686f37a135f1e05d6bdda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f4f958977686f37a135f1e05d6bdda">&#9670;&nbsp;</a></span>world_model_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_costmap_model.html">base_local_planner::CostmapModel</a>* rotate_recovery::RotateRecovery::world_model_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>rotate_recovery/include/rotate_recovery/<a class="el" href="rotate__recovery_8h_source.html">rotate_recovery.h</a></li>
+<li>rotate_recovery/src/<a class="el" href="rotate__recovery_8cpp.html">rotate_recovery.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

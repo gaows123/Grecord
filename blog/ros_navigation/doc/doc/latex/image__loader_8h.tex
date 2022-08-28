@@ -1,0 +1,60 @@
+\hypertarget{image__loader_8h}{}\doxysection{map\+\_\+server/include/map\+\_\+server/image\+\_\+loader.h 文件参考}
+\label{image__loader_8h}\index{map\_server/include/map\_server/image\_loader.h@{map\_server/include/map\_server/image\_loader.h}}
+{\ttfamily \#include \char`\"{}nav\+\_\+msgs/\+Get\+Map.\+h\char`\"{}}\newline
+image\+\_\+loader.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{image__loader_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{image__loader_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{命名空间}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemap__server}{map\+\_\+server}}
+\end{DoxyCompactItemize}
+\doxysubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}} \{ \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}{TRINARY}}
+, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534a593be05a10070b4e7e0856e20590eaaf}{SCALE}}
+, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534abdeded99fe7d3f2773014a9a2cfb73d7}{RAW}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d}{map\+\_\+server\+::load\+Map\+From\+File}} (nav\+\_\+msgs\+::\+Get\+Map\+::\+Response $\ast$resp, const char $\ast$fname, double res, bool negate, double occ\+\_\+th, double free\+\_\+th, double $\ast$origin, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}} mode=\mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}{TRINARY}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{枚举类型说明}
+\mbox{\Hypertarget{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}\label{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}} 
+\index{image\_loader.h@{image\_loader.h}!MapMode@{MapMode}}
+\index{MapMode@{MapMode}!image\_loader.h@{image\_loader.h}}
+\doxysubsubsection{\texorpdfstring{MapMode}{MapMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{Map\+Mode}}}
+
+Map mode Default\+: TRINARY -\/ value \texorpdfstring{$>$}{>}= occ\+\_\+th -\/ Occupied (100) value \texorpdfstring{$<$}{<}= free\+\_\+th -\/ Free (0) otherwise -\/ Unknown SCALE -\/ alpha \texorpdfstring{$<$}{<} 1.\+0 -\/ Unknown value \texorpdfstring{$>$}{>}= occ\+\_\+th -\/ Occupied (100) value \texorpdfstring{$<$}{<}= free\+\_\+th -\/ Free (0) otherwise -\/ f( (free\+\_\+th, occ\+\_\+th) ) = (0, 100) (linearly map in between values to (0,100) RAW -\/ value = value \begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRINARY@{TRINARY}!image\_loader.h@{image\_loader.h}}\index{image\_loader.h@{image\_loader.h}!TRINARY@{TRINARY}}}\mbox{\Hypertarget{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}\label{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}} 
+TRINARY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SCALE@{SCALE}!image\_loader.h@{image\_loader.h}}\index{image\_loader.h@{image\_loader.h}!SCALE@{SCALE}}}\mbox{\Hypertarget{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534a593be05a10070b4e7e0856e20590eaaf}\label{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534a593be05a10070b4e7e0856e20590eaaf}} 
+SCALE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAW@{RAW}!image\_loader.h@{image\_loader.h}}\index{image\_loader.h@{image\_loader.h}!RAW@{RAW}}}\mbox{\Hypertarget{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534abdeded99fe7d3f2773014a9a2cfb73d7}\label{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534abdeded99fe7d3f2773014a9a2cfb73d7}} 
+RAW&\\
+\hline
+
+\end{DoxyEnumFields}

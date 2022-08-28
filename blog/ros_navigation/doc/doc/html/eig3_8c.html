@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/src/amcl/pf/eig3.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_c8302149f3d926a37c0623aef124ef9c.html">src</a></li><li class="navelem"><a class="el" href="dir_709eacdfadde2a606107dabe152f0121.html">amcl</a></li><li class="navelem"><a class="el" href="dir_386ac3c3c0d5b6a7e1797f46f7a893fc.html">pf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">eig3.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+eig3.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="eig3_8c__incl.png" border="0" usemap="#aamcl_2src_2amcl_2pf_2eig3_8c" alt=""/></div>
+<map name="aamcl_2src_2amcl_2pf_2eig3_8c" id="aamcl_2src_2amcl_2pf_2eig3_8c">
+<area shape="rect" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" title=" " alt="" coords="53,80,116,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:afa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eig3_8c.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(a,  b)&#160;&#160;&#160;((a)&gt;(b)?(a):(b))</td></tr>
+<tr class="separator:afa99ec4acc4ecb2dc3c2d05da15d0e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a15ea76429a93fe852559fae8cba4245b"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eig3_8c.html#a15ea76429a93fe852559fae8cba4245b">hypot2</a> (double x, double y)</td></tr>
+<tr class="separator:a15ea76429a93fe852559fae8cba4245b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6a616c3110d66d701c2b35aec4de178"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eig3_8c.html#ae6a616c3110d66d701c2b35aec4de178">tred2</a> (double V[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>][<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>], double d[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>], double e[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>])</td></tr>
+<tr class="separator:ae6a616c3110d66d701c2b35aec4de178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dda992a0b1287f065cdb0d8e31229a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eig3_8c.html#af0dda992a0b1287f065cdb0d8e31229a">tql2</a> (double V[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>][<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>], double d[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>], double e[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>])</td></tr>
+<tr class="separator:af0dda992a0b1287f065cdb0d8e31229a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1557b7e7c736dd14d99bf31f77df8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eig3_8c.html#a7f1557b7e7c736dd14d99bf31f77df8f">eigen_decomposition</a> (double A[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>][<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>], double V[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>][<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>], double d[<a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>])</td></tr>
+<tr class="separator:a7f1557b7e7c736dd14d99bf31f77df8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a76f11d9a0a47b94f72c2d0e77fb32240"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = 3</td></tr>
+<tr class="separator:a76f11d9a0a47b94f72c2d0e77fb32240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="afa99ec4acc4ecb2dc3c2d05da15d0e3f" name="afa99ec4acc4ecb2dc3c2d05da15d0e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa99ec4acc4ecb2dc3c2d05da15d0e3f">&#9670;&nbsp;</a></span>MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((a)&gt;(b)?(a):(b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a7f1557b7e7c736dd14d99bf31f77df8f" name="a7f1557b7e7c736dd14d99bf31f77df8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1557b7e7c736dd14d99bf31f77df8f">&#9670;&nbsp;</a></span>eigen_decomposition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eigen_decomposition </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>A</em>[n][n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>V</em>[n][n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>[n]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="eig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f_cgraph.png" border="0" usemap="#aeig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f_cgraph" alt=""/></div>
+<map name="aeig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f_cgraph" id="aeig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,149,57"/>
+<area shape="rect" href="eig3_8c.html#af0dda992a0b1287f065cdb0d8e31229a" title=" " alt="" coords="201,5,244,32"/>
+<area shape="rect" href="eig3_8c.html#ae6a616c3110d66d701c2b35aec4de178" title=" " alt="" coords="197,56,248,83"/>
+<area shape="rect" href="eig3_8c.html#a15ea76429a93fe852559fae8cba4245b" title=" " alt="" coords="296,5,357,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a15ea76429a93fe852559fae8cba4245b" name="a15ea76429a93fe852559fae8cba4245b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ea76429a93fe852559fae8cba4245b">&#9670;&nbsp;</a></span>hypot2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double hypot2 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="eig3_8c_a15ea76429a93fe852559fae8cba4245b_icgraph.png" border="0" usemap="#aeig3_8c_a15ea76429a93fe852559fae8cba4245b_icgraph" alt=""/></div>
+<map name="aeig3_8c_a15ea76429a93fe852559fae8cba4245b_icgraph" id="aeig3_8c_a15ea76429a93fe852559fae8cba4245b_icgraph">
+<area shape="rect" title=" " alt="" coords="288,5,349,32"/>
+<area shape="rect" href="eig3_8c.html#af0dda992a0b1287f065cdb0d8e31229a" title=" " alt="" coords="197,5,240,32"/>
+<area shape="rect" href="eig3_8c.html#a7f1557b7e7c736dd14d99bf31f77df8f" title=" " alt="" coords="5,5,149,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af0dda992a0b1287f065cdb0d8e31229a" name="af0dda992a0b1287f065cdb0d8e31229a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0dda992a0b1287f065cdb0d8e31229a">&#9670;&nbsp;</a></span>tql2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void tql2 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>V</em>[n][n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>[n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>e</em>[n]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="eig3_8c_af0dda992a0b1287f065cdb0d8e31229a_cgraph.png" border="0" usemap="#aeig3_8c_af0dda992a0b1287f065cdb0d8e31229a_cgraph" alt=""/></div>
+<map name="aeig3_8c_af0dda992a0b1287f065cdb0d8e31229a_cgraph" id="aeig3_8c_af0dda992a0b1287f065cdb0d8e31229a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,48,32"/>
+<area shape="rect" href="eig3_8c.html#a15ea76429a93fe852559fae8cba4245b" title=" " alt="" coords="96,5,157,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="eig3_8c_af0dda992a0b1287f065cdb0d8e31229a_icgraph.png" border="0" usemap="#aeig3_8c_af0dda992a0b1287f065cdb0d8e31229a_icgraph" alt=""/></div>
+<map name="aeig3_8c_af0dda992a0b1287f065cdb0d8e31229a_icgraph" id="aeig3_8c_af0dda992a0b1287f065cdb0d8e31229a_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,240,32"/>
+<area shape="rect" href="eig3_8c.html#a7f1557b7e7c736dd14d99bf31f77df8f" title=" " alt="" coords="5,5,149,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6a616c3110d66d701c2b35aec4de178" name="ae6a616c3110d66d701c2b35aec4de178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a616c3110d66d701c2b35aec4de178">&#9670;&nbsp;</a></span>tred2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void tred2 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>V</em>[n][n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>d</em>[n], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>e</em>[n]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="eig3_8c_ae6a616c3110d66d701c2b35aec4de178_icgraph.png" border="0" usemap="#aeig3_8c_ae6a616c3110d66d701c2b35aec4de178_icgraph" alt=""/></div>
+<map name="aeig3_8c_ae6a616c3110d66d701c2b35aec4de178_icgraph" id="aeig3_8c_ae6a616c3110d66d701c2b35aec4de178_icgraph">
+<area shape="rect" title=" " alt="" coords="197,5,248,32"/>
+<area shape="rect" href="eig3_8c.html#a7f1557b7e7c736dd14d99bf31f77df8f" title=" " alt="" coords="5,5,149,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a76f11d9a0a47b94f72c2d0e77fb32240" name="a76f11d9a0a47b94f72c2d0e77fb32240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f11d9a0a47b94f72c2d0e77fb32240">&#9670;&nbsp;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int n = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

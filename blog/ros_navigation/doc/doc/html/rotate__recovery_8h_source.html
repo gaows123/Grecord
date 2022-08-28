@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: rotate_recovery/include/rotate_recovery/rotate_recovery.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_24ef30fb54a4f295eedb0608063d586e.html">rotate_recovery</a></li><li class="navelem"><a class="el" href="dir_947e3f2fde0da1cf79361b401e96a72f.html">include</a></li><li class="navelem"><a class="el" href="dir_5ee973b06bb6c573e1659793993a58fb.html">rotate_recovery</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">rotate_recovery.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="rotate__recovery_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">*</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">*</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">*  Copyright (c) 2009, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">*</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">*  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">*  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">*</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">*   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">*     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">* Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*********************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef ROTATE_RECOVERY_ROTATE_RECOVERY_H</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define ROTATE_RECOVERY_ROTATE_RECOVERY_H</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;<a class="code" href="recovery__behavior_8h.html">nav_core/recovery_behavior.h</a>&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__2d__ros_8h.html">costmap_2d/costmap_2d_ros.h</a>&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;tf2_ros/buffer.h&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__model_8h.html">base_local_planner/costmap_model.h</a>&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacerotate__recovery.html">   45</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerotate__recovery.html">rotate_recovery</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classrotate__recovery_1_1_rotate_recovery.html">   51</a></span><span class="keyword">class </span><a class="code hl_class" href="classrotate__recovery_1_1_rotate_recovery.html">RotateRecovery</a> : <span class="keyword">public</span> <a class="code hl_class" href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_function" href="classrotate__recovery_1_1_rotate_recovery.html#a783abdd0af0c982eeaac51f8032005c7">RotateRecovery</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrotate__recovery_1_1_rotate_recovery.html#a609f496f7a9f916f526a40a517c69204">initialize</a>(std::string name, tf2_ros::Buffer*,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                  <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>*, <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* local_costmap);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9">runBehavior</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_function" href="classrotate__recovery_1_1_rotate_recovery.html#a71067cd6e9b261a37b6cd52ac33e41b4">~RotateRecovery</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classrotate__recovery_1_1_rotate_recovery.html#a74a92df840d2e5fa5cadd27250fcd7ca">   80</a></span>  <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#a74a92df840d2e5fa5cadd27250fcd7ca">local_costmap_</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classrotate__recovery_1_1_rotate_recovery.html#a90c717275985636f3154ee08bc726e45">   81</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#a90c717275985636f3154ee08bc726e45">initialized_</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classrotate__recovery_1_1_rotate_recovery.html#a83a0bfe2d336bc45afe710d4a906d8d5">   82</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#aa1b541b963d3409168b6c428445b3ff6">sim_granularity_</a>, <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#a89ed5b08934db5665f7e5a5ae7435f95">min_rotational_vel_</a>, <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#a475480288dc80dd1ddc83cea95927782">max_rotational_vel_</a>, <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#a83a0bfe2d336bc45afe710d4a906d8d5">acc_lim_th_</a>, <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#a31ee929ac22fcd7b304db75787c00645">tolerance_</a>, <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#ab3734f38f8aebbacd7b50b0293d00b22">frequency_</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classrotate__recovery_1_1_rotate_recovery.html#a14f4f958977686f37a135f1e05d6bdda">   83</a></span>  <a class="code hl_class" href="classbase__local__planner_1_1_costmap_model.html">base_local_planner::CostmapModel</a>* <a class="code hl_variable" href="classrotate__recovery_1_1_rotate_recovery.html#a14f4f958977686f37a135f1e05d6bdda">world_model_</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>};</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};  <span class="comment">// namespace rotate_recovery</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif  </span><span class="comment">// ROTATE_RECOVERY_ROTATE_RECOVERY_H</span></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_costmap_model_html"><div class="ttname"><a href="classbase__local__planner_1_1_costmap_model.html">base_local_planner::CostmapModel</a></div><div class="ttdoc">A class that implements the WorldModel interface to provide grid based collision checks for the traje...</div><div class="ttdef"><b>Definition:</b> costmap_model.h:50</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1_costmap2_d_r_o_s_html"><div class="ttname"><a href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclassnav__core_1_1_recovery_behavior_html"><div class="ttname"><a href="classnav__core_1_1_recovery_behavior.html">nav_core::RecoveryBehavior</a></div><div class="ttdoc">提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口.</div><div class="ttdef"><b>Definition:</b> recovery_behavior.h:48</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html">rotate_recovery::RotateRecovery</a></div><div class="ttdoc">恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:52</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a14f4f958977686f37a135f1e05d6bdda"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a14f4f958977686f37a135f1e05d6bdda">rotate_recovery::RotateRecovery::world_model_</a></div><div class="ttdeci">base_local_planner::CostmapModel * world_model_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:83</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a31ee929ac22fcd7b304db75787c00645"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a31ee929ac22fcd7b304db75787c00645">rotate_recovery::RotateRecovery::tolerance_</a></div><div class="ttdeci">double tolerance_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:82</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a475480288dc80dd1ddc83cea95927782"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a475480288dc80dd1ddc83cea95927782">rotate_recovery::RotateRecovery::max_rotational_vel_</a></div><div class="ttdeci">double max_rotational_vel_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:82</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a609f496f7a9f916f526a40a517c69204"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a609f496f7a9f916f526a40a517c69204">rotate_recovery::RotateRecovery::initialize</a></div><div class="ttdeci">void initialize(std::string name, tf2_ros::Buffer *, costmap_2d::Costmap2DROS *, costmap_2d::Costmap2DROS *local_costmap)</div><div class="ttdoc">恢复行为的初始化函数</div><div class="ttdef"><b>Definition:</b> rotate_recovery.cpp:58</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a71067cd6e9b261a37b6cd52ac33e41b4"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a71067cd6e9b261a37b6cd52ac33e41b4">rotate_recovery::RotateRecovery::~RotateRecovery</a></div><div class="ttdeci">~RotateRecovery()</div><div class="ttdoc">析构函数</div><div class="ttdef"><b>Definition:</b> rotate_recovery.cpp:88</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a74a92df840d2e5fa5cadd27250fcd7ca"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a74a92df840d2e5fa5cadd27250fcd7ca">rotate_recovery::RotateRecovery::local_costmap_</a></div><div class="ttdeci">costmap_2d::Costmap2DROS * local_costmap_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:80</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a783abdd0af0c982eeaac51f8032005c7"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a783abdd0af0c982eeaac51f8032005c7">rotate_recovery::RotateRecovery::RotateRecovery</a></div><div class="ttdeci">RotateRecovery()</div><div class="ttdoc">Constructor, make sure to call initialize in addition to actually initialize the object</div><div class="ttdef"><b>Definition:</b> rotate_recovery.cpp:54</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a83a0bfe2d336bc45afe710d4a906d8d5"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a83a0bfe2d336bc45afe710d4a906d8d5">rotate_recovery::RotateRecovery::acc_lim_th_</a></div><div class="ttdeci">double acc_lim_th_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:82</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a89ed5b08934db5665f7e5a5ae7435f95"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a89ed5b08934db5665f7e5a5ae7435f95">rotate_recovery::RotateRecovery::min_rotational_vel_</a></div><div class="ttdeci">double min_rotational_vel_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:82</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a8a95adca66937ca4d01fb7a584b905f9"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9">rotate_recovery::RotateRecovery::runBehavior</a></div><div class="ttdeci">void runBehavior()</div><div class="ttdoc">启动旋转恢复行为</div><div class="ttdef"><b>Definition:</b> rotate_recovery.cpp:93</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_a90c717275985636f3154ee08bc726e45"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#a90c717275985636f3154ee08bc726e45">rotate_recovery::RotateRecovery::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:81</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_aa1b541b963d3409168b6c428445b3ff6"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#aa1b541b963d3409168b6c428445b3ff6">rotate_recovery::RotateRecovery::sim_granularity_</a></div><div class="ttdeci">double sim_granularity_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:82</div></div>
+<div class="ttc" id="aclassrotate__recovery_1_1_rotate_recovery_html_ab3734f38f8aebbacd7b50b0293d00b22"><div class="ttname"><a href="classrotate__recovery_1_1_rotate_recovery.html#ab3734f38f8aebbacd7b50b0293d00b22">rotate_recovery::RotateRecovery::frequency_</a></div><div class="ttdeci">double frequency_</div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:82</div></div>
+<div class="ttc" id="acostmap__2d__ros_8h_html"><div class="ttname"><a href="costmap__2d__ros_8h.html">costmap_2d_ros.h</a></div></div>
+<div class="ttc" id="acostmap__model_8h_html"><div class="ttname"><a href="costmap__model_8h.html">costmap_model.h</a></div></div>
+<div class="ttc" id="anamespacerotate__recovery_html"><div class="ttname"><a href="namespacerotate__recovery.html">rotate_recovery</a></div><div class="ttdef"><b>Definition:</b> rotate_recovery.h:46</div></div>
+<div class="ttc" id="arecovery__behavior_8h_html"><div class="ttname"><a href="recovery__behavior_8h.html">recovery_behavior.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

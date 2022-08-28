@@ -1,0 +1,13 @@
+<map id="costmap_2d::Costmap2DPublisher::Costmap2DPublisher" name="costmap_2d::Costmap2DPublisher::Costmap2DPublisher">
+<area shape="rect" id="node1" title="Constructor for the Costmap2DPublisher" alt="" coords="5,71,228,112"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="817,5,987,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="817,71,987,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d_publisher.html#aee87acfd9d19093239ec59a88e3e4add" title="Publish the latest full costmap to the new subscriber." alt="" coords="276,165,499,207"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d_publisher.html#a2bb9ed054a418a59554668a9d1bc723a" title="Prepare grid_ message for publication." alt="" coords="547,201,769,243"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="817,136,987,177"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="817,201,987,243"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="817,267,987,308"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="817,332,987,373"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="817,397,987,439"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="817,463,987,504"/>
+</map>

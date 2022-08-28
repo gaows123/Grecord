@@ -1,0 +1,299 @@
+\hypertarget{classglobal__planner_1_1_dijkstra_expansion}{}\doxysection{global\+\_\+planner\+::Dijkstra\+Expansion类 参考}
+\label{classglobal__planner_1_1_dijkstra_expansion}\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+
+
+{\ttfamily \#include $<$dijkstra.\+h$>$}
+
+
+
+类 global\+\_\+planner\+::Dijkstra\+Expansion 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classglobal__planner_1_1_dijkstra_expansion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+global\+\_\+planner\+::Dijkstra\+Expansion 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classglobal__planner_1_1_dijkstra_expansion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a58e6885deccbdab45ecda172bb74c702}{Dijkstra\+Expansion}} (\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$p\+\_\+calc, int nx, int ny)
+\item 
+virtual \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_ab535b80f93f16281cdb9f4ff8cd301e0}{$\sim$\+Dijkstra\+Expansion}} ()
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b}{calculate\+Potentials}} (unsigned char $\ast$costs, double start\+\_\+x, double start\+\_\+y, double end\+\_\+x, double end\+\_\+y, int cycles, float $\ast$potential)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29}{set\+Size}} (int nx, int ny)
+\begin{DoxyCompactList}\small\item\em Sets or resets the size of the map \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a2ec5a9b73f4a8680adc8e406bc18b254}{set\+Neutral\+Cost}} (unsigned char neutral\+\_\+cost)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b}{set\+Precise\+Start}} (bool precise)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97}{update\+Cell}} (unsigned char $\ast$costs, float $\ast$potential, int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\begin{DoxyCompactList}\small\item\em Updates the cell at index n \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee}{get\+Cost}} (unsigned char $\ast$costs, int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_abc3bb648b490893ed0102df9d62b8c8e}{buffer1\+\_\+}}
+\item 
+int $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a5f79af0e0fd56427a7797d1a74b04d7c}{buffer2\+\_\+}}
+\item 
+int $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a0b3748fa770dba7b326ee3cd3f9570c2}{buffer3\+\_\+}}
+\item 
+int $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a7ac2b1b9911253ad9a78995352f30fa0}{current\+Buffer\+\_\+}}
+\item 
+int $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a8a0fc94d2007ad3c5418fe05f150be00}{next\+Buffer\+\_\+}}
+\item 
+int $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_ab35e9b00bffc3967973cedafee95ca5c}{over\+Buffer\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a2f20397d9d6950d0505effc87151fd99}{current\+End\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_abfb8b6cbadbcf990639f22f159804b5d}{next\+End\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a38469ef117b6f192a473884f5595e942}{over\+End\+\_\+}}
+\item 
+bool $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a89d014c133dd833a10f53fcdf8c0bb04}{pending\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a94dbd3ba373631604ee8cb021e39cd41}{precise\+\_\+}}
+\item 
+float \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_acc180530057dffbd53ba8c44d9ae1efa}{threshold\+\_\+}}
+\item 
+float \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_ac3256e3646ba17ea885abd80ac12b692}{priority\+Increment\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a58e6885deccbdab45ecda172bb74c702}\label{classglobal__planner_1_1_dijkstra_expansion_a58e6885deccbdab45ecda172bb74c702}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!DijkstraExpansion@{DijkstraExpansion}}
+\index{DijkstraExpansion@{DijkstraExpansion}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{DijkstraExpansion()}{DijkstraExpansion()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Dijkstra\+Expansion\+::\+Dijkstra\+Expansion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$}]{p\+\_\+calc,  }\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_ab535b80f93f16281cdb9f4ff8cd301e0}\label{classglobal__planner_1_1_dijkstra_expansion_ab535b80f93f16281cdb9f4ff8cd301e0}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!````~DijkstraExpansion@{$\sim$DijkstraExpansion}}
+\index{````~DijkstraExpansion@{$\sim$DijkstraExpansion}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{$\sim$DijkstraExpansion()}{~DijkstraExpansion()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Dijkstra\+Expansion\+::$\sim$\+Dijkstra\+Expansion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b}\label{classglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!calculatePotentials@{calculatePotentials}}
+\index{calculatePotentials@{calculatePotentials}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{calculatePotentials()}{calculatePotentials()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Dijkstra\+Expansion\+::calculate\+Potentials (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costs,  }\item[{double}]{start\+\_\+x,  }\item[{double}]{start\+\_\+y,  }\item[{double}]{end\+\_\+x,  }\item[{double}]{end\+\_\+y,  }\item[{int}]{cycles,  }\item[{float $\ast$}]{potential }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+实现了 \mbox{\hyperlink{classglobal__planner_1_1_expander_a7c352121a2ea1e1b650b219004c98786}{global\+\_\+planner\+::\+Expander}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee}\label{classglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!getCost@{getCost}}
+\index{getCost@{getCost}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily float global\+\_\+planner\+::\+Dijkstra\+Expansion\+::get\+Cost (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costs,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+updates the cell at index n 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a2ec5a9b73f4a8680adc8e406bc18b254}\label{classglobal__planner_1_1_dijkstra_expansion_a2ec5a9b73f4a8680adc8e406bc18b254}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!setNeutralCost@{setNeutralCost}}
+\index{setNeutralCost@{setNeutralCost}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{setNeutralCost()}{setNeutralCost()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Dijkstra\+Expansion\+::set\+Neutral\+Cost (\begin{DoxyParamCaption}\item[{unsigned char}]{neutral\+\_\+cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b}\label{classglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!setPreciseStart@{setPreciseStart}}
+\index{setPreciseStart@{setPreciseStart}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{setPreciseStart()}{setPreciseStart()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Dijkstra\+Expansion\+::set\+Precise\+Start (\begin{DoxyParamCaption}\item[{bool}]{precise }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29}\label{classglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!setSize@{setSize}}
+\index{setSize@{setSize}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Dijkstra\+Expansion\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets or resets the size of the map 
+
+
+\begin{DoxyParams}{参数}
+{\em nx} & The x size of the map \\
+\hline
+{\em ny} & The y size of the map sets or resets the size of the map \\
+\hline
+\end{DoxyParams}
+
+
+重载 \mbox{\hyperlink{classglobal__planner_1_1_expander_aeeaa60103de1ee71a1969e40a3735094}{global\+\_\+planner\+::\+Expander}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97}\label{classglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!updateCell@{updateCell}}
+\index{updateCell@{updateCell}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{updateCell()}{updateCell()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Dijkstra\+Expansion\+::update\+Cell (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costs,  }\item[{float $\ast$}]{potential,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates the cell at index n 
+
+
+\begin{DoxyParams}{参数}
+{\em costs} & The costmap \\
+\hline
+{\em potential} & The potential array in which we are calculating \\
+\hline
+{\em n} & The index to update \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_abc3bb648b490893ed0102df9d62b8c8e}\label{classglobal__planner_1_1_dijkstra_expansion_abc3bb648b490893ed0102df9d62b8c8e}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!buffer1\_@{buffer1\_}}
+\index{buffer1\_@{buffer1\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{buffer1\_}{buffer1\_}}
+{\footnotesize\ttfamily int$\ast$ global\+\_\+planner\+::\+Dijkstra\+Expansion\+::buffer1\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+block priority buffers \mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a5f79af0e0fd56427a7797d1a74b04d7c}\label{classglobal__planner_1_1_dijkstra_expansion_a5f79af0e0fd56427a7797d1a74b04d7c}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!buffer2\_@{buffer2\_}}
+\index{buffer2\_@{buffer2\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{buffer2\_}{buffer2\_}}
+{\footnotesize\ttfamily int $\ast$ global\+\_\+planner\+::\+Dijkstra\+Expansion\+::buffer2\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a0b3748fa770dba7b326ee3cd3f9570c2}\label{classglobal__planner_1_1_dijkstra_expansion_a0b3748fa770dba7b326ee3cd3f9570c2}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!buffer3\_@{buffer3\_}}
+\index{buffer3\_@{buffer3\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{buffer3\_}{buffer3\_}}
+{\footnotesize\ttfamily int $\ast$ global\+\_\+planner\+::\+Dijkstra\+Expansion\+::buffer3\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+storage buffers for priority blocks \mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a7ac2b1b9911253ad9a78995352f30fa0}\label{classglobal__planner_1_1_dijkstra_expansion_a7ac2b1b9911253ad9a78995352f30fa0}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!currentBuffer\_@{currentBuffer\_}}
+\index{currentBuffer\_@{currentBuffer\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{currentBuffer\_}{currentBuffer\_}}
+{\footnotesize\ttfamily int$\ast$ global\+\_\+planner\+::\+Dijkstra\+Expansion\+::current\+Buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a2f20397d9d6950d0505effc87151fd99}\label{classglobal__planner_1_1_dijkstra_expansion_a2f20397d9d6950d0505effc87151fd99}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!currentEnd\_@{currentEnd\_}}
+\index{currentEnd\_@{currentEnd\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{currentEnd\_}{currentEnd\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Dijkstra\+Expansion\+::current\+End\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a8a0fc94d2007ad3c5418fe05f150be00}\label{classglobal__planner_1_1_dijkstra_expansion_a8a0fc94d2007ad3c5418fe05f150be00}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!nextBuffer\_@{nextBuffer\_}}
+\index{nextBuffer\_@{nextBuffer\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{nextBuffer\_}{nextBuffer\_}}
+{\footnotesize\ttfamily int $\ast$ global\+\_\+planner\+::\+Dijkstra\+Expansion\+::next\+Buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_abfb8b6cbadbcf990639f22f159804b5d}\label{classglobal__planner_1_1_dijkstra_expansion_abfb8b6cbadbcf990639f22f159804b5d}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!nextEnd\_@{nextEnd\_}}
+\index{nextEnd\_@{nextEnd\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{nextEnd\_}{nextEnd\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Dijkstra\+Expansion\+::next\+End\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_ab35e9b00bffc3967973cedafee95ca5c}\label{classglobal__planner_1_1_dijkstra_expansion_ab35e9b00bffc3967973cedafee95ca5c}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!overBuffer\_@{overBuffer\_}}
+\index{overBuffer\_@{overBuffer\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{overBuffer\_}{overBuffer\_}}
+{\footnotesize\ttfamily int $\ast$ global\+\_\+planner\+::\+Dijkstra\+Expansion\+::over\+Buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+priority buffer block ptrs \mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a38469ef117b6f192a473884f5595e942}\label{classglobal__planner_1_1_dijkstra_expansion_a38469ef117b6f192a473884f5595e942}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!overEnd\_@{overEnd\_}}
+\index{overEnd\_@{overEnd\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{overEnd\_}{overEnd\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Dijkstra\+Expansion\+::over\+End\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+end points of arrays \mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a89d014c133dd833a10f53fcdf8c0bb04}\label{classglobal__planner_1_1_dijkstra_expansion_a89d014c133dd833a10f53fcdf8c0bb04}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!pending\_@{pending\_}}
+\index{pending\_@{pending\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{pending\_}{pending\_}}
+{\footnotesize\ttfamily bool$\ast$ global\+\_\+planner\+::\+Dijkstra\+Expansion\+::pending\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+pending\+\_\+ cells during propagation \mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_a94dbd3ba373631604ee8cb021e39cd41}\label{classglobal__planner_1_1_dijkstra_expansion_a94dbd3ba373631604ee8cb021e39cd41}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!precise\_@{precise\_}}
+\index{precise\_@{precise\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{precise\_}{precise\_}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Dijkstra\+Expansion\+::precise\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_ac3256e3646ba17ea885abd80ac12b692}\label{classglobal__planner_1_1_dijkstra_expansion_ac3256e3646ba17ea885abd80ac12b692}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!priorityIncrement\_@{priorityIncrement\_}}
+\index{priorityIncrement\_@{priorityIncrement\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{priorityIncrement\_}{priorityIncrement\_}}
+{\footnotesize\ttfamily float global\+\_\+planner\+::\+Dijkstra\+Expansion\+::priority\+Increment\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+priority threshold increment \mbox{\Hypertarget{classglobal__planner_1_1_dijkstra_expansion_acc180530057dffbd53ba8c44d9ae1efa}\label{classglobal__planner_1_1_dijkstra_expansion_acc180530057dffbd53ba8c44d9ae1efa}} 
+\index{global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}!threshold\_@{threshold\_}}
+\index{threshold\_@{threshold\_}!global\_planner::DijkstraExpansion@{global\_planner::DijkstraExpansion}}
+\doxysubsubsection{\texorpdfstring{threshold\_}{threshold\_}}
+{\footnotesize\ttfamily float global\+\_\+planner\+::\+Dijkstra\+Expansion\+::threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+block priority thresholds current threshold 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+global\+\_\+planner/include/global\+\_\+planner/\mbox{\hyperlink{dijkstra_8h}{dijkstra.\+h}}\item 
+global\+\_\+planner/src/\mbox{\hyperlink{dijkstra_8cpp}{dijkstra.\+cpp}}\end{DoxyCompactItemize}

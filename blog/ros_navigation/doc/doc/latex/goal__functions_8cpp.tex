@@ -1,0 +1,52 @@
+\hypertarget{goal__functions_8cpp}{}\doxysection{base\+\_\+local\+\_\+planner/src/goal\+\_\+functions.cpp 文件参考}
+\label{goal__functions_8cpp}\index{base\_local\_planner/src/goal\_functions.cpp@{base\_local\_planner/src/goal\_functions.cpp}}
+{\ttfamily \#include $<$base\+\_\+local\+\_\+planner/goal\+\_\+functions.\+h$>$}\newline
+{\ttfamily \#include $<$tf2/\+Linear\+Math/\+Matrix3x3.\+h$>$}\newline
+{\ttfamily \#include $<$tf2/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tf2\+\_\+geometry\+\_\+msgs/tf2\+\_\+geometry\+\_\+msgs.\+h$>$}\newline
+goal\+\_\+functions.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{goal__functions_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{命名空间}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacebase__local__planner}{base\+\_\+local\+\_\+planner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{goal__functions_8cpp_a142197ffeec98ba1e7b07b55cf759e6d}{GOAL\+\_\+\+ATTRIBUTE\+\_\+\+UNUSED}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+ ((unused))
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespacebase__local__planner_ac7ecc277a40eb4e997a94149fbec1fbe}{base\+\_\+local\+\_\+planner\+::get\+Goal\+Position\+Distance}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, double goal\+\_\+x, double goal\+\_\+y)
+\begin{DoxyCompactList}\small\item\em 返回距离的平方来检测是否到达目标点 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacebase__local__planner_ac3058c2cea31b23c378465a5e9374219}{base\+\_\+local\+\_\+planner\+::get\+Goal\+Orientation\+Angle\+Difference}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, double goal\+\_\+th)
+\begin{DoxyCompactList}\small\item\em return angle difference to goal to check if the goal orientation has been achieved \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacebase__local__planner_ae89b923286d9fd62be7807372dc50834}{base\+\_\+local\+\_\+planner\+::publish\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path, const ros\+::\+Publisher \&pub)
+\begin{DoxyCompactList}\small\item\em Publish a plan for visualization purposes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacebase__local__planner_ac8ecc12b4595fc60fdbe4b936ce1a274}{base\+\_\+local\+\_\+planner\+::prune\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Trim off parts of the global plan that are far enough behind the robot \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacebase__local__planner_a962893e66167d44e22bd284e83e4383e}{base\+\_\+local\+\_\+planner\+::transform\+Global\+Plan}} (const tf2\+\_\+ros\+::\+Buffer \&tf, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+robot\+\_\+pose, const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap, const std\+::string \&global\+\_\+frame, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&transformed\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Transforms the global plan of the robot from the planner frame to the frame of the costmap, selects only the (first) part of the plan that is within the costmap area. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacebase__local__planner_a550c4981442b28ca179446972791839b}{base\+\_\+local\+\_\+planner\+::get\+Goal\+Pose}} (const tf2\+\_\+ros\+::\+Buffer \&tf, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan, const std\+::string \&global\+\_\+frame, geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal\+\_\+pose)
+\begin{DoxyCompactList}\small\item\em Returns last pose in plan \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacebase__local__planner_a86c3d7ade14ac60afeb361f1db0cf90c}{base\+\_\+local\+\_\+planner\+::is\+Goal\+Reached}} (const tf2\+\_\+ros\+::\+Buffer \&tf, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan, const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap \mbox{\hyperlink{goal__functions_8cpp_a142197ffeec98ba1e7b07b55cf759e6d}{GOAL\+\_\+\+ATTRIBUTE\+\_\+\+UNUSED}}, const std\+::string \&global\+\_\+frame, geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const nav\+\_\+msgs\+::\+Odometry \&base\+\_\+odom, double rot\+\_\+stopped\+\_\+vel, double trans\+\_\+stopped\+\_\+vel, double xy\+\_\+goal\+\_\+tolerance, double yaw\+\_\+goal\+\_\+tolerance)
+\item 
+bool \mbox{\hyperlink{namespacebase__local__planner_a80ea2934aded9d99c3e082dd934ae89c}{base\+\_\+local\+\_\+planner\+::stopped}} (const nav\+\_\+msgs\+::\+Odometry \&base\+\_\+odom, const double \&rot\+\_\+stopped\+\_\+velocity, const double \&trans\+\_\+stopped\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Check whether the robot is stopped or not \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{goal__functions_8cpp_a142197ffeec98ba1e7b07b55cf759e6d}\label{goal__functions_8cpp_a142197ffeec98ba1e7b07b55cf759e6d}} 
+\index{goal\_functions.cpp@{goal\_functions.cpp}!GOAL\_ATTRIBUTE\_UNUSED@{GOAL\_ATTRIBUTE\_UNUSED}}
+\index{GOAL\_ATTRIBUTE\_UNUSED@{GOAL\_ATTRIBUTE\_UNUSED}!goal\_functions.cpp@{goal\_functions.cpp}}
+\doxysubsubsection{\texorpdfstring{GOAL\_ATTRIBUTE\_UNUSED}{GOAL\_ATTRIBUTE\_UNUSED}}
+{\footnotesize\ttfamily \#define GOAL\+\_\+\+ATTRIBUTE\+\_\+\+UNUSED~\+\_\+\+\_\+attribute\+\_\+\+\_\+ ((unused))}
+

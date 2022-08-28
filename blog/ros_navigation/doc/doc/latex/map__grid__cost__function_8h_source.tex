@@ -1,0 +1,105 @@
+\hypertarget{map__grid__cost__function_8h_source}{}\doxysection{map\+\_\+grid\+\_\+cost\+\_\+function.\+h}
+\label{map__grid__cost__function_8h_source}\index{base\_local\_planner/include/base\_local\_planner/map\_grid\_cost\_function.h@{base\_local\_planner/include/base\_local\_planner/map\_grid\_cost\_function.h}}
+\mbox{\hyperlink{map__grid__cost__function_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: TKruse}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef MAP\_GRID\_COST\_FUNCTION\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define MAP\_GRID\_COST\_FUNCTION\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__cost__function_8h}{base\_local\_planner/trajectory\_cost\_function.h}}>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{map__grid_8h}{base\_local\_planner/map\_grid.h}}>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53 \textcolor{keyword}{enum} \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824c}{CostAggregationType}} \{ \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824ca10a1a85cd52631b78010d22d9e0876c6}{Last}}, \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824ca84db60edcca5d364af84d7fab6d8e404}{Sum}}, \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824ca30dbe37fb900f8746f1c03a5a4ba12b2}{Product}}\};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{73 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{MapGridCostFunction}}: \textcolor{keyword}{public} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function}{base\_local\_planner::TrajectoryCostFunction}} \{}
+\DoxyCodeLine{74 \textcolor{keyword}{public}:}
+\DoxyCodeLine{75   \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a37e0fd0048db78bb703946b56daafe25}{MapGridCostFunction}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap,}
+\DoxyCodeLine{76       \textcolor{keywordtype}{double} xshift = 0.0,}
+\DoxyCodeLine{77       \textcolor{keywordtype}{double} yshift = 0.0,}
+\DoxyCodeLine{78       \textcolor{keywordtype}{bool} is\_local\_goal\_function = \textcolor{keyword}{false},}
+\DoxyCodeLine{79       \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824c}{CostAggregationType}} aggregationType = \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824ca10a1a85cd52631b78010d22d9e0876c6}{Last}});}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a3615fe05f64fd08e33133ebdf0059dfa}{\string~MapGridCostFunction}}() \{\}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277}{setTargetPoses}}(std::vector<geometry\_msgs::PoseStamped> target\_poses);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a}{setXShift}}(\textcolor{keywordtype}{double} xshift) \{\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_af72819f98ac6695d4ea025f0566bf1b5}{xshift\_}} = xshift;\}}
+\DoxyCodeLine{89   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a08fbe47f2c31ea241b86d5e61b47428a}{setYShift}}(\textcolor{keywordtype}{double} yshift) \{\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a3153c7d93524431e69f4fc5d72a6b4e6}{yshift\_}} = yshift;\}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{94   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86}{setStopOnFailure}}(\textcolor{keywordtype}{bool} stop\_on\_failure) \{\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a2d1f1bed6814ca5557eb2a9e04c2c670}{stop\_on\_failure\_}} = stop\_on\_failure;\}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{99   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc}{prepare}}();}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476}{scoreTrajectory}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj);}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167}{obstacleCosts}}() \{}
+\DoxyCodeLine{107     \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a01f719e06199db21bc4aec99efe7ab2f}{map\_}}.\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe}{obstacleCosts}}();}
+\DoxyCodeLine{108   \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{114   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892}{unreachableCellCosts}}() \{}
+\DoxyCodeLine{115     \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a01f719e06199db21bc4aec99efe7ab2f}{map\_}}.\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420}{unreachableCellCosts}}();}
+\DoxyCodeLine{116   \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118   \textcolor{comment}{// used for easier debugging}}
+\DoxyCodeLine{119   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33}{getCellCosts}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cy);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{keyword}{private}:}
+\DoxyCodeLine{122   std::vector<geometry\_msgs::PoseStamped> \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a22d5b7bb371a8b5593830029db9151a9}{target\_poses\_}};}
+\DoxyCodeLine{123   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a852583e42ce771a6741116986a063a64}{costmap\_}};}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125   \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{base\_local\_planner::MapGrid}} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a01f719e06199db21bc4aec99efe7ab2f}{map\_}};}
+\DoxyCodeLine{126   \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824c}{CostAggregationType}} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_abc402c1c11dafcb69ec5d82480b89296}{aggregationType\_}};}
+\DoxyCodeLine{128   \textcolor{comment}{// ooints of robots than center, like fron or back}}
+\DoxyCodeLine{129   \textcolor{comment}{// this can help with alignment or keeping specific}}
+\DoxyCodeLine{130   \textcolor{comment}{// wheels on tracks both default to 0}}
+\DoxyCodeLine{131   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_af72819f98ac6695d4ea025f0566bf1b5}{xshift\_}};}
+\DoxyCodeLine{132   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a3153c7d93524431e69f4fc5d72a6b4e6}{yshift\_}};}
+\DoxyCodeLine{133   \textcolor{comment}{// if true, we look for a suitable local goal on path, else we use the full path for costs}}
+\DoxyCodeLine{134   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a99f2abca88bdc9f339a76704f25d6654}{is\_local\_goal\_function\_}};}
+\DoxyCodeLine{135   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a2d1f1bed6814ca5557eb2a9e04c2c670}{stop\_on\_failure\_}};}
+\DoxyCodeLine{136 \};}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 \} \textcolor{comment}{/* namespace base\_local\_planner */}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* MAP\_GRID\_COST\_FUNCTION\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,13 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,253,61,279"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="109,5,279,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="109,71,279,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="109,136,279,177"/>
+<area shape="rect" id="node6" href="$module__tests_8cpp.html#acc165508c976d24c0ae0232c85978557" title=" " alt="" coords="139,202,249,229"/>
+<area shape="rect" id="node7" href="$module__tests_8cpp.html#ae02379f018d4ff35a260c0fb1204b865" title=" " alt="" coords="143,253,245,279"/>
+<area shape="rect" id="node8" href="$module__tests_8cpp.html#a80945e4c9ec06fccdb5342cacfea6e3d" title=" " alt="" coords="161,303,227,330"/>
+<area shape="rect" id="node9" href="$module__tests_8cpp.html#a214cb9adfc50b4abd0e2132640f639dd" title=" " alt="" coords="141,354,247,381"/>
+<area shape="rect" id="node10" href="$module__tests_8cpp.html#adf4461009ef21f644777aadc0f469132" title=" " alt="" coords="132,405,256,431"/>
+<area shape="rect" id="node11" href="$module__tests_8cpp.html#a25cb91905492fcb0c5020df1664a0275" title=" " alt="" coords="143,455,245,482"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="327,5,496,47"/>
+</map>

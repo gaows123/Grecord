@@ -1,0 +1,193 @@
+\hypertarget{inflation__tests_8cpp}{}\doxysection{costmap\+\_\+2d/test/inflation\+\_\+tests.cpp 文件参考}
+\label{inflation__tests_8cpp}\index{costmap\_2d/test/inflation\_tests.cpp@{costmap\_2d/test/inflation\_tests.cpp}}
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/layered\+\_\+costmap.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/obstacle\+\_\+layer.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/inflation\+\_\+layer.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/observation\+\_\+buffer.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/testing\+\_\+helper.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+inflation\+\_\+tests.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Point $>$ \mbox{\hyperlink{inflation__tests_8cpp_aeda5180359541007551a26f092e871b5}{set\+Radii}} (\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} \&layers, double length, double width, double inflation\+\_\+radius)
+\item 
+void \mbox{\hyperlink{inflation__tests_8cpp_ace7be2b076b1bec8a1091d5f74632e28}{validate\+Point\+Inflation}} (unsigned int mx, unsigned int my, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} $\ast$costmap, \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{Inflation\+Layer}} $\ast$ilayer, double inflation\+\_\+radius)
+\item 
+\mbox{\hyperlink{inflation__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f}{TEST}} (costmap, test\+Adjacent\+To\+Obstacle\+Can\+Still\+Move)
+\item 
+\mbox{\hyperlink{inflation__tests_8cpp_a7944d546ff12543615d752c882c1ae12}{TEST}} (costmap, test\+Inflation\+Should\+Not\+Create\+Unknowns)
+\item 
+\mbox{\hyperlink{inflation__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276}{TEST}} (costmap, test\+Cost\+Function\+Correctness)
+\item 
+\mbox{\hyperlink{inflation__tests_8cpp_a0b6bd7f54e38ab35deeba4833d904c61}{TEST}} (costmap, test\+Inflation\+Order\+Correctness)
+\item 
+\mbox{\hyperlink{inflation__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1}{TEST}} (costmap, test\+Inflation)
+\item 
+\mbox{\hyperlink{inflation__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179}{TEST}} (costmap, test\+Inflation2)
+\item 
+\mbox{\hyperlink{inflation__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838}{TEST}} (costmap, test\+Inflation3)
+\item 
+int \mbox{\hyperlink{inflation__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{inflation__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{inflation__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!main@{main}}
+\index{main@{main}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inflation__tests_8cpp_aeda5180359541007551a26f092e871b5}\label{inflation__tests_8cpp_aeda5180359541007551a26f092e871b5}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!setRadii@{setRadii}}
+\index{setRadii@{setRadii}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{setRadii()}{setRadii()}}
+{\footnotesize\ttfamily std\+::vector$<$ Point $>$ set\+Radii (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} \&}]{layers,  }\item[{double}]{length,  }\item[{double}]{width,  }\item[{double}]{inflation\+\_\+radius }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_aeda5180359541007551a26f092e871b5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{inflation__tests_8cpp_aeda5180359541007551a26f092e871b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f}\label{inflation__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Adjacent\+To\+Obstacle\+Can\+Still\+Move}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276}\label{inflation__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Cost\+Function\+Correctness}]{ }\end{DoxyParamCaption})}
+
+Test for the cost function correctness with a larger range and different values 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1}\label{inflation__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation}]{ }\end{DoxyParamCaption})}
+
+Test inflation for both static and dynamic obstacles 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179}\label{inflation__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation2}]{ }\end{DoxyParamCaption})}
+
+Test specific inflation scenario to ensure we do not set inflated obstacles to be raw obstacles. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838}\label{inflation__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation3}]{ }\end{DoxyParamCaption})}
+
+Test inflation behavior, starting with an empty map 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_a0b6bd7f54e38ab35deeba4833d904c61}\label{inflation__tests_8cpp_a0b6bd7f54e38ab35deeba4833d904c61}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation\+Order\+Correctness}]{ }\end{DoxyParamCaption})}
+
+Test that there is no regression and that costs do not get underestimated with the distance-\/as-\/key map used to replace the previously used priority queue. This is a more thorough test of the cost function being correctly applied. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_a0b6bd7f54e38ab35deeba4833d904c61_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_a7944d546ff12543615d752c882c1ae12}\label{inflation__tests_8cpp_a7944d546ff12543615d752c882c1ae12}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation\+Should\+Not\+Create\+Unknowns}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_a7944d546ff12543615d752c882c1ae12_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{inflation__tests_8cpp_ace7be2b076b1bec8a1091d5f74632e28}\label{inflation__tests_8cpp_ace7be2b076b1bec8a1091d5f74632e28}} 
+\index{inflation\_tests.cpp@{inflation\_tests.cpp}!validatePointInflation@{validatePointInflation}}
+\index{validatePointInflation@{validatePointInflation}!inflation\_tests.cpp@{inflation\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{validatePointInflation()}{validatePointInflation()}}
+{\footnotesize\ttfamily void validate\+Point\+Inflation (\begin{DoxyParamCaption}\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} $\ast$}]{costmap,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{Inflation\+Layer}} $\ast$}]{ilayer,  }\item[{double}]{inflation\+\_\+radius }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inflation__tests_8cpp_ace7be2b076b1bec8a1091d5f74632e28_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{inflation__tests_8cpp_ace7be2b076b1bec8a1091d5f74632e28_icgraph}
+\end{center}
+\end{figure}

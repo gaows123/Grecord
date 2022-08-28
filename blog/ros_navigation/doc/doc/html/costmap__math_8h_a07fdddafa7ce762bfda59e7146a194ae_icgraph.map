@@ -1,0 +1,9 @@
+<map id="sign0" name="sign0">
+<area shape="rect" id="node1" title="Same as sign(x) but returns 0 if x is 0." alt="" coords="1249,59,1303,86"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#a16dd6a7064ce2ed191b40c7009512489" title="Adds the specified amount of padding to the footprint (in place)" alt="" coords="1028,59,1201,86"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a220a578102cf3592a744ad5264bf09ed" title="Set the footprint of the robot to be the given set of points, padded by footprint_padding." alt="" coords="783,52,980,93"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,33,203,74"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#ae68ab88626d6d5f7a8b3f9dd44d60ff2" title="Set the footprint from the new_config object." alt="" coords="537,22,735,64"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="271,33,469,74"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a05c662c0ad169c124480ed3d9ee500e8" title="Set the footprint of the robot to be the given polygon, padded by footprint_padding." alt="" coords="251,120,489,161"/>
+</map>

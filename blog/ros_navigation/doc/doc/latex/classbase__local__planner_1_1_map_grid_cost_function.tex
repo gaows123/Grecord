@@ -1,0 +1,316 @@
+\hypertarget{classbase__local__planner_1_1_map_grid_cost_function}{}\doxysection{base\+\_\+local\+\_\+planner\+::Map\+Grid\+Cost\+Function类 参考}
+\label{classbase__local__planner_1_1_map_grid_cost_function}\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+
+
+{\ttfamily \#include $<$map\+\_\+grid\+\_\+cost\+\_\+function.\+h$>$}
+
+
+
+类 base\+\_\+local\+\_\+planner\+::Map\+Grid\+Cost\+Function 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classbase__local__planner_1_1_map_grid_cost_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+base\+\_\+local\+\_\+planner\+::Map\+Grid\+Cost\+Function 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a37e0fd0048db78bb703946b56daafe25}{Map\+Grid\+Cost\+Function}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, double xshift=0.\+0, double yshift=0.\+0, bool is\+\_\+local\+\_\+goal\+\_\+function=false, \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824c}{Cost\+Aggregation\+Type}} aggregation\+Type=\mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824ca10a1a85cd52631b78010d22d9e0876c6}{Last}})
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a3615fe05f64fd08e33133ebdf0059dfa}{$\sim$\+Map\+Grid\+Cost\+Function}} ()
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277}{set\+Target\+Poses}} (std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ target\+\_\+poses)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a}{set\+XShift}} (double xshift)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a08fbe47f2c31ea241b86d5e61b47428a}{set\+YShift}} (double yshift)
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86}{set\+Stop\+On\+Failure}} (bool stop\+\_\+on\+\_\+failure)
+\begin{DoxyCompactList}\small\item\em If true, failures along the path cause the entire path to be rejected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc}{prepare}} ()
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476}{score\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167}{obstacle\+Costs}} ()
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892}{unreachable\+Cell\+Costs}} ()
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33}{get\+Cell\+Costs}} (unsigned int cx, unsigned int cy)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a22d5b7bb371a8b5593830029db9151a9}{target\+\_\+poses\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a852583e42ce771a6741116986a063a64}{costmap\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid}} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a01f719e06199db21bc4aec99efe7ab2f}{map\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824c}{Cost\+Aggregation\+Type}} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_abc402c1c11dafcb69ec5d82480b89296}{aggregation\+Type\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_af72819f98ac6695d4ea025f0566bf1b5}{xshift\+\_\+}}
+\begin{DoxyCompactList}\small\item\em xshift and yshift allow scoring for different \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a3153c7d93524431e69f4fc5d72a6b4e6}{yshift\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a99f2abca88bdc9f339a76704f25d6654}{is\+\_\+local\+\_\+goal\+\_\+function\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function_a2d1f1bed6814ca5557eb2a9e04c2c670}{stop\+\_\+on\+\_\+failure\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+This class provides cost based on a map\+\_\+grid of a small area of the world. The map\+\_\+grid covers a the costmap, the costmap containing the information about sensed obstacles. The map\+\_\+grid is used by setting certain cells to distance 0, and then propagating distances around them, filling up the area reachable around them.
+
+The approach using grid\+\_\+maps is used for computational efficiency, allowing to score hundreds of trajectories very quickly.
+
+This can be used to favor trajectories which stay on a given path, or which approach a given goal. 
+\begin{DoxyParams}{参数}
+{\em costmap\+\_\+ros} & Reference to object giving updates of obstacles around robot \\
+\hline
+{\em xshift} & where the scoring point is with respect to robot center pose \\
+\hline
+{\em yshift} & where the scoring point is with respect to robot center pose \\
+\hline
+{\em is\+\_\+local\+\_\+goal\+\_\+function,scores} & for local goal rather than whole path \\
+\hline
+{\em aggregation\+Type} & how to combine costs along trajectory \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a37e0fd0048db78bb703946b56daafe25}\label{classbase__local__planner_1_1_map_grid_cost_function_a37e0fd0048db78bb703946b56daafe25}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!MapGridCostFunction@{MapGridCostFunction}}
+\index{MapGridCostFunction@{MapGridCostFunction}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{MapGridCostFunction()}{MapGridCostFunction()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::\+Map\+Grid\+Cost\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{double}]{xshift = {\ttfamily 0.0},  }\item[{double}]{yshift = {\ttfamily 0.0},  }\item[{bool}]{is\+\_\+local\+\_\+goal\+\_\+function = {\ttfamily false},  }\item[{\mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824c}{Cost\+Aggregation\+Type}}}]{aggregation\+Type = {\ttfamily \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824ca10a1a85cd52631b78010d22d9e0876c6}{Last}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a3615fe05f64fd08e33133ebdf0059dfa}\label{classbase__local__planner_1_1_map_grid_cost_function_a3615fe05f64fd08e33133ebdf0059dfa}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!````~MapGridCostFunction@{$\sim$MapGridCostFunction}}
+\index{````~MapGridCostFunction@{$\sim$MapGridCostFunction}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{$\sim$MapGridCostFunction()}{~MapGridCostFunction()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::$\sim$\+Map\+Grid\+Cost\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33}\label{classbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!getCellCosts@{getCellCosts}}
+\index{getCellCosts@{getCellCosts}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{getCellCosts()}{getCellCosts()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::get\+Cell\+Costs (\begin{DoxyParamCaption}\item[{unsigned int}]{cx,  }\item[{unsigned int}]{cy }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167}\label{classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!obstacleCosts@{obstacleCosts}}
+\index{obstacleCosts@{obstacleCosts}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{obstacleCosts()}{obstacleCosts()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::obstacle\+Costs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return a value that indicates cell is in obstacle 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc}\label{classbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!prepare@{prepare}}
+\index{prepare@{prepare}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{prepare()}{prepare()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+propagate distances 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function_a351dddca226f210a09bd10c151e2975f}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Cost\+Function}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476}\label{classbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!scoreTrajectory@{scoreTrajectory}}
+\index{scoreTrajectory@{scoreTrajectory}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{scoreTrajectory()}{scoreTrajectory()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::score\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+返回一个局部轨迹的评分，也是纯虚函数 
+
+实现了 \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function_a6908a8071270b455fc25b48db76e2d3c}{base\+\_\+local\+\_\+planner\+::\+Trajectory\+Cost\+Function}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86}\label{classbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!setStopOnFailure@{setStopOnFailure}}
+\index{setStopOnFailure@{setStopOnFailure}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{setStopOnFailure()}{setStopOnFailure()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::set\+Stop\+On\+Failure (\begin{DoxyParamCaption}\item[{bool}]{stop\+\_\+on\+\_\+failure }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If true, failures along the path cause the entire path to be rejected. 
+
+Default is true. 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277}\label{classbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!setTargetPoses@{setTargetPoses}}
+\index{setTargetPoses@{setTargetPoses}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{setTargetPoses()}{setTargetPoses()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::set\+Target\+Poses (\begin{DoxyParamCaption}\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$}]{target\+\_\+poses }\end{DoxyParamCaption})}
+
+set line segments on the grid with distance 0, resets the grid 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a}\label{classbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!setXShift@{setXShift}}
+\index{setXShift@{setXShift}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{setXShift()}{setXShift()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::set\+XShift (\begin{DoxyParamCaption}\item[{double}]{xshift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a08fbe47f2c31ea241b86d5e61b47428a}\label{classbase__local__planner_1_1_map_grid_cost_function_a08fbe47f2c31ea241b86d5e61b47428a}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!setYShift@{setYShift}}
+\index{setYShift@{setYShift}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{setYShift()}{setYShift()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::set\+YShift (\begin{DoxyParamCaption}\item[{double}]{yshift }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892}\label{classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!unreachableCellCosts@{unreachableCellCosts}}
+\index{unreachableCellCosts@{unreachableCellCosts}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{unreachableCellCosts()}{unreachableCellCosts()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::unreachable\+Cell\+Costs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns a value indicating cell was not reached by wavefront propagation of set cells. (is behind walls, regarding the region covered by grid) 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_abc402c1c11dafcb69ec5d82480b89296}\label{classbase__local__planner_1_1_map_grid_cost_function_abc402c1c11dafcb69ec5d82480b89296}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!aggregationType\_@{aggregationType\_}}
+\index{aggregationType\_@{aggregationType\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{aggregationType\_}{aggregationType\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebase__local__planner_a5b9cbdd645f780317faf39a970c3824c}{Cost\+Aggregation\+Type}} base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::aggregation\+Type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a852583e42ce771a6741116986a063a64}\label{classbase__local__planner_1_1_map_grid_cost_function_a852583e42ce771a6741116986a063a64}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a99f2abca88bdc9f339a76704f25d6654}\label{classbase__local__planner_1_1_map_grid_cost_function_a99f2abca88bdc9f339a76704f25d6654}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!is\_local\_goal\_function\_@{is\_local\_goal\_function\_}}
+\index{is\_local\_goal\_function\_@{is\_local\_goal\_function\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{is\_local\_goal\_function\_}{is\_local\_goal\_function\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::is\+\_\+local\+\_\+goal\+\_\+function\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a01f719e06199db21bc4aec99efe7ab2f}\label{classbase__local__planner_1_1_map_grid_cost_function_a01f719e06199db21bc4aec99efe7ab2f}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!map\_@{map\_}}
+\index{map\_@{map\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{map\_}{map\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid}} base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a2d1f1bed6814ca5557eb2a9e04c2c670}\label{classbase__local__planner_1_1_map_grid_cost_function_a2d1f1bed6814ca5557eb2a9e04c2c670}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!stop\_on\_failure\_@{stop\_on\_failure\_}}
+\index{stop\_on\_failure\_@{stop\_on\_failure\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{stop\_on\_failure\_}{stop\_on\_failure\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::stop\+\_\+on\+\_\+failure\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a22d5b7bb371a8b5593830029db9151a9}\label{classbase__local__planner_1_1_map_grid_cost_function_a22d5b7bb371a8b5593830029db9151a9}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!target\_poses\_@{target\_poses\_}}
+\index{target\_poses\_@{target\_poses\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{target\_poses\_}{target\_poses\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::target\+\_\+poses\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_af72819f98ac6695d4ea025f0566bf1b5}\label{classbase__local__planner_1_1_map_grid_cost_function_af72819f98ac6695d4ea025f0566bf1b5}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!xshift\_@{xshift\_}}
+\index{xshift\_@{xshift\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{xshift\_}{xshift\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::xshift\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+xshift and yshift allow scoring for different 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_cost_function_a3153c7d93524431e69f4fc5d72a6b4e6}\label{classbase__local__planner_1_1_map_grid_cost_function_a3153c7d93524431e69f4fc5d72a6b4e6}} 
+\index{base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}!yshift\_@{yshift\_}}
+\index{yshift\_@{yshift\_}!base\_local\_planner::MapGridCostFunction@{base\_local\_planner::MapGridCostFunction}}
+\doxysubsubsection{\texorpdfstring{yshift\_}{yshift\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function\+::yshift\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{map__grid__cost__function_8h}{map\+\_\+grid\+\_\+cost\+\_\+function.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{map__grid__cost__function_8cpp}{map\+\_\+grid\+\_\+cost\+\_\+function.\+cpp}}\end{DoxyCompactItemize}

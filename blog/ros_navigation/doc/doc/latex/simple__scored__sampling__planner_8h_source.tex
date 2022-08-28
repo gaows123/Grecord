@@ -1,0 +1,81 @@
+\hypertarget{simple__scored__sampling__planner_8h_source}{}\doxysection{simple\+\_\+scored\+\_\+sampling\+\_\+planner.\+h}
+\label{simple__scored__sampling__planner_8h_source}\index{base\_local\_planner/include/base\_local\_planner/simple\_scored\_sampling\_planner.h@{base\_local\_planner/include/base\_local\_planner/simple\_scored\_sampling\_planner.h}}
+\mbox{\hyperlink{simple__scored__sampling__planner_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: TKruse}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef SIMPLE\_SCORED\_SAMPLING\_PLANNER\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define SIMPLE\_SCORED\_SAMPLING\_PLANNER\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory_8h}{base\_local\_planner/trajectory.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__cost__function_8h}{base\_local\_planner/trajectory\_cost\_function.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__sample__generator_8h}{base\_local\_planner/trajectory\_sample\_generator.h}}>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__search_8h}{base\_local\_planner/trajectory\_search.h}}>}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{55 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner}{SimpleScoredSamplingPlanner}} : \textcolor{keyword}{public} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_search}{base\_local\_planner::TrajectorySearch}} \{}
+\DoxyCodeLine{56 \textcolor{keyword}{public}:}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58   \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a4dffffbf7e5d4c1e4d5865918c1c1657}{\string~SimpleScoredSamplingPlanner}}() \{\}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60   \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ac8bab73a6a79cdd949422a8bed79f78d}{SimpleScoredSamplingPlanner}}() \{\}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{76   \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ac8bab73a6a79cdd949422a8bed79f78d}{SimpleScoredSamplingPlanner}}(std::vector<TrajectorySampleGenerator*> gen\_list, std::vector<TrajectoryCostFunction*>\& critics, \textcolor{keywordtype}{int} max\_samples = -\/1);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{83   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ac11a2d2fbf69d6ed55f720c5ebe1b541}{scoreTrajectory}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}}\& traj, \textcolor{keywordtype}{double} best\_traj\_cost);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{96   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ad1a365b0504879a2e57f1a9d713acdc4}{findBestTrajectory}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}}\& traj, std::vector<Trajectory>* all\_explored = 0);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{keyword}{private}:}
+\DoxyCodeLine{100   std::vector<TrajectorySampleGenerator*> \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a0e8aa59b1ee780643bf69a1a5c244f73}{gen\_list\_}};}
+\DoxyCodeLine{101   std::vector<TrajectoryCostFunction*> \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a4fb36e288fad8bb6a817faa12df4d35c}{critics\_}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103   \textcolor{keywordtype}{int} \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_a0ab97bd66287f1d2258ce5f7a70e83ea}{max\_samples\_}};}
+\DoxyCodeLine{104 \};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \} \textcolor{comment}{// namespace}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SIMPLE\_SCORED\_SAMPLING\_PLANNER\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

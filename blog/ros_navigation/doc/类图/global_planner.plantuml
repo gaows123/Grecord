@@ -1,0 +1,37 @@
+@startuml
+package "global planner" #YellowGreen{
+  class AStarExpansion {}
+    
+  class DijkstraExpansion {}
+    
+  class Expander {}
+    
+  class GlobalPlanner {}
+    
+  class GradientPath {}
+    
+  class GridPath {}
+    
+  class Index {}
+    
+  class OrientationFilter {}
+    
+  class PlannerWithCostmap {}
+    
+  class PotentialCalculator {}
+    
+  class QuadraticCalculator {}
+    
+  class Traceback {}
+
+}
+
+package "costmap_2d" #Pink{
+  class Costmap2D {}
+}
+Costmap2D o-- GlobalPlanner:聚合
+PotentialCalculator o-- GlobalPlanner:聚合
+Expander o-- GlobalPlanner:聚合
+Traceback o-- GlobalPlanner:聚合
+OrientationFilter o-- GlobalPlanner:聚合
+@enduml

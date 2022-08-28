@@ -1,0 +1,17 @@
+<map id="costmap_2d::VoxelLayer::raytraceFreespace" name="costmap_2d::VoxelLayer::raytraceFreespace">
+<area shape="rect" id="node1" title="根据单次的观测来清除自由空间" alt="" coords="5,224,172,265"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="228,5,397,47"/>
+<area shape="rect" id="node3" href="$classvoxel__grid_1_1_voxel_grid.html#a204172dfa4c1d101aab0cac064f24a6f" title=" " alt="" coords="237,71,388,112"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_voxel_layer.html#abd5944de6300c41e539f745c71dbf00d" title=" " alt="" coords="229,136,396,177"/>
+<area shape="rect" id="node10" href="$costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="277,202,348,229"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="228,253,397,295"/>
+<area shape="rect" id="node12" href="$classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="228,319,397,360"/>
+<area shape="rect" id="node13" href="$classcostmap__2d_1_1_obstacle_layer.html#aadace7301e7b08f358ea3e9e8a17f452" title=" " alt="" coords="220,384,405,425"/>
+<area shape="rect" id="node15" href="$classcostmap__2d_1_1_voxel_layer.html#afe388a3645ce14998d2ae2a98a166ad0" title=" " alt="" coords="229,449,396,491"/>
+<area shape="rect" id="node4" href="$classvoxel__grid_1_1_voxel_grid.html#af64ffc7bcf9f4c2ca4c8c7473f15d51e" title=" " alt="" coords="473,41,619,83"/>
+<area shape="rect" id="node5" href="$classvoxel__grid_1_1_voxel_grid.html#abde2d6af5b3bd1c027171c1553308cc2" title=" " alt="" coords="687,71,833,112"/>
+<area shape="rect" id="node6" href="$classvoxel__grid_1_1_voxel_grid.html#a6162764691b8e3966d31348e459486db" title=" " alt="" coords="897,12,1044,53"/>
+<area shape="rect" id="node7" href="$classvoxel__grid_1_1_voxel_grid.html#a4a7315df7b9fd6cf64b9055742fa693f" title=" " alt="" coords="881,78,1060,105"/>
+<area shape="rect" id="node8" href="$classvoxel__grid_1_1_voxel_grid.html#ad9c87a014630da9252f62cef62319cea" title=" " alt="" coords="897,129,1044,171"/>
+<area shape="rect" id="node14" href="$classcostmap__2d_1_1_costmap_layer.html#a7ae82ac5b75c5627ded6cda139849f6c" title=" " alt="" coords="453,384,639,425"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="base_local_planner::MapGridCostFunction::unreachableCellCosts" name="base_local_planner::MapGridCostFunction::unreachableCellCosts">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,161,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="209,5,388,61"/>
+</map>

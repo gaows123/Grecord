@@ -1,0 +1,28 @@
+<map id="costmap_2d::Costmap2DROS::getRobotPose" name="costmap_2d::Costmap2DROS::getRobotPose">
+<area shape="rect" id="node1" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="1129,502,1327,543"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="887,5,1047,61"/>
+<area shape="rect" id="node3" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html#afa64ceeb9a0ab7eb3796e3a0095545a7" title=" " alt="" coords="883,85,1050,141"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="870,283,1063,339"/>
+<area shape="rect" id="node9" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="852,363,1081,419"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a66b8eaac1ba4252fd663adfddfecbb7e" title="Build the oriented footprint of the robot at the robot&#39;s current pose" alt="" coords="868,443,1065,485"/>
+<area shape="rect" id="node11" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html#a2fe9f869a53b89056d292ce47833a68c" title=" " alt="" coords="891,560,1042,616"/>
+<area shape="rect" id="node13" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html#abf32e06b525c141d8b7afcac857c241a" title="Run the behavior" alt="" coords="378,527,529,583"/>
+<area shape="rect" id="node14" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85" title="构建ros的封装" alt="" coords="877,641,1056,682"/>
+<area shape="rect" id="node15" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941" title="是否到达目标点" alt="" coords="857,706,1077,747"/>
+<area shape="rect" id="node16" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#ad6876d803a3eaa3006984e94b5a82397" title=" " alt="" coords="355,231,552,273"/>
+<area shape="rect" id="node18" href="$classglobal__planner_1_1_planner_with_costmap.html#ae259e4a6eda8cca0b6fec1018f152b55" title=" " alt="" coords="875,771,1058,813"/>
+<area shape="rect" id="node20" href="$classnavfn_1_1_navfn_with_costmap.html#a793a74f16803f58b9293d13e87a3537e" title=" " alt="" coords="879,837,1054,878"/>
+<area shape="rect" id="node22" href="$classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9" title="启动旋转恢复行为" alt="" coords="860,902,1073,943"/>
+<area shape="rect" id="node23" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="887,968,1047,1024"/>
+<area shape="rect" id="node24" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9c3aa244e7890b363a6317500d66e900" title=" " alt="" coords="868,166,1065,207"/>
+<area shape="rect" id="node4" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4" title="Run the ClearCostmapRecovery recovery behavior. Reverts the costmap to the static map outside of a us..." alt="" coords="619,35,785,91"/>
+<area shape="rect" id="node5" href="$clear__tester_8cpp.html#a401dad5e820a56943c7223955000dc1b" title=" " alt="" coords="391,57,516,84"/>
+<area shape="rect" id="node6" href="$clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="151,99,265,125"/>
+<area shape="rect" id="node7" href="$clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,99,61,125"/>
+<area shape="rect" id="node12" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html#a35a4c0d845dd8b4d0c85a57f3d2d5b1e" title=" " alt="" coords="627,560,777,616"/>
+<area shape="rect" id="node17" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="109,182,307,223"/>
+<area shape="rect" id="node19" href="$classglobal__planner_1_1_planner_with_costmap.html#abf6efea3cec2f9f41ae7104005f777c7" title=" " alt="" coords="600,771,804,813"/>
+<area shape="rect" id="node21" href="$classnavfn_1_1_navfn_with_costmap.html#aba48f2e70ebe9c84bd9b3de9ce1c3e33" title=" " alt="" coords="615,837,789,878"/>
+<area shape="rect" id="node25" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="603,166,801,207"/>
+<area shape="rect" id="node26" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="355,166,552,207"/>
+</map>

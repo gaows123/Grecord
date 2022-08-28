@@ -1,0 +1,10 @@
+<map id="base_local_planner/include/base_local_planner/footprint_helper.h" name="base_local_planner/include/base_local_planner/footprint_helper.h">
+<area shape="rect" id="node1" title=" " alt="" coords="445,5,620,61"/>
+<area shape="rect" id="node2" href="$trajectory__planner_8h.html" title=" " alt="" coords="238,109,427,165"/>
+<area shape="rect" id="node7" href="$footprint__helper_8cpp.html" title=" " alt="" coords="451,117,614,158"/>
+<area shape="rect" id="node8" href="$footprint__helper__test_8cpp.html" title=" " alt="" coords="638,109,779,165"/>
+<area shape="rect" id="node3" href="$trajectory__planner__ros_8h.html" title=" " alt="" coords="5,213,220,269"/>
+<area shape="rect" id="node5" href="$trajectory__planner_8cpp.html" title=" " alt="" coords="245,221,421,262"/>
+<area shape="rect" id="node6" href="$base__local__planner_2test_2utest_8cpp.html" title=" " alt="" coords="445,221,578,262"/>
+<area shape="rect" id="node4" href="$trajectory__planner__ros_8cpp.html" title=" " alt="" coords="37,317,188,373"/>
+</map>

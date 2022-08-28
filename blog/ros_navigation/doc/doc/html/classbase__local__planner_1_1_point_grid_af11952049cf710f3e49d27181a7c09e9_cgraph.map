@@ -1,0 +1,4 @@
+<map id="base_local_planner::PointGrid::segIntersect" name="base_local_planner::PointGrid::segIntersect">
+<area shape="rect" id="node1" title="Check if two line segmenst intersect" alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="217,5,351,47"/>
+</map>

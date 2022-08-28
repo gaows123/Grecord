@@ -1,0 +1,5 @@
+<map id="base_local_planner::LatchedStopRotateController::rotateToGoal" name="base_local_planner::LatchedStopRotateController::rotateToGoal">
+<area shape="rect" id="node1" title="Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐" alt="" coords="589,5,785,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a5bd9394ca5cabf2a35526dcb193e36be" title=" " alt="" coords="283,5,541,61"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>

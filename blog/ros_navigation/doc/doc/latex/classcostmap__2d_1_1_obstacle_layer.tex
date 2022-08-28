@@ -1,0 +1,683 @@
+\hypertarget{classcostmap__2d_1_1_obstacle_layer}{}\doxysection{costmap\+\_\+2d\+::Obstacle\+Layer类 参考}
+\label{classcostmap__2d_1_1_obstacle_layer}\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+
+
+{\ttfamily \#include $<$obstacle\+\_\+layer.\+h$>$}
+
+
+
+类 costmap\+\_\+2d\+::Obstacle\+Layer 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classcostmap__2d_1_1_obstacle_layer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+costmap\+\_\+2d\+::Obstacle\+Layer 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a4620782e96fabeb0b449daa725857c00}{Obstacle\+Layer}} ()
+\item 
+virtual \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a304eaae6240f4404b316c5692d8d4dbf}{$\sim$\+Obstacle\+Layer}} ()
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a370822e3b19d717ef04311b7b967f496}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a1bfef13f020e8aa64a33743f72824ebd}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a02fbdf76db69ddc03c400b2c00e903ee}{update\+Costs}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a96d2b1af3b09d35e02e6d2fc8366195f}{activate}} ()
+\begin{DoxyCompactList}\small\item\em Restart publishers if they\textquotesingle{}ve been stopped. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a4b5054749c568e2df8180c2a7c0e6177}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em Stop publishers. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a9eca6114b3d54c93504058a1754103e4}{reset}} ()
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_adf9bf6f5d231ae52d012320dd18fe047}{laser\+Scan\+Callback}} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em 处理缓冲激光数据的回调函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ae83ee29b89e126ffbfb477aff5fafe92}{laser\+Scan\+Valid\+Inf\+Callback}} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em 处理缓冲激光数据的回调函数，该函数可以处理有无穷大值\+Inf的激光数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_acad6bfccd40caba4e3357e7b48981c2a}{point\+Cloud\+Callback}} (const sensor\+\_\+msgs\+::\+Point\+Cloud\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em 处理缓冲点云消息的回调函数，数据类型是\+Point\+Cloud \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_aa8d27200c8f888b3bda5c4fc087f59a9}{point\+Cloud2\+Callback}} (const sensor\+\_\+msgs\+::\+Point\+Cloud2\+Const\+Ptr \&message, const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em 理缓冲点云消息的回调函数，数据类型是\+Point\+Cloud2 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ac835aba4f43e4c8a2a8ed66c97899b5f}{add\+Static\+Observation}} (\mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} \&obs, bool marking, bool clearing)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a46aa43c6240307253b9bf9377f5e6969}{clear\+Static\+Observations}} (bool marking, bool clearing)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a8a24f6bb0bd8600154c21af4638708c2}{setup\+Dynamic\+Reconfigure}} (ros\+::\+Node\+Handle \&nh)
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ad697514e2077c33ec3e50ed7ef661d19}{get\+Marking\+Observations}} (std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&marking\+\_\+observations) const
+\begin{DoxyCompactList}\small\item\em 获取用于标记空间的观察值. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ac36f129eecc398e3fd4c235078be29e4}{get\+Clearing\+Observations}} (std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&clearing\+\_\+observations) const
+\begin{DoxyCompactList}\small\item\em 获取用于清除空间的观测值 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a50dac229133e7c22981b0c7e0eafc910}{raytrace\+Freespace}} (const \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} \&clearing\+\_\+observation, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em 根据单次的观测来清除自由空间 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_aadace7301e7b08f358ea3e9e8a17f452}{update\+Raytrace\+Bounds}} (double ox, double oy, double wx, double wy, double range, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ac81261d46ebc829ca1d747c024a00603}{update\+Footprint}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a1a6a5dfdeaf6318a5ce08289a8416295}{transformed\+\_\+footprint\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ae2eef96b7091abd5e2df3902ffb0ac29}{footprint\+\_\+clearing\+\_\+enabled\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ace3e2a9b2ded21743140a558a47bc54c}{global\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The global frame for the costmap \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ad3c33d01e6f8c73a73a0c34140b88fd9}{max\+\_\+obstacle\+\_\+height\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Max Obstacle Height \end{DoxyCompactList}\item 
+laser\+\_\+geometry\+::\+Laser\+Projection \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a04fe55b7286265ff543ad52b0b327642}{projector\+\_\+}}
+\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ message\+\_\+filters\+::\+Subscriber\+Base $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ad5128763fa389b51ef1e0b70765901b8}{observation\+\_\+subscribers\+\_\+}}
+\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Message\+Filter\+Base $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a7a1721eda53cf4e9e0446b61f197a7e6}{observation\+\_\+notifiers\+\_\+}}
+\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a0374c0cca8722ad5e03612cd8ddaef63}{observation\+\_\+buffers\+\_\+}}
+\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_aa29c6e8de64c83c5cada0a51a07fa12e}{marking\+\_\+buffers\+\_\+}}
+\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_acf2875689509edd4c22032b46d6d5a96}{clearing\+\_\+buffers\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a95578ec2f3218aeebe2e95c3088256ca}{static\+\_\+clearing\+\_\+observations\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a25b798557229f62414d59663b392ea08}{static\+\_\+marking\+\_\+observations\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a55c8ebe46b6d32861819d244fa55d18c}{rolling\+\_\+window\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ costmap\+\_\+2d\+::\+Obstacle\+Plugin\+Config $>$ $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a78167cc2c7d1ea1ea46a96de5870a1a2}{dsrv\+\_\+}}
+\item 
+int \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a5409807e0d5da47a5594b6558eb86e35}{combination\+\_\+method\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a44529d13388d525090b766fd0bce12e9}{reconfigure\+CB}} (costmap\+\_\+2d\+::\+Obstacle\+Plugin\+Config \&config, uint32\+\_\+t level)
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a4620782e96fabeb0b449daa725857c00}\label{classcostmap__2d_1_1_obstacle_layer_a4620782e96fabeb0b449daa725857c00}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!ObstacleLayer@{ObstacleLayer}}
+\index{ObstacleLayer@{ObstacleLayer}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{ObstacleLayer()}{ObstacleLayer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Obstacle\+Layer\+::\+Obstacle\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a304eaae6240f4404b316c5692d8d4dbf}\label{classcostmap__2d_1_1_obstacle_layer_a304eaae6240f4404b316c5692d8d4dbf}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!````~ObstacleLayer@{$\sim$ObstacleLayer}}
+\index{````~ObstacleLayer@{$\sim$ObstacleLayer}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{$\sim$ObstacleLayer()}{~ObstacleLayer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Obstacle\+Layer\+::$\sim$\+Obstacle\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a96d2b1af3b09d35e02e6d2fc8366195f}\label{classcostmap__2d_1_1_obstacle_layer_a96d2b1af3b09d35e02e6d2fc8366195f}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!activate@{activate}}
+\index{activate@{activate}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Restart publishers if they\textquotesingle{}ve been stopped. 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a83cb399475b5536ae8e278569756d68b}{costmap\+\_\+2d\+::\+Layer}} .
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a96d2b1af3b09d35e02e6d2fc8366195f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ac835aba4f43e4c8a2a8ed66c97899b5f}\label{classcostmap__2d_1_1_obstacle_layer_ac835aba4f43e4c8a2a8ed66c97899b5f}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!addStaticObservation@{addStaticObservation}}
+\index{addStaticObservation@{addStaticObservation}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{addStaticObservation()}{addStaticObservation()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::add\+Static\+Observation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} \&}]{obs,  }\item[{bool}]{marking,  }\item[{bool}]{clearing }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_ac835aba4f43e4c8a2a8ed66c97899b5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a46aa43c6240307253b9bf9377f5e6969}\label{classcostmap__2d_1_1_obstacle_layer_a46aa43c6240307253b9bf9377f5e6969}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!clearStaticObservations@{clearStaticObservations}}
+\index{clearStaticObservations@{clearStaticObservations}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{clearStaticObservations()}{clearStaticObservations()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::clear\+Static\+Observations (\begin{DoxyParamCaption}\item[{bool}]{marking,  }\item[{bool}]{clearing }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a4b5054749c568e2df8180c2a7c0e6177}\label{classcostmap__2d_1_1_obstacle_layer_a4b5054749c568e2df8180c2a7c0e6177}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::deactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stop publishers. 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a8238b7e03dc09bade9543a23addc65e2}{costmap\+\_\+2d\+::\+Layer}} .
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a4b5054749c568e2df8180c2a7c0e6177_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ac36f129eecc398e3fd4c235078be29e4}\label{classcostmap__2d_1_1_obstacle_layer_ac36f129eecc398e3fd4c235078be29e4}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!getClearingObservations@{getClearingObservations}}
+\index{getClearingObservations@{getClearingObservations}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{getClearingObservations()}{getClearingObservations()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Obstacle\+Layer\+::get\+Clearing\+Observations (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&}]{clearing\+\_\+observations }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+获取用于清除空间的观测值 
+
+
+\begin{DoxyParams}{参数}
+{\em clearing\+\_\+observations} & 同步观测值向量的引用. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果所有观察缓冲区都是当前的，则返回\+True，否则返回false 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_ac36f129eecc398e3fd4c235078be29e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ad697514e2077c33ec3e50ed7ef661d19}\label{classcostmap__2d_1_1_obstacle_layer_ad697514e2077c33ec3e50ed7ef661d19}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!getMarkingObservations@{getMarkingObservations}}
+\index{getMarkingObservations@{getMarkingObservations}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{getMarkingObservations()}{getMarkingObservations()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Obstacle\+Layer\+::get\+Marking\+Observations (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} $>$ \&}]{marking\+\_\+observations }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+获取用于标记空间的观察值. 
+
+
+\begin{DoxyParams}{参数}
+{\em marking\+\_\+observations} & 同步观测值向量的引用. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果所有观察缓冲区都是当前的，则返回\+True，否则返回false. 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_ad697514e2077c33ec3e50ed7ef661d19_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_adf9bf6f5d231ae52d012320dd18fe047}\label{classcostmap__2d_1_1_obstacle_layer_adf9bf6f5d231ae52d012320dd18fe047}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!laserScanCallback@{laserScanCallback}}
+\index{laserScanCallback@{laserScanCallback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{laserScanCallback()}{laserScanCallback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::laser\+Scan\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+处理缓冲激光数据的回调函数 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & 观测缓冲的指针 \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_adf9bf6f5d231ae52d012320dd18fe047_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ae83ee29b89e126ffbfb477aff5fafe92}\label{classcostmap__2d_1_1_obstacle_layer_ae83ee29b89e126ffbfb477aff5fafe92}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!laserScanValidInfCallback@{laserScanValidInfCallback}}
+\index{laserScanValidInfCallback@{laserScanValidInfCallback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{laserScanValidInfCallback()}{laserScanValidInfCallback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::laser\+Scan\+Valid\+Inf\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+处理缓冲激光数据的回调函数，该函数可以处理有无穷大值\+Inf的激光数据 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & A pointer to the observation buffer to update \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_ae83ee29b89e126ffbfb477aff5fafe92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a370822e3b19d717ef04311b7b967f496}\label{classcostmap__2d_1_1_obstacle_layer_a370822e3b19d717ef04311b7b967f496}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a97888a23e12ab5b798a854c2f590ae71}{costmap\+\_\+2d\+::\+Layer}} .
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a7b0d5249f27fd757f206493b491fd37a}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a370822e3b19d717ef04311b7b967f496_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a370822e3b19d717ef04311b7b967f496_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_aa8d27200c8f888b3bda5c4fc087f59a9}\label{classcostmap__2d_1_1_obstacle_layer_aa8d27200c8f888b3bda5c4fc087f59a9}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!pointCloud2Callback@{pointCloud2Callback}}
+\index{pointCloud2Callback@{pointCloud2Callback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{pointCloud2Callback()}{pointCloud2Callback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::point\+Cloud2\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud2\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+理缓冲点云消息的回调函数，数据类型是\+Point\+Cloud2 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & A pointer to the observation buffer to update \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_aa8d27200c8f888b3bda5c4fc087f59a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_acad6bfccd40caba4e3357e7b48981c2a}\label{classcostmap__2d_1_1_obstacle_layer_acad6bfccd40caba4e3357e7b48981c2a}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!pointCloudCallback@{pointCloudCallback}}
+\index{pointCloudCallback@{pointCloudCallback}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{pointCloudCallback()}{pointCloudCallback()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::point\+Cloud\+Callback (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud\+Const\+Ptr \&}]{message,  }\item[{const boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}} $>$ \&}]{buffer }\end{DoxyParamCaption})}
+
+
+
+处理缓冲点云消息的回调函数，数据类型是\+Point\+Cloud 
+
+
+\begin{DoxyParams}{参数}
+{\em message} & The message returned from a message notifier \\
+\hline
+{\em buffer} & A pointer to the observation buffer to update \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_acad6bfccd40caba4e3357e7b48981c2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a50dac229133e7c22981b0c7e0eafc910}\label{classcostmap__2d_1_1_obstacle_layer_a50dac229133e7c22981b0c7e0eafc910}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!raytraceFreespace@{raytraceFreespace}}
+\index{raytraceFreespace@{raytraceFreespace}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{raytraceFreespace()}{raytraceFreespace()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::raytrace\+Freespace (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}} \&}]{clearing\+\_\+observation,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+根据单次的观测来清除自由空间 
+
+
+\begin{DoxyParams}{参数}
+{\em clearing\+\_\+observation} & 用于raytrace的观测 \\
+\hline
+{\em min\+\_\+x} & \\
+\hline
+{\em min\+\_\+y} & \\
+\hline
+{\em max\+\_\+x} & \\
+\hline
+{\em max\+\_\+y} & \\
+\hline
+\end{DoxyParams}
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a6f7c914d410df715e01253b3584d9f21}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a50dac229133e7c22981b0c7e0eafc910_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a50dac229133e7c22981b0c7e0eafc910_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a44529d13388d525090b766fd0bce12e9}\label{classcostmap__2d_1_1_obstacle_layer_a44529d13388d525090b766fd0bce12e9}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{costmap\+\_\+2d\+::\+Obstacle\+Plugin\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a44529d13388d525090b766fd0bce12e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a9eca6114b3d54c93504058a1754103e4}\label{classcostmap__2d_1_1_obstacle_layer_a9eca6114b3d54c93504058a1754103e4}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!reset@{reset}}
+\index{reset@{reset}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a7e57e2de15f2ac5104465da537b60ada}{costmap\+\_\+2d\+::\+Layer}} .
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_af5f57588c57a8a5c8dff065b5a76a0db}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a9eca6114b3d54c93504058a1754103e4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a8a24f6bb0bd8600154c21af4638708c2}\label{classcostmap__2d_1_1_obstacle_layer_a8a24f6bb0bd8600154c21af4638708c2}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!setupDynamicReconfigure@{setupDynamicReconfigure}}
+\index{setupDynamicReconfigure@{setupDynamicReconfigure}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{setupDynamicReconfigure()}{setupDynamicReconfigure()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::setup\+Dynamic\+Reconfigure (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a7e9b75bd9cee13aa9f893a17d549fbee}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a8a24f6bb0bd8600154c21af4638708c2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a8a24f6bb0bd8600154c21af4638708c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a1bfef13f020e8aa64a33743f72824ebd}\label{classcostmap__2d_1_1_obstacle_layer_a1bfef13f020e8aa64a33743f72824ebd}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a978fb5288265b293a6fd08787314f2f1}{costmap\+\_\+2d\+::\+Layer}} .
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_ab28185cd71c8e42f72880b779ef08ae2}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a1bfef13f020e8aa64a33743f72824ebd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a02fbdf76db69ddc03c400b2c00e903ee}\label{classcostmap__2d_1_1_obstacle_layer_a02fbdf76db69ddc03c400b2c00e903ee}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!updateCosts@{updateCosts}}
+\index{updateCosts@{updateCosts}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{updateCosts()}{updateCosts()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::update\+Costs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{master\+\_\+grid,  }\item[{int}]{min\+\_\+i,  }\item[{int}]{min\+\_\+j,  }\item[{int}]{max\+\_\+i,  }\item[{int}]{max\+\_\+j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a56528644ba7d534b15ca3d73615dc12e}{costmap\+\_\+2d\+::\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_a02fbdf76db69ddc03c400b2c00e903ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ac81261d46ebc829ca1d747c024a00603}\label{classcostmap__2d_1_1_obstacle_layer_ac81261d46ebc829ca1d747c024a00603}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!updateFootprint@{updateFootprint}}
+\index{updateFootprint@{updateFootprint}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{updateFootprint()}{updateFootprint()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::update\+Footprint (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_ac81261d46ebc829ca1d747c024a00603_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_ac81261d46ebc829ca1d747c024a00603_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_aadace7301e7b08f358ea3e9e8a17f452}\label{classcostmap__2d_1_1_obstacle_layer_aadace7301e7b08f358ea3e9e8a17f452}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!updateRaytraceBounds@{updateRaytraceBounds}}
+\index{updateRaytraceBounds@{updateRaytraceBounds}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{updateRaytraceBounds()}{updateRaytraceBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Obstacle\+Layer\+::update\+Raytrace\+Bounds (\begin{DoxyParamCaption}\item[{double}]{ox,  }\item[{double}]{oy,  }\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{double}]{range,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_aadace7301e7b08f358ea3e9e8a17f452_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_obstacle_layer_aadace7301e7b08f358ea3e9e8a17f452_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_acf2875689509edd4c22032b46d6d5a96}\label{classcostmap__2d_1_1_obstacle_layer_acf2875689509edd4c22032b46d6d5a96}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!clearing\_buffers\_@{clearing\_buffers\_}}
+\index{clearing\_buffers\_@{clearing\_buffers\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{clearing\_buffers\_}{clearing\_buffers\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}}$>$ $>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::clearing\+\_\+buffers\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a5409807e0d5da47a5594b6558eb86e35}\label{classcostmap__2d_1_1_obstacle_layer_a5409807e0d5da47a5594b6558eb86e35}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!combination\_method\_@{combination\_method\_}}
+\index{combination\_method\_@{combination\_method\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{combination\_method\_}{combination\_method\_}}
+{\footnotesize\ttfamily int costmap\+\_\+2d\+::\+Obstacle\+Layer\+::combination\+\_\+method\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a78167cc2c7d1ea1ea46a96de5870a1a2}\label{classcostmap__2d_1_1_obstacle_layer_a78167cc2c7d1ea1ea46a96de5870a1a2}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$costmap\+\_\+2d\+::\+Obstacle\+Plugin\+Config$>$$\ast$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ae2eef96b7091abd5e2df3902ffb0ac29}\label{classcostmap__2d_1_1_obstacle_layer_ae2eef96b7091abd5e2df3902ffb0ac29}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!footprint\_clearing\_enabled\_@{footprint\_clearing\_enabled\_}}
+\index{footprint\_clearing\_enabled\_@{footprint\_clearing\_enabled\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{footprint\_clearing\_enabled\_}{footprint\_clearing\_enabled\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Obstacle\+Layer\+::footprint\+\_\+clearing\+\_\+enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ace3e2a9b2ded21743140a558a47bc54c}\label{classcostmap__2d_1_1_obstacle_layer_ace3e2a9b2ded21743140a558a47bc54c}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Obstacle\+Layer\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The global frame for the costmap 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_aa29c6e8de64c83c5cada0a51a07fa12e}\label{classcostmap__2d_1_1_obstacle_layer_aa29c6e8de64c83c5cada0a51a07fa12e}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!marking\_buffers\_@{marking\_buffers\_}}
+\index{marking\_buffers\_@{marking\_buffers\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{marking\_buffers\_}{marking\_buffers\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}}$>$ $>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::marking\+\_\+buffers\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ad3c33d01e6f8c73a73a0c34140b88fd9}\label{classcostmap__2d_1_1_obstacle_layer_ad3c33d01e6f8c73a73a0c34140b88fd9}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!max\_obstacle\_height\_@{max\_obstacle\_height\_}}
+\index{max\_obstacle\_height\_@{max\_obstacle\_height\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{max\_obstacle\_height\_}{max\_obstacle\_height\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Obstacle\+Layer\+::max\+\_\+obstacle\+\_\+height\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Max Obstacle Height 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a0374c0cca8722ad5e03612cd8ddaef63}\label{classcostmap__2d_1_1_obstacle_layer_a0374c0cca8722ad5e03612cd8ddaef63}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!observation\_buffers\_@{observation\_buffers\_}}
+\index{observation\_buffers\_@{observation\_buffers\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{observation\_buffers\_}{observation\_buffers\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{costmap\+\_\+2d\+::\+Observation\+Buffer}}$>$ $>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::observation\+\_\+buffers\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a7a1721eda53cf4e9e0446b61f197a7e6}\label{classcostmap__2d_1_1_obstacle_layer_a7a1721eda53cf4e9e0446b61f197a7e6}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!observation\_notifiers\_@{observation\_notifiers\_}}
+\index{observation\_notifiers\_@{observation\_notifiers\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{observation\_notifiers\_}{observation\_notifiers\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Message\+Filter\+Base$>$ $>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::observation\+\_\+notifiers\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_ad5128763fa389b51ef1e0b70765901b8}\label{classcostmap__2d_1_1_obstacle_layer_ad5128763fa389b51ef1e0b70765901b8}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!observation\_subscribers\_@{observation\_subscribers\_}}
+\index{observation\_subscribers\_@{observation\_subscribers\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{observation\_subscribers\_}{observation\_subscribers\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::shared\+\_\+ptr$<$message\+\_\+filters\+::\+Subscriber\+Base$>$ $>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::observation\+\_\+subscribers\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a04fe55b7286265ff543ad52b0b327642}\label{classcostmap__2d_1_1_obstacle_layer_a04fe55b7286265ff543ad52b0b327642}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!projector\_@{projector\_}}
+\index{projector\_@{projector\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{projector\_}{projector\_}}
+{\footnotesize\ttfamily laser\+\_\+geometry\+::\+Laser\+Projection costmap\+\_\+2d\+::\+Obstacle\+Layer\+::projector\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a55c8ebe46b6d32861819d244fa55d18c}\label{classcostmap__2d_1_1_obstacle_layer_a55c8ebe46b6d32861819d244fa55d18c}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!rolling\_window\_@{rolling\_window\_}}
+\index{rolling\_window\_@{rolling\_window\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{rolling\_window\_}{rolling\_window\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Obstacle\+Layer\+::rolling\+\_\+window\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a95578ec2f3218aeebe2e95c3088256ca}\label{classcostmap__2d_1_1_obstacle_layer_a95578ec2f3218aeebe2e95c3088256ca}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!static\_clearing\_observations\_@{static\_clearing\_observations\_}}
+\index{static\_clearing\_observations\_@{static\_clearing\_observations\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{static\_clearing\_observations\_}{static\_clearing\_observations\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}}$>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::static\+\_\+clearing\+\_\+observations\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a25b798557229f62414d59663b392ea08}\label{classcostmap__2d_1_1_obstacle_layer_a25b798557229f62414d59663b392ea08}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!static\_marking\_observations\_@{static\_marking\_observations\_}}
+\index{static\_marking\_observations\_@{static\_marking\_observations\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{static\_marking\_observations\_}{static\_marking\_observations\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\+\_\+2d\+::\+Observation}}$>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::static\+\_\+marking\+\_\+observations\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_obstacle_layer_a1a6a5dfdeaf6318a5ce08289a8416295}\label{classcostmap__2d_1_1_obstacle_layer_a1a6a5dfdeaf6318a5ce08289a8416295}} 
+\index{costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}!transformed\_footprint\_@{transformed\_footprint\_}}
+\index{transformed\_footprint\_@{transformed\_footprint\_}!costmap\_2d::ObstacleLayer@{costmap\_2d::ObstacleLayer}}
+\doxysubsubsection{\texorpdfstring{transformed\_footprint\_}{transformed\_footprint\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ costmap\+\_\+2d\+::\+Obstacle\+Layer\+::transformed\+\_\+footprint\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{obstacle__layer_8h}{obstacle\+\_\+layer.\+h}}\item 
+costmap\+\_\+2d/plugins/\mbox{\hyperlink{obstacle__layer_8cpp}{obstacle\+\_\+layer.\+cpp}}\end{DoxyCompactItemize}

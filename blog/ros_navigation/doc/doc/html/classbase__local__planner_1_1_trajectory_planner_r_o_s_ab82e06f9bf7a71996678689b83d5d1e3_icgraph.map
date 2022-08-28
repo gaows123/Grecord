@@ -1,0 +1,4 @@
+<map id="base_local_planner::TrajectoryPlannerROS::stopWithAccLimits" name="base_local_planner::TrajectoryPlannerROS::stopWithAccLimits">
+<area shape="rect" id="node1" title="基于加速度限制让机器人停止" alt="" coords="247,5,407,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+</map>

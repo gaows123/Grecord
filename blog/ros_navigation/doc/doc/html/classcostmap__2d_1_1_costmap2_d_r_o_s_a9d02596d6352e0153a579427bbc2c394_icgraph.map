@@ -1,0 +1,7 @@
+<map id="costmap_2d::Costmap2DROS::getBaseFrameID" name="costmap_2d::Costmap2DROS::getBaseFrameID">
+<area shape="rect" id="node1" title="Returns the local frame of the costmap" alt="" coords="585,53,783,94"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="283,5,537,61"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="330,85,490,141"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="40,85,200,141"/>
+</map>

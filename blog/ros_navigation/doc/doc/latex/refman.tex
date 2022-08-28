@@ -1,0 +1,631 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \usepackage{fixltx2e} % for \textsubscript
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \usepackage[utf8]{inputenc}
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage{CJKutf8}
+  % Define default fonts
+  % Font selection
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \usepackage{sectsty}
+  \allsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize 制作者 Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifpdf
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifxetex
+        \usepackage[pagebackref=true]{hyperref}
+      \else
+        \usepackage[ps2pdf,pagebackref=true]{hyperref}
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle=navigation-\/noetic,%
+      pdfsubject=%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \usepackage{etoc}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  \begin{CJK}{UTF8}{gbsn}
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large navigation-\/noetic}\\
+  \vspace*{1cm}
+  {\large 制作者 Doxygen 1.9.3}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{navigation-\/noetic}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{navigation学习}
+\label{md_navigation_xE5_xAD_xA6_xE4_xB9_xA0}
+\Hypertarget{md_navigation_xE5_xAD_xA6_xE4_xB9_xA0}
+\input{md_navigation_xE5_xAD_xA6_xE4_xB9_xA0}
+\chapter{ROS Navigation Stack}
+\label{md__r_e_a_d_m_e}
+\Hypertarget{md__r_e_a_d_m_e}
+\input{md__r_e_a_d_m_e}
+\chapter{命名空间索引}
+\input{namespaces}
+\chapter{继承关系索引}
+\input{hierarchy}
+\chapter{类索引}
+\input{annotated}
+\chapter{文件索引}
+\input{files}
+\chapter{命名空间文档}
+\input{namespaceamcl}
+\input{namespacebase__local__planner}
+\input{namespacebasic__localization}
+\input{namespacecarrot__planner}
+\input{namespaceclear__costmap__recovery}
+\input{namespaceconsumer}
+\input{namespacecostmap__2d}
+\input{namespacedwa__local__planner}
+\input{namespaceglobal__planner}
+\input{namespacelocal__planner__limits}
+\input{namespacemap__server}
+\input{namespacemove__base}
+\input{namespacemove__slow__and__clear}
+\input{namespacenav__core}
+\input{namespacenavfn}
+\input{namespacerotate__recovery}
+\input{namespaceset__pose}
+\input{namespacesetup}
+\input{namespacestatic__odom__broadcaster}
+\input{namespacetmap2}
+\input{namespacevoxel__grid}
+\chapter{类说明}
+\input{struct__pf__sample__set__t}
+\input{struct__pf__t}
+\input{structamcl__hyp__t}
+\input{classamcl_1_1_a_m_c_l_laser}
+\input{classamcl_1_1_a_m_c_l_laser_data}
+\input{class_amcl_node}
+\input{classamcl_1_1_a_m_c_l_odom}
+\input{classamcl_1_1_a_m_c_l_odom_data}
+\input{classamcl_1_1_a_m_c_l_sensor}
+\input{classamcl_1_1_a_m_c_l_sensor_data}
+\input{classglobal__planner_1_1_a_star_expansion}
+\input{classnav__core_1_1_base_global_planner}
+\input{classnav__core_1_1_base_local_planner}
+\input{class_cached_distance_map}
+\input{classcarrot__planner_1_1_carrot_planner}
+\input{struct_cell}
+\input{class_cell_data}
+\input{classcostmap__2d_1_1_cell_data}
+\input{classclear__costmap__recovery_1_1_clear_costmap_recovery}
+\input{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel}
+\input{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map}
+\input{classcostmap__2d_1_1_costmap2_d}
+\input{classcostmap__2d_1_1_costmap2_d_publisher}
+\input{classcostmap__2d_1_1_costmap2_d_r_o_s}
+\input{classcostmap__2d_1_1_costmap_layer}
+\input{classbase__local__planner_1_1_costmap_model}
+\input{classcostmap__2d_1_1_costmap_tester}
+\input{classglobal__planner_1_1_dijkstra_expansion}
+\input{classdwa__local__planner_1_1_d_w_a_planner}
+\input{classdwa__local__planner_1_1_d_w_a_planner_r_o_s}
+\input{classglobal__planner_1_1_expander}
+\input{class_fake_odom_node}
+\input{classbase__local__planner_1_1_footprint_helper}
+\input{classbase__local__planner_1_1_footprint_helper_test}
+\input{classglobal__planner_1_1_global_planner}
+\input{classglobal__planner_1_1_gradient_path}
+\input{structglobal__planner_1_1greater1}
+\input{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset}
+\input{classglobal__planner_1_1_grid_path}
+\input{classglobal__planner_1_1_index}
+\input{classcostmap__2d_1_1_inflation_layer}
+\input{classbase__local__planner_1_1_latched_stop_rotate_controller}
+\input{classcostmap__2d_1_1_layer}
+\input{classcostmap__2d_1_1_layered_costmap}
+\input{classbase__local__planner_1_1_line_iterator}
+\input{classbase__local__planner_1_1_local_planner_limits}
+\input{classbase__local__planner_1_1_local_planner_util}
+\input{structmap__cell__t}
+\input{structmap__t}
+\input{classbase__local__planner_1_1_map_cell}
+\input{class_map_client_test}
+\input{class_map_generator}
+\input{classbase__local__planner_1_1_map_grid}
+\input{classbase__local__planner_1_1_map_grid_cost_function}
+\input{classbase__local__planner_1_1_map_grid_visualizer}
+\input{structcostmap__2d_1_1_map_location}
+\input{class_map_server}
+\input{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell}
+\input{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel}
+\input{classmove__base_1_1_move_base}
+\input{classmove__slow__and__clear_1_1_move_slow_and_clear}
+\input{classnavfn_1_1_nav_fn}
+\input{classnavfn_1_1_navfn_r_o_s}
+\input{classnavfn_1_1_navfn_with_costmap}
+\input{classnavfn_1_1_nav_win}
+\input{classcostmap__2d_1_1_observation}
+\input{classcostmap__2d_1_1_observation_buffer}
+\input{classbase__local__planner_1_1_obstacle_cost_function}
+\input{classcostmap__2d_1_1_obstacle_layer}
+\input{classbase__local__planner_1_1_odometry_helper_ros}
+\input{classglobal__planner_1_1_orientation_filter}
+\input{classbase__local__planner_1_1_oscillation_cost_function}
+\input{structpf__cluster__t}
+\input{structpf__kdtree__node}
+\input{structpf__kdtree__t}
+\input{structpf__matrix__t}
+\input{structpf__pdf__gaussian__t}
+\input{structpf__sample__t}
+\input{structpf__vector__t}
+\input{classbase__local__planner_1_1_planar_laser_scan}
+\input{class_planner_core}
+\input{classglobal__planner_1_1_planner_with_costmap}
+\input{classbase__local__planner_1_1_point_grid}
+\input{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells}
+\input{classset__pose_1_1_pose_setter}
+\input{structnavfn_1_1_potarr_point}
+\input{classglobal__planner_1_1_potential_calculator}
+\input{classbase__local__planner_1_1_prefer_forward_cost_function}
+\input{classglobal__planner_1_1_quadratic_calculator}
+\input{classnav__core_1_1_recovery_behavior}
+\input{classrotate__recovery_1_1_rotate_recovery}
+\input{classbase__local__planner_1_1_simple_scored_sampling_planner}
+\input{classbase__local__planner_1_1_simple_trajectory_generator}
+\input{classcostmap__2d_1_1_static_layer}
+\input{class_super_value}
+\input{classbasic__localization_1_1_test_basic_localization}
+\input{classconsumer_1_1_test_consumer}
+\input{classglobal__planner_1_1_traceback}
+\input{classbase__local__planner_1_1_trajectory}
+\input{classbase__local__planner_1_1_trajectory_cost_function}
+\input{classbase__local__planner_1_1_trajectory_generator_test}
+\input{classbase__local__planner_1_1_trajectory_planner}
+\input{classbase__local__planner_1_1_trajectory_planner_r_o_s}
+\input{classbase__local__planner_1_1_trajectory_planner_test}
+\input{classbase__local__planner_1_1_trajectory_sample_generator}
+\input{classbase__local__planner_1_1_trajectory_search}
+\input{classbase__local__planner_1_1_twirling_cost_function}
+\input{classbase__local__planner_1_1_velocity_iterator}
+\input{classvoxel__grid_1_1_voxel_grid}
+\input{class_voxel_grid}
+\input{classbase__local__planner_1_1_voxel_grid_model}
+\input{classcostmap__2d_1_1_voxel_layer}
+\input{classbase__local__planner_1_1_wavefront_map_accessor}
+\input{classbase__local__planner_1_1_world_model}
+\input{classvoxel__grid_1_1_voxel_grid_1_1_z_offset}
+\chapter{文件说明}
+\input{map_8h}
+\input{map_8h_source}
+\input{eig3_8h}
+\input{eig3_8h_source}
+\input{pf_8h}
+\input{pf_8h_source}
+\input{pf__kdtree_8h}
+\input{pf__kdtree_8h_source}
+\input{pf__pdf_8h}
+\input{pf__pdf_8h_source}
+\input{pf__vector_8h}
+\input{pf__vector_8h_source}
+\input{amcl__laser_8h}
+\input{amcl__laser_8h_source}
+\input{amcl__odom_8h}
+\input{amcl__odom_8h_source}
+\input{amcl__sensor_8h}
+\input{amcl__sensor_8h_source}
+\input{map_8c}
+\input{map__cspace_8cpp}
+\input{map__draw_8c}
+\input{map__range_8c}
+\input{map__store_8c}
+\input{eig3_8c}
+\input{pf_8c}
+\input{pf__draw_8c}
+\input{pf__kdtree_8c}
+\input{pf__pdf_8c}
+\input{pf__vector_8c}
+\input{amcl__laser_8cpp}
+\input{amcl__odom_8cpp}
+\input{amcl__sensor_8cpp}
+\input{amcl__node_8cpp}
+\input{portable__utils_8hpp}
+\input{portable__utils_8hpp_source}
+\input{basic__localization_8py}
+\input{set__pose_8py}
+\input{costmap__model_8h}
+\input{costmap__model_8h_source}
+\input{footprint__helper_8h}
+\input{footprint__helper_8h_source}
+\input{goal__functions_8h}
+\input{goal__functions_8h_source}
+\input{latched__stop__rotate__controller_8h}
+\input{latched__stop__rotate__controller_8h_source}
+\input{line__iterator_8h}
+\input{line__iterator_8h_source}
+\input{local__planner__limits_8h}
+\input{local__planner__limits_8h_source}
+\input{local__planner__util_8h}
+\input{local__planner__util_8h_source}
+\input{map__cell_8h}
+\input{map__cell_8h_source}
+\input{map__grid_8h}
+\input{map__grid_8h_source}
+\input{map__grid__cost__function_8h}
+\input{map__grid__cost__function_8h_source}
+\input{map__grid__visualizer_8h}
+\input{map__grid__visualizer_8h_source}
+\input{obstacle__cost__function_8h}
+\input{obstacle__cost__function_8h_source}
+\input{odometry__helper__ros_8h}
+\input{odometry__helper__ros_8h_source}
+\input{oscillation__cost__function_8h}
+\input{oscillation__cost__function_8h_source}
+\input{planar__laser__scan_8h}
+\input{planar__laser__scan_8h_source}
+\input{point__grid_8h}
+\input{point__grid_8h_source}
+\input{prefer__forward__cost__function_8h}
+\input{prefer__forward__cost__function_8h_source}
+\input{simple__scored__sampling__planner_8h}
+\input{simple__scored__sampling__planner_8h_source}
+\input{simple__trajectory__generator_8h}
+\input{simple__trajectory__generator_8h_source}
+\input{trajectory_8h}
+\input{trajectory_8h_source}
+\input{trajectory__cost__function_8h}
+\input{trajectory__cost__function_8h_source}
+\input{trajectory__inc_8h}
+\input{trajectory__inc_8h_source}
+\input{trajectory__planner_8h}
+\input{trajectory__planner_8h_source}
+\input{trajectory__planner__ros_8h}
+\input{trajectory__planner__ros_8h_source}
+\input{trajectory__sample__generator_8h}
+\input{trajectory__sample__generator_8h_source}
+\input{trajectory__search_8h}
+\input{trajectory__search_8h_source}
+\input{twirling__cost__function_8h}
+\input{twirling__cost__function_8h_source}
+\input{velocity__iterator_8h}
+\input{velocity__iterator_8h_source}
+\input{voxel__grid__model_8h}
+\input{voxel__grid__model_8h_source}
+\input{world__model_8h}
+\input{world__model_8h_source}
+\input{setup_8py}
+\input{costmap__model_8cpp}
+\input{footprint__helper_8cpp}
+\input{goal__functions_8cpp}
+\input{latched__stop__rotate__controller_8cpp}
+\input{____init_____8py}
+\input{local__planner__util_8cpp}
+\input{map__cell_8cpp}
+\input{map__grid_8cpp}
+\input{map__grid__cost__function_8cpp}
+\input{map__grid__visualizer_8cpp}
+\input{obstacle__cost__function_8cpp}
+\input{odometry__helper__ros_8cpp}
+\input{oscillation__cost__function_8cpp}
+\input{point__grid_8cpp}
+\input{point__grid__node_8cpp}
+\input{prefer__forward__cost__function_8cpp}
+\input{simple__scored__sampling__planner_8cpp}
+\input{simple__trajectory__generator_8cpp}
+\input{trajectory_8cpp}
+\input{trajectory__planner_8cpp}
+\input{trajectory__planner__ros_8cpp}
+\input{twirling__cost__function_8cpp}
+\input{voxel__grid__model_8cpp}
+\input{footprint__helper__test_8cpp}
+\input{gtest__main_8cpp}
+\input{line__iterator__test_8cpp}
+\input{map__grid__test_8cpp}
+\input{trajectory__generator__test_8cpp}
+\input{base__local__planner_2test_2utest_8cpp}
+\input{map__server_2test_2utest_8cpp}
+\input{velocity__iterator__test_8cpp}
+\input{wavefront__map__accessor_8h}
+\input{wavefront__map__accessor_8h_source}
+\input{carrot__planner_8h}
+\input{carrot__planner_8h_source}
+\input{carrot__planner_8cpp}
+\input{clear__costmap__recovery_8h}
+\input{clear__costmap__recovery_8h_source}
+\input{clear__costmap__recovery_8cpp}
+\input{clear__tester_8cpp}
+\input{array__parser_8h}
+\input{array__parser_8h_source}
+\input{cost__values_8h}
+\input{cost__values_8h_source}
+\input{costmap__2d_8h}
+\input{costmap__2d_8h_source}
+\input{costmap__2d__publisher_8h}
+\input{costmap__2d__publisher_8h_source}
+\input{costmap__2d__ros_8h}
+\input{costmap__2d__ros_8h_source}
+\input{costmap__layer_8h}
+\input{costmap__layer_8h_source}
+\input{costmap__math_8h}
+\input{costmap__math_8h_source}
+\input{footprint_8h}
+\input{footprint_8h_source}
+\input{inflation__layer_8h}
+\input{inflation__layer_8h_source}
+\input{layer_8h}
+\input{layer_8h_source}
+\input{layered__costmap_8h}
+\input{layered__costmap_8h_source}
+\input{observation_8h}
+\input{observation_8h_source}
+\input{observation__buffer_8h}
+\input{observation__buffer_8h_source}
+\input{obstacle__layer_8h}
+\input{obstacle__layer_8h_source}
+\input{static__layer_8h}
+\input{static__layer_8h_source}
+\input{testing__helper_8h}
+\input{testing__helper_8h_source}
+\input{voxel__layer_8h}
+\input{voxel__layer_8h_source}
+\input{inflation__layer_8cpp}
+\input{obstacle__layer_8cpp}
+\input{static__layer_8cpp}
+\input{voxel__layer_8cpp}
+\input{array__parser_8cpp}
+\input{costmap__2d_8cpp}
+\input{costmap__2d__cloud_8cpp}
+\input{costmap__2d__markers_8cpp}
+\input{costmap__2d__node_8cpp}
+\input{costmap__2d__publisher_8cpp}
+\input{costmap__2d__ros_8cpp}
+\input{costmap__layer_8cpp}
+\input{costmap__math_8cpp}
+\input{footprint_8cpp}
+\input{layer_8cpp}
+\input{layered__costmap_8cpp}
+\input{observation__buffer_8cpp}
+\input{array__parser__test_8cpp}
+\input{coordinates__test_8cpp}
+\input{costmap__tester_8cpp}
+\input{footprint__tests_8cpp}
+\input{inflation__tests_8cpp}
+\input{module__tests_8cpp}
+\input{obstacle__tests_8cpp}
+\input{static__tests_8cpp}
+\input{dwa__planner_8h}
+\input{dwa__planner_8h_source}
+\input{dwa__planner__ros_8h}
+\input{dwa__planner__ros_8h_source}
+\input{dwa__planner_8cpp}
+\input{dwa__planner__ros_8cpp}
+\input{fake__localization_8cpp}
+\input{static__odom__broadcaster_8py}
+\input{astar_8h}
+\input{astar_8h_source}
+\input{dijkstra_8h}
+\input{dijkstra_8h_source}
+\input{expander_8h}
+\input{expander_8h_source}
+\input{gradient__path_8h}
+\input{gradient__path_8h_source}
+\input{grid__path_8h}
+\input{grid__path_8h_source}
+\input{orientation__filter_8h}
+\input{orientation__filter_8h_source}
+\input{planner__core_8h}
+\input{planner__core_8h_source}
+\input{potential__calculator_8h}
+\input{potential__calculator_8h_source}
+\input{quadratic__calculator_8h}
+\input{quadratic__calculator_8h_source}
+\input{traceback_8h}
+\input{traceback_8h_source}
+\input{astar_8cpp}
+\input{dijkstra_8cpp}
+\input{gradient__path_8cpp}
+\input{grid__path_8cpp}
+\input{orientation__filter_8cpp}
+\input{plan__node_8cpp}
+\input{planner__core_8cpp}
+\input{quadratic__calculator_8cpp}
+\input{image__loader_8h}
+\input{image__loader_8h_source}
+\input{image__loader_8cpp}
+\input{main_8cpp}
+\input{map__saver_8cpp}
+\input{map__server_8dox}
+\input{consumer_8py}
+\input{rtest_8cpp}
+\input{test__constants_8cpp}
+\input{test__constants_8h}
+\input{test__constants_8h_source}
+\input{move__base_8h}
+\input{move__base_8h_source}
+\input{move__base_8cpp}
+\input{move__base__node_8cpp}
+\input{move__slow__and__clear_8h}
+\input{move__slow__and__clear_8h_source}
+\input{move__slow__and__clear_8cpp}
+\input{base__global__planner_8h}
+\input{base__global__planner_8h_source}
+\input{base__local__planner_8h}
+\input{base__local__planner_8h_source}
+\input{parameter__magic_8h}
+\input{parameter__magic_8h_source}
+\input{recovery__behavior_8h}
+\input{recovery__behavior_8h_source}
+\input{navfn_8h}
+\input{navfn_8h_source}
+\input{navfn__ros_8h}
+\input{navfn__ros_8h_source}
+\input{potarr__point_8h}
+\input{potarr__point_8h_source}
+\input{read__pgm__costmap_8h}
+\input{read__pgm__costmap_8h_source}
+\input{navfn_8cpp}
+\input{navfn__node_8cpp}
+\input{navfn__ros_8cpp}
+\input{navtest_8cpp}
+\input{navwin_8cpp}
+\input{navwin_8h}
+\input{navwin_8h_source}
+\input{read__pgm__costmap_8cpp}
+\input{path__calc__test_8cpp}
+\input{navigation_xE5_xAD_xA6_xE4_xB9_xA0_8md}
+\input{_r_e_a_d_m_e_8md}
+\input{rotate__recovery_8h}
+\input{rotate__recovery_8h_source}
+\input{rotate__recovery_8cpp}
+\input{voxel__grid_8h}
+\input{voxel__grid_8h_source}
+\input{voxel__grid_8cpp}
+\input{voxel__grid__tests_8cpp}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{CJK}
+\end{document}

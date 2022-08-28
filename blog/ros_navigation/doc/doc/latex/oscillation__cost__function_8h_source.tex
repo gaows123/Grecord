@@ -1,0 +1,86 @@
+\hypertarget{oscillation__cost__function_8h_source}{}\doxysection{oscillation\+\_\+cost\+\_\+function.\+h}
+\label{oscillation__cost__function_8h_source}\index{base\_local\_planner/include/base\_local\_planner/oscillation\_cost\_function.h@{base\_local\_planner/include/base\_local\_planner/oscillation\_cost\_function.h}}
+\mbox{\hyperlink{oscillation__cost__function_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: TKruse}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef OSCILLATION\_COST\_FUNCTION\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define OSCILLATION\_COST\_FUNCTION\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__cost__function_8h}{base\_local\_planner/trajectory\_cost\_function.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <Eigen/Core>}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function}{OscillationCostFunction}}: \textcolor{keyword}{public} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function}{base\_local\_planner::TrajectoryCostFunction}} \{}
+\DoxyCodeLine{47 \textcolor{keyword}{public}:}
+\DoxyCodeLine{48   \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a50e1b85389706d2e1dcdaa36cb56cdc8}{OscillationCostFunction}}();}
+\DoxyCodeLine{49   \textcolor{keyword}{virtual} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a4b5ad241fd0d42863996f8e746a49b82}{\string~OscillationCostFunction}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_ac9fd440e97142115b8bbe81408eadc14}{scoreTrajectory}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a1cc7c1cd4c49df97515da3c12400f4df}{prepare}}() \{\textcolor{keywordflow}{return} \textcolor{keyword}{true};\};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_afb420d9a488660f3583e182cb1939ee1}{resetOscillationFlags}}();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a2cd60c5b611d43697f3345e3c356f48f}{updateOscillationFlags}}(Eigen::Vector3f pos, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\_local\_planner::Trajectory}}* traj, \textcolor{keywordtype}{double} min\_vel\_trans);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a489f8c9c3f2322d6f24fe8aa1e39b118}{setOscillationResetDist}}(\textcolor{keywordtype}{double} dist, \textcolor{keywordtype}{double} angle);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{private}:}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_aa6224a4812d149fcf71dc2131b92cb96}{resetOscillationFlagsIfPossible}}(\textcolor{keyword}{const} Eigen::Vector3f\& pos, \textcolor{keyword}{const} Eigen::Vector3f\& prev);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{75   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_ada617a8fb122a0889bbbe93e6baa82de}{setOscillationFlags}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\_local\_planner::Trajectory}}* t, \textcolor{keywordtype}{double} min\_vel\_trans);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77   \textcolor{comment}{// flags}}
+\DoxyCodeLine{78   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_ae3f12ed64ffab83f6cc14407740a0dd3}{strafe\_pos\_only\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a4c9881934f9f9b62a6ea0cc39ec9cd15}{strafe\_neg\_only\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a99e1d7c6f0d521b1dd3ad89dee6fdd68}{strafing\_pos\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_acfbe248a46b833410f67962551086be9}{strafing\_neg\_}};}
+\DoxyCodeLine{79   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a6bbd2e3ab21235b798561a8b25694ae4}{rot\_pos\_only\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_ada6b20572e35e6661531663ee7aef485}{rot\_neg\_only\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a782792324148e9c4f25fd293c306fca6}{rotating\_pos\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a2db7a4bf9080265e0fbde53935631bbc}{rotating\_neg\_}};}
+\DoxyCodeLine{80   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a72f5a9ba109d22be48984bdcc2b3d461}{forward\_pos\_only\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a49dd0b6e2f6f7a5a9266234f0dc2a40c}{forward\_neg\_only\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a7df909c5d41cabd2b0f9f35710fe36e5}{forward\_pos\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a57abdb2c09e71ec1b42649ad27540d9b}{forward\_neg\_}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82   \textcolor{comment}{// param}}
+\DoxyCodeLine{83   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a8bbd803cecdd9786df4cf8c5c2996223}{oscillation\_reset\_dist\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a82d992b7b3776a2adfa576e8fd5cc136}{oscillation\_reset\_angle\_}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   Eigen::Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function_a0f8cf234ccff7a60e79868c33e3d9f4a}{prev\_stationary\_pos\_}};}
+\DoxyCodeLine{86 \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \} \textcolor{comment}{/* namespace base\_local\_planner */}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* OSCILLATION\_COST\_FUNCTION\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

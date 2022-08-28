@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d/src/costmap_2d_markers.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_ca2f9c8cc71ab6391613a60f88aadf81.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">costmap_2d_markers.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;ros/ros.h&gt;</code><br />
+<code>#include &lt;visualization_msgs/MarkerArray.h&gt;</code><br />
+<code>#include &lt;costmap_2d/VoxelGrid.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="voxel__grid_8h_source.html">voxel_grid/voxel_grid.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+costmap_2d_markers.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__2d__markers_8cpp__incl.png" border="0" usemap="#acostmap__2d_2src_2costmap__2d__markers_8cpp" alt=""/></div>
+<map name="acostmap__2d_2src_2costmap__2d__markers_8cpp" id="acostmap__2d_2src_2costmap__2d__markers_8cpp">
+<area shape="rect" title=" " alt="" coords="172,5,341,47"/>
+<area shape="rect" title=" " alt="" coords="5,102,79,129"/>
+<area shape="rect" title=" " alt="" coords="103,95,237,136"/>
+<area shape="rect" title=" " alt="" coords="261,102,426,129"/>
+<area shape="rect" href="voxel__grid_8h.html" title=" " alt="" coords="450,102,605,129"/>
+<area shape="rect" title=" " alt="" coords="142,184,203,211"/>
+<area shape="rect" title=" " alt="" coords="228,184,293,211"/>
+<area shape="rect" title=" " alt="" coords="318,184,382,211"/>
+<area shape="rect" title=" " alt="" coords="407,184,472,211"/>
+<area shape="rect" title=" " alt="" coords="496,184,559,211"/>
+<area shape="rect" title=" " alt="" coords="583,184,647,211"/>
+<area shape="rect" title=" " alt="" coords="671,184,746,211"/>
+<area shape="rect" title=" " alt="" coords="771,184,871,211"/>
+<area shape="rect" title=" " alt="" coords="895,184,986,211"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_cell.html">Cell</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a9160334f5431d469eb3170c95663efa7"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="struct_cell.html">Cell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#a9160334f5431d469eb3170c95663efa7">V_Cell</a></td></tr>
+<tr class="separator:a9160334f5431d469eb3170c95663efa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:af80cb73ed702979369b13acc3053e279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#af80cb73ed702979369b13acc3053e279">voxelCallback</a> (const ros::Publisher &amp;pub, const costmap_2d::VoxelGridConstPtr &amp;grid)</td></tr>
+<tr class="separator:af80cb73ed702979369b13acc3053e279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a78afaf1e4f0d582f44a4bd7e59997f4f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#a78afaf1e4f0d582f44a4bd7e59997f4f">g_colors_r</a> [] = {0.0f, 0.0f, 1.0f}</td></tr>
+<tr class="separator:a78afaf1e4f0d582f44a4bd7e59997f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0a3b44471e2ffc0aceb67acaf283ab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#aad0a3b44471e2ffc0aceb67acaf283ab">g_colors_g</a> [] = {0.0f, 0.0f, 0.0f}</td></tr>
+<tr class="separator:aad0a3b44471e2ffc0aceb67acaf283ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cf9cb8de21cce5b837cb388869e47d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#a99cf9cb8de21cce5b837cb388869e47d">g_colors_b</a> [] = {0.0f, 1.0f, 0.0f}</td></tr>
+<tr class="separator:a99cf9cb8de21cce5b837cb388869e47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7306e31f20b6069ada3ccd04a2dee8fb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#a7306e31f20b6069ada3ccd04a2dee8fb">g_colors_a</a> [] = {0.0f, 0.5f, 1.0f}</td></tr>
+<tr class="separator:a7306e31f20b6069ada3ccd04a2dee8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7087a2e3e8de3485a859283b3a560524"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#a7087a2e3e8de3485a859283b3a560524">g_marker_ns</a></td></tr>
+<tr class="separator:a7087a2e3e8de3485a859283b3a560524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bf85964bfc51e68e1fd5a9ce836778"><td class="memItemLeft" align="right" valign="top"><a class="el" href="costmap__2d__cloud_8cpp.html#a9160334f5431d469eb3170c95663efa7">V_Cell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="costmap__2d__markers_8cpp.html#ab0bf85964bfc51e68e1fd5a9ce836778">g_cells</a></td></tr>
+<tr class="separator:ab0bf85964bfc51e68e1fd5a9ce836778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a9160334f5431d469eb3170c95663efa7" name="a9160334f5431d469eb3170c95663efa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9160334f5431d469eb3170c95663efa7">&#9670;&nbsp;</a></span>V_Cell</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="struct_cell.html">Cell</a>&gt; <a class="el" href="costmap__2d__cloud_8cpp.html#a9160334f5431d469eb3170c95663efa7">V_Cell</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#acostmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="acostmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="acostmap__2d__markers_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" href="costmap__2d__markers_8cpp.html#af80cb73ed702979369b13acc3053e279" title=" " alt="" coords="104,13,207,39"/>
+<area shape="rect" href="classvoxel__grid_1_1_voxel_grid.html#a82798a1492156f1c23801e0c486743a3" title=" " alt="" coords="255,5,401,47"/>
+<area shape="rect" href="classvoxel__grid_1_1_voxel_grid.html#aa2bd3d5ac9d1b1aaea15728978b203db" title=" " alt="" coords="449,5,596,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af80cb73ed702979369b13acc3053e279" name="af80cb73ed702979369b13acc3053e279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80cb73ed702979369b13acc3053e279">&#9670;&nbsp;</a></span>voxelCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void voxelCallback </td>
+          <td>(</td>
+          <td class="paramtype">const ros::Publisher &amp;&#160;</td>
+          <td class="paramname"><em>pub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const costmap_2d::VoxelGridConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>grid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_cgraph.png" border="0" usemap="#acostmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_cgraph" alt=""/></div>
+<map name="acostmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_cgraph" id="acostmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,108,39"/>
+<area shape="rect" href="classvoxel__grid_1_1_voxel_grid.html#a82798a1492156f1c23801e0c486743a3" title=" " alt="" coords="156,5,303,47"/>
+<area shape="rect" href="classvoxel__grid_1_1_voxel_grid.html#aa2bd3d5ac9d1b1aaea15728978b203db" title=" " alt="" coords="351,5,497,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="costmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_icgraph.png" border="0" usemap="#acostmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_icgraph" alt=""/></div>
+<map name="acostmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_icgraph" id="acostmap__2d__markers_8cpp_af80cb73ed702979369b13acc3053e279_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,207,32"/>
+<area shape="rect" href="costmap__2d__markers_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ab0bf85964bfc51e68e1fd5a9ce836778" name="ab0bf85964bfc51e68e1fd5a9ce836778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bf85964bfc51e68e1fd5a9ce836778">&#9670;&nbsp;</a></span>g_cells</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="costmap__2d__cloud_8cpp.html#a9160334f5431d469eb3170c95663efa7">V_Cell</a> g_cells</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7306e31f20b6069ada3ccd04a2dee8fb" name="a7306e31f20b6069ada3ccd04a2dee8fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7306e31f20b6069ada3ccd04a2dee8fb">&#9670;&nbsp;</a></span>g_colors_a</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g_colors_a[] = {0.0f, 0.5f, 1.0f}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99cf9cb8de21cce5b837cb388869e47d" name="a99cf9cb8de21cce5b837cb388869e47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99cf9cb8de21cce5b837cb388869e47d">&#9670;&nbsp;</a></span>g_colors_b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g_colors_b[] = {0.0f, 1.0f, 0.0f}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad0a3b44471e2ffc0aceb67acaf283ab" name="aad0a3b44471e2ffc0aceb67acaf283ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0a3b44471e2ffc0aceb67acaf283ab">&#9670;&nbsp;</a></span>g_colors_g</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g_colors_g[] = {0.0f, 0.0f, 0.0f}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78afaf1e4f0d582f44a4bd7e59997f4f" name="a78afaf1e4f0d582f44a4bd7e59997f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78afaf1e4f0d582f44a4bd7e59997f4f">&#9670;&nbsp;</a></span>g_colors_r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g_colors_r[] = {0.0f, 0.0f, 1.0f}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7087a2e3e8de3485a859283b3a560524" name="a7087a2e3e8de3485a859283b3a560524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7087a2e3e8de3485a859283b3a560524">&#9670;&nbsp;</a></span>g_marker_ns</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string g_marker_ns</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="costmap_2d::ObstacleLayer::getClearingObservations" name="costmap_2d::ObstacleLayer::getClearingObservations">
+<area shape="rect" id="node1" title="获取用于清除空间的观测值" alt="" coords="239,39,424,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="15,71,181,112"/>
+</map>

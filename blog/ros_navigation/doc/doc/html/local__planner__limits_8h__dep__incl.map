@@ -1,0 +1,14 @@
+<map id="base_local_planner/include/base_local_planner/local_planner_limits.h" name="base_local_planner/include/base_local_planner/local_planner_limits.h">
+<area shape="rect" id="node1" title=" " alt="" coords="335,5,486,76"/>
+<area shape="rect" id="node2" href="$local__planner__util_8h.html" title=" " alt="" coords="279,124,430,195"/>
+<area shape="rect" id="node4" href="$latched__stop__rotate__controller_8cpp.html" title=" " alt="" coords="5,361,168,417"/>
+<area shape="rect" id="node8" href="$dwa__planner_8h.html" title=" " alt="" coords="436,250,609,306"/>
+<area shape="rect" id="node10" href="$simple__trajectory__generator_8h.html" title=" " alt="" coords="589,124,763,195"/>
+<area shape="rect" id="node3" href="$latched__stop__rotate__controller_8h.html" title=" " alt="" coords="263,243,412,313"/>
+<area shape="rect" id="node7" href="$local__planner__util_8cpp.html" title=" " alt="" coords="65,257,239,299"/>
+<area shape="rect" id="node5" href="$dwa__planner__ros_8h.html" title=" " alt="" coords="251,361,424,417"/>
+<area shape="rect" id="node6" href="$dwa__planner__ros_8cpp.html" title=" " alt="" coords="262,465,413,507"/>
+<area shape="rect" id="node9" href="$dwa__planner_8cpp.html" title=" " alt="" coords="449,369,599,410"/>
+<area shape="rect" id="node11" href="$simple__trajectory__generator_8cpp.html" title=" " alt="" coords="633,250,780,306"/>
+<area shape="rect" id="node12" href="$trajectory__generator__test_8cpp.html" title=" " alt="" coords="805,250,971,306"/>
+</map>

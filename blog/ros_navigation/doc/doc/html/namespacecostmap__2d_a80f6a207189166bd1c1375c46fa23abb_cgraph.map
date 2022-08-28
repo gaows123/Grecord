@@ -1,0 +1,4 @@
+<map id="costmap_2d::makeFootprintFromXMLRPC" name="costmap_2d::makeFootprintFromXMLRPC">
+<area shape="rect" id="node1" title="Create the footprint from the given XmlRpcValue." alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#a45dac86e116bbc150dedcf1bd2c8c697" title=" " alt="" coords="237,5,432,47"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="voxel_grid::VoxelGrid::numBits" name="voxel_grid::VoxelGrid::numBits">
+<area shape="rect" id="node1" title=" " alt="" coords="537,100,684,141"/>
+<area shape="rect" id="node2" href="$classvoxel__grid_1_1_voxel_grid.html#a82798a1492156f1c23801e0c486743a3" title=" " alt="" coords="343,100,489,141"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_voxel_grid_model.html#ae64342a63e8e7360997aba566b5f0ed1" title="Function copying the Voxel points into a point cloud" alt="" coords="109,5,295,47"/>
+<area shape="rect" id="node4" href="$classvoxel__grid_1_1_voxel_grid.html#a23f965c26a19c8eeddaedab7640999a0" title=" " alt="" coords="129,71,275,112"/>
+<area shape="rect" id="node5" href="$voxel__grid__tests_8cpp.html#a4ed1e65f04eb231a04beb7c3cd79983d" title=" " alt="" coords="5,107,61,134"/>
+<area shape="rect" id="node6" href="$costmap__2d__cloud_8cpp.html#a37983da30da7edf07fa9971cd4957c6b" title=" " alt="" coords="151,187,253,214"/>
+<area shape="rect" id="node7" href="$costmap__2d__cloud_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,187,59,214"/>
+</map>

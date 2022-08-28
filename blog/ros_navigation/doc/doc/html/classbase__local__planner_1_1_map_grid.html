@@ -1,0 +1,1214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::MapGrid类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_map_grid.html">MapGrid</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_map_grid-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::MapGrid类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>A grid of <a class="el" href="classbase__local__planner_1_1_map_cell.html" title="Stores path distance and goal distance information used for scoring trajectories">MapCell</a> cells that is used to propagate path and goal distances for the trajectory controller.  
+ <a href="classbase__local__planner_1_1_map_grid.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="map__grid_8h_source.html">map_grid.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad10445cf88357f857c8e03b47262b732"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#ad10445cf88357f857c8e03b47262b732">MapGrid</a> ()</td></tr>
+<tr class="memdesc:ad10445cf88357f857c8e03b47262b732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 0x0 map by default  <a href="classbase__local__planner_1_1_map_grid.html#ad10445cf88357f857c8e03b47262b732">更多...</a><br /></td></tr>
+<tr class="separator:ad10445cf88357f857c8e03b47262b732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e83a26cdb3c6614d9ca4635da5dc92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a55e83a26cdb3c6614d9ca4635da5dc92">MapGrid</a> (unsigned int size_x, unsigned int size_y)</td></tr>
+<tr class="memdesc:a55e83a26cdb3c6614d9ca4635da5dc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a map of size_x by size_y  <a href="classbase__local__planner_1_1_map_grid.html#a55e83a26cdb3c6614d9ca4635da5dc92">更多...</a><br /></td></tr>
+<tr class="separator:a55e83a26cdb3c6614d9ca4635da5dc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfe8cec7bc6c5ac8c6c177ebd13fa99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a1dfe8cec7bc6c5ac8c6c177ebd13fa99">operator()</a> (unsigned int x, unsigned int y)</td></tr>
+<tr class="memdesc:a1dfe8cec7bc6c5ac8c6c177ebd13fa99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a map cell accessed by (col, row)  <a href="classbase__local__planner_1_1_map_grid.html#a1dfe8cec7bc6c5ac8c6c177ebd13fa99">更多...</a><br /></td></tr>
+<tr class="separator:a1dfe8cec7bc6c5ac8c6c177ebd13fa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b6b750b5eae5778c55b9cb4bfca04f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a28b6b750b5eae5778c55b9cb4bfca04f">operator()</a> (unsigned int x, unsigned int y) const</td></tr>
+<tr class="memdesc:a28b6b750b5eae5778c55b9cb4bfca04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a map cell accessed by (col, row)  <a href="classbase__local__planner_1_1_map_grid.html#a28b6b750b5eae5778c55b9cb4bfca04f">更多...</a><br /></td></tr>
+<tr class="separator:a28b6b750b5eae5778c55b9cb4bfca04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a736f0ff4e89771ee50544a625988d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d">getCell</a> (unsigned int x, unsigned int y)</td></tr>
+<tr class="separator:a46a736f0ff4e89771ee50544a625988d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efc6461e975c937560ef8e68b471a78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a8efc6461e975c937560ef8e68b471a78">~MapGrid</a> ()</td></tr>
+<tr class="memdesc:a8efc6461e975c937560ef8e68b471a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for a <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a>  <a href="classbase__local__planner_1_1_map_grid.html#a8efc6461e975c937560ef8e68b471a78">更多...</a><br /></td></tr>
+<tr class="separator:a8efc6461e975c937560ef8e68b471a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374361ae0ac1a7e046ff0013af4285b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a374361ae0ac1a7e046ff0013af4285b6">MapGrid</a> (const <a class="el" href="classbase__local__planner_1_1_map_grid.html">MapGrid</a> &amp;mg)</td></tr>
+<tr class="memdesc:a374361ae0ac1a7e046ff0013af4285b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for a <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a>  <a href="classbase__local__planner_1_1_map_grid.html#a374361ae0ac1a7e046ff0013af4285b6">更多...</a><br /></td></tr>
+<tr class="separator:a374361ae0ac1a7e046ff0013af4285b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058863c16849dab1495f4206bed28321"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_map_grid.html">MapGrid</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a058863c16849dab1495f4206bed28321">operator=</a> (const <a class="el" href="classbase__local__planner_1_1_map_grid.html">MapGrid</a> &amp;mg)</td></tr>
+<tr class="memdesc:a058863c16849dab1495f4206bed28321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator for a <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a>  <a href="classbase__local__planner_1_1_map_grid.html#a058863c16849dab1495f4206bed28321">更多...</a><br /></td></tr>
+<tr class="separator:a058863c16849dab1495f4206bed28321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaede39518e77d4eb1f7fc7766da5cb11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11">resetPathDist</a> ()</td></tr>
+<tr class="memdesc:aaede39518e77d4eb1f7fc7766da5cb11"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset path distance fields for all cells  <a href="classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11">更多...</a><br /></td></tr>
+<tr class="separator:aaede39518e77d4eb1f7fc7766da5cb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7418321ccc809a6dfa8e45ada16c6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d">sizeCheck</a> (unsigned int size_x, unsigned int size_y)</td></tr>
+<tr class="memdesc:ada7418321ccc809a6dfa8e45ada16c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if we need to resize  <a href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d">更多...</a><br /></td></tr>
+<tr class="separator:ada7418321ccc809a6dfa8e45ada16c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68495bea908d9bf692ef8520ca4fb432"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a68495bea908d9bf692ef8520ca4fb432">commonInit</a> ()</td></tr>
+<tr class="memdesc:a68495bea908d9bf692ef8520ca4fb432"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility to share initialization code across constructors  <a href="classbase__local__planner_1_1_map_grid.html#a68495bea908d9bf692ef8520ca4fb432">更多...</a><br /></td></tr>
+<tr class="separator:a68495bea908d9bf692ef8520ca4fb432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd22c28f3c45c9336ec7f1ecb33d423"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a3fd22c28f3c45c9336ec7f1ecb33d423">getIndex</a> (int x, int y)</td></tr>
+<tr class="memdesc:a3fd22c28f3c45c9336ec7f1ecb33d423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 1D index into the <a class="el" href="classbase__local__planner_1_1_map_cell.html" title="Stores path distance and goal distance information used for scoring trajectories">MapCell</a> array for a 2D index  <a href="classbase__local__planner_1_1_map_grid.html#a3fd22c28f3c45c9336ec7f1ecb33d423">更多...</a><br /></td></tr>
+<tr class="separator:a3fd22c28f3c45c9336ec7f1ecb33d423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3db024faefa9420ec75b18d4da90cfe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe">obstacleCosts</a> ()</td></tr>
+<tr class="separator:af3db024faefa9420ec75b18d4da90cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7145c6781d0d3703a1003b9f753420"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420">unreachableCellCosts</a> ()</td></tr>
+<tr class="separator:a1b7145c6781d0d3703a1003b9f753420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88efaf02a2735770450745f47239f0d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9">updatePathCell</a> (<a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> *current_cell, <a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> *check_cell, const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap)</td></tr>
+<tr class="memdesc:a88efaf02a2735770450745f47239f0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to update the distance of a cell in path distance computation  <a href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9">更多...</a><br /></td></tr>
+<tr class="separator:a88efaf02a2735770450745f47239f0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29d565af28ed4dc377ac997c70070f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2">computeTargetDistance</a> (std::queue&lt; <a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> * &gt; &amp;dist_queue, const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap)</td></tr>
+<tr class="memdesc:ab29d565af28ed4dc377ac997c70070f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the distance from each cell in the local map grid to the planned path  <a href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2">更多...</a><br /></td></tr>
+<tr class="separator:ab29d565af28ed4dc377ac997c70070f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b47e664abc157ef47e8a1ed5d0d357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a35b47e664abc157ef47e8a1ed5d0d357">computeGoalDistance</a> (std::queue&lt; <a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> * &gt; &amp;dist_queue, const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap)</td></tr>
+<tr class="memdesc:a35b47e664abc157ef47e8a1ed5d0d357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the distance from each cell in the local map grid to the local goal point  <a href="classbase__local__planner_1_1_map_grid.html#a35b47e664abc157ef47e8a1ed5d0d357">更多...</a><br /></td></tr>
+<tr class="separator:a35b47e664abc157ef47e8a1ed5d0d357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3227190b9f67376ee2890f493079d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5">setTargetCells</a> (const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap, const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan)</td></tr>
+<tr class="memdesc:a8e3227190b9f67376ee2890f493079d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update what cells are considered path based on the global plan  <a href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5">更多...</a><br /></td></tr>
+<tr class="separator:a8e3227190b9f67376ee2890f493079d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73fe99a7ad21b36a3178e26296945d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5">setLocalGoal</a> (const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;costmap, const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan)</td></tr>
+<tr class="memdesc:ab73fe99a7ad21b36a3178e26296945d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update what cell is considered the next local goal  <a href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5">更多...</a><br /></td></tr>
+<tr class="separator:ab73fe99a7ad21b36a3178e26296945d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a0af367c6272d3c4b7c16dde4a41c306a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a">adjustPlanResolution</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan_in, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;global_plan_out, double resolution)</td></tr>
+<tr class="separator:a0af367c6272d3c4b7c16dde4a41c306a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a6153b07220fff0cad38a82491d288510"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a6153b07220fff0cad38a82491d288510">goal_x_</a></td></tr>
+<tr class="separator:a6153b07220fff0cad38a82491d288510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab53586ea5096453439256dd47545559b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#ab53586ea5096453439256dd47545559b">goal_y_</a></td></tr>
+<tr class="memdesc:ab53586ea5096453439256dd47545559b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The goal distance was last computed from  <a href="classbase__local__planner_1_1_map_grid.html#ab53586ea5096453439256dd47545559b">更多...</a><br /></td></tr>
+<tr class="separator:ab53586ea5096453439256dd47545559b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41702016ab4edc01a0b23fc05a9c64de"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a41702016ab4edc01a0b23fc05a9c64de">size_x_</a></td></tr>
+<tr class="separator:a41702016ab4edc01a0b23fc05a9c64de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac1b094ef9469b56c59c3ab1008de47"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#afac1b094ef9469b56c59c3ab1008de47">size_y_</a></td></tr>
+<tr class="memdesc:afac1b094ef9469b56c59c3ab1008de47"><td class="mdescLeft">&#160;</td><td class="mdescRight">The dimensions of the grid  <a href="classbase__local__planner_1_1_map_grid.html#afac1b094ef9469b56c59c3ab1008de47">更多...</a><br /></td></tr>
+<tr class="separator:afac1b094ef9469b56c59c3ab1008de47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8e42b62548d1e12c82db5a7e843a0b0e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid.html#a8e42b62548d1e12c82db5a7e843a0b0e">map_</a></td></tr>
+<tr class="memdesc:a8e42b62548d1e12c82db5a7e843a0b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage for the MapCells  <a href="classbase__local__planner_1_1_map_grid.html#a8e42b62548d1e12c82db5a7e843a0b0e">更多...</a><br /></td></tr>
+<tr class="separator:a8e42b62548d1e12c82db5a7e843a0b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >A grid of <a class="el" href="classbase__local__planner_1_1_map_cell.html" title="Stores path distance and goal distance information used for scoring trajectories">MapCell</a> cells that is used to propagate path and goal distances for the trajectory controller. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ad10445cf88357f857c8e03b47262b732" name="ad10445cf88357f857c8e03b47262b732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad10445cf88357f857c8e03b47262b732">&#9670;&nbsp;</a></span>MapGrid() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::MapGrid::MapGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a 0x0 map by default </p>
+
+</div>
+</div>
+<a id="a55e83a26cdb3c6614d9ca4635da5dc92" name="a55e83a26cdb3c6614d9ca4635da5dc92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e83a26cdb3c6614d9ca4635da5dc92">&#9670;&nbsp;</a></span>MapGrid() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::MapGrid::MapGrid </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a map of size_x by size_y </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size_x</td><td>The width of the map </td></tr>
+    <tr><td class="paramname">size_y</td><td>The height of the map </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92_cgraph" id="aclassbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92_cgraph">
+<area shape="rect" title="Creates a map of size_x by size_y" alt="" coords="5,5,141,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a68495bea908d9bf692ef8520ca4fb432" title="Utility to share initialization code across constructors" alt="" coords="189,5,344,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8efc6461e975c937560ef8e68b471a78" name="a8efc6461e975c937560ef8e68b471a78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8efc6461e975c937560ef8e68b471a78">&#9670;&nbsp;</a></span>~MapGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::MapGrid::~MapGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor for a <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a> </p>
+
+</div>
+</div>
+<a id="a374361ae0ac1a7e046ff0013af4285b6" name="a374361ae0ac1a7e046ff0013af4285b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374361ae0ac1a7e046ff0013af4285b6">&#9670;&nbsp;</a></span>MapGrid() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::MapGrid::MapGrid </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbase__local__planner_1_1_map_grid.html">MapGrid</a> &amp;&#160;</td>
+          <td class="paramname"><em>mg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor for a <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mg</td><td>The <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a> to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0af367c6272d3c4b7c16dde4a41c306a" name="a0af367c6272d3c4b7c16dde4a41c306a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af367c6272d3c4b7c16dde4a41c306a">&#9670;&nbsp;</a></span>adjustPlanResolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::adjustPlanResolution </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>global_plan_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>global_plan_out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resolution</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >increase global plan resolution to match that of the costmap by adding points linearly between global plan points This is necessary where global planners produce plans with few points. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_plan_in</td><td>input </td></tr>
+    <tr><td class="paramname">global_plan_output</td><td>output </td></tr>
+    <tr><td class="paramname">resolution</td><td>desired distance between waypoints </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a_icgraph" id="aclassbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a_icgraph">
+<area shape="rect" title=" " alt="" coords="669,125,879,166"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="455,125,617,166"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="451,59,621,101"/>
+<area shape="rect" href="namespacebase__local__planner.html#ab74190adf8665074e8369cafc1802e09" title=" " alt="" coords="469,190,603,231"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,5,391,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,165,403,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,85,391,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,165,182,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,85,182,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a68495bea908d9bf692ef8520ca4fb432" name="a68495bea908d9bf692ef8520ca4fb432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68495bea908d9bf692ef8520ca4fb432">&#9670;&nbsp;</a></span>commonInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::commonInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Utility to share initialization code across constructors </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432_icgraph" id="aclassbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432_icgraph">
+<area shape="rect" title="Utility to share initialization code across constructors" alt="" coords="189,5,344,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a55e83a26cdb3c6614d9ca4635da5dc92" title="Creates a map of size_x by size_y" alt="" coords="5,5,141,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35b47e664abc157ef47e8a1ed5d0d357" name="a35b47e664abc157ef47e8a1ed5d0d357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b47e664abc157ef47e8a1ed5d0d357">&#9670;&nbsp;</a></span>computeGoalDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::computeGoalDistance </td>
+          <td>(</td>
+          <td class="paramtype">std::queue&lt; <a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dist_queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the distance from each cell in the local map grid to the local goal point </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">goal_queue</td><td>A queue containing the local goal cell </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab29d565af28ed4dc377ac997c70070f2" name="ab29d565af28ed4dc377ac997c70070f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab29d565af28ed4dc377ac997c70070f2">&#9670;&nbsp;</a></span>computeTargetDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::computeTargetDistance </td>
+          <td>(</td>
+          <td class="paramtype">std::queue&lt; <a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dist_queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the distance from each cell in the local map grid to the planned path </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dist_queue</td><td>A queue of the initial cells on the path </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_cgraph" id="aclassbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_cgraph">
+<area shape="rect" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="5,71,231,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="279,71,453,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="520,5,653,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="502,71,671,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="501,136,672,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="720,71,889,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_icgraph" id="aclassbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_icgraph">
+<area shape="rect" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="669,166,895,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a58ec327a9cf5589741ccf6bd31ca933d" title=" " alt="" coords="457,5,615,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a53eaee5e09664c9c8882bf23eb45be82" title=" " alt="" coords="457,85,615,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="455,231,617,273"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="451,166,621,207"/>
+<area shape="rect" href="namespacebase__local__planner.html#a8fb58f0ae9c9c417df5321e2ef3bd60c" title=" " alt="" coords="469,297,603,338"/>
+<area shape="rect" href="namespacebase__local__planner.html#a49432455b0122a8b75bef05fd84eb810" title=" " alt="" coords="258,13,391,54"/>
+<area shape="rect" href="namespacebase__local__planner.html#a9c71ef4d2653527ff043e64226f98364" title=" " alt="" coords="258,78,391,119"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,144,391,200"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,304,403,360"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,224,391,280"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,144,199,200"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,224,182,280"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,304,182,360"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a46a736f0ff4e89771ee50544a625988d" name="a46a736f0ff4e89771ee50544a625988d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a736f0ff4e89771ee50544a625988d">&#9670;&nbsp;</a></span>getCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> &amp; base_local_planner::MapGrid::getCell </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d_icgraph" id="aclassbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d_icgraph">
+<area shape="rect" title=" " alt="" coords="1165,187,1299,229"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="455,158,617,199"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="451,93,621,134"/>
+<area shape="rect" href="namespacebase__local__planner.html#aabb9dc6669565b8edb8b51fadff6748a" title=" " alt="" coords="963,282,1097,323"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="943,217,1117,258"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,5,391,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,165,403,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,85,391,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,85,182,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,165,182,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="669,223,895,265"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a58ec327a9cf5589741ccf6bd31ca933d" title=" " alt="" coords="457,224,615,280"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a53eaee5e09664c9c8882bf23eb45be82" title=" " alt="" coords="457,304,615,360"/>
+<area shape="rect" href="namespacebase__local__planner.html#a8fb58f0ae9c9c417df5321e2ef3bd60c" title=" " alt="" coords="469,385,603,426"/>
+<area shape="rect" href="namespacebase__local__planner.html#a49432455b0122a8b75bef05fd84eb810" title=" " alt="" coords="258,246,391,287"/>
+<area shape="rect" href="namespacebase__local__planner.html#a9c71ef4d2653527ff043e64226f98364" title=" " alt="" coords="258,311,391,353"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3fd22c28f3c45c9336ec7f1ecb33d423" name="a3fd22c28f3c45c9336ec7f1ecb33d423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd22c28f3c45c9336ec7f1ecb33d423">&#9670;&nbsp;</a></span>getIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t base_local_planner::MapGrid::getIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a 1D index into the <a class="el" href="classbase__local__planner_1_1_map_cell.html" title="Stores path distance and goal distance information used for scoring trajectories">MapCell</a> array for a 2D index </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The desired x coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>The desired y coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The associated 1D index </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423_icgraph" id="aclassbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423_icgraph">
+<area shape="rect" title="Returns a 1D index into the MapCell array for a 2D index" alt="" coords="187,5,324,47"/>
+<area shape="rect" href="namespacebase__local__planner.html#a20d60d586e40c99bd35548561a200726" title=" " alt="" coords="5,5,139,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3db024faefa9420ec75b18d4da90cfe" name="af3db024faefa9420ec75b18d4da90cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3db024faefa9420ec75b18d4da90cfe">&#9670;&nbsp;</a></span>obstacleCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGrid::obstacleCosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return a value that indicates cell is in obstacle </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe_icgraph" id="aclassbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe_icgraph">
+<area shape="rect" title=" " alt="" coords="1177,550,1348,591"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a44c8434c9df68efb24eef36fc670ae7c" title="Create the trajectories we wish to explore, score them, and return the best option" alt="" coords="727,291,861,347"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a23f9726d0f43f94e8c5b3a50556dd7b7" title="Compute the components and total cost for a map grid cell" alt="" coords="975,579,1109,635"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#a14783081aef0e5f4702edf317a10c167" title=" " alt="" coords="964,659,1120,715"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="727,432,861,488"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#a4332b1fd1c72795c87fb5d3a427df476" title=" " alt="" coords="964,739,1120,795"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="955,513,1129,554"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="260,216,393,272"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,119,199,175"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="714,616,874,672"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="464,731,624,787"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab62d6664d13e90e42327de34a2ed1cfb" title="Compute the components and total cost for a map grid cell 计算地图网格单元的代价" alt="" coords="705,735,883,777"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="455,811,633,853"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a16f45df8237d94cafe714d4e5aa4eeb3" title="产生和打分单个局部路径" alt="" coords="477,117,611,173"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,376,182,432"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,264,182,320"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="247,5,407,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3" title="基于加速度限制让机器人停止" alt="" coords="247,85,407,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="681,513,907,554"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a58ec327a9cf5589741ccf6bd31ca933d" title=" " alt="" coords="465,571,623,627"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a53eaee5e09664c9c8882bf23eb45be82" title=" " alt="" coords="465,651,623,707"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="463,377,625,418"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="459,306,629,347"/>
+<area shape="rect" href="namespacebase__local__planner.html#a8fb58f0ae9c9c417df5321e2ef3bd60c" title=" " alt="" coords="477,505,611,546"/>
+<area shape="rect" href="namespacebase__local__planner.html#a49432455b0122a8b75bef05fd84eb810" title=" " alt="" coords="260,578,393,619"/>
+<area shape="rect" href="namespacebase__local__planner.html#a9c71ef4d2653527ff043e64226f98364" title=" " alt="" coords="260,658,393,699"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="249,376,405,432"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="260,296,393,352"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1dfe8cec7bc6c5ac8c6c177ebd13fa99" name="a1dfe8cec7bc6c5ac8c6c177ebd13fa99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dfe8cec7bc6c5ac8c6c177ebd13fa99">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> &amp; base_local_planner::MapGrid::operator() </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a map cell accessed by (col, row) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x coordinate of the cell </td></tr>
+    <tr><td class="paramname">y</td><td>The y coordinate of the cell </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>A reference to the desired cell </dd></dl>
+
+</div>
+</div>
+<a id="a28b6b750b5eae5778c55b9cb4bfca04f" name="a28b6b750b5eae5778c55b9cb4bfca04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b6b750b5eae5778c55b9cb4bfca04f">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> base_local_planner::MapGrid::operator() </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a map cell accessed by (col, row) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>The x coordinate of the cell </td></tr>
+    <tr><td class="paramname">y</td><td>The y coordinate of the cell </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>A copy of the desired cell </dd></dl>
+
+</div>
+</div>
+<a id="a058863c16849dab1495f4206bed28321" name="a058863c16849dab1495f4206bed28321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058863c16849dab1495f4206bed28321">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_map_grid.html">MapGrid</a> &amp; base_local_planner::MapGrid::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classbase__local__planner_1_1_map_grid.html">MapGrid</a> &amp;&#160;</td>
+          <td class="paramname"><em>mg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assignment operator for a <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a> </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mg</td><td>The <a class="el" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll...">MapGrid</a> to assign from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaede39518e77d4eb1f7fc7766da5cb11" name="aaede39518e77d4eb1f7fc7766da5cb11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaede39518e77d4eb1f7fc7766da5cb11">&#9670;&nbsp;</a></span>resetPathDist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::resetPathDist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>reset path distance fields for all cells </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_cgraph" id="aclassbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_cgraph">
+<area shape="rect" title="reset path distance fields for all cells" alt="" coords="5,13,172,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="220,5,399,61"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_icgraph" id="aclassbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_icgraph">
+<area shape="rect" title="reset path distance fields for all cells" alt="" coords="453,213,620,254"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a58ec327a9cf5589741ccf6bd31ca933d" title=" " alt="" coords="247,5,405,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a53eaee5e09664c9c8882bf23eb45be82" title=" " alt="" coords="247,85,405,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="259,165,393,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="248,245,404,301"/>
+<area shape="rect" href="namespacebase__local__planner.html#a2b6e0b9c86c15e1c5655e64517b0c785" title=" " alt="" coords="259,326,393,367"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="259,392,393,448"/>
+<area shape="rect" href="namespacebase__local__planner.html#a49432455b0122a8b75bef05fd84eb810" title=" " alt="" coords="35,13,169,54"/>
+<area shape="rect" href="namespacebase__local__planner.html#a9c71ef4d2653527ff043e64226f98364" title=" " alt="" coords="35,93,169,134"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,219,199,275"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,352,182,408"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,432,182,488"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab73fe99a7ad21b36a3178e26296945d5" name="ab73fe99a7ad21b36a3178e26296945d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73fe99a7ad21b36a3178e26296945d5">&#9670;&nbsp;</a></span>setLocalGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::setLocalGoal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>global_plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update what cell is considered the next local goal </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_cgraph" id="aclassbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_cgraph">
+<area shape="rect" title="Update what cell is considered the next local goal" alt="" coords="5,273,168,315"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a" title=" " alt="" coords="224,5,433,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="216,123,441,164"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="731,57,864,99"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="713,188,882,229"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="244,240,413,281"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="244,305,413,347"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="244,371,413,412"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="244,436,413,477"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="255,501,403,543"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="244,567,413,608"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="489,123,664,164"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="712,123,883,164"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="931,188,1100,229"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_icgraph" id="aclassbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_icgraph">
+<area shape="rect" title="Update what cell is considered the next local goal" alt="" coords="451,93,613,134"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,5,391,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,85,403,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,165,391,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,25,199,81"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,125,182,181"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,205,182,261"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e3227190b9f67376ee2890f493079d5" name="a8e3227190b9f67376ee2890f493079d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3227190b9f67376ee2890f493079d5">&#9670;&nbsp;</a></span>setTargetCells()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::setTargetCells </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>global_plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update what cells are considered path based on the global plan </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_cgraph" id="aclassbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_cgraph">
+<area shape="rect" title="Update what cells are considered path based on the global plan" alt="" coords="5,240,176,281"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a" title=" " alt="" coords="232,5,441,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="224,123,449,164"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="739,57,872,99"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="721,188,890,229"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="252,240,421,281"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="252,305,421,347"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="252,371,421,412"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="263,436,411,477"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="252,501,421,543"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="497,123,672,164"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="720,123,891,164"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="939,188,1108,229"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_icgraph" id="aclassbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_icgraph">
+<area shape="rect" title="Update what cells are considered path based on the global plan" alt="" coords="451,93,621,134"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,5,391,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,85,403,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,165,391,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,25,199,81"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,125,182,181"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,205,182,261"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada7418321ccc809a6dfa8e45ada16c6d" name="ada7418321ccc809a6dfa8e45ada16c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7418321ccc809a6dfa8e45ada16c6d">&#9670;&nbsp;</a></span>sizeCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGrid::sizeCheck </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check if we need to resize </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size_x</td><td>The desired width </td></tr>
+    <tr><td class="paramname">size_y</td><td>The desired height </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d_icgraph" id="aclassbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d_icgraph">
+<area shape="rect" title="check if we need to resize" alt="" coords="669,125,817,166"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="455,125,617,166"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="451,59,621,101"/>
+<area shape="rect" href="namespacebase__local__planner.html#ad816bba67d8b1da92ea312fafb34cb57" title=" " alt="" coords="469,190,603,231"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,5,391,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,165,403,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,85,391,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,165,182,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,85,182,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1b7145c6781d0d3703a1003b9f753420" name="a1b7145c6781d0d3703a1003b9f753420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7145c6781d0d3703a1003b9f753420">&#9670;&nbsp;</a></span>unreachableCellCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGrid::unreachableCellCosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >returns a value indicating cell was not reached by wavefront propagation of set cells. (is behind walls, regarding the region covered by grid) </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420_icgraph" id="aclassbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420_icgraph">
+<area shape="rect" title=" " alt="" coords="688,388,867,444"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a23f9726d0f43f94e8c5b3a50556dd7b7" title="Compute the components and total cost for a map grid cell" alt="" coords="490,129,623,185"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11" title="reset path distance fields for all cells" alt="" coords="473,333,640,374"/>
+<area shape="rect" href="namespacebase__local__planner.html#a2b6e0b9c86c15e1c5655e64517b0c785" title=" " alt="" coords="269,486,403,527"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#a4332b1fd1c72795c87fb5d3a427df476" title=" " alt="" coords="479,453,635,509"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#a9e561793dbbb51118834f19673e17892" title=" " alt="" coords="479,540,635,596"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="256,5,416,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="22,5,182,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a58ec327a9cf5589741ccf6bd31ca933d" title=" " alt="" coords="257,85,415,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a53eaee5e09664c9c8882bf23eb45be82" title=" " alt="" coords="257,165,415,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="269,245,403,301"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="258,325,414,381"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="269,405,403,461"/>
+<area shape="rect" href="namespacebase__local__planner.html#a49432455b0122a8b75bef05fd84eb810" title=" " alt="" coords="35,93,169,134"/>
+<area shape="rect" href="namespacebase__local__planner.html#a9c71ef4d2653527ff043e64226f98364" title=" " alt="" coords="35,173,169,214"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,277,199,333"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,373,182,429"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,453,182,509"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab62d6664d13e90e42327de34a2ed1cfb" title="Compute the components and total cost for a map grid cell 计算地图网格单元的代价" alt="" coords="247,551,425,593"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="13,551,191,593"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88efaf02a2735770450745f47239f0d9" name="a88efaf02a2735770450745f47239f0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88efaf02a2735770450745f47239f0d9">&#9670;&nbsp;</a></span>updatePathCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::MapGrid::updatePathCell </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> *&#160;</td>
+          <td class="paramname"><em>current_cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a> *&#160;</td>
+          <td class="paramname"><em>check_cell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used to update the distance of a cell in path distance computation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current_cell</td><td>The cell we're currently in </td></tr>
+    <tr><td class="paramname">check_cell</td><td>The cell to be updated </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_cgraph" id="aclassbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_cgraph">
+<area shape="rect" title="Used to update the distance of a cell in path distance computation" alt="" coords="5,71,180,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="247,5,380,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="229,71,398,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="228,136,399,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="447,71,616,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_icgraph" id="aclassbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_icgraph">
+<area shape="rect" title="Used to update the distance of a cell in path distance computation" alt="" coords="943,166,1117,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="669,166,895,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a58ec327a9cf5589741ccf6bd31ca933d" title=" " alt="" coords="457,5,615,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_test.html#a53eaee5e09664c9c8882bf23eb45be82" title=" " alt="" coords="457,85,615,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="455,231,617,273"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="451,166,621,207"/>
+<area shape="rect" href="namespacebase__local__planner.html#a8fb58f0ae9c9c417df5321e2ef3bd60c" title=" " alt="" coords="469,297,603,338"/>
+<area shape="rect" href="namespacebase__local__planner.html#a49432455b0122a8b75bef05fd84eb810" title=" " alt="" coords="258,13,391,54"/>
+<area shape="rect" href="namespacebase__local__planner.html#a9c71ef4d2653527ff043e64226f98364" title=" " alt="" coords="258,78,391,119"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,144,391,200"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,304,403,360"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,224,391,280"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,144,199,200"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,224,182,280"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,304,182,360"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a6153b07220fff0cad38a82491d288510" name="a6153b07220fff0cad38a82491d288510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6153b07220fff0cad38a82491d288510">&#9670;&nbsp;</a></span>goal_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGrid::goal_x_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab53586ea5096453439256dd47545559b" name="ab53586ea5096453439256dd47545559b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab53586ea5096453439256dd47545559b">&#9670;&nbsp;</a></span>goal_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGrid::goal_y_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The goal distance was last computed from </p>
+
+</div>
+</div>
+<a id="a8e42b62548d1e12c82db5a7e843a0b0e" name="a8e42b62548d1e12c82db5a7e843a0b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e42b62548d1e12c82db5a7e843a0b0e">&#9670;&nbsp;</a></span>map_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classbase__local__planner_1_1_map_cell.html">MapCell</a>&gt; base_local_planner::MapGrid::map_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Storage for the MapCells </p>
+
+</div>
+</div>
+<a id="a41702016ab4edc01a0b23fc05a9c64de" name="a41702016ab4edc01a0b23fc05a9c64de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41702016ab4edc01a0b23fc05a9c64de">&#9670;&nbsp;</a></span>size_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int base_local_planner::MapGrid::size_x_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afac1b094ef9469b56c59c3ab1008de47" name="afac1b094ef9469b56c59c3ab1008de47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afac1b094ef9469b56c59c3ab1008de47">&#9670;&nbsp;</a></span>size_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int base_local_planner::MapGrid::size_y_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The dimensions of the grid </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="map__grid_8h_source.html">map_grid.h</a></li>
+<li>base_local_planner/src/<a class="el" href="map__grid_8cpp.html">map_grid.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

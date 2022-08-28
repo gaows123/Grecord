@@ -1,0 +1,807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: FakeOdomNode类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_fake_odom_node-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">FakeOdomNode类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+FakeOdomNode 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fake_odom_node__coll__graph.png" border="0" usemap="#a_fake_odom_node_coll__map" alt="Collaboration graph"/></div>
+<map name="a_fake_odom_node_coll__map" id="a_fake_odom_node_coll__map">
+<area shape="rect" title=" " alt="" coords="5,124,121,151"/>
+<area shape="rect" title=" " alt="" coords="36,5,91,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a864acd0c0eda3e7a165fdb9ec093cab2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a864acd0c0eda3e7a165fdb9ec093cab2">FakeOdomNode</a> (void)</td></tr>
+<tr class="separator:a864acd0c0eda3e7a165fdb9ec093cab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404ea057d2d18ec106c18a669be3342e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a404ea057d2d18ec106c18a669be3342e">~FakeOdomNode</a> (void)</td></tr>
+<tr class="separator:a404ea057d2d18ec106c18a669be3342e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d058408f8f64a09a5e8ba4162336ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a06d058408f8f64a09a5e8ba4162336ae">stuffFilter</a> (const nav_msgs::OdometryConstPtr &amp;odom_msg)</td></tr>
+<tr class="separator:a06d058408f8f64a09a5e8ba4162336ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb6c0570eaa9227128b76690e50af61f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#abb6c0570eaa9227128b76690e50af61f">update</a> (const nav_msgs::OdometryConstPtr &amp;message)</td></tr>
+<tr class="separator:abb6c0570eaa9227128b76690e50af61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4a6d085f1f28c847f7e4d76357f2ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#aed4a6d085f1f28c847f7e4d76357f2ca">initPoseReceived</a> (const geometry_msgs::PoseWithCovarianceStampedConstPtr &amp;msg)</td></tr>
+<tr class="separator:aed4a6d085f1f28c847f7e4d76357f2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a88883f0ebab22d94e774d3e6685fb974"><td class="memItemLeft" align="right" valign="top">ros::NodeHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a88883f0ebab22d94e774d3e6685fb974">m_nh</a></td></tr>
+<tr class="separator:a88883f0ebab22d94e774d3e6685fb974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb21d11b560f6fca7276360924b1c79a"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#aeb21d11b560f6fca7276360924b1c79a">m_posePub</a></td></tr>
+<tr class="separator:aeb21d11b560f6fca7276360924b1c79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7669c1667e09a36ddb96a333a73b7727"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a7669c1667e09a36ddb96a333a73b7727">m_particlecloudPub</a></td></tr>
+<tr class="separator:a7669c1667e09a36ddb96a333a73b7727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4417a04d57c1db0dec988f247f9e9c5b"><td class="memItemLeft" align="right" valign="top">message_filters::Subscriber&lt; geometry_msgs::PoseWithCovarianceStamped &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a4417a04d57c1db0dec988f247f9e9c5b">m_initPoseSub</a></td></tr>
+<tr class="separator:a4417a04d57c1db0dec988f247f9e9c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d9ad2e8c9819fac1de3d5a5e1fb3c28"><td class="memItemLeft" align="right" valign="top">tf2_ros::TransformBroadcaster *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a1d9ad2e8c9819fac1de3d5a5e1fb3c28">m_tfServer</a></td></tr>
+<tr class="separator:a1d9ad2e8c9819fac1de3d5a5e1fb3c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb36d70dd4350435932e72c2edc31c6"><td class="memItemLeft" align="right" valign="top">tf2_ros::TransformListener *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#adbb36d70dd4350435932e72c2edc31c6">m_tfListener</a></td></tr>
+<tr class="separator:adbb36d70dd4350435932e72c2edc31c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568031c4a88886391b7351314f19a4c7"><td class="memItemLeft" align="right" valign="top">tf2_ros::Buffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a568031c4a88886391b7351314f19a4c7">m_tfBuffer</a></td></tr>
+<tr class="separator:a568031c4a88886391b7351314f19a4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ca8457b4aa6a039de7bc3f28b3aa3f"><td class="memItemLeft" align="right" valign="top">tf2_ros::MessageFilter&lt; geometry_msgs::PoseWithCovarianceStamped &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a91ca8457b4aa6a039de7bc3f28b3aa3f">m_initPoseFilter</a></td></tr>
+<tr class="separator:a91ca8457b4aa6a039de7bc3f28b3aa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af018b5f4d18efd8b014f4ed4243ef2dc"><td class="memItemLeft" align="right" valign="top">tf2_ros::MessageFilter&lt; nav_msgs::Odometry &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#af018b5f4d18efd8b014f4ed4243ef2dc">filter_</a></td></tr>
+<tr class="separator:af018b5f4d18efd8b014f4ed4243ef2dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51cafa7ecbe3eae15f8aa0d693320e5e"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a51cafa7ecbe3eae15f8aa0d693320e5e">stuff_sub_</a></td></tr>
+<tr class="separator:a51cafa7ecbe3eae15f8aa0d693320e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39b9f487309547a0f6fd5bc5f26aa19"><td class="memItemLeft" align="right" valign="top">message_filters::Subscriber&lt; nav_msgs::Odometry &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#af39b9f487309547a0f6fd5bc5f26aa19">filter_sub_</a></td></tr>
+<tr class="separator:af39b9f487309547a0f6fd5bc5f26aa19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d663f79a62cdc7bef040c581b7e1da"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a91d663f79a62cdc7bef040c581b7e1da">delta_x_</a></td></tr>
+<tr class="separator:a91d663f79a62cdc7bef040c581b7e1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b950671d225eeb947de29e6e0522b5f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a3b950671d225eeb947de29e6e0522b5f">delta_y_</a></td></tr>
+<tr class="separator:a3b950671d225eeb947de29e6e0522b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92afb0d863eddda3a66dd69be83d4ce8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a92afb0d863eddda3a66dd69be83d4ce8">delta_yaw_</a></td></tr>
+<tr class="separator:a92afb0d863eddda3a66dd69be83d4ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9016ac725a43cc63329fccd6d7038dd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a9016ac725a43cc63329fccd6d7038dd1">m_base_pos_received</a></td></tr>
+<tr class="separator:a9016ac725a43cc63329fccd6d7038dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f0530b4146d9923a19556c081ab842d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a2f0530b4146d9923a19556c081ab842d">transform_tolerance_</a></td></tr>
+<tr class="separator:a2f0530b4146d9923a19556c081ab842d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f785c7ed115e8acc7d3039b8b627b1"><td class="memItemLeft" align="right" valign="top">nav_msgs::Odometry&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a82f785c7ed115e8acc7d3039b8b627b1">m_basePosMsg</a></td></tr>
+<tr class="separator:a82f785c7ed115e8acc7d3039b8b627b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af991310fa1fd66e10f1b9b292273916c"><td class="memItemLeft" align="right" valign="top">geometry_msgs::PoseArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#af991310fa1fd66e10f1b9b292273916c">m_particleCloud</a></td></tr>
+<tr class="separator:af991310fa1fd66e10f1b9b292273916c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5a29a3d94bca9fd2a3068a01da583a"><td class="memItemLeft" align="right" valign="top">geometry_msgs::PoseWithCovarianceStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a0b5a29a3d94bca9fd2a3068a01da583a">m_currentPos</a></td></tr>
+<tr class="separator:a0b5a29a3d94bca9fd2a3068a01da583a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7cb974908656b693380225f490748b"><td class="memItemLeft" align="right" valign="top">tf2::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#aec7cb974908656b693380225f490748b">m_offsetTf</a></td></tr>
+<tr class="separator:aec7cb974908656b693380225f490748b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c338a3cf67a29a22ad8f6368af74f0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#a62c338a3cf67a29a22ad8f6368af74f0">odom_frame_id_</a></td></tr>
+<tr class="separator:a62c338a3cf67a29a22ad8f6368af74f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb530fd739fd69418ab03d2dda888df"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#acfb530fd739fd69418ab03d2dda888df">base_frame_id_</a></td></tr>
+<tr class="separator:acfb530fd739fd69418ab03d2dda888df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addabcbcde60f46270bb735dc316216fb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fake_odom_node.html#addabcbcde60f46270bb735dc316216fb">global_frame_id_</a></td></tr>
+<tr class="separator:addabcbcde60f46270bb735dc316216fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a864acd0c0eda3e7a165fdb9ec093cab2" name="a864acd0c0eda3e7a165fdb9ec093cab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864acd0c0eda3e7a165fdb9ec093cab2">&#9670;&nbsp;</a></span>FakeOdomNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FakeOdomNode::FakeOdomNode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2_cgraph.png" border="0" usemap="#aclass_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2_cgraph" alt=""/></div>
+<map name="aclass_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2_cgraph" id="aclass_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,224,83"/>
+<area shape="rect" href="class_fake_odom_node.html#aed4a6d085f1f28c847f7e4d76357f2ca" title=" " alt="" coords="272,5,497,32"/>
+<area shape="rect" href="class_fake_odom_node.html#a06d058408f8f64a09a5e8ba4162336ae" title=" " alt="" coords="295,56,474,83"/>
+<area shape="rect" href="class_fake_odom_node.html#abb6c0570eaa9227128b76690e50af61f" title=" " alt="" coords="303,107,466,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a404ea057d2d18ec106c18a669be3342e" name="a404ea057d2d18ec106c18a669be3342e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404ea057d2d18ec106c18a669be3342e">&#9670;&nbsp;</a></span>~FakeOdomNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FakeOdomNode::~FakeOdomNode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aed4a6d085f1f28c847f7e4d76357f2ca" name="aed4a6d085f1f28c847f7e4d76357f2ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed4a6d085f1f28c847f7e4d76357f2ca">&#9670;&nbsp;</a></span>initPoseReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FakeOdomNode::initPoseReceived </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseWithCovarianceStampedConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca_icgraph.png" border="0" usemap="#aclass_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca_icgraph" alt=""/></div>
+<map name="aclass_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca_icgraph" id="aclass_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca_icgraph">
+<area shape="rect" title=" " alt="" coords="272,5,497,32"/>
+<area shape="rect" href="class_fake_odom_node.html#a864acd0c0eda3e7a165fdb9ec093cab2" title=" " alt="" coords="5,5,224,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06d058408f8f64a09a5e8ba4162336ae" name="a06d058408f8f64a09a5e8ba4162336ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d058408f8f64a09a5e8ba4162336ae">&#9670;&nbsp;</a></span>stuffFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FakeOdomNode::stuffFilter </td>
+          <td>(</td>
+          <td class="paramtype">const nav_msgs::OdometryConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>odom_msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae_icgraph.png" border="0" usemap="#aclass_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae_icgraph" alt=""/></div>
+<map name="aclass_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae_icgraph" id="aclass_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae_icgraph">
+<area shape="rect" title=" " alt="" coords="272,5,451,32"/>
+<area shape="rect" href="class_fake_odom_node.html#a864acd0c0eda3e7a165fdb9ec093cab2" title=" " alt="" coords="5,5,224,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb6c0570eaa9227128b76690e50af61f" name="abb6c0570eaa9227128b76690e50af61f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6c0570eaa9227128b76690e50af61f">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FakeOdomNode::update </td>
+          <td>(</td>
+          <td class="paramtype">const nav_msgs::OdometryConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fake_odom_node_abb6c0570eaa9227128b76690e50af61f_icgraph.png" border="0" usemap="#aclass_fake_odom_node_abb6c0570eaa9227128b76690e50af61f_icgraph" alt=""/></div>
+<map name="aclass_fake_odom_node_abb6c0570eaa9227128b76690e50af61f_icgraph" id="aclass_fake_odom_node_abb6c0570eaa9227128b76690e50af61f_icgraph">
+<area shape="rect" title=" " alt="" coords="272,5,435,32"/>
+<area shape="rect" href="class_fake_odom_node.html#a864acd0c0eda3e7a165fdb9ec093cab2" title=" " alt="" coords="5,5,224,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="acfb530fd739fd69418ab03d2dda888df" name="acfb530fd739fd69418ab03d2dda888df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb530fd739fd69418ab03d2dda888df">&#9670;&nbsp;</a></span>base_frame_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FakeOdomNode::base_frame_id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91d663f79a62cdc7bef040c581b7e1da" name="a91d663f79a62cdc7bef040c581b7e1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d663f79a62cdc7bef040c581b7e1da">&#9670;&nbsp;</a></span>delta_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FakeOdomNode::delta_x_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b950671d225eeb947de29e6e0522b5f" name="a3b950671d225eeb947de29e6e0522b5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b950671d225eeb947de29e6e0522b5f">&#9670;&nbsp;</a></span>delta_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FakeOdomNode::delta_y_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92afb0d863eddda3a66dd69be83d4ce8" name="a92afb0d863eddda3a66dd69be83d4ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92afb0d863eddda3a66dd69be83d4ce8">&#9670;&nbsp;</a></span>delta_yaw_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FakeOdomNode::delta_yaw_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af018b5f4d18efd8b014f4ed4243ef2dc" name="af018b5f4d18efd8b014f4ed4243ef2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af018b5f4d18efd8b014f4ed4243ef2dc">&#9670;&nbsp;</a></span>filter_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::MessageFilter&lt;nav_msgs::Odometry&gt;* FakeOdomNode::filter_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af39b9f487309547a0f6fd5bc5f26aa19" name="af39b9f487309547a0f6fd5bc5f26aa19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39b9f487309547a0f6fd5bc5f26aa19">&#9670;&nbsp;</a></span>filter_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">message_filters::Subscriber&lt;nav_msgs::Odometry&gt;* FakeOdomNode::filter_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addabcbcde60f46270bb735dc316216fb" name="addabcbcde60f46270bb735dc316216fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addabcbcde60f46270bb735dc316216fb">&#9670;&nbsp;</a></span>global_frame_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FakeOdomNode::global_frame_id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9016ac725a43cc63329fccd6d7038dd1" name="a9016ac725a43cc63329fccd6d7038dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9016ac725a43cc63329fccd6d7038dd1">&#9670;&nbsp;</a></span>m_base_pos_received</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FakeOdomNode::m_base_pos_received</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82f785c7ed115e8acc7d3039b8b627b1" name="a82f785c7ed115e8acc7d3039b8b627b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f785c7ed115e8acc7d3039b8b627b1">&#9670;&nbsp;</a></span>m_basePosMsg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nav_msgs::Odometry FakeOdomNode::m_basePosMsg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b5a29a3d94bca9fd2a3068a01da583a" name="a0b5a29a3d94bca9fd2a3068a01da583a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5a29a3d94bca9fd2a3068a01da583a">&#9670;&nbsp;</a></span>m_currentPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::PoseWithCovarianceStamped FakeOdomNode::m_currentPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91ca8457b4aa6a039de7bc3f28b3aa3f" name="a91ca8457b4aa6a039de7bc3f28b3aa3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ca8457b4aa6a039de7bc3f28b3aa3f">&#9670;&nbsp;</a></span>m_initPoseFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::MessageFilter&lt;geometry_msgs::PoseWithCovarianceStamped&gt;* FakeOdomNode::m_initPoseFilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4417a04d57c1db0dec988f247f9e9c5b" name="a4417a04d57c1db0dec988f247f9e9c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4417a04d57c1db0dec988f247f9e9c5b">&#9670;&nbsp;</a></span>m_initPoseSub</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">message_filters::Subscriber&lt;geometry_msgs::PoseWithCovarianceStamped&gt;* FakeOdomNode::m_initPoseSub</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88883f0ebab22d94e774d3e6685fb974" name="a88883f0ebab22d94e774d3e6685fb974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88883f0ebab22d94e774d3e6685fb974">&#9670;&nbsp;</a></span>m_nh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::NodeHandle FakeOdomNode::m_nh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec7cb974908656b693380225f490748b" name="aec7cb974908656b693380225f490748b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7cb974908656b693380225f490748b">&#9670;&nbsp;</a></span>m_offsetTf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2::Transform FakeOdomNode::m_offsetTf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af991310fa1fd66e10f1b9b292273916c" name="af991310fa1fd66e10f1b9b292273916c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af991310fa1fd66e10f1b9b292273916c">&#9670;&nbsp;</a></span>m_particleCloud</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::PoseArray FakeOdomNode::m_particleCloud</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7669c1667e09a36ddb96a333a73b7727" name="a7669c1667e09a36ddb96a333a73b7727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7669c1667e09a36ddb96a333a73b7727">&#9670;&nbsp;</a></span>m_particlecloudPub</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher FakeOdomNode::m_particlecloudPub</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb21d11b560f6fca7276360924b1c79a" name="aeb21d11b560f6fca7276360924b1c79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb21d11b560f6fca7276360924b1c79a">&#9670;&nbsp;</a></span>m_posePub</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher FakeOdomNode::m_posePub</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a568031c4a88886391b7351314f19a4c7" name="a568031c4a88886391b7351314f19a4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a568031c4a88886391b7351314f19a4c7">&#9670;&nbsp;</a></span>m_tfBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::Buffer* FakeOdomNode::m_tfBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbb36d70dd4350435932e72c2edc31c6" name="adbb36d70dd4350435932e72c2edc31c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb36d70dd4350435932e72c2edc31c6">&#9670;&nbsp;</a></span>m_tfListener</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::TransformListener* FakeOdomNode::m_tfListener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d9ad2e8c9819fac1de3d5a5e1fb3c28" name="a1d9ad2e8c9819fac1de3d5a5e1fb3c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d9ad2e8c9819fac1de3d5a5e1fb3c28">&#9670;&nbsp;</a></span>m_tfServer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::TransformBroadcaster* FakeOdomNode::m_tfServer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62c338a3cf67a29a22ad8f6368af74f0" name="a62c338a3cf67a29a22ad8f6368af74f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62c338a3cf67a29a22ad8f6368af74f0">&#9670;&nbsp;</a></span>odom_frame_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FakeOdomNode::odom_frame_id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51cafa7ecbe3eae15f8aa0d693320e5e" name="a51cafa7ecbe3eae15f8aa0d693320e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51cafa7ecbe3eae15f8aa0d693320e5e">&#9670;&nbsp;</a></span>stuff_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Subscriber FakeOdomNode::stuff_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f0530b4146d9923a19556c081ab842d" name="a2f0530b4146d9923a19556c081ab842d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f0530b4146d9923a19556c081ab842d">&#9670;&nbsp;</a></span>transform_tolerance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FakeOdomNode::transform_tolerance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>fake_localization/<a class="el" href="fake__localization_8cpp.html">fake_localization.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

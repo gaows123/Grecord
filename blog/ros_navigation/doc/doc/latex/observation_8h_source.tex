@@ -1,0 +1,84 @@
+\hypertarget{observation_8h_source}{}\doxysection{observation.\+h}
+\label{observation_8h_source}\index{costmap\_2d/include/costmap\_2d/observation.h@{costmap\_2d/include/costmap\_2d/observation.h}}
+\mbox{\hyperlink{observation_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{3 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{6 \textcolor{comment}{ * modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{9 \textcolor{comment}{ *       notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{10 \textcolor{comment}{ *     * Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{11 \textcolor{comment}{ *       notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{12 \textcolor{comment}{ *       documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     * Neither the name of the Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{14 \textcolor{comment}{ *       contributors may be used to endorse or promote products derived from}}
+\DoxyCodeLine{15 \textcolor{comment}{ *       this software without specific prior written permission.}}
+\DoxyCodeLine{16 \textcolor{comment}{ *}}
+\DoxyCodeLine{17 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{18 \textcolor{comment}{ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{19 \textcolor{comment}{ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{20 \textcolor{comment}{ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE}}
+\DoxyCodeLine{21 \textcolor{comment}{ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{22 \textcolor{comment}{ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{23 \textcolor{comment}{ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{24 \textcolor{comment}{ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{26 \textcolor{comment}{ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{27 \textcolor{comment}{ * POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{28 \textcolor{comment}{ *}}
+\DoxyCodeLine{29 \textcolor{comment}{ * Authors: Conor McGann}}
+\DoxyCodeLine{30 \textcolor{comment}{ */}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_OBSERVATION\_H\_}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define COSTMAP\_2D\_OBSERVATION\_H\_}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include <sensor\_msgs/PointCloud2.h>}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{46 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{52   \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab3b54bbb4ea6f16e3b51565990a2dc6b}{Observation}}() :}
+\DoxyCodeLine{53     \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\_}}(new sensor\_msgs::PointCloud2()), \mbox{\hyperlink{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}{obstacle\_range\_}}(0.0), \mbox{\hyperlink{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}{raytrace\_range\_}}(0.0)}
+\DoxyCodeLine{54   \{}
+\DoxyCodeLine{55   \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{keyword}{virtual} \mbox{\hyperlink{classcostmap__2d_1_1_observation_a883a07a854be2d0c42e9e0dee4b8b141}{\string~Observation}}()}
+\DoxyCodeLine{58   \{}
+\DoxyCodeLine{59     \textcolor{keyword}{delete} \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\_}};}
+\DoxyCodeLine{60   \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{69   \mbox{\hyperlink{classcostmap__2d_1_1_observation_a5e401bcb67757893cef8dc990914c053}{Observation}}(geometry\_msgs::Point\& origin, \textcolor{keyword}{const} sensor\_msgs::PointCloud2 \&cloud,}
+\DoxyCodeLine{70               \textcolor{keywordtype}{double} obstacle\_range, \textcolor{keywordtype}{double} raytrace\_range) :}
+\DoxyCodeLine{71       \mbox{\hyperlink{classcostmap__2d_1_1_observation_a8095d100ad18cc1c7864c69c82be4c08}{origin\_}}(origin), \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\_}}(new sensor\_msgs::PointCloud2(cloud)),}
+\DoxyCodeLine{72       \mbox{\hyperlink{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}{obstacle\_range\_}}(obstacle\_range), \mbox{\hyperlink{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}{raytrace\_range\_}}(raytrace\_range)}
+\DoxyCodeLine{73   \{}
+\DoxyCodeLine{74   \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{80   \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab2d183c4dbf581b5cd17d413b4a0bd15}{Observation}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}}\& obs) :}
+\DoxyCodeLine{81       \mbox{\hyperlink{classcostmap__2d_1_1_observation_a8095d100ad18cc1c7864c69c82be4c08}{origin\_}}(obs.\mbox{\hyperlink{classcostmap__2d_1_1_observation_a8095d100ad18cc1c7864c69c82be4c08}{origin\_}}), \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\_}}(new sensor\_msgs::PointCloud2(*(obs.\mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\_}}))),}
+\DoxyCodeLine{82       \mbox{\hyperlink{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}{obstacle\_range\_}}(obs.\mbox{\hyperlink{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}{obstacle\_range\_}}), \mbox{\hyperlink{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}{raytrace\_range\_}}(obs.\mbox{\hyperlink{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}{raytrace\_range\_}})}
+\DoxyCodeLine{83   \{}
+\DoxyCodeLine{84   \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{91   \mbox{\hyperlink{classcostmap__2d_1_1_observation_a7b575e70158fec46b4ed125e3dd5231a}{Observation}}(\textcolor{keyword}{const} sensor\_msgs::PointCloud2 \&cloud, \textcolor{keywordtype}{double} obstacle\_range) :}
+\DoxyCodeLine{92       \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\_}}(new sensor\_msgs::PointCloud2(cloud)), \mbox{\hyperlink{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}{obstacle\_range\_}}(obstacle\_range), \mbox{\hyperlink{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}{raytrace\_range\_}}(0.0)}
+\DoxyCodeLine{93   \{}
+\DoxyCodeLine{94   \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96   geometry\_msgs::Point \mbox{\hyperlink{classcostmap__2d_1_1_observation_a8095d100ad18cc1c7864c69c82be4c08}{origin\_}};}
+\DoxyCodeLine{97   sensor\_msgs::PointCloud2* \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\_}};}
+\DoxyCodeLine{98   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}{obstacle\_range\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}{raytrace\_range\_}};}
+\DoxyCodeLine{99 \};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_OBSERVATION\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,46 @@
+<map id="move_base::MoveBase::MoveBase" name="move_base::MoveBase::MoveBase">
+<area shape="rect" id="node1" title="Constructor for the actions" alt="" coords="5,903,164,944"/>
+<area shape="rect" id="node2" href="$classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098" title="A service call that clears the costmaps of obstacles" alt="" coords="486,536,647,577"/>
+<area shape="rect" id="node11" href="$classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="237,903,395,944"/>
+<area shape="rect" id="node22" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="959,821,1157,863"/>
+<area shape="rect" id="node25" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a426e3bfc085f9534b908807d1d734396" title="Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the cos..." alt="" coords="468,601,665,643"/>
+<area shape="rect" id="node26" href="$classmove__base_1_1_move_base.html#a6225709ac09918840a6ca78518617fb7" title=" " alt="" coords="237,1033,395,1075"/>
+<area shape="rect" id="node27" href="$classmove__base_1_1_move_base.html#a559a81b839c06c7e69c00fe4a93cb213" title="Loads the default recovery behaviors for the navigation stack" alt="" coords="212,1099,420,1140"/>
+<area shape="rect" id="node28" href="$classmove__base_1_1_move_base.html#aa2ae63f18e3bbfb4465b1587d3a84a6f" title="Load the recovery behaviors for the navigation stack from the parameter server" alt="" coords="233,1164,399,1205"/>
+<area shape="rect" id="node29" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9df641b15f263c18d7a39e55224d5df3" title="Stops the costmap from updating, but sensor data still comes in over the wire" alt="" coords="217,1229,415,1271"/>
+<area shape="rect" id="node30" href="$classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="237,419,395,460"/>
+<area shape="rect" id="node41" href="$classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="237,968,395,1009"/>
+<area shape="rect" id="node44" href="$classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="237,837,395,879"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="713,483,911,524"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="727,665,897,707"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#af0370b7b97c5d8cfcc961abb8d190f21" title="Reset each individual layer" alt="" coords="713,392,911,433"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="959,483,1157,524"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="1205,541,1404,583"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="973,365,1143,407"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="973,235,1143,276"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="973,300,1143,341"/>
+<area shape="rect" id="node12" href="$classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="487,784,646,825"/>
+<area shape="rect" id="node15" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="959,1031,1157,1072"/>
+<area shape="rect" id="node20" href="$classmove__base_1_1_move_base.html#af31a9045b36350e06310c46eb138fc4a" title="Publishes a velocity command of zero to the base" alt="" coords="979,1117,1137,1159"/>
+<area shape="rect" id="node21" href="$classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="733,965,891,1007"/>
+<area shape="rect" id="node23" href="$classmove__base_1_1_move_base.html#ae2511210a27b06b9a515df783c074534" title=" " alt="" coords="733,1031,891,1072"/>
+<area shape="rect" id="node24" href="$classmove__base_1_1_move_base.html#a02e6417a642608d82f6d95f8eda0b72d" title=" " alt="" coords="487,903,646,944"/>
+<area shape="rect" id="node13" href="$classmove__base_1_1_move_base.html#af6108fe562dce4cadb9dc15f9ef377c9" title=" " alt="" coords="733,848,891,889"/>
+<area shape="rect" id="node14" href="$classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="733,600,891,641"/>
+<area shape="rect" id="node18" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1c8735ead3c927906ca31e015bfc9ab7" title="Same as getLayeredCostmap()&#45;&gt;isCurrent()." alt="" coords="713,783,911,824"/>
+<area shape="rect" id="node16" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="959,665,1157,707"/>
+<area shape="rect" id="node17" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="959,600,1157,641"/>
+<area shape="rect" id="node19" href="$classcostmap__2d_1_1_layered_costmap.html#a7fdc879ceb88df60b51ee4e5f4a1ec6e" title=" " alt="" coords="959,756,1157,797"/>
+<area shape="rect" id="node31" href="$classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="485,353,648,395"/>
+<area shape="rect" id="node40" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="482,419,651,460"/>
+<area shape="rect" id="node32" href="$classcostmap__2d_1_1_costmap2_d.html#afb8a42c3810e796107ed04c0ca3cbf90" title="Sets the cost of a convex polygon to a desired value" alt="" coords="727,137,897,179"/>
+<area shape="rect" id="node33" href="$classcostmap__2d_1_1_costmap2_d.html#aa3c49f2d63f6edfb7396d1b0c79a4b12" title="Get the map cells that fill a convex polygon" alt="" coords="973,39,1143,80"/>
+<area shape="rect" id="node38" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="973,104,1143,145"/>
+<area shape="rect" id="node39" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="973,169,1143,211"/>
+<area shape="rect" id="node34" href="$classcostmap__2d_1_1_costmap2_d.html#ad0c6f7cb8e11569a02f873c545acec90" title="Get the map cells that make up the outline of a polygon" alt="" coords="1220,39,1389,80"/>
+<area shape="rect" id="node35" href="$classcostmap__2d_1_1_costmap2_d.html#af1d619d9b49b6851cb0a33de4e39ec78" title="Raytrace a line and apply some action at each step" alt="" coords="1452,39,1621,80"/>
+<area shape="rect" id="node36" href="$classcostmap__2d_1_1_costmap2_d.html#a54462e95337134adf0a59785b39b57f6" title="A 2D implementation of Bresenham&#39;s raytracing algorithm... applies an action at each step 实现了 对于离散的平面..." alt="" coords="1669,5,1839,47"/>
+<area shape="rect" id="node37" href="$classcostmap__2d_1_1_costmap2_d.html#a947041f50d5fb1a44c3fd0601c4fc608" title=" " alt="" coords="1669,71,1839,112"/>
+<area shape="rect" id="node42" href="$classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089" title="Make a new global plan" alt="" coords="487,667,646,708"/>
+<area shape="rect" id="node43" href="$classmove__base_1_1_move_base.html#a8bdc13ba83e1281fba732980c7d5f225" title="This is used to wake the planner at periodic intervals." alt="" coords="487,1249,646,1291"/>
+</map>

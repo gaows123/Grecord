@@ -1,0 +1,5 @@
+<map id="carrot_planner::CarrotPlanner::footprintCost" name="carrot_planner::CarrotPlanner::footprintCost">
+<area shape="rect" id="node1" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="5,39,196,80"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="253,5,433,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a4688b58dc94afe64bdaed02dceab5afd" title="Return the current footprint of the robot as a vector of points." alt="" coords="244,71,441,112"/>
+</map>

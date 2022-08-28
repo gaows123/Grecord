@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl::AMCLOdom类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceamcl.html">amcl</a></li><li class="navelem"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html">AMCLOdom</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classamcl_1_1_a_m_c_l_odom-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">amcl::AMCLOdom类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="amcl__odom_8h_source.html">amcl_odom.h</a>&gt;</code></p>
+<div class="dynheader">
+类 amcl::AMCLOdom 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_odom__inherit__graph.png" border="0" usemap="#aamcl_1_1_a_m_c_l_odom_inherit__map" alt="Inheritance graph"/></div>
+<map name="aamcl_1_1_a_m_c_l_odom_inherit__map" id="aamcl_1_1_a_m_c_l_odom_inherit__map">
+<area shape="rect" title=" " alt="" coords="8,80,137,107"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_sensor.html" title=" " alt="" coords="5,5,140,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+amcl::AMCLOdom 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_odom__coll__graph.png" border="0" usemap="#aamcl_1_1_a_m_c_l_odom_coll__map" alt="Collaboration graph"/></div>
+<map name="aamcl_1_1_a_m_c_l_odom_coll__map" id="aamcl_1_1_a_m_c_l_odom_coll__map">
+<area shape="rect" title=" " alt="" coords="8,171,137,197"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_sensor.html" title=" " alt="" coords="5,95,140,121"/>
+<area shape="rect" href="structpf__vector__t.html" title=" " alt="" coords="29,5,116,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4d615017ed598fc2fa9991d3d2ed4e6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a4d615017ed598fc2fa9991d3d2ed4e6b">AMCLOdom</a> ()</td></tr>
+<tr class="separator:a4d615017ed598fc2fa9991d3d2ed4e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562f4c2f26dbd299b1eefb4bc2fc9cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a562f4c2f26dbd299b1eefb4bc2fc9cad">SetModelDiff</a> (double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#af679317686100fc3f9b5637acb31393e">alpha1</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a38a57e0d1ad1185f9d1a00fd0f48dcd4">alpha2</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#ae767f512d15fd0e82e71f1d2da2448e2">alpha3</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a634de155c88b3470b2802f302b33881a">alpha4</a>)</td></tr>
+<tr class="separator:a562f4c2f26dbd299b1eefb4bc2fc9cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bcc31384882facd705eff2bb6ae7eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a64bcc31384882facd705eff2bb6ae7eb">SetModelOmni</a> (double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#af679317686100fc3f9b5637acb31393e">alpha1</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a38a57e0d1ad1185f9d1a00fd0f48dcd4">alpha2</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#ae767f512d15fd0e82e71f1d2da2448e2">alpha3</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a634de155c88b3470b2802f302b33881a">alpha4</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a1bfedc6206efbb79333fbd9226e3610c">alpha5</a>)</td></tr>
+<tr class="separator:a64bcc31384882facd705eff2bb6ae7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678c97475e8924ebc3541bfec91a65fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a678c97475e8924ebc3541bfec91a65fc">SetModel</a> (<a class="el" href="namespaceamcl.html#a1ef53c9692e3c0b6788bc841cbf7ff10">odom_model_t</a> type, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#af679317686100fc3f9b5637acb31393e">alpha1</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a38a57e0d1ad1185f9d1a00fd0f48dcd4">alpha2</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#ae767f512d15fd0e82e71f1d2da2448e2">alpha3</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a634de155c88b3470b2802f302b33881a">alpha4</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a1bfedc6206efbb79333fbd9226e3610c">alpha5</a>=0)</td></tr>
+<tr class="separator:a678c97475e8924ebc3541bfec91a65fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a2e645cfae2fb775f454ebab9fa110"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a94a2e645cfae2fb775f454ebab9fa110">UpdateAction</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a94a2e645cfae2fb775f454ebab9fa110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classamcl_1_1_a_m_c_l_sensor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classamcl_1_1_a_m_c_l_sensor')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classamcl_1_1_a_m_c_l_sensor.html">amcl::AMCLSensor</a></td></tr>
+<tr class="memitem:ade685421ea9e858b7cfb921c7060b415 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#ade685421ea9e858b7cfb921c7060b415">AMCLSensor</a> ()</td></tr>
+<tr class="separator:ade685421ea9e858b7cfb921c7060b415 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f60fbb3a0fc393b5459549dd55fae4c inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a4f60fbb3a0fc393b5459549dd55fae4c">~AMCLSensor</a> ()</td></tr>
+<tr class="separator:a4f60fbb3a0fc393b5459549dd55fae4c inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258db7bc9b5713914527f50dcfdd6800 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a258db7bc9b5713914527f50dcfdd6800">UpdateAction</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a258db7bc9b5713914527f50dcfdd6800 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5129ccfbedd56821ca6ae9a5e2cbf193 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a5129ccfbedd56821ca6ae9a5e2cbf193">InitSensor</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a5129ccfbedd56821ca6ae9a5e2cbf193 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5243e92ca32aa4a86e10bc36a896b365 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a5243e92ca32aa4a86e10bc36a896b365">UpdateSensor</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a5243e92ca32aa4a86e10bc36a896b365 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a80d9caeaa9d1893441ae64099738ec82"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a80d9caeaa9d1893441ae64099738ec82">time</a></td></tr>
+<tr class="separator:a80d9caeaa9d1893441ae64099738ec82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa2c5c80b0e935db3308bf8cb7de298"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceamcl.html#a1ef53c9692e3c0b6788bc841cbf7ff10">odom_model_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a6fa2c5c80b0e935db3308bf8cb7de298">model_type</a></td></tr>
+<tr class="separator:a6fa2c5c80b0e935db3308bf8cb7de298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af679317686100fc3f9b5637acb31393e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#af679317686100fc3f9b5637acb31393e">alpha1</a></td></tr>
+<tr class="separator:af679317686100fc3f9b5637acb31393e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a57e0d1ad1185f9d1a00fd0f48dcd4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a38a57e0d1ad1185f9d1a00fd0f48dcd4">alpha2</a></td></tr>
+<tr class="separator:a38a57e0d1ad1185f9d1a00fd0f48dcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae767f512d15fd0e82e71f1d2da2448e2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#ae767f512d15fd0e82e71f1d2da2448e2">alpha3</a></td></tr>
+<tr class="separator:ae767f512d15fd0e82e71f1d2da2448e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634de155c88b3470b2802f302b33881a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a634de155c88b3470b2802f302b33881a">alpha4</a></td></tr>
+<tr class="separator:a634de155c88b3470b2802f302b33881a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bfedc6206efbb79333fbd9226e3610c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_odom.html#a1bfedc6206efbb79333fbd9226e3610c">alpha5</a></td></tr>
+<tr class="separator:a1bfedc6206efbb79333fbd9226e3610c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classamcl_1_1_a_m_c_l_sensor')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classamcl_1_1_a_m_c_l_sensor.html">amcl::AMCLSensor</a></td></tr>
+<tr class="memitem:acc893ca5bd2e1e5f6989c1fa9c14d0fb inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#acc893ca5bd2e1e5f6989c1fa9c14d0fb">is_action</a></td></tr>
+<tr class="separator:acc893ca5bd2e1e5f6989c1fa9c14d0fb inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2938edc4972ba244737bdd113a746fbf inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a2938edc4972ba244737bdd113a746fbf">pose</a></td></tr>
+<tr class="separator:a2938edc4972ba244737bdd113a746fbf inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4d615017ed598fc2fa9991d3d2ed4e6b" name="a4d615017ed598fc2fa9991d3d2ed4e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d615017ed598fc2fa9991d3d2ed4e6b">&#9670;&nbsp;</a></span>AMCLOdom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AMCLOdom::AMCLOdom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a678c97475e8924ebc3541bfec91a65fc" name="a678c97475e8924ebc3541bfec91a65fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678c97475e8924ebc3541bfec91a65fc">&#9670;&nbsp;</a></span>SetModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMCLOdom::SetModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceamcl.html#a1ef53c9692e3c0b6788bc841cbf7ff10">odom_model_t</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha5</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc_icgraph" id="aclassamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc_icgraph">
+<area shape="rect" title=" " alt="" coords="689,107,881,133"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,69,641,96"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="452,132,624,159"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,81,156,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a562f4c2f26dbd299b1eefb4bc2fc9cad" name="a562f4c2f26dbd299b1eefb4bc2fc9cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562f4c2f26dbd299b1eefb4bc2fc9cad">&#9670;&nbsp;</a></span>SetModelDiff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMCLOdom::SetModelDiff </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64bcc31384882facd705eff2bb6ae7eb" name="a64bcc31384882facd705eff2bb6ae7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bcc31384882facd705eff2bb6ae7eb">&#9670;&nbsp;</a></span>SetModelOmni()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMCLOdom::SetModelOmni </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94a2e645cfae2fb775f454ebab9fa110" name="a94a2e645cfae2fb775f454ebab9fa110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94a2e645cfae2fb775f454ebab9fa110">&#9670;&nbsp;</a></span>UpdateAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AMCLOdom::UpdateAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a258db7bc9b5713914527f50dcfdd6800">amcl::AMCLSensor</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_cgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_cgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_cgraph" id="aclassamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,220,83"/>
+<area shape="rect" href="amcl__odom_8cpp.html#a4245ab25f5d431e40eafba39bc25ed1c" title=" " alt="" coords="287,5,366,32"/>
+<area shape="rect" href="pf__pdf_8c.html#abdfc0a4cb6ab83434b698504774ef885" title=" " alt="" coords="268,56,385,83"/>
+<area shape="rect" href="pf__vector_8c.html#a247856e0c7581f87362cb7b044e812ef" title=" " alt="" coords="275,107,379,133"/>
+<area shape="rect" href="amcl__odom_8cpp.html#aa7a3531e33998b7883dec8951cff5ade" title=" " alt="" coords="433,5,512,32"/>
+<area shape="rect" href="portable__utils_8hpp.html#a134edc5d76023c865d406094d70a9764" title=" " alt="" coords="439,56,507,83"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_icgraph" id="aclassamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_icgraph">
+<area shape="rect" title=" " alt="" coords="644,5,859,32"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="424,5,596,32"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,31,376,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="af679317686100fc3f9b5637acb31393e" name="af679317686100fc3f9b5637acb31393e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af679317686100fc3f9b5637acb31393e">&#9670;&nbsp;</a></span>alpha1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLOdom::alpha1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38a57e0d1ad1185f9d1a00fd0f48dcd4" name="a38a57e0d1ad1185f9d1a00fd0f48dcd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a57e0d1ad1185f9d1a00fd0f48dcd4">&#9670;&nbsp;</a></span>alpha2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLOdom::alpha2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae767f512d15fd0e82e71f1d2da2448e2" name="ae767f512d15fd0e82e71f1d2da2448e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae767f512d15fd0e82e71f1d2da2448e2">&#9670;&nbsp;</a></span>alpha3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLOdom::alpha3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a634de155c88b3470b2802f302b33881a" name="a634de155c88b3470b2802f302b33881a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634de155c88b3470b2802f302b33881a">&#9670;&nbsp;</a></span>alpha4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLOdom::alpha4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bfedc6206efbb79333fbd9226e3610c" name="a1bfedc6206efbb79333fbd9226e3610c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bfedc6206efbb79333fbd9226e3610c">&#9670;&nbsp;</a></span>alpha5</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLOdom::alpha5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fa2c5c80b0e935db3308bf8cb7de298" name="a6fa2c5c80b0e935db3308bf8cb7de298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa2c5c80b0e935db3308bf8cb7de298">&#9670;&nbsp;</a></span>model_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceamcl.html#a1ef53c9692e3c0b6788bc841cbf7ff10">odom_model_t</a> amcl::AMCLOdom::model_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80d9caeaa9d1893441ae64099738ec82" name="a80d9caeaa9d1893441ae64099738ec82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d9caeaa9d1893441ae64099738ec82">&#9670;&nbsp;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLOdom::time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>amcl/include/amcl/sensors/<a class="el" href="amcl__odom_8h_source.html">amcl_odom.h</a></li>
+<li>amcl/src/amcl/sensors/<a class="el" href="amcl__odom_8cpp.html">amcl_odom.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

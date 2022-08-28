@@ -1,0 +1,4 @@
+<map id="base_local_planner::WavefrontMapAccessor" name="base_local_planner::WavefrontMapAccessor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,175,121"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,5,175,32"/>
+</map>

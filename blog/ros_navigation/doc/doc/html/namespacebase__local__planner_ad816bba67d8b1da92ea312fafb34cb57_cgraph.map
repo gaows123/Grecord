@@ -1,0 +1,4 @@
+<map id="base_local_planner::TEST" name="base_local_planner::TEST">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,139,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="187,5,335,47"/>
+</map>

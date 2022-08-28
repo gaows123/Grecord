@@ -1,0 +1,4 @@
+<map id="costmap_2d::Costmap2DPublisher::onNewSubscription" name="costmap_2d::Costmap2DPublisher::onNewSubscription">
+<area shape="rect" id="node1" title="Publish the latest full costmap to the new subscriber." alt="" coords="276,5,499,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_publisher.html#a56d27ca488f09b70a8698b2491d036e7" title="Constructor for the Costmap2DPublisher" alt="" coords="5,5,228,47"/>
+</map>

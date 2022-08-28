@@ -1,0 +1,9 @@
+<map id="costmap_2d::makeFootprintFromParams" name="costmap_2d::makeFootprintFromParams">
+<area shape="rect" id="node1" title="Read the ros&#45;params &quot;footprint&quot; and/or &quot;robot_radius&quot; from the given NodeHandle using searchParam() t..." alt="" coords="5,104,189,145"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#ac13ae420906acd9f42c9cc2a73e9de41" title="Create a circular footprint from a given radius" alt="" coords="237,5,421,47"/>
+<area shape="rect" id="node3" href="$namespacecostmap__2d.html#a0c5b34c84596c37289f90800701d5aa2" title="Make the footprint from the given string." alt="" coords="237,71,421,112"/>
+<area shape="rect" id="node5" href="$namespacecostmap__2d.html#a80f6a207189166bd1c1375c46fa23abb" title="Create the footprint from the given XmlRpcValue." alt="" coords="237,136,421,177"/>
+<area shape="rect" id="node7" href="$namespacecostmap__2d.html#ae02b98da234ff50b2ef1e3fa6d53f33b" title="Write the current unpadded_footprint_ to the &quot;footprint&quot; parameter of the given NodeHandle so that dy..." alt="" coords="240,201,419,243"/>
+<area shape="rect" id="node4" href="$namespacecostmap__2d.html#a269a284e6ee48725e0f286ce771d71fd" title="Parse a vector of vectors of floats from a string." alt="" coords="487,78,646,105"/>
+<area shape="rect" id="node6" href="$namespacecostmap__2d.html#a45dac86e116bbc150dedcf1bd2c8c697" title=" " alt="" coords="469,136,664,177"/>
+</map>

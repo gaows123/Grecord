@@ -1,0 +1,111 @@
+\hypertarget{layer_8h_source}{}\doxysection{layer.\+h}
+\label{layer_8h_source}\index{costmap\_2d/include/costmap\_2d/layer.h@{costmap\_2d/include/costmap\_2d/layer.h}}
+\mbox{\hyperlink{layer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: David V. Lu!!}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_LAYER\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define COSTMAP\_2D\_LAYER\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layered__costmap_8h}{costmap\_2d/layered\_costmap.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <tf2\_ros/buffer.h>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47 \textcolor{keyword}{class }LayeredCostmap;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_layer}{Layer}}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51 \textcolor{keyword}{public}:}
+\DoxyCodeLine{52   \mbox{\hyperlink{classcostmap__2d_1_1_layer_a1f83227fd701bf4bc29143cd66c4de5c}{Layer}}();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize}}(\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{LayeredCostmap}}* parent, std::string name, tf2\_ros::Buffer *tf);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{64   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a978fb5288265b293a6fd08787314f2f1}{updateBounds}}(\textcolor{keywordtype}{double} robot\_x, \textcolor{keywordtype}{double} robot\_y, \textcolor{keywordtype}{double} robot\_yaw, \textcolor{keywordtype}{double}* min\_x, \textcolor{keywordtype}{double}* min\_y,}
+\DoxyCodeLine{65                             \textcolor{keywordtype}{double}* max\_x, \textcolor{keywordtype}{double}* max\_y) \{\}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{71   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a56528644ba7d534b15ca3d73615dc12e}{updateCosts}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}\& master\_grid, \textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j) \{\}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a8238b7e03dc09bade9543a23addc65e2}{deactivate}}() \{\}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a83cb399475b5536ae8e278569756d68b}{activate}}() \{\}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a7e57e2de15f2ac5104465da537b60ada}{reset}}() \{\}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \textcolor{keyword}{virtual} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a40154c4ffbc768749e3724728ad96a27}{\string~Layer}}() \{\}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{93   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a3331b68fc4db5ca14dcc31de179fd75f}{isCurrent}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{94 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{95     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_layer_af67484d6f9573d583f3ad809375e976a}{current\_}};}
+\DoxyCodeLine{96   \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{111   \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a57d19ac5805530fc76a2cdbe9eb41421}{isEnabled}}() const noexcept}
+\DoxyCodeLine{112   \{}
+\DoxyCodeLine{113     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_layer_ab61b2a3e01353b97258c207a397977fe}{enabled\_}};}
+\DoxyCodeLine{114   \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{117   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a2e0a0cf4fb307699c098507d718af7ff}{matchSize}}() \{\}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119   \textcolor{keyword}{inline} \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classcostmap__2d_1_1_layer_ae26a90b4bc5922cfc23dfc55b6a573fe}{getName}}() const noexcept}
+\DoxyCodeLine{120   \{}
+\DoxyCodeLine{121     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_layer_ac1fa1f64ebd9d39af5947c738202e248}{name\_}};}
+\DoxyCodeLine{122   \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125   \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& \mbox{\hyperlink{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44}{getFootprint}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{130   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_ab65a9d55987f504e8c658bc64f61181e}{onFootprintChanged}}() \{\}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{137   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a97888a23e12ab5b798a854c2f590ae71}{onInitialize}}() \{\}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139   \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{LayeredCostmap}}* \mbox{\hyperlink{classcostmap__2d_1_1_layer_a4cebd6c53e8089f863f16cee9a0a2184}{layered\_costmap\_}};}
+\DoxyCodeLine{140   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_layer_af67484d6f9573d583f3ad809375e976a}{current\_}};}
+\DoxyCodeLine{141   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_layer_ab61b2a3e01353b97258c207a397977fe}{enabled\_}};}
+\DoxyCodeLine{142   std::string \mbox{\hyperlink{classcostmap__2d_1_1_layer_ac1fa1f64ebd9d39af5947c738202e248}{name\_}};}
+\DoxyCodeLine{143   tf2\_ros::Buffer *\mbox{\hyperlink{classcostmap__2d_1_1_layer_a4a977acd639966f447262b5c8837a40f}{tf\_}};}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{keyword}{private}:}
+\DoxyCodeLine{146   std::vector<geometry\_msgs::Point> \mbox{\hyperlink{classcostmap__2d_1_1_layer_a42380f2eea4dea8c474a9acf802be0e4}{footprint\_spec\_}};}
+\DoxyCodeLine{147 \};}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_LAYER\_H\_}}
+
+\end{DoxyCode}

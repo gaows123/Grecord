@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner::AStarExpansion类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceglobal__planner.html">global_planner</a></li><li class="navelem"><a class="el" href="classglobal__planner_1_1_a_star_expansion.html">AStarExpansion</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classglobal__planner_1_1_a_star_expansion-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">global_planner::AStarExpansion类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="astar_8h_source.html">astar.h</a>&gt;</code></p>
+<div class="dynheader">
+类 global_planner::AStarExpansion 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_a_star_expansion__inherit__graph.png" border="0" usemap="#aglobal__planner_1_1_a_star_expansion_inherit__map" alt="Inheritance graph"/></div>
+<map name="aglobal__planner_1_1_a_star_expansion_inherit__map" id="aglobal__planner_1_1_a_star_expansion_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,212,107"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html" title=" " alt="" coords="25,5,193,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+global_planner::AStarExpansion 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_a_star_expansion__coll__graph.png" border="0" usemap="#aglobal__planner_1_1_a_star_expansion_coll__map" alt="Collaboration graph"/></div>
+<map name="aglobal__planner_1_1_a_star_expansion_coll__map" id="aglobal__planner_1_1_a_star_expansion_coll__map">
+<area shape="rect" title=" " alt="" coords="5,185,212,212"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html" title=" " alt="" coords="25,109,193,136"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html" title=" " alt="" coords="27,5,191,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3a1f2f9b946d0e69afce5886cf7d56fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_a_star_expansion.html#a3a1f2f9b946d0e69afce5886cf7d56fa">AStarExpansion</a> (<a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *p_calc, int nx, int ny)</td></tr>
+<tr class="separator:a3a1f2f9b946d0e69afce5886cf7d56fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c44db6dd6346463c52e8dda0665985"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_a_star_expansion.html#a26c44db6dd6346463c52e8dda0665985">~AStarExpansion</a> ()</td></tr>
+<tr class="separator:a26c44db6dd6346463c52e8dda0665985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ddf1440a2f487c6f10af7a25757371"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_a_star_expansion.html#a71ddf1440a2f487c6f10af7a25757371">calculatePotentials</a> (unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)</td></tr>
+<tr class="separator:a71ddf1440a2f487c6f10af7a25757371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classglobal__planner_1_1_expander"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classglobal__planner_1_1_expander')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:a8ccb306a28ea41d2bfd9202d4b16f26a inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a8ccb306a28ea41d2bfd9202d4b16f26a">Expander</a> (<a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *p_calc, int nx, int ny)</td></tr>
+<tr class="separator:a8ccb306a28ea41d2bfd9202d4b16f26a inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3350230a12f804b95b0aa45435631c7 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#af3350230a12f804b95b0aa45435631c7">~Expander</a> ()</td></tr>
+<tr class="separator:af3350230a12f804b95b0aa45435631c7 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c352121a2ea1e1b650b219004c98786 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a7c352121a2ea1e1b650b219004c98786">calculatePotentials</a> (unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)=0</td></tr>
+<tr class="separator:a7c352121a2ea1e1b650b219004c98786 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeaa60103de1ee71a1969e40a3735094 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">setSize</a> (int nx, int ny)</td></tr>
+<tr class="memdesc:aeeaa60103de1ee71a1969e40a3735094 inherit pub_methods_classglobal__planner_1_1_expander"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or resets the size of the map  <a href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">更多...</a><br /></td></tr>
+<tr class="separator:aeeaa60103de1ee71a1969e40a3735094 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9c360fb6316c538bbadcccc6bf98b1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#aee9c360fb6316c538bbadcccc6bf98b1">setLethalCost</a> (unsigned char lethal_cost)</td></tr>
+<tr class="separator:aee9c360fb6316c538bbadcccc6bf98b1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386d3239f3aaa7a5e583bad9893a8ca1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a386d3239f3aaa7a5e583bad9893a8ca1">setNeutralCost</a> (unsigned char neutral_cost)</td></tr>
+<tr class="separator:a386d3239f3aaa7a5e583bad9893a8ca1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a3174aef024f0a4d01ac3fa7a74489 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a53a3174aef024f0a4d01ac3fa7a74489">setFactor</a> (float factor)</td></tr>
+<tr class="separator:a53a3174aef024f0a4d01ac3fa7a74489 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcbac968719e195552d063c4314618e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a1dcbac968719e195552d063c4314618e">setHasUnknown</a> (bool unknown)</td></tr>
+<tr class="separator:a1dcbac968719e195552d063c4314618e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02060106b60c2661cb1f1878a151a40e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a02060106b60c2661cb1f1878a151a40e">clearEndpoint</a> (unsigned char *costs, float *potential, int gx, int gy, int s)</td></tr>
+<tr class="separator:a02060106b60c2661cb1f1878a151a40e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a14922f2bde1222050478a4c6289ea874"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_a_star_expansion.html#a14922f2bde1222050478a4c6289ea874">add</a> (unsigned char *costs, float *potential, float prev_potential, int next_i, int end_x, int end_y)</td></tr>
+<tr class="separator:a14922f2bde1222050478a4c6289ea874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:acb298a6cba9ef7313eee585a7c5fdebc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classglobal__planner_1_1_index.html">Index</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_a_star_expansion.html#acb298a6cba9ef7313eee585a7c5fdebc">queue_</a></td></tr>
+<tr class="separator:acb298a6cba9ef7313eee585a7c5fdebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classglobal__planner_1_1_expander"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classglobal__planner_1_1_expander')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:ab9ed0e500049774014960dfb68f1e50c inherit pro_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c">toIndex</a> (int x, int y)</td></tr>
+<tr class="separator:ab9ed0e500049774014960dfb68f1e50c inherit pro_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classglobal__planner_1_1_expander"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classglobal__planner_1_1_expander')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:a72bbafddd4f838603ebe42cf7fb57cbc inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a72bbafddd4f838603ebe42cf7fb57cbc">nx_</a></td></tr>
+<tr class="separator:a72bbafddd4f838603ebe42cf7fb57cbc inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1877778a6ed03533dace263d0dbe7e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a3d1877778a6ed03533dace263d0dbe7e">ny_</a></td></tr>
+<tr class="separator:a3d1877778a6ed03533dace263d0dbe7e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0538b977e9cd0022810096b79e61e529 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a0538b977e9cd0022810096b79e61e529">ns_</a></td></tr>
+<tr class="separator:a0538b977e9cd0022810096b79e61e529 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb2fc0fd78f4ae3e8ffad2981629a91 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">unknown_</a></td></tr>
+<tr class="separator:abbb2fc0fd78f4ae3e8ffad2981629a91 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044a34d5d5ddd41016afec643cb65d4e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a></td></tr>
+<tr class="separator:a044a34d5d5ddd41016afec643cb65d4e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8941c07a0f50a2e3ce3088f7ecb8e61 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a></td></tr>
+<tr class="separator:aa8941c07a0f50a2e3ce3088f7ecb8e61 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51bd3f97e8d1ca48c357175d723f3f4 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#ad51bd3f97e8d1ca48c357175d723f3f4">cells_visited_</a></td></tr>
+<tr class="separator:ad51bd3f97e8d1ca48c357175d723f3f4 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999123a5d229a31933a64ba56a4f525d inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">factor_</a></td></tr>
+<tr class="separator:a999123a5d229a31933a64ba56a4f525d inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d991703be557e08056daedd3d872fff inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a3d991703be557e08056daedd3d872fff">p_calc_</a></td></tr>
+<tr class="separator:a3d991703be557e08056daedd3d872fff inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a3a1f2f9b946d0e69afce5886cf7d56fa" name="a3a1f2f9b946d0e69afce5886cf7d56fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a1f2f9b946d0e69afce5886cf7d56fa">&#9670;&nbsp;</a></span>AStarExpansion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">global_planner::AStarExpansion::AStarExpansion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *&#160;</td>
+          <td class="paramname"><em>p_calc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26c44db6dd6346463c52e8dda0665985" name="a26c44db6dd6346463c52e8dda0665985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c44db6dd6346463c52e8dda0665985">&#9670;&nbsp;</a></span>~AStarExpansion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual global_planner::AStarExpansion::~AStarExpansion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a14922f2bde1222050478a4c6289ea874" name="a14922f2bde1222050478a4c6289ea874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14922f2bde1222050478a4c6289ea874">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_planner::AStarExpansion::add </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>costs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>potential</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>prev_potential</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>next_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_cgraph" id="aclassglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_cgraph">
+<area shape="rect" title=" " alt="" coords="5,42,241,69"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html#a4befc4819934603d43c8dc539f445fd4" title=" " alt="" coords="289,5,480,47"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="349,71,420,98"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_icgraph" id="aclassglobal__planner_1_1_a_star_expansion_a14922f2bde1222050478a4c6289ea874_icgraph">
+<area shape="rect" title=" " alt="" coords="260,13,496,39"/>
+<area shape="rect" href="classglobal__planner_1_1_a_star_expansion.html#a71ddf1440a2f487c6f10af7a25757371" title=" " alt="" coords="5,5,212,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71ddf1440a2f487c6f10af7a25757371" name="a71ddf1440a2f487c6f10af7a25757371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ddf1440a2f487c6f10af7a25757371">&#9670;&nbsp;</a></span>calculatePotentials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_planner::AStarExpansion::calculatePotentials </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>costs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>end_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>end_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cycles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>potential</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="classglobal__planner_1_1_expander.html#a7c352121a2ea1e1b650b219004c98786">global_planner::Expander</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371_cgraph" id="aclassglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371_cgraph">
+<area shape="rect" title=" " alt="" coords="5,64,212,105"/>
+<area shape="rect" href="classglobal__planner_1_1_a_star_expansion.html#a14922f2bde1222050478a4c6289ea874" title=" " alt="" coords="260,42,496,69"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c" title=" " alt="" coords="294,93,462,135"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html#a4befc4819934603d43c8dc539f445fd4" title=" " alt="" coords="544,5,735,47"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="604,71,675,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="acb298a6cba9ef7313eee585a7c5fdebc" name="acb298a6cba9ef7313eee585a7c5fdebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb298a6cba9ef7313eee585a7c5fdebc">&#9670;&nbsp;</a></span>queue_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classglobal__planner_1_1_index.html">Index</a>&gt; global_planner::AStarExpansion::queue_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>global_planner/include/global_planner/<a class="el" href="astar_8h_source.html">astar.h</a></li>
+<li>global_planner/src/<a class="el" href="astar_8cpp.html">astar.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

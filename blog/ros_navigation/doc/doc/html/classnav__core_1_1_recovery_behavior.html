@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: nav_core::RecoveryBehavior类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacenav__core.html">nav_core</a></li><li class="navelem"><a class="el" href="classnav__core_1_1_recovery_behavior.html">RecoveryBehavior</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="classnav__core_1_1_recovery_behavior-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">nav_core::RecoveryBehavior类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口.  
+ <a href="classnav__core_1_1_recovery_behavior.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="recovery__behavior_8h_source.html">recovery_behavior.h</a>&gt;</code></p>
+<div class="dynheader">
+类 nav_core::RecoveryBehavior 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnav__core_1_1_recovery_behavior__inherit__graph.png" border="0" usemap="#anav__core_1_1_recovery_behavior_inherit__map" alt="Inheritance graph"/></div>
+<map name="anav__core_1_1_recovery_behavior_inherit__map" id="anav__core_1_1_recovery_behavior_inherit__map">
+<area shape="rect" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="5,78,195,105"/>
+<area shape="rect" href="classclear__costmap__recovery_1_1_clear_costmap_recovery.html" title="A recovery behavior that reverts the navigation stack&#39;s costmaps to the static map outside of a user&#45;..." alt="" coords="266,5,433,47"/>
+<area shape="rect" href="classmove__slow__and__clear_1_1_move_slow_and_clear.html" title=" " alt="" coords="274,71,425,112"/>
+<area shape="rect" href="classrotate__recovery_1_1_rotate_recovery.html" title="恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物" alt="" coords="243,137,456,163"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab35332f465b3d2509c9e73d4d95c7b5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#ab35332f465b3d2509c9e73d4d95c7b5d">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *global_costmap, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *local_costmap)=0</td></tr>
+<tr class="memdesc:ab35332f465b3d2509c9e73d4d95c7b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口.">RecoveryBehavior</a> 的初始化函数  <a href="classnav__core_1_1_recovery_behavior.html#ab35332f465b3d2509c9e73d4d95c7b5d">更多...</a><br /></td></tr>
+<tr class="separator:ab35332f465b3d2509c9e73d4d95c7b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8e1eec7a483e530e48b2593ea4fc03"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#a6d8e1eec7a483e530e48b2593ea4fc03">runBehavior</a> ()=0</td></tr>
+<tr class="memdesc:a6d8e1eec7a483e530e48b2593ea4fc03"><td class="mdescLeft">&#160;</td><td class="mdescRight">运行RecoveryBehavior  <a href="classnav__core_1_1_recovery_behavior.html#a6d8e1eec7a483e530e48b2593ea4fc03">更多...</a><br /></td></tr>
+<tr class="separator:a6d8e1eec7a483e530e48b2593ea4fc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add375f2ed722549afd00b7dae9874ac6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#add375f2ed722549afd00b7dae9874ac6">~RecoveryBehavior</a> ()</td></tr>
+<tr class="memdesc:add375f2ed722549afd00b7dae9874ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口的虚析构  <a href="classnav__core_1_1_recovery_behavior.html#add375f2ed722549afd00b7dae9874ac6">更多...</a><br /></td></tr>
+<tr class="separator:add375f2ed722549afd00b7dae9874ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a7518e621154c10ad9cc5a060af4fa81e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_recovery_behavior.html#a7518e621154c10ad9cc5a060af4fa81e">RecoveryBehavior</a> ()</td></tr>
+<tr class="separator:a7518e621154c10ad9cc5a060af4fa81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="add375f2ed722549afd00b7dae9874ac6" name="add375f2ed722549afd00b7dae9874ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add375f2ed722549afd00b7dae9874ac6">&#9670;&nbsp;</a></span>~RecoveryBehavior()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual nav_core::RecoveryBehavior::~RecoveryBehavior </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>接口的虚析构 </p>
+
+</div>
+</div>
+<a id="a7518e621154c10ad9cc5a060af4fa81e" name="a7518e621154c10ad9cc5a060af4fa81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7518e621154c10ad9cc5a060af4fa81e">&#9670;&nbsp;</a></span>RecoveryBehavior()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nav_core::RecoveryBehavior::RecoveryBehavior </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab35332f465b3d2509c9e73d4d95c7b5d" name="ab35332f465b3d2509c9e73d4d95c7b5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35332f465b3d2509c9e73d4d95c7b5d">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nav_core::RecoveryBehavior::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>global_costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>local_costmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口.">RecoveryBehavior</a> 的初始化函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tf</td><td>transform listener 的指针 </td></tr>
+    <tr><td class="paramname">global_costmap</td><td>指向 global_costmap 的指针 </td></tr>
+    <tr><td class="paramname">local_costmap</td><td>指向 local_costmap 的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classmove__slow__and__clear_1_1_move_slow_and_clear.html#a8c3abf7314837b065c79f55947ebabf5">move_slow_and_clear::MoveSlowAndClear</a>, <a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a609f496f7a9f916f526a40a517c69204">rotate_recovery::RotateRecovery</a> , 以及 <a class="el" href="classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a5b0e81f3ad151bb9d4058a36c9411efd">clear_costmap_recovery::ClearCostmapRecovery</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6d8e1eec7a483e530e48b2593ea4fc03" name="a6d8e1eec7a483e530e48b2593ea4fc03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d8e1eec7a483e530e48b2593ea4fc03">&#9670;&nbsp;</a></span>runBehavior()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nav_core::RecoveryBehavior::runBehavior </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>运行RecoveryBehavior </p>
+
+<p>在 <a class="el" href="classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4">clear_costmap_recovery::ClearCostmapRecovery</a>, <a class="el" href="classmove__slow__and__clear_1_1_move_slow_and_clear.html#abf32e06b525c141d8b7afcac857c241a">move_slow_and_clear::MoveSlowAndClear</a> , 以及 <a class="el" href="classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9">rotate_recovery::RotateRecovery</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>nav_core/include/nav_core/<a class="el" href="recovery__behavior_8h_source.html">recovery_behavior.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

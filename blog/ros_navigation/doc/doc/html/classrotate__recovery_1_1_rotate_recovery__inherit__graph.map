@@ -1,0 +1,4 @@
+<map id="rotate_recovery::RotateRecovery" name="rotate_recovery::RotateRecovery">
+<area shape="rect" id="node1" title="恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物" alt="" coords="5,80,219,107"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="17,5,207,32"/>
+</map>

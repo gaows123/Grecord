@@ -1,0 +1,12 @@
+<map id="voxel_grid::VoxelGrid::bitsBelowThreshold" name="voxel_grid::VoxelGrid::bitsBelowThreshold">
+<area shape="rect" id="node1" title=" " alt="" coords="911,71,1057,112"/>
+<area shape="rect" id="node2" href="$classvoxel__grid_1_1_voxel_grid.html#a744c735aea9d22e68c43c07baa88d9fa" title=" " alt="" coords="716,5,863,47"/>
+<area shape="rect" id="node3" href="$classvoxel__grid_1_1_voxel_grid.html#a1cb19a239dd48a4df82e664f8dd53a36" title=" " alt="" coords="716,71,863,112"/>
+<area shape="rect" id="node9" href="$classvoxel__grid_1_1_voxel_grid.html#a115003f6d22524e8221e286eae51b784" title=" " alt="" coords="716,136,863,177"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_voxel_grid_model.html#a4fd267d8b1e15639cde041ce9a57c505" title="Checks the cost of a point in the costmap" alt="" coords="483,5,668,47"/>
+<area shape="rect" id="node7" href="$classvoxel__grid_1_1_voxel_grid.html#af784f39681d85eb758b04d5d6db4700a" title=" " alt="" coords="502,71,649,112"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_voxel_grid_model.html#a5d23209def60ddb1e49b2ab5b38b57b1" title="Rasterizes a line in the costmap grid and checks for collisions" alt="" coords="257,5,435,47"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_voxel_grid_model.html#affcef4b1c4c95dd4209d36bd0d24fc14" title="Checks if any obstacles in the voxel grid lie inside a convex footprint that is rasterized into the g..." alt="" coords="5,5,209,47"/>
+<area shape="rect" id="node8" href="$voxel__grid__tests_8cpp.html#a4ed1e65f04eb231a04beb7c3cd79983d" title=" " alt="" coords="318,78,374,105"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="492,136,659,177"/>
+</map>

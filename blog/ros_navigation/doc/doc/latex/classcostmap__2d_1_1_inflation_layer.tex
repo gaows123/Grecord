@@ -1,0 +1,675 @@
+\hypertarget{classcostmap__2d_1_1_inflation_layer}{}\doxysection{costmap\+\_\+2d\+::Inflation\+Layer类 参考}
+\label{classcostmap__2d_1_1_inflation_layer}\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+
+
+{\ttfamily \#include $<$inflation\+\_\+layer.\+h$>$}
+
+
+
+类 costmap\+\_\+2d\+::Inflation\+Layer 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classcostmap__2d_1_1_inflation_layer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+costmap\+\_\+2d\+::Inflation\+Layer 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classcostmap__2d_1_1_inflation_layer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_abdd1ac7152ebe8072dd142c8b1106631}{Inflation\+Layer}} ()
+\item 
+virtual \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1}{$\sim$\+Inflation\+Layer}} ()
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a7834a60ae6fe62f40dbe0b5815b9b4ed}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af}{update\+Costs}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a298ae7ff737ea8b409405c51aa34dab3}{is\+Discretized}} ()
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6}{reset}} ()
+\item 
+virtual unsigned char \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5}{compute\+Cost}} (double \mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}}) const
+\begin{DoxyCompactList}\small\item\em 根据距离计算代价，大概分三个情况\+: \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb}{set\+Inflation\+Parameters}} (double inflation\+\_\+radius, double cost\+\_\+scaling\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em Change the values of the inflation radius parameters \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335}{on\+Footprint\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} calls this whenever the footprint there changes (via \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464}{Layered\+Costmap\+::set\+Footprint()}}). Override to be notified of changes to the robot\textquotesingle{}s footprint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::recursive\+\_\+mutex $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a194f58d14ff80500d724c0822c5f960a}{inflation\+\_\+access\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a05d76789a37f24cf6af5d82e900a5852}{resolution\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a66302e9f414da11c156e7ce1b5e16bae}{inflation\+\_\+radius\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af7c7d884932a3d5f215099f29361d0a8}{inscribed\+\_\+radius\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a507bd49c3aca392d91efcabfe999cc0d}{weight\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a9dcffd8162d89b97e668bde22b53ec4a}{inflate\+\_\+unknown\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad}{distance\+Lookup}} (int mx, int my, int src\+\_\+x, int src\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Lookup pre-\/computed distances \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a}{cost\+Lookup}} (int mx, int my, int src\+\_\+x, int src\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Lookup pre-\/computed costs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261}{compute\+Caches}} ()
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138}{delete\+Kernels}} ()
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a3dc15a0b886693f024940c42f295349f}{inflate\+\_\+area}} (int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j, unsigned char $\ast$master\+\_\+grid)
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0}{cell\+Distance}} (double world\+\_\+dist)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996}{enqueue}} (unsigned int index, unsigned int mx, unsigned int my, unsigned int src\+\_\+x, unsigned int src\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Given an index of a cell in the costmap, place it into a list pending for obstacle inflation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb}{reconfigure\+CB}} (costmap\+\_\+2d\+::\+Inflation\+Plugin\+Config \&config, uint32\+\_\+t level)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af9d33497e3d4ec8342786f234fac6896}{cell\+\_\+inflation\+\_\+radius\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a789f910861acabe83383ba36cfd041e6}{cached\+\_\+cell\+\_\+inflation\+\_\+radius\+\_\+}}
+\item 
+std\+::map$<$ double, std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_cell_data}{Cell\+Data}} $>$ $>$ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a5d43c961fe3696b45457a97037defb09}{inflation\+\_\+cells\+\_\+}}
+\item 
+bool $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a45cbbeb44dd1b73daf4111a1adfa5d69}{seen\+\_\+}}
+\item 
+int \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a29c1027cf8409532ca36cc3b7e681e63}{seen\+\_\+size\+\_\+}}
+\item 
+unsigned char $\ast$$\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a3c35d2fdb226235c6eccb734c8ea369e}{cached\+\_\+costs\+\_\+}}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae7a7da01002c8f330cdb06c071fa034f}{cached\+\_\+distances\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a01d20509f20eaab7d74ca86f5a68e170}{last\+\_\+min\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ac48dde484133ff6a592332473b4ccb9a}{last\+\_\+min\+\_\+y\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae6af2f42669c6563498013ddbcc1d578}{last\+\_\+max\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a17493c35e11ae6bc0239c3c9fdbc369d}{last\+\_\+max\+\_\+y\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ costmap\+\_\+2d\+::\+Inflation\+Plugin\+Config $>$ $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa504d83a6236b89c0eea95f384bdca2a}{dsrv\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aebdeee9b6c8c9cad19bbc5ec0e546305}{need\+\_\+reinflation\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Indicates that the entire costmap should be reinflated next time around. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_abdd1ac7152ebe8072dd142c8b1106631}\label{classcostmap__2d_1_1_inflation_layer_abdd1ac7152ebe8072dd142c8b1106631}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!InflationLayer@{InflationLayer}}
+\index{InflationLayer@{InflationLayer}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{InflationLayer()}{InflationLayer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Inflation\+Layer\+::\+Inflation\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1}\label{classcostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!````~InflationLayer@{$\sim$InflationLayer}}
+\index{````~InflationLayer@{$\sim$InflationLayer}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{$\sim$InflationLayer()}{~InflationLayer()}}
+{\footnotesize\ttfamily virtual costmap\+\_\+2d\+::\+Inflation\+Layer\+::$\sim$\+Inflation\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0}\label{classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!cellDistance@{cellDistance}}
+\index{cellDistance@{cellDistance}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{cellDistance()}{cellDistance()}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Inflation\+Layer\+::cell\+Distance (\begin{DoxyParamCaption}\item[{double}]{world\+\_\+dist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261}\label{classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!computeCaches@{computeCaches}}
+\index{computeCaches@{computeCaches}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{computeCaches()}{computeCaches()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::compute\+Caches (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5}\label{classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!computeCost@{computeCost}}
+\index{computeCost@{computeCost}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{computeCost()}{computeCost()}}
+{\footnotesize\ttfamily virtual unsigned char costmap\+\_\+2d\+::\+Inflation\+Layer\+::compute\+Cost (\begin{DoxyParamCaption}\item[{double}]{distance }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+根据距离计算代价，大概分三个情况\+: 
+
+
+\begin{DoxyEnumerate}
+\item 如果distance为0，即(0,0)点，则设置cached\+\_\+costs\+\_\+上的值为\+LETHAL\+\_\+\+OBSTACLE(254)，表示为障碍物本身；
+\item 如果distance ≤ 机器人足迹内切圆半径，设置值为\+INSCRIBED\+\_\+\+INFLATED\+\_\+\+OBSTACLE（253），即由于机器人有体积造成的障碍物膨胀；
+\item 如果机器人足迹内切圆半径 \texorpdfstring{$<$}{<} distance ≤ cell\+\_\+inflation\+\_\+radius\+\_\+，则以距离远近为比例（指数型）设置值。 
+\begin{DoxyParams}{参数}
+{\em distance} & 障碍物单元格的距离 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+对于这个距离的代价值 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a}\label{classcostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!costLookup@{costLookup}}
+\index{costLookup@{costLookup}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{costLookup()}{costLookup()}}
+{\footnotesize\ttfamily unsigned char costmap\+\_\+2d\+::\+Inflation\+Layer\+::cost\+Lookup (\begin{DoxyParamCaption}\item[{int}]{mx,  }\item[{int}]{my,  }\item[{int}]{src\+\_\+x,  }\item[{int}]{src\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Lookup pre-\/computed costs 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & The x coordinate of the current cell \\
+\hline
+{\em my} & The y coordinate of the current cell \\
+\hline
+{\em src\+\_\+x} & The x coordinate of the source cell \\
+\hline
+{\em src\+\_\+y} & The y coordinate of the source cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138}\label{classcostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!deleteKernels@{deleteKernels}}
+\index{deleteKernels@{deleteKernels}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{deleteKernels()}{deleteKernels()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::delete\+Kernels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad}\label{classcostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!distanceLookup@{distanceLookup}}
+\index{distanceLookup@{distanceLookup}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{distanceLookup()}{distanceLookup()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::distance\+Lookup (\begin{DoxyParamCaption}\item[{int}]{mx,  }\item[{int}]{my,  }\item[{int}]{src\+\_\+x,  }\item[{int}]{src\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Lookup pre-\/computed distances 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & The x coordinate of the current cell \\
+\hline
+{\em my} & The y coordinate of the current cell \\
+\hline
+{\em src\+\_\+x} & The x coordinate of the source cell \\
+\hline
+{\em src\+\_\+y} & The y coordinate of the source cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996}\label{classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::enqueue (\begin{DoxyParamCaption}\item[{unsigned int}]{index,  }\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my,  }\item[{unsigned int}]{src\+\_\+x,  }\item[{unsigned int}]{src\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Given an index of a cell in the costmap, place it into a list pending for obstacle inflation 
+
+
+\begin{DoxyParams}{参数}
+{\em grid} & The costmap \\
+\hline
+{\em index} & The index of the cell \\
+\hline
+{\em mx} & The x coordinate of the cell (can be computed from the index, but saves time to store it) \\
+\hline
+{\em my} & The y coordinate of the cell (can be computed from the index, but saves time to store it) \\
+\hline
+{\em src\+\_\+x} & The x index of the obstacle point inflation started at \\
+\hline
+{\em src\+\_\+y} & The y index of the obstacle point inflation started at \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a3dc15a0b886693f024940c42f295349f}\label{classcostmap__2d_1_1_inflation_layer_a3dc15a0b886693f024940c42f295349f}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!inflate\_area@{inflate\_area}}
+\index{inflate\_area@{inflate\_area}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{inflate\_area()}{inflate\_area()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::inflate\+\_\+area (\begin{DoxyParamCaption}\item[{int}]{min\+\_\+i,  }\item[{int}]{min\+\_\+j,  }\item[{int}]{max\+\_\+i,  }\item[{int}]{max\+\_\+j,  }\item[{unsigned char $\ast$}]{master\+\_\+grid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a298ae7ff737ea8b409405c51aa34dab3}\label{classcostmap__2d_1_1_inflation_layer_a298ae7ff737ea8b409405c51aa34dab3}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!isDiscretized@{isDiscretized}}
+\index{isDiscretized@{isDiscretized}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{isDiscretized()}{isDiscretized()}}
+{\footnotesize\ttfamily virtual bool costmap\+\_\+2d\+::\+Inflation\+Layer\+::is\+Discretized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5}\label{classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!matchSize@{matchSize}}
+\index{matchSize@{matchSize}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{matchSize()}{matchSize()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::match\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implement this to make this layer match the size of the parent costmap. 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a2e0a0cf4fb307699c098507d718af7ff}{costmap\+\_\+2d\+::\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335}\label{classcostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!onFootprintChanged@{onFootprintChanged}}
+\index{onFootprintChanged@{onFootprintChanged}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{onFootprintChanged()}{onFootprintChanged()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::on\+Footprint\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} calls this whenever the footprint there changes (via \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464}{Layered\+Costmap\+::set\+Footprint()}}). Override to be notified of changes to the robot\textquotesingle{}s footprint. 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_ab65a9d55987f504e8c658bc64f61181e}{costmap\+\_\+2d\+::\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade}\label{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a97888a23e12ab5b798a854c2f590ae71}{costmap\+\_\+2d\+::\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb}\label{classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{costmap\+\_\+2d\+::\+Inflation\+Plugin\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6}\label{classcostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!reset@{reset}}
+\index{reset@{reset}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Inflation\+Layer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a7e57e2de15f2ac5104465da537b60ada}{costmap\+\_\+2d\+::\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb}\label{classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!setInflationParameters@{setInflationParameters}}
+\index{setInflationParameters@{setInflationParameters}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{setInflationParameters()}{setInflationParameters()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::set\+Inflation\+Parameters (\begin{DoxyParamCaption}\item[{double}]{inflation\+\_\+radius,  }\item[{double}]{cost\+\_\+scaling\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+Change the values of the inflation radius parameters 
+
+
+\begin{DoxyParams}{参数}
+{\em inflation\+\_\+radius} & The new inflation radius \\
+\hline
+{\em cost\+\_\+scaling\+\_\+factor} & The new weight \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a7834a60ae6fe62f40dbe0b5815b9b4ed}\label{classcostmap__2d_1_1_inflation_layer_a7834a60ae6fe62f40dbe0b5815b9b4ed}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a978fb5288265b293a6fd08787314f2f1}{costmap\+\_\+2d\+::\+Layer}} .
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af}\label{classcostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!updateCosts@{updateCosts}}
+\index{updateCosts@{updateCosts}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{updateCosts()}{updateCosts()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Inflation\+Layer\+::update\+Costs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{master\+\_\+grid,  }\item[{int}]{min\+\_\+i,  }\item[{int}]{min\+\_\+j,  }\item[{int}]{max\+\_\+i,  }\item[{int}]{max\+\_\+j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). 
+
+
+
+重载 \mbox{\hyperlink{classcostmap__2d_1_1_layer_a56528644ba7d534b15ca3d73615dc12e}{costmap\+\_\+2d\+::\+Layer}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a789f910861acabe83383ba36cfd041e6}\label{classcostmap__2d_1_1_inflation_layer_a789f910861acabe83383ba36cfd041e6}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!cached\_cell\_inflation\_radius\_@{cached\_cell\_inflation\_radius\_}}
+\index{cached\_cell\_inflation\_radius\_@{cached\_cell\_inflation\_radius\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{cached\_cell\_inflation\_radius\_}{cached\_cell\_inflation\_radius\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Inflation\+Layer\+::cached\+\_\+cell\+\_\+inflation\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a3c35d2fdb226235c6eccb734c8ea369e}\label{classcostmap__2d_1_1_inflation_layer_a3c35d2fdb226235c6eccb734c8ea369e}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!cached\_costs\_@{cached\_costs\_}}
+\index{cached\_costs\_@{cached\_costs\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{cached\_costs\_}{cached\_costs\_}}
+{\footnotesize\ttfamily unsigned char$\ast$$\ast$ costmap\+\_\+2d\+::\+Inflation\+Layer\+::cached\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_ae7a7da01002c8f330cdb06c071fa034f}\label{classcostmap__2d_1_1_inflation_layer_ae7a7da01002c8f330cdb06c071fa034f}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!cached\_distances\_@{cached\_distances\_}}
+\index{cached\_distances\_@{cached\_distances\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{cached\_distances\_}{cached\_distances\_}}
+{\footnotesize\ttfamily double$\ast$$\ast$ costmap\+\_\+2d\+::\+Inflation\+Layer\+::cached\+\_\+distances\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_af9d33497e3d4ec8342786f234fac6896}\label{classcostmap__2d_1_1_inflation_layer_af9d33497e3d4ec8342786f234fac6896}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!cell\_inflation\_radius\_@{cell\_inflation\_radius\_}}
+\index{cell\_inflation\_radius\_@{cell\_inflation\_radius\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{cell\_inflation\_radius\_}{cell\_inflation\_radius\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Inflation\+Layer\+::cell\+\_\+inflation\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_aa504d83a6236b89c0eea95f384bdca2a}\label{classcostmap__2d_1_1_inflation_layer_aa504d83a6236b89c0eea95f384bdca2a}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$costmap\+\_\+2d\+::\+Inflation\+Plugin\+Config$>$$\ast$ costmap\+\_\+2d\+::\+Inflation\+Layer\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a9dcffd8162d89b97e668bde22b53ec4a}\label{classcostmap__2d_1_1_inflation_layer_a9dcffd8162d89b97e668bde22b53ec4a}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!inflate\_unknown\_@{inflate\_unknown\_}}
+\index{inflate\_unknown\_@{inflate\_unknown\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{inflate\_unknown\_}{inflate\_unknown\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Inflation\+Layer\+::inflate\+\_\+unknown\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a194f58d14ff80500d724c0822c5f960a}\label{classcostmap__2d_1_1_inflation_layer_a194f58d14ff80500d724c0822c5f960a}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!inflation\_access\_@{inflation\_access\_}}
+\index{inflation\_access\_@{inflation\_access\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{inflation\_access\_}{inflation\_access\_}}
+{\footnotesize\ttfamily boost\+::recursive\+\_\+mutex$\ast$ costmap\+\_\+2d\+::\+Inflation\+Layer\+::inflation\+\_\+access\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a5d43c961fe3696b45457a97037defb09}\label{classcostmap__2d_1_1_inflation_layer_a5d43c961fe3696b45457a97037defb09}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!inflation\_cells\_@{inflation\_cells\_}}
+\index{inflation\_cells\_@{inflation\_cells\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{inflation\_cells\_}{inflation\_cells\_}}
+{\footnotesize\ttfamily std\+::map$<$double, std\+::vector$<$\mbox{\hyperlink{classcostmap__2d_1_1_cell_data}{Cell\+Data}}$>$ $>$ costmap\+\_\+2d\+::\+Inflation\+Layer\+::inflation\+\_\+cells\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a66302e9f414da11c156e7ce1b5e16bae}\label{classcostmap__2d_1_1_inflation_layer_a66302e9f414da11c156e7ce1b5e16bae}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!inflation\_radius\_@{inflation\_radius\_}}
+\index{inflation\_radius\_@{inflation\_radius\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{inflation\_radius\_}{inflation\_radius\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::inflation\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_af7c7d884932a3d5f215099f29361d0a8}\label{classcostmap__2d_1_1_inflation_layer_af7c7d884932a3d5f215099f29361d0a8}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!inscribed\_radius\_@{inscribed\_radius\_}}
+\index{inscribed\_radius\_@{inscribed\_radius\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{inscribed\_radius\_}{inscribed\_radius\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::inscribed\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_ae6af2f42669c6563498013ddbcc1d578}\label{classcostmap__2d_1_1_inflation_layer_ae6af2f42669c6563498013ddbcc1d578}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!last\_max\_x\_@{last\_max\_x\_}}
+\index{last\_max\_x\_@{last\_max\_x\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{last\_max\_x\_}{last\_max\_x\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::last\+\_\+max\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a17493c35e11ae6bc0239c3c9fdbc369d}\label{classcostmap__2d_1_1_inflation_layer_a17493c35e11ae6bc0239c3c9fdbc369d}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!last\_max\_y\_@{last\_max\_y\_}}
+\index{last\_max\_y\_@{last\_max\_y\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{last\_max\_y\_}{last\_max\_y\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::last\+\_\+max\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a01d20509f20eaab7d74ca86f5a68e170}\label{classcostmap__2d_1_1_inflation_layer_a01d20509f20eaab7d74ca86f5a68e170}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!last\_min\_x\_@{last\_min\_x\_}}
+\index{last\_min\_x\_@{last\_min\_x\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{last\_min\_x\_}{last\_min\_x\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::last\+\_\+min\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_ac48dde484133ff6a592332473b4ccb9a}\label{classcostmap__2d_1_1_inflation_layer_ac48dde484133ff6a592332473b4ccb9a}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!last\_min\_y\_@{last\_min\_y\_}}
+\index{last\_min\_y\_@{last\_min\_y\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{last\_min\_y\_}{last\_min\_y\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::last\+\_\+min\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_aebdeee9b6c8c9cad19bbc5ec0e546305}\label{classcostmap__2d_1_1_inflation_layer_aebdeee9b6c8c9cad19bbc5ec0e546305}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!need\_reinflation\_@{need\_reinflation\_}}
+\index{need\_reinflation\_@{need\_reinflation\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{need\_reinflation\_}{need\_reinflation\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Inflation\+Layer\+::need\+\_\+reinflation\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indicates that the entire costmap should be reinflated next time around. 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a05d76789a37f24cf6af5d82e900a5852}\label{classcostmap__2d_1_1_inflation_layer_a05d76789a37f24cf6af5d82e900a5852}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!resolution\_@{resolution\_}}
+\index{resolution\_@{resolution\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{resolution\_}{resolution\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::resolution\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a45cbbeb44dd1b73daf4111a1adfa5d69}\label{classcostmap__2d_1_1_inflation_layer_a45cbbeb44dd1b73daf4111a1adfa5d69}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!seen\_@{seen\_}}
+\index{seen\_@{seen\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{seen\_}{seen\_}}
+{\footnotesize\ttfamily bool$\ast$ costmap\+\_\+2d\+::\+Inflation\+Layer\+::seen\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a29c1027cf8409532ca36cc3b7e681e63}\label{classcostmap__2d_1_1_inflation_layer_a29c1027cf8409532ca36cc3b7e681e63}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!seen\_size\_@{seen\_size\_}}
+\index{seen\_size\_@{seen\_size\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{seen\_size\_}{seen\_size\_}}
+{\footnotesize\ttfamily int costmap\+\_\+2d\+::\+Inflation\+Layer\+::seen\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_inflation_layer_a507bd49c3aca392d91efcabfe999cc0d}\label{classcostmap__2d_1_1_inflation_layer_a507bd49c3aca392d91efcabfe999cc0d}} 
+\index{costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}!weight\_@{weight\_}}
+\index{weight\_@{weight\_}!costmap\_2d::InflationLayer@{costmap\_2d::InflationLayer}}
+\doxysubsubsection{\texorpdfstring{weight\_}{weight\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Inflation\+Layer\+::weight\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{inflation__layer_8h}{inflation\+\_\+layer.\+h}}\item 
+costmap\+\_\+2d/plugins/\mbox{\hyperlink{inflation__layer_8cpp}{inflation\+\_\+layer.\+cpp}}\end{DoxyCompactItemize}

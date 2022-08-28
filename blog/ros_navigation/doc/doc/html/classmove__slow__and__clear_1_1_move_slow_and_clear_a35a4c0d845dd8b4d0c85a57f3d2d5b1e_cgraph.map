@@ -1,0 +1,7 @@
+<map id="move_slow_and_clear::MoveSlowAndClear::distanceCheck" name="move_slow_and_clear::MoveSlowAndClear::distanceCheck">
+<area shape="rect" id="node1" title=" " alt="" coords="5,45,156,101"/>
+<area shape="rect" id="node2" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html#a2fe9f869a53b89056d292ce47833a68c" title=" " alt="" coords="204,5,355,61"/>
+<area shape="rect" id="node4" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html#ae41f9c43f9e585844b732da55de298f9" title=" " alt="" coords="204,85,355,141"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="403,13,600,54"/>
+<area shape="rect" id="node5" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html#a04fa319b6f46d429937aa1e00a1b3dba" title=" " alt="" coords="426,85,577,141"/>
+</map>

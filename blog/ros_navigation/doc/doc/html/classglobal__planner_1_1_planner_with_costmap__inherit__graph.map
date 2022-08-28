@@ -1,0 +1,5 @@
+<map id="global_planner::PlannerWithCostmap" name="global_planner::PlannerWithCostmap">
+<area shape="rect" id="node1" title=" " alt="" coords="11,155,194,196"/>
+<area shape="rect" id="node2" href="$classglobal__planner_1_1_global_planner.html" title=" " alt="" coords="5,80,200,107"/>
+<area shape="rect" id="node3" href="$classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,5,200,32"/>
+</map>

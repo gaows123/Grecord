@@ -1,0 +1,13 @@
+<map id="base_local_planner::LatchedStopRotateController::computeVelocityCommandsStopRotate" name="base_local_planner::LatchedStopRotateController::computeVelocityCommandsStopRotate">
+<area shape="rect" id="node1" title=" " alt="" coords="5,272,264,328"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="361,5,494,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="361,85,494,141"/>
+<area shape="rect" id="node5" href="$namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="312,166,543,207"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="354,232,501,288"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_odometry_helper_ros.html#ab70a70a7a3f3d8e6788e6e1f0503a717" title=" " alt="" coords="354,312,501,368"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a3f1784c0f8eb383822d41d0905cb6bda" title="Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐" alt="" coords="329,392,525,448"/>
+<area shape="rect" id="node9" href="$namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="361,473,494,514"/>
+<area shape="rect" id="node10" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#ae204da0df3c727a7f655e7c12a7dae75" title="停止机器人同时考虑加速度的限制" alt="" coords="329,539,525,595"/>
+<area shape="rect" id="node4" href="$namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="638,93,771,134"/>
+<area shape="rect" id="node11" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a8648f8df161c70441a60ec202a137b18" title=" " alt="" coords="591,546,819,587"/>
+</map>

@@ -1,0 +1,602 @@
+\hypertarget{classvoxel__grid_1_1_voxel_grid}{}\doxysection{voxel\+\_\+grid\+::Voxel\+Grid类 参考}
+\label{classvoxel__grid_1_1_voxel_grid}\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+
+
+{\ttfamily \#include $<$voxel\+\_\+grid.\+h$>$}
+
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel}{Clear\+Voxel}}
+\item 
+class \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map}{Clear\+Voxel\+In\+Map}}
+\item 
+class \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_grid_offset}{Grid\+Offset}}
+\item 
+class \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_mark_voxel}{Mark\+Voxel}}
+\item 
+class \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_z_offset}{ZOffset}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9ac2c185df470078fc1915523eb70bf5}{Voxel\+Grid}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y, unsigned int size\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Constructor for a voxel grid \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a782766e01b75da6d6a2f155e78a14998}{$\sim$\+Voxel\+Grid}} ()
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a5b03e57131d3ae12440c701cb1216688}{resize}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y, unsigned int size\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Resizes a voxel grid to the desired size \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_aab30ed5d435c878574d0769186d196ac}{reset}} ()
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ae298c07e3b613c065271c11417f8e951}{get\+Data}} ()
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_af05c08221c341915183f8b78bb267b89}{mark\+Voxel}} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+bool \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a115003f6d22524e8221e286eae51b784}{mark\+Voxel\+In\+Map}} (unsigned int x, unsigned int y, unsigned int z, unsigned int marked\+\_\+threshold)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ac90c8569576f1fa952070af6576b92f7}{clear\+Voxel}} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a74857af17abfe3158048a169ee87252a}{clear\+Voxel\+Column}} (unsigned int index)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a744c735aea9d22e68c43c07baa88d9fa}{clear\+Voxel\+In\+Map}} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+bool \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2}{bits\+Below\+Threshold}} (unsigned int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, unsigned int bit\+\_\+threshold)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a77c35197ba21a2c5b6ce3c9ea5ba5877}{mark\+Voxel\+Line}} (double x0, double y0, double z0, double x1, double y1, double z1, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_af64ffc7bcf9f4c2ca4c8c7473f15d51e}{clear\+Voxel\+Line}} (double x0, double y0, double z0, double x1, double y1, double z1, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a204172dfa4c1d101aab0cac064f24a6f}{clear\+Voxel\+Line\+In\+Map}} (double x0, double y0, double z0, double x1, double y1, double z1, unsigned char $\ast$map\+\_\+2d, unsigned int unknown\+\_\+threshold, unsigned int mark\+\_\+threshold, unsigned char free\+\_\+cost=0, unsigned char unknown\+\_\+cost=255, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\item 
+\mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{Voxel\+Status}} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a555dd1e57f4041603c8f8085c564b7e1}{get\+Voxel}} (unsigned int x, unsigned int y, unsigned int z)
+\item 
+\mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{Voxel\+Status}} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1cb19a239dd48a4df82e664f8dd53a36}{get\+Voxel\+Column}} (unsigned int x, unsigned int y, unsigned int unknown\+\_\+threshold=0, unsigned int marked\+\_\+threshold=0)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a23f965c26a19c8eeddaedab7640999a0}{print\+Voxel\+Grid}} ()
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_af784f39681d85eb758b04d5d6db4700a}{print\+Column\+Grid}} ()
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a443198a401b95b15c75c3f33c7064646}{sizeX}} ()
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a53c39103a03b74959a128b6df7343aaa}{sizeY}} ()
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1c624a3440de0db222caf0f675ff614d}{sizeZ}} ()
+\item 
+{\footnotesize template$<$class Action\+Type $>$ }\\void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_abde2d6af5b3bd1c027171c1553308cc2}{raytrace\+Line}} (Action\+Type at, double x0, double y0, double z0, double x1, double y1, double z1, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_aa2bd3d5ac9d1b1aaea15728978b203db}{num\+Bits}} (unsigned int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\item 
+static \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{Voxel\+Status}} \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a82798a1492156f1c23801e0c486743a3}{get\+Voxel}} (unsigned int x, unsigned int y, unsigned int z, unsigned int size\+\_\+x, unsigned int size\+\_\+y, unsigned int size\+\_\+z, const uint32\+\_\+t $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Action\+Type , class OffA , class OffB , class OffC $>$ }\\void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db}{bresenham3D}} (Action\+Type at, OffA off\+\_\+a, OffB off\+\_\+b, OffC off\+\_\+c, unsigned int abs\+\_\+da, unsigned int abs\+\_\+db, unsigned int abs\+\_\+dc, int error\+\_\+b, int error\+\_\+c, int offset\+\_\+a, int offset\+\_\+b, int offset\+\_\+c, unsigned int \&offset, unsigned int \&z\+\_\+mask, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\item 
+int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea}{sign}} (int i)
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a4a7315df7b9fd6cf64b9055742fa693f}{max}} (unsigned int x, unsigned int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}{size\+\_\+x\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}{size\+\_\+y\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}{size\+\_\+z\+\_\+}}
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}{data\+\_\+}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}{costmap}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a9ac2c185df470078fc1915523eb70bf5}\label{classvoxel__grid_1_1_voxel_grid_a9ac2c185df470078fc1915523eb70bf5}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!VoxelGrid@{VoxelGrid}}
+\index{VoxelGrid@{VoxelGrid}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{VoxelGrid()}{VoxelGrid()}}
+{\footnotesize\ttfamily Voxel\+Grid\+::\+Voxel\+Grid (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y,  }\item[{unsigned int}]{size\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Constructor for a voxel grid 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The x size of the grid \\
+\hline
+{\em size\+\_\+y} & The y size of the grid \\
+\hline
+{\em size\+\_\+z} & The z size of the grid, only sizes \texorpdfstring{$<$}{<}= 16 are supported \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a782766e01b75da6d6a2f155e78a14998}\label{classvoxel__grid_1_1_voxel_grid_a782766e01b75da6d6a2f155e78a14998}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!````~VoxelGrid@{$\sim$VoxelGrid}}
+\index{````~VoxelGrid@{$\sim$VoxelGrid}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{$\sim$VoxelGrid()}{~VoxelGrid()}}
+{\footnotesize\ttfamily Voxel\+Grid\+::$\sim$\+Voxel\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2}\label{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!bitsBelowThreshold@{bitsBelowThreshold}}
+\index{bitsBelowThreshold@{bitsBelowThreshold}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{bitsBelowThreshold()}{bitsBelowThreshold()}}
+{\footnotesize\ttfamily bool voxel\+\_\+grid\+::\+Voxel\+Grid\+::bits\+Below\+Threshold (\begin{DoxyParamCaption}\item[{unsigned int}]{n,  }\item[{unsigned int}]{bit\+\_\+threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a2063758dd2b12bbb08c90257fa4a3cd2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db}\label{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!bresenham3D@{bresenham3D}}
+\index{bresenham3D@{bresenham3D}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{bresenham3D()}{bresenham3D()}}
+{\footnotesize\ttfamily template$<$class Action\+Type , class OffA , class OffB , class OffC $>$ \\
+void voxel\+\_\+grid\+::\+Voxel\+Grid\+::bresenham3D (\begin{DoxyParamCaption}\item[{Action\+Type}]{at,  }\item[{OffA}]{off\+\_\+a,  }\item[{OffB}]{off\+\_\+b,  }\item[{OffC}]{off\+\_\+c,  }\item[{unsigned int}]{abs\+\_\+da,  }\item[{unsigned int}]{abs\+\_\+db,  }\item[{unsigned int}]{abs\+\_\+dc,  }\item[{int}]{error\+\_\+b,  }\item[{int}]{error\+\_\+c,  }\item[{int}]{offset\+\_\+a,  }\item[{int}]{offset\+\_\+b,  }\item[{int}]{offset\+\_\+c,  }\item[{unsigned int \&}]{offset,  }\item[{unsigned int \&}]{z\+\_\+mask,  }\item[{unsigned int}]{max\+\_\+length = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a6162764691b8e3966d31348e459486db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_ac90c8569576f1fa952070af6576b92f7}\label{classvoxel__grid_1_1_voxel_grid_ac90c8569576f1fa952070af6576b92f7}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!clearVoxel@{clearVoxel}}
+\index{clearVoxel@{clearVoxel}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{clearVoxel()}{clearVoxel()}}
+{\footnotesize\ttfamily void voxel\+\_\+grid\+::\+Voxel\+Grid\+::clear\+Voxel (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a74857af17abfe3158048a169ee87252a}\label{classvoxel__grid_1_1_voxel_grid_a74857af17abfe3158048a169ee87252a}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!clearVoxelColumn@{clearVoxelColumn}}
+\index{clearVoxelColumn@{clearVoxelColumn}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{clearVoxelColumn()}{clearVoxelColumn()}}
+{\footnotesize\ttfamily void voxel\+\_\+grid\+::\+Voxel\+Grid\+::clear\+Voxel\+Column (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a74857af17abfe3158048a169ee87252a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a744c735aea9d22e68c43c07baa88d9fa}\label{classvoxel__grid_1_1_voxel_grid_a744c735aea9d22e68c43c07baa88d9fa}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!clearVoxelInMap@{clearVoxelInMap}}
+\index{clearVoxelInMap@{clearVoxelInMap}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{clearVoxelInMap()}{clearVoxelInMap()}}
+{\footnotesize\ttfamily void voxel\+\_\+grid\+::\+Voxel\+Grid\+::clear\+Voxel\+In\+Map (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classvoxel__grid_1_1_voxel_grid_a744c735aea9d22e68c43c07baa88d9fa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_af64ffc7bcf9f4c2ca4c8c7473f15d51e}\label{classvoxel__grid_1_1_voxel_grid_af64ffc7bcf9f4c2ca4c8c7473f15d51e}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!clearVoxelLine@{clearVoxelLine}}
+\index{clearVoxelLine@{clearVoxelLine}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{clearVoxelLine()}{clearVoxelLine()}}
+{\footnotesize\ttfamily void Voxel\+Grid\+::clear\+Voxel\+Line (\begin{DoxyParamCaption}\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{z0,  }\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{z1,  }\item[{unsigned int}]{max\+\_\+length = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_af64ffc7bcf9f4c2ca4c8c7473f15d51e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_af64ffc7bcf9f4c2ca4c8c7473f15d51e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a204172dfa4c1d101aab0cac064f24a6f}\label{classvoxel__grid_1_1_voxel_grid_a204172dfa4c1d101aab0cac064f24a6f}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!clearVoxelLineInMap@{clearVoxelLineInMap}}
+\index{clearVoxelLineInMap@{clearVoxelLineInMap}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{clearVoxelLineInMap()}{clearVoxelLineInMap()}}
+{\footnotesize\ttfamily void Voxel\+Grid\+::clear\+Voxel\+Line\+In\+Map (\begin{DoxyParamCaption}\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{z0,  }\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{z1,  }\item[{unsigned char $\ast$}]{map\+\_\+2d,  }\item[{unsigned int}]{unknown\+\_\+threshold,  }\item[{unsigned int}]{mark\+\_\+threshold,  }\item[{unsigned char}]{free\+\_\+cost = {\ttfamily 0},  }\item[{unsigned char}]{unknown\+\_\+cost = {\ttfamily 255},  }\item[{unsigned int}]{max\+\_\+length = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a204172dfa4c1d101aab0cac064f24a6f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a204172dfa4c1d101aab0cac064f24a6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_ae298c07e3b613c065271c11417f8e951}\label{classvoxel__grid_1_1_voxel_grid_ae298c07e3b613c065271c11417f8e951}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!getData@{getData}}
+\index{getData@{getData}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily uint32\+\_\+t $\ast$ voxel\+\_\+grid\+::\+Voxel\+Grid\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_ae298c07e3b613c065271c11417f8e951_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a555dd1e57f4041603c8f8085c564b7e1}\label{classvoxel__grid_1_1_voxel_grid_a555dd1e57f4041603c8f8085c564b7e1}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!getVoxel@{getVoxel}}
+\index{getVoxel@{getVoxel}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{getVoxel()}{getVoxel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{Voxel\+Status}} Voxel\+Grid\+::get\+Voxel (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{z }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classvoxel__grid_1_1_voxel_grid_a555dd1e57f4041603c8f8085c564b7e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a82798a1492156f1c23801e0c486743a3}\label{classvoxel__grid_1_1_voxel_grid_a82798a1492156f1c23801e0c486743a3}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!getVoxel@{getVoxel}}
+\index{getVoxel@{getVoxel}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{getVoxel()}{getVoxel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{Voxel\+Status}} voxel\+\_\+grid\+::\+Voxel\+Grid\+::get\+Voxel (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{z,  }\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y,  }\item[{unsigned int}]{size\+\_\+z,  }\item[{const uint32\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classvoxel__grid_1_1_voxel_grid_a82798a1492156f1c23801e0c486743a3_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a82798a1492156f1c23801e0c486743a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a1cb19a239dd48a4df82e664f8dd53a36}\label{classvoxel__grid_1_1_voxel_grid_a1cb19a239dd48a4df82e664f8dd53a36}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!getVoxelColumn@{getVoxelColumn}}
+\index{getVoxelColumn@{getVoxelColumn}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{getVoxelColumn()}{getVoxelColumn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacevoxel__grid_a145810bda9aed8fb2ae9c1a7e37e2100}{Voxel\+Status}} Voxel\+Grid\+::get\+Voxel\+Column (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{unknown\+\_\+threshold = {\ttfamily 0},  }\item[{unsigned int}]{marked\+\_\+threshold = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classvoxel__grid_1_1_voxel_grid_a1cb19a239dd48a4df82e664f8dd53a36_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a1cb19a239dd48a4df82e664f8dd53a36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_af05c08221c341915183f8b78bb267b89}\label{classvoxel__grid_1_1_voxel_grid_af05c08221c341915183f8b78bb267b89}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!markVoxel@{markVoxel}}
+\index{markVoxel@{markVoxel}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{markVoxel()}{markVoxel()}}
+{\footnotesize\ttfamily void voxel\+\_\+grid\+::\+Voxel\+Grid\+::mark\+Voxel (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_af05c08221c341915183f8b78bb267b89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a115003f6d22524e8221e286eae51b784}\label{classvoxel__grid_1_1_voxel_grid_a115003f6d22524e8221e286eae51b784}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!markVoxelInMap@{markVoxelInMap}}
+\index{markVoxelInMap@{markVoxelInMap}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{markVoxelInMap()}{markVoxelInMap()}}
+{\footnotesize\ttfamily bool voxel\+\_\+grid\+::\+Voxel\+Grid\+::mark\+Voxel\+In\+Map (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{z,  }\item[{unsigned int}]{marked\+\_\+threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classvoxel__grid_1_1_voxel_grid_a115003f6d22524e8221e286eae51b784_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a115003f6d22524e8221e286eae51b784_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a77c35197ba21a2c5b6ce3c9ea5ba5877}\label{classvoxel__grid_1_1_voxel_grid_a77c35197ba21a2c5b6ce3c9ea5ba5877}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!markVoxelLine@{markVoxelLine}}
+\index{markVoxelLine@{markVoxelLine}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{markVoxelLine()}{markVoxelLine()}}
+{\footnotesize\ttfamily void Voxel\+Grid\+::mark\+Voxel\+Line (\begin{DoxyParamCaption}\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{z0,  }\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{z1,  }\item[{unsigned int}]{max\+\_\+length = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a77c35197ba21a2c5b6ce3c9ea5ba5877_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classvoxel__grid_1_1_voxel_grid_a77c35197ba21a2c5b6ce3c9ea5ba5877_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a4a7315df7b9fd6cf64b9055742fa693f}\label{classvoxel__grid_1_1_voxel_grid_a4a7315df7b9fd6cf64b9055742fa693f}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!max@{max}}
+\index{max@{max}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily unsigned int voxel\+\_\+grid\+::\+Voxel\+Grid\+::max (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a4a7315df7b9fd6cf64b9055742fa693f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_aa2bd3d5ac9d1b1aaea15728978b203db}\label{classvoxel__grid_1_1_voxel_grid_aa2bd3d5ac9d1b1aaea15728978b203db}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!numBits@{numBits}}
+\index{numBits@{numBits}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{numBits()}{numBits()}}
+{\footnotesize\ttfamily static unsigned int voxel\+\_\+grid\+::\+Voxel\+Grid\+::num\+Bits (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_aa2bd3d5ac9d1b1aaea15728978b203db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_af784f39681d85eb758b04d5d6db4700a}\label{classvoxel__grid_1_1_voxel_grid_af784f39681d85eb758b04d5d6db4700a}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!printColumnGrid@{printColumnGrid}}
+\index{printColumnGrid@{printColumnGrid}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{printColumnGrid()}{printColumnGrid()}}
+{\footnotesize\ttfamily void Voxel\+Grid\+::print\+Column\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_af784f39681d85eb758b04d5d6db4700a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classvoxel__grid_1_1_voxel_grid_af784f39681d85eb758b04d5d6db4700a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a23f965c26a19c8eeddaedab7640999a0}\label{classvoxel__grid_1_1_voxel_grid_a23f965c26a19c8eeddaedab7640999a0}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!printVoxelGrid@{printVoxelGrid}}
+\index{printVoxelGrid@{printVoxelGrid}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{printVoxelGrid()}{printVoxelGrid()}}
+{\footnotesize\ttfamily void Voxel\+Grid\+::print\+Voxel\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a23f965c26a19c8eeddaedab7640999a0_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{classvoxel__grid_1_1_voxel_grid_a23f965c26a19c8eeddaedab7640999a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_abde2d6af5b3bd1c027171c1553308cc2}\label{classvoxel__grid_1_1_voxel_grid_abde2d6af5b3bd1c027171c1553308cc2}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!raytraceLine@{raytraceLine}}
+\index{raytraceLine@{raytraceLine}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{raytraceLine()}{raytraceLine()}}
+{\footnotesize\ttfamily template$<$class Action\+Type $>$ \\
+void voxel\+\_\+grid\+::\+Voxel\+Grid\+::raytrace\+Line (\begin{DoxyParamCaption}\item[{Action\+Type}]{at,  }\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{z0,  }\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{z1,  }\item[{unsigned int}]{max\+\_\+length = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_abde2d6af5b3bd1c027171c1553308cc2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_abde2d6af5b3bd1c027171c1553308cc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_aab30ed5d435c878574d0769186d196ac}\label{classvoxel__grid_1_1_voxel_grid_aab30ed5d435c878574d0769186d196ac}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!reset@{reset}}
+\index{reset@{reset}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Voxel\+Grid\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_aab30ed5d435c878574d0769186d196ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a5b03e57131d3ae12440c701cb1216688}\label{classvoxel__grid_1_1_voxel_grid_a5b03e57131d3ae12440c701cb1216688}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!resize@{resize}}
+\index{resize@{resize}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Voxel\+Grid\+::resize (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y,  }\item[{unsigned int}]{size\+\_\+z }\end{DoxyParamCaption})}
+
+
+
+Resizes a voxel grid to the desired size 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The x size of the grid \\
+\hline
+{\em size\+\_\+y} & The y size of the grid \\
+\hline
+{\em size\+\_\+z} & The z size of the grid, only sizes \texorpdfstring{$<$}{<}= 16 are supported \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classvoxel__grid_1_1_voxel_grid_a5b03e57131d3ae12440c701cb1216688_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a5b03e57131d3ae12440c701cb1216688_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea}\label{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!sign@{sign}}
+\index{sign@{sign}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily int voxel\+\_\+grid\+::\+Voxel\+Grid\+::sign (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_ad9c87a014630da9252f62cef62319cea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a443198a401b95b15c75c3f33c7064646}\label{classvoxel__grid_1_1_voxel_grid_a443198a401b95b15c75c3f33c7064646}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!sizeX@{sizeX}}
+\index{sizeX@{sizeX}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{sizeX()}{sizeX()}}
+{\footnotesize\ttfamily unsigned int Voxel\+Grid\+::sizeX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a443198a401b95b15c75c3f33c7064646_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a53c39103a03b74959a128b6df7343aaa}\label{classvoxel__grid_1_1_voxel_grid_a53c39103a03b74959a128b6df7343aaa}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!sizeY@{sizeY}}
+\index{sizeY@{sizeY}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{sizeY()}{sizeY()}}
+{\footnotesize\ttfamily unsigned int Voxel\+Grid\+::sizeY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a53c39103a03b74959a128b6df7343aaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a1c624a3440de0db222caf0f675ff614d}\label{classvoxel__grid_1_1_voxel_grid_a1c624a3440de0db222caf0f675ff614d}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!sizeZ@{sizeZ}}
+\index{sizeZ@{sizeZ}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{sizeZ()}{sizeZ()}}
+{\footnotesize\ttfamily unsigned int Voxel\+Grid\+::sizeZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_a1c624a3440de0db222caf0f675ff614d_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}\label{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!costmap@{costmap}}
+\index{costmap@{costmap}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{costmap}{costmap}}
+{\footnotesize\ttfamily unsigned char$\ast$ voxel\+\_\+grid\+::\+Voxel\+Grid\+::costmap\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}\label{classvoxel__grid_1_1_voxel_grid_a920be6268081fc48f60394e0f75a1a96}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!data\_@{data\_}}
+\index{data\_@{data\_}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ voxel\+\_\+grid\+::\+Voxel\+Grid\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}\label{classvoxel__grid_1_1_voxel_grid_a29dfe127b95806838590454731410dc4}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!size\_x\_@{size\_x\_}}
+\index{size\_x\_@{size\_x\_}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{size\_x\_}{size\_x\_}}
+{\footnotesize\ttfamily unsigned int voxel\+\_\+grid\+::\+Voxel\+Grid\+::size\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}\label{classvoxel__grid_1_1_voxel_grid_a1549f784e4a30f538a95798c0a0e8ab6}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!size\_y\_@{size\_y\_}}
+\index{size\_y\_@{size\_y\_}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{size\_y\_}{size\_y\_}}
+{\footnotesize\ttfamily unsigned int voxel\+\_\+grid\+::\+Voxel\+Grid\+::size\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}\label{classvoxel__grid_1_1_voxel_grid_a956989dbae9bb5685e53e6534fdff1e5}} 
+\index{voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}!size\_z\_@{size\_z\_}}
+\index{size\_z\_@{size\_z\_}!voxel\_grid::VoxelGrid@{voxel\_grid::VoxelGrid}}
+\doxysubsubsection{\texorpdfstring{size\_z\_}{size\_z\_}}
+{\footnotesize\ttfamily unsigned int voxel\+\_\+grid\+::\+Voxel\+Grid\+::size\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+voxel\+\_\+grid/include/voxel\+\_\+grid/\mbox{\hyperlink{voxel__grid_8h}{voxel\+\_\+grid.\+h}}\item 
+voxel\+\_\+grid/src/\mbox{\hyperlink{voxel__grid_8cpp}{voxel\+\_\+grid.\+cpp}}\end{DoxyCompactItemize}

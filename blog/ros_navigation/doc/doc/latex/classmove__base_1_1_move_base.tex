@@ -1,0 +1,1044 @@
+\hypertarget{classmove__base_1_1_move_base}{}\doxysection{move\+\_\+base\+::Move\+Base类 参考}
+\label{classmove__base_1_1_move_base}\index{move\_base::MoveBase@{move\_base::MoveBase}}
+
+
+A class that uses the actionlib\+::\+Action\+Server interface that moves the robot base to a goal location.  
+
+
+
+
+{\ttfamily \#include $<$move\+\_\+base.\+h$>$}
+
+
+
+move\+\_\+base\+::Move\+Base 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5}{Move\+Base}} (tf2\+\_\+ros\+::\+Buffer \&tf)
+\begin{DoxyCompactList}\small\item\em Constructor for the actions \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmove__base_1_1_move_base_a4eabd5e76e974cc7c7d4672b925ec4bf}{$\sim$\+Move\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor -\/ Cleans up \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe}{execute\+Cycle}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}})
+\begin{DoxyCompactList}\small\item\em Performs a control cycle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098}{clear\+Costmaps\+Service}} (std\+\_\+srvs\+::\+Empty\+::\+Request \&req, std\+\_\+srvs\+::\+Empty\+::\+Response \&resp)
+\begin{DoxyCompactList}\small\item\em A service call that clears the costmaps of obstacles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7}{plan\+Service}} (nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&req, nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&resp)
+\begin{DoxyCompactList}\small\item\em A service call that can be made when the action is inactive that will return a plan \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Make a new global plan \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f}{load\+Recovery\+Behaviors}} (ros\+::\+Node\+Handle node)
+\begin{DoxyCompactList}\small\item\em Load the recovery behaviors for the navigation stack from the parameter server \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213}{load\+Default\+Recovery\+Behaviors}} ()
+\begin{DoxyCompactList}\small\item\em Loads the default recovery behaviors for the navigation stack \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2}{clear\+Costmap\+Windows}} (double size\+\_\+x, double size\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Clears obstacles within a window around the robot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a}{publish\+Zero\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Publishes a velocity command of zero to the base \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d}{reset\+State}} ()
+\begin{DoxyCompactList}\small\item\em Reset the state of the \mbox{\hyperlink{namespacemove__base}{move\+\_\+base}} action and send a zero velocity command to the base \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7}{goal\+CB}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}})
+\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a}{plan\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401}{execute\+Cb}} (const move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Goal\+Const\+Ptr \&move\+\_\+base\+\_\+goal)
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d}{is\+Quaternion\+Valid}} (const geometry\+\_\+msgs\+::\+Quaternion \&q)
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac}{get\+Robot\+Pose}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap)
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9}{distance}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&p1, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&p2)
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534}{goal\+To\+Global\+Frame}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal\+\_\+pose\+\_\+msg)
+\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225}{wake\+Planner}} (const ros\+::\+Timer\+Event \&event)
+\begin{DoxyCompactList}\small\item\em This is used to wake the planner at periodic intervals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1}{reconfigure\+CB}} (move\+\_\+base\+::\+Move\+Base\+Config \&config, uint32\+\_\+t level)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+tf2\+\_\+ros\+::\+Buffer \& \mbox{\hyperlink{classmove__base_1_1_move_base_a9c682b98057a8aba46c27e133c8639e1}{tf\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacemove__base_ac8da40ec5525ddc900973cc3c6ced790}{Move\+Base\+Action\+Server}} $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_aa0691561e18e14022c6c7c3f584b9ad8}{as\+\_\+}}
+\item 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnav__core_1_1_base_local_planner}{nav\+\_\+core\+::\+Base\+Local\+Planner}} $>$ \mbox{\hyperlink{classmove__base_1_1_move_base_af756b3f1419d3fdbf1abd61066639811}{tc\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_a215e33801629f482dddb812928ff1e6c}{planner\+\_\+costmap\+\_\+ros\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_af9db6c791e5d92bd5280be83c908f90b}{controller\+\_\+costmap\+\_\+ros\+\_\+}}
+\item 
+boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnav__core_1_1_base_global_planner}{nav\+\_\+core\+::\+Base\+Global\+Planner}} $>$ \mbox{\hyperlink{classmove__base_1_1_move_base_a2564bdc40f3a74bb527e57efe8ad2238}{planner\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classmove__base_1_1_move_base_acb9bfde38f6ab462a12ac5d74e5a91c3}{robot\+\_\+base\+\_\+frame\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classmove__base_1_1_move_base_a8c8f515da67875f8badfd03d55183d8d}{global\+\_\+frame\+\_\+}}
+\item 
+std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{nav\+\_\+core\+::\+Recovery\+Behavior}} $>$ $>$ \mbox{\hyperlink{classmove__base_1_1_move_base_a7c7ab119183a6462de1c8ab60214a22f}{recovery\+\_\+behaviors\+\_\+}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmove__base_1_1_move_base_a976906c4fac47447efeae651b96db92b}{recovery\+\_\+behavior\+\_\+names\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classmove__base_1_1_move_base_aff86447affb75f7f87c21cf8aa6b1e05}{recovery\+\_\+index\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classmove__base_1_1_move_base_ab1673fe852de40856760507118516be6}{global\+\_\+pose\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_aeebbf28b03f764abd63d0b756a6c4e7e}{planner\+\_\+frequency\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_ad1a1a6d5934e7e79ed3162965e892c3f}{controller\+\_\+frequency\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_a09d7236f88a70aef2555bb445dfd5e63}{inscribed\+\_\+radius\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_ab6b5316081ba1d6d38c2592269f03639}{circumscribed\+\_\+radius\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_a1d386ec12ecfc0540ab548f3483a0265}{planner\+\_\+patience\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_ae62d36ca6d041318e450759866dc4e6a}{controller\+\_\+patience\+\_\+}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classmove__base_1_1_move_base_a4948942a33d1145569cb36f87476d5ef}{max\+\_\+planning\+\_\+retries\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classmove__base_1_1_move_base_a54d3768d8395be910ee8c94248910d13}{planning\+\_\+retries\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_a572cb09cc8c8620e87863ab87b22f690}{conservative\+\_\+reset\+\_\+dist\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_aa23c1a593f407da1a76f27134abc2272}{clearing\+\_\+radius\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classmove__base_1_1_move_base_a3b6ed65d88fd5c97ec1dfbe099c8432e}{current\+\_\+goal\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classmove__base_1_1_move_base_aaaa652faeab2a091b12a9de4d7a4d67d}{vel\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classmove__base_1_1_move_base_ab3673dd4ff221886c815906b0b705e71}{action\+\_\+goal\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classmove__base_1_1_move_base_a62ef541590e9448fda031185970de667}{recovery\+\_\+status\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{classmove__base_1_1_move_base_a2b1b548900f137b360a2a85b54742a1b}{goal\+\_\+sub\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{classmove__base_1_1_move_base_affd0b654ef8136723b4a534569bf035b}{make\+\_\+plan\+\_\+srv\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{classmove__base_1_1_move_base_a71bc76c4949a4fa71b292df2377742f2}{clear\+\_\+costmaps\+\_\+srv\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a98edccf31a71c90da18a44144cb4806b}{shutdown\+\_\+costmaps\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_ae0dd2f813316fcd53fe9cc00a1460679}{clearing\+\_\+rotation\+\_\+allowed\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a09c78316058314b0a664c94890f13283}{recovery\+\_\+behavior\+\_\+enabled\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_ac61513b02830655684b7ac8bc08fcea4}{make\+\_\+plan\+\_\+clear\+\_\+costmap\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a402d2b18591bf28495b27080b0f05104}{make\+\_\+plan\+\_\+add\+\_\+unreachable\+\_\+goal\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_aa55e6b2ed7171e916fed5b1068604e91}{oscillation\+\_\+timeout\+\_\+}}
+\item 
+double \mbox{\hyperlink{classmove__base_1_1_move_base_ac27401426e7a02566549348ba70a2236}{oscillation\+\_\+distance\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26}{Move\+Base\+State}} \mbox{\hyperlink{classmove__base_1_1_move_base_a8142e16d75b428f9d95ccf6d5cfa73b9}{state\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548}{Recovery\+Trigger}} \mbox{\hyperlink{classmove__base_1_1_move_base_aee93a00f4ec16023b1517dbf83233684}{recovery\+\_\+trigger\+\_\+}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classmove__base_1_1_move_base_a4b072f605beee9dc864a72b13f19534f}{last\+\_\+valid\+\_\+plan\+\_\+}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classmove__base_1_1_move_base_a9df6ca6c2c19290a04faa50a837b3484}{last\+\_\+valid\+\_\+control\+\_\+}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classmove__base_1_1_move_base_a04522db38598d7f86e696e3bf5fbac3c}{last\+\_\+oscillation\+\_\+reset\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classmove__base_1_1_move_base_ac105a1f4a81f5d3f503cb6b44d8289fb}{oscillation\+\_\+pose\+\_\+}}
+\item 
+pluginlib\+::\+Class\+Loader$<$ \mbox{\hyperlink{classnav__core_1_1_base_global_planner}{nav\+\_\+core\+::\+Base\+Global\+Planner}} $>$ \mbox{\hyperlink{classmove__base_1_1_move_base_aab868dc3d278dff26a10adee6c476eca}{bgp\+\_\+loader\+\_\+}}
+\item 
+pluginlib\+::\+Class\+Loader$<$ \mbox{\hyperlink{classnav__core_1_1_base_local_planner}{nav\+\_\+core\+::\+Base\+Local\+Planner}} $>$ \mbox{\hyperlink{classmove__base_1_1_move_base_a67d4773e77236e3bec4f530e7f59cb87}{blp\+\_\+loader\+\_\+}}
+\item 
+pluginlib\+::\+Class\+Loader$<$ \mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{nav\+\_\+core\+::\+Recovery\+Behavior}} $>$ \mbox{\hyperlink{classmove__base_1_1_move_base_a0364046a17210f7ae2003c86d47c7646}{recovery\+\_\+loader\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_ae799defb3ae10421f59a676ed9928f4d}{planner\+\_\+plan\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_af993602ac2c3b59bbfd2c3cf464e30a7}{latest\+\_\+plan\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_a1856c58f97950cb3d0c7f97bca74f30b}{controller\+\_\+plan\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a4bf1b6c604084c0a1895a2f1f6469b54}{run\+Planner\+\_\+}}
+\item 
+boost\+::recursive\+\_\+mutex \mbox{\hyperlink{classmove__base_1_1_move_base_a5446009ae9a87ede0d10451876fc34b1}{planner\+\_\+mutex\+\_\+}}
+\item 
+boost\+::condition\+\_\+variable\+\_\+any \mbox{\hyperlink{classmove__base_1_1_move_base_a252ed7ae082dfc0d25334053076c9fc3}{planner\+\_\+cond\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classmove__base_1_1_move_base_ae309d359124b3c6e4de745e15acaaf2c}{planner\+\_\+goal\+\_\+}}
+\item 
+boost\+::thread $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_a4b73801f97cf862f62bb4eb3784c3d7f}{planner\+\_\+thread\+\_\+}}
+\item 
+boost\+::recursive\+\_\+mutex \mbox{\hyperlink{classmove__base_1_1_move_base_a547956b81fede41fc392b1c39a5f0e76}{configuration\+\_\+mutex\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ move\+\_\+base\+::\+Move\+Base\+Config $>$ $\ast$ \mbox{\hyperlink{classmove__base_1_1_move_base_a4148136ed8518f24b602ff512fa4329f}{dsrv\+\_\+}}
+\item 
+move\+\_\+base\+::\+Move\+Base\+Config \mbox{\hyperlink{classmove__base_1_1_move_base_af9bca68c30fe021c32b784f915e41f87}{last\+\_\+config\+\_\+}}
+\item 
+move\+\_\+base\+::\+Move\+Base\+Config \mbox{\hyperlink{classmove__base_1_1_move_base_a40f221d00c23c9e39de04ad2eb88f63f}{default\+\_\+config\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a4113b9d2c253a4af7a10b0d1d1415d89}{setup\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_adb8f20ebde3d39fd24855a97dbf03834}{p\+\_\+freq\+\_\+change\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_a9e91250b8dd2406b6759e57a4bdb87d7}{c\+\_\+freq\+\_\+change\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classmove__base_1_1_move_base_ad52a920158a187fb1aa73f5317b82cf4}{new\+\_\+global\+\_\+plan\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A class that uses the actionlib\+::\+Action\+Server interface that moves the robot base to a goal location. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5}\label{classmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!MoveBase@{MoveBase}}
+\index{MoveBase@{MoveBase}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{MoveBase()}{MoveBase()}}
+{\footnotesize\ttfamily move\+\_\+base\+::\+Move\+Base\+::\+Move\+Base (\begin{DoxyParamCaption}\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf }\end{DoxyParamCaption})}
+
+
+
+Constructor for the actions 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name of the action \\
+\hline
+{\em tf} & A reference to a Transform\+Listener \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a1132ccb47b3c514d52be347805eb31f5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4eabd5e76e974cc7c7d4672b925ec4bf}\label{classmove__base_1_1_move_base_a4eabd5e76e974cc7c7d4672b925ec4bf}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!````~MoveBase@{$\sim$MoveBase}}
+\index{````~MoveBase@{$\sim$MoveBase}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$MoveBase()}{~MoveBase()}}
+{\footnotesize\ttfamily move\+\_\+base\+::\+Move\+Base\+::$\sim$\+Move\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor -\/ Cleans up 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098}\label{classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!clearCostmapsService@{clearCostmapsService}}
+\index{clearCostmapsService@{clearCostmapsService}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{clearCostmapsService()}{clearCostmapsService()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::clear\+Costmaps\+Service (\begin{DoxyParamCaption}\item[{std\+\_\+srvs\+::\+Empty\+::\+Request \&}]{req,  }\item[{std\+\_\+srvs\+::\+Empty\+::\+Response \&}]{resp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A service call that clears the costmaps of obstacles 
+
+
+\begin{DoxyParams}{参数}
+{\em req} & The service request \\
+\hline
+{\em resp} & The service response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the service call succeeds, false otherwise 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_aa38fbbcfa91d3ee562fedd16a43bd098_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2}\label{classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!clearCostmapWindows@{clearCostmapWindows}}
+\index{clearCostmapWindows@{clearCostmapWindows}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{clearCostmapWindows()}{clearCostmapWindows()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::clear\+Costmap\+Windows (\begin{DoxyParamCaption}\item[{double}]{size\+\_\+x,  }\item[{double}]{size\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Clears obstacles within a window around the robot 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The x size of the window \\
+\hline
+{\em size\+\_\+y} & The y size of the window \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ac3ec5faa6a11697af52c061fd90907d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9}\label{classmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!distance@{distance}}
+\index{distance@{distance}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::distance (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{p1,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_af6108fe562dce4cadb9dc15f9ef377c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401}\label{classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!executeCb@{executeCb}}
+\index{executeCb@{executeCb}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{executeCb()}{executeCb()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::execute\+Cb (\begin{DoxyParamCaption}\item[{const move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Goal\+Const\+Ptr \&}]{move\+\_\+base\+\_\+goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a02ac84b1ead88c0b9b0f361475c90401_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe}\label{classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!executeCycle@{executeCycle}}
+\index{executeCycle@{executeCycle}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{executeCycle()}{executeCycle()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::execute\+Cycle (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal }\end{DoxyParamCaption})}
+
+
+
+Performs a control cycle 
+
+
+\begin{DoxyParams}{参数}
+{\em goal} & A reference to the goal to pursue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if processing of the goal is done, false otherwise 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a4cde906bc7b501d5918f8482da5fbabe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac}\label{classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!getRobotPose@{getRobotPose}}
+\index{getRobotPose@{getRobotPose}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{getRobotPose()}{getRobotPose()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::get\+Robot\+Pose (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ab267e8cd4697812fde4df300cb5902ac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7}\label{classmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!goalCB@{goalCB}}
+\index{goalCB@{goalCB}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{goalCB()}{goalCB()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::goal\+CB (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a6225709ac09918840a6ca78518617fb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534}\label{classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!goalToGlobalFrame@{goalToGlobalFrame}}
+\index{goalToGlobalFrame@{goalToGlobalFrame}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{goalToGlobalFrame()}{goalToGlobalFrame()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped move\+\_\+base\+::\+Move\+Base\+::goal\+To\+Global\+Frame (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal\+\_\+pose\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ae2511210a27b06b9a515df783c074534_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d}\label{classmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!isQuaternionValid@{isQuaternionValid}}
+\index{isQuaternionValid@{isQuaternionValid}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{isQuaternionValid()}{isQuaternionValid()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::is\+Quaternion\+Valid (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Quaternion \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a02e6417a642608d82f6d95f8eda0b72d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213}\label{classmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!loadDefaultRecoveryBehaviors@{loadDefaultRecoveryBehaviors}}
+\index{loadDefaultRecoveryBehaviors@{loadDefaultRecoveryBehaviors}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{loadDefaultRecoveryBehaviors()}{loadDefaultRecoveryBehaviors()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::load\+Default\+Recovery\+Behaviors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads the default recovery behaviors for the navigation stack 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a559a81b839c06c7e69c00fe4a93cb213_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f}\label{classmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!loadRecoveryBehaviors@{loadRecoveryBehaviors}}
+\index{loadRecoveryBehaviors@{loadRecoveryBehaviors}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{loadRecoveryBehaviors()}{loadRecoveryBehaviors()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::load\+Recovery\+Behaviors (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load the recovery behaviors for the navigation stack from the parameter server 
+
+
+\begin{DoxyParams}{参数}
+{\em node} & The ros\+::\+Node\+Handle to be used for loading parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the recovery behaviors were loaded successfully, false otherwise 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_aa2ae63f18e3bbfb4465b1587d3a84a6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089}\label{classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Make a new global plan 
+
+
+\begin{DoxyParams}{参数}
+{\em goal} & The goal to plan to \\
+\hline
+{\em plan} & Will be filled in with the plan made by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if planning succeeds, false otherwise 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_af48f0d98ba773f9799e0a970bf092089_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7}\label{classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planService@{planService}}
+\index{planService@{planService}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planService()}{planService()}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::plan\+Service (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&}]{req,  }\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&}]{resp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A service call that can be made when the action is inactive that will return a plan 
+
+
+\begin{DoxyParams}{参数}
+{\em req} & The goal request \\
+\hline
+{\em resp} & The plan request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if planning succeeded, false otherwise 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a02b97ca12b73c0caf06aaafde2c930e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a}\label{classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planThread@{planThread}}
+\index{planThread@{planThread}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planThread()}{planThread()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::plan\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a12b28ebdf00058e1ffc8b29ec92c320a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a}\label{classmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!publishZeroVelocity@{publishZeroVelocity}}
+\index{publishZeroVelocity@{publishZeroVelocity}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{publishZeroVelocity()}{publishZeroVelocity()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::publish\+Zero\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Publishes a velocity command of zero to the base 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_af31a9045b36350e06310c46eb138fc4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1}\label{classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{move\+\_\+base\+::\+Move\+Base\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_ab67ea64882589c75055cc07bf4bd9aa1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d}\label{classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!resetState@{resetState}}
+\index{resetState@{resetState}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{resetState()}{resetState()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::reset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reset the state of the \mbox{\hyperlink{namespacemove__base}{move\+\_\+base}} action and send a zero velocity command to the base 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a874fe3d747671d75dfafd26d7b36068d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225}\label{classmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!wakePlanner@{wakePlanner}}
+\index{wakePlanner@{wakePlanner}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{wakePlanner()}{wakePlanner()}}
+{\footnotesize\ttfamily void move\+\_\+base\+::\+Move\+Base\+::wake\+Planner (\begin{DoxyParamCaption}\item[{const ros\+::\+Timer\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is used to wake the planner at periodic intervals. 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmove__base_1_1_move_base_a8bdc13ba83e1281fba732980c7d5f225_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ab3673dd4ff221886c815906b0b705e71}\label{classmove__base_1_1_move_base_ab3673dd4ff221886c815906b0b705e71}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!action\_goal\_pub\_@{action\_goal\_pub\_}}
+\index{action\_goal\_pub\_@{action\_goal\_pub\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{action\_goal\_pub\_}{action\_goal\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher move\+\_\+base\+::\+Move\+Base\+::action\+\_\+goal\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aa0691561e18e14022c6c7c3f584b9ad8}\label{classmove__base_1_1_move_base_aa0691561e18e14022c6c7c3f584b9ad8}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!as\_@{as\_}}
+\index{as\_@{as\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{as\_}{as\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemove__base_ac8da40ec5525ddc900973cc3c6ced790}{Move\+Base\+Action\+Server}}$\ast$ move\+\_\+base\+::\+Move\+Base\+::as\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aab868dc3d278dff26a10adee6c476eca}\label{classmove__base_1_1_move_base_aab868dc3d278dff26a10adee6c476eca}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!bgp\_loader\_@{bgp\_loader\_}}
+\index{bgp\_loader\_@{bgp\_loader\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{bgp\_loader\_}{bgp\_loader\_}}
+{\footnotesize\ttfamily pluginlib\+::\+Class\+Loader$<$\mbox{\hyperlink{classnav__core_1_1_base_global_planner}{nav\+\_\+core\+::\+Base\+Global\+Planner}}$>$ move\+\_\+base\+::\+Move\+Base\+::bgp\+\_\+loader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a67d4773e77236e3bec4f530e7f59cb87}\label{classmove__base_1_1_move_base_a67d4773e77236e3bec4f530e7f59cb87}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!blp\_loader\_@{blp\_loader\_}}
+\index{blp\_loader\_@{blp\_loader\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{blp\_loader\_}{blp\_loader\_}}
+{\footnotesize\ttfamily pluginlib\+::\+Class\+Loader$<$\mbox{\hyperlink{classnav__core_1_1_base_local_planner}{nav\+\_\+core\+::\+Base\+Local\+Planner}}$>$ move\+\_\+base\+::\+Move\+Base\+::blp\+\_\+loader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a9e91250b8dd2406b6759e57a4bdb87d7}\label{classmove__base_1_1_move_base_a9e91250b8dd2406b6759e57a4bdb87d7}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!c\_freq\_change\_@{c\_freq\_change\_}}
+\index{c\_freq\_change\_@{c\_freq\_change\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{c\_freq\_change\_}{c\_freq\_change\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::c\+\_\+freq\+\_\+change\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ab6b5316081ba1d6d38c2592269f03639}\label{classmove__base_1_1_move_base_ab6b5316081ba1d6d38c2592269f03639}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!circumscribed\_radius\_@{circumscribed\_radius\_}}
+\index{circumscribed\_radius\_@{circumscribed\_radius\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{circumscribed\_radius\_}{circumscribed\_radius\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::circumscribed\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a71bc76c4949a4fa71b292df2377742f2}\label{classmove__base_1_1_move_base_a71bc76c4949a4fa71b292df2377742f2}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!clear\_costmaps\_srv\_@{clear\_costmaps\_srv\_}}
+\index{clear\_costmaps\_srv\_@{clear\_costmaps\_srv\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{clear\_costmaps\_srv\_}{clear\_costmaps\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server move\+\_\+base\+::\+Move\+Base\+::clear\+\_\+costmaps\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aa23c1a593f407da1a76f27134abc2272}\label{classmove__base_1_1_move_base_aa23c1a593f407da1a76f27134abc2272}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!clearing\_radius\_@{clearing\_radius\_}}
+\index{clearing\_radius\_@{clearing\_radius\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{clearing\_radius\_}{clearing\_radius\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::clearing\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ae0dd2f813316fcd53fe9cc00a1460679}\label{classmove__base_1_1_move_base_ae0dd2f813316fcd53fe9cc00a1460679}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!clearing\_rotation\_allowed\_@{clearing\_rotation\_allowed\_}}
+\index{clearing\_rotation\_allowed\_@{clearing\_rotation\_allowed\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{clearing\_rotation\_allowed\_}{clearing\_rotation\_allowed\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::clearing\+\_\+rotation\+\_\+allowed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a547956b81fede41fc392b1c39a5f0e76}\label{classmove__base_1_1_move_base_a547956b81fede41fc392b1c39a5f0e76}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!configuration\_mutex\_@{configuration\_mutex\_}}
+\index{configuration\_mutex\_@{configuration\_mutex\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{configuration\_mutex\_}{configuration\_mutex\_}}
+{\footnotesize\ttfamily boost\+::recursive\+\_\+mutex move\+\_\+base\+::\+Move\+Base\+::configuration\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a572cb09cc8c8620e87863ab87b22f690}\label{classmove__base_1_1_move_base_a572cb09cc8c8620e87863ab87b22f690}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!conservative\_reset\_dist\_@{conservative\_reset\_dist\_}}
+\index{conservative\_reset\_dist\_@{conservative\_reset\_dist\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{conservative\_reset\_dist\_}{conservative\_reset\_dist\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::conservative\+\_\+reset\+\_\+dist\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_af9db6c791e5d92bd5280be83c908f90b}\label{classmove__base_1_1_move_base_af9db6c791e5d92bd5280be83c908f90b}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!controller\_costmap\_ros\_@{controller\_costmap\_ros\_}}
+\index{controller\_costmap\_ros\_@{controller\_costmap\_ros\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{controller\_costmap\_ros\_}{controller\_costmap\_ros\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ move\+\_\+base\+::\+Move\+Base\+::controller\+\_\+costmap\+\_\+ros\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ad1a1a6d5934e7e79ed3162965e892c3f}\label{classmove__base_1_1_move_base_ad1a1a6d5934e7e79ed3162965e892c3f}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!controller\_frequency\_@{controller\_frequency\_}}
+\index{controller\_frequency\_@{controller\_frequency\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{controller\_frequency\_}{controller\_frequency\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::controller\+\_\+frequency\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ae62d36ca6d041318e450759866dc4e6a}\label{classmove__base_1_1_move_base_ae62d36ca6d041318e450759866dc4e6a}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!controller\_patience\_@{controller\_patience\_}}
+\index{controller\_patience\_@{controller\_patience\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{controller\_patience\_}{controller\_patience\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::controller\+\_\+patience\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a1856c58f97950cb3d0c7f97bca74f30b}\label{classmove__base_1_1_move_base_a1856c58f97950cb3d0c7f97bca74f30b}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!controller\_plan\_@{controller\_plan\_}}
+\index{controller\_plan\_@{controller\_plan\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{controller\_plan\_}{controller\_plan\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$$\ast$ move\+\_\+base\+::\+Move\+Base\+::controller\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a3b6ed65d88fd5c97ec1dfbe099c8432e}\label{classmove__base_1_1_move_base_a3b6ed65d88fd5c97ec1dfbe099c8432e}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!current\_goal\_pub\_@{current\_goal\_pub\_}}
+\index{current\_goal\_pub\_@{current\_goal\_pub\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{current\_goal\_pub\_}{current\_goal\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher move\+\_\+base\+::\+Move\+Base\+::current\+\_\+goal\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a40f221d00c23c9e39de04ad2eb88f63f}\label{classmove__base_1_1_move_base_a40f221d00c23c9e39de04ad2eb88f63f}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!default\_config\_@{default\_config\_}}
+\index{default\_config\_@{default\_config\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{default\_config\_}{default\_config\_}}
+{\footnotesize\ttfamily move\+\_\+base\+::\+Move\+Base\+Config move\+\_\+base\+::\+Move\+Base\+::default\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4148136ed8518f24b602ff512fa4329f}\label{classmove__base_1_1_move_base_a4148136ed8518f24b602ff512fa4329f}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$move\+\_\+base\+::\+Move\+Base\+Config$>$$\ast$ move\+\_\+base\+::\+Move\+Base\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a8c8f515da67875f8badfd03d55183d8d}\label{classmove__base_1_1_move_base_a8c8f515da67875f8badfd03d55183d8d}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string move\+\_\+base\+::\+Move\+Base\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ab1673fe852de40856760507118516be6}\label{classmove__base_1_1_move_base_ab1673fe852de40856760507118516be6}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!global\_pose\_@{global\_pose\_}}
+\index{global\_pose\_@{global\_pose\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{global\_pose\_}{global\_pose\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped move\+\_\+base\+::\+Move\+Base\+::global\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a2b1b548900f137b360a2a85b54742a1b}\label{classmove__base_1_1_move_base_a2b1b548900f137b360a2a85b54742a1b}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!goal\_sub\_@{goal\_sub\_}}
+\index{goal\_sub\_@{goal\_sub\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{goal\_sub\_}{goal\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber move\+\_\+base\+::\+Move\+Base\+::goal\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a09d7236f88a70aef2555bb445dfd5e63}\label{classmove__base_1_1_move_base_a09d7236f88a70aef2555bb445dfd5e63}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!inscribed\_radius\_@{inscribed\_radius\_}}
+\index{inscribed\_radius\_@{inscribed\_radius\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{inscribed\_radius\_}{inscribed\_radius\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::inscribed\+\_\+radius\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_af9bca68c30fe021c32b784f915e41f87}\label{classmove__base_1_1_move_base_af9bca68c30fe021c32b784f915e41f87}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!last\_config\_@{last\_config\_}}
+\index{last\_config\_@{last\_config\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{last\_config\_}{last\_config\_}}
+{\footnotesize\ttfamily move\+\_\+base\+::\+Move\+Base\+Config move\+\_\+base\+::\+Move\+Base\+::last\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a04522db38598d7f86e696e3bf5fbac3c}\label{classmove__base_1_1_move_base_a04522db38598d7f86e696e3bf5fbac3c}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!last\_oscillation\_reset\_@{last\_oscillation\_reset\_}}
+\index{last\_oscillation\_reset\_@{last\_oscillation\_reset\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{last\_oscillation\_reset\_}{last\_oscillation\_reset\_}}
+{\footnotesize\ttfamily ros\+::\+Time move\+\_\+base\+::\+Move\+Base\+::last\+\_\+oscillation\+\_\+reset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a9df6ca6c2c19290a04faa50a837b3484}\label{classmove__base_1_1_move_base_a9df6ca6c2c19290a04faa50a837b3484}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!last\_valid\_control\_@{last\_valid\_control\_}}
+\index{last\_valid\_control\_@{last\_valid\_control\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{last\_valid\_control\_}{last\_valid\_control\_}}
+{\footnotesize\ttfamily ros\+::\+Time move\+\_\+base\+::\+Move\+Base\+::last\+\_\+valid\+\_\+control\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4b072f605beee9dc864a72b13f19534f}\label{classmove__base_1_1_move_base_a4b072f605beee9dc864a72b13f19534f}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!last\_valid\_plan\_@{last\_valid\_plan\_}}
+\index{last\_valid\_plan\_@{last\_valid\_plan\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{last\_valid\_plan\_}{last\_valid\_plan\_}}
+{\footnotesize\ttfamily ros\+::\+Time move\+\_\+base\+::\+Move\+Base\+::last\+\_\+valid\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_af993602ac2c3b59bbfd2c3cf464e30a7}\label{classmove__base_1_1_move_base_af993602ac2c3b59bbfd2c3cf464e30a7}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!latest\_plan\_@{latest\_plan\_}}
+\index{latest\_plan\_@{latest\_plan\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{latest\_plan\_}{latest\_plan\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$$\ast$ move\+\_\+base\+::\+Move\+Base\+::latest\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a402d2b18591bf28495b27080b0f05104}\label{classmove__base_1_1_move_base_a402d2b18591bf28495b27080b0f05104}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!make\_plan\_add\_unreachable\_goal\_@{make\_plan\_add\_unreachable\_goal\_}}
+\index{make\_plan\_add\_unreachable\_goal\_@{make\_plan\_add\_unreachable\_goal\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{make\_plan\_add\_unreachable\_goal\_}{make\_plan\_add\_unreachable\_goal\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::make\+\_\+plan\+\_\+add\+\_\+unreachable\+\_\+goal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ac61513b02830655684b7ac8bc08fcea4}\label{classmove__base_1_1_move_base_ac61513b02830655684b7ac8bc08fcea4}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!make\_plan\_clear\_costmap\_@{make\_plan\_clear\_costmap\_}}
+\index{make\_plan\_clear\_costmap\_@{make\_plan\_clear\_costmap\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{make\_plan\_clear\_costmap\_}{make\_plan\_clear\_costmap\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::make\+\_\+plan\+\_\+clear\+\_\+costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_affd0b654ef8136723b4a534569bf035b}\label{classmove__base_1_1_move_base_affd0b654ef8136723b4a534569bf035b}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!make\_plan\_srv\_@{make\_plan\_srv\_}}
+\index{make\_plan\_srv\_@{make\_plan\_srv\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{make\_plan\_srv\_}{make\_plan\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server move\+\_\+base\+::\+Move\+Base\+::make\+\_\+plan\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4948942a33d1145569cb36f87476d5ef}\label{classmove__base_1_1_move_base_a4948942a33d1145569cb36f87476d5ef}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!max\_planning\_retries\_@{max\_planning\_retries\_}}
+\index{max\_planning\_retries\_@{max\_planning\_retries\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{max\_planning\_retries\_}{max\_planning\_retries\_}}
+{\footnotesize\ttfamily int32\+\_\+t move\+\_\+base\+::\+Move\+Base\+::max\+\_\+planning\+\_\+retries\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ad52a920158a187fb1aa73f5317b82cf4}\label{classmove__base_1_1_move_base_ad52a920158a187fb1aa73f5317b82cf4}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!new\_global\_plan\_@{new\_global\_plan\_}}
+\index{new\_global\_plan\_@{new\_global\_plan\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{new\_global\_plan\_}{new\_global\_plan\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::new\+\_\+global\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ac27401426e7a02566549348ba70a2236}\label{classmove__base_1_1_move_base_ac27401426e7a02566549348ba70a2236}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!oscillation\_distance\_@{oscillation\_distance\_}}
+\index{oscillation\_distance\_@{oscillation\_distance\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{oscillation\_distance\_}{oscillation\_distance\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::oscillation\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ac105a1f4a81f5d3f503cb6b44d8289fb}\label{classmove__base_1_1_move_base_ac105a1f4a81f5d3f503cb6b44d8289fb}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!oscillation\_pose\_@{oscillation\_pose\_}}
+\index{oscillation\_pose\_@{oscillation\_pose\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{oscillation\_pose\_}{oscillation\_pose\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped move\+\_\+base\+::\+Move\+Base\+::oscillation\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aa55e6b2ed7171e916fed5b1068604e91}\label{classmove__base_1_1_move_base_aa55e6b2ed7171e916fed5b1068604e91}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!oscillation\_timeout\_@{oscillation\_timeout\_}}
+\index{oscillation\_timeout\_@{oscillation\_timeout\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{oscillation\_timeout\_}{oscillation\_timeout\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::oscillation\+\_\+timeout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_adb8f20ebde3d39fd24855a97dbf03834}\label{classmove__base_1_1_move_base_adb8f20ebde3d39fd24855a97dbf03834}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!p\_freq\_change\_@{p\_freq\_change\_}}
+\index{p\_freq\_change\_@{p\_freq\_change\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{p\_freq\_change\_}{p\_freq\_change\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::p\+\_\+freq\+\_\+change\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a2564bdc40f3a74bb527e57efe8ad2238}\label{classmove__base_1_1_move_base_a2564bdc40f3a74bb527e57efe8ad2238}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_@{planner\_}}
+\index{planner\_@{planner\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_}{planner\_}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classnav__core_1_1_base_global_planner}{nav\+\_\+core\+::\+Base\+Global\+Planner}}$>$ move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a252ed7ae082dfc0d25334053076c9fc3}\label{classmove__base_1_1_move_base_a252ed7ae082dfc0d25334053076c9fc3}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_cond\_@{planner\_cond\_}}
+\index{planner\_cond\_@{planner\_cond\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_cond\_}{planner\_cond\_}}
+{\footnotesize\ttfamily boost\+::condition\+\_\+variable\+\_\+any move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+cond\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a215e33801629f482dddb812928ff1e6c}\label{classmove__base_1_1_move_base_a215e33801629f482dddb812928ff1e6c}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_costmap\_ros\_@{planner\_costmap\_ros\_}}
+\index{planner\_costmap\_ros\_@{planner\_costmap\_ros\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_costmap\_ros\_}{planner\_costmap\_ros\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+costmap\+\_\+ros\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aeebbf28b03f764abd63d0b756a6c4e7e}\label{classmove__base_1_1_move_base_aeebbf28b03f764abd63d0b756a6c4e7e}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_frequency\_@{planner\_frequency\_}}
+\index{planner\_frequency\_@{planner\_frequency\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_frequency\_}{planner\_frequency\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+frequency\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ae309d359124b3c6e4de745e15acaaf2c}\label{classmove__base_1_1_move_base_ae309d359124b3c6e4de745e15acaaf2c}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_goal\_@{planner\_goal\_}}
+\index{planner\_goal\_@{planner\_goal\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_goal\_}{planner\_goal\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+goal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a5446009ae9a87ede0d10451876fc34b1}\label{classmove__base_1_1_move_base_a5446009ae9a87ede0d10451876fc34b1}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_mutex\_@{planner\_mutex\_}}
+\index{planner\_mutex\_@{planner\_mutex\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_mutex\_}{planner\_mutex\_}}
+{\footnotesize\ttfamily boost\+::recursive\+\_\+mutex move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a1d386ec12ecfc0540ab548f3483a0265}\label{classmove__base_1_1_move_base_a1d386ec12ecfc0540ab548f3483a0265}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_patience\_@{planner\_patience\_}}
+\index{planner\_patience\_@{planner\_patience\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_patience\_}{planner\_patience\_}}
+{\footnotesize\ttfamily double move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+patience\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_ae799defb3ae10421f59a676ed9928f4d}\label{classmove__base_1_1_move_base_ae799defb3ae10421f59a676ed9928f4d}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_plan\_@{planner\_plan\_}}
+\index{planner\_plan\_@{planner\_plan\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_plan\_}{planner\_plan\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$$\ast$ move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4b73801f97cf862f62bb4eb3784c3d7f}\label{classmove__base_1_1_move_base_a4b73801f97cf862f62bb4eb3784c3d7f}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planner\_thread\_@{planner\_thread\_}}
+\index{planner\_thread\_@{planner\_thread\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planner\_thread\_}{planner\_thread\_}}
+{\footnotesize\ttfamily boost\+::thread$\ast$ move\+\_\+base\+::\+Move\+Base\+::planner\+\_\+thread\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a54d3768d8395be910ee8c94248910d13}\label{classmove__base_1_1_move_base_a54d3768d8395be910ee8c94248910d13}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!planning\_retries\_@{planning\_retries\_}}
+\index{planning\_retries\_@{planning\_retries\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{planning\_retries\_}{planning\_retries\_}}
+{\footnotesize\ttfamily uint32\+\_\+t move\+\_\+base\+::\+Move\+Base\+::planning\+\_\+retries\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a09c78316058314b0a664c94890f13283}\label{classmove__base_1_1_move_base_a09c78316058314b0a664c94890f13283}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!recovery\_behavior\_enabled\_@{recovery\_behavior\_enabled\_}}
+\index{recovery\_behavior\_enabled\_@{recovery\_behavior\_enabled\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{recovery\_behavior\_enabled\_}{recovery\_behavior\_enabled\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::recovery\+\_\+behavior\+\_\+enabled\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a976906c4fac47447efeae651b96db92b}\label{classmove__base_1_1_move_base_a976906c4fac47447efeae651b96db92b}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!recovery\_behavior\_names\_@{recovery\_behavior\_names\_}}
+\index{recovery\_behavior\_names\_@{recovery\_behavior\_names\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{recovery\_behavior\_names\_}{recovery\_behavior\_names\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ move\+\_\+base\+::\+Move\+Base\+::recovery\+\_\+behavior\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a7c7ab119183a6462de1c8ab60214a22f}\label{classmove__base_1_1_move_base_a7c7ab119183a6462de1c8ab60214a22f}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!recovery\_behaviors\_@{recovery\_behaviors\_}}
+\index{recovery\_behaviors\_@{recovery\_behaviors\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{recovery\_behaviors\_}{recovery\_behaviors\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{nav\+\_\+core\+::\+Recovery\+Behavior}}$>$ $>$ move\+\_\+base\+::\+Move\+Base\+::recovery\+\_\+behaviors\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aff86447affb75f7f87c21cf8aa6b1e05}\label{classmove__base_1_1_move_base_aff86447affb75f7f87c21cf8aa6b1e05}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!recovery\_index\_@{recovery\_index\_}}
+\index{recovery\_index\_@{recovery\_index\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{recovery\_index\_}{recovery\_index\_}}
+{\footnotesize\ttfamily unsigned int move\+\_\+base\+::\+Move\+Base\+::recovery\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a0364046a17210f7ae2003c86d47c7646}\label{classmove__base_1_1_move_base_a0364046a17210f7ae2003c86d47c7646}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!recovery\_loader\_@{recovery\_loader\_}}
+\index{recovery\_loader\_@{recovery\_loader\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{recovery\_loader\_}{recovery\_loader\_}}
+{\footnotesize\ttfamily pluginlib\+::\+Class\+Loader$<$\mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{nav\+\_\+core\+::\+Recovery\+Behavior}}$>$ move\+\_\+base\+::\+Move\+Base\+::recovery\+\_\+loader\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a62ef541590e9448fda031185970de667}\label{classmove__base_1_1_move_base_a62ef541590e9448fda031185970de667}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!recovery\_status\_pub\_@{recovery\_status\_pub\_}}
+\index{recovery\_status\_pub\_@{recovery\_status\_pub\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{recovery\_status\_pub\_}{recovery\_status\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher move\+\_\+base\+::\+Move\+Base\+::recovery\+\_\+status\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aee93a00f4ec16023b1517dbf83233684}\label{classmove__base_1_1_move_base_aee93a00f4ec16023b1517dbf83233684}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!recovery\_trigger\_@{recovery\_trigger\_}}
+\index{recovery\_trigger\_@{recovery\_trigger\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{recovery\_trigger\_}{recovery\_trigger\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548}{Recovery\+Trigger}} move\+\_\+base\+::\+Move\+Base\+::recovery\+\_\+trigger\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_acb9bfde38f6ab462a12ac5d74e5a91c3}\label{classmove__base_1_1_move_base_acb9bfde38f6ab462a12ac5d74e5a91c3}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!robot\_base\_frame\_@{robot\_base\_frame\_}}
+\index{robot\_base\_frame\_@{robot\_base\_frame\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{robot\_base\_frame\_}{robot\_base\_frame\_}}
+{\footnotesize\ttfamily std\+::string move\+\_\+base\+::\+Move\+Base\+::robot\+\_\+base\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4bf1b6c604084c0a1895a2f1f6469b54}\label{classmove__base_1_1_move_base_a4bf1b6c604084c0a1895a2f1f6469b54}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!runPlanner\_@{runPlanner\_}}
+\index{runPlanner\_@{runPlanner\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{runPlanner\_}{runPlanner\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::run\+Planner\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a4113b9d2c253a4af7a10b0d1d1415d89}\label{classmove__base_1_1_move_base_a4113b9d2c253a4af7a10b0d1d1415d89}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!setup\_@{setup\_}}
+\index{setup\_@{setup\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{setup\_}{setup\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::setup\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a98edccf31a71c90da18a44144cb4806b}\label{classmove__base_1_1_move_base_a98edccf31a71c90da18a44144cb4806b}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!shutdown\_costmaps\_@{shutdown\_costmaps\_}}
+\index{shutdown\_costmaps\_@{shutdown\_costmaps\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{shutdown\_costmaps\_}{shutdown\_costmaps\_}}
+{\footnotesize\ttfamily bool move\+\_\+base\+::\+Move\+Base\+::shutdown\+\_\+costmaps\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a8142e16d75b428f9d95ccf6d5cfa73b9}\label{classmove__base_1_1_move_base_a8142e16d75b428f9d95ccf6d5cfa73b9}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!state\_@{state\_}}
+\index{state\_@{state\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{state\_}{state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26}{Move\+Base\+State}} move\+\_\+base\+::\+Move\+Base\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_af756b3f1419d3fdbf1abd61066639811}\label{classmove__base_1_1_move_base_af756b3f1419d3fdbf1abd61066639811}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!tc\_@{tc\_}}
+\index{tc\_@{tc\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{tc\_}{tc\_}}
+{\footnotesize\ttfamily boost\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classnav__core_1_1_base_local_planner}{nav\+\_\+core\+::\+Base\+Local\+Planner}}$>$ move\+\_\+base\+::\+Move\+Base\+::tc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_a9c682b98057a8aba46c27e133c8639e1}\label{classmove__base_1_1_move_base_a9c682b98057a8aba46c27e133c8639e1}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer\& move\+\_\+base\+::\+Move\+Base\+::tf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmove__base_1_1_move_base_aaaa652faeab2a091b12a9de4d7a4d67d}\label{classmove__base_1_1_move_base_aaaa652faeab2a091b12a9de4d7a4d67d}} 
+\index{move\_base::MoveBase@{move\_base::MoveBase}!vel\_pub\_@{vel\_pub\_}}
+\index{vel\_pub\_@{vel\_pub\_}!move\_base::MoveBase@{move\_base::MoveBase}}
+\doxysubsubsection{\texorpdfstring{vel\_pub\_}{vel\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher move\+\_\+base\+::\+Move\+Base\+::vel\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+move\+\_\+base/include/move\+\_\+base/\mbox{\hyperlink{move__base_8h}{move\+\_\+base.\+h}}\item 
+move\+\_\+base/src/\mbox{\hyperlink{move__base_8cpp}{move\+\_\+base.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+<map id="base_local_planner::TrajectoryCostFunction::scoreTrajectory" name="base_local_planner::TrajectoryCostFunction::scoreTrajectory">
+<area shape="rect" id="node1" title=" " alt="" coords="797,43,963,99"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_simple_scored_sampling_planner.html#ac11a2d2fbf69d6ed55f720c5ebe1b541" title=" " alt="" coords="540,43,749,99"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="289,13,486,54"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_simple_scored_sampling_planner.html#ad1a365b0504879a2e57f1a9d713acdc4" title=" " alt="" coords="283,79,492,135"/>
+<area shape="rect" id="node4" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+<area shape="rect" id="node6" href="$classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="31,86,209,127"/>
+</map>

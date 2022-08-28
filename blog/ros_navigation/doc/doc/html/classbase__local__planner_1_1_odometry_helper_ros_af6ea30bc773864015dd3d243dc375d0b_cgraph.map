@@ -1,0 +1,5 @@
+<map id="base_local_planner::OdometryHelperRos::OdometryHelperRos" name="base_local_planner::OdometryHelperRos::OdometryHelperRos">
+<area shape="rect" id="node1" title="Constructor." alt="" coords="5,5,152,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_odometry_helper_ros.html#a3405fc02265edac001b3f4c8802c983d" title="Set the odometry topic. This overrides what was set in the constructor, if anything." alt="" coords="200,5,347,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_odometry_helper_ros.html#a0eeb49d061e05d16d43cac5196552c01" title="Callback for receiving odometry data" alt="" coords="395,5,541,61"/>
+</map>

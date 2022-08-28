@@ -1,0 +1,9 @@
+<map id="base_local_planner::MapGrid::setTargetCells" name="base_local_planner::MapGrid::setTargetCells">
+<area shape="rect" id="node1" title="Update what cells are considered path based on the global plan" alt="" coords="451,93,621,134"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="258,5,391,61"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc" title=" " alt="" coords="247,85,403,141"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_planner.html#ad8c384954625a91934bad8354f5dc24d" title="更新路径" alt="" coords="258,165,391,221"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,25,199,81"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="22,125,182,181"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="22,205,182,261"/>
+</map>

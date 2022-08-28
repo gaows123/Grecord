@@ -1,0 +1,4 @@
+<map id="costmap_2d::Costmap2DROS::stop" name="costmap_2d::Costmap2DROS::stop">
+<area shape="rect" id="node1" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="251,5,449,47"/>
+</map>

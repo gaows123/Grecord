@@ -1,0 +1,52 @@
+\hypertarget{wavefront__map__accessor_8h_source}{}\doxysection{wavefront\+\_\+map\+\_\+accessor.\+h}
+\label{wavefront__map__accessor_8h_source}\index{base\_local\_planner/test/wavefront\_map\_accessor.h@{base\_local\_planner/test/wavefront\_map\_accessor.h}}
+\mbox{\hyperlink{wavefront__map__accessor_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * wavefront\_map\_accessor.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: May 2, 2012}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: tkruse}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef WAVEFRONT\_MAP\_ACCESSOR\_H\_}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define WAVEFRONT\_MAP\_ACCESSOR\_H\_}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cost__values_8h}{costmap\_2d/cost\_values.h}}>}}
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor}{WavefrontMapAccessor}} : \textcolor{keyword}{public} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}} \{}
+\DoxyCodeLine{18   \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a31116ccd4b8c9fa55916c57bd5e80c6e}{WavefrontMapAccessor}}(\mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{MapGrid}}* map, \textcolor{keywordtype}{double} outer\_radius)}
+\DoxyCodeLine{20       : \mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}::\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a1ec52799b2b673306902fcfe01285d7a}{Costmap2D}}(map-\/>\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}}, map-\/>\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ad25df12283aa78c43878e24633381100}{size\_y\_}}, 1, 0, 0),}
+\DoxyCodeLine{21         \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a799a0b05e6b36696bf4f790bee9d5893}{map\_}}(map), \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a37c744569edbaa7c226bca3d046844d4}{outer\_radius\_}}(outer\_radius) \{}
+\DoxyCodeLine{22       \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a22a6ea335309603f580cac039bc8871c}{synchronize}}();}
+\DoxyCodeLine{23     \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_aacf3ec8556be6b053c003593658dd38b}{\string~WavefrontMapAccessor}}()\{\};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a22a6ea335309603f580cac039bc8871c}{synchronize}}()\{}
+\DoxyCodeLine{28       \textcolor{comment}{// Write Cost Data from the map}}
+\DoxyCodeLine{29       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x = 0; x < \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}}; x++)\{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y = 0; y < \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ad25df12283aa78c43878e24633381100}{size\_y\_}}; y++)\{}
+\DoxyCodeLine{31           \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ind = x + (y * \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}});}
+\DoxyCodeLine{32           \textcolor{keywordflow}{if}(\mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a799a0b05e6b36696bf4f790bee9d5893}{map\_}}-\/>operator ()(x, y).target\_dist == 1) \{}
+\DoxyCodeLine{33             \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a34c8633b0dfec7481300d401d33010c7}{costmap\_}}[ind] = \mbox{\hyperlink{namespacecostmap__2d_aab110f187082d88d103ee84c8e420872}{costmap\_2d::LETHAL\_OBSTACLE}};}
+\DoxyCodeLine{34           \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{35             \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a34c8633b0dfec7481300d401d33010c7}{costmap\_}}[ind] = 0;}
+\DoxyCodeLine{36           \}}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38       \}}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41   \textcolor{keyword}{private}:}
+\DoxyCodeLine{42     \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{MapGrid}}* \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a799a0b05e6b36696bf4f790bee9d5893}{map\_}};}
+\DoxyCodeLine{43     \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_wavefront_map_accessor_a37c744569edbaa7c226bca3d046844d4}{outer\_radius\_}};}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* WAVEFRONT\_MAP\_ACCESSOR\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,1437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d::LayeredCostmap类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecostmap__2d.html">costmap_2d</a></li><li class="navelem"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html">LayeredCostmap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcostmap__2d_1_1_layered_costmap-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">costmap_2d::LayeredCostmap类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Instantiates different layer plugins and aggregates them into one score  
+ <a href="classcostmap__2d_1_1_layered_costmap.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="layered__costmap_8h_source.html">layered_costmap.h</a>&gt;</code></p>
+<div class="dynheader">
+costmap_2d::LayeredCostmap 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap__coll__graph.png" border="0" usemap="#acostmap__2d_1_1_layered_costmap_coll__map" alt="Collaboration graph"/></div>
+<map name="acostmap__2d_1_1_layered_costmap_coll__map" id="acostmap__2d_1_1_layered_costmap_coll__map">
+<area shape="rect" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="59,95,257,121"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,5,175,32"/>
+<area shape="rect" title=" " alt="" coords="199,5,253,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1200f12dd40104f81f8f2771bbec9d71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a1200f12dd40104f81f8f2771bbec9d71">LayeredCostmap</a> (std::string global_frame, bool rolling_window, bool track_unknown)</td></tr>
+<tr class="memdesc:a1200f12dd40104f81f8f2771bbec9d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a costmap  <a href="classcostmap__2d_1_1_layered_costmap.html#a1200f12dd40104f81f8f2771bbec9d71">更多...</a><br /></td></tr>
+<tr class="separator:a1200f12dd40104f81f8f2771bbec9d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cf84d6594ab255ffe07ad33b35eed5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#af4cf84d6594ab255ffe07ad33b35eed5">~LayeredCostmap</a> ()</td></tr>
+<tr class="memdesc:af4cf84d6594ab255ffe07ad33b35eed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <a href="classcostmap__2d_1_1_layered_costmap.html#af4cf84d6594ab255ffe07ad33b35eed5">更多...</a><br /></td></tr>
+<tr class="separator:af4cf84d6594ab255ffe07ad33b35eed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab598d6442277ba8299ba3c7b952662d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6">updateMap</a> (double robot_x, double robot_y, double robot_yaw)</td></tr>
+<tr class="memdesc:ab598d6442277ba8299ba3c7b952662d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the underlying costmap with new data. If you want to update the map outside of the update loop that runs, you can call this.  <a href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6">更多...</a><br /></td></tr>
+<tr class="separator:ab598d6442277ba8299ba3c7b952662d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d264f47c67a8cf934987697813fb478"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a4d264f47c67a8cf934987697813fb478">getGlobalFrameID</a> () const noexcept</td></tr>
+<tr class="separator:a4d264f47c67a8cf934987697813fb478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8121ac0c6a2c5f267cf1cc07cfc40b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a8f8121ac0c6a2c5f267cf1cc07cfc40b">resizeMap</a> (unsigned int size_x, unsigned int size_y, double resolution, double origin_x, double origin_y, bool size_locked=false)</td></tr>
+<tr class="separator:a8f8121ac0c6a2c5f267cf1cc07cfc40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935ce021ebf125f9c08dec4779be282e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a935ce021ebf125f9c08dec4779be282e">getUpdatedBounds</a> (double &amp;minx, double &amp;miny, double &amp;maxx, double &amp;maxy)</td></tr>
+<tr class="separator:a935ce021ebf125f9c08dec4779be282e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fdc879ceb88df60b51ee4e5f4a1ec6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a7fdc879ceb88df60b51ee4e5f4a1ec6e">isCurrent</a> ()</td></tr>
+<tr class="separator:a7fdc879ceb88df60b51ee4e5f4a1ec6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22e2f5d750be195f71da46b2062460f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2">getCostmap</a> ()</td></tr>
+<tr class="separator:a22e2f5d750be195f71da46b2062460f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ff509ec4e5464d6e6952c282b8e6bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a60ff509ec4e5464d6e6952c282b8e6bf">isRolling</a> ()</td></tr>
+<tr class="separator:a60ff509ec4e5464d6e6952c282b8e6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa6e5845344fadb7172fee21d0705cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a4aa6e5845344fadb7172fee21d0705cc">isTrackingUnknown</a> ()</td></tr>
+<tr class="separator:a4aa6e5845344fadb7172fee21d0705cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d0806d545bfbe019fb5cac308f10b5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; boost::shared_ptr&lt; <a class="el" href="classcostmap__2d_1_1_layer.html">Layer</a> &gt; &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5">getPlugins</a> ()</td></tr>
+<tr class="separator:a56d0806d545bfbe019fb5cac308f10b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afdb4c9795e2383bd5b66b89c748a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b">addPlugin</a> (boost::shared_ptr&lt; <a class="el" href="classcostmap__2d_1_1_layer.html">Layer</a> &gt; plugin)</td></tr>
+<tr class="separator:a8afdb4c9795e2383bd5b66b89c748a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa22f5de46ef653c81d2d75d1832a1a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acaa22f5de46ef653c81d2d75d1832a1a">isSizeLocked</a> ()</td></tr>
+<tr class="separator:acaa22f5de46ef653c81d2d75d1832a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef643cb3579fcdc9c0ff936038a6ddde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#aef643cb3579fcdc9c0ff936038a6ddde">getBounds</a> (unsigned int *x0, unsigned int *xn, unsigned int *y0, unsigned int *yn)</td></tr>
+<tr class="separator:aef643cb3579fcdc9c0ff936038a6ddde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc113bdd03ed7d3fa29038769a1bd9e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#afc113bdd03ed7d3fa29038769a1bd9e3">isInitialized</a> ()</td></tr>
+<tr class="separator:afc113bdd03ed7d3fa29038769a1bd9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf16f3d3636b7fbe6e28edbd32340464"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464">setFootprint</a> (const std::vector&lt; geometry_msgs::Point &gt; &amp;footprint_spec)</td></tr>
+<tr class="memdesc:acf16f3d3636b7fbe6e28edbd32340464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintChanged() in all layers.  <a href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464">更多...</a><br /></td></tr>
+<tr class="separator:acf16f3d3636b7fbe6e28edbd32340464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c556a286827d2ac883dc49285c3ff8"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a65c556a286827d2ac883dc49285c3ff8">getFootprint</a> ()</td></tr>
+<tr class="memdesc:a65c556a286827d2ac883dc49285c3ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the latest footprint stored with <a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha...">setFootprint()</a>.  <a href="classcostmap__2d_1_1_layered_costmap.html#a65c556a286827d2ac883dc49285c3ff8">更多...</a><br /></td></tr>
+<tr class="separator:a65c556a286827d2ac883dc49285c3ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01de7e0148d03792abdb82f562090d2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#aa01de7e0148d03792abdb82f562090d2">getCircumscribedRadius</a> ()</td></tr>
+<tr class="memdesc:aa01de7e0148d03792abdb82f562090d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius of a circle centered at the origin of the robot which just surrounds all points on the robot's footprint.  <a href="classcostmap__2d_1_1_layered_costmap.html#aa01de7e0148d03792abdb82f562090d2">更多...</a><br /></td></tr>
+<tr class="separator:aa01de7e0148d03792abdb82f562090d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a92cecc3689caf8b1e9e077788c54b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a55a92cecc3689caf8b1e9e077788c54b">getInscribedRadius</a> ()</td></tr>
+<tr class="memdesc:a55a92cecc3689caf8b1e9e077788c54b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The radius of a circle centered at the origin of the robot which is just within all points and edges of the robot's footprint.  <a href="classcostmap__2d_1_1_layered_costmap.html#a55a92cecc3689caf8b1e9e077788c54b">更多...</a><br /></td></tr>
+<tr class="separator:a55a92cecc3689caf8b1e9e077788c54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8c435ef3f9992bdd43881118c98dae94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a8c435ef3f9992bdd43881118c98dae94">costmap_</a></td></tr>
+<tr class="separator:a8c435ef3f9992bdd43881118c98dae94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d697faebc0cb177e3c60cd5e95a5b94"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a2d697faebc0cb177e3c60cd5e95a5b94">global_frame_</a></td></tr>
+<tr class="separator:a2d697faebc0cb177e3c60cd5e95a5b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3b81e2b41df0424c801aeda7222ff2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#aad3b81e2b41df0424c801aeda7222ff2">rolling_window_</a></td></tr>
+<tr class="separator:aad3b81e2b41df0424c801aeda7222ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab745c8c3f20f875a29c8778a37653734"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#ab745c8c3f20f875a29c8778a37653734">current_</a></td></tr>
+<tr class="memdesc:ab745c8c3f20f875a29c8778a37653734"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt;  <a href="classcostmap__2d_1_1_layered_costmap.html#ab745c8c3f20f875a29c8778a37653734">更多...</a><br /></td></tr>
+<tr class="separator:ab745c8c3f20f875a29c8778a37653734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d6d1d9085ac2968b0efc849b443a25"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#ae8d6d1d9085ac2968b0efc849b443a25">minx_</a></td></tr>
+<tr class="separator:ae8d6d1d9085ac2968b0efc849b443a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb5b07fc2117f4f17f1c330fbceb876"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#abcb5b07fc2117f4f17f1c330fbceb876">miny_</a></td></tr>
+<tr class="separator:abcb5b07fc2117f4f17f1c330fbceb876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22740c3a181873dbfa30ce2bff2ae374"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a22740c3a181873dbfa30ce2bff2ae374">maxx_</a></td></tr>
+<tr class="separator:a22740c3a181873dbfa30ce2bff2ae374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabdec50fe88d4189fb9dc4b082498f3a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#aabdec50fe88d4189fb9dc4b082498f3a">maxy_</a></td></tr>
+<tr class="separator:aabdec50fe88d4189fb9dc4b082498f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af95ce322bdd923bbaec67e59b7f84e40"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#af95ce322bdd923bbaec67e59b7f84e40">bx0_</a></td></tr>
+<tr class="separator:af95ce322bdd923bbaec67e59b7f84e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae914ca4fd3d63dcf25324e47f2828ad1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#ae914ca4fd3d63dcf25324e47f2828ad1">bxn_</a></td></tr>
+<tr class="separator:ae914ca4fd3d63dcf25324e47f2828ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85075c57c9b43f45b4ada89ce8763e7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#aa85075c57c9b43f45b4ada89ce8763e7">by0_</a></td></tr>
+<tr class="separator:aa85075c57c9b43f45b4ada89ce8763e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21e7d0cd02548c579098a7f9486d2cd"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#ac21e7d0cd02548c579098a7f9486d2cd">byn_</a></td></tr>
+<tr class="separator:ac21e7d0cd02548c579098a7f9486d2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c149962ee923306c043d3cf0a29cafa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; boost::shared_ptr&lt; <a class="el" href="classcostmap__2d_1_1_layer.html">Layer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a2c149962ee923306c043d3cf0a29cafa">plugins_</a></td></tr>
+<tr class="separator:a2c149962ee923306c043d3cf0a29cafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0667ff85987146c43ba1b703741eb6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#ad0667ff85987146c43ba1b703741eb6c">initialized_</a></td></tr>
+<tr class="separator:ad0667ff85987146c43ba1b703741eb6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c55d9fd17fdccdef9f777a4c731d7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#aa2c55d9fd17fdccdef9f777a4c731d7c">size_locked_</a></td></tr>
+<tr class="separator:aa2c55d9fd17fdccdef9f777a4c731d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7330d4fcd00c2a511348083506900a09"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a7330d4fcd00c2a511348083506900a09">circumscribed_radius_</a></td></tr>
+<tr class="separator:a7330d4fcd00c2a511348083506900a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1fcca65994f4882980fc22905bbc9c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#ae1fcca65994f4882980fc22905bbc9c4">inscribed_radius_</a></td></tr>
+<tr class="separator:ae1fcca65994f4882980fc22905bbc9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964fe6bc4cbd11fdf505ba3969969cfa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::Point &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html#a964fe6bc4cbd11fdf505ba3969969cfa">footprint_</a></td></tr>
+<tr class="separator:a964fe6bc4cbd11fdf505ba3969969cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >Instantiates different layer plugins and aggregates them into one score </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a1200f12dd40104f81f8f2771bbec9d71" name="a1200f12dd40104f81f8f2771bbec9d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1200f12dd40104f81f8f2771bbec9d71">&#9670;&nbsp;</a></span>LayeredCostmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">costmap_2d::LayeredCostmap::LayeredCostmap </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>global_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>rolling_window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>track_unknown</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for a costmap </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a1200f12dd40104f81f8f2771bbec9d71_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a1200f12dd40104f81f8f2771bbec9d71_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a1200f12dd40104f81f8f2771bbec9d71_cgraph" id="aclasscostmap__2d_1_1_layered_costmap_a1200f12dd40104f81f8f2771bbec9d71_cgraph">
+<area shape="rect" title="Constructor for a costmap" alt="" coords="5,5,204,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8a9f535f98f1ba4c0a74f88aa706bcd2" title=" " alt="" coords="252,5,421,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af4cf84d6594ab255ffe07ad33b35eed5" name="af4cf84d6594ab255ffe07ad33b35eed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4cf84d6594ab255ffe07ad33b35eed5">&#9670;&nbsp;</a></span>~LayeredCostmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">costmap_2d::LayeredCostmap::~LayeredCostmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8afdb4c9795e2383bd5b66b89c748a6b" name="a8afdb4c9795e2383bd5b66b89c748a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afdb4c9795e2383bd5b66b89c748a6b">&#9670;&nbsp;</a></span>addPlugin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::LayeredCostmap::addPlugin </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classcostmap__2d_1_1_layer.html">Layer</a> &gt;&#160;</td>
+          <td class="paramname"><em>plugin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a8afdb4c9795e2383bd5b66b89c748a6b_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a8afdb4c9795e2383bd5b66b89c748a6b_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a8afdb4c9795e2383bd5b66b89c748a6b_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a8afdb4c9795e2383bd5b66b89c748a6b_icgraph">
+<area shape="rect" title=" " alt="" coords="355,74,553,115"/>
+<area shape="rect" href="testing__helper_8h.html#a1ba5d33cfd5bb6ee59e0fdbf44251d81" title=" " alt="" coords="147,5,269,32"/>
+<area shape="rect" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a" title=" " alt="" coords="145,56,271,83"/>
+<area shape="rect" href="testing__helper_8h.html#a44d779d80cd1879d61ab1e32e179a806" title=" " alt="" coords="153,107,263,133"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="109,158,307,199"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="5,31,61,57"/>
+<area shape="rect" href="inflation__tests_8cpp.html#a790b8d46b7472f667bc70b1ac2b485e1" title=" " alt="" coords="5,107,61,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aef643cb3579fcdc9c0ff936038a6ddde" name="aef643cb3579fcdc9c0ff936038a6ddde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef643cb3579fcdc9c0ff936038a6ddde">&#9670;&nbsp;</a></span>getBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::LayeredCostmap::getBounds </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>xn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>yn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_aef643cb3579fcdc9c0ff936038a6ddde_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_aef643cb3579fcdc9c0ff936038a6ddde_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_aef643cb3579fcdc9c0ff936038a6ddde_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_aef643cb3579fcdc9c0ff936038a6ddde_icgraph">
+<area shape="rect" title=" " alt="" coords="741,5,940,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="496,5,693,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,5,448,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,5,203,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa01de7e0148d03792abdb82f562090d2" name="aa01de7e0148d03792abdb82f562090d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01de7e0148d03792abdb82f562090d2">&#9670;&nbsp;</a></span>getCircumscribedRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::getCircumscribedRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The radius of a circle centered at the origin of the robot which just surrounds all points on the robot's footprint. </p>
+<p >This is updated by <a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha...">setFootprint()</a>. </p>
+
+</div>
+</div>
+<a id="a22e2f5d750be195f71da46b2062460f2" name="a22e2f5d750be195f71da46b2062460f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22e2f5d750be195f71da46b2062460f2">&#9670;&nbsp;</a></span>getCostmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a> * costmap_2d::LayeredCostmap::getCostmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a22e2f5d750be195f71da46b2062460f2_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a22e2f5d750be195f71da46b2062460f2_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a22e2f5d750be195f71da46b2062460f2_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a22e2f5d750be195f71da46b2062460f2_icgraph">
+<area shape="rect" title=" " alt="" coords="1212,711,1411,752"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="976,119,1155,160"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="723,5,901,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="967,547,1164,588"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="967,677,1164,719"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#aa9d8d26c675b2ecebeb1f2ba2a7ccfd6" title="Callback to update the costmap&#39;s map from the map_server" alt="" coords="982,743,1149,784"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap_layer.html#a9260d210630b6522cad87397506f9696" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="973,808,1158,849"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a3c8a9c7ea061ad416e09d2f1f18cdc8a" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="982,873,1149,915"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#af0370b7b97c5d8cfcc961abb8d190f21" title="Reset each individual layer" alt="" coords="967,612,1164,653"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="1037,939,1093,966"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a9ebed8f042ee945073031e51f82229f1" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="982,991,1149,1032"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="723,136,901,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="723,71,901,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="234,39,413,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,39,184,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="471,69,649,111"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap_tester.html#a73e0c2048004f4c99a2cc868aed060b3" title=" " alt="" coords="717,709,907,751"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098" title="A service call that clears the costmaps of obstacles" alt="" coords="731,201,893,243"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="731,877,893,919"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="481,852,639,893"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="733,943,891,984"/>
+<area shape="rect" href="classcarrot__planner_1_1_carrot_planner.html#a83b1bb77b4ef4a2719dcc29bf90d077e" title="Initialization function for the CarrotPlanner" alt="" coords="717,1073,907,1115"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#a280ebb6723d46b462eb66ec73a2fe266" title="PlannerCore 对象的初始化函数" alt="" coords="715,291,909,332"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html#a7f1e06b4e3b390aaaa3e4733a0668c4d" title="NavFnROS 对象的初始化函数" alt="" coords="723,381,901,407"/>
+<area shape="rect" href="classrotate__recovery_1_1_rotate_recovery.html#a609f496f7a9f916f526a40a517c69204" title="恢复行为的初始化函数" alt="" coords="705,432,919,473"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="732,498,892,554"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85" title="构建ros的封装" alt="" coords="723,579,901,620"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089" title="Make a new global plan" alt="" coords="733,1008,891,1049"/>
+<area shape="rect" href="classcarrot__planner_1_1_carrot_planner.html#a59c64d61f2e992d08b32438116614ab5" title="Given a goal pose in the world, compute a plan" alt="" coords="717,644,907,685"/>
+<area shape="rect" href="clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="755,775,869,802"/>
+<area shape="rect" href="costmap__tester_8cpp.html#ab6234649e9137a2ece384ae5e9ea9263" title=" " alt="" coords="532,717,588,743"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="244,885,403,927"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="481,917,639,959"/>
+<area shape="rect" href="classcarrot__planner_1_1_carrot_planner.html#a4046ba14bc9523f59305115c530dfc0b" title="Constructor for the CarrotPlanner" alt="" coords="465,1048,655,1089"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#aaeb34983765b053861cbef08e9614bb5" title="构造函数" alt="" coords="463,291,657,332"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html#a06ba0ae6bd1cac9ee89110290c5b86e6" title="NavFnROS对象的构造函数" alt="" coords="463,381,657,407"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="480,498,640,554"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="481,983,639,1024"/>
+<area shape="rect" href="clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="532,775,588,802"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="729,1139,895,1180"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="477,1113,643,1155"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="477,1179,643,1220"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#a0528c59b3cbe4c1b81748284ae0a3dc5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="729,1224,895,1265"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="719,1289,905,1331"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#a2361abd50823db1734c1cc05a70d0c97" title=" " alt="" coords="477,1244,643,1285"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#a7e9b75bd9cee13aa9f893a17d549fbee" title=" " alt="" coords="232,1244,415,1285"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="477,1309,643,1351"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a65c556a286827d2ac883dc49285c3ff8" name="a65c556a286827d2ac883dc49285c3ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c556a286827d2ac883dc49285c3ff8">&#9670;&nbsp;</a></span>getFootprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; geometry_msgs::Point &gt; &amp; costmap_2d::LayeredCostmap::getFootprint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the latest footprint stored with <a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha...">setFootprint()</a>. </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a65c556a286827d2ac883dc49285c3ff8_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a65c556a286827d2ac883dc49285c3ff8_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a65c556a286827d2ac883dc49285c3ff8_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a65c556a286827d2ac883dc49285c3ff8_icgraph">
+<area shape="rect" title="Returns the latest footprint stored with setFootprint()." alt="" coords="699,72,897,113"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#ac24cade239a2cb0923a774bc5231ac44" title="Convenience function for layered_costmap_&#45;&gt;getFootprint()." alt="" coords="491,39,632,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="472,104,651,145"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac81261d46ebc829ca1d747c024a00603" title=" " alt="" coords="239,39,424,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="5,5,191,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="15,71,181,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4d264f47c67a8cf934987697813fb478" name="a4d264f47c67a8cf934987697813fb478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d264f47c67a8cf934987697813fb478">&#9670;&nbsp;</a></span>getGlobalFrameID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; costmap_2d::LayeredCostmap::getGlobalFrameID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a4d264f47c67a8cf934987697813fb478_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a4d264f47c67a8cf934987697813fb478_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a4d264f47c67a8cf934987697813fb478_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a4d264f47c67a8cf934987697813fb478_icgraph">
+<area shape="rect" title=" " alt="" coords="453,39,652,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,5,405,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="229,71,396,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="5,5,172,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="5,71,172,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="5,136,172,177"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55a92cecc3689caf8b1e9e077788c54b" name="a55a92cecc3689caf8b1e9e077788c54b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a92cecc3689caf8b1e9e077788c54b">&#9670;&nbsp;</a></span>getInscribedRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::getInscribedRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The radius of a circle centered at the origin of the robot which is just within all points and edges of the robot's footprint. </p>
+<p >This is updated by <a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha...">setFootprint()</a>. </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a55a92cecc3689caf8b1e9e077788c54b_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a55a92cecc3689caf8b1e9e077788c54b_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a55a92cecc3689caf8b1e9e077788c54b_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a55a92cecc3689caf8b1e9e077788c54b_icgraph">
+<area shape="rect" title="The radius of a circle centered at the origin of the robot which is just within all points and edges ..." alt="" coords="232,5,431,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56d0806d545bfbe019fb5cac308f10b5" name="a56d0806d545bfbe019fb5cac308f10b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d0806d545bfbe019fb5cac308f10b5">&#9670;&nbsp;</a></span>getPlugins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; boost::shared_ptr&lt; <a class="el" href="classcostmap__2d_1_1_layer.html">Layer</a> &gt; &gt; * costmap_2d::LayeredCostmap::getPlugins </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a56d0806d545bfbe019fb5cac308f10b5_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a56d0806d545bfbe019fb5cac308f10b5_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a56d0806d545bfbe019fb5cac308f10b5_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a56d0806d545bfbe019fb5cac308f10b5_icgraph">
+<area shape="rect" title=" " alt="" coords="1447,166,1645,207"/>
+<area shape="rect" href="classclear__costmap__recovery_1_1_clear_costmap_recovery.html#afa64ceeb9a0ab7eb3796e3a0095545a7" title=" " alt="" coords="1217,5,1383,61"/>
+<area shape="rect" href="clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="538,45,651,72"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#af0370b7b97c5d8cfcc961abb8d190f21" title="Reset each individual layer" alt="" coords="1201,377,1399,418"/>
+<area shape="rect" href="classmove__slow__and__clear_1_1_move_slow_and_clear.html#abf32e06b525c141d8b7afcac857c241a" title="Run the behavior" alt="" coords="1225,191,1375,247"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a426e3bfc085f9534b908807d1d734396" title="Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the cos..." alt="" coords="741,137,939,178"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="1201,271,1399,313"/>
+<area shape="rect" href="classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4" title="Run the ClearCostmapRecovery recovery behavior. Reverts the costmap to the static map outside of a us..." alt="" coords="987,5,1153,61"/>
+<area shape="rect" href="clear__tester_8cpp.html#a401dad5e820a56943c7223955000dc1b" title=" " alt="" coords="777,27,903,53"/>
+<area shape="rect" href="clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="321,45,377,72"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098" title="A service call that clears the costmaps of obstacles" alt="" coords="989,421,1151,462"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="270,303,429,345"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="515,238,674,279"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="496,121,693,162"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,121,448,162"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,121,203,162"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="991,267,1149,309"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="761,202,919,243"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="515,303,674,345"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a935ce021ebf125f9c08dec4779be282e" name="a935ce021ebf125f9c08dec4779be282e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a935ce021ebf125f9c08dec4779be282e">&#9670;&nbsp;</a></span>getUpdatedBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::LayeredCostmap::getUpdatedBounds </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>minx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>miny</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>maxx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>maxy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fdc879ceb88df60b51ee4e5f4a1ec6e" name="a7fdc879ceb88df60b51ee4e5f4a1ec6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fdc879ceb88df60b51ee4e5f4a1ec6e">&#9670;&nbsp;</a></span>isCurrent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::isCurrent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a7fdc879ceb88df60b51ee4e5f4a1ec6e_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a7fdc879ceb88df60b51ee4e5f4a1ec6e_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a7fdc879ceb88df60b51ee4e5f4a1ec6e_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a7fdc879ceb88df60b51ee4e5f4a1ec6e_icgraph">
+<area shape="rect" title=" " alt="" coords="871,5,1069,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1c8735ead3c927906ca31e015bfc9ab7" title="Same as getLayeredCostmap()&#45;&gt;isCurrent()." alt="" coords="625,5,823,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="419,5,577,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" href="classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc113bdd03ed7d3fa29038769a1bd9e3" name="afc113bdd03ed7d3fa29038769a1bd9e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc113bdd03ed7d3fa29038769a1bd9e3">&#9670;&nbsp;</a></span>isInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::isInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_afc113bdd03ed7d3fa29038769a1bd9e3_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_afc113bdd03ed7d3fa29038769a1bd9e3_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_afc113bdd03ed7d3fa29038769a1bd9e3_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_afc113bdd03ed7d3fa29038769a1bd9e3_icgraph">
+<area shape="rect" title=" " alt="" coords="741,5,940,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="496,5,693,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,5,448,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,5,203,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60ff509ec4e5464d6e6952c282b8e6bf" name="a60ff509ec4e5464d6e6952c282b8e6bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ff509ec4e5464d6e6952c282b8e6bf">&#9670;&nbsp;</a></span>isRolling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::isRolling </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a60ff509ec4e5464d6e6952c282b8e6bf_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a60ff509ec4e5464d6e6952c282b8e6bf_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a60ff509ec4e5464d6e6952c282b8e6bf_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a60ff509ec4e5464d6e6952c282b8e6bf_icgraph">
+<area shape="rect" title=" " alt="" coords="668,168,867,209"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#aa9d8d26c675b2ecebeb1f2ba2a7ccfd6" title="Callback to update the costmap&#39;s map from the map_server" alt="" coords="444,37,611,79"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a3c8a9c7ea061ad416e09d2f1f18cdc8a" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="444,103,611,144"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="435,168,620,209"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#ad433844bcb32418450e0fcb763173b6a" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="444,233,611,275"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a9ebed8f042ee945073031e51f82229f1" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="444,299,611,340"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,37,387,79"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="5,5,172,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="5,71,172,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,168,387,209"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acaa22f5de46ef653c81d2d75d1832a1a" name="acaa22f5de46ef653c81d2d75d1832a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa22f5de46ef653c81d2d75d1832a1a">&#9670;&nbsp;</a></span>isSizeLocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::isSizeLocked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_acaa22f5de46ef653c81d2d75d1832a1a_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_acaa22f5de46ef653c81d2d75d1832a1a_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_acaa22f5de46ef653c81d2d75d1832a1a_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_acaa22f5de46ef653c81d2d75d1832a1a_icgraph">
+<area shape="rect" title=" " alt="" coords="496,5,695,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,5,448,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,5,203,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4aa6e5845344fadb7172fee21d0705cc" name="a4aa6e5845344fadb7172fee21d0705cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa6e5845344fadb7172fee21d0705cc">&#9670;&nbsp;</a></span>isTrackingUnknown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::isTrackingUnknown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_cgraph" id="aclasscostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,204,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a35fbb86d10502ab91fb6e133c1364cd9" title=" " alt="" coords="252,5,421,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a4aa6e5845344fadb7172fee21d0705cc_icgraph">
+<area shape="rect" title=" " alt="" coords="453,5,652,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,5,405,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="5,5,172,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8f8121ac0c6a2c5f267cf1cc07cfc40b" name="a8f8121ac0c6a2c5f267cf1cc07cfc40b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f8121ac0c6a2c5f267cf1cc07cfc40b">&#9670;&nbsp;</a></span>resizeMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::LayeredCostmap::resizeMap </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>resolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>origin_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>origin_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>size_locked</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_cgraph" id="aclasscostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,204,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="252,5,421,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a95bae6eccd820a77d8040562e2a51118" title=" " alt="" coords="252,71,421,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a1da91220df45a19376a3e3df3a517c27" title="Initializes the costmap, static_map, and markers data structures" alt="" coords="469,37,639,79"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="469,103,639,144"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_a8f8121ac0c6a2c5f267cf1cc07cfc40b_icgraph">
+<area shape="rect" title=" " alt="" coords="711,103,909,144"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#aa9d8d26c675b2ecebeb1f2ba2a7ccfd6" title="Callback to update the costmap&#39;s map from the map_server" alt="" coords="481,37,647,79"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="465,103,663,144"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="536,169,592,195"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="235,37,402,79"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="5,5,172,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="5,71,172,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="220,103,417,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf16f3d3636b7fbe6e28edbd32340464" name="acf16f3d3636b7fbe6e28edbd32340464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf16f3d3636b7fbe6e28edbd32340464">&#9670;&nbsp;</a></span>setFootprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::LayeredCostmap::setFootprint </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintChanged() in all layers. </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_cgraph" id="aclasscostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_cgraph">
+<area shape="rect" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha..." alt="" coords="5,5,204,47"/>
+<area shape="rect" href="namespacecostmap__2d.html#a6eeafbd231ad1ec2de69e61754773742" title="Calculate the extreme distances for the footprint" alt="" coords="252,5,427,47"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="633,13,704,39"/>
+<area shape="rect" href="costmap__math_8cpp.html#a31fe9c9633687b41b7c65a18dcab85f9" title=" " alt="" coords="475,38,585,65"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464_icgraph">
+<area shape="rect" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha..." alt="" coords="1028,49,1227,90"/>
+<area shape="rect" href="inflation__tests_8cpp.html#aeda5180359541007551a26f092e871b5" title=" " alt="" coords="847,5,916,32"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="608,5,664,32"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a220a578102cf3592a744ad5264bf09ed" title="Set the footprint of the robot to be the given set of points, padded by footprint_padding." alt="" coords="783,107,980,149"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,118,203,159"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#ae68ab88626d6d5f7a8b3f9dd44d60ff2" title="Set the footprint from the new_config object." alt="" coords="537,107,735,149"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="271,118,469,159"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a05c662c0ad169c124480ed3d9ee500e8" title="Set the footprint of the robot to be the given polygon, padded by footprint_padding." alt="" coords="251,205,489,246"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab598d6442277ba8299ba3c7b952662d6" name="ab598d6442277ba8299ba3c7b952662d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab598d6442277ba8299ba3c7b952662d6">&#9670;&nbsp;</a></span>updateMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::LayeredCostmap::updateMap </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_yaw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the underlying costmap with new data. If you want to update the map outside of the update loop that runs, you can call this. </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_cgraph" id="aclasscostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_cgraph">
+<area shape="rect" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="5,235,204,276"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="262,5,431,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="262,71,431,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="262,136,431,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="262,201,431,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="262,267,431,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="262,332,431,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="262,397,431,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="252,463,441,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="489,365,659,407"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="489,431,659,472"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_icgraph" id="aclasscostmap__2d_1_1_layered_costmap_ab598d6442277ba8299ba3c7b952662d6_icgraph">
+<area shape="rect" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="1091,49,1289,91"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="916,27,972,54"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9c3aa244e7890b363a6317500d66e900" title=" " alt="" coords="845,79,1043,120"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="600,5,797,47"/>
+<area shape="rect" href="classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4" title="Run the ClearCostmapRecovery recovery behavior. Reverts the costmap to the static map outside of a us..." alt="" coords="615,71,782,127"/>
+<area shape="rect" href="clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="151,122,265,149"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="355,5,552,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="109,5,307,47"/>
+<area shape="rect" href="clear__tester_8cpp.html#a401dad5e820a56943c7223955000dc1b" title=" " alt="" coords="391,93,516,119"/>
+<area shape="rect" href="clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,122,61,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="af95ce322bdd923bbaec67e59b7f84e40" name="af95ce322bdd923bbaec67e59b7f84e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af95ce322bdd923bbaec67e59b7f84e40">&#9670;&nbsp;</a></span>bx0_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::LayeredCostmap::bx0_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae914ca4fd3d63dcf25324e47f2828ad1" name="ae914ca4fd3d63dcf25324e47f2828ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae914ca4fd3d63dcf25324e47f2828ad1">&#9670;&nbsp;</a></span>bxn_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::LayeredCostmap::bxn_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa85075c57c9b43f45b4ada89ce8763e7" name="aa85075c57c9b43f45b4ada89ce8763e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85075c57c9b43f45b4ada89ce8763e7">&#9670;&nbsp;</a></span>by0_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::LayeredCostmap::by0_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac21e7d0cd02548c579098a7f9486d2cd" name="ac21e7d0cd02548c579098a7f9486d2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac21e7d0cd02548c579098a7f9486d2cd">&#9670;&nbsp;</a></span>byn_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::LayeredCostmap::byn_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7330d4fcd00c2a511348083506900a09" name="a7330d4fcd00c2a511348083506900a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7330d4fcd00c2a511348083506900a09">&#9670;&nbsp;</a></span>circumscribed_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::circumscribed_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c435ef3f9992bdd43881118c98dae94" name="a8c435ef3f9992bdd43881118c98dae94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c435ef3f9992bdd43881118c98dae94">&#9670;&nbsp;</a></span>costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a> costmap_2d::LayeredCostmap::costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab745c8c3f20f875a29c8778a37653734" name="ab745c8c3f20f875a29c8778a37653734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab745c8c3f20f875a29c8778a37653734">&#9670;&nbsp;</a></span>current_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::current_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>&lt; </p>
+<p >Whether or not the costmap should roll with the robot </p>
+
+</div>
+</div>
+<a id="a964fe6bc4cbd11fdf505ba3969969cfa" name="a964fe6bc4cbd11fdf505ba3969969cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964fe6bc4cbd11fdf505ba3969969cfa">&#9670;&nbsp;</a></span>footprint_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::Point&gt; costmap_2d::LayeredCostmap::footprint_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d697faebc0cb177e3c60cd5e95a5b94" name="a2d697faebc0cb177e3c60cd5e95a5b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d697faebc0cb177e3c60cd5e95a5b94">&#9670;&nbsp;</a></span>global_frame_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string costmap_2d::LayeredCostmap::global_frame_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0667ff85987146c43ba1b703741eb6c" name="ad0667ff85987146c43ba1b703741eb6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0667ff85987146c43ba1b703741eb6c">&#9670;&nbsp;</a></span>initialized_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::initialized_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1fcca65994f4882980fc22905bbc9c4" name="ae1fcca65994f4882980fc22905bbc9c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fcca65994f4882980fc22905bbc9c4">&#9670;&nbsp;</a></span>inscribed_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::inscribed_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22740c3a181873dbfa30ce2bff2ae374" name="a22740c3a181873dbfa30ce2bff2ae374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22740c3a181873dbfa30ce2bff2ae374">&#9670;&nbsp;</a></span>maxx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::maxx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aabdec50fe88d4189fb9dc4b082498f3a" name="aabdec50fe88d4189fb9dc4b082498f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabdec50fe88d4189fb9dc4b082498f3a">&#9670;&nbsp;</a></span>maxy_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::maxy_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8d6d1d9085ac2968b0efc849b443a25" name="ae8d6d1d9085ac2968b0efc849b443a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d6d1d9085ac2968b0efc849b443a25">&#9670;&nbsp;</a></span>minx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::minx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcb5b07fc2117f4f17f1c330fbceb876" name="abcb5b07fc2117f4f17f1c330fbceb876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb5b07fc2117f4f17f1c330fbceb876">&#9670;&nbsp;</a></span>miny_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::LayeredCostmap::miny_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c149962ee923306c043d3cf0a29cafa" name="a2c149962ee923306c043d3cf0a29cafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c149962ee923306c043d3cf0a29cafa">&#9670;&nbsp;</a></span>plugins_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;boost::shared_ptr&lt;<a class="el" href="classcostmap__2d_1_1_layer.html">Layer</a>&gt; &gt; costmap_2d::LayeredCostmap::plugins_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad3b81e2b41df0424c801aeda7222ff2" name="aad3b81e2b41df0424c801aeda7222ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad3b81e2b41df0424c801aeda7222ff2">&#9670;&nbsp;</a></span>rolling_window_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::rolling_window_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2c55d9fd17fdccdef9f777a4c731d7c" name="aa2c55d9fd17fdccdef9f777a4c731d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c55d9fd17fdccdef9f777a4c731d7c">&#9670;&nbsp;</a></span>size_locked_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::LayeredCostmap::size_locked_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>costmap_2d/include/costmap_2d/<a class="el" href="layered__costmap_8h_source.html">layered_costmap.h</a></li>
+<li>costmap_2d/src/<a class="el" href="layered__costmap_8cpp.html">layered_costmap.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

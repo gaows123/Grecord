@@ -1,0 +1,288 @@
+\hypertarget{class_fake_odom_node}{}\doxysection{Fake\+Odom\+Node类 参考}
+\label{class_fake_odom_node}\index{FakeOdomNode@{FakeOdomNode}}
+
+
+Fake\+Odom\+Node 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_fake_odom_node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2}{Fake\+Odom\+Node}} (void)
+\item 
+\mbox{\hyperlink{class_fake_odom_node_a404ea057d2d18ec106c18a669be3342e}{$\sim$\+Fake\+Odom\+Node}} (void)
+\item 
+void \mbox{\hyperlink{class_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae}{stuff\+Filter}} (const nav\+\_\+msgs\+::\+Odometry\+Const\+Ptr \&odom\+\_\+msg)
+\item 
+void \mbox{\hyperlink{class_fake_odom_node_abb6c0570eaa9227128b76690e50af61f}{update}} (const nav\+\_\+msgs\+::\+Odometry\+Const\+Ptr \&message)
+\item 
+void \mbox{\hyperlink{class_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca}{init\+Pose\+Received}} (const geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped\+Const\+Ptr \&msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{class_fake_odom_node_a88883f0ebab22d94e774d3e6685fb974}{m\+\_\+nh}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{class_fake_odom_node_aeb21d11b560f6fca7276360924b1c79a}{m\+\_\+pose\+Pub}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{class_fake_odom_node_a7669c1667e09a36ddb96a333a73b7727}{m\+\_\+particlecloud\+Pub}}
+\item 
+message\+\_\+filters\+::\+Subscriber$<$ geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped $>$ $\ast$ \mbox{\hyperlink{class_fake_odom_node_a4417a04d57c1db0dec988f247f9e9c5b}{m\+\_\+init\+Pose\+Sub}}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Broadcaster $\ast$ \mbox{\hyperlink{class_fake_odom_node_a1d9ad2e8c9819fac1de3d5a5e1fb3c28}{m\+\_\+tf\+Server}}
+\item 
+tf2\+\_\+ros\+::\+Transform\+Listener $\ast$ \mbox{\hyperlink{class_fake_odom_node_adbb36d70dd4350435932e72c2edc31c6}{m\+\_\+tf\+Listener}}
+\item 
+tf2\+\_\+ros\+::\+Buffer $\ast$ \mbox{\hyperlink{class_fake_odom_node_a568031c4a88886391b7351314f19a4c7}{m\+\_\+tf\+Buffer}}
+\item 
+tf2\+\_\+ros\+::\+Message\+Filter$<$ geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped $>$ $\ast$ \mbox{\hyperlink{class_fake_odom_node_a91ca8457b4aa6a039de7bc3f28b3aa3f}{m\+\_\+init\+Pose\+Filter}}
+\item 
+tf2\+\_\+ros\+::\+Message\+Filter$<$ nav\+\_\+msgs\+::\+Odometry $>$ $\ast$ \mbox{\hyperlink{class_fake_odom_node_af018b5f4d18efd8b014f4ed4243ef2dc}{filter\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{class_fake_odom_node_a51cafa7ecbe3eae15f8aa0d693320e5e}{stuff\+\_\+sub\+\_\+}}
+\item 
+message\+\_\+filters\+::\+Subscriber$<$ nav\+\_\+msgs\+::\+Odometry $>$ $\ast$ \mbox{\hyperlink{class_fake_odom_node_af39b9f487309547a0f6fd5bc5f26aa19}{filter\+\_\+sub\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_fake_odom_node_a91d663f79a62cdc7bef040c581b7e1da}{delta\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_fake_odom_node_a3b950671d225eeb947de29e6e0522b5f}{delta\+\_\+y\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_fake_odom_node_a92afb0d863eddda3a66dd69be83d4ce8}{delta\+\_\+yaw\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_fake_odom_node_a9016ac725a43cc63329fccd6d7038dd1}{m\+\_\+base\+\_\+pos\+\_\+received}}
+\item 
+double \mbox{\hyperlink{class_fake_odom_node_a2f0530b4146d9923a19556c081ab842d}{transform\+\_\+tolerance\+\_\+}}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{class_fake_odom_node_a82f785c7ed115e8acc7d3039b8b627b1}{m\+\_\+base\+Pos\+Msg}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Array \mbox{\hyperlink{class_fake_odom_node_af991310fa1fd66e10f1b9b292273916c}{m\+\_\+particle\+Cloud}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped \mbox{\hyperlink{class_fake_odom_node_a0b5a29a3d94bca9fd2a3068a01da583a}{m\+\_\+current\+Pos}}
+\item 
+tf2\+::\+Transform \mbox{\hyperlink{class_fake_odom_node_aec7cb974908656b693380225f490748b}{m\+\_\+offset\+Tf}}
+\item 
+std\+::string \mbox{\hyperlink{class_fake_odom_node_a62c338a3cf67a29a22ad8f6368af74f0}{odom\+\_\+frame\+\_\+id\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_fake_odom_node_acfb530fd739fd69418ab03d2dda888df}{base\+\_\+frame\+\_\+id\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_fake_odom_node_addabcbcde60f46270bb735dc316216fb}{global\+\_\+frame\+\_\+id\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2}\label{class_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2}} 
+\index{FakeOdomNode@{FakeOdomNode}!FakeOdomNode@{FakeOdomNode}}
+\index{FakeOdomNode@{FakeOdomNode}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{FakeOdomNode()}{FakeOdomNode()}}
+{\footnotesize\ttfamily Fake\+Odom\+Node\+::\+Fake\+Odom\+Node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fake_odom_node_a864acd0c0eda3e7a165fdb9ec093cab2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fake_odom_node_a404ea057d2d18ec106c18a669be3342e}\label{class_fake_odom_node_a404ea057d2d18ec106c18a669be3342e}} 
+\index{FakeOdomNode@{FakeOdomNode}!````~FakeOdomNode@{$\sim$FakeOdomNode}}
+\index{````~FakeOdomNode@{$\sim$FakeOdomNode}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{$\sim$FakeOdomNode()}{~FakeOdomNode()}}
+{\footnotesize\ttfamily Fake\+Odom\+Node\+::$\sim$\+Fake\+Odom\+Node (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca}\label{class_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca}} 
+\index{FakeOdomNode@{FakeOdomNode}!initPoseReceived@{initPoseReceived}}
+\index{initPoseReceived@{initPoseReceived}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{initPoseReceived()}{initPoseReceived()}}
+{\footnotesize\ttfamily void Fake\+Odom\+Node\+::init\+Pose\+Received (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fake_odom_node_aed4a6d085f1f28c847f7e4d76357f2ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae}\label{class_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae}} 
+\index{FakeOdomNode@{FakeOdomNode}!stuffFilter@{stuffFilter}}
+\index{stuffFilter@{stuffFilter}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{stuffFilter()}{stuffFilter()}}
+{\footnotesize\ttfamily void Fake\+Odom\+Node\+::stuff\+Filter (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+Const\+Ptr \&}]{odom\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fake_odom_node_a06d058408f8f64a09a5e8ba4162336ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fake_odom_node_abb6c0570eaa9227128b76690e50af61f}\label{class_fake_odom_node_abb6c0570eaa9227128b76690e50af61f}} 
+\index{FakeOdomNode@{FakeOdomNode}!update@{update}}
+\index{update@{update}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Fake\+Odom\+Node\+::update (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Odometry\+Const\+Ptr \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_fake_odom_node_abb6c0570eaa9227128b76690e50af61f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_fake_odom_node_acfb530fd739fd69418ab03d2dda888df}\label{class_fake_odom_node_acfb530fd739fd69418ab03d2dda888df}} 
+\index{FakeOdomNode@{FakeOdomNode}!base\_frame\_id\_@{base\_frame\_id\_}}
+\index{base\_frame\_id\_@{base\_frame\_id\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{base\_frame\_id\_}{base\_frame\_id\_}}
+{\footnotesize\ttfamily std\+::string Fake\+Odom\+Node\+::base\+\_\+frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a91d663f79a62cdc7bef040c581b7e1da}\label{class_fake_odom_node_a91d663f79a62cdc7bef040c581b7e1da}} 
+\index{FakeOdomNode@{FakeOdomNode}!delta\_x\_@{delta\_x\_}}
+\index{delta\_x\_@{delta\_x\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{delta\_x\_}{delta\_x\_}}
+{\footnotesize\ttfamily double Fake\+Odom\+Node\+::delta\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a3b950671d225eeb947de29e6e0522b5f}\label{class_fake_odom_node_a3b950671d225eeb947de29e6e0522b5f}} 
+\index{FakeOdomNode@{FakeOdomNode}!delta\_y\_@{delta\_y\_}}
+\index{delta\_y\_@{delta\_y\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{delta\_y\_}{delta\_y\_}}
+{\footnotesize\ttfamily double Fake\+Odom\+Node\+::delta\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a92afb0d863eddda3a66dd69be83d4ce8}\label{class_fake_odom_node_a92afb0d863eddda3a66dd69be83d4ce8}} 
+\index{FakeOdomNode@{FakeOdomNode}!delta\_yaw\_@{delta\_yaw\_}}
+\index{delta\_yaw\_@{delta\_yaw\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{delta\_yaw\_}{delta\_yaw\_}}
+{\footnotesize\ttfamily double Fake\+Odom\+Node\+::delta\+\_\+yaw\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_af018b5f4d18efd8b014f4ed4243ef2dc}\label{class_fake_odom_node_af018b5f4d18efd8b014f4ed4243ef2dc}} 
+\index{FakeOdomNode@{FakeOdomNode}!filter\_@{filter\_}}
+\index{filter\_@{filter\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{filter\_}{filter\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Message\+Filter$<$nav\+\_\+msgs\+::\+Odometry$>$$\ast$ Fake\+Odom\+Node\+::filter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_af39b9f487309547a0f6fd5bc5f26aa19}\label{class_fake_odom_node_af39b9f487309547a0f6fd5bc5f26aa19}} 
+\index{FakeOdomNode@{FakeOdomNode}!filter\_sub\_@{filter\_sub\_}}
+\index{filter\_sub\_@{filter\_sub\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{filter\_sub\_}{filter\_sub\_}}
+{\footnotesize\ttfamily message\+\_\+filters\+::\+Subscriber$<$nav\+\_\+msgs\+::\+Odometry$>$$\ast$ Fake\+Odom\+Node\+::filter\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_addabcbcde60f46270bb735dc316216fb}\label{class_fake_odom_node_addabcbcde60f46270bb735dc316216fb}} 
+\index{FakeOdomNode@{FakeOdomNode}!global\_frame\_id\_@{global\_frame\_id\_}}
+\index{global\_frame\_id\_@{global\_frame\_id\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_id\_}{global\_frame\_id\_}}
+{\footnotesize\ttfamily std\+::string Fake\+Odom\+Node\+::global\+\_\+frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a9016ac725a43cc63329fccd6d7038dd1}\label{class_fake_odom_node_a9016ac725a43cc63329fccd6d7038dd1}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_base\_pos\_received@{m\_base\_pos\_received}}
+\index{m\_base\_pos\_received@{m\_base\_pos\_received}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_base\_pos\_received}{m\_base\_pos\_received}}
+{\footnotesize\ttfamily bool Fake\+Odom\+Node\+::m\+\_\+base\+\_\+pos\+\_\+received\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a82f785c7ed115e8acc7d3039b8b627b1}\label{class_fake_odom_node_a82f785c7ed115e8acc7d3039b8b627b1}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_basePosMsg@{m\_basePosMsg}}
+\index{m\_basePosMsg@{m\_basePosMsg}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_basePosMsg}{m\_basePosMsg}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry Fake\+Odom\+Node\+::m\+\_\+base\+Pos\+Msg\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a0b5a29a3d94bca9fd2a3068a01da583a}\label{class_fake_odom_node_a0b5a29a3d94bca9fd2a3068a01da583a}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_currentPos@{m\_currentPos}}
+\index{m\_currentPos@{m\_currentPos}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_currentPos}{m\_currentPos}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped Fake\+Odom\+Node\+::m\+\_\+current\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a91ca8457b4aa6a039de7bc3f28b3aa3f}\label{class_fake_odom_node_a91ca8457b4aa6a039de7bc3f28b3aa3f}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_initPoseFilter@{m\_initPoseFilter}}
+\index{m\_initPoseFilter@{m\_initPoseFilter}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_initPoseFilter}{m\_initPoseFilter}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Message\+Filter$<$geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped$>$$\ast$ Fake\+Odom\+Node\+::m\+\_\+init\+Pose\+Filter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a4417a04d57c1db0dec988f247f9e9c5b}\label{class_fake_odom_node_a4417a04d57c1db0dec988f247f9e9c5b}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_initPoseSub@{m\_initPoseSub}}
+\index{m\_initPoseSub@{m\_initPoseSub}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_initPoseSub}{m\_initPoseSub}}
+{\footnotesize\ttfamily message\+\_\+filters\+::\+Subscriber$<$geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped$>$$\ast$ Fake\+Odom\+Node\+::m\+\_\+init\+Pose\+Sub\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a88883f0ebab22d94e774d3e6685fb974}\label{class_fake_odom_node_a88883f0ebab22d94e774d3e6685fb974}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_nh@{m\_nh}}
+\index{m\_nh@{m\_nh}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_nh}{m\_nh}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle Fake\+Odom\+Node\+::m\+\_\+nh\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_aec7cb974908656b693380225f490748b}\label{class_fake_odom_node_aec7cb974908656b693380225f490748b}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_offsetTf@{m\_offsetTf}}
+\index{m\_offsetTf@{m\_offsetTf}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_offsetTf}{m\_offsetTf}}
+{\footnotesize\ttfamily tf2\+::\+Transform Fake\+Odom\+Node\+::m\+\_\+offset\+Tf\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_af991310fa1fd66e10f1b9b292273916c}\label{class_fake_odom_node_af991310fa1fd66e10f1b9b292273916c}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_particleCloud@{m\_particleCloud}}
+\index{m\_particleCloud@{m\_particleCloud}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_particleCloud}{m\_particleCloud}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Array Fake\+Odom\+Node\+::m\+\_\+particle\+Cloud\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a7669c1667e09a36ddb96a333a73b7727}\label{class_fake_odom_node_a7669c1667e09a36ddb96a333a73b7727}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_particlecloudPub@{m\_particlecloudPub}}
+\index{m\_particlecloudPub@{m\_particlecloudPub}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_particlecloudPub}{m\_particlecloudPub}}
+{\footnotesize\ttfamily ros\+::\+Publisher Fake\+Odom\+Node\+::m\+\_\+particlecloud\+Pub\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_aeb21d11b560f6fca7276360924b1c79a}\label{class_fake_odom_node_aeb21d11b560f6fca7276360924b1c79a}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_posePub@{m\_posePub}}
+\index{m\_posePub@{m\_posePub}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_posePub}{m\_posePub}}
+{\footnotesize\ttfamily ros\+::\+Publisher Fake\+Odom\+Node\+::m\+\_\+pose\+Pub\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a568031c4a88886391b7351314f19a4c7}\label{class_fake_odom_node_a568031c4a88886391b7351314f19a4c7}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_tfBuffer@{m\_tfBuffer}}
+\index{m\_tfBuffer@{m\_tfBuffer}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_tfBuffer}{m\_tfBuffer}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer$\ast$ Fake\+Odom\+Node\+::m\+\_\+tf\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_adbb36d70dd4350435932e72c2edc31c6}\label{class_fake_odom_node_adbb36d70dd4350435932e72c2edc31c6}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_tfListener@{m\_tfListener}}
+\index{m\_tfListener@{m\_tfListener}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_tfListener}{m\_tfListener}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Transform\+Listener$\ast$ Fake\+Odom\+Node\+::m\+\_\+tf\+Listener\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a1d9ad2e8c9819fac1de3d5a5e1fb3c28}\label{class_fake_odom_node_a1d9ad2e8c9819fac1de3d5a5e1fb3c28}} 
+\index{FakeOdomNode@{FakeOdomNode}!m\_tfServer@{m\_tfServer}}
+\index{m\_tfServer@{m\_tfServer}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{m\_tfServer}{m\_tfServer}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Transform\+Broadcaster$\ast$ Fake\+Odom\+Node\+::m\+\_\+tf\+Server\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a62c338a3cf67a29a22ad8f6368af74f0}\label{class_fake_odom_node_a62c338a3cf67a29a22ad8f6368af74f0}} 
+\index{FakeOdomNode@{FakeOdomNode}!odom\_frame\_id\_@{odom\_frame\_id\_}}
+\index{odom\_frame\_id\_@{odom\_frame\_id\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{odom\_frame\_id\_}{odom\_frame\_id\_}}
+{\footnotesize\ttfamily std\+::string Fake\+Odom\+Node\+::odom\+\_\+frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a51cafa7ecbe3eae15f8aa0d693320e5e}\label{class_fake_odom_node_a51cafa7ecbe3eae15f8aa0d693320e5e}} 
+\index{FakeOdomNode@{FakeOdomNode}!stuff\_sub\_@{stuff\_sub\_}}
+\index{stuff\_sub\_@{stuff\_sub\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{stuff\_sub\_}{stuff\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber Fake\+Odom\+Node\+::stuff\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fake_odom_node_a2f0530b4146d9923a19556c081ab842d}\label{class_fake_odom_node_a2f0530b4146d9923a19556c081ab842d}} 
+\index{FakeOdomNode@{FakeOdomNode}!transform\_tolerance\_@{transform\_tolerance\_}}
+\index{transform\_tolerance\_@{transform\_tolerance\_}!FakeOdomNode@{FakeOdomNode}}
+\doxysubsubsection{\texorpdfstring{transform\_tolerance\_}{transform\_tolerance\_}}
+{\footnotesize\ttfamily double Fake\+Odom\+Node\+::transform\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+fake\+\_\+localization/\mbox{\hyperlink{fake__localization_8cpp}{fake\+\_\+localization.\+cpp}}\end{DoxyCompactItemize}

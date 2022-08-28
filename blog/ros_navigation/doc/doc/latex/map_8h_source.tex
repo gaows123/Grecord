@@ -1,0 +1,156 @@
+\hypertarget{map_8h_source}{}\doxysection{map.\+h}
+\label{map_8h_source}\index{amcl/include/amcl/map/map.h@{amcl/include/amcl/map/map.h}}
+\mbox{\hyperlink{map_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  Player -\/ One Hell of a Robot Server}}
+\DoxyCodeLine{3 \textcolor{comment}{ *  Copyright (C) 2000  Brian Gerkey   \&  Kasper Stoy}}
+\DoxyCodeLine{4 \textcolor{comment}{ *                      gerkey@usc.edu    kaspers@robotics.usc.edu}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  This library is free software; you can redistribute it and/or}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  modify it under the terms of the GNU Lesser General Public}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  License as published by the Free Software Foundation; either}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  version 2.1 of the License, or (at your option) any later version.}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  This library is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{13 \textcolor{comment}{ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU}}
+\DoxyCodeLine{14 \textcolor{comment}{ *  Lesser General Public License for more details.}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ *  You should have received a copy of the GNU Lesser General Public}}
+\DoxyCodeLine{17 \textcolor{comment}{ *  License along with this library; if not, write to the Free Software}}
+\DoxyCodeLine{18 \textcolor{comment}{ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-\/1307  USA}}
+\DoxyCodeLine{19 \textcolor{comment}{ *}}
+\DoxyCodeLine{20 \textcolor{comment}{ */}}
+\DoxyCodeLine{21 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{22 \textcolor{comment}{ * Desc: Global map (grid-\/based)}}
+\DoxyCodeLine{23 \textcolor{comment}{ * Author: Andrew Howard}}
+\DoxyCodeLine{24 \textcolor{comment}{ * Date: 6 Feb 2003}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CVS: \$Id: map.h 1713 2003-\/08-\/23 04:03:43Z inspectorg \$}}
+\DoxyCodeLine{26 \textcolor{comment}{ **************************************************************************/}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#ifndef MAP\_H}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define MAP\_H}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{34 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{// Forward declarations}}
+\DoxyCodeLine{38 \textcolor{keyword}{struct }\_rtk\_fig\_t;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40   }
+\DoxyCodeLine{41 \textcolor{comment}{// Limits}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define MAP\_WIFI\_MAX\_LEVELS 8}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44   }
+\DoxyCodeLine{45 \textcolor{comment}{// Description for a single map cell.}}
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   \textcolor{comment}{// Occupancy state (-\/1 = free, 0 = unknown, +1 = occ)}}
+\DoxyCodeLine{49   \textcolor{keywordtype}{int} \mbox{\hyperlink{structmap__cell__t_a2ebca5f463a2710d378b88d01437c939}{occ\_state}};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   \textcolor{comment}{// Distance to the nearest occupied cell}}
+\DoxyCodeLine{52   \textcolor{keywordtype}{double} \mbox{\hyperlink{structmap__cell__t_a85f2cbdc2e0e498c9bef798c99ec7c1d}{occ\_dist}};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{comment}{// Wifi levels}}
+\DoxyCodeLine{55   \textcolor{comment}{//int wifi\_levels[MAP\_WIFI\_MAX\_LEVELS];}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \} \mbox{\hyperlink{structmap__cell__t}{map\_cell\_t}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{// Description for a map}}
+\DoxyCodeLine{61 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63   \textcolor{comment}{// Map origin; the map is a viewport onto a conceptual larger map.}}
+\DoxyCodeLine{64   \textcolor{keywordtype}{double} \mbox{\hyperlink{structmap__t_acfc333b8a67089764f4ad90ba29ab71f}{origin\_x}}, origin\_y;}
+\DoxyCodeLine{65   }
+\DoxyCodeLine{66   \textcolor{comment}{// Map scale (m/cell)}}
+\DoxyCodeLine{67   \textcolor{keywordtype}{double} \mbox{\hyperlink{structmap__t_a7d9f7a6d2da57d28e81f565bb6ba8e45}{scale}};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69   \textcolor{comment}{// Map dimensions (number of cells)}}
+\DoxyCodeLine{70   \textcolor{keywordtype}{int} \mbox{\hyperlink{structmap__t_a64a09676310106558b5b0e7bafd35412}{size\_x}}, size\_y;}
+\DoxyCodeLine{71   }
+\DoxyCodeLine{72   \textcolor{comment}{// The map data, stored as a grid}}
+\DoxyCodeLine{73   \mbox{\hyperlink{structmap__cell__t}{map\_cell\_t}} *\mbox{\hyperlink{structmap__t_a929aad9d7842ed60344d3a0c570afd39}{cells}};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75   \textcolor{comment}{// Max distance at which we care about obstacles, for constructing}}
+\DoxyCodeLine{76   \textcolor{comment}{// likelihood field}}
+\DoxyCodeLine{77   \textcolor{keywordtype}{double} \mbox{\hyperlink{structmap__t_a17f7e6de83a4288fe6894dbf2b552472}{max\_occ\_dist}};}
+\DoxyCodeLine{78   }
+\DoxyCodeLine{79 \} \mbox{\hyperlink{structmap__t}{map\_t}};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{84 \textcolor{comment}{ * Basic map functions}}
+\DoxyCodeLine{85 \textcolor{comment}{ **************************************************************************/}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{comment}{// Create a new (empty) map}}
+\DoxyCodeLine{88 \mbox{\hyperlink{structmap__t}{map\_t}} *\mbox{\hyperlink{map_8h_a69abcca9449dcd0b4a74db33827e5a6c}{map\_alloc}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{comment}{// Destroy a map}}
+\DoxyCodeLine{91 \textcolor{keywordtype}{void} \mbox{\hyperlink{map_8h_ae24d01dffc5a376977089830b93c9254}{map\_free}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{comment}{// Get the cell at the given point}}
+\DoxyCodeLine{94 \mbox{\hyperlink{structmap__cell__t}{map\_cell\_t}} *\mbox{\hyperlink{map_8h_a2856320c165a29ac7ccd53d567030a9b}{map\_get\_cell}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map, \textcolor{keywordtype}{double} ox, \textcolor{keywordtype}{double} oy, \textcolor{keywordtype}{double} oa);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{comment}{// Load an occupancy map}}
+\DoxyCodeLine{97 \textcolor{keywordtype}{int} \mbox{\hyperlink{map_8h_a8338e47e6501b9549ab165e2ac1522d8}{map\_load\_occ}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *filename, \textcolor{keywordtype}{double} scale, \textcolor{keywordtype}{int} negate);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{comment}{// Load a wifi signal strength map}}
+\DoxyCodeLine{100 \textcolor{comment}{//int map\_load\_wifi(map\_t *map, const char *filename, int index);}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{comment}{// Update the cspace distances}}
+\DoxyCodeLine{103 \textcolor{keywordtype}{void} \mbox{\hyperlink{map_8h_a7a2e9876667cad69c3b70881c1aaf1ac}{map\_update\_cspace}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map, \textcolor{keywordtype}{double} max\_occ\_dist);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{107 \textcolor{comment}{ * Range functions}}
+\DoxyCodeLine{108 \textcolor{comment}{ **************************************************************************/}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{comment}{// Extract a single range reading from the map}}
+\DoxyCodeLine{111 \textcolor{keywordtype}{double} \mbox{\hyperlink{map_8h_aafef11c4d8efd07a4cb20bad5fc4bc83}{map\_calc\_range}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map, \textcolor{keywordtype}{double} ox, \textcolor{keywordtype}{double} oy, \textcolor{keywordtype}{double} oa, \textcolor{keywordtype}{double} max\_range);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{115 \textcolor{comment}{ * GUI/diagnostic functions}}
+\DoxyCodeLine{116 \textcolor{comment}{ **************************************************************************/}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{comment}{// Draw the occupancy grid}}
+\DoxyCodeLine{119 \textcolor{keywordtype}{void} \mbox{\hyperlink{map_8h_acc6b4aacd0e285e7866209c2dfba9a85}{map\_draw\_occ}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map, \textcolor{keyword}{struct} \_rtk\_fig\_t *fig);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{comment}{// Draw the cspace map}}
+\DoxyCodeLine{122 \textcolor{keywordtype}{void} \mbox{\hyperlink{map_8h_a2375a4a21f00ea7dd97be17d027adcbc}{map\_draw\_cspace}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map, \textcolor{keyword}{struct} \_rtk\_fig\_t *fig);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{comment}{// Draw a wifi map}}
+\DoxyCodeLine{125 \textcolor{keywordtype}{void} \mbox{\hyperlink{map_8h_a8cdf88d9cba5960b2e8f4a8a5c26f879}{map\_draw\_wifi}}(\mbox{\hyperlink{structmap__t}{map\_t}} *map, \textcolor{keyword}{struct} \_rtk\_fig\_t *fig, \textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{129 \textcolor{comment}{ * Map manipulation macros}}
+\DoxyCodeLine{130 \textcolor{comment}{ **************************************************************************/}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{comment}{// Convert from map index to world coords}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define MAP\_WXGX(map, i) (map-\/>origin\_x + ((i) -\/ map-\/>size\_x / 2) * map-\/>scale)}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define MAP\_WYGY(map, j) (map-\/>origin\_y + ((j) -\/ map-\/>size\_y / 2) * map-\/>scale)}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 \textcolor{comment}{// Convert from world coords to map coords}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define MAP\_GXWX(map, x) (floor((x -\/ map-\/>origin\_x) / map-\/>scale + 0.5) + map-\/>size\_x / 2)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define MAP\_GYWY(map, y) (floor((y -\/ map-\/>origin\_y) / map-\/>scale + 0.5) + map-\/>size\_y / 2)}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{comment}{// Test to see if the given map coords lie within the absolute map bounds.}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define MAP\_VALID(map, i, j) ((i >= 0) \&\& (i < map-\/>size\_x) \&\& (j >= 0) \&\& (j < map-\/>size\_y))}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{comment}{// Compute the cell index for the given map coords.}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define MAP\_INDEX(map, i, j) ((i) + (j) * map-\/>size\_x)}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{147 \}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

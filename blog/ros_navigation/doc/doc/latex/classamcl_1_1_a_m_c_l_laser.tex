@@ -1,0 +1,402 @@
+\hypertarget{classamcl_1_1_a_m_c_l_laser}{}\doxysection{amcl\+::AMCLLaser类 参考}
+\label{classamcl_1_1_a_m_c_l_laser}\index{amcl::AMCLLaser@{amcl::AMCLLaser}}
+
+
+{\ttfamily \#include $<$amcl\+\_\+laser.\+h$>$}
+
+
+
+类 amcl\+::AMCLLaser 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classamcl_1_1_a_m_c_l_laser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+amcl\+::AMCLLaser 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classamcl_1_1_a_m_c_l_laser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a0d360f75989d1378130c7d6112093f99}{AMCLLaser}} (size\+\_\+t \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a835da7db1c326bf22bdfac480f757586}{max\+\_\+beams}}, \mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a5bd2fca718a57e75ae943501ba6c39e9}{map}})
+\item 
+virtual \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a048db5ebf58d50b126e7c58cb0ee856c}{$\sim$\+AMCLLaser}} ()
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e}{Set\+Model\+Beam}} (double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\+\_\+hit}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_aeb158fe1146ff61768e56c816d9b9a65}{z\+\_\+short}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a8d238fa084dd954c6416a5b522d7c476}{z\+\_\+max}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\+\_\+rand}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\+\_\+hit}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57f1c5ae05afe2446e8c18dc49fd7fde}{lambda\+\_\+short}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ac057ee3f2684d7925b120455ca7fa4b9}{chi\+\_\+outlier}})
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f}{Set\+Model\+Likelihood\+Field}} (double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\+\_\+hit}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\+\_\+rand}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\+\_\+hit}}, double max\+\_\+occ\+\_\+dist)
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09}{Set\+Model\+Likelihood\+Field\+Prob}} (double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\+\_\+hit}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\+\_\+rand}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\+\_\+hit}}, double max\+\_\+occ\+\_\+dist, bool \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a136604601e713521c949eef56cea4bcb}{do\+\_\+beamskip}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a09096056f75e634eeb06bc788fbb4f32}{beam\+\_\+skip\+\_\+distance}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab8d9ad94c5815ee4a5614f7592d4842f}{beam\+\_\+skip\+\_\+threshold}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57e7d9451d88daec73966558117129eb}{beam\+\_\+skip\+\_\+error\+\_\+threshold}})
+\item 
+virtual bool \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7}{Update\+Sensor}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensor\+Data}} $\ast$data)
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a6803650b65b0ece79767ee64490fa5e8}{Set\+Laser\+Pose}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \&\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a53383765386d9aba71db8bef973a00b6}{laser\+\_\+pose}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13}{realloc\+Temp\+Data}} (int \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ad00b22f35fbdcb2d4ea9574d0acdcbd1}{max\+\_\+samples}}, int \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_acd97aabb72e32f8b8f14c496168c2ecd}{max\+\_\+obs}})
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35}{Beam\+Model}} (\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaser\+Data}} $\ast$data, \mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$set)
+\item 
+static double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc}{Likelihood\+Field\+Model}} (\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaser\+Data}} $\ast$data, \mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$set)
+\item 
+static double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2}{Likelihood\+Field\+Model\+Prob}} (\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaser\+Data}} $\ast$data, \mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$set)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9c}{laser\+\_\+model\+\_\+t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab8e5528c2b2eca4cd49fb8caebe4efeb}{model\+\_\+type}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_abf6949cb5201e9416de6a8da5bd392be}{time}}
+\item 
+\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$ \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a5bd2fca718a57e75ae943501ba6c39e9}{map}}
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a53383765386d9aba71db8bef973a00b6}{laser\+\_\+pose}}
+\item 
+int \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a835da7db1c326bf22bdfac480f757586}{max\+\_\+beams}}
+\item 
+bool \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a136604601e713521c949eef56cea4bcb}{do\+\_\+beamskip}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a09096056f75e634eeb06bc788fbb4f32}{beam\+\_\+skip\+\_\+distance}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ab8d9ad94c5815ee4a5614f7592d4842f}{beam\+\_\+skip\+\_\+threshold}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57e7d9451d88daec73966558117129eb}{beam\+\_\+skip\+\_\+error\+\_\+threshold}}
+\item 
+int \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ad00b22f35fbdcb2d4ea9574d0acdcbd1}{max\+\_\+samples}}
+\item 
+int \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_acd97aabb72e32f8b8f14c496168c2ecd}{max\+\_\+obs}}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a2ab6c8f338eea17b16557fd577e20719}{temp\+\_\+obs}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}{z\+\_\+hit}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_aeb158fe1146ff61768e56c816d9b9a65}{z\+\_\+short}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a8d238fa084dd954c6416a5b522d7c476}{z\+\_\+max}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}{z\+\_\+rand}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}{sigma\+\_\+hit}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_a57f1c5ae05afe2446e8c18dc49fd7fde}{lambda\+\_\+short}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_ac057ee3f2684d7925b120455ca7fa4b9}{chi\+\_\+outlier}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a0d360f75989d1378130c7d6112093f99}\label{classamcl_1_1_a_m_c_l_laser_a0d360f75989d1378130c7d6112093f99}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!AMCLLaser@{AMCLLaser}}
+\index{AMCLLaser@{AMCLLaser}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{AMCLLaser()}{AMCLLaser()}}
+{\footnotesize\ttfamily AMCLLaser\+::\+AMCLLaser (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{max\+\_\+beams,  }\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a048db5ebf58d50b126e7c58cb0ee856c}\label{classamcl_1_1_a_m_c_l_laser_a048db5ebf58d50b126e7c58cb0ee856c}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!````~AMCLLaser@{$\sim$AMCLLaser}}
+\index{````~AMCLLaser@{$\sim$AMCLLaser}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{$\sim$AMCLLaser()}{~AMCLLaser()}}
+{\footnotesize\ttfamily AMCLLaser\+::$\sim$\+AMCLLaser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35}\label{classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!BeamModel@{BeamModel}}
+\index{BeamModel@{BeamModel}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{BeamModel()}{BeamModel()}}
+{\footnotesize\ttfamily double AMCLLaser\+::\+Beam\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaser\+Data}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc}\label{classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!LikelihoodFieldModel@{LikelihoodFieldModel}}
+\index{LikelihoodFieldModel@{LikelihoodFieldModel}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{LikelihoodFieldModel()}{LikelihoodFieldModel()}}
+{\footnotesize\ttfamily double AMCLLaser\+::\+Likelihood\+Field\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaser\+Data}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2}\label{classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!LikelihoodFieldModelProb@{LikelihoodFieldModelProb}}
+\index{LikelihoodFieldModelProb@{LikelihoodFieldModelProb}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{LikelihoodFieldModelProb()}{LikelihoodFieldModelProb()}}
+{\footnotesize\ttfamily double AMCLLaser\+::\+Likelihood\+Field\+Model\+Prob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser_data}{AMCLLaser\+Data}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13}\label{classamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!reallocTempData@{reallocTempData}}
+\index{reallocTempData@{reallocTempData}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{reallocTempData()}{reallocTempData()}}
+{\footnotesize\ttfamily void AMCLLaser\+::realloc\+Temp\+Data (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+samples,  }\item[{int}]{max\+\_\+obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a6803650b65b0ece79767ee64490fa5e8}\label{classamcl_1_1_a_m_c_l_laser_a6803650b65b0ece79767ee64490fa5e8}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!SetLaserPose@{SetLaserPose}}
+\index{SetLaserPose@{SetLaserPose}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{SetLaserPose()}{SetLaserPose()}}
+{\footnotesize\ttfamily void amcl\+::\+AMCLLaser\+::\+Set\+Laser\+Pose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \&}]{laser\+\_\+pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e}\label{classamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!SetModelBeam@{SetModelBeam}}
+\index{SetModelBeam@{SetModelBeam}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{SetModelBeam()}{SetModelBeam()}}
+{\footnotesize\ttfamily void AMCLLaser\+::\+Set\+Model\+Beam (\begin{DoxyParamCaption}\item[{double}]{z\+\_\+hit,  }\item[{double}]{z\+\_\+short,  }\item[{double}]{z\+\_\+max,  }\item[{double}]{z\+\_\+rand,  }\item[{double}]{sigma\+\_\+hit,  }\item[{double}]{lambda\+\_\+short,  }\item[{double}]{chi\+\_\+outlier }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f}\label{classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!SetModelLikelihoodField@{SetModelLikelihoodField}}
+\index{SetModelLikelihoodField@{SetModelLikelihoodField}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{SetModelLikelihoodField()}{SetModelLikelihoodField()}}
+{\footnotesize\ttfamily void AMCLLaser\+::\+Set\+Model\+Likelihood\+Field (\begin{DoxyParamCaption}\item[{double}]{z\+\_\+hit,  }\item[{double}]{z\+\_\+rand,  }\item[{double}]{sigma\+\_\+hit,  }\item[{double}]{max\+\_\+occ\+\_\+dist }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09}\label{classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!SetModelLikelihoodFieldProb@{SetModelLikelihoodFieldProb}}
+\index{SetModelLikelihoodFieldProb@{SetModelLikelihoodFieldProb}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{SetModelLikelihoodFieldProb()}{SetModelLikelihoodFieldProb()}}
+{\footnotesize\ttfamily void AMCLLaser\+::\+Set\+Model\+Likelihood\+Field\+Prob (\begin{DoxyParamCaption}\item[{double}]{z\+\_\+hit,  }\item[{double}]{z\+\_\+rand,  }\item[{double}]{sigma\+\_\+hit,  }\item[{double}]{max\+\_\+occ\+\_\+dist,  }\item[{bool}]{do\+\_\+beamskip,  }\item[{double}]{beam\+\_\+skip\+\_\+distance,  }\item[{double}]{beam\+\_\+skip\+\_\+threshold,  }\item[{double}]{beam\+\_\+skip\+\_\+error\+\_\+threshold }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7}\label{classamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!UpdateSensor@{UpdateSensor}}
+\index{UpdateSensor@{UpdateSensor}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{UpdateSensor()}{UpdateSensor()}}
+{\footnotesize\ttfamily bool AMCLLaser\+::\+Update\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensor\+Data}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+重载 \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_a5243e92ca32aa4a86e10bc36a896b365}{amcl\+::\+AMCLSensor}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a09096056f75e634eeb06bc788fbb4f32}\label{classamcl_1_1_a_m_c_l_laser_a09096056f75e634eeb06bc788fbb4f32}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!beam\_skip\_distance@{beam\_skip\_distance}}
+\index{beam\_skip\_distance@{beam\_skip\_distance}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{beam\_skip\_distance}{beam\_skip\_distance}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::beam\+\_\+skip\+\_\+distance\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a57e7d9451d88daec73966558117129eb}\label{classamcl_1_1_a_m_c_l_laser_a57e7d9451d88daec73966558117129eb}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!beam\_skip\_error\_threshold@{beam\_skip\_error\_threshold}}
+\index{beam\_skip\_error\_threshold@{beam\_skip\_error\_threshold}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{beam\_skip\_error\_threshold}{beam\_skip\_error\_threshold}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::beam\+\_\+skip\+\_\+error\+\_\+threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_ab8d9ad94c5815ee4a5614f7592d4842f}\label{classamcl_1_1_a_m_c_l_laser_ab8d9ad94c5815ee4a5614f7592d4842f}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!beam\_skip\_threshold@{beam\_skip\_threshold}}
+\index{beam\_skip\_threshold@{beam\_skip\_threshold}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{beam\_skip\_threshold}{beam\_skip\_threshold}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::beam\+\_\+skip\+\_\+threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_ac057ee3f2684d7925b120455ca7fa4b9}\label{classamcl_1_1_a_m_c_l_laser_ac057ee3f2684d7925b120455ca7fa4b9}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!chi\_outlier@{chi\_outlier}}
+\index{chi\_outlier@{chi\_outlier}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{chi\_outlier}{chi\_outlier}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::chi\+\_\+outlier\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a136604601e713521c949eef56cea4bcb}\label{classamcl_1_1_a_m_c_l_laser_a136604601e713521c949eef56cea4bcb}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!do\_beamskip@{do\_beamskip}}
+\index{do\_beamskip@{do\_beamskip}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{do\_beamskip}{do\_beamskip}}
+{\footnotesize\ttfamily bool amcl\+::\+AMCLLaser\+::do\+\_\+beamskip\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a57f1c5ae05afe2446e8c18dc49fd7fde}\label{classamcl_1_1_a_m_c_l_laser_a57f1c5ae05afe2446e8c18dc49fd7fde}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!lambda\_short@{lambda\_short}}
+\index{lambda\_short@{lambda\_short}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{lambda\_short}{lambda\_short}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::lambda\+\_\+short\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a53383765386d9aba71db8bef973a00b6}\label{classamcl_1_1_a_m_c_l_laser_a53383765386d9aba71db8bef973a00b6}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!laser\_pose@{laser\_pose}}
+\index{laser\_pose@{laser\_pose}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{laser\_pose}{laser\_pose}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} amcl\+::\+AMCLLaser\+::laser\+\_\+pose\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a5bd2fca718a57e75ae943501ba6c39e9}\label{classamcl_1_1_a_m_c_l_laser_a5bd2fca718a57e75ae943501ba6c39e9}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!map@{map}}
+\index{map@{map}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmap__t}{map\+\_\+t}}$\ast$ amcl\+::\+AMCLLaser\+::map\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a835da7db1c326bf22bdfac480f757586}\label{classamcl_1_1_a_m_c_l_laser_a835da7db1c326bf22bdfac480f757586}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!max\_beams@{max\_beams}}
+\index{max\_beams@{max\_beams}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{max\_beams}{max\_beams}}
+{\footnotesize\ttfamily int amcl\+::\+AMCLLaser\+::max\+\_\+beams\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_acd97aabb72e32f8b8f14c496168c2ecd}\label{classamcl_1_1_a_m_c_l_laser_acd97aabb72e32f8b8f14c496168c2ecd}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!max\_obs@{max\_obs}}
+\index{max\_obs@{max\_obs}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{max\_obs}{max\_obs}}
+{\footnotesize\ttfamily int amcl\+::\+AMCLLaser\+::max\+\_\+obs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_ad00b22f35fbdcb2d4ea9574d0acdcbd1}\label{classamcl_1_1_a_m_c_l_laser_ad00b22f35fbdcb2d4ea9574d0acdcbd1}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!max\_samples@{max\_samples}}
+\index{max\_samples@{max\_samples}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{max\_samples}{max\_samples}}
+{\footnotesize\ttfamily int amcl\+::\+AMCLLaser\+::max\+\_\+samples\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_ab8e5528c2b2eca4cd49fb8caebe4efeb}\label{classamcl_1_1_a_m_c_l_laser_ab8e5528c2b2eca4cd49fb8caebe4efeb}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!model\_type@{model\_type}}
+\index{model\_type@{model\_type}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{model\_type}{model\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9c}{laser\+\_\+model\+\_\+t}} amcl\+::\+AMCLLaser\+::model\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}\label{classamcl_1_1_a_m_c_l_laser_a71b2ea74d6bf3aaed5d259874298ad72}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!sigma\_hit@{sigma\_hit}}
+\index{sigma\_hit@{sigma\_hit}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{sigma\_hit}{sigma\_hit}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::sigma\+\_\+hit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a2ab6c8f338eea17b16557fd577e20719}\label{classamcl_1_1_a_m_c_l_laser_a2ab6c8f338eea17b16557fd577e20719}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!temp\_obs@{temp\_obs}}
+\index{temp\_obs@{temp\_obs}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{temp\_obs}{temp\_obs}}
+{\footnotesize\ttfamily double$\ast$$\ast$ amcl\+::\+AMCLLaser\+::temp\+\_\+obs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_abf6949cb5201e9416de6a8da5bd392be}\label{classamcl_1_1_a_m_c_l_laser_abf6949cb5201e9416de6a8da5bd392be}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!time@{time}}
+\index{time@{time}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}\label{classamcl_1_1_a_m_c_l_laser_a4b6f6c0f2f7bdd2f6ef90de6bd95c635}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!z\_hit@{z\_hit}}
+\index{z\_hit@{z\_hit}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{z\_hit}{z\_hit}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::z\+\_\+hit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a8d238fa084dd954c6416a5b522d7c476}\label{classamcl_1_1_a_m_c_l_laser_a8d238fa084dd954c6416a5b522d7c476}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!z\_max@{z\_max}}
+\index{z\_max@{z\_max}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{z\_max}{z\_max}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::z\+\_\+max\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}\label{classamcl_1_1_a_m_c_l_laser_a224ab025360c5d70d2fafff73e4fca3f}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!z\_rand@{z\_rand}}
+\index{z\_rand@{z\_rand}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{z\_rand}{z\_rand}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::z\+\_\+rand\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_laser_aeb158fe1146ff61768e56c816d9b9a65}\label{classamcl_1_1_a_m_c_l_laser_aeb158fe1146ff61768e56c816d9b9a65}} 
+\index{amcl::AMCLLaser@{amcl::AMCLLaser}!z\_short@{z\_short}}
+\index{z\_short@{z\_short}!amcl::AMCLLaser@{amcl::AMCLLaser}}
+\doxysubsubsection{\texorpdfstring{z\_short}{z\_short}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLLaser\+::z\+\_\+short\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+amcl/include/amcl/sensors/\mbox{\hyperlink{amcl__laser_8h}{amcl\+\_\+laser.\+h}}\item 
+amcl/src/amcl/sensors/\mbox{\hyperlink{amcl__laser_8cpp}{amcl\+\_\+laser.\+cpp}}\end{DoxyCompactItemize}

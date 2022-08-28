@@ -1,0 +1,137 @@
+\hypertarget{dwa__planner_8h_source}{}\doxysection{dwa\+\_\+planner.\+h}
+\label{dwa__planner_8h_source}\index{dwa\_local\_planner/include/dwa\_local\_planner/dwa\_planner.h@{dwa\_local\_planner/include/dwa\_local\_planner/dwa\_planner.h}}
+\mbox{\hyperlink{dwa__planner_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2009, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef DWA\_LOCAL\_PLANNER\_DWA\_PLANNER\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define DWA\_LOCAL\_PLANNER\_DWA\_PLANNER\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <Eigen/Core>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <dwa\_local\_planner/DWAPlannerConfig.h>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{//for creating a local cost grid}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{map__grid__visualizer_8h}{base\_local\_planner/map\_grid\_visualizer.h}}>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{//for obstacle data access}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory_8h}{base\_local\_planner/trajectory.h}}>}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{local__planner__limits_8h}{base\_local\_planner/local\_planner\_limits.h}}>}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{local__planner__util_8h}{base\_local\_planner/local\_planner\_util.h}}>}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{simple__trajectory__generator_8h}{base\_local\_planner/simple\_trajectory\_generator.h}}>}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{oscillation__cost__function_8h}{base\_local\_planner/oscillation\_cost\_function.h}}>}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{map__grid__cost__function_8h}{base\_local\_planner/map\_grid\_cost\_function.h}}>}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{obstacle__cost__function_8h}{base\_local\_planner/obstacle\_cost\_function.h}}>}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{twirling__cost__function_8h}{base\_local\_planner/twirling\_cost\_function.h}}>}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{simple__scored__sampling__planner_8h}{base\_local\_planner/simple\_scored\_sampling\_planner.h}}>}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#include <nav\_msgs/Path.h>}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacedwa__local__planner}{dwa\_local\_planner}} \{}
+\DoxyCodeLine{70   \textcolor{keyword}{class }\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner}{DWAPlanner}} \{}
+\DoxyCodeLine{71     \textcolor{keyword}{public}:}
+\DoxyCodeLine{78       \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ab2c1143a3a54638d0dc38f9b6fa16e53}{DWAPlanner}}(std::string name, \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\_local\_planner::LocalPlannerUtil}} *planner\_util);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83       \textcolor{comment}{// ?DWAPlannerConfig}}
+\DoxyCodeLine{84       \textcolor{keywordtype}{void} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a9388b62309f6148c697aef4ebf5fe20a}{reconfigure}}(DWAPlannerConfig \&cfg);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{93       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a1200e7b997f2acd8c3b912bed37e69d5}{checkTrajectory}}(}
+\DoxyCodeLine{94           \textcolor{keyword}{const} Eigen::Vector3f pos,}
+\DoxyCodeLine{95           \textcolor{keyword}{const} Eigen::Vector3f vel,}
+\DoxyCodeLine{96           \textcolor{keyword}{const} Eigen::Vector3f vel\_samples);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{105       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\_local\_planner::Trajectory}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_acf862f4cbfd701bacf1eb359cd05892f}{findBestPath}}(}
+\DoxyCodeLine{106           \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose,}
+\DoxyCodeLine{107           \textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_vel,}
+\DoxyCodeLine{108           geometry\_msgs::PoseStamped\& drive\_velocities);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{121       \textcolor{keywordtype}{void} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aa681debca2e138a957652e9451893f67}{updatePlanAndLocalCosts}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose,}
+\DoxyCodeLine{122           \textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& new\_plan,}
+\DoxyCodeLine{123           \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint\_spec);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{128       \textcolor{keywordtype}{double} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a943ce6facaf2c7602709ed4d0e9c9c54}{getSimPeriod}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_acddd57ac4a93dc2f46a3a3aa84995168}{sim\_period\_}}; \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{140       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ab62d6664d13e90e42327de34a2ed1cfb}{getCellCosts}}(\textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{float} \&path\_cost, \textcolor{keywordtype}{float} \&goal\_cost, \textcolor{keywordtype}{float} \&occ\_cost, \textcolor{keywordtype}{float} \&total\_cost);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{145       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ac0ab6d668b0b9e867ca2ba3ec2f235bf}{setPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& orig\_global\_plan);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keyword}{private}:}
+\DoxyCodeLine{148       \textcolor{comment}{// planner\_util是规划器辅助对象， 为局部规划器提供了代价地图，坐标变换，全局规划等算法输入}}
+\DoxyCodeLine{149       \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\_local\_planner::LocalPlannerUtil}} *\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a80911d417af035245b182daa41ed996a}{planner\_util\_}};}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151       \textcolor{keywordtype}{double} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a0e9d95f2a769d13872020a7585446896}{stop\_time\_buffer\_}}; \textcolor{comment}{// 刹车反应时间，避免撞到障碍物}}
+\DoxyCodeLine{152       \textcolor{keywordtype}{double} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a9c0271e24ee53906d5d01783b5998572}{path\_distance\_bias\_}}, \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a670cb54a049cabf5dc2226651f34211a}{goal\_distance\_bias\_}}, \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ae528378c5a61fb120f7ed4c778fcee92}{occdist\_scale\_}};}
+\DoxyCodeLine{153       Eigen::Vector3f \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a77ff6d038eb1408082bfee6bce0d0751}{vsamples\_}};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155       \textcolor{keywordtype}{double} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_acddd57ac4a93dc2f46a3a3aa84995168}{sim\_period\_}}; \textcolor{comment}{// 计算DWA最大/最小速度用的秒数}}
+\DoxyCodeLine{156       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\_local\_planner::Trajectory}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aba965bb265bdaa95578fe8a7839f7d02}{result\_traj\_}};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158       \textcolor{keywordtype}{double} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a8b46e66af817344972a9b5509ec3044c}{forward\_point\_distance\_}};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160       \textcolor{comment}{// 局部路径规划器的参考路径，来至于全局规划，可以可视化}}
+\DoxyCodeLine{161       std::vector<geometry\_msgs::PoseStamped> \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a413ab9f46d17172e70d0b1ac6af0a84b}{global\_plan\_}};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163       boost::mutex \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a62e4510843c78f32d5d6408138a30652}{configuration\_mutex\_}};}
+\DoxyCodeLine{164       std::string \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a4fc647512336e7e163a87c841a0b40c2}{frame\_id\_}};}
+\DoxyCodeLine{165       ros::Publisher \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ae4c733079a19f8e6cca701b028dd8bba}{traj\_cloud\_pub\_}};}
+\DoxyCodeLine{166       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_af3c6fd18e0fe0950fd28cd86cb7523a8}{publish\_cost\_grid\_pc\_}}; \textcolor{comment}{// 是否发布点云消息}}
+\DoxyCodeLine{167       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aae670e0eded70b90b55a2d8ee10c668b}{publish\_traj\_pc\_}};}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169       \textcolor{keywordtype}{double} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aa1b38f3eaf36086cda5d93368a1a9f20}{cheat\_factor\_}};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{base\_local\_planner::MapGridVisualizer}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a074659f99ba9d320f5aa193332826c4d}{map\_viz\_}}; \textcolor{comment}{// 可视化代价函数产生的势场}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173       \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator}{base\_local\_planner::SimpleTrajectoryGenerator}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a2051d8b8239dac32b4e0f4cf5f993edc}{generator\_}};}
+\DoxyCodeLine{174       \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function}{base\_local\_planner::OscillationCostFunction}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_afb957b4eab69c0519269f0ef5e75a775}{oscillation\_costs\_}};}
+\DoxyCodeLine{175       \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function}{base\_local\_planner::ObstacleCostFunction}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ab822faa322e94ec61635c92f71d7c15c}{obstacle\_costs\_}};}
+\DoxyCodeLine{176       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\_local\_planner::MapGridCostFunction}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a42dd253587666acdfb8eaa50beca9aee}{path\_costs\_}};}
+\DoxyCodeLine{177       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\_local\_planner::MapGridCostFunction}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_afb85a68900242120afada29e69838012}{goal\_costs\_}};}
+\DoxyCodeLine{178       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\_local\_planner::MapGridCostFunction}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a87e487cb691153913256fc03d38f7a6e}{goal\_front\_costs\_}};}
+\DoxyCodeLine{179       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\_local\_planner::MapGridCostFunction}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a3068083b29a756e5d13556f12f26d769}{alignment\_costs\_}};}
+\DoxyCodeLine{180       \mbox{\hyperlink{classbase__local__planner_1_1_twirling_cost_function}{base\_local\_planner::TwirlingCostFunction}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a14a5855adec31916cad2b18fbc7b8d28}{twirling\_costs\_}};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182       \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner}{base\_local\_planner::SimpleScoredSamplingPlanner}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aa679e6c999c095032648a586869d07d3}{scored\_sampling\_planner\_}};}
+\DoxyCodeLine{183   \};}
+\DoxyCodeLine{184 \};}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

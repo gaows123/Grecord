@@ -1,0 +1,11 @@
+<map id="dwa_local_planner::DWAPlanner::getCellCosts" name="dwa_local_planner::DWAPlanner::getCellCosts">
+<area shape="rect" id="node1" title="Compute the components and total cost for a map grid cell 计算地图网格单元的代价" alt="" coords="5,159,184,201"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid_cost_function.html#a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33" title=" " alt="" coords="239,5,395,61"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="232,86,401,127"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_local_planner_util.html#aba7095b7858de54294341d4a916c2555" title=" " alt="" coords="250,152,383,208"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_map_grid_cost_function.html#a14783081aef0e5f4702edf317a10c167" title=" " alt="" coords="239,232,395,288"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_map_grid_cost_function.html#a9e561793dbbb51118834f19673e17892" title=" " alt="" coords="239,312,395,368"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="454,86,623,127"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="453,239,624,281"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="449,312,628,368"/>
+</map>

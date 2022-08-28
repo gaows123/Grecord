@@ -1,0 +1,8 @@
+<map id="base_local_planner::FootprintHelper::getLineCells" name="base_local_planner::FootprintHelper::getLineCells">
+<area shape="rect" id="node1" title="Bresenham&#39;s 算法追踪网格中连接两点的线" alt="" coords="681,45,849,101"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_footprint_helper_test.html#a0addc7b918a129e13848fc8adfe4dcba" title=" " alt="" coords="464,5,608,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_footprint_helper.html#ae808cb5daa8579714519073568709f15" title="获得组成机器人footprint的单元格" alt="" coords="439,85,633,141"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_footprint_helper_test.html#a76bf4841d7d0069d3911b2f5169f5ca0" title=" " alt="" coords="247,45,391,101"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="252,125,385,181"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,125,199,181"/>
+</map>

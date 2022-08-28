@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/include/amcl/map/map.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_a9188d7c3d194212696f636cafd54aab.html">include</a></li><li class="navelem"><a class="el" href="dir_d1b05214bc26678a70bc66257a1f97b6.html">amcl</a></li><li class="navelem"><a class="el" href="dir_86bfd3f1b133b14df9c6b50be3d886dd.html">map</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">map.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+map.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h__incl.png" border="0" usemap="#aamcl_2include_2amcl_2map_2map_8h" alt=""/></div>
+<map name="aamcl_2include_2amcl_2map_2map_8h" id="aamcl_2include_2amcl_2map_2map_8h">
+<area shape="rect" title=" " alt="" coords="5,5,161,47"/>
+<area shape="rect" title=" " alt="" coords="51,95,116,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h__dep__incl.png" border="0" usemap="#aamcl_2include_2amcl_2map_2map_8hdep" alt=""/></div>
+<map name="aamcl_2include_2amcl_2map_2map_8hdep" id="aamcl_2include_2amcl_2map_2map_8hdep">
+<area shape="rect" title=" " alt="" coords="409,5,565,47"/>
+<area shape="rect" href="amcl__laser_8h.html" title=" " alt="" coords="51,95,229,136"/>
+<area shape="rect" href="amcl__node_8cpp.html" title=" " alt="" coords="185,191,349,218"/>
+<area shape="rect" href="map_8c.html" title=" " alt="" coords="304,102,477,129"/>
+<area shape="rect" href="map__cspace_8cpp.html" title=" " alt="" coords="501,95,664,136"/>
+<area shape="rect" href="map__range_8c.html" title=" " alt="" coords="688,95,851,136"/>
+<area shape="rect" href="map__store_8c.html" title=" " alt="" coords="875,95,1037,136"/>
+<area shape="rect" href="amcl__laser_8cpp.html" title=" " alt="" coords="5,184,160,225"/>
+</map>
+</div>
+</div>
+<p><a href="map_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmap__cell__t.html">map_cell_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmap__t.html">map_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a89bc37042bd96306a83b4a959f426f69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a89bc37042bd96306a83b4a959f426f69">MAP_WIFI_MAX_LEVELS</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a89bc37042bd96306a83b4a959f426f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4563de4a7b9a202482b497e254013266"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a4563de4a7b9a202482b497e254013266">MAP_WXGX</a>(map,  i)&#160;&#160;&#160;(map-&gt;origin_x + ((i) - map-&gt;size_x / 2) * map-&gt;scale)</td></tr>
+<tr class="separator:a4563de4a7b9a202482b497e254013266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d472d8b8c3d5e49be2a0243b1a36fbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a3d472d8b8c3d5e49be2a0243b1a36fbc">MAP_WYGY</a>(map,  j)&#160;&#160;&#160;(map-&gt;origin_y + ((j) - map-&gt;size_y / 2) * map-&gt;scale)</td></tr>
+<tr class="separator:a3d472d8b8c3d5e49be2a0243b1a36fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e45f847f78a785a458c466f21bff5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a79e45f847f78a785a458c466f21bff5b">MAP_GXWX</a>(map,  x)&#160;&#160;&#160;(floor((x - map-&gt;origin_x) / map-&gt;scale + 0.5) + map-&gt;size_x / 2)</td></tr>
+<tr class="separator:a79e45f847f78a785a458c466f21bff5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b13db2071d825ea39fac94a7ef7a9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#af8b13db2071d825ea39fac94a7ef7a9c">MAP_GYWY</a>(map,  y)&#160;&#160;&#160;(floor((y - map-&gt;origin_y) / map-&gt;scale + 0.5) + map-&gt;size_y / 2)</td></tr>
+<tr class="separator:af8b13db2071d825ea39fac94a7ef7a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7757f56d022f38d91feb08ebcb6e3fa1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a7757f56d022f38d91feb08ebcb6e3fa1">MAP_VALID</a>(map,  i,  j)&#160;&#160;&#160;((i &gt;= 0) &amp;&amp; (i &lt; map-&gt;size_x) &amp;&amp; (j &gt;= 0) &amp;&amp; (j &lt; map-&gt;size_y))</td></tr>
+<tr class="separator:a7757f56d022f38d91feb08ebcb6e3fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88ccf81d3407428653a519b1f8cc8b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#ad88ccf81d3407428653a519b1f8cc8b9">MAP_INDEX</a>(map,  i,  j)&#160;&#160;&#160;((i) + (j) * map-&gt;size_x)</td></tr>
+<tr class="separator:ad88ccf81d3407428653a519b1f8cc8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a69abcca9449dcd0b4a74db33827e5a6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a69abcca9449dcd0b4a74db33827e5a6c">map_alloc</a> (void)</td></tr>
+<tr class="separator:a69abcca9449dcd0b4a74db33827e5a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24d01dffc5a376977089830b93c9254"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#ae24d01dffc5a376977089830b93c9254">map_free</a> (<a class="el" href="structmap__t.html">map_t</a> *map)</td></tr>
+<tr class="separator:ae24d01dffc5a376977089830b93c9254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2856320c165a29ac7ccd53d567030a9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmap__cell__t.html">map_cell_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a2856320c165a29ac7ccd53d567030a9b">map_get_cell</a> (<a class="el" href="structmap__t.html">map_t</a> *map, double ox, double oy, double oa)</td></tr>
+<tr class="separator:a2856320c165a29ac7ccd53d567030a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8338e47e6501b9549ab165e2ac1522d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a8338e47e6501b9549ab165e2ac1522d8">map_load_occ</a> (<a class="el" href="structmap__t.html">map_t</a> *map, const char *filename, double scale, int negate)</td></tr>
+<tr class="separator:a8338e47e6501b9549ab165e2ac1522d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2e9876667cad69c3b70881c1aaf1ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a7a2e9876667cad69c3b70881c1aaf1ac">map_update_cspace</a> (<a class="el" href="structmap__t.html">map_t</a> *map, double max_occ_dist)</td></tr>
+<tr class="separator:a7a2e9876667cad69c3b70881c1aaf1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafef11c4d8efd07a4cb20bad5fc4bc83"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#aafef11c4d8efd07a4cb20bad5fc4bc83">map_calc_range</a> (<a class="el" href="structmap__t.html">map_t</a> *map, double ox, double oy, double oa, double max_range)</td></tr>
+<tr class="separator:aafef11c4d8efd07a4cb20bad5fc4bc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6b4aacd0e285e7866209c2dfba9a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#acc6b4aacd0e285e7866209c2dfba9a85">map_draw_occ</a> (<a class="el" href="structmap__t.html">map_t</a> *map, struct _rtk_fig_t *fig)</td></tr>
+<tr class="separator:acc6b4aacd0e285e7866209c2dfba9a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2375a4a21f00ea7dd97be17d027adcbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a2375a4a21f00ea7dd97be17d027adcbc">map_draw_cspace</a> (<a class="el" href="structmap__t.html">map_t</a> *map, struct _rtk_fig_t *fig)</td></tr>
+<tr class="separator:a2375a4a21f00ea7dd97be17d027adcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cdf88d9cba5960b2e8f4a8a5c26f879"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="map_8h.html#a8cdf88d9cba5960b2e8f4a8a5c26f879">map_draw_wifi</a> (<a class="el" href="structmap__t.html">map_t</a> *map, struct _rtk_fig_t *fig, int index)</td></tr>
+<tr class="separator:a8cdf88d9cba5960b2e8f4a8a5c26f879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a79e45f847f78a785a458c466f21bff5b" name="a79e45f847f78a785a458c466f21bff5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e45f847f78a785a458c466f21bff5b">&#9670;&nbsp;</a></span>MAP_GXWX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAP_GXWX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">map, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(floor((x - map-&gt;origin_x) / map-&gt;scale + 0.5) + map-&gt;size_x / 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8b13db2071d825ea39fac94a7ef7a9c" name="af8b13db2071d825ea39fac94a7ef7a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b13db2071d825ea39fac94a7ef7a9c">&#9670;&nbsp;</a></span>MAP_GYWY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAP_GYWY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">map, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(floor((y - map-&gt;origin_y) / map-&gt;scale + 0.5) + map-&gt;size_y / 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad88ccf81d3407428653a519b1f8cc8b9" name="ad88ccf81d3407428653a519b1f8cc8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88ccf81d3407428653a519b1f8cc8b9">&#9670;&nbsp;</a></span>MAP_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAP_INDEX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">map, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">j&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((i) + (j) * map-&gt;size_x)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7757f56d022f38d91feb08ebcb6e3fa1" name="a7757f56d022f38d91feb08ebcb6e3fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7757f56d022f38d91feb08ebcb6e3fa1">&#9670;&nbsp;</a></span>MAP_VALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAP_VALID</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">map, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">j&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((i &gt;= 0) &amp;&amp; (i &lt; map-&gt;size_x) &amp;&amp; (j &gt;= 0) &amp;&amp; (j &lt; map-&gt;size_y))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89bc37042bd96306a83b4a959f426f69" name="a89bc37042bd96306a83b4a959f426f69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89bc37042bd96306a83b4a959f426f69">&#9670;&nbsp;</a></span>MAP_WIFI_MAX_LEVELS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAP_WIFI_MAX_LEVELS&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4563de4a7b9a202482b497e254013266" name="a4563de4a7b9a202482b497e254013266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4563de4a7b9a202482b497e254013266">&#9670;&nbsp;</a></span>MAP_WXGX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAP_WXGX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">map, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(map-&gt;origin_x + ((i) - map-&gt;size_x / 2) * map-&gt;scale)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d472d8b8c3d5e49be2a0243b1a36fbc" name="a3d472d8b8c3d5e49be2a0243b1a36fbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d472d8b8c3d5e49be2a0243b1a36fbc">&#9670;&nbsp;</a></span>MAP_WYGY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAP_WYGY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">map, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">j&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(map-&gt;origin_y + ((j) - map-&gt;size_y / 2) * map-&gt;scale)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a69abcca9449dcd0b4a74db33827e5a6c" name="a69abcca9449dcd0b4a74db33827e5a6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69abcca9449dcd0b4a74db33827e5a6c">&#9670;&nbsp;</a></span>map_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmap__t.html">map_t</a> * map_alloc </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h_a69abcca9449dcd0b4a74db33827e5a6c_icgraph.png" border="0" usemap="#amap_8h_a69abcca9449dcd0b4a74db33827e5a6c_icgraph" alt=""/></div>
+<map name="amap_8h_a69abcca9449dcd0b4a74db33827e5a6c_icgraph" id="amap_8h_a69abcca9449dcd0b4a74db33827e5a6c_icgraph">
+<area shape="rect" title=" " alt="" coords="896,56,977,83"/>
+<area shape="rect" href="class_amcl_node.html#a2a81d4aceba212bde82ce4044d18a55d" title=" " alt="" coords="689,56,848,83"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,56,641,83"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,56,156,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aafef11c4d8efd07a4cb20bad5fc4bc83" name="aafef11c4d8efd07a4cb20bad5fc4bc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafef11c4d8efd07a4cb20bad5fc4bc83">&#9670;&nbsp;</a></span>map_calc_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double map_calc_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h_aafef11c4d8efd07a4cb20bad5fc4bc83_icgraph.png" border="0" usemap="#amap_8h_aafef11c4d8efd07a4cb20bad5fc4bc83_icgraph" alt=""/></div>
+<map name="amap_8h_aafef11c4d8efd07a4cb20bad5fc4bc83_icgraph" id="amap_8h_aafef11c4d8efd07a4cb20bad5fc4bc83_icgraph">
+<area shape="rect" title=" " alt="" coords="520,5,637,32"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a9cc5e4e32e3f5a1d3051729928215b35" title=" " alt="" coords="269,5,472,32"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a179090d0bcf37e2a3927010e5726ffe7" title=" " alt="" coords="5,5,221,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2375a4a21f00ea7dd97be17d027adcbc" name="a2375a4a21f00ea7dd97be17d027adcbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2375a4a21f00ea7dd97be17d027adcbc">&#9670;&nbsp;</a></span>map_draw_cspace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_draw_cspace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct _rtk_fig_t *&#160;</td>
+          <td class="paramname"><em>fig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc6b4aacd0e285e7866209c2dfba9a85" name="acc6b4aacd0e285e7866209c2dfba9a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6b4aacd0e285e7866209c2dfba9a85">&#9670;&nbsp;</a></span>map_draw_occ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_draw_occ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct _rtk_fig_t *&#160;</td>
+          <td class="paramname"><em>fig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cdf88d9cba5960b2e8f4a8a5c26f879" name="a8cdf88d9cba5960b2e8f4a8a5c26f879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cdf88d9cba5960b2e8f4a8a5c26f879">&#9670;&nbsp;</a></span>map_draw_wifi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_draw_wifi </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct _rtk_fig_t *&#160;</td>
+          <td class="paramname"><em>fig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae24d01dffc5a376977089830b93c9254" name="ae24d01dffc5a376977089830b93c9254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24d01dffc5a376977089830b93c9254">&#9670;&nbsp;</a></span>map_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h_ae24d01dffc5a376977089830b93c9254_icgraph.png" border="0" usemap="#amap_8h_ae24d01dffc5a376977089830b93c9254_icgraph" alt=""/></div>
+<map name="amap_8h_ae24d01dffc5a376977089830b93c9254_icgraph" id="amap_8h_ae24d01dffc5a376977089830b93c9254_icgraph">
+<area shape="rect" title=" " alt="" coords="936,81,1012,108"/>
+<area shape="rect" href="class_amcl_node.html#a6ee0c6604650ae544c08be36df176e4d" title=" " alt="" coords="689,74,888,115"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,56,641,83"/>
+<area shape="rect" href="class_amcl_node.html#a3aaabb3a67f2a4f8637c64c99e55087e" title=" " alt="" coords="459,107,617,133"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,56,156,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2856320c165a29ac7ccd53d567030a9b" name="a2856320c165a29ac7ccd53d567030a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2856320c165a29ac7ccd53d567030a9b">&#9670;&nbsp;</a></span>map_get_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmap__cell__t.html">map_cell_t</a> * map_get_cell </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ox</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>oa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8338e47e6501b9549ab165e2ac1522d8" name="a8338e47e6501b9549ab165e2ac1522d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8338e47e6501b9549ab165e2ac1522d8">&#9670;&nbsp;</a></span>map_load_occ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int map_load_occ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>negate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a2e9876667cad69c3b70881c1aaf1ac" name="a7a2e9876667cad69c3b70881c1aaf1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2e9876667cad69c3b70881c1aaf1ac">&#9670;&nbsp;</a></span>map_update_cspace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_update_cspace </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_occ_dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h_a7a2e9876667cad69c3b70881c1aaf1ac_cgraph.png" border="0" usemap="#amap_8h_a7a2e9876667cad69c3b70881c1aaf1ac_cgraph" alt=""/></div>
+<map name="amap_8h_a7a2e9876667cad69c3b70881c1aaf1ac_cgraph" id="amap_8h_a7a2e9876667cad69c3b70881c1aaf1ac_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,148,57"/>
+<area shape="rect" href="map__cspace_8cpp.html#a494ed82d2dc7c22daa80385f65351656" title=" " alt="" coords="225,5,295,32"/>
+<area shape="rect" href="map__cspace_8cpp.html#a862166a1d511336b3211ff838427d582" title=" " alt="" coords="196,56,324,83"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="372,5,443,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="map_8h_a7a2e9876667cad69c3b70881c1aaf1ac_icgraph.png" border="0" usemap="#amap_8h_a7a2e9876667cad69c3b70881c1aaf1ac_icgraph" alt=""/></div>
+<map name="amap_8h_a7a2e9876667cad69c3b70881c1aaf1ac_icgraph" id="amap_8h_a7a2e9876667cad69c3b70881c1aaf1ac_icgraph">
+<area shape="rect" title=" " alt="" coords="927,108,1069,135"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#ab9115fca9c56ad6f745efe8442c2d52f" title=" " alt="" coords="689,67,879,109"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#acdde5209bb6d160b6b561742036fcb09" title=" " alt="" coords="689,133,879,174"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,75,641,101"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="452,140,624,167"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,81,156,108"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

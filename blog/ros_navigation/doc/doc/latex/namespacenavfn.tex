@@ -1,0 +1,51 @@
+\hypertarget{namespacenavfn}{}\doxysection{navfn 命名空间参考}
+\label{namespacenavfn}\index{navfn@{navfn}}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnavfn_1_1_nav_fn}{Nav\+Fn}}
+\begin{DoxyCompactList}\small\item\em Navigation function class. Holds buffers for costmap, navfn map.\+代价地图和\+Nav\+Fn地图是基于像素的，他们的原点在左上方，x 轴向右，y 轴向下 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnavfn_1_1_navfn_r_o_s}{Navfn\+ROS}}
+\begin{DoxyCompactList}\small\item\em Navfn 全局规划器的\+ROS封装类 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnavfn_1_1_navfn_with_costmap}{Navfn\+With\+Costmap}}
+\item 
+class \mbox{\hyperlink{classnavfn_1_1_nav_win}{Nav\+Win}}
+\item 
+struct \mbox{\hyperlink{structnavfn_1_1_potarr_point}{Potarr\+Point}}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacenavfn_a43e1cf99d005f4c0b40ce27c85ac3a0f}{create\+\_\+nav\+\_\+plan\+\_\+astar}} (\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$costmap, int nx, int ny, int $\ast$\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, int $\ast$\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, float $\ast$plan, int nplan)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{namespacenavfn_a43e1cf99d005f4c0b40ce27c85ac3a0f}\label{namespacenavfn_a43e1cf99d005f4c0b40ce27c85ac3a0f}} 
+\index{navfn@{navfn}!create\_nav\_plan\_astar@{create\_nav\_plan\_astar}}
+\index{create\_nav\_plan\_astar@{create\_nav\_plan\_astar}!navfn@{navfn}}
+\doxysubsubsection{\texorpdfstring{create\_nav\_plan\_astar()}{create\_nav\_plan\_astar()}}
+{\footnotesize\ttfamily int navfn\+::create\+\_\+nav\+\_\+plan\+\_\+astar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$}]{costmap,  }\item[{int}]{nx,  }\item[{int}]{ny,  }\item[{int $\ast$}]{goal,  }\item[{int $\ast$}]{start,  }\item[{float $\ast$}]{plan,  }\item[{int}]{nplan }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Navigation function call.
+\param costmap Cost map array, of type COSTTYPE; origin is upper left
+\end{DoxyVerb}
+ NOTE\+: will be modified to have a border of obstacle costs 
+\begin{DoxyParams}{参数}
+{\em nx} & Width of map in cells \\
+\hline
+{\em ny} & Height of map in cells \\
+\hline
+{\em goal} & X,Y position of goal cell \\
+\hline
+{\em start} & X,Y position of start cell\\
+\hline
+\end{DoxyParams}
+Returns length of plan if found, and fills an array with x,y interpolated positions at about 1/2 cell resolution; else returns 0. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacenavfn_a43e1cf99d005f4c0b40ce27c85ac3a0f_cgraph}
+\end{center}
+\end{figure}

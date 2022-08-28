@@ -1,0 +1,10 @@
+<map id="navfn::NavfnWithCostmap" name="navfn::NavfnWithCostmap">
+<area shape="rect" id="node1" title=" " alt="" coords="1004,136,1179,163"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_navfn_r_o_s.html" title="Navfn 全局规划器的ROS封装类" alt="" coords="383,71,507,97"/>
+<area shape="rect" id="node3" href="$classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="18,85,187,112"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="345,152,544,179"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="333,203,556,229"/>
+<area shape="rect" id="node5" title=" " alt="" coords="75,244,130,271"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="715,176,912,203"/>
+</map>

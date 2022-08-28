@@ -1,0 +1,5 @@
+<map id="base_local_planner::CostmapModel::pointCost" name="base_local_planner::CostmapModel::pointCost">
+<area shape="rect" id="node1" title="检查某个点在代价地图中的代价" alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="233,5,403,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="451,5,620,47"/>
+</map>

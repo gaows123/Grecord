@@ -1,0 +1,73 @@
+\hypertarget{costmap__math_8h_source}{}\doxysection{costmap\+\_\+math.\+h}
+\label{costmap__math_8h_source}\index{costmap\_2d/include/costmap\_2d/costmap\_math.h@{costmap\_2d/include/costmap\_2d/costmap\_math.h}}
+\mbox{\hyperlink{costmap__math_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_COSTMAP\_MATH\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_COSTMAP\_MATH\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47 \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{costmap__math_8h_a8f3cba07aa75b7320ae8bd6c0aeac498}{sign}}(\textcolor{keywordtype}{double} x)}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49   \textcolor{keywordflow}{return} x < 0.0 ? -\/1.0 : 1.0;}
+\DoxyCodeLine{50 \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53 \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{costmap__math_8h_a07fdddafa7ce762bfda59e7146a194ae}{sign0}}(\textcolor{keywordtype}{double} x)}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55   \textcolor{keywordflow}{return} x < 0.0 ? -\/1.0 : (x > 0.0 ? 1.0 : 0.0);}
+\DoxyCodeLine{56 \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}}(\textcolor{keywordtype}{double} x0, \textcolor{keywordtype}{double} y0, \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1)}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{60   \textcolor{keywordflow}{return} hypot(x1 -\/ x0, y1 -\/ y0);}
+\DoxyCodeLine{61 \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keywordtype}{double} \mbox{\hyperlink{costmap__math_8h_a31fe9c9633687b41b7c65a18dcab85f9}{distanceToLine}}(\textcolor{keywordtype}{double} pX, \textcolor{keywordtype}{double} pY, \textcolor{keywordtype}{double} x0, \textcolor{keywordtype}{double} y0, \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keywordtype}{bool} \mbox{\hyperlink{costmap__math_8h_a567784da85da753bdd72f7faf2bdf7b6}{intersects}}(std::vector<geometry\_msgs::Point>\& polygon, \textcolor{keywordtype}{float} testx, \textcolor{keywordtype}{float} testy);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keywordtype}{bool} \mbox{\hyperlink{costmap__math_8h_a567784da85da753bdd72f7faf2bdf7b6}{intersects}}(std::vector<geometry\_msgs::Point>\& polygon1, std::vector<geometry\_msgs::Point>\& polygon2);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_COSTMAP\_MATH\_H\_}}
+
+\end{DoxyCode}

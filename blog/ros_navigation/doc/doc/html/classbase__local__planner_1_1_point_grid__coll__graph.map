@@ -1,0 +1,5 @@
+<map id="base_local_planner::PointGrid" name="base_local_planner::PointGrid">
+<area shape="rect" id="node1" title="实现WorldModel接口的类，提供自由空间的碰撞检测， 该类存储网格的点并且检查多边形中的点是否碰撞(通过把机器人的footprint映射到给定的位姿，看有没有和障碍物重合)" alt="" coords="64,109,197,151"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="5,5,139,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="163,13,215,39"/>
+</map>

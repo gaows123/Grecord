@@ -1,0 +1,105 @@
+\hypertarget{testing__helper_8h_source}{}\doxysection{testing\+\_\+helper.\+h}
+\label{testing__helper_8h_source}\index{costmap\_2d/include/costmap\_2d/testing\_helper.h@{costmap\_2d/include/costmap\_2d/testing\_helper.h}}
+\mbox{\hyperlink{testing__helper_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_TESTING\_HELPER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define COSTMAP\_2D\_TESTING\_HELPER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include<\mbox{\hyperlink{cost__values_8h}{costmap\_2d/cost\_values.h}}>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include<\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{static__layer_8h}{costmap\_2d/static\_layer.h}}>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{obstacle__layer_8h}{costmap\_2d/obstacle\_layer.h}}>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{inflation__layer_8h}{costmap\_2d/inflation\_layer.h}}>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <sensor\_msgs/point\_cloud2\_iterator.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{testing__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d}{MAX\_Z}}(1.0);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keywordtype}{char} \mbox{\hyperlink{testing__helper_8h_ab67d48c3e97782150aac66598f768972}{printableCost}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cost)}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16   \textcolor{keywordflow}{switch} (cost)}
+\DoxyCodeLine{17   \{}
+\DoxyCodeLine{18   \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacecostmap__2d_ae61ae84ebebea32544148f295779c4ef}{costmap\_2d::NO\_INFORMATION}}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'};}
+\DoxyCodeLine{19   \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacecostmap__2d_aab110f187082d88d103ee84c8e420872}{costmap\_2d::LETHAL\_OBSTACLE}}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'L'};}
+\DoxyCodeLine{20   \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacecostmap__2d_a5d3c464519e4135a8f54c9aea7a51d2b}{costmap\_2d::INSCRIBED\_INFLATED\_OBSTACLE}}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'I'};}
+\DoxyCodeLine{21   \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacecostmap__2d_aa367750132c78d35f962c9130c1a572c}{costmap\_2d::FREE\_SPACE}}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'.'};}
+\DoxyCodeLine{22   \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'0'} + (\textcolor{keywordtype}{unsigned} char) (10 * cost / 255);}
+\DoxyCodeLine{23   \}}
+\DoxyCodeLine{24 \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keywordtype}{void} \mbox{\hyperlink{testing__helper_8h_a31015063213528e542a953d8470fc6b5}{printMap}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& costmap)}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28   printf(\textcolor{stringliteral}{"{}map:\(\backslash\)n"{}});}
+\DoxyCodeLine{29   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < costmap.\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a702f4ed109f94c8513500cf97ff066a4}{getSizeInCellsY}}(); i++)\{}
+\DoxyCodeLine{30     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < costmap.\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a615a4186649d8970111f8a356906b320}{getSizeInCellsX}}(); j++)\{}
+\DoxyCodeLine{31       printf(\textcolor{stringliteral}{"{}\%4d"{}}, \textcolor{keywordtype}{int}(costmap.\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27}{getCost}}(j, i)));}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{34   \}}
+\DoxyCodeLine{35 \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{testing__helper_8h_af4d497e66d7195f0a4b02ce26603c5c8}{countValues}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& costmap, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value, \textcolor{keywordtype}{bool} equal = \textcolor{keyword}{true})}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{40   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < costmap.\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a702f4ed109f94c8513500cf97ff066a4}{getSizeInCellsY}}(); i++)\{}
+\DoxyCodeLine{41     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < costmap.\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a615a4186649d8970111f8a356906b320}{getSizeInCellsX}}(); j++)\{}
+\DoxyCodeLine{42       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c = costmap.\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27}{getCost}}(j, i);}
+\DoxyCodeLine{43       \textcolor{keywordflow}{if} ((equal \&\& c == value) || (!equal \&\& c != value))}
+\DoxyCodeLine{44       \{}
+\DoxyCodeLine{45         count+=1;}
+\DoxyCodeLine{46       \}}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48   \}}
+\DoxyCodeLine{49   \textcolor{keywordflow}{return} count;}
+\DoxyCodeLine{50 \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} \mbox{\hyperlink{testing__helper_8h_a44d779d80cd1879d61ab1e32e179a806}{addStaticLayer}}(\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\_2d::LayeredCostmap}}\& layers, tf2\_ros::Buffer\& tf)}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54   \mbox{\hyperlink{classcostmap__2d_1_1_static_layer}{costmap\_2d::StaticLayer}}* slayer = \textcolor{keyword}{new} \mbox{\hyperlink{classcostmap__2d_1_1_static_layer}{costmap\_2d::StaticLayer}}();}
+\DoxyCodeLine{55   layers.\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_a8afdb4c9795e2383bd5b66b89c748a6b}{addPlugin}}(boost::shared\_ptr<costmap\_2d::Layer>(slayer));}
+\DoxyCodeLine{56   slayer-\/>\mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize}}(\&layers, \textcolor{stringliteral}{"{}static"{}}, \&tf);}
+\DoxyCodeLine{57 \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\_2d::ObstacleLayer}}* \mbox{\hyperlink{testing__helper_8h_afd328050d3b7af24194fabf58454f91a}{addObstacleLayer}}(\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\_2d::LayeredCostmap}}\& layers, tf2\_ros::Buffer\& tf)}
+\DoxyCodeLine{60 \{}
+\DoxyCodeLine{61   \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\_2d::ObstacleLayer}}* olayer = \textcolor{keyword}{new} \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\_2d::ObstacleLayer}}();}
+\DoxyCodeLine{62   olayer-\/>\mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize}}(\&layers, \textcolor{stringliteral}{"{}obstacles"{}}, \&tf);}
+\DoxyCodeLine{63   layers.\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_a8afdb4c9795e2383bd5b66b89c748a6b}{addPlugin}}(boost::shared\_ptr<costmap\_2d::Layer>(olayer));}
+\DoxyCodeLine{64   \textcolor{keywordflow}{return} olayer;}
+\DoxyCodeLine{65 \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} \mbox{\hyperlink{testing__helper_8h_a043c2232e047ce2a6c03a493e5e31ee9}{addObservation}}(\mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer}{costmap\_2d::ObstacleLayer}}* olayer, \textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} z = 0.0,}
+\DoxyCodeLine{68                     \textcolor{keywordtype}{double} ox = 0.0, \textcolor{keywordtype}{double} oy = 0.0, \textcolor{keywordtype}{double} oz = \mbox{\hyperlink{testing__helper_8h_a80945e4c9ec06fccdb5342cacfea6e3d}{MAX\_Z}})\{}
+\DoxyCodeLine{69   sensor\_msgs::PointCloud2 cloud;}
+\DoxyCodeLine{70   sensor\_msgs::PointCloud2Modifier modifier(cloud);}
+\DoxyCodeLine{71   modifier.setPointCloud2FieldsByString(1, \textcolor{stringliteral}{"{}xyz"{}});}
+\DoxyCodeLine{72   modifier.resize(1);}
+\DoxyCodeLine{73   sensor\_msgs::PointCloud2Iterator<float> iter\_x(cloud, \textcolor{stringliteral}{"{}x"{}});}
+\DoxyCodeLine{74   sensor\_msgs::PointCloud2Iterator<float> iter\_y(cloud, \textcolor{stringliteral}{"{}y"{}});}
+\DoxyCodeLine{75   sensor\_msgs::PointCloud2Iterator<float> iter\_z(cloud, \textcolor{stringliteral}{"{}z"{}});}
+\DoxyCodeLine{76   *iter\_x = x;}
+\DoxyCodeLine{77   *iter\_y = y;}
+\DoxyCodeLine{78   *iter\_z = z;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   geometry\_msgs::Point p;}
+\DoxyCodeLine{81   p.x = ox;}
+\DoxyCodeLine{82   p.y = oy;}
+\DoxyCodeLine{83   p.z = oz;}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   \mbox{\hyperlink{classcostmap__2d_1_1_observation}{costmap\_2d::Observation}} obs(p, cloud, 100.0, 100.0);  \textcolor{comment}{// obstacle range = raytrace range = 100.0}}
+\DoxyCodeLine{86   olayer-\/>\mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_ac835aba4f43e4c8a2a8ed66c97899b5f}{addStaticObservation}}(obs, \textcolor{keyword}{true}, \textcolor{keyword}{true});}
+\DoxyCodeLine{87 \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{costmap\_2d::InflationLayer}}* \mbox{\hyperlink{testing__helper_8h_a1ba5d33cfd5bb6ee59e0fdbf44251d81}{addInflationLayer}}(\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{costmap\_2d::LayeredCostmap}}\& layers, tf2\_ros::Buffer\& tf)}
+\DoxyCodeLine{90 \{}
+\DoxyCodeLine{91   \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{costmap\_2d::InflationLayer}}* ilayer = \textcolor{keyword}{new} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{costmap\_2d::InflationLayer}}();}
+\DoxyCodeLine{92   ilayer-\/>\mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize}}(\&layers, \textcolor{stringliteral}{"{}inflation"{}}, \&tf);}
+\DoxyCodeLine{93   boost::shared\_ptr<costmap\_2d::Layer> ipointer(ilayer);}
+\DoxyCodeLine{94   layers.\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_a8afdb4c9795e2383bd5b66b89c748a6b}{addPlugin}}(ipointer);}
+\DoxyCodeLine{95   \textcolor{keywordflow}{return} ilayer;}
+\DoxyCodeLine{96 \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_TESTING\_HELPER\_H}}
+
+\end{DoxyCode}

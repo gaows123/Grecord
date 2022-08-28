@@ -1,0 +1,760 @@
+\hypertarget{classglobal__planner_1_1_global_planner}{}\doxysection{global\+\_\+planner\+::Global\+Planner类 参考}
+\label{classglobal__planner_1_1_global_planner}\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+
+
+{\ttfamily \#include $<$planner\+\_\+core.\+h$>$}
+
+
+
+类 global\+\_\+planner\+::Global\+Planner 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classglobal__planner_1_1_global_planner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+global\+\_\+planner\+::Global\+Planner 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}{Global\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classglobal__planner_1_1_global_planner_aaeb34983765b053861cbef08e9614bb5}{Global\+Planner}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string frame\+\_\+id)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa49ab75794afdbec6aa7c6c3902de4c0}{$\sim$\+Global\+Planner}} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_planner_core}{Planner\+Core}} 对象的初始化函数 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_af3ade8f9f487fe2ddd109f0845a6ffb2}{initialize}} (std\+::string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string frame\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em 根据目标点规划处全局路径 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4f6bfa5acf58670c01a5b8c684a2f20c}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, double tolerance, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em 根据目标点规划处全局路径 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa64e1114c4a78980256bd04bd0e79efa}{compute\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Computes the full navigation function for the map given a point in the world to start from \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5}{get\+Plan\+From\+Potential}} (double start\+\_\+x, double start\+\_\+y, double end\+\_\+x, double end\+\_\+y, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\begin{DoxyCompactList}\small\item\em Compute a plan to a goal after the potential for a start point has already been computed (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7f0a8eaf0e715f682480ef447a63cd67}{get\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Get the potential, or naviagation cost, at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7c50827ebb21a48825d55bda56dd38ac}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a27405d9450075e6dcc7fc73bd56fb6dc}{valid\+Point\+Potential}} (const geometry\+\_\+msgs\+::\+Point \&world\+\_\+point, double tolerance)
+\begin{DoxyCompactList}\small\item\em Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f}{publish\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&path)
+\begin{DoxyCompactList}\small\item\em 发布路径信息，用于可视化 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208}{make\+Plan\+Service}} (nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&req, nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&resp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a790fb19fb46e1a1edc15f98b1075e849}{costmap\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 拷贝了一份当前代价地图，会被make\+Plan调用 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4a8bf49e32dcae69b02adabe35b99ed0}{frame\+\_\+id\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classglobal__planner_1_1_global_planner_ae90f4043291a203f62ad9259796792dc}{plan\+\_\+pub\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_abd54fe2b4a6f92fec92e49da3739e016}{initialized\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_adc356fbcaa27c897710becc5f7ad9777}{allow\+\_\+unknown\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a39a4e51153df87f6373d091084235720}{map\+To\+World}} (double mx, double my, double \&wx, double \&wy)
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aec6ebc007afc963fec1eaed68e05bdf7}{world\+To\+Map}} (double wx, double wy, double \&mx, double \&my)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a04cb531dc0326cc5bdcce752175ee030}{clear\+Robot\+Cell}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, unsigned int mx, unsigned int my)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a91c22ec25e6e8232ef2d73e6738f3857}{publish\+Potential}} (float $\ast$potential)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a166082482ed5973406af72a52f7cab20}{outline\+Map}} (unsigned char $\ast$costarr, int nx, int ny, unsigned char value)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a466844ce6660d09e06c1dc1f87c03d30}{reconfigure\+CB}} (global\+\_\+planner\+::\+Global\+Planner\+Config \&config, uint32\+\_\+t level)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a0038740762c928c508b6650f3eaa9bf5}{planner\+\_\+window\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a98d9f22a34a6522abecf360b59d9e29d}{planner\+\_\+window\+\_\+y\+\_\+}}
+\item 
+double \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a111644f8646ee899752df06f8f5d9344}{default\+\_\+tolerance\+\_\+}}
+\item 
+boost\+::mutex \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4be9e56d865efa801b5ad4a9c4e4ac4e}{mutex\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a00c4876b5681cccdef93ac180b792439}{make\+\_\+plan\+\_\+srv\+\_\+}}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a9196cb2ef93cc1d25647bcc6d1f3c051}{p\+\_\+calc\+\_\+}}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_expander}{Expander}} $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a79a3e9afebbcfff9bb3960aa7b57062f}{planner\+\_\+}}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_traceback}{Traceback}} $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_ac67a13a5e6be407ea15b24f4ac424e59}{path\+\_\+maker\+\_\+}}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_orientation_filter}{Orientation\+Filter}} $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a006d8a100ff49cca9a076822f6c1403b}{orientation\+\_\+filter\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7a69e8248b531de15c2429239f3d4228}{publish\+\_\+potential\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a8c7179eb971553a465eb2dd4a73c0197}{potential\+\_\+pub\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_global_planner_aa487da002de486bb50e3959a36f591be}{publish\+\_\+scale\+\_\+}}
+\item 
+float $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a5c12f3c514ac17b13c30ab91795bc427}{potential\+\_\+array\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classglobal__planner_1_1_global_planner_afb12fc492007c12d84147ed07f792c7e}{start\+\_\+x\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classglobal__planner_1_1_global_planner_ae82d95a4c703fbff8de529ff0c893fdb}{start\+\_\+y\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a181cc3fec157f84a44a4125a6440f6a7}{end\+\_\+x\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a7858d8bad5a65ce6b2809c104312e04d}{end\+\_\+y\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a4fa7c15cefc10553b6b3080a72d64201}{old\+\_\+navfn\+\_\+behavior\+\_\+}}
+\item 
+float \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a37202a2306bebdc0cc0326820700bbc0}{convert\+\_\+offset\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a442403698c352db9d20335768d258be9}{outline\+\_\+map\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ global\+\_\+planner\+::\+Global\+Planner\+Config $>$ $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_global_planner_a02d7c6a1d3736d4a19fa53391a286b73}{dsrv\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}\label{classglobal__planner_1_1_global_planner_a69b66f59b51665f826a51587afa720ff}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!GlobalPlanner@{GlobalPlanner}}
+\index{GlobalPlanner@{GlobalPlanner}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{GlobalPlanner()}{GlobalPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Global\+Planner\+::\+Global\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+默认构造函数 
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aaeb34983765b053861cbef08e9614bb5}\label{classglobal__planner_1_1_global_planner_aaeb34983765b053861cbef08e9614bb5}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!GlobalPlanner@{GlobalPlanner}}
+\index{GlobalPlanner@{GlobalPlanner}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{GlobalPlanner()}{GlobalPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Global\+Planner\+::\+Global\+Planner (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{frame\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 全局规划器名字 \\
+\hline
+{\em costmap} & 代价地图的指针 \\
+\hline
+{\em frame\+\_\+id} & 代价地图的坐标系 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_aaeb34983765b053861cbef08e9614bb5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aa49ab75794afdbec6aa7c6c3902de4c0}\label{classglobal__planner_1_1_global_planner_aa49ab75794afdbec6aa7c6c3902de4c0}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!````~GlobalPlanner@{$\sim$GlobalPlanner}}
+\index{````~GlobalPlanner@{$\sim$GlobalPlanner}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{$\sim$GlobalPlanner()}{~GlobalPlanner()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Global\+Planner\+::$\sim$\+Global\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+析构函数 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a04cb531dc0326cc5bdcce752175ee030}\label{classglobal__planner_1_1_global_planner_a04cb531dc0326cc5bdcce752175ee030}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!clearRobotCell@{clearRobotCell}}
+\index{clearRobotCell@{clearRobotCell}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{clearRobotCell()}{clearRobotCell()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::clear\+Robot\+Cell (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a04cb531dc0326cc5bdcce752175ee030_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a04cb531dc0326cc5bdcce752175ee030_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aa64e1114c4a78980256bd04bd0e79efa}\label{classglobal__planner_1_1_global_planner_aa64e1114c4a78980256bd04bd0e79efa}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!computePotential@{computePotential}}
+\index{computePotential@{computePotential}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{computePotential()}{computePotential()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::compute\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Computes the full navigation function for the map given a point in the world to start from 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to use for seeding the navigation function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the navigation function was computed successfully, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5}\label{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!getPlanFromPotential@{getPlanFromPotential}}
+\index{getPlanFromPotential@{getPlanFromPotential}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{getPlanFromPotential()}{getPlanFromPotential()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::get\+Plan\+From\+Potential (\begin{DoxyParamCaption}\item[{double}]{start\+\_\+x,  }\item[{double}]{start\+\_\+y,  }\item[{double}]{end\+\_\+x,  }\item[{double}]{end\+\_\+y,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+Compute a plan to a goal after the potential for a start point has already been computed (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em start\+\_\+x} & \\
+\hline
+{\em start\+\_\+y} & \\
+\hline
+{\em end\+\_\+x} & \\
+\hline
+{\em end\+\_\+y} & \\
+\hline
+{\em goal} & The goal pose to create a plan to \\
+\hline
+{\em plan} & The plan... filled by the planner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if a valid plan was found, false otherwise 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a4bae9ef237ecc53aa3027abd3dc063b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a7f0a8eaf0e715f682480ef447a63cd67}\label{classglobal__planner_1_1_global_planner_a7f0a8eaf0e715f682480ef447a63cd67}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!getPointPotential@{getPointPotential}}
+\index{getPointPotential@{getPointPotential}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{getPointPotential()}{getPointPotential()}}
+{\footnotesize\ttfamily double global\+\_\+planner\+::\+Global\+Planner\+::get\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Get the potential, or naviagation cost, at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The navigation function\textquotesingle{}s value at that point in the world 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_af3ade8f9f487fe2ddd109f0845a6ffb2}\label{classglobal__planner_1_1_global_planner_af3ade8f9f487fe2ddd109f0845a6ffb2}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{frame\+\_\+id }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_af3ade8f9f487fe2ddd109f0845a6ffb2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}\label{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_planner_core}{Planner\+Core}} 对象的初始化函数 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 全局规划器名字 \\
+\hline
+{\em costmap\+\_\+ros} & 代价地图ros封装类的指针 \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_global_planner_a485461ff314103dac95744f771107c43}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a280ebb6723d46b462eb66ec73a2fe266_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4f6bfa5acf58670c01a5b8c684a2f20c}\label{classglobal__planner_1_1_global_planner_a4f6bfa5acf58670c01a5b8c684a2f20c}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{double}]{tolerance,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+根据目标点规划处全局路径 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & 起始位姿 \\
+\hline
+{\em goal} & 目标位姿 \\
+\hline
+{\em tolerance} & 全局规划的误差范围 \\
+\hline
+{\em plan} & 全局规划路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True \+: 找到全局路径 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a4f6bfa5acf58670c01a5b8c684a2f20c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}\label{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+根据目标点规划处全局路径 
+
+
+\begin{DoxyParams}{参数}
+{\em start} & 起始位姿 \\
+\hline
+{\em goal} & 目标位姿 \\
+\hline
+{\em plan} & 全局规划路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True \+: 找到全局路径 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_global_planner_ae34a7c7cf96ebdfaf6b33f24a646156c}{nav\+\_\+core\+::\+Base\+Global\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_abb7f40f6a851f88e6b7668a38571712a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208}\label{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!makePlanService@{makePlanService}}
+\index{makePlanService@{makePlanService}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlanService()}{makePlanService()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::make\+Plan\+Service (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Request \&}]{req,  }\item[{nav\+\_\+msgs\+::\+Get\+Plan\+::\+Response \&}]{resp }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a760dc206a99babddfacded0558d35208_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a39a4e51153df87f6373d091084235720}\label{classglobal__planner_1_1_global_planner_a39a4e51153df87f6373d091084235720}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!mapToWorld@{mapToWorld}}
+\index{mapToWorld@{mapToWorld}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{mapToWorld()}{mapToWorld()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::map\+To\+World (\begin{DoxyParamCaption}\item[{double}]{mx,  }\item[{double}]{my,  }\item[{double \&}]{wx,  }\item[{double \&}]{wy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a39a4e51153df87f6373d091084235720_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a39a4e51153df87f6373d091084235720_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a166082482ed5973406af72a52f7cab20}\label{classglobal__planner_1_1_global_planner_a166082482ed5973406af72a52f7cab20}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!outlineMap@{outlineMap}}
+\index{outlineMap@{outlineMap}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{outlineMap()}{outlineMap()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::outline\+Map (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costarr,  }\item[{int}]{nx,  }\item[{int}]{ny,  }\item[{unsigned char}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a166082482ed5973406af72a52f7cab20_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f}\label{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!publishPlan@{publishPlan}}
+\index{publishPlan@{publishPlan}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{publishPlan()}{publishPlan()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::publish\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{path }\end{DoxyParamCaption})}
+
+
+
+发布路径信息，用于可视化 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a9844153b2bea9032522a2ed528be963f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a91c22ec25e6e8232ef2d73e6738f3857}\label{classglobal__planner_1_1_global_planner_a91c22ec25e6e8232ef2d73e6738f3857}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!publishPotential@{publishPotential}}
+\index{publishPotential@{publishPotential}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{publishPotential()}{publishPotential()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::publish\+Potential (\begin{DoxyParamCaption}\item[{float $\ast$}]{potential }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a91c22ec25e6e8232ef2d73e6738f3857_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a91c22ec25e6e8232ef2d73e6738f3857_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a466844ce6660d09e06c1dc1f87c03d30}\label{classglobal__planner_1_1_global_planner_a466844ce6660d09e06c1dc1f87c03d30}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Global\+Planner\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{global\+\_\+planner\+::\+Global\+Planner\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a466844ce6660d09e06c1dc1f87c03d30_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_a466844ce6660d09e06c1dc1f87c03d30_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a7c50827ebb21a48825d55bda56dd38ac}\label{classglobal__planner_1_1_global_planner_a7c50827ebb21a48825d55bda56dd38ac}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!validPointPotential@{validPointPotential}}
+\index{validPointPotential@{validPointPotential}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{validPointPotential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point }\end{DoxyParamCaption})}
+
+
+
+Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the navigation function is valid at that point in the world, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a27405d9450075e6dcc7fc73bd56fb6dc}\label{classglobal__planner_1_1_global_planner_a27405d9450075e6dcc7fc73bd56fb6dc}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!validPointPotential@{validPointPotential}}
+\index{validPointPotential@{validPointPotential}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{validPointPotential()}{validPointPotential()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::valid\+Point\+Potential (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Point \&}]{world\+\_\+point,  }\item[{double}]{tolerance }\end{DoxyParamCaption})}
+
+
+
+Check for a valid potential value at a given point in the world (Note\+: You should call compute\+Potential first) 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+point} & The point to get the potential for \\
+\hline
+{\em tolerance} & The tolerance on searching around the world\+\_\+point specified \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the navigation function is valid at that point in the world, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aec6ebc007afc963fec1eaed68e05bdf7}\label{classglobal__planner_1_1_global_planner_aec6ebc007afc963fec1eaed68e05bdf7}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!worldToMap@{worldToMap}}
+\index{worldToMap@{worldToMap}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{worldToMap()}{worldToMap()}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::world\+To\+Map (\begin{DoxyParamCaption}\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{double \&}]{mx,  }\item[{double \&}]{my }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_aec6ebc007afc963fec1eaed68e05bdf7_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_global_planner_aec6ebc007afc963fec1eaed68e05bdf7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_adc356fbcaa27c897710becc5f7ad9777}\label{classglobal__planner_1_1_global_planner_adc356fbcaa27c897710becc5f7ad9777}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!allow\_unknown\_@{allow\_unknown\_}}
+\index{allow\_unknown\_@{allow\_unknown\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{allow\_unknown\_}{allow\_unknown\_}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::allow\+\_\+unknown\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a37202a2306bebdc0cc0326820700bbc0}\label{classglobal__planner_1_1_global_planner_a37202a2306bebdc0cc0326820700bbc0}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!convert\_offset\_@{convert\_offset\_}}
+\index{convert\_offset\_@{convert\_offset\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{convert\_offset\_}{convert\_offset\_}}
+{\footnotesize\ttfamily float global\+\_\+planner\+::\+Global\+Planner\+::convert\+\_\+offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a790fb19fb46e1a1edc15f98b1075e849}\label{classglobal__planner_1_1_global_planner_a790fb19fb46e1a1edc15f98b1075e849}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}}$\ast$ global\+\_\+planner\+::\+Global\+Planner\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+拷贝了一份当前代价地图，会被make\+Plan调用 
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a111644f8646ee899752df06f8f5d9344}\label{classglobal__planner_1_1_global_planner_a111644f8646ee899752df06f8f5d9344}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!default\_tolerance\_@{default\_tolerance\_}}
+\index{default\_tolerance\_@{default\_tolerance\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{default\_tolerance\_}{default\_tolerance\_}}
+{\footnotesize\ttfamily double global\+\_\+planner\+::\+Global\+Planner\+::default\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a02d7c6a1d3736d4a19fa53391a286b73}\label{classglobal__planner_1_1_global_planner_a02d7c6a1d3736d4a19fa53391a286b73}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$global\+\_\+planner\+::\+Global\+Planner\+Config$>$$\ast$ global\+\_\+planner\+::\+Global\+Planner\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a181cc3fec157f84a44a4125a6440f6a7}\label{classglobal__planner_1_1_global_planner_a181cc3fec157f84a44a4125a6440f6a7}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!end\_x\_@{end\_x\_}}
+\index{end\_x\_@{end\_x\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{end\_x\_}{end\_x\_}}
+{\footnotesize\ttfamily unsigned int global\+\_\+planner\+::\+Global\+Planner\+::end\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a7858d8bad5a65ce6b2809c104312e04d}\label{classglobal__planner_1_1_global_planner_a7858d8bad5a65ce6b2809c104312e04d}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!end\_y\_@{end\_y\_}}
+\index{end\_y\_@{end\_y\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{end\_y\_}{end\_y\_}}
+{\footnotesize\ttfamily unsigned int global\+\_\+planner\+::\+Global\+Planner\+::end\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4a8bf49e32dcae69b02adabe35b99ed0}\label{classglobal__planner_1_1_global_planner_a4a8bf49e32dcae69b02adabe35b99ed0}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!frame\_id\_@{frame\_id\_}}
+\index{frame\_id\_@{frame\_id\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{frame\_id\_}{frame\_id\_}}
+{\footnotesize\ttfamily std\+::string global\+\_\+planner\+::\+Global\+Planner\+::frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_abd54fe2b4a6f92fec92e49da3739e016}\label{classglobal__planner_1_1_global_planner_abd54fe2b4a6f92fec92e49da3739e016}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a00c4876b5681cccdef93ac180b792439}\label{classglobal__planner_1_1_global_planner_a00c4876b5681cccdef93ac180b792439}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!make\_plan\_srv\_@{make\_plan\_srv\_}}
+\index{make\_plan\_srv\_@{make\_plan\_srv\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{make\_plan\_srv\_}{make\_plan\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server global\+\_\+planner\+::\+Global\+Planner\+::make\+\_\+plan\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4be9e56d865efa801b5ad4a9c4e4ac4e}\label{classglobal__planner_1_1_global_planner_a4be9e56d865efa801b5ad4a9c4e4ac4e}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily boost\+::mutex global\+\_\+planner\+::\+Global\+Planner\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a4fa7c15cefc10553b6b3080a72d64201}\label{classglobal__planner_1_1_global_planner_a4fa7c15cefc10553b6b3080a72d64201}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!old\_navfn\_behavior\_@{old\_navfn\_behavior\_}}
+\index{old\_navfn\_behavior\_@{old\_navfn\_behavior\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{old\_navfn\_behavior\_}{old\_navfn\_behavior\_}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::old\+\_\+navfn\+\_\+behavior\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a006d8a100ff49cca9a076822f6c1403b}\label{classglobal__planner_1_1_global_planner_a006d8a100ff49cca9a076822f6c1403b}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!orientation\_filter\_@{orientation\_filter\_}}
+\index{orientation\_filter\_@{orientation\_filter\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{orientation\_filter\_}{orientation\_filter\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter}{Orientation\+Filter}}$\ast$ global\+\_\+planner\+::\+Global\+Planner\+::orientation\+\_\+filter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a442403698c352db9d20335768d258be9}\label{classglobal__planner_1_1_global_planner_a442403698c352db9d20335768d258be9}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!outline\_map\_@{outline\_map\_}}
+\index{outline\_map\_@{outline\_map\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{outline\_map\_}{outline\_map\_}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::outline\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a9196cb2ef93cc1d25647bcc6d1f3c051}\label{classglobal__planner_1_1_global_planner_a9196cb2ef93cc1d25647bcc6d1f3c051}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!p\_calc\_@{p\_calc\_}}
+\index{p\_calc\_@{p\_calc\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{p\_calc\_}{p\_calc\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}}$\ast$ global\+\_\+planner\+::\+Global\+Planner\+::p\+\_\+calc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_ac67a13a5e6be407ea15b24f4ac424e59}\label{classglobal__planner_1_1_global_planner_ac67a13a5e6be407ea15b24f4ac424e59}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!path\_maker\_@{path\_maker\_}}
+\index{path\_maker\_@{path\_maker\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{path\_maker\_}{path\_maker\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classglobal__planner_1_1_traceback}{Traceback}}$\ast$ global\+\_\+planner\+::\+Global\+Planner\+::path\+\_\+maker\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_ae90f4043291a203f62ad9259796792dc}\label{classglobal__planner_1_1_global_planner_ae90f4043291a203f62ad9259796792dc}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!plan\_pub\_@{plan\_pub\_}}
+\index{plan\_pub\_@{plan\_pub\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{plan\_pub\_}{plan\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher global\+\_\+planner\+::\+Global\+Planner\+::plan\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a79a3e9afebbcfff9bb3960aa7b57062f}\label{classglobal__planner_1_1_global_planner_a79a3e9afebbcfff9bb3960aa7b57062f}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!planner\_@{planner\_}}
+\index{planner\_@{planner\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{planner\_}{planner\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classglobal__planner_1_1_expander}{Expander}}$\ast$ global\+\_\+planner\+::\+Global\+Planner\+::planner\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a0038740762c928c508b6650f3eaa9bf5}\label{classglobal__planner_1_1_global_planner_a0038740762c928c508b6650f3eaa9bf5}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!planner\_window\_x\_@{planner\_window\_x\_}}
+\index{planner\_window\_x\_@{planner\_window\_x\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{planner\_window\_x\_}{planner\_window\_x\_}}
+{\footnotesize\ttfamily double global\+\_\+planner\+::\+Global\+Planner\+::planner\+\_\+window\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a98d9f22a34a6522abecf360b59d9e29d}\label{classglobal__planner_1_1_global_planner_a98d9f22a34a6522abecf360b59d9e29d}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!planner\_window\_y\_@{planner\_window\_y\_}}
+\index{planner\_window\_y\_@{planner\_window\_y\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{planner\_window\_y\_}{planner\_window\_y\_}}
+{\footnotesize\ttfamily double global\+\_\+planner\+::\+Global\+Planner\+::planner\+\_\+window\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a5c12f3c514ac17b13c30ab91795bc427}\label{classglobal__planner_1_1_global_planner_a5c12f3c514ac17b13c30ab91795bc427}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!potential\_array\_@{potential\_array\_}}
+\index{potential\_array\_@{potential\_array\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{potential\_array\_}{potential\_array\_}}
+{\footnotesize\ttfamily float$\ast$ global\+\_\+planner\+::\+Global\+Planner\+::potential\+\_\+array\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a8c7179eb971553a465eb2dd4a73c0197}\label{classglobal__planner_1_1_global_planner_a8c7179eb971553a465eb2dd4a73c0197}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!potential\_pub\_@{potential\_pub\_}}
+\index{potential\_pub\_@{potential\_pub\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{potential\_pub\_}{potential\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher global\+\_\+planner\+::\+Global\+Planner\+::potential\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_a7a69e8248b531de15c2429239f3d4228}\label{classglobal__planner_1_1_global_planner_a7a69e8248b531de15c2429239f3d4228}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!publish\_potential\_@{publish\_potential\_}}
+\index{publish\_potential\_@{publish\_potential\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{publish\_potential\_}{publish\_potential\_}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Global\+Planner\+::publish\+\_\+potential\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_aa487da002de486bb50e3959a36f591be}\label{classglobal__planner_1_1_global_planner_aa487da002de486bb50e3959a36f591be}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!publish\_scale\_@{publish\_scale\_}}
+\index{publish\_scale\_@{publish\_scale\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{publish\_scale\_}{publish\_scale\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Global\+Planner\+::publish\+\_\+scale\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_afb12fc492007c12d84147ed07f792c7e}\label{classglobal__planner_1_1_global_planner_afb12fc492007c12d84147ed07f792c7e}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!start\_x\_@{start\_x\_}}
+\index{start\_x\_@{start\_x\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{start\_x\_}{start\_x\_}}
+{\footnotesize\ttfamily unsigned int global\+\_\+planner\+::\+Global\+Planner\+::start\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_global_planner_ae82d95a4c703fbff8de529ff0c893fdb}\label{classglobal__planner_1_1_global_planner_ae82d95a4c703fbff8de529ff0c893fdb}} 
+\index{global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}!start\_y\_@{start\_y\_}}
+\index{start\_y\_@{start\_y\_}!global\_planner::GlobalPlanner@{global\_planner::GlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{start\_y\_}{start\_y\_}}
+{\footnotesize\ttfamily unsigned int global\+\_\+planner\+::\+Global\+Planner\+::start\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+global\+\_\+planner/include/global\+\_\+planner/\mbox{\hyperlink{planner__core_8h}{planner\+\_\+core.\+h}}\item 
+global\+\_\+planner/src/\mbox{\hyperlink{planner__core_8cpp}{planner\+\_\+core.\+cpp}}\end{DoxyCompactItemize}

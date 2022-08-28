@@ -1,0 +1,13 @@
+<map id="costmap_2d::InflationLayer::matchSize" name="costmap_2d::InflationLayer::matchSize">
+<area shape="rect" id="node1" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="5,169,184,211"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="232,19,411,60"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="459,71,657,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="232,136,411,177"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="237,201,406,243"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="237,267,406,308"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="237,332,406,373"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="473,5,643,47"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="469,136,647,177"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="469,201,647,243"/>
+<area shape="rect" id="node7" href="$costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="705,143,776,170"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="base_local_planner::LocalPlannerUtil::getCurrentLimits" name="base_local_planner::LocalPlannerUtil::getCurrentLimits">
+<area shape="rect" id="node1" title=" " alt="" coords="589,159,723,215"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="313,5,511,47"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,90,235,146"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a5bd9394ca5cabf2a35526dcb193e36be" title=" " alt="" coords="283,122,541,178"/>
+<area shape="rect" id="node5" href="$classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="323,203,501,244"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a296b387b74afe1c430f0dc6efb2f2ae8" title=" " alt="" coords="314,349,510,405"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a22892ae258fb69ab1cbb78b3e076fba3" title=" " alt="" coords="314,269,510,325"/>
+<area shape="rect" id="node7" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941" title="是否到达目标点" alt="" coords="10,356,230,397"/>
+</map>

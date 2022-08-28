@@ -1,0 +1,10 @@
+<map id="navfn::NavfnROS::getPlanFromPotential" name="navfn::NavfnROS::getPlanFromPotential">
+<area shape="rect" id="node1" title="当起始点的potential被计算出来后，计算全局路径 (注意: 要先调用 computePotential)" alt="" coords="5,96,181,137"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="247,12,417,53"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_navfn_r_o_s.html#afa5d363d19a0451e2f0f1b4bdf9f878f" title=" " alt="" coords="229,78,435,105"/>
+<area shape="rect" id="node7" href="$classnavfn_1_1_navfn_r_o_s.html#a05b4ca9b40c385791f4cb7be8237e4bb" title="可视化路径" alt="" coords="233,129,431,155"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="247,180,417,221"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="483,5,652,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="483,71,652,112"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="483,136,652,177"/>
+</map>

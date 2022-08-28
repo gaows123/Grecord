@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::FootprintHelper类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_footprint_helper.html">FootprintHelper</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classbase__local__planner_1_1_footprint_helper-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::FootprintHelper类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="footprint__helper_8h_source.html">footprint_helper.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a78960bd9bd3bd7fedfff09a7a9132e01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_footprint_helper.html#a78960bd9bd3bd7fedfff09a7a9132e01">FootprintHelper</a> ()</td></tr>
+<tr class="separator:a78960bd9bd3bd7fedfff09a7a9132e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a829bdb95d065a62a70e1cbc57a828ab7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_footprint_helper.html#a829bdb95d065a62a70e1cbc57a828ab7">~FootprintHelper</a> ()</td></tr>
+<tr class="separator:a829bdb95d065a62a70e1cbc57a828ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae808cb5daa8579714519073568709f15"><td class="memItemLeft" align="right" valign="top">std::vector&lt; base_local_planner::Position2DInt &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_footprint_helper.html#ae808cb5daa8579714519073568709f15">getFootprintCells</a> (Eigen::Vector3f pos, std::vector&lt; geometry_msgs::Point &gt; footprint_spec, const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;, bool fill)</td></tr>
+<tr class="memdesc:ae808cb5daa8579714519073568709f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得组成机器人footprint的单元格  <a href="classbase__local__planner_1_1_footprint_helper.html#ae808cb5daa8579714519073568709f15">更多...</a><br /></td></tr>
+<tr class="separator:ae808cb5daa8579714519073568709f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65128ff1acf0eb1d8b398ad0741ee55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_footprint_helper.html#ab65128ff1acf0eb1d8b398ad0741ee55">getLineCells</a> (int x0, int x1, int y0, int y1, std::vector&lt; base_local_planner::Position2DInt &gt; &amp;pts)</td></tr>
+<tr class="memdesc:ab65128ff1acf0eb1d8b398ad0741ee55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bresenham's 算法追踪网格中连接两点的线  <a href="classbase__local__planner_1_1_footprint_helper.html#ab65128ff1acf0eb1d8b398ad0741ee55">更多...</a><br /></td></tr>
+<tr class="separator:ab65128ff1acf0eb1d8b398ad0741ee55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb46e8dcf95d5694a1aa5b03ab83892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_footprint_helper.html#a6bb46e8dcf95d5694a1aa5b03ab83892">getFillCells</a> (std::vector&lt; base_local_planner::Position2DInt &gt; &amp;footprint)</td></tr>
+<tr class="memdesc:a6bb46e8dcf95d5694a1aa5b03ab83892"><td class="mdescLeft">&#160;</td><td class="mdescRight">填充多边形的轮廓，即机器人的footprint  <a href="classbase__local__planner_1_1_footprint_helper.html#a6bb46e8dcf95d5694a1aa5b03ab83892">更多...</a><br /></td></tr>
+<tr class="separator:a6bb46e8dcf95d5694a1aa5b03ab83892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a78960bd9bd3bd7fedfff09a7a9132e01" name="a78960bd9bd3bd7fedfff09a7a9132e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78960bd9bd3bd7fedfff09a7a9132e01">&#9670;&nbsp;</a></span>FootprintHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::FootprintHelper::FootprintHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a829bdb95d065a62a70e1cbc57a828ab7" name="a829bdb95d065a62a70e1cbc57a828ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829bdb95d065a62a70e1cbc57a828ab7">&#9670;&nbsp;</a></span>~FootprintHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::FootprintHelper::~FootprintHelper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a6bb46e8dcf95d5694a1aa5b03ab83892" name="a6bb46e8dcf95d5694a1aa5b03ab83892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb46e8dcf95d5694a1aa5b03ab83892">&#9670;&nbsp;</a></span>getFillCells()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::FootprintHelper::getFillCells </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; base_local_planner::Position2DInt &gt; &amp;&#160;</td>
+          <td class="paramname"><em>footprint</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>填充多边形的轮廓，即机器人的footprint </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">footprint</td><td>组成footprint的单元格集合 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_footprint_helper_a6bb46e8dcf95d5694a1aa5b03ab83892_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_footprint_helper_a6bb46e8dcf95d5694a1aa5b03ab83892_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_footprint_helper_a6bb46e8dcf95d5694a1aa5b03ab83892_icgraph" id="aclassbase__local__planner_1_1_footprint_helper_a6bb46e8dcf95d5694a1aa5b03ab83892_icgraph">
+<area shape="rect" title="填充多边形的轮廓，即机器人的footprint" alt="" coords="681,45,843,101"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html#ae808cb5daa8579714519073568709f15" title="获得组成机器人footprint的单元格" alt="" coords="439,45,633,101"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper_test.html#a76bf4841d7d0069d3911b2f5169f5ca0" title=" " alt="" coords="247,5,391,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="252,85,385,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,85,199,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae808cb5daa8579714519073568709f15" name="ae808cb5daa8579714519073568709f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae808cb5daa8579714519073568709f15">&#9670;&nbsp;</a></span>getFootprintCells()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; base_local_planner::Position2DInt &gt; base_local_planner::FootprintHelper::getFootprintCells </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::Point &gt;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fill</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获得组成机器人footprint的单元格 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x_i</td><td>机器人的x坐标 </td></tr>
+    <tr><td class="paramname">y_i</td><td>机器人的y坐标 </td></tr>
+    <tr><td class="paramname">theta_i</td><td>机器人的朝向 </td></tr>
+    <tr><td class="paramname">fill</td><td>如果为 true: 返回机器人footprint的所有单元格. 如果false: 只返回组成机器人轮廓的单元格. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回组成机器人footprint的所有单元格/轮廓的单元格</dd></dl>
+<p>get the cellsof a footprint at a given position </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_cgraph" id="aclassbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_cgraph">
+<area shape="rect" title="获得组成机器人footprint的单元格" alt="" coords="5,85,200,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html#a6bb46e8dcf95d5694a1aa5b03ab83892" title="填充多边形的轮廓，即机器人的footprint" alt="" coords="252,5,413,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html#ab65128ff1acf0eb1d8b398ad0741ee55" title="Bresenham&#39;s 算法追踪网格中连接两点的线" alt="" coords="249,85,417,141"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="248,166,417,207"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_icgraph" id="aclassbase__local__planner_1_1_footprint_helper_ae808cb5daa8579714519073568709f15_icgraph">
+<area shape="rect" title="获得组成机器人footprint的单元格" alt="" coords="439,45,633,101"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper_test.html#a76bf4841d7d0069d3911b2f5169f5ca0" title=" " alt="" coords="247,5,391,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="252,85,385,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,85,199,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab65128ff1acf0eb1d8b398ad0741ee55" name="ab65128ff1acf0eb1d8b398ad0741ee55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65128ff1acf0eb1d8b398ad0741ee55">&#9670;&nbsp;</a></span>getLineCells()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::FootprintHelper::getLineCells </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; base_local_planner::Position2DInt &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bresenham's 算法追踪网格中连接两点的线 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td>第一个点的x坐标 </td></tr>
+    <tr><td class="paramname">x1</td><td>第二个点的x坐标 </td></tr>
+    <tr><td class="paramname">y0</td><td>第一个点的y坐标 </td></tr>
+    <tr><td class="paramname">y1</td><td>第二个点的y坐标 </td></tr>
+    <tr><td class="paramname">pts</td><td>Will be filled with the cells that lie on the line in the grid </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_footprint_helper_ab65128ff1acf0eb1d8b398ad0741ee55_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_footprint_helper_ab65128ff1acf0eb1d8b398ad0741ee55_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_footprint_helper_ab65128ff1acf0eb1d8b398ad0741ee55_icgraph" id="aclassbase__local__planner_1_1_footprint_helper_ab65128ff1acf0eb1d8b398ad0741ee55_icgraph">
+<area shape="rect" title="Bresenham&#39;s 算法追踪网格中连接两点的线" alt="" coords="681,45,849,101"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper_test.html#a0addc7b918a129e13848fc8adfe4dcba" title=" " alt="" coords="464,5,608,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper.html#ae808cb5daa8579714519073568709f15" title="获得组成机器人footprint的单元格" alt="" coords="439,85,633,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_footprint_helper_test.html#a76bf4841d7d0069d3911b2f5169f5ca0" title=" " alt="" coords="247,45,391,101"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="252,125,385,181"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,125,199,181"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="footprint__helper_8h_source.html">footprint_helper.h</a></li>
+<li>base_local_planner/src/<a class="el" href="footprint__helper_8cpp.html">footprint_helper.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

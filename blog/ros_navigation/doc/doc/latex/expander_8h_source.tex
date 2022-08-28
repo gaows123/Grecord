@@ -1,0 +1,108 @@
+\hypertarget{expander_8h_source}{}\doxysection{expander.\+h}
+\label{expander_8h_source}\index{global\_planner/include/global\_planner/expander.h@{global\_planner/include/global\_planner/expander.h}}
+\mbox{\hyperlink{expander_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_EXPANDER\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_EXPANDER\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{potential__calculator_8h}{global\_planner/potential\_calculator.h}}>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{planner__core_8h}{global\_planner/planner\_core.h}}>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglobal__planner}{global\_planner}} \{}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{classglobal__planner_1_1_expander}{Expander}} \{}
+\DoxyCodeLine{46     \textcolor{keyword}{public}:}
+\DoxyCodeLine{47         \mbox{\hyperlink{classglobal__planner_1_1_expander_a8ccb306a28ea41d2bfd9202d4b16f26a}{Expander}}(\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{PotentialCalculator}}* p\_calc, \textcolor{keywordtype}{int} nx, \textcolor{keywordtype}{int} ny) :}
+\DoxyCodeLine{48                 \mbox{\hyperlink{classglobal__planner_1_1_expander_abbb2fc0fd78f4ae3e8ffad2981629a91}{unknown\_}}(true), \mbox{\hyperlink{classglobal__planner_1_1_expander_a044a34d5d5ddd41016afec643cb65d4e}{lethal\_cost\_}}(253), \mbox{\hyperlink{classglobal__planner_1_1_expander_aa8941c07a0f50a2e3ce3088f7ecb8e61}{neutral\_cost\_}}(50), \mbox{\hyperlink{classglobal__planner_1_1_expander_a999123a5d229a31933a64ba56a4f525d}{factor\_}}(3.0), \mbox{\hyperlink{classglobal__planner_1_1_expander_a3d991703be557e08056daedd3d872fff}{p\_calc\_}}(p\_calc) \{}
+\DoxyCodeLine{49             \mbox{\hyperlink{classglobal__planner_1_1_expander_aeeaa60103de1ee71a1969e40a3735094}{setSize}}(nx, ny);}
+\DoxyCodeLine{50         \}}
+\DoxyCodeLine{51         \textcolor{keyword}{virtual} \mbox{\hyperlink{classglobal__planner_1_1_expander_af3350230a12f804b95b0aa45435631c7}{\string~Expander}}() \{\}}
+\DoxyCodeLine{52         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_expander_a7c352121a2ea1e1b650b219004c98786}{calculatePotentials}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* costs, \textcolor{keywordtype}{double} start\_x, \textcolor{keywordtype}{double} start\_y, \textcolor{keywordtype}{double} end\_x, \textcolor{keywordtype}{double} end\_y,}
+\DoxyCodeLine{53                                         \textcolor{keywordtype}{int} cycles, \textcolor{keywordtype}{float}* potential) = 0;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{60         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_expander_aeeaa60103de1ee71a1969e40a3735094}{setSize}}(\textcolor{keywordtype}{int} nx, \textcolor{keywordtype}{int} ny) \{}
+\DoxyCodeLine{61             \mbox{\hyperlink{classglobal__planner_1_1_expander_a72bbafddd4f838603ebe42cf7fb57cbc}{nx\_}} = nx;}
+\DoxyCodeLine{62             \mbox{\hyperlink{classglobal__planner_1_1_expander_a3d1877778a6ed03533dace263d0dbe7e}{ny\_}} = ny;}
+\DoxyCodeLine{63             \mbox{\hyperlink{classglobal__planner_1_1_expander_a0538b977e9cd0022810096b79e61e529}{ns\_}} = nx * ny;}
+\DoxyCodeLine{64         \} }
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_expander_aee9c360fb6316c538bbadcccc6bf98b1}{setLethalCost}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} lethal\_cost) \{}
+\DoxyCodeLine{66             \mbox{\hyperlink{classglobal__planner_1_1_expander_a044a34d5d5ddd41016afec643cb65d4e}{lethal\_cost\_}} = lethal\_cost;}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_expander_a386d3239f3aaa7a5e583bad9893a8ca1}{setNeutralCost}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} neutral\_cost) \{}
+\DoxyCodeLine{69             \mbox{\hyperlink{classglobal__planner_1_1_expander_aa8941c07a0f50a2e3ce3088f7ecb8e61}{neutral\_cost\_}} = neutral\_cost;}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_expander_a53a3174aef024f0a4d01ac3fa7a74489}{setFactor}}(\textcolor{keywordtype}{float} factor) \{}
+\DoxyCodeLine{72             \mbox{\hyperlink{classglobal__planner_1_1_expander_a999123a5d229a31933a64ba56a4f525d}{factor\_}} = factor;}
+\DoxyCodeLine{73         \}}
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_expander_a1dcbac968719e195552d063c4314618e}{setHasUnknown}}(\textcolor{keywordtype}{bool} unknown) \{}
+\DoxyCodeLine{75             \mbox{\hyperlink{classglobal__planner_1_1_expander_abbb2fc0fd78f4ae3e8ffad2981629a91}{unknown\_}} = unknown;}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_expander_a02060106b60c2661cb1f1878a151a40e}{clearEndpoint}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* costs, \textcolor{keywordtype}{float}* potential, \textcolor{keywordtype}{int} gx, \textcolor{keywordtype}{int} gy, \textcolor{keywordtype}{int} s)\{}
+\DoxyCodeLine{79             \textcolor{keywordtype}{int} startCell = \mbox{\hyperlink{classglobal__planner_1_1_expander_ab9ed0e500049774014960dfb68f1e50c}{toIndex}}(gx, gy);}
+\DoxyCodeLine{80             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=-\/s;i<=s;i++)\{}
+\DoxyCodeLine{81             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=-\/s;j<=s;j++)\{}
+\DoxyCodeLine{82                 \textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} = startCell+i+\mbox{\hyperlink{classglobal__planner_1_1_expander_a72bbafddd4f838603ebe42cf7fb57cbc}{nx\_}}*j;}
+\DoxyCodeLine{83                 \textcolor{keywordflow}{if}(potential[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]<\mbox{\hyperlink{planner__core_8h_a1ba71eeabfe9ba85c91393f562db6a33}{POT\_HIGH}})}
+\DoxyCodeLine{84                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{85                 \textcolor{keywordtype}{float} c = costs[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]+\mbox{\hyperlink{classglobal__planner_1_1_expander_aa8941c07a0f50a2e3ce3088f7ecb8e61}{neutral\_cost\_}};}
+\DoxyCodeLine{86                 \textcolor{keywordtype}{float} pot = \mbox{\hyperlink{classglobal__planner_1_1_expander_a3d991703be557e08056daedd3d872fff}{p\_calc\_}}-\/>\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator_a4befc4819934603d43c8dc539f445fd4}{calculatePotential}}(potential, c, \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});}
+\DoxyCodeLine{87                 potential[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}] = pot;}
+\DoxyCodeLine{88             \}}
+\DoxyCodeLine{89             \}}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{93         \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_expander_ab9ed0e500049774014960dfb68f1e50c}{toIndex}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \{}
+\DoxyCodeLine{94             \textcolor{keywordflow}{return} x + \mbox{\hyperlink{classglobal__planner_1_1_expander_a72bbafddd4f838603ebe42cf7fb57cbc}{nx\_}} * y;}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_expander_a72bbafddd4f838603ebe42cf7fb57cbc}{nx\_}}, \mbox{\hyperlink{classglobal__planner_1_1_expander_a3d1877778a6ed03533dace263d0dbe7e}{ny\_}}, \mbox{\hyperlink{classglobal__planner_1_1_expander_a0538b977e9cd0022810096b79e61e529}{ns\_}}; }
+\DoxyCodeLine{98         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_expander_abbb2fc0fd78f4ae3e8ffad2981629a91}{unknown\_}};}
+\DoxyCodeLine{99         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classglobal__planner_1_1_expander_a044a34d5d5ddd41016afec643cb65d4e}{lethal\_cost\_}}, \mbox{\hyperlink{classglobal__planner_1_1_expander_aa8941c07a0f50a2e3ce3088f7ecb8e61}{neutral\_cost\_}};}
+\DoxyCodeLine{100         \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_expander_ad51bd3f97e8d1ca48c357175d723f3f4}{cells\_visited\_}};}
+\DoxyCodeLine{101         \textcolor{keywordtype}{float} \mbox{\hyperlink{classglobal__planner_1_1_expander_a999123a5d229a31933a64ba56a4f525d}{factor\_}};}
+\DoxyCodeLine{102         \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{PotentialCalculator}}* \mbox{\hyperlink{classglobal__planner_1_1_expander_a3d991703be557e08056daedd3d872fff}{p\_calc\_}};}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \} \textcolor{comment}{//end namespace global\_planner}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

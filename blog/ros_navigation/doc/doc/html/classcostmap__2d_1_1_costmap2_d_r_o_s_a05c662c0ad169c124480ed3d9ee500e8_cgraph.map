@@ -1,0 +1,12 @@
+<map id="costmap_2d::Costmap2DROS::setUnpaddedRobotFootprintPolygon" name="costmap_2d::Costmap2DROS::setUnpaddedRobotFootprintPolygon">
+<area shape="rect" id="node1" title="Set the footprint of the robot to be the given polygon, padded by footprint_padding." alt="" coords="5,86,244,127"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a220a578102cf3592a744ad5264bf09ed" title="Set the footprint of the robot to be the given set of points, padded by footprint_padding." alt="" coords="292,57,489,98"/>
+<area shape="rect" id="node9" href="$namespacecostmap__2d.html#a5969ae5fc593cedb677488002354feba" title="Convert Polygon msg to vector of Points." alt="" coords="301,123,481,149"/>
+<area shape="rect" id="node3" href="$namespacecostmap__2d.html#a16dd6a7064ce2ed191b40c7009512489" title="Adds the specified amount of padding to the footprint (in place)" alt="" coords="550,5,723,32"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha..." alt="" coords="537,57,736,98"/>
+<area shape="rect" id="node4" href="$costmap__math_8h.html#a07fdddafa7ce762bfda59e7146a194ae" title="Same as sign(x) but returns 0 if x is 0." alt="" coords="845,5,898,32"/>
+<area shape="rect" id="node6" href="$namespacecostmap__2d.html#a6eeafbd231ad1ec2de69e61754773742" title="Calculate the extreme distances for the footprint" alt="" coords="784,57,959,98"/>
+<area shape="rect" id="node7" href="$costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="1165,64,1236,91"/>
+<area shape="rect" id="node8" href="$costmap__math_8cpp.html#a31fe9c9633687b41b7c65a18dcab85f9" title=" " alt="" coords="1007,89,1117,116"/>
+<area shape="rect" id="node10" href="$namespacecostmap__2d.html#a9ffe4eb45b6230a18f56723b49cb0047" title="Convert Point32 to Point" alt="" coords="565,123,708,149"/>
+</map>

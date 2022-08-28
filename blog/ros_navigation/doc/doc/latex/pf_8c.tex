@@ -1,0 +1,305 @@
+\hypertarget{pf_8c}{}\doxysection{amcl/src/amcl/pf/pf.c 文件参考}
+\label{pf_8c}\index{amcl/src/amcl/pf/pf.c@{amcl/src/amcl/pf/pf.c}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}amcl/pf/pf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amcl/pf/pf\+\_\+pdf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amcl/pf/pf\+\_\+kdtree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}portable\+\_\+utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+pf.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{pf_8c_aa28e373c884f68244531f1dcbb086b8c}{pf\+\_\+resample\+\_\+limit}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, int k)
+\item 
+\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$ \mbox{\hyperlink{pf_8c_ab59ea6182aba307dd9faa7926219885e}{pf\+\_\+alloc}} (int min\+\_\+samples, int max\+\_\+samples, double alpha\+\_\+slow, double alpha\+\_\+fast, \mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\+\_\+init\+\_\+model\+\_\+fn\+\_\+t}} random\+\_\+pose\+\_\+fn, void $\ast$random\+\_\+pose\+\_\+data)
+\item 
+void \mbox{\hyperlink{pf_8c_a340271a4464113cbe3c4448d514b23c7}{pf\+\_\+free}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf)
+\item 
+void \mbox{\hyperlink{pf_8c_aa158e637ec3c10493f2729f063146944}{pf\+\_\+init}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} mean, \mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} cov)
+\item 
+void \mbox{\hyperlink{pf_8c_ae2b239fe8546df136beca661cede73e2}{pf\+\_\+init\+\_\+model}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\+\_\+init\+\_\+model\+\_\+fn\+\_\+t}} init\+\_\+fn, void $\ast$init\+\_\+data)
+\item 
+void \mbox{\hyperlink{pf_8c_a8093be5fa7501f1a8e903c43b5705be0}{pf\+\_\+init\+\_\+converged}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf)
+\item 
+int \mbox{\hyperlink{pf_8c_a6caa24ec973890583e691fc8616e10e0}{pf\+\_\+update\+\_\+converged}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf)
+\item 
+void \mbox{\hyperlink{pf_8c_a241694fcc56ec6459fef6acc68996eb8}{pf\+\_\+update\+\_\+action}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{pf_8h_a8e8299c4c339c8eacc4a5a6f536313d9}{pf\+\_\+action\+\_\+model\+\_\+fn\+\_\+t}} action\+\_\+fn, void $\ast$action\+\_\+data)
+\item 
+void \mbox{\hyperlink{pf_8c_a477f66612c4752dd8f1ab73cab84a1fd}{pf\+\_\+update\+\_\+sensor}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{pf_8h_abac0d80ca317cca97247df42fda3476d}{pf\+\_\+sensor\+\_\+model\+\_\+fn\+\_\+t}} sensor\+\_\+fn, void $\ast$sensor\+\_\+data)
+\item 
+void \mbox{\hyperlink{pf_8c_a693660604e12992236e660b466ce76c2}{copy\+\_\+set}} (\mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$set\+\_\+a, \mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$set\+\_\+b)
+\item 
+void \mbox{\hyperlink{pf_8c_a3e18db8990238fb9edc912009f64e3db}{pf\+\_\+update\+\_\+resample}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf)
+\item 
+void \mbox{\hyperlink{pf_8c_af2ae5d54790e0aca689b71a16fe4c7cb}{pf\+\_\+cluster\+\_\+stats}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$set)
+\item 
+void \mbox{\hyperlink{pf_8c_adbdbc82024445c0a81904c3abb8c2dce}{pf\+\_\+set\+\_\+selective\+\_\+resampling}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, int selective\+\_\+resampling)
+\item 
+void \mbox{\hyperlink{pf_8c_abdccd5641a5c2a1ff66d4fe80e723bd2}{pf\+\_\+get\+\_\+cep\+\_\+stats}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} $\ast$mean, double $\ast$var)
+\item 
+int \mbox{\hyperlink{pf_8c_af6717acdd4070ef6f7385cb06fd32dd4}{pf\+\_\+get\+\_\+cluster\+\_\+stats}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, int clabel, double $\ast$weight, \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} $\ast$mean, \mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} $\ast$cov)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{pf_8c_a693660604e12992236e660b466ce76c2}\label{pf_8c_a693660604e12992236e660b466ce76c2}} 
+\index{pf.c@{pf.c}!copy\_set@{copy\_set}}
+\index{copy\_set@{copy\_set}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{copy\_set()}{copy\_set()}}
+{\footnotesize\ttfamily void copy\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$}]{set\+\_\+a,  }\item[{\mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$}]{set\+\_\+b }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a693660604e12992236e660b466ce76c2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a693660604e12992236e660b466ce76c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_ab59ea6182aba307dd9faa7926219885e}\label{pf_8c_ab59ea6182aba307dd9faa7926219885e}} 
+\index{pf.c@{pf.c}!pf\_alloc@{pf\_alloc}}
+\index{pf\_alloc@{pf\_alloc}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_alloc()}{pf\_alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$ pf\+\_\+alloc (\begin{DoxyParamCaption}\item[{int}]{min\+\_\+samples,  }\item[{int}]{max\+\_\+samples,  }\item[{double}]{alpha\+\_\+slow,  }\item[{double}]{alpha\+\_\+fast,  }\item[{\mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\+\_\+init\+\_\+model\+\_\+fn\+\_\+t}}}]{random\+\_\+pose\+\_\+fn,  }\item[{void $\ast$}]{random\+\_\+pose\+\_\+data }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{pf_8c_ab59ea6182aba307dd9faa7926219885e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_ab59ea6182aba307dd9faa7926219885e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_af2ae5d54790e0aca689b71a16fe4c7cb}\label{pf_8c_af2ae5d54790e0aca689b71a16fe4c7cb}} 
+\index{pf.c@{pf.c}!pf\_cluster\_stats@{pf\_cluster\_stats}}
+\index{pf\_cluster\_stats@{pf\_cluster\_stats}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_cluster\_stats()}{pf\_cluster\_stats()}}
+{\footnotesize\ttfamily void pf\+\_\+cluster\+\_\+stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\+\_\+sample\+\_\+set\+\_\+t}} $\ast$}]{set }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_af2ae5d54790e0aca689b71a16fe4c7cb_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_af2ae5d54790e0aca689b71a16fe4c7cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_a340271a4464113cbe3c4448d514b23c7}\label{pf_8c_a340271a4464113cbe3c4448d514b23c7}} 
+\index{pf.c@{pf.c}!pf\_free@{pf\_free}}
+\index{pf\_free@{pf\_free}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_free()}{pf\_free()}}
+{\footnotesize\ttfamily void pf\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{pf_8c_a340271a4464113cbe3c4448d514b23c7_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a340271a4464113cbe3c4448d514b23c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_abdccd5641a5c2a1ff66d4fe80e723bd2}\label{pf_8c_abdccd5641a5c2a1ff66d4fe80e723bd2}} 
+\index{pf.c@{pf.c}!pf\_get\_cep\_stats@{pf\_get\_cep\_stats}}
+\index{pf\_get\_cep\_stats@{pf\_get\_cep\_stats}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_get\_cep\_stats()}{pf\_get\_cep\_stats()}}
+{\footnotesize\ttfamily void pf\+\_\+get\+\_\+cep\+\_\+stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} $\ast$}]{mean,  }\item[{double $\ast$}]{var }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf_8c_af6717acdd4070ef6f7385cb06fd32dd4}\label{pf_8c_af6717acdd4070ef6f7385cb06fd32dd4}} 
+\index{pf.c@{pf.c}!pf\_get\_cluster\_stats@{pf\_get\_cluster\_stats}}
+\index{pf\_get\_cluster\_stats@{pf\_get\_cluster\_stats}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_get\_cluster\_stats()}{pf\_get\_cluster\_stats()}}
+{\footnotesize\ttfamily int pf\+\_\+get\+\_\+cluster\+\_\+stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{int}]{clabel,  }\item[{double $\ast$}]{weight,  }\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} $\ast$}]{mean,  }\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} $\ast$}]{cov }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_af6717acdd4070ef6f7385cb06fd32dd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_aa158e637ec3c10493f2729f063146944}\label{pf_8c_aa158e637ec3c10493f2729f063146944}} 
+\index{pf.c@{pf.c}!pf\_init@{pf\_init}}
+\index{pf\_init@{pf\_init}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_init()}{pf\_init()}}
+{\footnotesize\ttfamily void pf\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{mean,  }\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}}}]{cov }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_aa158e637ec3c10493f2729f063146944_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_aa158e637ec3c10493f2729f063146944_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_a8093be5fa7501f1a8e903c43b5705be0}\label{pf_8c_a8093be5fa7501f1a8e903c43b5705be0}} 
+\index{pf.c@{pf.c}!pf\_init\_converged@{pf\_init\_converged}}
+\index{pf\_init\_converged@{pf\_init\_converged}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_init\_converged()}{pf\_init\_converged()}}
+{\footnotesize\ttfamily void pf\+\_\+init\+\_\+converged (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a8093be5fa7501f1a8e903c43b5705be0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_ae2b239fe8546df136beca661cede73e2}\label{pf_8c_ae2b239fe8546df136beca661cede73e2}} 
+\index{pf.c@{pf.c}!pf\_init\_model@{pf\_init\_model}}
+\index{pf\_init\_model@{pf\_init\_model}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_init\_model()}{pf\_init\_model()}}
+{\footnotesize\ttfamily void pf\+\_\+init\+\_\+model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\+\_\+init\+\_\+model\+\_\+fn\+\_\+t}}}]{init\+\_\+fn,  }\item[{void $\ast$}]{init\+\_\+data }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_ae2b239fe8546df136beca661cede73e2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_ae2b239fe8546df136beca661cede73e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_aa28e373c884f68244531f1dcbb086b8c}\label{pf_8c_aa28e373c884f68244531f1dcbb086b8c}} 
+\index{pf.c@{pf.c}!pf\_resample\_limit@{pf\_resample\_limit}}
+\index{pf\_resample\_limit@{pf\_resample\_limit}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_resample\_limit()}{pf\_resample\_limit()}}
+{\footnotesize\ttfamily int pf\+\_\+resample\+\_\+limit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_aa28e373c884f68244531f1dcbb086b8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_adbdbc82024445c0a81904c3abb8c2dce}\label{pf_8c_adbdbc82024445c0a81904c3abb8c2dce}} 
+\index{pf.c@{pf.c}!pf\_set\_selective\_resampling@{pf\_set\_selective\_resampling}}
+\index{pf\_set\_selective\_resampling@{pf\_set\_selective\_resampling}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_set\_selective\_resampling()}{pf\_set\_selective\_resampling()}}
+{\footnotesize\ttfamily void pf\+\_\+set\+\_\+selective\+\_\+resampling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{int}]{selective\+\_\+resampling }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_adbdbc82024445c0a81904c3abb8c2dce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_a241694fcc56ec6459fef6acc68996eb8}\label{pf_8c_a241694fcc56ec6459fef6acc68996eb8}} 
+\index{pf.c@{pf.c}!pf\_update\_action@{pf\_update\_action}}
+\index{pf\_update\_action@{pf\_update\_action}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_update\_action()}{pf\_update\_action()}}
+{\footnotesize\ttfamily void pf\+\_\+update\+\_\+action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{pf_8h_a8e8299c4c339c8eacc4a5a6f536313d9}{pf\+\_\+action\+\_\+model\+\_\+fn\+\_\+t}}}]{action\+\_\+fn,  }\item[{void $\ast$}]{action\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf_8c_a6caa24ec973890583e691fc8616e10e0}\label{pf_8c_a6caa24ec973890583e691fc8616e10e0}} 
+\index{pf.c@{pf.c}!pf\_update\_converged@{pf\_update\_converged}}
+\index{pf\_update\_converged@{pf\_update\_converged}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_update\_converged()}{pf\_update\_converged()}}
+{\footnotesize\ttfamily int pf\+\_\+update\+\_\+converged (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a6caa24ec973890583e691fc8616e10e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_a3e18db8990238fb9edc912009f64e3db}\label{pf_8c_a3e18db8990238fb9edc912009f64e3db}} 
+\index{pf.c@{pf.c}!pf\_update\_resample@{pf\_update\_resample}}
+\index{pf\_update\_resample@{pf\_update\_resample}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_update\_resample()}{pf\_update\_resample()}}
+{\footnotesize\ttfamily void pf\+\_\+update\+\_\+resample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a3e18db8990238fb9edc912009f64e3db_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a3e18db8990238fb9edc912009f64e3db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf_8c_a477f66612c4752dd8f1ab73cab84a1fd}\label{pf_8c_a477f66612c4752dd8f1ab73cab84a1fd}} 
+\index{pf.c@{pf.c}!pf\_update\_sensor@{pf\_update\_sensor}}
+\index{pf\_update\_sensor@{pf\_update\_sensor}!pf.c@{pf.c}}
+\doxysubsubsection{\texorpdfstring{pf\_update\_sensor()}{pf\_update\_sensor()}}
+{\footnotesize\ttfamily void pf\+\_\+update\+\_\+sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{pf_8h_abac0d80ca317cca97247df42fda3476d}{pf\+\_\+sensor\+\_\+model\+\_\+fn\+\_\+t}}}]{sensor\+\_\+fn,  }\item[{void $\ast$}]{sensor\+\_\+data }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf_8c_a477f66612c4752dd8f1ab73cab84a1fd_icgraph}
+\end{center}
+\end{figure}

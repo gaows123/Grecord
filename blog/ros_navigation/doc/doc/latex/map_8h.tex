@@ -1,0 +1,206 @@
+\hypertarget{map_8h}{}\doxysection{amcl/include/amcl/map/map.h 文件参考}
+\label{map_8h}\index{amcl/include/amcl/map/map.h@{amcl/include/amcl/map/map.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+map.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{map_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmap__cell__t}{map\+\_\+cell\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structmap__t}{map\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{map_8h_a89bc37042bd96306a83b4a959f426f69}{MAP\+\_\+\+WIFI\+\_\+\+MAX\+\_\+\+LEVELS}}~8
+\item 
+\#define \mbox{\hyperlink{map_8h_a4563de4a7b9a202482b497e254013266}{MAP\+\_\+\+WXGX}}(map,  i)~(map-\/$>$origin\+\_\+x + ((i) -\/ map-\/$>$size\+\_\+x / 2) $\ast$ map-\/$>$scale)
+\item 
+\#define \mbox{\hyperlink{map_8h_a3d472d8b8c3d5e49be2a0243b1a36fbc}{MAP\+\_\+\+WYGY}}(map,  j)~(map-\/$>$origin\+\_\+y + ((j) -\/ map-\/$>$size\+\_\+y / 2) $\ast$ map-\/$>$scale)
+\item 
+\#define \mbox{\hyperlink{map_8h_a79e45f847f78a785a458c466f21bff5b}{MAP\+\_\+\+GXWX}}(map,  x)~(floor((x -\/ map-\/$>$origin\+\_\+x) / map-\/$>$scale + 0.\+5) + map-\/$>$size\+\_\+x / 2)
+\item 
+\#define \mbox{\hyperlink{map_8h_af8b13db2071d825ea39fac94a7ef7a9c}{MAP\+\_\+\+GYWY}}(map,  y)~(floor((y -\/ map-\/$>$origin\+\_\+y) / map-\/$>$scale + 0.\+5) + map-\/$>$size\+\_\+y / 2)
+\item 
+\#define \mbox{\hyperlink{map_8h_a7757f56d022f38d91feb08ebcb6e3fa1}{MAP\+\_\+\+VALID}}(map,  i,  j)~((i $>$= 0) \&\& (i $<$ map-\/$>$size\+\_\+x) \&\& (j $>$= 0) \&\& (j $<$ map-\/$>$size\+\_\+y))
+\item 
+\#define \mbox{\hyperlink{map_8h_ad88ccf81d3407428653a519b1f8cc8b9}{MAP\+\_\+\+INDEX}}(map,  i,  j)~((i) + (j) $\ast$ map-\/$>$size\+\_\+x)
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$ \mbox{\hyperlink{map_8h_a69abcca9449dcd0b4a74db33827e5a6c}{map\+\_\+alloc}} (void)
+\item 
+void \mbox{\hyperlink{map_8h_ae24d01dffc5a376977089830b93c9254}{map\+\_\+free}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map)
+\item 
+\mbox{\hyperlink{structmap__cell__t}{map\+\_\+cell\+\_\+t}} $\ast$ \mbox{\hyperlink{map_8h_a2856320c165a29ac7ccd53d567030a9b}{map\+\_\+get\+\_\+cell}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map, double ox, double oy, double oa)
+\item 
+int \mbox{\hyperlink{map_8h_a8338e47e6501b9549ab165e2ac1522d8}{map\+\_\+load\+\_\+occ}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map, const char $\ast$filename, double scale, int negate)
+\item 
+void \mbox{\hyperlink{map_8h_a7a2e9876667cad69c3b70881c1aaf1ac}{map\+\_\+update\+\_\+cspace}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map, double max\+\_\+occ\+\_\+dist)
+\item 
+double \mbox{\hyperlink{map_8h_aafef11c4d8efd07a4cb20bad5fc4bc83}{map\+\_\+calc\+\_\+range}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map, double ox, double oy, double oa, double max\+\_\+range)
+\item 
+void \mbox{\hyperlink{map_8h_acc6b4aacd0e285e7866209c2dfba9a85}{map\+\_\+draw\+\_\+occ}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map, struct \+\_\+rtk\+\_\+fig\+\_\+t $\ast$fig)
+\item 
+void \mbox{\hyperlink{map_8h_a2375a4a21f00ea7dd97be17d027adcbc}{map\+\_\+draw\+\_\+cspace}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map, struct \+\_\+rtk\+\_\+fig\+\_\+t $\ast$fig)
+\item 
+void \mbox{\hyperlink{map_8h_a8cdf88d9cba5960b2e8f4a8a5c26f879}{map\+\_\+draw\+\_\+wifi}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$map, struct \+\_\+rtk\+\_\+fig\+\_\+t $\ast$fig, int index)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{map_8h_a79e45f847f78a785a458c466f21bff5b}\label{map_8h_a79e45f847f78a785a458c466f21bff5b}} 
+\index{map.h@{map.h}!MAP\_GXWX@{MAP\_GXWX}}
+\index{MAP\_GXWX@{MAP\_GXWX}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_GXWX}{MAP\_GXWX}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+GXWX(\begin{DoxyParamCaption}\item[{}]{map,  }\item[{}]{x }\end{DoxyParamCaption})~(floor((x -\/ map-\/$>$origin\+\_\+x) / map-\/$>$scale + 0.\+5) + map-\/$>$size\+\_\+x / 2)}
+
+\mbox{\Hypertarget{map_8h_af8b13db2071d825ea39fac94a7ef7a9c}\label{map_8h_af8b13db2071d825ea39fac94a7ef7a9c}} 
+\index{map.h@{map.h}!MAP\_GYWY@{MAP\_GYWY}}
+\index{MAP\_GYWY@{MAP\_GYWY}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_GYWY}{MAP\_GYWY}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+GYWY(\begin{DoxyParamCaption}\item[{}]{map,  }\item[{}]{y }\end{DoxyParamCaption})~(floor((y -\/ map-\/$>$origin\+\_\+y) / map-\/$>$scale + 0.\+5) + map-\/$>$size\+\_\+y / 2)}
+
+\mbox{\Hypertarget{map_8h_ad88ccf81d3407428653a519b1f8cc8b9}\label{map_8h_ad88ccf81d3407428653a519b1f8cc8b9}} 
+\index{map.h@{map.h}!MAP\_INDEX@{MAP\_INDEX}}
+\index{MAP\_INDEX@{MAP\_INDEX}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_INDEX}{MAP\_INDEX}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{map,  }\item[{}]{i,  }\item[{}]{j }\end{DoxyParamCaption})~((i) + (j) $\ast$ map-\/$>$size\+\_\+x)}
+
+\mbox{\Hypertarget{map_8h_a7757f56d022f38d91feb08ebcb6e3fa1}\label{map_8h_a7757f56d022f38d91feb08ebcb6e3fa1}} 
+\index{map.h@{map.h}!MAP\_VALID@{MAP\_VALID}}
+\index{MAP\_VALID@{MAP\_VALID}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_VALID}{MAP\_VALID}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+VALID(\begin{DoxyParamCaption}\item[{}]{map,  }\item[{}]{i,  }\item[{}]{j }\end{DoxyParamCaption})~((i $>$= 0) \&\& (i $<$ map-\/$>$size\+\_\+x) \&\& (j $>$= 0) \&\& (j $<$ map-\/$>$size\+\_\+y))}
+
+\mbox{\Hypertarget{map_8h_a89bc37042bd96306a83b4a959f426f69}\label{map_8h_a89bc37042bd96306a83b4a959f426f69}} 
+\index{map.h@{map.h}!MAP\_WIFI\_MAX\_LEVELS@{MAP\_WIFI\_MAX\_LEVELS}}
+\index{MAP\_WIFI\_MAX\_LEVELS@{MAP\_WIFI\_MAX\_LEVELS}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_WIFI\_MAX\_LEVELS}{MAP\_WIFI\_MAX\_LEVELS}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+WIFI\+\_\+\+MAX\+\_\+\+LEVELS~8}
+
+\mbox{\Hypertarget{map_8h_a4563de4a7b9a202482b497e254013266}\label{map_8h_a4563de4a7b9a202482b497e254013266}} 
+\index{map.h@{map.h}!MAP\_WXGX@{MAP\_WXGX}}
+\index{MAP\_WXGX@{MAP\_WXGX}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_WXGX}{MAP\_WXGX}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+WXGX(\begin{DoxyParamCaption}\item[{}]{map,  }\item[{}]{i }\end{DoxyParamCaption})~(map-\/$>$origin\+\_\+x + ((i) -\/ map-\/$>$size\+\_\+x / 2) $\ast$ map-\/$>$scale)}
+
+\mbox{\Hypertarget{map_8h_a3d472d8b8c3d5e49be2a0243b1a36fbc}\label{map_8h_a3d472d8b8c3d5e49be2a0243b1a36fbc}} 
+\index{map.h@{map.h}!MAP\_WYGY@{MAP\_WYGY}}
+\index{MAP\_WYGY@{MAP\_WYGY}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_WYGY}{MAP\_WYGY}}
+{\footnotesize\ttfamily \#define MAP\+\_\+\+WYGY(\begin{DoxyParamCaption}\item[{}]{map,  }\item[{}]{j }\end{DoxyParamCaption})~(map-\/$>$origin\+\_\+y + ((j) -\/ map-\/$>$size\+\_\+y / 2) $\ast$ map-\/$>$scale)}
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{map_8h_a69abcca9449dcd0b4a74db33827e5a6c}\label{map_8h_a69abcca9449dcd0b4a74db33827e5a6c}} 
+\index{map.h@{map.h}!map\_alloc@{map\_alloc}}
+\index{map\_alloc@{map\_alloc}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_alloc()}{map\_alloc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$ map\+\_\+alloc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h_a69abcca9449dcd0b4a74db33827e5a6c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{map_8h_aafef11c4d8efd07a4cb20bad5fc4bc83}\label{map_8h_aafef11c4d8efd07a4cb20bad5fc4bc83}} 
+\index{map.h@{map.h}!map\_calc\_range@{map\_calc\_range}}
+\index{map\_calc\_range@{map\_calc\_range}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_calc\_range()}{map\_calc\_range()}}
+{\footnotesize\ttfamily double map\+\_\+calc\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map,  }\item[{double}]{ox,  }\item[{double}]{oy,  }\item[{double}]{oa,  }\item[{double}]{max\+\_\+range }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h_aafef11c4d8efd07a4cb20bad5fc4bc83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{map_8h_a2375a4a21f00ea7dd97be17d027adcbc}\label{map_8h_a2375a4a21f00ea7dd97be17d027adcbc}} 
+\index{map.h@{map.h}!map\_draw\_cspace@{map\_draw\_cspace}}
+\index{map\_draw\_cspace@{map\_draw\_cspace}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_draw\_cspace()}{map\_draw\_cspace()}}
+{\footnotesize\ttfamily void map\+\_\+draw\+\_\+cspace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map,  }\item[{struct \+\_\+rtk\+\_\+fig\+\_\+t $\ast$}]{fig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{map_8h_acc6b4aacd0e285e7866209c2dfba9a85}\label{map_8h_acc6b4aacd0e285e7866209c2dfba9a85}} 
+\index{map.h@{map.h}!map\_draw\_occ@{map\_draw\_occ}}
+\index{map\_draw\_occ@{map\_draw\_occ}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_draw\_occ()}{map\_draw\_occ()}}
+{\footnotesize\ttfamily void map\+\_\+draw\+\_\+occ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map,  }\item[{struct \+\_\+rtk\+\_\+fig\+\_\+t $\ast$}]{fig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{map_8h_a8cdf88d9cba5960b2e8f4a8a5c26f879}\label{map_8h_a8cdf88d9cba5960b2e8f4a8a5c26f879}} 
+\index{map.h@{map.h}!map\_draw\_wifi@{map\_draw\_wifi}}
+\index{map\_draw\_wifi@{map\_draw\_wifi}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_draw\_wifi()}{map\_draw\_wifi()}}
+{\footnotesize\ttfamily void map\+\_\+draw\+\_\+wifi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map,  }\item[{struct \+\_\+rtk\+\_\+fig\+\_\+t $\ast$}]{fig,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{map_8h_ae24d01dffc5a376977089830b93c9254}\label{map_8h_ae24d01dffc5a376977089830b93c9254}} 
+\index{map.h@{map.h}!map\_free@{map\_free}}
+\index{map\_free@{map\_free}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_free()}{map\_free()}}
+{\footnotesize\ttfamily void map\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h_ae24d01dffc5a376977089830b93c9254_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{map_8h_a2856320c165a29ac7ccd53d567030a9b}\label{map_8h_a2856320c165a29ac7ccd53d567030a9b}} 
+\index{map.h@{map.h}!map\_get\_cell@{map\_get\_cell}}
+\index{map\_get\_cell@{map\_get\_cell}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_get\_cell()}{map\_get\_cell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmap__cell__t}{map\+\_\+cell\+\_\+t}} $\ast$ map\+\_\+get\+\_\+cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map,  }\item[{double}]{ox,  }\item[{double}]{oy,  }\item[{double}]{oa }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{map_8h_a8338e47e6501b9549ab165e2ac1522d8}\label{map_8h_a8338e47e6501b9549ab165e2ac1522d8}} 
+\index{map.h@{map.h}!map\_load\_occ@{map\_load\_occ}}
+\index{map\_load\_occ@{map\_load\_occ}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_load\_occ()}{map\_load\_occ()}}
+{\footnotesize\ttfamily int map\+\_\+load\+\_\+occ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map,  }\item[{const char $\ast$}]{filename,  }\item[{double}]{scale,  }\item[{int}]{negate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{map_8h_a7a2e9876667cad69c3b70881c1aaf1ac}\label{map_8h_a7a2e9876667cad69c3b70881c1aaf1ac}} 
+\index{map.h@{map.h}!map\_update\_cspace@{map\_update\_cspace}}
+\index{map\_update\_cspace@{map\_update\_cspace}!map.h@{map.h}}
+\doxysubsubsection{\texorpdfstring{map\_update\_cspace()}{map\_update\_cspace()}}
+{\footnotesize\ttfamily void map\+\_\+update\+\_\+cspace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$}]{map,  }\item[{double}]{max\+\_\+occ\+\_\+dist }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h_a7a2e9876667cad69c3b70881c1aaf1ac_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{map_8h_a7a2e9876667cad69c3b70881c1aaf1ac_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,91 @@
+\hypertarget{read__pgm__costmap_8cpp}{}\doxysection{navfn/src/read\+\_\+pgm\+\_\+costmap.cpp 文件参考}
+\label{read__pgm__costmap_8cpp}\index{navfn/src/read\_pgm\_costmap.cpp@{navfn/src/read\_pgm\_costmap.cpp}}
+{\ttfamily \#include $<$navfn/navfn.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$pgm.\+h$>$}\newline
+read\+\_\+pgm\+\_\+costmap.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read__pgm__costmap_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{read__pgm__costmap_8cpp_a6eba94ef0ee9b78c14e3926a0643f4d5}{unknown\+\_\+gray}}~0x\+CC
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{read__pgm__costmap_8cpp_ace863d8925ca590c1f53eb63ff29a680}{setcostobs}} (\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$cmap, int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, int w)
+\item 
+void \mbox{\hyperlink{read__pgm__costmap_8cpp_a0be847867182c4112b953ae0f7ee5a5a}{setcostunk}} (\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$cmap, int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, int w)
+\item 
+\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$ \mbox{\hyperlink{read__pgm__costmap_8cpp_a94ea5bf3c2cba2446229df61476b1a8d}{read\+PGM}} (const char $\ast$fname, int $\ast$width, int $\ast$height, bool raw)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{read__pgm__costmap_8cpp_a6eba94ef0ee9b78c14e3926a0643f4d5}\label{read__pgm__costmap_8cpp_a6eba94ef0ee9b78c14e3926a0643f4d5}} 
+\index{read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}!unknown\_gray@{unknown\_gray}}
+\index{unknown\_gray@{unknown\_gray}!read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}}
+\doxysubsubsection{\texorpdfstring{unknown\_gray}{unknown\_gray}}
+{\footnotesize\ttfamily \#define unknown\+\_\+gray~0x\+CC}
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{read__pgm__costmap_8cpp_a94ea5bf3c2cba2446229df61476b1a8d}\label{read__pgm__costmap_8cpp_a94ea5bf3c2cba2446229df61476b1a8d}} 
+\index{read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}!readPGM@{readPGM}}
+\index{readPGM@{readPGM}!read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}}
+\doxysubsubsection{\texorpdfstring{readPGM()}{readPGM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$ read\+PGM (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fname,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{bool}]{raw }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{read__pgm__costmap_8cpp_a94ea5bf3c2cba2446229df61476b1a8d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{read__pgm__costmap_8cpp_a94ea5bf3c2cba2446229df61476b1a8d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read__pgm__costmap_8cpp_ace863d8925ca590c1f53eb63ff29a680}\label{read__pgm__costmap_8cpp_ace863d8925ca590c1f53eb63ff29a680}} 
+\index{read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}!setcostobs@{setcostobs}}
+\index{setcostobs@{setcostobs}!read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}}
+\doxysubsubsection{\texorpdfstring{setcostobs()}{setcostobs()}}
+{\footnotesize\ttfamily void setcostobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$}]{cmap,  }\item[{int}]{n,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read__pgm__costmap_8cpp_ace863d8925ca590c1f53eb63ff29a680_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read__pgm__costmap_8cpp_a0be847867182c4112b953ae0f7ee5a5a}\label{read__pgm__costmap_8cpp_a0be847867182c4112b953ae0f7ee5a5a}} 
+\index{read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}!setcostunk@{setcostunk}}
+\index{setcostunk@{setcostunk}!read\_pgm\_costmap.cpp@{read\_pgm\_costmap.cpp}}
+\doxysubsubsection{\texorpdfstring{setcostunk()}{setcostunk()}}
+{\footnotesize\ttfamily void setcostunk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$}]{cmap,  }\item[{int}]{n,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read__pgm__costmap_8cpp_a0be847867182c4112b953ae0f7ee5a5a_icgraph}
+\end{center}
+\end{figure}

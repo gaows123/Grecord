@@ -1,0 +1,4 @@
+<map id="carrot_planner::CarrotPlanner" name="carrot_planner::CarrotPlanner">
+<area shape="rect" id="node1" title="Provides a simple global planner that will compute a valid goal point for the local planner by walkin..." alt="" coords="7,80,198,107"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,5,200,32"/>
+</map>

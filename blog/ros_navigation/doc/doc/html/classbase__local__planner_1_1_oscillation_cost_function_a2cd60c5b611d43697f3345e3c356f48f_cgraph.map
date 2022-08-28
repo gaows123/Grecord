@@ -1,0 +1,6 @@
+<map id="base_local_planner::OscillationCostFunction::updateOscillationFlags" name="base_local_planner::OscillationCostFunction::updateOscillationFlags">
+<area shape="rect" id="node1" title=" " alt="" coords="5,45,173,101"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_oscillation_cost_function.html#aa6224a4812d149fcf71dc2131b92cb96" title=" " alt="" coords="221,5,432,61"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_oscillation_cost_function.html#ada617a8fb122a0889bbbe93e6baa82de" title="Given a trajectory that&#39;s selected, set flags if needed to prevent the robot from oscillating" alt="" coords="243,85,411,141"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_oscillation_cost_function.html#afb420d9a488660f3583e182cb1939ee1" title="Reset the oscillation flags for the local planner" alt="" coords="480,5,648,61"/>
+</map>

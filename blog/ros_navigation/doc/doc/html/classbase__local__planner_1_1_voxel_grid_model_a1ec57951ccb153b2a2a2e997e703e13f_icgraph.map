@@ -1,0 +1,4 @@
+<map id="base_local_planner::VoxelGridModel::removePointsInScanBoundry" name="base_local_planner::VoxelGridModel::removePointsInScanBoundry">
+<area shape="rect" id="node1" title=" " alt="" coords="256,5,467,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_voxel_grid_model.html#a3a5b2c042a813dc06a9fdbfcd0bd6291" title="The costmap already keeps track of world observations, so for this world model this method does nothi..." alt="" coords="5,13,208,54"/>
+</map>

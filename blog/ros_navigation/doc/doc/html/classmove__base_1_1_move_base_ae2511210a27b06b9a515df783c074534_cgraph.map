@@ -1,0 +1,4 @@
+<map id="move_base::MoveBase::goalToGlobalFrame" name="move_base::MoveBase::goalToGlobalFrame">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="212,5,409,47"/>
+</map>

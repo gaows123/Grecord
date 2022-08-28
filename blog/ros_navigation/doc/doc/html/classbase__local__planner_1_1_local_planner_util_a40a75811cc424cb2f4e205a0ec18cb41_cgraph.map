@@ -1,0 +1,4 @@
+<map id="base_local_planner::LocalPlannerUtil::getGoal" name="base_local_planner::LocalPlannerUtil::getGoal">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,139,61"/>
+<area shape="rect" id="node2" href="$namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="187,13,320,54"/>
+</map>

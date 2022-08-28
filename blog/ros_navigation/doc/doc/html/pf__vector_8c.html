@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/src/amcl/pf/pf_vector.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_c8302149f3d926a37c0623aef124ef9c.html">src</a></li><li class="navelem"><a class="el" href="dir_709eacdfadde2a606107dabe152f0121.html">amcl</a></li><li class="navelem"><a class="el" href="dir_386ac3c3c0d5b6a7e1797f46f7a893fc.html">pf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">pf_vector.c 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="pf__vector_8h_source.html">amcl/pf/pf_vector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="eig3_8h_source.html">amcl/pf/eig3.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+pf_vector.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__vector_8c__incl.png" border="0" usemap="#aamcl_2src_2amcl_2pf_2pf__vector_8c" alt=""/></div>
+<map name="aamcl_2src_2amcl_2pf_2pf__vector_8c" id="aamcl_2src_2amcl_2pf_2pf__vector_8c">
+<area shape="rect" title=" " alt="" coords="92,5,227,47"/>
+<area shape="rect" title=" " alt="" coords="5,95,68,121"/>
+<area shape="rect" href="pf__vector_8h.html" title=" " alt="" coords="92,95,227,121"/>
+<area shape="rect" href="eig3_8h.html" title=" " alt="" coords="251,95,355,121"/>
+<area shape="rect" title=" " alt="" coords="129,169,190,196"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad2d4a1744eaacdc7b4525a019a3bbcff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#ad2d4a1744eaacdc7b4525a019a3bbcff">pf_vector_zero</a> ()</td></tr>
+<tr class="separator:ad2d4a1744eaacdc7b4525a019a3bbcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d8ddf05b11454accf79e19ff59e81e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#ad9d8ddf05b11454accf79e19ff59e81e">pf_vector_finite</a> (<a class="el" href="structpf__vector__t.html">pf_vector_t</a> a)</td></tr>
+<tr class="separator:ad9d8ddf05b11454accf79e19ff59e81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c41679324d1baa74c013fc1f0f03db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#a9c41679324d1baa74c013fc1f0f03db4">pf_vector_fprintf</a> (<a class="el" href="structpf__vector__t.html">pf_vector_t</a> a, FILE *file, const char *fmt)</td></tr>
+<tr class="separator:a9c41679324d1baa74c013fc1f0f03db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2051f656596498eac7fdfb91ba63c4cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#a2051f656596498eac7fdfb91ba63c4cc">pf_vector_add</a> (<a class="el" href="structpf__vector__t.html">pf_vector_t</a> a, <a class="el" href="structpf__vector__t.html">pf_vector_t</a> b)</td></tr>
+<tr class="separator:a2051f656596498eac7fdfb91ba63c4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247856e0c7581f87362cb7b044e812ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#a247856e0c7581f87362cb7b044e812ef">pf_vector_sub</a> (<a class="el" href="structpf__vector__t.html">pf_vector_t</a> a, <a class="el" href="structpf__vector__t.html">pf_vector_t</a> b)</td></tr>
+<tr class="separator:a247856e0c7581f87362cb7b044e812ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6b50abf661ef62686a25eccfb406e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#afe6b50abf661ef62686a25eccfb406e1">pf_vector_coord_add</a> (<a class="el" href="structpf__vector__t.html">pf_vector_t</a> a, <a class="el" href="structpf__vector__t.html">pf_vector_t</a> b)</td></tr>
+<tr class="separator:afe6b50abf661ef62686a25eccfb406e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aab3aeff86a6459df4aaf510b58977a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#a2aab3aeff86a6459df4aaf510b58977a">pf_vector_coord_sub</a> (<a class="el" href="structpf__vector__t.html">pf_vector_t</a> a, <a class="el" href="structpf__vector__t.html">pf_vector_t</a> b)</td></tr>
+<tr class="separator:a2aab3aeff86a6459df4aaf510b58977a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01593a3f7444c9a71fd6d4576725d47a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__matrix__t.html">pf_matrix_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#a01593a3f7444c9a71fd6d4576725d47a">pf_matrix_zero</a> ()</td></tr>
+<tr class="separator:a01593a3f7444c9a71fd6d4576725d47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed54fc5a3049ab08b50346e48bbf133f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#aed54fc5a3049ab08b50346e48bbf133f">pf_matrix_finite</a> (<a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> a)</td></tr>
+<tr class="separator:aed54fc5a3049ab08b50346e48bbf133f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22be9ace91468ebf9c8d9070304a79a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#aa22be9ace91468ebf9c8d9070304a79a">pf_matrix_fprintf</a> (<a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> a, FILE *file, const char *fmt)</td></tr>
+<tr class="separator:aa22be9ace91468ebf9c8d9070304a79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad944a39674d5646c0b5c9924ae70dbab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__vector_8c.html#ad944a39674d5646c0b5c9924ae70dbab">pf_matrix_unitary</a> (<a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> *r, <a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> *d, <a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> a)</td></tr>
+<tr class="separator:ad944a39674d5646c0b5c9924ae70dbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="aed54fc5a3049ab08b50346e48bbf133f" name="aed54fc5a3049ab08b50346e48bbf133f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed54fc5a3049ab08b50346e48bbf133f">&#9670;&nbsp;</a></span>pf_matrix_finite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pf_matrix_finite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__matrix__t.html">pf_matrix_t</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa22be9ace91468ebf9c8d9070304a79a" name="aa22be9ace91468ebf9c8d9070304a79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22be9ace91468ebf9c8d9070304a79a">&#9670;&nbsp;</a></span>pf_matrix_fprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_matrix_fprintf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__matrix__t.html">pf_matrix_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad944a39674d5646c0b5c9924ae70dbab" name="ad944a39674d5646c0b5c9924ae70dbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad944a39674d5646c0b5c9924ae70dbab">&#9670;&nbsp;</a></span>pf_matrix_unitary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_matrix_unitary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__matrix__t.html">pf_matrix_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_cgraph.png" border="0" usemap="#apf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_cgraph" alt=""/></div>
+<map name="apf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_cgraph" id="apf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,128,57"/>
+<area shape="rect" href="eig3_8h.html#aa8be76822846425ea1d0aa20462fe4cc" title=" " alt="" coords="176,5,320,32"/>
+<area shape="rect" href="pf__vector_8c.html#a01593a3f7444c9a71fd6d4576725d47a" title=" " alt="" coords="194,56,302,83"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_icgraph.png" border="0" usemap="#apf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_icgraph" alt=""/></div>
+<map name="apf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_icgraph" id="apf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_icgraph">
+<area shape="rect" title=" " alt="" coords="1465,85,1588,112"/>
+<area shape="rect" href="pf__pdf_8c.html#a12898e7b473af8d3441c66baf203c7e1" title=" " alt="" coords="1267,85,1417,112"/>
+<area shape="rect" href="pf_8c.html#aa158e637ec3c10493f2729f063146944" title=" " alt="" coords="1161,85,1219,112"/>
+<area shape="rect" href="class_amcl_node.html#a58c92caa391a8e7b5061778c724ffa4c" title=" " alt="" coords="931,85,1113,112"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,5,376,32"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="676,140,883,167"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="685,74,874,115"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="424,56,628,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="435,107,617,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,107,156,133"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="205,208,375,235"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="211,157,369,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a01593a3f7444c9a71fd6d4576725d47a" name="a01593a3f7444c9a71fd6d4576725d47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01593a3f7444c9a71fd6d4576725d47a">&#9670;&nbsp;</a></span>pf_matrix_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__matrix__t.html">pf_matrix_t</a> pf_matrix_zero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a_icgraph.png" border="0" usemap="#apf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a_icgraph" alt=""/></div>
+<map name="apf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a_icgraph" id="apf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a_icgraph">
+<area shape="rect" title=" " alt="" coords="1728,169,1836,196"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="685,162,874,203"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,93,376,120"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="676,245,883,272"/>
+<area shape="rect" href="pf_8c.html#ab59ea6182aba307dd9faa7926219885e" title=" " alt="" coords="994,43,1061,69"/>
+<area shape="rect" href="pf_8c.html#af2ae5d54790e0aca689b71a16fe4c7cb" title=" " alt="" coords="1377,351,1491,377"/>
+<area shape="rect" href="pf__vector_8c.html#ad944a39674d5646c0b5c9924ae70dbab" title=" " alt="" coords="1557,195,1680,221"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="424,144,628,171"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="435,195,617,221"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,245,156,272"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="205,296,375,323"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="211,245,369,272"/>
+<area shape="rect" href="pf_8c.html#aa158e637ec3c10493f2729f063146944" title=" " alt="" coords="1213,195,1270,221"/>
+<area shape="rect" href="pf_8c.html#ae2b239fe8546df136beca661cede73e2" title=" " alt="" coords="1192,353,1291,380"/>
+<area shape="rect" href="pf_8c.html#a3e18db8990238fb9edc912009f64e3db" title=" " alt="" coords="1172,408,1311,435"/>
+<area shape="rect" href="class_amcl_node.html#a58c92caa391a8e7b5061778c724ffa4c" title=" " alt="" coords="936,195,1119,221"/>
+<area shape="rect" href="class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="931,347,1124,389"/>
+<area shape="rect" href="class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="699,355,860,381"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="440,347,612,373"/>
+<area shape="rect" href="pf__pdf_8c.html#a12898e7b473af8d3441c66baf203c7e1" title=" " alt="" coords="1359,195,1509,221"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2051f656596498eac7fdfb91ba63c4cc" name="a2051f656596498eac7fdfb91ba63c4cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2051f656596498eac7fdfb91ba63c4cc">&#9670;&nbsp;</a></span>pf_vector_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__vector__t.html">pf_vector_t</a> pf_vector_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe6b50abf661ef62686a25eccfb406e1" name="afe6b50abf661ef62686a25eccfb406e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6b50abf661ef62686a25eccfb406e1">&#9670;&nbsp;</a></span>pf_vector_coord_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__vector__t.html">pf_vector_t</a> pf_vector_coord_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__vector_8c_afe6b50abf661ef62686a25eccfb406e1_icgraph.png" border="0" usemap="#apf__vector_8c_afe6b50abf661ef62686a25eccfb406e1_icgraph" alt=""/></div>
+<map name="apf__vector_8c_afe6b50abf661ef62686a25eccfb406e1_icgraph" id="apf__vector_8c_afe6b50abf661ef62686a25eccfb406e1_icgraph">
+<area shape="rect" title=" " alt="" coords="520,64,663,91"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a9cc5e4e32e3f5a1d3051729928215b35" title=" " alt="" coords="269,5,472,32"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a0b48b3b2f50003cec1ba3adf2792bacc" title=" " alt="" coords="275,57,467,98"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#ab7b28821a86e6057ab81241f304bc2a2" title=" " alt="" coords="275,122,467,163"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a179090d0bcf37e2a3927010e5726ffe7" title=" " alt="" coords="5,64,221,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2aab3aeff86a6459df4aaf510b58977a" name="a2aab3aeff86a6459df4aaf510b58977a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aab3aeff86a6459df4aaf510b58977a">&#9670;&nbsp;</a></span>pf_vector_coord_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__vector__t.html">pf_vector_t</a> pf_vector_coord_sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9d8ddf05b11454accf79e19ff59e81e" name="ad9d8ddf05b11454accf79e19ff59e81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d8ddf05b11454accf79e19ff59e81e">&#9670;&nbsp;</a></span>pf_vector_finite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pf_vector_finite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c41679324d1baa74c013fc1f0f03db4" name="a9c41679324d1baa74c013fc1f0f03db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c41679324d1baa74c013fc1f0f03db4">&#9670;&nbsp;</a></span>pf_vector_fprintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_vector_fprintf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a247856e0c7581f87362cb7b044e812ef" name="a247856e0c7581f87362cb7b044e812ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247856e0c7581f87362cb7b044e812ef">&#9670;&nbsp;</a></span>pf_vector_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__vector__t.html">pf_vector_t</a> pf_vector_sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__vector_8c_a247856e0c7581f87362cb7b044e812ef_icgraph.png" border="0" usemap="#apf__vector_8c_a247856e0c7581f87362cb7b044e812ef_icgraph" alt=""/></div>
+<map name="apf__vector_8c_a247856e0c7581f87362cb7b044e812ef_icgraph" id="apf__vector_8c_a247856e0c7581f87362cb7b044e812ef_icgraph">
+<area shape="rect" title=" " alt="" coords="907,5,1011,32"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_odom.html#a94a2e645cfae2fb775f454ebab9fa110" title=" " alt="" coords="644,5,859,32"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="424,5,596,32"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,31,376,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad2d4a1744eaacdc7b4525a019a3bbcff" name="ad2d4a1744eaacdc7b4525a019a3bbcff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d4a1744eaacdc7b4525a019a3bbcff">&#9670;&nbsp;</a></span>pf_vector_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__vector__t.html">pf_vector_t</a> pf_vector_zero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff_icgraph.png" border="0" usemap="#apf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff_icgraph" alt=""/></div>
+<map name="apf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff_icgraph" id="apf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff_icgraph">
+<area shape="rect" title=" " alt="" coords="1521,195,1629,221"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="685,289,874,330"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,169,376,196"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="676,355,883,381"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="693,144,865,171"/>
+<area shape="rect" href="pf_8c.html#ab59ea6182aba307dd9faa7926219885e" title=" " alt="" coords="994,93,1061,120"/>
+<area shape="rect" href="pf_8c.html#af2ae5d54790e0aca689b71a16fe4c7cb" title=" " alt="" coords="1359,321,1473,348"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="424,296,628,323"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="435,347,617,373"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,347,156,373"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="205,397,375,424"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="211,448,369,475"/>
+<area shape="rect" href="pf_8c.html#aa158e637ec3c10493f2729f063146944" title=" " alt="" coords="1213,347,1270,373"/>
+<area shape="rect" href="pf_8c.html#ae2b239fe8546df136beca661cede73e2" title=" " alt="" coords="1192,452,1291,479"/>
+<area shape="rect" href="pf_8c.html#a3e18db8990238fb9edc912009f64e3db" title=" " alt="" coords="1172,296,1311,323"/>
+<area shape="rect" href="class_amcl_node.html#a58c92caa391a8e7b5061778c724ffa4c" title=" " alt="" coords="936,296,1119,323"/>
+<area shape="rect" href="class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="931,449,1124,490"/>
+<area shape="rect" href="class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="699,448,860,475"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

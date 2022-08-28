@@ -1,0 +1,5 @@
+<map id="base_local_planner::TrajectoryPlanner::createTrajectories" name="base_local_planner::TrajectoryPlanner::createTrajectories">
+<area shape="rect" id="node1" title="Create the trajectories we wish to explore, score them, and return the best option" alt="" coords="428,5,563,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="247,5,380,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+</map>

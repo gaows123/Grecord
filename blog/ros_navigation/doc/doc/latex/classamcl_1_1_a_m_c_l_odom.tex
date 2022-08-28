@@ -1,0 +1,172 @@
+\hypertarget{classamcl_1_1_a_m_c_l_odom}{}\doxysection{amcl\+::AMCLOdom类 参考}
+\label{classamcl_1_1_a_m_c_l_odom}\index{amcl::AMCLOdom@{amcl::AMCLOdom}}
+
+
+{\ttfamily \#include $<$amcl\+\_\+odom.\+h$>$}
+
+
+
+类 amcl\+::AMCLOdom 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classamcl_1_1_a_m_c_l_odom__inherit__graph}
+\end{center}
+\end{figure}
+
+
+amcl\+::AMCLOdom 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classamcl_1_1_a_m_c_l_odom__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a4d615017ed598fc2fa9991d3d2ed4e6b}{AMCLOdom}} ()
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a562f4c2f26dbd299b1eefb4bc2fc9cad}{Set\+Model\+Diff}} (double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}})
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a64bcc31384882facd705eff2bb6ae7eb}{Set\+Model\+Omni}} (double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}{alpha5}})
+\item 
+void \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc}{Set\+Model}} (\mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\+\_\+model\+\_\+t}} type, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}}, double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}{alpha5}}=0)
+\item 
+virtual bool \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110}{Update\+Action}} (\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$pf, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensor\+Data}} $\ast$data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a80d9caeaa9d1893441ae64099738ec82}{time}}
+\item 
+\mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\+\_\+model\+\_\+t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a6fa2c5c80b0e935db3308bf8cb7de298}{model\+\_\+type}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}}
+\item 
+double \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}{alpha5}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a4d615017ed598fc2fa9991d3d2ed4e6b}\label{classamcl_1_1_a_m_c_l_odom_a4d615017ed598fc2fa9991d3d2ed4e6b}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!AMCLOdom@{AMCLOdom}}
+\index{AMCLOdom@{AMCLOdom}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{AMCLOdom()}{AMCLOdom()}}
+{\footnotesize\ttfamily AMCLOdom\+::\+AMCLOdom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc}\label{classamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!SetModel@{SetModel}}
+\index{SetModel@{SetModel}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{SetModel()}{SetModel()}}
+{\footnotesize\ttfamily void AMCLOdom\+::\+Set\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\+\_\+model\+\_\+t}}}]{type,  }\item[{double}]{alpha1,  }\item[{double}]{alpha2,  }\item[{double}]{alpha3,  }\item[{double}]{alpha4,  }\item[{double}]{alpha5 = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a562f4c2f26dbd299b1eefb4bc2fc9cad}\label{classamcl_1_1_a_m_c_l_odom_a562f4c2f26dbd299b1eefb4bc2fc9cad}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!SetModelDiff@{SetModelDiff}}
+\index{SetModelDiff@{SetModelDiff}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{SetModelDiff()}{SetModelDiff()}}
+{\footnotesize\ttfamily void AMCLOdom\+::\+Set\+Model\+Diff (\begin{DoxyParamCaption}\item[{double}]{alpha1,  }\item[{double}]{alpha2,  }\item[{double}]{alpha3,  }\item[{double}]{alpha4 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a64bcc31384882facd705eff2bb6ae7eb}\label{classamcl_1_1_a_m_c_l_odom_a64bcc31384882facd705eff2bb6ae7eb}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!SetModelOmni@{SetModelOmni}}
+\index{SetModelOmni@{SetModelOmni}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{SetModelOmni()}{SetModelOmni()}}
+{\footnotesize\ttfamily void AMCLOdom\+::\+Set\+Model\+Omni (\begin{DoxyParamCaption}\item[{double}]{alpha1,  }\item[{double}]{alpha2,  }\item[{double}]{alpha3,  }\item[{double}]{alpha4,  }\item[{double}]{alpha5 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110}\label{classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!UpdateAction@{UpdateAction}}
+\index{UpdateAction@{UpdateAction}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{UpdateAction()}{UpdateAction()}}
+{\footnotesize\ttfamily bool AMCLOdom\+::\+Update\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$}]{pf,  }\item[{\mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensor\+Data}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+重载 \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_a258db7bc9b5713914527f50dcfdd6800}{amcl\+::\+AMCLSensor}} .
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}\label{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!alpha1@{alpha1}}
+\index{alpha1@{alpha1}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{alpha1}{alpha1}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLOdom\+::alpha1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}\label{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!alpha2@{alpha2}}
+\index{alpha2@{alpha2}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{alpha2}{alpha2}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLOdom\+::alpha2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}\label{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!alpha3@{alpha3}}
+\index{alpha3@{alpha3}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{alpha3}{alpha3}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLOdom\+::alpha3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}\label{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!alpha4@{alpha4}}
+\index{alpha4@{alpha4}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{alpha4}{alpha4}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLOdom\+::alpha4\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}\label{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!alpha5@{alpha5}}
+\index{alpha5@{alpha5}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{alpha5}{alpha5}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLOdom\+::alpha5\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a6fa2c5c80b0e935db3308bf8cb7de298}\label{classamcl_1_1_a_m_c_l_odom_a6fa2c5c80b0e935db3308bf8cb7de298}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!model\_type@{model\_type}}
+\index{model\_type@{model\_type}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{model\_type}{model\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\+\_\+model\+\_\+t}} amcl\+::\+AMCLOdom\+::model\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classamcl_1_1_a_m_c_l_odom_a80d9caeaa9d1893441ae64099738ec82}\label{classamcl_1_1_a_m_c_l_odom_a80d9caeaa9d1893441ae64099738ec82}} 
+\index{amcl::AMCLOdom@{amcl::AMCLOdom}!time@{time}}
+\index{time@{time}!amcl::AMCLOdom@{amcl::AMCLOdom}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double amcl\+::\+AMCLOdom\+::time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+amcl/include/amcl/sensors/\mbox{\hyperlink{amcl__odom_8h}{amcl\+\_\+odom.\+h}}\item 
+amcl/src/amcl/sensors/\mbox{\hyperlink{amcl__odom_8cpp}{amcl\+\_\+odom.\+cpp}}\end{DoxyCompactItemize}

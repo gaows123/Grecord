@@ -1,0 +1,9 @@
+<map id="clear_costmap_recovery::ClearCostmapRecovery" name="clear_costmap_recovery::ClearCostmapRecovery">
+<area shape="rect" id="node1" title="A recovery behavior that reverts the navigation stack&#39;s costmaps to the static map outside of a user&#45;..." alt="" coords="355,320,521,361"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="126,216,315,243"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="339,216,537,243"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="5,103,204,130"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="56,5,225,32"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="228,103,451,130"/>
+<area shape="rect" id="node6" title=" " alt="" coords="419,5,473,32"/>
+</map>

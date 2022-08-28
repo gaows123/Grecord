@@ -1,0 +1,4 @@
+<map id="base_local_planner::LatchedStopRotateController::stopWithAccLimits" name="base_local_planner::LatchedStopRotateController::stopWithAccLimits">
+<area shape="rect" id="node1" title="停止机器人同时考虑加速度的限制" alt="" coords="5,5,201,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_latched_stop_rotate_controller.html#a8648f8df161c70441a60ec202a137b18" title=" " alt="" coords="249,13,477,54"/>
+</map>

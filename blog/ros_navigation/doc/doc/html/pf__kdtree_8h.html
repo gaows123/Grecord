@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/include/amcl/pf/pf_kdtree.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_a9188d7c3d194212696f636cafd54aab.html">include</a></li><li class="navelem"><a class="el" href="dir_d1b05214bc26678a70bc66257a1f97b6.html">amcl</a></li><li class="navelem"><a class="el" href="dir_b250c90a420d93df9de30b473e4ce096.html">pf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">pf_kdtree.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h__dep__incl.png" border="0" usemap="#aamcl_2include_2amcl_2pf_2pf__kdtree_8hdep" alt=""/></div>
+<map name="aamcl_2include_2amcl_2pf_2pf__kdtree_8hdep" id="aamcl_2include_2amcl_2pf_2pf__kdtree_8hdep">
+<area shape="rect" title=" " alt="" coords="649,5,792,47"/>
+<area shape="rect" href="pf_8h.html" title=" " alt="" coords="515,102,683,129"/>
+<area shape="rect" href="pf_8c.html" title=" " alt="" coords="645,191,791,218"/>
+<area shape="rect" href="pf__kdtree_8c.html" title=" " alt="" coords="759,95,893,136"/>
+<area shape="rect" href="amcl__sensor_8h.html" title=" " alt="" coords="292,184,469,225"/>
+<area shape="rect" href="amcl__node_8cpp.html" title=" " alt="" coords="456,370,620,397"/>
+<area shape="rect" href="amcl__laser_8h.html" title=" " alt="" coords="387,273,564,315"/>
+<area shape="rect" href="amcl__odom_8h.html" title=" " alt="" coords="5,273,183,315"/>
+<area shape="rect" href="amcl__sensor_8cpp.html" title=" " alt="" coords="207,273,362,315"/>
+<area shape="rect" href="amcl__laser_8cpp.html" title=" " alt="" coords="277,363,431,404"/>
+<area shape="rect" href="amcl__odom_8cpp.html" title=" " alt="" coords="17,363,171,404"/>
+</map>
+</div>
+</div>
+<p><a href="pf__kdtree_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpf__kdtree__node.html">pf_kdtree_node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a05fb8223798c8ce1e5d56e4bf6756ee2"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structpf__kdtree__node.html">pf_kdtree_node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#a05fb8223798c8ce1e5d56e4bf6756ee2">pf_kdtree_node_t</a></td></tr>
+<tr class="separator:a05fb8223798c8ce1e5d56e4bf6756ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad5e3895479fc829100d1a627ae34e2ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#ad5e3895479fc829100d1a627ae34e2ec">pf_kdtree_alloc</a> (int max_size)</td></tr>
+<tr class="separator:ad5e3895479fc829100d1a627ae34e2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f471ee15033bbe30a96abe56f1e072"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#ac1f471ee15033bbe30a96abe56f1e072">pf_kdtree_free</a> (<a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self)</td></tr>
+<tr class="separator:ac1f471ee15033bbe30a96abe56f1e072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc558bc7d59167c6d5ebcd23b06c5129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#afc558bc7d59167c6d5ebcd23b06c5129">pf_kdtree_clear</a> (<a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self)</td></tr>
+<tr class="separator:afc558bc7d59167c6d5ebcd23b06c5129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bb0665463cacfc166b50be94079940"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#a25bb0665463cacfc166b50be94079940">pf_kdtree_insert</a> (<a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self, <a class="el" href="structpf__vector__t.html">pf_vector_t</a> pose, double value)</td></tr>
+<tr class="separator:a25bb0665463cacfc166b50be94079940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8757b78853ad243c2b823b8560c1027a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#a8757b78853ad243c2b823b8560c1027a">pf_kdtree_cluster</a> (<a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self)</td></tr>
+<tr class="separator:a8757b78853ad243c2b823b8560c1027a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f854496ce2d903ba3cc0efd7577afce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#a0f854496ce2d903ba3cc0efd7577afce">pf_kdtree_get_prob</a> (<a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self, <a class="el" href="structpf__vector__t.html">pf_vector_t</a> pose)</td></tr>
+<tr class="separator:a0f854496ce2d903ba3cc0efd7577afce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84700cffabc8cd46af8145cb215fbc56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pf__kdtree_8h.html#a84700cffabc8cd46af8145cb215fbc56">pf_kdtree_get_cluster</a> (<a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self, <a class="el" href="structpf__vector__t.html">pf_vector_t</a> pose)</td></tr>
+<tr class="separator:a84700cffabc8cd46af8145cb215fbc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a05fb8223798c8ce1e5d56e4bf6756ee2" name="a05fb8223798c8ce1e5d56e4bf6756ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05fb8223798c8ce1e5d56e4bf6756ee2">&#9670;&nbsp;</a></span>pf_kdtree_node_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structpf__kdtree__node.html">pf_kdtree_node</a> <a class="el" href="pf__kdtree_8h.html#a05fb8223798c8ce1e5d56e4bf6756ee2">pf_kdtree_node_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ad5e3895479fc829100d1a627ae34e2ec" name="ad5e3895479fc829100d1a627ae34e2ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e3895479fc829100d1a627ae34e2ec">&#9670;&nbsp;</a></span>pf_kdtree_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> * pf_kdtree_alloc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_ad5e3895479fc829100d1a627ae34e2ec_icgraph.png" border="0" usemap="#apf__kdtree_8h_ad5e3895479fc829100d1a627ae34e2ec_icgraph" alt=""/></div>
+<map name="apf__kdtree_8h_ad5e3895479fc829100d1a627ae34e2ec_icgraph" id="apf__kdtree_8h_ad5e3895479fc829100d1a627ae34e2ec_icgraph">
+<area shape="rect" title=" " alt="" coords="804,107,915,133"/>
+<area shape="rect" href="pf_8c.html#ab59ea6182aba307dd9faa7926219885e" title=" " alt="" coords="689,107,756,133"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,69,641,96"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="452,132,624,159"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,81,156,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc558bc7d59167c6d5ebcd23b06c5129" name="afc558bc7d59167c6d5ebcd23b06c5129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc558bc7d59167c6d5ebcd23b06c5129">&#9670;&nbsp;</a></span>pf_kdtree_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_kdtree_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_afc558bc7d59167c6d5ebcd23b06c5129_icgraph.png" border="0" usemap="#apf__kdtree_8h_afc558bc7d59167c6d5ebcd23b06c5129_icgraph" alt=""/></div>
+<map name="apf__kdtree_8h_afc558bc7d59167c6d5ebcd23b06c5129_icgraph" id="apf__kdtree_8h_afc558bc7d59167c6d5ebcd23b06c5129_icgraph">
+<area shape="rect" title=" " alt="" coords="1319,88,1429,115"/>
+<area shape="rect" href="pf_8c.html#a693660604e12992236e660b466ce76c2" title=" " alt="" coords="1184,7,1259,33"/>
+<area shape="rect" href="pf_8c.html#a3e18db8990238fb9edc912009f64e3db" title=" " alt="" coords="958,5,1097,32"/>
+<area shape="rect" href="pf_8c.html#aa158e637ec3c10493f2729f063146944" title=" " alt="" coords="1193,113,1250,140"/>
+<area shape="rect" href="pf_8c.html#ae2b239fe8546df136beca661cede73e2" title=" " alt="" coords="1172,236,1271,263"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="440,5,612,32"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,157,156,184"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,56,376,83"/>
+<area shape="rect" href="class_amcl_node.html#a58c92caa391a8e7b5061778c724ffa4c" title=" " alt="" coords="936,115,1119,141"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="676,173,883,200"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="685,107,874,149"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="424,107,628,133"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="435,157,617,184"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="205,208,375,235"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="211,259,369,285"/>
+<area shape="rect" href="class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="931,302,1124,343"/>
+<area shape="rect" href="class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="699,360,860,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8757b78853ad243c2b823b8560c1027a" name="a8757b78853ad243c2b823b8560c1027a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8757b78853ad243c2b823b8560c1027a">&#9670;&nbsp;</a></span>pf_kdtree_cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_kdtree_cluster </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_cgraph.png" border="0" usemap="#apf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_cgraph" alt=""/></div>
+<map name="apf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_cgraph" id="apf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,55,128,81"/>
+<area shape="rect" href="pf__kdtree_8c.html#aafcf7661b12063d66b1827feac1d36ad" title=" " alt="" coords="176,29,333,56"/>
+<area shape="rect" href="pf__kdtree_8c.html#a430a4635925d5966adac3eff0802fb34" title=" " alt="" coords="381,55,520,81"/>
+<area shape="rect" href="pf__kdtree_8c.html#a1472252390e49c0ed32bc5e0c446a62a" title=" " alt="" coords="568,55,683,81"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_icgraph.png" border="0" usemap="#apf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_icgraph" alt=""/></div>
+<map name="apf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_icgraph" id="apf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a_icgraph">
+<area shape="rect" title=" " alt="" coords="1521,259,1644,285"/>
+<area shape="rect" href="pf_8c.html#af2ae5d54790e0aca689b71a16fe4c7cb" title=" " alt="" coords="1359,259,1473,285"/>
+<area shape="rect" href="pf_8c.html#aa158e637ec3c10493f2729f063146944" title=" " alt="" coords="1213,179,1270,205"/>
+<area shape="rect" href="pf_8c.html#ae2b239fe8546df136beca661cede73e2" title=" " alt="" coords="1192,313,1291,340"/>
+<area shape="rect" href="pf_8c.html#a3e18db8990238fb9edc912009f64e3db" title=" " alt="" coords="1172,259,1311,285"/>
+<area shape="rect" href="class_amcl_node.html#a58c92caa391a8e7b5061778c724ffa4c" title=" " alt="" coords="936,149,1119,176"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,208,376,235"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="676,91,883,117"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="685,142,874,183"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="424,157,628,184"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="435,107,617,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,157,156,184"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="205,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="211,5,369,32"/>
+<area shape="rect" href="class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="931,310,1124,351"/>
+<area shape="rect" href="class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="699,309,860,336"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="440,259,612,285"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac1f471ee15033bbe30a96abe56f1e072" name="ac1f471ee15033bbe30a96abe56f1e072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f471ee15033bbe30a96abe56f1e072">&#9670;&nbsp;</a></span>pf_kdtree_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_kdtree_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_ac1f471ee15033bbe30a96abe56f1e072_icgraph.png" border="0" usemap="#apf__kdtree_8h_ac1f471ee15033bbe30a96abe56f1e072_icgraph" alt=""/></div>
+<map name="apf__kdtree_8h_ac1f471ee15033bbe30a96abe56f1e072_icgraph" id="apf__kdtree_8h_ac1f471ee15033bbe30a96abe56f1e072_icgraph">
+<area shape="rect" title=" " alt="" coords="1047,128,1152,155"/>
+<area shape="rect" href="pf_8c.html#a340271a4464113cbe3c4448d514b23c7" title=" " alt="" coords="936,128,999,155"/>
+<area shape="rect" href="class_amcl_node.html#a6ee0c6604650ae544c08be36df176e4d" title=" " alt="" coords="689,91,888,133"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="703,157,875,184"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,56,641,83"/>
+<area shape="rect" href="class_amcl_node.html#a3aaabb3a67f2a4f8637c64c99e55087e" title=" " alt="" coords="459,107,617,133"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,81,156,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a84700cffabc8cd46af8145cb215fbc56" name="a84700cffabc8cd46af8145cb215fbc56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84700cffabc8cd46af8145cb215fbc56">&#9670;&nbsp;</a></span>pf_kdtree_get_cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pf_kdtree_get_cluster </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_cgraph.png" border="0" usemap="#apf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_cgraph" alt=""/></div>
+<map name="apf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_cgraph" id="apf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,152,56"/>
+<area shape="rect" href="pf__kdtree_8c.html#a430a4635925d5966adac3eff0802fb34" title=" " alt="" coords="200,29,339,56"/>
+<area shape="rect" href="pf__kdtree_8c.html#a1472252390e49c0ed32bc5e0c446a62a" title=" " alt="" coords="387,29,501,56"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_icgraph.png" border="0" usemap="#apf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_icgraph" alt=""/></div>
+<map name="apf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_icgraph" id="apf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56_icgraph">
+<area shape="rect" title=" " alt="" coords="1521,259,1668,285"/>
+<area shape="rect" href="pf_8c.html#af2ae5d54790e0aca689b71a16fe4c7cb" title=" " alt="" coords="1359,259,1473,285"/>
+<area shape="rect" href="pf_8c.html#aa158e637ec3c10493f2729f063146944" title=" " alt="" coords="1213,179,1270,205"/>
+<area shape="rect" href="pf_8c.html#ae2b239fe8546df136beca661cede73e2" title=" " alt="" coords="1192,313,1291,340"/>
+<area shape="rect" href="pf_8c.html#a3e18db8990238fb9edc912009f64e3db" title=" " alt="" coords="1172,259,1311,285"/>
+<area shape="rect" href="class_amcl_node.html#a58c92caa391a8e7b5061778c724ffa4c" title=" " alt="" coords="936,149,1119,176"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,208,376,235"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="676,91,883,117"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="685,142,874,183"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="424,157,628,184"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="435,107,617,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,157,156,184"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="205,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="211,5,369,32"/>
+<area shape="rect" href="class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="931,310,1124,351"/>
+<area shape="rect" href="class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="699,309,860,336"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="440,259,612,285"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f854496ce2d903ba3cc0efd7577afce" name="a0f854496ce2d903ba3cc0efd7577afce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f854496ce2d903ba3cc0efd7577afce">&#9670;&nbsp;</a></span>pf_kdtree_get_prob()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double pf_kdtree_get_prob </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_a0f854496ce2d903ba3cc0efd7577afce_cgraph.png" border="0" usemap="#apf__kdtree_8h_a0f854496ce2d903ba3cc0efd7577afce_cgraph" alt=""/></div>
+<map name="apf__kdtree_8h_a0f854496ce2d903ba3cc0efd7577afce_cgraph" id="apf__kdtree_8h_a0f854496ce2d903ba3cc0efd7577afce_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,139,56"/>
+<area shape="rect" href="pf__kdtree_8c.html#a430a4635925d5966adac3eff0802fb34" title=" " alt="" coords="187,29,325,56"/>
+<area shape="rect" href="pf__kdtree_8c.html#a1472252390e49c0ed32bc5e0c446a62a" title=" " alt="" coords="373,29,488,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a25bb0665463cacfc166b50be94079940" name="a25bb0665463cacfc166b50be94079940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bb0665463cacfc166b50be94079940">&#9670;&nbsp;</a></span>pf_kdtree_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pf_kdtree_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__kdtree__t.html">pf_kdtree_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_a25bb0665463cacfc166b50be94079940_cgraph.png" border="0" usemap="#apf__kdtree_8h_a25bb0665463cacfc166b50be94079940_cgraph" alt=""/></div>
+<map name="apf__kdtree_8h_a25bb0665463cacfc166b50be94079940_cgraph" id="apf__kdtree_8h_a25bb0665463cacfc166b50be94079940_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,120,56"/>
+<area shape="rect" href="pf__kdtree_8c.html#abafa1da6f9d51b9ac5397071d2801f52" title=" " alt="" coords="168,29,319,56"/>
+<area shape="rect" href="pf__kdtree_8c.html#a1472252390e49c0ed32bc5e0c446a62a" title=" " alt="" coords="367,29,481,56"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pf__kdtree_8h_a25bb0665463cacfc166b50be94079940_icgraph.png" border="0" usemap="#apf__kdtree_8h_a25bb0665463cacfc166b50be94079940_icgraph" alt=""/></div>
+<map name="apf__kdtree_8h_a25bb0665463cacfc166b50be94079940_icgraph" id="apf__kdtree_8h_a25bb0665463cacfc166b50be94079940_icgraph">
+<area shape="rect" title=" " alt="" coords="1319,88,1433,115"/>
+<area shape="rect" href="pf_8c.html#a693660604e12992236e660b466ce76c2" title=" " alt="" coords="1184,7,1259,33"/>
+<area shape="rect" href="pf_8c.html#a3e18db8990238fb9edc912009f64e3db" title=" " alt="" coords="958,5,1097,32"/>
+<area shape="rect" href="pf_8c.html#aa158e637ec3c10493f2729f063146944" title=" " alt="" coords="1193,113,1250,140"/>
+<area shape="rect" href="pf_8c.html#ae2b239fe8546df136beca661cede73e2" title=" " alt="" coords="1172,236,1271,263"/>
+<area shape="rect" href="class_amcl_node.html#a701205b2f4b7373a2ab1caa039eed8a5" title=" " alt="" coords="440,5,612,32"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,157,156,184"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="204,56,376,83"/>
+<area shape="rect" href="class_amcl_node.html#a58c92caa391a8e7b5061778c724ffa4c" title=" " alt="" coords="936,115,1119,141"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="676,173,883,200"/>
+<area shape="rect" href="class_amcl_node.html#aa0f02087f8d57a91834cc911aa7330b4" title=" " alt="" coords="685,107,874,149"/>
+<area shape="rect" href="class_amcl_node.html#a5bab30a294236094c90192b25696bf75" title=" " alt="" coords="424,107,628,133"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="435,157,617,184"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="205,208,375,235"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="211,259,369,285"/>
+<area shape="rect" href="class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="931,302,1124,343"/>
+<area shape="rect" href="class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="699,360,860,387"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

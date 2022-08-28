@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner/include/base_local_planner/obstacle_cost_function.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_fc4ccca1cedd5ad98a9c5935ebe74b0e.html">base_local_planner</a></li><li class="navelem"><a class="el" href="dir_fb1526ef91c927002057b842ea75b919.html">include</a></li><li class="navelem"><a class="el" href="dir_022ab8b8b2793d2a4d98ca8ea9cb4917.html">base_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">obstacle_cost_function.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="obstacle__cost__function_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Author: TKruse</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef OBSTACLE_COST_FUNCTION_H_</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define OBSTACLE_COST_FUNCTION_H_</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="trajectory__cost__function_8h.html">base_local_planner/trajectory_cost_function.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__model_8h.html">base_local_planner/costmap_model.h</a>&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__2d_8h.html">costmap_2d/costmap_2d.h</a>&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebase__local__planner.html">base_local_planner</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html">   53</a></span><span class="keyword">class </span><a class="code hl_class" href="classbase__local__planner_1_1_obstacle_cost_function.html">ObstacleCostFunction</a> : <span class="keyword">public</span> <a class="code hl_class" href="classbase__local__planner_1_1_trajectory_cost_function.html">TrajectoryCostFunction</a> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#a415ee13143bd2b2dd9b5effa1e7f3a5a">ObstacleCostFunction</a>(<a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* costmap);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#aba72b1bd0dae5acb7e25dbfd4ea9821a">~ObstacleCostFunction</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#a9a9929d60bfd91f8814d8b31e51969cf">prepare</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#a3bac5a99d333a755440449809270e638">scoreTrajectory</a>(<a class="code hl_class" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html#a62321188c336dbef4d749a79cecc45c0">   62</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#a62321188c336dbef4d749a79cecc45c0">setSumScores</a>(<span class="keywordtype">bool</span> score_sums){ <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#a1ff9618ab8e84d39d17d0a2f843a8cb9">sum_scores_</a>=score_sums; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#ad1fc4b6ee10cf4add4e198967030037c">setParams</a>(<span class="keywordtype">double</span> max_trans_vel, <span class="keywordtype">double</span> max_scaling_factor, <span class="keywordtype">double</span> scaling_speed);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#a8043f943c3bf43dc4836db1a632a6e52">setFootprint</a>(std::vector&lt;geometry_msgs::Point&gt; footprint_spec);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// helper functions, made static for easy unit testing</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#aff41f9f317c9e375d0945bda8b9f8970">getScalingFactor</a>(<a class="code hl_class" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj, <span class="keywordtype">double</span> scaling_speed, <span class="keywordtype">double</span> max_trans_vel, <span class="keywordtype">double</span> max_scaling_factor);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classbase__local__planner_1_1_obstacle_cost_function.html#a1f6a1fa580a775f11226ca346b8dcc33">footprintCost</a>(</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; x,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; y,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; th,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">double</span> scale,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      std::vector&lt;geometry_msgs::Point&gt; footprint_spec,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* costmap,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_class" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a>* world_model);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html#a649bf1d646e4432bdf338ff6b904cefc">   79</a></span>  <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#a649bf1d646e4432bdf338ff6b904cefc">costmap_</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html#aef3f0212931d94c234ab6c4cf1dd0689">   80</a></span>  std::vector&lt;geometry_msgs::Point&gt; <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#aef3f0212931d94c234ab6c4cf1dd0689">footprint_spec_</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html#acce234454982f3bd52744f67a04f8be5">   81</a></span>  <a class="code hl_class" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a>* <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#acce234454982f3bd52744f67a04f8be5">world_model_</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html#aad6617f6131ca6598ec3a07d1d3153dd">   82</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#aad6617f6131ca6598ec3a07d1d3153dd">max_trans_vel_</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html#a1ff9618ab8e84d39d17d0a2f843a8cb9">   83</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#a1ff9618ab8e84d39d17d0a2f843a8cb9">sum_scores_</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="comment">//footprint scaling with velocity;</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_obstacle_cost_function.html#a5c2ec54222f1ae220836e41a967beb13">   85</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#a5c2ec54222f1ae220836e41a967beb13">max_scaling_factor_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_obstacle_cost_function.html#abac2b51781792694610f477a28f784fb">scaling_speed_</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">/* namespace base_local_planner */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">/* OBSTACLE_COST_FUNCTION_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html">base_local_planner::ObstacleCostFunction</a></div><div class="ttdoc">Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajec...</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:53</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a1f6a1fa580a775f11226ca346b8dcc33"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a1f6a1fa580a775f11226ca346b8dcc33">base_local_planner::ObstacleCostFunction::footprintCost</a></div><div class="ttdeci">static double footprintCost(const double &amp;x, const double &amp;y, const double &amp;th, double scale, std::vector&lt; geometry_msgs::Point &gt; footprint_spec, costmap_2d::Costmap2D *costmap, base_local_planner::WorldModel *world_model)</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:116</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a1ff9618ab8e84d39d17d0a2f843a8cb9"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a1ff9618ab8e84d39d17d0a2f843a8cb9">base_local_planner::ObstacleCostFunction::sum_scores_</a></div><div class="ttdeci">bool sum_scores_</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:83</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a3bac5a99d333a755440449809270e638"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a3bac5a99d333a755440449809270e638">base_local_planner::ObstacleCostFunction::scoreTrajectory</a></div><div class="ttdeci">double scoreTrajectory(Trajectory &amp;traj)</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:74</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a415ee13143bd2b2dd9b5effa1e7f3a5a"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a415ee13143bd2b2dd9b5effa1e7f3a5a">base_local_planner::ObstacleCostFunction::ObstacleCostFunction</a></div><div class="ttdeci">ObstacleCostFunction(costmap_2d::Costmap2D *costmap)</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:45</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a5c2ec54222f1ae220836e41a967beb13"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a5c2ec54222f1ae220836e41a967beb13">base_local_planner::ObstacleCostFunction::max_scaling_factor_</a></div><div class="ttdeci">double max_scaling_factor_</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:85</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a62321188c336dbef4d749a79cecc45c0"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a62321188c336dbef4d749a79cecc45c0">base_local_planner::ObstacleCostFunction::setSumScores</a></div><div class="ttdeci">void setSumScores(bool score_sums)</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:62</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a649bf1d646e4432bdf338ff6b904cefc"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a649bf1d646e4432bdf338ff6b904cefc">base_local_planner::ObstacleCostFunction::costmap_</a></div><div class="ttdeci">costmap_2d::Costmap2D * costmap_</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:79</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a8043f943c3bf43dc4836db1a632a6e52"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a8043f943c3bf43dc4836db1a632a6e52">base_local_planner::ObstacleCostFunction::setFootprint</a></div><div class="ttdeci">void setFootprint(std::vector&lt; geometry_msgs::Point &gt; footprint_spec)</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:66</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_a9a9929d60bfd91f8814d8b31e51969cf"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#a9a9929d60bfd91f8814d8b31e51969cf">base_local_planner::ObstacleCostFunction::prepare</a></div><div class="ttdeci">bool prepare()</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:70</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_aad6617f6131ca6598ec3a07d1d3153dd"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#aad6617f6131ca6598ec3a07d1d3153dd">base_local_planner::ObstacleCostFunction::max_trans_vel_</a></div><div class="ttdeci">double max_trans_vel_</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:82</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_aba72b1bd0dae5acb7e25dbfd4ea9821a"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#aba72b1bd0dae5acb7e25dbfd4ea9821a">base_local_planner::ObstacleCostFunction::~ObstacleCostFunction</a></div><div class="ttdeci">~ObstacleCostFunction()</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:52</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_abac2b51781792694610f477a28f784fb"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#abac2b51781792694610f477a28f784fb">base_local_planner::ObstacleCostFunction::scaling_speed_</a></div><div class="ttdeci">double scaling_speed_</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:85</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_acce234454982f3bd52744f67a04f8be5"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#acce234454982f3bd52744f67a04f8be5">base_local_planner::ObstacleCostFunction::world_model_</a></div><div class="ttdeci">base_local_planner::WorldModel * world_model_</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:81</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_ad1fc4b6ee10cf4add4e198967030037c"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#ad1fc4b6ee10cf4add4e198967030037c">base_local_planner::ObstacleCostFunction::setParams</a></div><div class="ttdeci">void setParams(double max_trans_vel, double max_scaling_factor, double scaling_speed)</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:59</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_aef3f0212931d94c234ab6c4cf1dd0689"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#aef3f0212931d94c234ab6c4cf1dd0689">base_local_planner::ObstacleCostFunction::footprint_spec_</a></div><div class="ttdeci">std::vector&lt; geometry_msgs::Point &gt; footprint_spec_</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.h:80</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_obstacle_cost_function_html_aff41f9f317c9e375d0945bda8b9f8970"><div class="ttname"><a href="classbase__local__planner_1_1_obstacle_cost_function.html#aff41f9f317c9e375d0945bda8b9f8970">base_local_planner::ObstacleCostFunction::getScalingFactor</a></div><div class="ttdeci">static double getScalingFactor(Trajectory &amp;traj, double scaling_speed, double max_trans_vel, double max_scaling_factor)</div><div class="ttdef"><b>Definition:</b> obstacle_cost_function.cpp:102</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_cost_function_html"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory_cost_function.html">base_local_planner::TrajectoryCostFunction</a></div><div class="ttdoc">Provides an interface for critics of trajectories During each sampling run, a batch of many trajector...</div><div class="ttdef"><b>Definition:</b> trajectory_cost_function.h:52</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html">base_local_planner::Trajectory</a></div><div class="ttdoc">Holds a trajectory generated by considering an x, y, and theta velocity</div><div class="ttdef"><b>Definition:</b> trajectory.h:44</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_world_model_html"><div class="ttname"><a href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a></div><div class="ttdoc">An interface the trajectory controller uses to interact with the world regardless of the underlying w...</div><div class="ttdef"><b>Definition:</b> world_model.h:52</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1_costmap2_d_html"><div class="ttname"><a href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a></div><div class="ttdoc">A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;.</div><div class="ttdef"><b>Definition:</b> costmap_2d.h:62</div></div>
+<div class="ttc" id="acostmap__2d_8h_html"><div class="ttname"><a href="costmap__2d_8h.html">costmap_2d.h</a></div></div>
+<div class="ttc" id="acostmap__model_8h_html"><div class="ttname"><a href="costmap__model_8h.html">costmap_model.h</a></div></div>
+<div class="ttc" id="anamespacebase__local__planner_html"><div class="ttname"><a href="namespacebase__local__planner.html">base_local_planner</a></div><div class="ttdef"><b>Definition:</b> costmap_model.h:44</div></div>
+<div class="ttc" id="atrajectory__cost__function_8h_html"><div class="ttname"><a href="trajectory__cost__function_8h.html">trajectory_cost_function.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

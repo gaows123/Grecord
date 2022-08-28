@@ -1,0 +1,94 @@
+\hypertarget{costmap__2d__publisher_8h_source}{}\doxysection{costmap\+\_\+2d\+\_\+publisher.\+h}
+\label{costmap__2d__publisher_8h_source}\index{costmap\_2d/include/costmap\_2d/costmap\_2d\_publisher.h@{costmap\_2d/include/costmap\_2d/costmap\_2d\_publisher.h}}
+\mbox{\hyperlink{costmap__2d__publisher_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_COSTMAP\_2D\_PUBLISHER\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_COSTMAP\_2D\_PUBLISHER\_H\_}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <nav\_msgs/OccupancyGrid.h>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <map\_msgs/OccupancyGridUpdate.h>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{51 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher}{Costmap2DPublisher}}}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53 \textcolor{keyword}{public}:}
+\DoxyCodeLine{57   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7}{Costmap2DPublisher}}(ros::NodeHandle * ros\_node, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}* costmap, std::string global\_frame,}
+\DoxyCodeLine{58                      std::string topic\_name, \textcolor{keywordtype}{bool} always\_send\_full\_costmap = \textcolor{keyword}{false});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a38077dace67c7ca6aff8fb09ac81e17d}{\string~Costmap2DPublisher}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{66   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30}{updateBounds}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} xn, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} yn)}
+\DoxyCodeLine{67   \{}
+\DoxyCodeLine{68     \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_ad03e091625a7e64c47d620f001a8778f}{x0\_}} = std::min(x0, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_ad03e091625a7e64c47d620f001a8778f}{x0\_}});}
+\DoxyCodeLine{69     \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_aa5bc284341db6fd3c34d505c09f00bbf}{xn\_}} = std::max(xn, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_aa5bc284341db6fd3c34d505c09f00bbf}{xn\_}});}
+\DoxyCodeLine{70     \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_abddb9a9625f8c1da0d069d3d23b36731}{y0\_}} = std::min(y0, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_abddb9a9625f8c1da0d069d3d23b36731}{y0\_}});}
+\DoxyCodeLine{71     \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a94802918199a360332554b83200339cc}{yn\_}} = std::max(yn, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a94802918199a360332554b83200339cc}{yn\_}});}
+\DoxyCodeLine{72   \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953}{publishCostmap}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{83   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a3948a48e3f77d44f0600077470788c38}{active}}()}
+\DoxyCodeLine{84   \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a2c3ba6c3afb098e790fa35bd7dee2b65}{active\_}};}
+\DoxyCodeLine{86   \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keyword}{private}:}
+\DoxyCodeLine{90   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a}{prepareGrid}}();}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{93   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add}{onNewSubscription}}(\textcolor{keyword}{const} ros::SingleSubscriberPublisher\& \mbox{\hyperlink{namespaceset__pose_ae0f910f5208b3c6922083633943b3489}{pub}});}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95   ros::NodeHandle* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_acb9fb47efd7d85f081ea76a7e79f2f10}{node}};}
+\DoxyCodeLine{96   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a82210756911015a30f981a680be2c651}{costmap\_}};}
+\DoxyCodeLine{97   std::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a13debc4c4c26a8d0c9b088dd0a2f0b53}{global\_frame\_}};}
+\DoxyCodeLine{98   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_ad03e091625a7e64c47d620f001a8778f}{x0\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_aa5bc284341db6fd3c34d505c09f00bbf}{xn\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_abddb9a9625f8c1da0d069d3d23b36731}{y0\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a94802918199a360332554b83200339cc}{yn\_}};}
+\DoxyCodeLine{99   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a4601aa9c0a3ae436b679757e4bf23804}{saved\_origin\_x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a71533d4ce497adc9b2acda72127ed65c}{saved\_origin\_y\_}};}
+\DoxyCodeLine{100   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a2c3ba6c3afb098e790fa35bd7dee2b65}{active\_}};}
+\DoxyCodeLine{101   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a0b61b35136fca4959ffff8a560f93041}{always\_send\_full\_costmap\_}};}
+\DoxyCodeLine{102   ros::Publisher \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a4ccf18bd721fb672419de1abf491118b}{costmap\_pub\_}};}
+\DoxyCodeLine{103   ros::Publisher \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a261f5681cd6342a074271438d74b8d3e}{costmap\_update\_pub\_}};}
+\DoxyCodeLine{104   nav\_msgs::OccupancyGrid \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_ae19b0300daf08759d4fd8ad4b0792a4b}{grid\_}};}
+\DoxyCodeLine{105   \textcolor{keyword}{static} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a925a0131bf6d351f7c0f145473322800}{cost\_translation\_table\_}};  }
+\DoxyCodeLine{106 \};}
+\DoxyCodeLine{107 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_COSTMAP\_2D\_PUBLISHER\_H}}
+
+\end{DoxyCode}

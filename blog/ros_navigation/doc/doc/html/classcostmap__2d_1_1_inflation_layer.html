@@ -1,0 +1,1712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d::InflationLayer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecostmap__2d.html">costmap_2d</a></li><li class="navelem"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html">InflationLayer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcostmap__2d_1_1_inflation_layer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">costmap_2d::InflationLayer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="inflation__layer_8h_source.html">inflation_layer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 costmap_2d::InflationLayer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer__inherit__graph.png" border="0" usemap="#acostmap__2d_1_1_inflation_layer_inherit__map" alt="Inheritance graph"/></div>
+<map name="acostmap__2d_1_1_inflation_layer_inherit__map" id="acostmap__2d_1_1_inflation_layer_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,184,107"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html" title=" " alt="" coords="28,5,161,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+costmap_2d::InflationLayer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer__coll__graph.png" border="0" usemap="#acostmap__2d_1_1_inflation_layer_coll__map" alt="Collaboration graph"/></div>
+<map name="acostmap__2d_1_1_inflation_layer_coll__map" id="acostmap__2d_1_1_inflation_layer_coll__map">
+<area shape="rect" title=" " alt="" coords="125,260,303,287"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html" title=" " alt="" coords="147,184,281,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="40,95,239,121"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,5,175,32"/>
+<area shape="rect" title=" " alt="" coords="229,5,284,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abdd1ac7152ebe8072dd142c8b1106631"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#abdd1ac7152ebe8072dd142c8b1106631">InflationLayer</a> ()</td></tr>
+<tr class="separator:abdd1ac7152ebe8072dd142c8b1106631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498fcc27acce5456e672ca4ad644ebe1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a498fcc27acce5456e672ca4ad644ebe1">~InflationLayer</a> ()</td></tr>
+<tr class="separator:a498fcc27acce5456e672ca4ad644ebe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70aa2e82f43d319111403b8f97f37ade"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade">onInitialize</a> ()</td></tr>
+<tr class="memdesc:a70aa2e82f43d319111403b8f97f37ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called at the end of <a class="el" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b">initialize()</a>. Override to implement subclass-specific initialization.  <a href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade">更多...</a><br /></td></tr>
+<tr class="separator:a70aa2e82f43d319111403b8f97f37ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7834a60ae6fe62f40dbe0b5815b9b4ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a7834a60ae6fe62f40dbe0b5815b9b4ed">updateBounds</a> (double robot_x, double robot_y, double robot_yaw, double *min_x, double *min_y, double *max_x, double *max_y)</td></tr>
+<tr class="memdesc:a7834a60ae6fe62f40dbe0b5815b9b4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called by the <a class="el" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds.  <a href="classcostmap__2d_1_1_inflation_layer.html#a7834a60ae6fe62f40dbe0b5815b9b4ed">更多...</a><br /></td></tr>
+<tr class="separator:a7834a60ae6fe62f40dbe0b5815b9b4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5d3eef9b0e8c91dfde79c0e40a65af"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a2d5d3eef9b0e8c91dfde79c0e40a65af">updateCosts</a> (<a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;master_grid, int min_i, int min_j, int max_i, int max_j)</td></tr>
+<tr class="memdesc:a2d5d3eef9b0e8c91dfde79c0e40a65af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually update the underlying costmap, only within the bounds calculated during UpdateBounds().  <a href="classcostmap__2d_1_1_inflation_layer.html#a2d5d3eef9b0e8c91dfde79c0e40a65af">更多...</a><br /></td></tr>
+<tr class="separator:a2d5d3eef9b0e8c91dfde79c0e40a65af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298ae7ff737ea8b409405c51aa34dab3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a298ae7ff737ea8b409405c51aa34dab3">isDiscretized</a> ()</td></tr>
+<tr class="separator:a298ae7ff737ea8b409405c51aa34dab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740c5ab2d838eb17f8fbfa16001feff5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5">matchSize</a> ()</td></tr>
+<tr class="memdesc:a740c5ab2d838eb17f8fbfa16001feff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this to make this layer match the size of the parent costmap.  <a href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5">更多...</a><br /></td></tr>
+<tr class="separator:a740c5ab2d838eb17f8fbfa16001feff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5df966fb4dd99b8b69945408f42c2a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6">reset</a> ()</td></tr>
+<tr class="separator:aa5df966fb4dd99b8b69945408f42c2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded99a51737669d85ccc3f1b932061e5"><td class="memItemLeft" align="right" valign="top">virtual unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5">computeCost</a> (double <a class="el" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98">distance</a>) const</td></tr>
+<tr class="memdesc:aded99a51737669d85ccc3f1b932061e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据距离计算代价，大概分三个情况:  <a href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5">更多...</a><br /></td></tr>
+<tr class="separator:aded99a51737669d85ccc3f1b932061e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb0571041eaadcf3e93a9e0b1395cbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb">setInflationParameters</a> (double inflation_radius, double cost_scaling_factor)</td></tr>
+<tr class="memdesc:a9bb0571041eaadcf3e93a9e0b1395cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the values of the inflation radius parameters  <a href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb">更多...</a><br /></td></tr>
+<tr class="separator:a9bb0571041eaadcf3e93a9e0b1395cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classcostmap__2d_1_1_layer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcostmap__2d_1_1_layer')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classcostmap__2d_1_1_layer.html">costmap_2d::Layer</a></td></tr>
+<tr class="memitem:a1f83227fd701bf4bc29143cd66c4de5c inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a1f83227fd701bf4bc29143cd66c4de5c">Layer</a> ()</td></tr>
+<tr class="separator:a1f83227fd701bf4bc29143cd66c4de5c inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c7a09667d7cc23e207e0121e60ba4b inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b">initialize</a> (<a class="el" href="classcostmap__2d_1_1_layered_costmap.html">LayeredCostmap</a> *parent, std::string name, tf2_ros::Buffer *tf)</td></tr>
+<tr class="separator:af6c7a09667d7cc23e207e0121e60ba4b inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978fb5288265b293a6fd08787314f2f1 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a978fb5288265b293a6fd08787314f2f1">updateBounds</a> (double robot_x, double robot_y, double robot_yaw, double *min_x, double *min_y, double *max_x, double *max_y)</td></tr>
+<tr class="memdesc:a978fb5288265b293a6fd08787314f2f1 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called by the <a class="el" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds.  <a href="classcostmap__2d_1_1_layer.html#a978fb5288265b293a6fd08787314f2f1">更多...</a><br /></td></tr>
+<tr class="separator:a978fb5288265b293a6fd08787314f2f1 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56528644ba7d534b15ca3d73615dc12e inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a56528644ba7d534b15ca3d73615dc12e">updateCosts</a> (<a class="el" href="classcostmap__2d_1_1_costmap2_d.html">Costmap2D</a> &amp;master_grid, int min_i, int min_j, int max_i, int max_j)</td></tr>
+<tr class="memdesc:a56528644ba7d534b15ca3d73615dc12e inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actually update the underlying costmap, only within the bounds calculated during UpdateBounds().  <a href="classcostmap__2d_1_1_layer.html#a56528644ba7d534b15ca3d73615dc12e">更多...</a><br /></td></tr>
+<tr class="separator:a56528644ba7d534b15ca3d73615dc12e inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8238b7e03dc09bade9543a23addc65e2 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a8238b7e03dc09bade9543a23addc65e2">deactivate</a> ()</td></tr>
+<tr class="memdesc:a8238b7e03dc09bade9543a23addc65e2 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop publishers.  <a href="classcostmap__2d_1_1_layer.html#a8238b7e03dc09bade9543a23addc65e2">更多...</a><br /></td></tr>
+<tr class="separator:a8238b7e03dc09bade9543a23addc65e2 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83cb399475b5536ae8e278569756d68b inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a83cb399475b5536ae8e278569756d68b">activate</a> ()</td></tr>
+<tr class="memdesc:a83cb399475b5536ae8e278569756d68b inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restart publishers if they've been stopped.  <a href="classcostmap__2d_1_1_layer.html#a83cb399475b5536ae8e278569756d68b">更多...</a><br /></td></tr>
+<tr class="separator:a83cb399475b5536ae8e278569756d68b inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e57e2de15f2ac5104465da537b60ada inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a7e57e2de15f2ac5104465da537b60ada">reset</a> ()</td></tr>
+<tr class="separator:a7e57e2de15f2ac5104465da537b60ada inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40154c4ffbc768749e3724728ad96a27 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a40154c4ffbc768749e3724728ad96a27">~Layer</a> ()</td></tr>
+<tr class="separator:a40154c4ffbc768749e3724728ad96a27 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3331b68fc4db5ca14dcc31de179fd75f inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a3331b68fc4db5ca14dcc31de179fd75f">isCurrent</a> () const</td></tr>
+<tr class="memdesc:a3331b68fc4db5ca14dcc31de179fd75f inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check to make sure all the data in the layer is up to date. If the layer is not up to date, then it may be unsafe to plan using the data from this layer, and the planner may need to know.  <a href="classcostmap__2d_1_1_layer.html#a3331b68fc4db5ca14dcc31de179fd75f">更多...</a><br /></td></tr>
+<tr class="separator:a3331b68fc4db5ca14dcc31de179fd75f inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d19ac5805530fc76a2cdbe9eb41421 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a57d19ac5805530fc76a2cdbe9eb41421">isEnabled</a> () const noexcept</td></tr>
+<tr class="memdesc:a57d19ac5805530fc76a2cdbe9eb41421 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter if the current layer is enabled.  <a href="classcostmap__2d_1_1_layer.html#a57d19ac5805530fc76a2cdbe9eb41421">更多...</a><br /></td></tr>
+<tr class="separator:a57d19ac5805530fc76a2cdbe9eb41421 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0a0cf4fb307699c098507d718af7ff inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a2e0a0cf4fb307699c098507d718af7ff">matchSize</a> ()</td></tr>
+<tr class="memdesc:a2e0a0cf4fb307699c098507d718af7ff inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this to make this layer match the size of the parent costmap.  <a href="classcostmap__2d_1_1_layer.html#a2e0a0cf4fb307699c098507d718af7ff">更多...</a><br /></td></tr>
+<tr class="separator:a2e0a0cf4fb307699c098507d718af7ff inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae26a90b4bc5922cfc23dfc55b6a573fe inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#ae26a90b4bc5922cfc23dfc55b6a573fe">getName</a> () const noexcept</td></tr>
+<tr class="separator:ae26a90b4bc5922cfc23dfc55b6a573fe inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24cade239a2cb0923a774bc5231ac44 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; geometry_msgs::Point &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#ac24cade239a2cb0923a774bc5231ac44">getFootprint</a> () const</td></tr>
+<tr class="memdesc:ac24cade239a2cb0923a774bc5231ac44 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function for layered_costmap_-&gt;<a class="el" href="classcostmap__2d_1_1_layer.html#ac24cade239a2cb0923a774bc5231ac44" title="Convenience function for layered_costmap_-&gt;getFootprint().">getFootprint()</a>.  <a href="classcostmap__2d_1_1_layer.html#ac24cade239a2cb0923a774bc5231ac44">更多...</a><br /></td></tr>
+<tr class="separator:ac24cade239a2cb0923a774bc5231ac44 inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65a9d55987f504e8c658bc64f61181e inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#ab65a9d55987f504e8c658bc64f61181e">onFootprintChanged</a> ()</td></tr>
+<tr class="memdesc:ab65a9d55987f504e8c658bc64f61181e inherit pub_methods_classcostmap__2d_1_1_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> calls this whenever the footprint there changes (via <a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha...">LayeredCostmap::setFootprint()</a>). Override to be notified of changes to the robot's footprint.  <a href="classcostmap__2d_1_1_layer.html#ab65a9d55987f504e8c658bc64f61181e">更多...</a><br /></td></tr>
+<tr class="separator:ab65a9d55987f504e8c658bc64f61181e inherit pub_methods_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:ae838b68ddf6d2dce9efca777e8455335"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335">onFootprintChanged</a> ()</td></tr>
+<tr class="memdesc:ae838b68ddf6d2dce9efca777e8455335"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> calls this whenever the footprint there changes (via <a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha...">LayeredCostmap::setFootprint()</a>). Override to be notified of changes to the robot's footprint.  <a href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335">更多...</a><br /></td></tr>
+<tr class="separator:ae838b68ddf6d2dce9efca777e8455335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97888a23e12ab5b798a854c2f590ae71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71">onInitialize</a> ()</td></tr>
+<tr class="memdesc:a97888a23e12ab5b798a854c2f590ae71"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called at the end of <a class="el" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b">initialize()</a>. Override to implement subclass-specific initialization.  <a href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71">更多...</a><br /></td></tr>
+<tr class="separator:a97888a23e12ab5b798a854c2f590ae71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a194f58d14ff80500d724c0822c5f960a"><td class="memItemLeft" align="right" valign="top">boost::recursive_mutex *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a194f58d14ff80500d724c0822c5f960a">inflation_access_</a></td></tr>
+<tr class="separator:a194f58d14ff80500d724c0822c5f960a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d76789a37f24cf6af5d82e900a5852"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a05d76789a37f24cf6af5d82e900a5852">resolution_</a></td></tr>
+<tr class="separator:a05d76789a37f24cf6af5d82e900a5852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66302e9f414da11c156e7ce1b5e16bae"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a66302e9f414da11c156e7ce1b5e16bae">inflation_radius_</a></td></tr>
+<tr class="separator:a66302e9f414da11c156e7ce1b5e16bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c7d884932a3d5f215099f29361d0a8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#af7c7d884932a3d5f215099f29361d0a8">inscribed_radius_</a></td></tr>
+<tr class="separator:af7c7d884932a3d5f215099f29361d0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507bd49c3aca392d91efcabfe999cc0d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a507bd49c3aca392d91efcabfe999cc0d">weight_</a></td></tr>
+<tr class="separator:a507bd49c3aca392d91efcabfe999cc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcffd8162d89b97e668bde22b53ec4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a9dcffd8162d89b97e668bde22b53ec4a">inflate_unknown_</a></td></tr>
+<tr class="separator:a9dcffd8162d89b97e668bde22b53ec4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classcostmap__2d_1_1_layer"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcostmap__2d_1_1_layer')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classcostmap__2d_1_1_layer.html">costmap_2d::Layer</a></td></tr>
+<tr class="memitem:a4cebd6c53e8089f863f16cee9a0a2184 inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_layered_costmap.html">LayeredCostmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a4cebd6c53e8089f863f16cee9a0a2184">layered_costmap_</a></td></tr>
+<tr class="separator:a4cebd6c53e8089f863f16cee9a0a2184 inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67484d6f9573d583f3ad809375e976a inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#af67484d6f9573d583f3ad809375e976a">current_</a></td></tr>
+<tr class="separator:af67484d6f9573d583f3ad809375e976a inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61b2a3e01353b97258c207a397977fe inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#ab61b2a3e01353b97258c207a397977fe">enabled_</a></td></tr>
+<tr class="separator:ab61b2a3e01353b97258c207a397977fe inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fa1f64ebd9d39af5947c738202e248 inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#ac1fa1f64ebd9d39af5947c738202e248">name_</a></td></tr>
+<tr class="separator:ac1fa1f64ebd9d39af5947c738202e248 inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a977acd639966f447262b5c8837a40f inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memItemLeft" align="right" valign="top">tf2_ros::Buffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_layer.html#a4a977acd639966f447262b5c8837a40f">tf_</a></td></tr>
+<tr class="separator:a4a977acd639966f447262b5c8837a40f inherit pro_attribs_classcostmap__2d_1_1_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a75897e88513bbaa87f773664879bb1ad"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a75897e88513bbaa87f773664879bb1ad">distanceLookup</a> (int mx, int my, int src_x, int src_y)</td></tr>
+<tr class="memdesc:a75897e88513bbaa87f773664879bb1ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lookup pre-computed distances  <a href="classcostmap__2d_1_1_inflation_layer.html#a75897e88513bbaa87f773664879bb1ad">更多...</a><br /></td></tr>
+<tr class="separator:a75897e88513bbaa87f773664879bb1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576a455f199de11e329366df5c1d906a"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a576a455f199de11e329366df5c1d906a">costLookup</a> (int mx, int my, int src_x, int src_y)</td></tr>
+<tr class="memdesc:a576a455f199de11e329366df5c1d906a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lookup pre-computed costs  <a href="classcostmap__2d_1_1_inflation_layer.html#a576a455f199de11e329366df5c1d906a">更多...</a><br /></td></tr>
+<tr class="separator:a576a455f199de11e329366df5c1d906a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a6dbb2bb36948cdc9404f7480c5261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261">computeCaches</a> ()</td></tr>
+<tr class="separator:a05a6dbb2bb36948cdc9404f7480c5261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca7ac87199c293c06fa5d068c855138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138">deleteKernels</a> ()</td></tr>
+<tr class="separator:a8ca7ac87199c293c06fa5d068c855138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc15a0b886693f024940c42f295349f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a3dc15a0b886693f024940c42f295349f">inflate_area</a> (int min_i, int min_j, int max_i, int max_j, unsigned char *master_grid)</td></tr>
+<tr class="separator:a3dc15a0b886693f024940c42f295349f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8596c7a8c0ffc98da47cfc99854cdd0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0">cellDistance</a> (double world_dist)</td></tr>
+<tr class="separator:af8596c7a8c0ffc98da47cfc99854cdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c750bb8214b8d1281d0b96598ff0996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a6c750bb8214b8d1281d0b96598ff0996">enqueue</a> (unsigned int index, unsigned int mx, unsigned int my, unsigned int src_x, unsigned int src_y)</td></tr>
+<tr class="memdesc:a6c750bb8214b8d1281d0b96598ff0996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an index of a cell in the costmap, place it into a list pending for obstacle inflation  <a href="classcostmap__2d_1_1_inflation_layer.html#a6c750bb8214b8d1281d0b96598ff0996">更多...</a><br /></td></tr>
+<tr class="separator:a6c750bb8214b8d1281d0b96598ff0996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6137de50b68199a193c8d79022391bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb">reconfigureCB</a> (costmap_2d::InflationPluginConfig &amp;config, uint32_t level)</td></tr>
+<tr class="separator:aa6137de50b68199a193c8d79022391bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:af9d33497e3d4ec8342786f234fac6896"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#af9d33497e3d4ec8342786f234fac6896">cell_inflation_radius_</a></td></tr>
+<tr class="separator:af9d33497e3d4ec8342786f234fac6896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a789f910861acabe83383ba36cfd041e6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a789f910861acabe83383ba36cfd041e6">cached_cell_inflation_radius_</a></td></tr>
+<tr class="separator:a789f910861acabe83383ba36cfd041e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d43c961fe3696b45457a97037defb09"><td class="memItemLeft" align="right" valign="top">std::map&lt; double, std::vector&lt; <a class="el" href="classcostmap__2d_1_1_cell_data.html">CellData</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a5d43c961fe3696b45457a97037defb09">inflation_cells_</a></td></tr>
+<tr class="separator:a5d43c961fe3696b45457a97037defb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45cbbeb44dd1b73daf4111a1adfa5d69"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a45cbbeb44dd1b73daf4111a1adfa5d69">seen_</a></td></tr>
+<tr class="separator:a45cbbeb44dd1b73daf4111a1adfa5d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c1027cf8409532ca36cc3b7e681e63"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a29c1027cf8409532ca36cc3b7e681e63">seen_size_</a></td></tr>
+<tr class="separator:a29c1027cf8409532ca36cc3b7e681e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c35d2fdb226235c6eccb734c8ea369e"><td class="memItemLeft" align="right" valign="top">unsigned char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a3c35d2fdb226235c6eccb734c8ea369e">cached_costs_</a></td></tr>
+<tr class="separator:a3c35d2fdb226235c6eccb734c8ea369e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a7da01002c8f330cdb06c071fa034f"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#ae7a7da01002c8f330cdb06c071fa034f">cached_distances_</a></td></tr>
+<tr class="separator:ae7a7da01002c8f330cdb06c071fa034f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d20509f20eaab7d74ca86f5a68e170"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a01d20509f20eaab7d74ca86f5a68e170">last_min_x_</a></td></tr>
+<tr class="separator:a01d20509f20eaab7d74ca86f5a68e170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48dde484133ff6a592332473b4ccb9a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#ac48dde484133ff6a592332473b4ccb9a">last_min_y_</a></td></tr>
+<tr class="separator:ac48dde484133ff6a592332473b4ccb9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6af2f42669c6563498013ddbcc1d578"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#ae6af2f42669c6563498013ddbcc1d578">last_max_x_</a></td></tr>
+<tr class="separator:ae6af2f42669c6563498013ddbcc1d578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17493c35e11ae6bc0239c3c9fdbc369d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#a17493c35e11ae6bc0239c3c9fdbc369d">last_max_y_</a></td></tr>
+<tr class="separator:a17493c35e11ae6bc0239c3c9fdbc369d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa504d83a6236b89c0eea95f384bdca2a"><td class="memItemLeft" align="right" valign="top">dynamic_reconfigure::Server&lt; costmap_2d::InflationPluginConfig &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#aa504d83a6236b89c0eea95f384bdca2a">dsrv_</a></td></tr>
+<tr class="separator:aa504d83a6236b89c0eea95f384bdca2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebdeee9b6c8c9cad19bbc5ec0e546305"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcostmap__2d_1_1_inflation_layer.html#aebdeee9b6c8c9cad19bbc5ec0e546305">need_reinflation_</a></td></tr>
+<tr class="memdesc:aebdeee9b6c8c9cad19bbc5ec0e546305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that the entire costmap should be reinflated next time around.  <a href="classcostmap__2d_1_1_inflation_layer.html#aebdeee9b6c8c9cad19bbc5ec0e546305">更多...</a><br /></td></tr>
+<tr class="separator:aebdeee9b6c8c9cad19bbc5ec0e546305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="abdd1ac7152ebe8072dd142c8b1106631" name="abdd1ac7152ebe8072dd142c8b1106631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd1ac7152ebe8072dd142c8b1106631">&#9670;&nbsp;</a></span>InflationLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">costmap_2d::InflationLayer::InflationLayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498fcc27acce5456e672ca4ad644ebe1" name="a498fcc27acce5456e672ca4ad644ebe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498fcc27acce5456e672ca4ad644ebe1">&#9670;&nbsp;</a></span>~InflationLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual costmap_2d::InflationLayer::~InflationLayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,184,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="232,5,411,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af8596c7a8c0ffc98da47cfc99854cdd0" name="af8596c7a8c0ffc98da47cfc99854cdd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8596c7a8c0ffc98da47cfc99854cdd0">&#9670;&nbsp;</a></span>cellDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::InflationLayer::cellDistance </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>world_dist</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,184,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="247,5,416,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="232,71,431,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0_icgraph">
+<area shape="rect" title=" " alt="" coords="912,49,1091,91"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="685,49,864,91"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="685,115,864,156"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,53,411,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,53,184,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,85,637,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05a6dbb2bb36948cdc9404f7480c5261" name="a05a6dbb2bb36948cdc9404f7480c5261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a6dbb2bb36948cdc9404f7480c5261">&#9670;&nbsp;</a></span>computeCaches()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::computeCaches </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,184,80"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="232,71,411,112"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="459,13,529,39"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261_icgraph">
+<area shape="rect" title=" " alt="" coords="912,49,1091,91"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="685,49,864,91"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="685,115,864,156"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,53,411,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,53,184,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,85,637,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aded99a51737669d85ccc3f1b932061e5" name="aded99a51737669d85ccc3f1b932061e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded99a51737669d85ccc3f1b932061e5">&#9670;&nbsp;</a></span>computeCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned char costmap_2d::InflationLayer::computeCost </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>distance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据距离计算代价，大概分三个情况: </p>
+<ol type="1">
+<li>如果distance为0，即(0,0)点，则设置cached_costs_上的值为LETHAL_OBSTACLE(254)，表示为障碍物本身；</li>
+<li>如果distance ≤ 机器人足迹内切圆半径，设置值为INSCRIBED_INFLATED_OBSTACLE（253），即由于机器人有体积造成的障碍物膨胀；</li>
+<li>如果机器人足迹内切圆半径 &lt; distance ≤ cell_inflation_radius_，则以距离远近为比例（指数型）设置值。 <dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distance</td><td>障碍物单元格的距离 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>对于这个距离的代价值 </dd></dl>
+</li>
+</ol>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_cgraph">
+<area shape="rect" title="根据距离计算代价，大概分三个情况:" alt="" coords="5,5,184,47"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="232,13,303,39"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5_icgraph">
+<area shape="rect" title="根据距离计算代价，大概分三个情况:" alt="" coords="1139,112,1317,153"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="912,52,1091,93"/>
+<area shape="rect" href="inflation__tests_8cpp.html#a9f9609b5ae2cbb941f8c326f3fd90276" title=" " alt="" coords="973,119,1029,146"/>
+<area shape="rect" href="inflation__tests_8cpp.html#ace7be2b076b1bec8a1091d5f74632e28" title=" " alt="" coords="930,174,1073,201"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="685,49,864,91"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="685,115,864,156"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,53,411,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,53,184,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,85,637,127"/>
+<area shape="rect" href="inflation__tests_8cpp.html#a0b6bd7f54e38ab35deeba4833d904c61" title=" " alt="" coords="747,181,803,207"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a576a455f199de11e329366df5c1d906a" name="a576a455f199de11e329366df5c1d906a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576a455f199de11e329366df5c1d906a">&#9670;&nbsp;</a></span>costLookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char costmap_2d::InflationLayer::costLookup </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lookup pre-computed costs </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mx</td><td>The x coordinate of the current cell </td></tr>
+    <tr><td class="paramname">my</td><td>The y coordinate of the current cell </td></tr>
+    <tr><td class="paramname">src_x</td><td>The x coordinate of the source cell </td></tr>
+    <tr><td class="paramname">src_y</td><td>The y coordinate of the source cell </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a_icgraph">
+<area shape="rect" title="Lookup pre&#45;computed costs" alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a2d5d3eef9b0e8c91dfde79c0e40a65af" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ca7ac87199c293c06fa5d068c855138" name="a8ca7ac87199c293c06fa5d068c855138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca7ac87199c293c06fa5d068c855138">&#9670;&nbsp;</a></span>deleteKernels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::deleteKernels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138_icgraph">
+<area shape="rect" title=" " alt="" coords="1139,83,1317,124"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="912,49,1091,91"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a498fcc27acce5456e672ca4ad644ebe1" title=" " alt="" coords="912,115,1091,156"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#ae838b68ddf6d2dce9efca777e8455335" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="685,49,864,91"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="685,115,864,156"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,53,411,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,53,184,95"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,85,637,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a75897e88513bbaa87f773664879bb1ad" name="a75897e88513bbaa87f773664879bb1ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75897e88513bbaa87f773664879bb1ad">&#9670;&nbsp;</a></span>distanceLookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::distanceLookup </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>src_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lookup pre-computed distances </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mx</td><td>The x coordinate of the current cell </td></tr>
+    <tr><td class="paramname">my</td><td>The y coordinate of the current cell </td></tr>
+    <tr><td class="paramname">src_x</td><td>The x coordinate of the source cell </td></tr>
+    <tr><td class="paramname">src_y</td><td>The y coordinate of the source cell </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad_icgraph">
+<area shape="rect" title="Lookup pre&#45;computed distances" alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a6c750bb8214b8d1281d0b96598ff0996" title="Given an index of a cell in the costmap, place it into a list pending for obstacle inflation" alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a2d5d3eef9b0e8c91dfde79c0e40a65af" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6c750bb8214b8d1281d0b96598ff0996" name="a6c750bb8214b8d1281d0b96598ff0996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c750bb8214b8d1281d0b96598ff0996">&#9670;&nbsp;</a></span>enqueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::enqueue </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>mx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>my</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>src_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given an index of a cell in the costmap, place it into a list pending for obstacle inflation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grid</td><td>The costmap </td></tr>
+    <tr><td class="paramname">index</td><td>The index of the cell </td></tr>
+    <tr><td class="paramname">mx</td><td>The x coordinate of the cell (can be computed from the index, but saves time to store it) </td></tr>
+    <tr><td class="paramname">my</td><td>The y coordinate of the cell (can be computed from the index, but saves time to store it) </td></tr>
+    <tr><td class="paramname">src_x</td><td>The x index of the obstacle point inflation started at </td></tr>
+    <tr><td class="paramname">src_y</td><td>The y index of the obstacle point inflation started at </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_cgraph">
+<area shape="rect" title="Given an index of a cell in the costmap, place it into a list pending for obstacle inflation" alt="" coords="5,27,184,69"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="286,5,357,32"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a75897e88513bbaa87f773664879bb1ad" title="Lookup pre&#45;computed distances" alt="" coords="232,57,411,98"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996_icgraph">
+<area shape="rect" title="Given an index of a cell in the costmap, place it into a list pending for obstacle inflation" alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a2d5d3eef9b0e8c91dfde79c0e40a65af" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3dc15a0b886693f024940c42f295349f" name="a3dc15a0b886693f024940c42f295349f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc15a0b886693f024940c42f295349f">&#9670;&nbsp;</a></span>inflate_area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::inflate_area </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>master_grid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a298ae7ff737ea8b409405c51aa34dab3" name="a298ae7ff737ea8b409405c51aa34dab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298ae7ff737ea8b409405c51aa34dab3">&#9670;&nbsp;</a></span>isDiscretized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool costmap_2d::InflationLayer::isDiscretized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a740c5ab2d838eb17f8fbfa16001feff5" name="a740c5ab2d838eb17f8fbfa16001feff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740c5ab2d838eb17f8fbfa16001feff5">&#9670;&nbsp;</a></span>matchSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::matchSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implement this to make this layer match the size of the parent costmap. </p>
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1_layer.html#a2e0a0cf4fb307699c098507d718af7ff">costmap_2d::Layer</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_cgraph">
+<area shape="rect" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="5,169,184,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="232,19,411,60"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="459,71,657,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="232,136,411,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="237,201,406,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="237,267,406,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="237,332,406,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="473,5,643,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="469,136,647,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="469,201,647,243"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="705,143,776,170"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5_icgraph">
+<area shape="rect" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae838b68ddf6d2dce9efca777e8455335" name="ae838b68ddf6d2dce9efca777e8455335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae838b68ddf6d2dce9efca777e8455335">&#9670;&nbsp;</a></span>onFootprintChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::onFootprintChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> calls this whenever the footprint there changes (via <a class="el" href="classcostmap__2d_1_1_layered_costmap.html#acf16f3d3636b7fbe6e28edbd32340464" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha...">LayeredCostmap::setFootprint()</a>). Override to be notified of changes to the robot's footprint. </p>
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1_layer.html#ab65a9d55987f504e8c658bc64f61181e">costmap_2d::Layer</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335_cgraph">
+<area shape="rect" title="LayeredCostmap calls this whenever the footprint there changes (via LayeredCostmap::setFootprint())...." alt="" coords="5,169,184,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="242,71,421,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="242,136,421,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a65c556a286827d2ac883dc49285c3ff8" title="Returns the latest footprint stored with setFootprint()." alt="" coords="232,201,431,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a55a92cecc3689caf8b1e9e077788c54b" title="The radius of a circle centered at the origin of the robot which is just within all points and edges ..." alt="" coords="232,267,431,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="493,5,663,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="479,71,677,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="489,136,667,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="489,201,667,243"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="725,143,796,170"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a70aa2e82f43d319111403b8f97f37ade" name="a70aa2e82f43d319111403b8f97f37ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70aa2e82f43d319111403b8f97f37ade">&#9670;&nbsp;</a></span>onInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::onInitialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is called at the end of <a class="el" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b">initialize()</a>. Override to implement subclass-specific initialization. </p>
+<p >tf_, name_, and layered_costmap_ will all be set already when this is called. </p>
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71">costmap_2d::Layer</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_cgraph">
+<area shape="rect" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="5,169,184,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="459,201,637,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="232,139,411,180"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="685,136,864,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="912,231,1111,272"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="685,71,864,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="690,384,859,425"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="690,201,859,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="690,319,859,360"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="927,136,1096,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="922,5,1101,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="922,71,1101,112"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="1159,13,1229,39"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="459,136,637,177"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade_icgraph">
+<area shape="rect" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6137de50b68199a193c8d79022391bb" name="aa6137de50b68199a193c8d79022391bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6137de50b68199a193c8d79022391bb">&#9670;&nbsp;</a></span>reconfigureCB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::reconfigureCB </td>
+          <td>(</td>
+          <td class="paramtype">costmap_2d::InflationPluginConfig &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,104,184,145"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="232,104,411,145"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="459,71,637,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="459,136,637,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="700,5,869,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="685,71,884,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="695,136,874,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="695,201,874,243"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="932,143,1003,170"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb_icgraph">
+<area shape="rect" title=" " alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa5df966fb4dd99b8b69945408f42c2a6" name="aa5df966fb4dd99b8b69945408f42c2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5df966fb4dd99b8b69945408f42c2a6">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void costmap_2d::InflationLayer::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1_layer.html#a7e57e2de15f2ac5104465da537b60ada">costmap_2d::Layer</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,169,184,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,169,411,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a740c5ab2d838eb17f8fbfa16001feff5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="685,201,864,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,139,637,180"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="912,136,1091,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="1139,231,1337,272"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="912,71,1091,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="917,384,1086,425"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="917,201,1086,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="917,319,1086,360"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="1153,136,1323,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="1149,5,1327,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="1149,71,1327,112"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="1385,13,1456,39"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a9bb0571041eaadcf3e93a9e0b1395cbb" title="Change the values of the inflation radius parameters" alt="" coords="685,136,864,177"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9bb0571041eaadcf3e93a9e0b1395cbb" name="a9bb0571041eaadcf3e93a9e0b1395cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb0571041eaadcf3e93a9e0b1395cbb">&#9670;&nbsp;</a></span>setInflationParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::setInflationParameters </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>inflation_radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cost_scaling_factor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the values of the inflation radius parameters </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inflation_radius</td><td>The new inflation radius </td></tr>
+    <tr><td class="paramname">cost_scaling_factor</td><td>The new weight </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_cgraph">
+<area shape="rect" title="Change the values of the inflation radius parameters" alt="" coords="5,104,184,145"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#af8596c7a8c0ffc98da47cfc99854cdd0" title=" " alt="" coords="232,71,411,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a05a6dbb2bb36948cdc9404f7480c5261" title=" " alt="" coords="232,136,411,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#abffbb5c7d49fae947d70c4e6d0fbeae9" title="Given distance in the world... convert it to cells" alt="" coords="473,5,643,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="459,71,657,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aded99a51737669d85ccc3f1b932061e5" title="根据距离计算代价，大概分三个情况:" alt="" coords="469,136,647,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a8ca7ac87199c293c06fa5d068c855138" title=" " alt="" coords="469,201,647,243"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="705,143,776,170"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_icgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_icgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_icgraph" id="aclasscostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb_icgraph">
+<area shape="rect" title="Change the values of the inflation radius parameters" alt="" coords="685,5,864,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,5,637,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7834a60ae6fe62f40dbe0b5815b9b4ed" name="a7834a60ae6fe62f40dbe0b5815b9b4ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7834a60ae6fe62f40dbe0b5815b9b4ed">&#9670;&nbsp;</a></span>updateBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::updateBounds </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>robot_yaw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>min_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>min_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>max_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>max_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is called by the <a class="el" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score">LayeredCostmap</a> to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. </p>
+<p >For more details, see "Layered Costmaps for Context-Sensitive Navigation", by Lu et. Al, IROS 2014. </p>
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1_layer.html#a978fb5288265b293a6fd08787314f2f1">costmap_2d::Layer</a> .</p>
+
+</div>
+</div>
+<a id="a2d5d3eef9b0e8c91dfde79c0e40a65af" name="a2d5d3eef9b0e8c91dfde79c0e40a65af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5d3eef9b0e8c91dfde79c0e40a65af">&#9670;&nbsp;</a></span>updateCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void costmap_2d::InflationLayer::updateCosts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>master_grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actually update the underlying costmap, only within the bounds calculated during UpdateBounds(). </p>
+
+<p>重载 <a class="el" href="classcostmap__2d_1_1_layer.html#a56528644ba7d534b15ca3d73615dc12e">costmap_2d::Layer</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af_cgraph.png" border="0" usemap="#aclasscostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af_cgraph" alt=""/></div>
+<map name="aclasscostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af_cgraph" id="aclasscostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af_cgraph">
+<area shape="rect" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="5,169,184,211"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a576a455f199de11e329366df5c1d906a" title="Lookup pre&#45;computed costs" alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a6c750bb8214b8d1281d0b96598ff0996" title="Given an index of a cell in the costmap, place it into a list pending for obstacle inflation" alt="" coords="232,71,411,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="237,136,406,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="237,201,406,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="237,267,406,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="237,332,406,373"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="513,49,583,75"/>
+<area shape="rect" href="classcostmap__2d_1_1_inflation_layer.html#a75897e88513bbaa87f773664879bb1ad" title="Lookup pre&#45;computed distances" alt="" coords="459,100,637,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a789f910861acabe83383ba36cfd041e6" name="a789f910861acabe83383ba36cfd041e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a789f910861acabe83383ba36cfd041e6">&#9670;&nbsp;</a></span>cached_cell_inflation_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::InflationLayer::cached_cell_inflation_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c35d2fdb226235c6eccb734c8ea369e" name="a3c35d2fdb226235c6eccb734c8ea369e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c35d2fdb226235c6eccb734c8ea369e">&#9670;&nbsp;</a></span>cached_costs_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char** costmap_2d::InflationLayer::cached_costs_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7a7da01002c8f330cdb06c071fa034f" name="ae7a7da01002c8f330cdb06c071fa034f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a7da01002c8f330cdb06c071fa034f">&#9670;&nbsp;</a></span>cached_distances_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double** costmap_2d::InflationLayer::cached_distances_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9d33497e3d4ec8342786f234fac6896" name="af9d33497e3d4ec8342786f234fac6896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d33497e3d4ec8342786f234fac6896">&#9670;&nbsp;</a></span>cell_inflation_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int costmap_2d::InflationLayer::cell_inflation_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa504d83a6236b89c0eea95f384bdca2a" name="aa504d83a6236b89c0eea95f384bdca2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa504d83a6236b89c0eea95f384bdca2a">&#9670;&nbsp;</a></span>dsrv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic_reconfigure::Server&lt;costmap_2d::InflationPluginConfig&gt;* costmap_2d::InflationLayer::dsrv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dcffd8162d89b97e668bde22b53ec4a" name="a9dcffd8162d89b97e668bde22b53ec4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dcffd8162d89b97e668bde22b53ec4a">&#9670;&nbsp;</a></span>inflate_unknown_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::InflationLayer::inflate_unknown_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a194f58d14ff80500d724c0822c5f960a" name="a194f58d14ff80500d724c0822c5f960a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194f58d14ff80500d724c0822c5f960a">&#9670;&nbsp;</a></span>inflation_access_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::recursive_mutex* costmap_2d::InflationLayer::inflation_access_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d43c961fe3696b45457a97037defb09" name="a5d43c961fe3696b45457a97037defb09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d43c961fe3696b45457a97037defb09">&#9670;&nbsp;</a></span>inflation_cells_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;double, std::vector&lt;<a class="el" href="classcostmap__2d_1_1_cell_data.html">CellData</a>&gt; &gt; costmap_2d::InflationLayer::inflation_cells_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66302e9f414da11c156e7ce1b5e16bae" name="a66302e9f414da11c156e7ce1b5e16bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66302e9f414da11c156e7ce1b5e16bae">&#9670;&nbsp;</a></span>inflation_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::inflation_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7c7d884932a3d5f215099f29361d0a8" name="af7c7d884932a3d5f215099f29361d0a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c7d884932a3d5f215099f29361d0a8">&#9670;&nbsp;</a></span>inscribed_radius_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::inscribed_radius_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6af2f42669c6563498013ddbcc1d578" name="ae6af2f42669c6563498013ddbcc1d578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6af2f42669c6563498013ddbcc1d578">&#9670;&nbsp;</a></span>last_max_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::last_max_x_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17493c35e11ae6bc0239c3c9fdbc369d" name="a17493c35e11ae6bc0239c3c9fdbc369d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17493c35e11ae6bc0239c3c9fdbc369d">&#9670;&nbsp;</a></span>last_max_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::last_max_y_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01d20509f20eaab7d74ca86f5a68e170" name="a01d20509f20eaab7d74ca86f5a68e170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d20509f20eaab7d74ca86f5a68e170">&#9670;&nbsp;</a></span>last_min_x_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::last_min_x_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac48dde484133ff6a592332473b4ccb9a" name="ac48dde484133ff6a592332473b4ccb9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac48dde484133ff6a592332473b4ccb9a">&#9670;&nbsp;</a></span>last_min_y_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::last_min_y_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebdeee9b6c8c9cad19bbc5ec0e546305" name="aebdeee9b6c8c9cad19bbc5ec0e546305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebdeee9b6c8c9cad19bbc5ec0e546305">&#9670;&nbsp;</a></span>need_reinflation_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool costmap_2d::InflationLayer::need_reinflation_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indicates that the entire costmap should be reinflated next time around. </p>
+
+</div>
+</div>
+<a id="a05d76789a37f24cf6af5d82e900a5852" name="a05d76789a37f24cf6af5d82e900a5852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d76789a37f24cf6af5d82e900a5852">&#9670;&nbsp;</a></span>resolution_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::resolution_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45cbbeb44dd1b73daf4111a1adfa5d69" name="a45cbbeb44dd1b73daf4111a1adfa5d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45cbbeb44dd1b73daf4111a1adfa5d69">&#9670;&nbsp;</a></span>seen_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool* costmap_2d::InflationLayer::seen_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29c1027cf8409532ca36cc3b7e681e63" name="a29c1027cf8409532ca36cc3b7e681e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c1027cf8409532ca36cc3b7e681e63">&#9670;&nbsp;</a></span>seen_size_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int costmap_2d::InflationLayer::seen_size_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a507bd49c3aca392d91efcabfe999cc0d" name="a507bd49c3aca392d91efcabfe999cc0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507bd49c3aca392d91efcabfe999cc0d">&#9670;&nbsp;</a></span>weight_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double costmap_2d::InflationLayer::weight_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>costmap_2d/include/costmap_2d/<a class="el" href="inflation__layer_8h_source.html">inflation_layer.h</a></li>
+<li>costmap_2d/plugins/<a class="el" href="inflation__layer_8cpp.html">inflation_layer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

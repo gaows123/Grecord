@@ -1,0 +1,7 @@
+<map id="base_local_planner::PointGrid::ptInPolygon" name="base_local_planner::PointGrid::ptInPolygon">
+<area shape="rect" id="node1" title="Check if a point is in a polygon" alt="" coords="549,39,711,80"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#ae9398ded210128450fbdb86f231cf588" title="检查有没有网格点落在机器人footprint中" alt="" coords="104,5,271,47"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_point_grid.html#afb743eed27facd44c2ed0e59e9f04449" title="Removes points from the grid that lie within the polygon" alt="" coords="319,63,501,119"/>
+<area shape="rect" id="node3" href="$point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,46,56,73"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="105,71,269,112"/>
+</map>

@@ -1,0 +1,107 @@
+\hypertarget{observation__buffer_8h_source}{}\doxysection{observation\+\_\+buffer.\+h}
+\label{observation__buffer_8h_source}\index{costmap\_2d/include/costmap\_2d/observation\_buffer.h@{costmap\_2d/include/costmap\_2d/observation\_buffer.h}}
+\mbox{\hyperlink{observation__buffer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_OBSERVATION\_BUFFER\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define COSTMAP\_2D\_OBSERVATION\_BUFFER\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <ros/time.h>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{observation_8h}{costmap\_2d/observation.h}}>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <tf2\_ros/buffer.h>}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <sensor\_msgs/PointCloud2.h>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{// Thread support}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{58 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer}{ObservationBuffer}}}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{60 \textcolor{keyword}{public}:}
+\DoxyCodeLine{75   \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a6a6840d481c0f6fabf5f9b2788bbd205}{ObservationBuffer}}(std::string topic\_name, \textcolor{keywordtype}{double} observation\_keep\_time, \textcolor{keywordtype}{double} expected\_update\_rate,}
+\DoxyCodeLine{76                     \textcolor{keywordtype}{double} min\_obstacle\_height, \textcolor{keywordtype}{double} max\_obstacle\_height, \textcolor{keywordtype}{double} obstacle\_range,}
+\DoxyCodeLine{77                     \textcolor{keywordtype}{double} raytrace\_range, tf2\_ros::Buffer\& tf2\_buffer, std::string global\_frame,}
+\DoxyCodeLine{78                     std::string sensor\_frame, \textcolor{keywordtype}{double} tf\_tolerance);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83   \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_ad14ce56a9f57bddfecd87d0c2cc2201d}{\string~ObservationBuffer}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{92   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a078a1fab09eb0501fa9f205f818c4c73}{setGlobalFrame}}(\textcolor{keyword}{const} std::string new\_global\_frame);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{99   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_af1bdb755c1ed181b2108fc26826bc273}{bufferCloud}}(\textcolor{keyword}{const} sensor\_msgs::PointCloud2\& cloud);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{105   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aa89ff474cd6785349e3c0b2f49e2d738}{getObservations}}(std::vector<Observation>\& observations);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{111   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a169930366d75cae5d78e7b069be4a042}{isCurrent}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{116   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_af6e43c89ccb0db68cd1bad60108a8167}{lock}}()}
+\DoxyCodeLine{117   \{}
+\DoxyCodeLine{118     \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a85f23aec440e01fac3ac9f9bdaebbdcc}{lock\_}}.lock();}
+\DoxyCodeLine{119   \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{124   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a5ccb558d025fd254ab9e1bf89f6d82d8}{unlock}}()}
+\DoxyCodeLine{125   \{}
+\DoxyCodeLine{126     \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a85f23aec440e01fac3ac9f9bdaebbdcc}{lock\_}}.unlock();}
+\DoxyCodeLine{127   \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{132   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aeb595ff9e1f56003644f4b0743020cd3}{resetLastUpdated}}();}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{keyword}{private}:}
+\DoxyCodeLine{138   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a65b02e4c2e54d86b8e110fbabdab0659}{purgeStaleObservations}}();}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140   tf2\_ros::Buffer\& \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a73444bf190531d9180e474e9e608b32b}{tf2\_buffer\_}};}
+\DoxyCodeLine{141   \textcolor{keyword}{const} ros::Duration \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a29bc32d920027d37eaeb49e0975ae337}{observation\_keep\_time\_}};}
+\DoxyCodeLine{142   \textcolor{keyword}{const} ros::Duration \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a10d0c3bc749c7a1710526616b0210cd3}{expected\_update\_rate\_}};}
+\DoxyCodeLine{143   ros::Time \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a7c9909af13ffca0a992756d4704b05d6}{last\_updated\_}};}
+\DoxyCodeLine{144   std::string \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a92c26d155177c15f23501fef11153afa}{global\_frame\_}};}
+\DoxyCodeLine{145   std::string \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aab699cc1c65c2bda7fe0e9e1a1f6a380}{sensor\_frame\_}};}
+\DoxyCodeLine{146   std::list<Observation> \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a9f2bf57b5de5b5dd70299dad223b0689}{observation\_list\_}};}
+\DoxyCodeLine{147   std::string \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a459fda9f6de13c20340ede0e85a5c26c}{topic\_name\_}};}
+\DoxyCodeLine{148   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aa4ac1ea1cf1ac01fd1a0cb3f779e623c}{min\_obstacle\_height\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a238db75220517e998952c2b411f5ebae}{max\_obstacle\_height\_}};}
+\DoxyCodeLine{149   boost::recursive\_mutex \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a85f23aec440e01fac3ac9f9bdaebbdcc}{lock\_}};  }
+\DoxyCodeLine{150   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a688f4520b698c8ce3b766212e217c2a0}{obstacle\_range\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_af47e0ad64246605f41dacdcc7fca4edf}{raytrace\_range\_}};}
+\DoxyCodeLine{151   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a236a04bad7c2cb033ae307e7b509e430}{tf\_tolerance\_}};}
+\DoxyCodeLine{152 \};}
+\DoxyCodeLine{153 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_OBSERVATION\_BUFFER\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="move_base::MoveBase::publishZeroVelocity" name="move_base::MoveBase::publishZeroVelocity">
+<area shape="rect" id="node1" title="Publishes a velocity command of zero to the base" alt="" coords="832,59,991,100"/>
+<area shape="rect" id="node2" href="$classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,92,371,133"/>
+<area shape="rect" id="node4" href="$classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="419,92,577,133"/>
+<area shape="rect" id="node5" href="$classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="212,5,371,47"/>
+<area shape="rect" id="node6" href="$classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="625,147,784,188"/>
+<area shape="rect" id="node3" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,92,164,133"/>
+<area shape="rect" id="node7" href="$classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="419,209,577,251"/>
+</map>

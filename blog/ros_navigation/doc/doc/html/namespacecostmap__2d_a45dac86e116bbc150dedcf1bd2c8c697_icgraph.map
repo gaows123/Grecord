@@ -1,0 +1,6 @@
+<map id="costmap_2d::getNumberFromXMLRPC" name="costmap_2d::getNumberFromXMLRPC">
+<area shape="rect" id="node1" title=" " alt="" coords="715,5,909,47"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#a80f6a207189166bd1c1375c46fa23abb" title="Create the footprint from the given XmlRpcValue." alt="" coords="483,5,667,47"/>
+<area shape="rect" id="node3" href="$namespacecostmap__2d.html#a983825dbb0ea5cf30ea3fa2763375e98" title="Read the ros&#45;params &quot;footprint&quot; and/or &quot;robot_radius&quot; from the given NodeHandle using searchParam() t..." alt="" coords="251,5,435,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,5,203,47"/>
+</map>

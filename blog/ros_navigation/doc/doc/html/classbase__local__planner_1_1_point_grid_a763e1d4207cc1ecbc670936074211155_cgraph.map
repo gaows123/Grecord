@@ -1,0 +1,4 @@
+<map id="base_local_planner::PointGrid::ptInScan" name="base_local_planner::PointGrid::ptInScan">
+<area shape="rect" id="node1" title="Checks to see if a point is within a laser scan specification" alt="" coords="5,5,149,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="197,5,331,47"/>
+</map>

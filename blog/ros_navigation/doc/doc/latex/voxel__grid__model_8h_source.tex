@@ -1,0 +1,132 @@
+\hypertarget{voxel__grid__model_8h_source}{}\doxysection{voxel\+\_\+grid\+\_\+model.\+h}
+\label{voxel__grid__model_8h_source}\index{base\_local\_planner/include/base\_local\_planner/voxel\_grid\_model.h@{base\_local\_planner/include/base\_local\_planner/voxel\_grid\_model.h}}
+\mbox{\hyperlink{voxel__grid__model_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef TRAJECTORY\_ROLLOUT\_VOXEL\_WORLD\_MODEL\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define TRAJECTORY\_ROLLOUT\_VOXEL\_WORLD\_MODEL\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <cfloat>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{observation_8h}{costmap\_2d/observation.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{world__model_8h}{base\_local\_planner/world\_model.h}}>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{//voxel grid stuff}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{voxel__grid_8h}{voxel\_grid/voxel\_grid.h}}>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{55   \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model}{VoxelGridModel}} : \textcolor{keyword}{public} \mbox{\hyperlink{classbase__local__planner_1_1_world_model}{WorldModel}} \{}
+\DoxyCodeLine{56     \textcolor{keyword}{public}:}
+\DoxyCodeLine{70       \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a41482cba0c408053ef433d486693d8b4}{VoxelGridModel}}(\textcolor{keywordtype}{double} size\_x, \textcolor{keywordtype}{double} size\_y, \textcolor{keywordtype}{double} size\_z, \textcolor{keywordtype}{double} xy\_resolution, \textcolor{keywordtype}{double} z\_resolution,}
+\DoxyCodeLine{71           \textcolor{keywordtype}{double} origin\_x, \textcolor{keywordtype}{double} origin\_y, \textcolor{keywordtype}{double} origin\_z, \textcolor{keywordtype}{double} max\_z, \textcolor{keywordtype}{double} obstacle\_range);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{76       \textcolor{keyword}{virtual} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ab9d0a3a6fa8ea481c8b3911b90236c3b}{\string~VoxelGridModel}}()\{\}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{86       \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_affcef4b1c4c95dd4209d36bd0d24fc14}{footprintCost}}(\textcolor{keyword}{const} geometry\_msgs::Point\& position, \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint,}
+\DoxyCodeLine{87           \textcolor{keywordtype}{double} inscribed\_radius, \textcolor{keywordtype}{double} circumscribed\_radius);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89       \textcolor{keyword}{using} \mbox{\hyperlink{classbase__local__planner_1_1_world_model_a36d4c808bc441e2b87b0ac038099993a}{WorldModel::footprintCost}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{97       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a3a5b2c042a813dc06a9fdbfcd0bd6291}{updateWorld}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint,}
+\DoxyCodeLine{98           \textcolor{keyword}{const} std::vector<costmap\_2d::Observation>\& observations, \textcolor{keyword}{const} std::vector<PlanarLaserScan>\& laser\_scans);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{104       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae64342a63e8e7360997aba566b5f0ed1}{getPoints}}(sensor\_msgs::PointCloud2\& cloud);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{keyword}{private}:}
+\DoxyCodeLine{115       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a5d23209def60ddb1e49b2ab5b38b57b1}{lineCost}}(\textcolor{keywordtype}{int} x0, \textcolor{keywordtype}{int} x1, \textcolor{keywordtype}{int} y0, \textcolor{keywordtype}{int} y1);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{123       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a4fd267d8b1e15639cde041ce9a57c505}{pointCost}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a1ec57951ccb153b2a2a2e997e703e13f}{removePointsInScanBoundry}}(\textcolor{keyword}{const} \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan}{PlanarLaserScan}}\& laser\_scan, \textcolor{keywordtype}{double} raytrace\_range);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127       \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a3a709a7c0a5b7715cc4ffd3f5b9ce739}{worldToMap3D}}(\textcolor{keywordtype}{double} wx, \textcolor{keywordtype}{double} wy, \textcolor{keywordtype}{double} wz, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& my, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& mz)\{}
+\DoxyCodeLine{128         \textcolor{keywordflow}{if}(wx < \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a50ccc7fead8cd105840c9858c5ef001f}{origin\_x\_}} || wy < \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae2d0311c5a1c6110b929d0111fb1ce79}{origin\_y\_}} || wz < \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a867dabbafce30cdaa5f7f736445abfeb}{origin\_z\_}})}
+\DoxyCodeLine{129           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{130         mx = (int) ((wx -\/ \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a50ccc7fead8cd105840c9858c5ef001f}{origin\_x\_}}) / \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}});}
+\DoxyCodeLine{131         my = (int) ((wy -\/ \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae2d0311c5a1c6110b929d0111fb1ce79}{origin\_y\_}}) / \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}});}
+\DoxyCodeLine{132         mz = (int) ((wz -\/ \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a867dabbafce30cdaa5f7f736445abfeb}{origin\_z\_}}) / \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a30df42099cd22d24e1b7d9900c1b60e0}{z\_resolution\_}});}
+\DoxyCodeLine{133         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{134       \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136       \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a186435fb11fac84f700c65c9d09f1c66}{worldToMap2D}}(\textcolor{keywordtype}{double} wx, \textcolor{keywordtype}{double} wy, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& my)\{}
+\DoxyCodeLine{137         \textcolor{keywordflow}{if}(wx < \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a50ccc7fead8cd105840c9858c5ef001f}{origin\_x\_}} || wy < \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae2d0311c5a1c6110b929d0111fb1ce79}{origin\_y\_}})}
+\DoxyCodeLine{138           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{139         mx = (int) ((wx -\/ \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a50ccc7fead8cd105840c9858c5ef001f}{origin\_x\_}}) / \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}});}
+\DoxyCodeLine{140         my = (int) ((wy -\/ \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae2d0311c5a1c6110b929d0111fb1ce79}{origin\_y\_}}) / \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}});}
+\DoxyCodeLine{141         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{142       \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144       \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_acef8400483d48cae6e563cfcb79bbc7c}{mapToWorld3D}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mz, \textcolor{keywordtype}{double}\& wx, \textcolor{keywordtype}{double}\& wy, \textcolor{keywordtype}{double}\& wz)\{}
+\DoxyCodeLine{145         \textcolor{comment}{//returns the center point of the cell}}
+\DoxyCodeLine{146         wx = \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a50ccc7fead8cd105840c9858c5ef001f}{origin\_x\_}} + (mx + 0.5) * \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}};}
+\DoxyCodeLine{147         wy = \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae2d0311c5a1c6110b929d0111fb1ce79}{origin\_y\_}} + (my + 0.5) * \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}};}
+\DoxyCodeLine{148         wz = \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a867dabbafce30cdaa5f7f736445abfeb}{origin\_z\_}} + (mz + 0.5) * \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a30df42099cd22d24e1b7d9900c1b60e0}{z\_resolution\_}};}
+\DoxyCodeLine{149       \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151       \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_af8f524f9f74e572c83b04ce82f5a4608}{mapToWorld2D}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my, \textcolor{keywordtype}{double}\& wx, \textcolor{keywordtype}{double}\& wy)\{}
+\DoxyCodeLine{152         \textcolor{comment}{//returns the center point of the cell}}
+\DoxyCodeLine{153         wx = \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a50ccc7fead8cd105840c9858c5ef001f}{origin\_x\_}} + (mx + 0.5) * \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}};}
+\DoxyCodeLine{154         wy = \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae2d0311c5a1c6110b929d0111fb1ce79}{origin\_y\_}} + (my + 0.5) * \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}};}
+\DoxyCodeLine{155       \}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157       \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a1c2c7a677f931ae95969ebf5bfcccd3d}{dist}}(\textcolor{keywordtype}{double} x0, \textcolor{keywordtype}{double} y0, \textcolor{keywordtype}{double} z0, \textcolor{keywordtype}{double} x1, \textcolor{keywordtype}{double} y1, \textcolor{keywordtype}{double} z1)\{}
+\DoxyCodeLine{158         \textcolor{keywordflow}{return} sqrt((x1 -\/ x0) * (x1 -\/ x0) + (y1 -\/ y0) * (y1 -\/ y0) + (z1 -\/ z0) * (z1 -\/ z0));}
+\DoxyCodeLine{159       \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161       \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a393524da3d207d7d7d1ac4979fa759ac}{insert}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt)\{}
+\DoxyCodeLine{162         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cell\_x, cell\_y, cell\_z;}
+\DoxyCodeLine{163         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a3a709a7c0a5b7715cc4ffd3f5b9ce739}{worldToMap3D}}(pt.x, pt.y, pt.z, cell\_x, cell\_y, cell\_z))}
+\DoxyCodeLine{164           \textcolor{keywordflow}{return};}
+\DoxyCodeLine{165         \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ad8bd0fed79e42f431c92cb8916e049f9}{obstacle\_grid\_}}.\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_af05c08221c341915183f8b78bb267b89}{markVoxel}}(cell\_x, cell\_y, cell\_z);}
+\DoxyCodeLine{166       \}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168       \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid}{voxel\_grid::VoxelGrid}} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ad8bd0fed79e42f431c92cb8916e049f9}{obstacle\_grid\_}};}
+\DoxyCodeLine{169       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a9a2a512520fcb62c8ea1f1f8c91094b9}{xy\_resolution\_}};}
+\DoxyCodeLine{170       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a30df42099cd22d24e1b7d9900c1b60e0}{z\_resolution\_}};}
+\DoxyCodeLine{171       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a50ccc7fead8cd105840c9858c5ef001f}{origin\_x\_}};}
+\DoxyCodeLine{172       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_ae2d0311c5a1c6110b929d0111fb1ce79}{origin\_y\_}};}
+\DoxyCodeLine{173       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a867dabbafce30cdaa5f7f736445abfeb}{origin\_z\_}};}
+\DoxyCodeLine{174       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_aa9d5f978d8eb185e9fcdc325212fda46}{max\_z\_}};  }
+\DoxyCodeLine{175       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_voxel_grid_model_a61791d30cb1403e93f3e3659743abd74}{sq\_obstacle\_range\_}};  }
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177   \};}
+\DoxyCodeLine{178 \};}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

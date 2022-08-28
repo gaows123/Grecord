@@ -1,0 +1,1265 @@
+\hypertarget{classcostmap__2d_1_1_costmap2_d}{}\doxysection{costmap\+\_\+2d\+::Costmap2\+D类 参考}
+\label{classcostmap__2d_1_1_costmap2_d}\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+
+
+A 2D costmap provides a mapping between points in the world and their associated \char`\"{}costs\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+2d.\+h$>$}
+
+
+
+类 costmap\+\_\+2d\+::Costmap2D 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell}{Mark\+Cell}}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells}{Polygon\+Outline\+Cells}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 类型}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::recursive\+\_\+mutex \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a5c41d42532693430c002c16258925d82}{Costmap2D}} (unsigned int cells\+\_\+size\+\_\+x, unsigned int cells\+\_\+size\+\_\+y, double resolution, double origin\+\_\+x, double origin\+\_\+y, unsigned char default\+\_\+value=0)
+\begin{DoxyCompactList}\small\item\em 构造代价地图 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a430191c66018db89e5a65fb823db35d8}{Costmap2D}} (const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&map)
+\begin{DoxyCompactList}\small\item\em Copy constructor for a costmap, creates a copy efficiently \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a404b9898ed689c8f6b1eb3503c358db0}{operator=}} (const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&map)
+\begin{DoxyCompactList}\small\item\em Overloaded assignment operator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a8fb9538b17743071ea041b32bcc3b381}{copy\+Costmap\+Window}} (const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&map, double win\+\_\+origin\+\_\+x, double win\+\_\+origin\+\_\+y, double win\+\_\+size\+\_\+x, double win\+\_\+size\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Turn this costmap into a copy of a window of a costmap passed in \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a1ec52799b2b673306902fcfe01285d7a}{Costmap2D}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a3087bd649bca6c2fb4f795d433e93f3a}{$\sim$\+Costmap2D}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27}{get\+Cost}} (unsigned int mx, unsigned int my) const
+\begin{DoxyCompactList}\small\item\em Get the cost of a cell in the costmap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ae1703900adbbf1e0d929cec0735a8b0e}{set\+Cost}} (unsigned int mx, unsigned int my, unsigned char cost)
+\begin{DoxyCompactList}\small\item\em Set the cost of a cell in the costmap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a8e39feaa7ee4446347674b3701a1394c}{map\+To\+World}} (unsigned int mx, unsigned int my, double \&wx, double \&wy) const
+\begin{DoxyCompactList}\small\item\em Convert from map coordinates to world coordinates \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a9a2c824d4cd3bcad3ac3435d81982986}{world\+To\+Map}} (double wx, double wy, unsigned int \&mx, unsigned int \&my) const
+\begin{DoxyCompactList}\small\item\em Convert from world coordinates to map coordinates \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a2da39cb06d192795614df9c2bf00692f}{world\+To\+Map\+No\+Bounds}} (double wx, double wy, int \&mx, int \&my) const
+\begin{DoxyCompactList}\small\item\em Convert from world coordinates to map coordinates without checking for legal bounds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ae412173f42af7edba9996f86754b7cbf}{world\+To\+Map\+Enforce\+Bounds}} (double wx, double wy, int \&mx, int \&my) const
+\begin{DoxyCompactList}\small\item\em Convert from world coordinates to map coordinates, constraining results to legal bounds. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a57d2ea3f3a039d72640c159cd149ff9d}{get\+Index}} (unsigned int mx, unsigned int my) const
+\begin{DoxyCompactList}\small\item\em Given two map coordinates... compute the associated index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa10c1734472f485473302598113fcddc}{index\+To\+Cells}} (unsigned int index, unsigned int \&mx, unsigned int \&my) const
+\begin{DoxyCompactList}\small\item\em Given an index... compute the associated map coordinates \end{DoxyCompactList}\item 
+unsigned char $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a951c218252d6e66e23062a123dbde34d}{get\+Char\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Will return a pointer to the underlying unsigned char array used as the costmap \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a615a4186649d8970111f8a356906b320}{get\+Size\+In\+CellsX}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the x size of the costmap in cells \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a702f4ed109f94c8513500cf97ff066a4}{get\+Size\+In\+CellsY}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the y size of the costmap in cells \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a645ea4720d5cab8bcf662687cc81d087}{get\+Size\+In\+MetersX}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the x size of the costmap in meters \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_afb1d6cdc01d77452175487955e6aff4d}{get\+Size\+In\+MetersY}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the y size of the costmap in meters \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a9aae81be964f5fff675f9a10c3bf2e82}{get\+OriginX}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the x origin of the costmap \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a686124b010e121eb87629ff17a032d7f}{get\+OriginY}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the y origin of the costmap \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ade55f512e27c62cec28a3de5ca775759}{get\+Resolution}} () const
+\begin{DoxyCompactList}\small\item\em Accessor for the resolution of the costmap \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a8a9f535f98f1ba4c0a74f88aa706bcd2}{set\+Default\+Value}} (unsigned char c)
+\item 
+unsigned char \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a35fbb86d10502ab91fb6e133c1364cd9}{get\+Default\+Value}} ()
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_afb8a42c3810e796107ed04c0ca3cbf90}{set\+Convex\+Polygon\+Cost}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&polygon, unsigned char cost\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the cost of a convex polygon to a desired value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ad0c6f7cb8e11569a02f873c545acec90}{polygon\+Outline\+Cells}} (const std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&polygon, std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&polygon\+\_\+cells)
+\begin{DoxyCompactList}\small\item\em Get the map cells that make up the outline of a polygon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa3c49f2d63f6edfb7396d1b0c79a4b12}{convex\+Fill\+Cells}} (const std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&polygon, std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&polygon\+\_\+cells)
+\begin{DoxyCompactList}\small\item\em Get the map cells that fill a convex polygon \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a5ca05c95f95e1408ca9e23d2e7f8987a}{update\+Origin}} (double new\+\_\+origin\+\_\+x, double new\+\_\+origin\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Move the origin of the costmap to a new location.... keeping data when it can \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a04cd3558a672159a3ad1b151b1d19661}{save\+Map}} (std\+::string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Save the costmap out to a pgm file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a95bae6eccd820a77d8040562e2a51118}{resize\+Map}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y, double resolution, double origin\+\_\+x, double origin\+\_\+y)
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aba344550cbc08bcc3a54c64290f8f568}{reset\+Map}} (unsigned int x0, unsigned int y0, unsigned int xn, unsigned int yn)
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_abffbb5c7d49fae947d70c4e6d0fbeae9}{cell\+Distance}} (double world\+\_\+dist)
+\begin{DoxyCompactList}\small\item\em Given distance in the world... convert it to cells \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\+\_\+t}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a48c32f1cbe1cae7d2fb6a0a96192db21}{get\+Mutex}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename data\+\_\+type $>$ }\\void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ab857ec41de2e14d601b85bbf6497b612}{copy\+Map\+Region}} (data\+\_\+type $\ast$source\+\_\+map, unsigned int sm\+\_\+lower\+\_\+left\+\_\+x, unsigned int sm\+\_\+lower\+\_\+left\+\_\+y, unsigned int sm\+\_\+size\+\_\+x, data\+\_\+type $\ast$dest\+\_\+map, unsigned int dm\+\_\+lower\+\_\+left\+\_\+x, unsigned int dm\+\_\+lower\+\_\+left\+\_\+y, unsigned int dm\+\_\+size\+\_\+x, unsigned int region\+\_\+size\+\_\+x, unsigned int region\+\_\+size\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Copy a region of a source map into a destination map \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af536407a80cef61e20226c28dbef9eee}{delete\+Maps}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the costmap, static\+\_\+map, and markers data structures \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ab4424e85f6daaf91eaf455e4bb241c19}{reset\+Maps}} ()
+\begin{DoxyCompactList}\small\item\em Resets the costmap and static\+\_\+map to be unknown space \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a1da91220df45a19376a3e3df3a517c27}{init\+Maps}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Initializes the costmap, static\+\_\+map, and markers data structures \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action\+Type $>$ }\\void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af1d619d9b49b6851cb0a33de4e39ec78}{raytrace\+Line}} (Action\+Type at, unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, unsigned int max\+\_\+length=UINT\+\_\+\+MAX)
+\begin{DoxyCompactList}\small\item\em Raytrace a line and apply some action at each step \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\+\_\+x\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ad25df12283aa78c43878e24633381100}{size\+\_\+y\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a3d74d58b31973def7e407c7300f1115c}{resolution\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a9005fb139b987665bfa799c631953f00}{origin\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a53bc8ed50d62760245f879d66c5567db}{origin\+\_\+y\+\_\+}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a34c8633b0dfec7481300d401d33010c7}{costmap\+\_\+}}
+\item 
+unsigned char \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af0715f46aa3d358da411f0060e0fe8d2}{default\+\_\+value\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Action\+Type $>$ }\\void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a54462e95337134adf0a59785b39b57f6}{bresenham2D}} (Action\+Type at, unsigned int abs\+\_\+da, unsigned int abs\+\_\+db, int error\+\_\+b, int offset\+\_\+a, int offset\+\_\+b, unsigned int offset, unsigned int max\+\_\+length)
+\begin{DoxyCompactList}\small\item\em A 2D implementation of Bresenham\textquotesingle{}s raytracing algorithm... applies an action at each step 实现了 对于离散的平面点，指定两个点，找到两点之间的其他点，使得这些中间组成一个尽可能趋近直线的点集。 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a947041f50d5fb1a44c3fd0601c4fc608}{sign}} (int x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\+\_\+t}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a509ef0191dacd55f6348f789236d904d}{access\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{友元}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a9f13f59f234edd1db20196987ac18fcd}{Costmap\+Tester}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A 2D costmap provides a mapping between points in the world and their associated \char`\"{}costs\char`\"{}. 
+
+\doxysubsection{成员类型定义说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}\label{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!mutex\_t@{mutex\_t}}
+\index{mutex\_t@{mutex\_t}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{mutex\_t}{mutex\_t}}
+{\footnotesize\ttfamily typedef boost\+::recursive\+\_\+mutex \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{costmap\+\_\+2d\+::\+Costmap2\+D\+::mutex\+\_\+t}}}
+
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a5c41d42532693430c002c16258925d82}\label{classcostmap__2d_1_1_costmap2_d_a5c41d42532693430c002c16258925d82}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!Costmap2D@{Costmap2D}}
+\index{Costmap2D@{Costmap2D}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{Costmap2D()}{Costmap2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+D\+::\+Costmap2D (\begin{DoxyParamCaption}\item[{unsigned int}]{cells\+\_\+size\+\_\+x,  }\item[{unsigned int}]{cells\+\_\+size\+\_\+y,  }\item[{double}]{resolution,  }\item[{double}]{origin\+\_\+x,  }\item[{double}]{origin\+\_\+y,  }\item[{unsigned char}]{default\+\_\+value = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+构造代价地图 
+
+
+\begin{DoxyParams}{参数}
+{\em cells\+\_\+size\+\_\+x} & The x size of the map in cells \\
+\hline
+{\em cells\+\_\+size\+\_\+y} & The y size of the map in cells \\
+\hline
+{\em resolution} & The resolution of the map in meters/cell \\
+\hline
+{\em origin\+\_\+x} & The x origin of the map \\
+\hline
+{\em origin\+\_\+y} & The y origin of the map \\
+\hline
+{\em default\+\_\+value} & Default Value \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a5c41d42532693430c002c16258925d82_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a430191c66018db89e5a65fb823db35d8}\label{classcostmap__2d_1_1_costmap2_d_a430191c66018db89e5a65fb823db35d8}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!Costmap2D@{Costmap2D}}
+\index{Costmap2D@{Costmap2D}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{Costmap2D()}{Costmap2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+D\+::\+Costmap2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for a costmap, creates a copy efficiently 
+
+
+\begin{DoxyParams}{参数}
+{\em map} & The costmap to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a1ec52799b2b673306902fcfe01285d7a}\label{classcostmap__2d_1_1_costmap2_d_a1ec52799b2b673306902fcfe01285d7a}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!Costmap2D@{Costmap2D}}
+\index{Costmap2D@{Costmap2D}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{Costmap2D()}{Costmap2D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+D\+::\+Costmap2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a3087bd649bca6c2fb4f795d433e93f3a}\label{classcostmap__2d_1_1_costmap2_d_a3087bd649bca6c2fb4f795d433e93f3a}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!````~Costmap2D@{$\sim$Costmap2D}}
+\index{````~Costmap2D@{$\sim$Costmap2D}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{$\sim$Costmap2D()}{~Costmap2D()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+D\+::$\sim$\+Costmap2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a3087bd649bca6c2fb4f795d433e93f3a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a54462e95337134adf0a59785b39b57f6}\label{classcostmap__2d_1_1_costmap2_d_a54462e95337134adf0a59785b39b57f6}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!bresenham2D@{bresenham2D}}
+\index{bresenham2D@{bresenham2D}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{bresenham2D()}{bresenham2D()}}
+{\footnotesize\ttfamily template$<$class Action\+Type $>$ \\
+void costmap\+\_\+2d\+::\+Costmap2\+D\+::bresenham2D (\begin{DoxyParamCaption}\item[{Action\+Type}]{at,  }\item[{unsigned int}]{abs\+\_\+da,  }\item[{unsigned int}]{abs\+\_\+db,  }\item[{int}]{error\+\_\+b,  }\item[{int}]{offset\+\_\+a,  }\item[{int}]{offset\+\_\+b,  }\item[{unsigned int}]{offset,  }\item[{unsigned int}]{max\+\_\+length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+A 2D implementation of Bresenham\textquotesingle{}s raytracing algorithm... applies an action at each step 实现了 对于离散的平面点，指定两个点，找到两点之间的其他点，使得这些中间组成一个尽可能趋近直线的点集。 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a54462e95337134adf0a59785b39b57f6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_abffbb5c7d49fae947d70c4e6d0fbeae9}\label{classcostmap__2d_1_1_costmap2_d_abffbb5c7d49fae947d70c4e6d0fbeae9}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!cellDistance@{cellDistance}}
+\index{cellDistance@{cellDistance}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{cellDistance()}{cellDistance()}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+D\+::cell\+Distance (\begin{DoxyParamCaption}\item[{double}]{world\+\_\+dist }\end{DoxyParamCaption})}
+
+
+
+Given distance in the world... convert it to cells 
+
+
+\begin{DoxyParams}{参数}
+{\em world\+\_\+dist} & The world distance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The equivalent cell distance 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_abffbb5c7d49fae947d70c4e6d0fbeae9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_aa3c49f2d63f6edfb7396d1b0c79a4b12}\label{classcostmap__2d_1_1_costmap2_d_aa3c49f2d63f6edfb7396d1b0c79a4b12}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!convexFillCells@{convexFillCells}}
+\index{convexFillCells@{convexFillCells}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{convexFillCells()}{convexFillCells()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::convex\+Fill\+Cells (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&}]{polygon,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&}]{polygon\+\_\+cells }\end{DoxyParamCaption})}
+
+
+
+Get the map cells that fill a convex polygon 
+
+
+\begin{DoxyParams}{参数}
+{\em polygon} & The polygon in map coordinates to rasterize \\
+\hline
+{\em polygon\+\_\+cells} & Will be set to the cells that fill the polygon \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_aa3c49f2d63f6edfb7396d1b0c79a4b12_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_aa3c49f2d63f6edfb7396d1b0c79a4b12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a8fb9538b17743071ea041b32bcc3b381}\label{classcostmap__2d_1_1_costmap2_d_a8fb9538b17743071ea041b32bcc3b381}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!copyCostmapWindow@{copyCostmapWindow}}
+\index{copyCostmapWindow@{copyCostmapWindow}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{copyCostmapWindow()}{copyCostmapWindow()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+D\+::copy\+Costmap\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&}]{map,  }\item[{double}]{win\+\_\+origin\+\_\+x,  }\item[{double}]{win\+\_\+origin\+\_\+y,  }\item[{double}]{win\+\_\+size\+\_\+x,  }\item[{double}]{win\+\_\+size\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Turn this costmap into a copy of a window of a costmap passed in 
+
+
+\begin{DoxyParams}{参数}
+{\em map} & The costmap to copy \\
+\hline
+{\em win\+\_\+origin\+\_\+x} & The x origin (lower left corner) for the window to copy, in meters \\
+\hline
+{\em win\+\_\+origin\+\_\+y} & The y origin (lower left corner) for the window to copy, in meters \\
+\hline
+{\em win\+\_\+size\+\_\+x} & The x size of the window, in meters \\
+\hline
+{\em win\+\_\+size\+\_\+y} & The y size of the window, in meters \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a8fb9538b17743071ea041b32bcc3b381_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classcostmap__2d_1_1_costmap2_d_a8fb9538b17743071ea041b32bcc3b381_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_ab857ec41de2e14d601b85bbf6497b612}\label{classcostmap__2d_1_1_costmap2_d_ab857ec41de2e14d601b85bbf6497b612}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!copyMapRegion@{copyMapRegion}}
+\index{copyMapRegion@{copyMapRegion}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{copyMapRegion()}{copyMapRegion()}}
+{\footnotesize\ttfamily template$<$typename data\+\_\+type $>$ \\
+void costmap\+\_\+2d\+::\+Costmap2\+D\+::copy\+Map\+Region (\begin{DoxyParamCaption}\item[{data\+\_\+type $\ast$}]{source\+\_\+map,  }\item[{unsigned int}]{sm\+\_\+lower\+\_\+left\+\_\+x,  }\item[{unsigned int}]{sm\+\_\+lower\+\_\+left\+\_\+y,  }\item[{unsigned int}]{sm\+\_\+size\+\_\+x,  }\item[{data\+\_\+type $\ast$}]{dest\+\_\+map,  }\item[{unsigned int}]{dm\+\_\+lower\+\_\+left\+\_\+x,  }\item[{unsigned int}]{dm\+\_\+lower\+\_\+left\+\_\+y,  }\item[{unsigned int}]{dm\+\_\+size\+\_\+x,  }\item[{unsigned int}]{region\+\_\+size\+\_\+x,  }\item[{unsigned int}]{region\+\_\+size\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Copy a region of a source map into a destination map 
+
+
+\begin{DoxyParams}{参数}
+{\em source\+\_\+map} & The source map \\
+\hline
+{\em sm\+\_\+lower\+\_\+left\+\_\+x} & The lower left x point of the source map to start the copy \\
+\hline
+{\em sm\+\_\+lower\+\_\+left\+\_\+y} & The lower left y point of the source map to start the copy \\
+\hline
+{\em sm\+\_\+size\+\_\+x} & The x size of the source map \\
+\hline
+{\em dest\+\_\+map} & The destination map \\
+\hline
+{\em dm\+\_\+lower\+\_\+left\+\_\+x} & The lower left x point of the destination map to start the copy \\
+\hline
+{\em dm\+\_\+lower\+\_\+left\+\_\+y} & The lower left y point of the destination map to start the copy \\
+\hline
+{\em dm\+\_\+size\+\_\+x} & The x size of the destination map \\
+\hline
+{\em region\+\_\+size\+\_\+x} & The x size of the region to copy \\
+\hline
+{\em region\+\_\+size\+\_\+y} & The y size of the region to copy \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ab857ec41de2e14d601b85bbf6497b612_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_af536407a80cef61e20226c28dbef9eee}\label{classcostmap__2d_1_1_costmap2_d_af536407a80cef61e20226c28dbef9eee}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!deleteMaps@{deleteMaps}}
+\index{deleteMaps@{deleteMaps}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{deleteMaps()}{deleteMaps()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::delete\+Maps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deletes the costmap, static\+\_\+map, and markers data structures 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_af536407a80cef61e20226c28dbef9eee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a951c218252d6e66e23062a123dbde34d}\label{classcostmap__2d_1_1_costmap2_d_a951c218252d6e66e23062a123dbde34d}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getCharMap@{getCharMap}}
+\index{getCharMap@{getCharMap}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getCharMap()}{getCharMap()}}
+{\footnotesize\ttfamily unsigned char $\ast$ costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Char\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Will return a pointer to the underlying unsigned char array used as the costmap 
+
+\begin{DoxyReturn}{返回}
+A pointer to the underlying unsigned char array storing cost values 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a951c218252d6e66e23062a123dbde34d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27}\label{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getCost@{getCost}}
+\index{getCost@{getCost}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily unsigned char costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my }\end{DoxyParamCaption}) const}
+
+
+
+Get the cost of a cell in the costmap 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & The x coordinate of the cell \\
+\hline
+{\em my} & The y coordinate of the cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The cost of the cell 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a35fbb86d10502ab91fb6e133c1364cd9}\label{classcostmap__2d_1_1_costmap2_d_a35fbb86d10502ab91fb6e133c1364cd9}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getDefaultValue@{getDefaultValue}}
+\index{getDefaultValue@{getDefaultValue}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getDefaultValue()}{getDefaultValue()}}
+{\footnotesize\ttfamily unsigned char costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Default\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a35fbb86d10502ab91fb6e133c1364cd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a57d2ea3f3a039d72640c159cd149ff9d}\label{classcostmap__2d_1_1_costmap2_d_a57d2ea3f3a039d72640c159cd149ff9d}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Index (\begin{DoxyParamCaption}\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given two map coordinates... compute the associated index 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & The x coordinate \\
+\hline
+{\em my} & The y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The associated index 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a57d2ea3f3a039d72640c159cd149ff9d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a48c32f1cbe1cae7d2fb6a0a96192db21}\label{classcostmap__2d_1_1_costmap2_d_a48c32f1cbe1cae7d2fb6a0a96192db21}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getMutex@{getMutex}}
+\index{getMutex@{getMutex}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getMutex()}{getMutex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\+\_\+t}} $\ast$ costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a48c32f1cbe1cae7d2fb6a0a96192db21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a9aae81be964f5fff675f9a10c3bf2e82}\label{classcostmap__2d_1_1_costmap2_d_a9aae81be964f5fff675f9a10c3bf2e82}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getOriginX@{getOriginX}}
+\index{getOriginX@{getOriginX}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getOriginX()}{getOriginX()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+OriginX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for the x origin of the costmap 
+
+\begin{DoxyReturn}{返回}
+The x origin of the costmap 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a9aae81be964f5fff675f9a10c3bf2e82_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a686124b010e121eb87629ff17a032d7f}\label{classcostmap__2d_1_1_costmap2_d_a686124b010e121eb87629ff17a032d7f}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getOriginY@{getOriginY}}
+\index{getOriginY@{getOriginY}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getOriginY()}{getOriginY()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+OriginY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for the y origin of the costmap 
+
+\begin{DoxyReturn}{返回}
+The y origin of the costmap 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a686124b010e121eb87629ff17a032d7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_ade55f512e27c62cec28a3de5ca775759}\label{classcostmap__2d_1_1_costmap2_d_ade55f512e27c62cec28a3de5ca775759}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getResolution@{getResolution}}
+\index{getResolution@{getResolution}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getResolution()}{getResolution()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for the resolution of the costmap 
+
+\begin{DoxyReturn}{返回}
+The resolution of the costmap 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ade55f512e27c62cec28a3de5ca775759_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a615a4186649d8970111f8a356906b320}\label{classcostmap__2d_1_1_costmap2_d_a615a4186649d8970111f8a356906b320}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getSizeInCellsX@{getSizeInCellsX}}
+\index{getSizeInCellsX@{getSizeInCellsX}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getSizeInCellsX()}{getSizeInCellsX()}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Size\+In\+CellsX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for the x size of the costmap in cells 
+
+\begin{DoxyReturn}{返回}
+The x size of the costmap 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcostmap__2d_1_1_costmap2_d_a615a4186649d8970111f8a356906b320_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a702f4ed109f94c8513500cf97ff066a4}\label{classcostmap__2d_1_1_costmap2_d_a702f4ed109f94c8513500cf97ff066a4}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getSizeInCellsY@{getSizeInCellsY}}
+\index{getSizeInCellsY@{getSizeInCellsY}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getSizeInCellsY()}{getSizeInCellsY()}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Size\+In\+CellsY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for the y size of the costmap in cells 
+
+\begin{DoxyReturn}{返回}
+The y size of the costmap 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcostmap__2d_1_1_costmap2_d_a702f4ed109f94c8513500cf97ff066a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a645ea4720d5cab8bcf662687cc81d087}\label{classcostmap__2d_1_1_costmap2_d_a645ea4720d5cab8bcf662687cc81d087}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getSizeInMetersX@{getSizeInMetersX}}
+\index{getSizeInMetersX@{getSizeInMetersX}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getSizeInMetersX()}{getSizeInMetersX()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Size\+In\+MetersX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for the x size of the costmap in meters 
+
+\begin{DoxyReturn}{返回}
+The x size of the costmap (returns the centerpoint of the last legal cell in the map) 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a645ea4720d5cab8bcf662687cc81d087_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_afb1d6cdc01d77452175487955e6aff4d}\label{classcostmap__2d_1_1_costmap2_d_afb1d6cdc01d77452175487955e6aff4d}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!getSizeInMetersY@{getSizeInMetersY}}
+\index{getSizeInMetersY@{getSizeInMetersY}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{getSizeInMetersY()}{getSizeInMetersY()}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::get\+Size\+In\+MetersY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accessor for the y size of the costmap in meters 
+
+\begin{DoxyReturn}{返回}
+The y size of the costmap (returns the centerpoint of the last legal cell in the map) 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_afb1d6cdc01d77452175487955e6aff4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_aa10c1734472f485473302598113fcddc}\label{classcostmap__2d_1_1_costmap2_d_aa10c1734472f485473302598113fcddc}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!indexToCells@{indexToCells}}
+\index{indexToCells@{indexToCells}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{indexToCells()}{indexToCells()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::index\+To\+Cells (\begin{DoxyParamCaption}\item[{unsigned int}]{index,  }\item[{unsigned int \&}]{mx,  }\item[{unsigned int \&}]{my }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given an index... compute the associated map coordinates 
+
+
+\begin{DoxyParams}{参数}
+{\em index} & The index \\
+\hline
+{\em mx} & Will be set to the x coordinate \\
+\hline
+{\em my} & Will be set to the y coordinate \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_aa10c1734472f485473302598113fcddc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a1da91220df45a19376a3e3df3a517c27}\label{classcostmap__2d_1_1_costmap2_d_a1da91220df45a19376a3e3df3a517c27}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!initMaps@{initMaps}}
+\index{initMaps@{initMaps}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{initMaps()}{initMaps()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::init\+Maps (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the costmap, static\+\_\+map, and markers data structures 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The x size to use for map initialization \\
+\hline
+{\em size\+\_\+y} & The y size to use for map initialization \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a1da91220df45a19376a3e3df3a517c27_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a8e39feaa7ee4446347674b3701a1394c}\label{classcostmap__2d_1_1_costmap2_d_a8e39feaa7ee4446347674b3701a1394c}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!mapToWorld@{mapToWorld}}
+\index{mapToWorld@{mapToWorld}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{mapToWorld()}{mapToWorld()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::map\+To\+World (\begin{DoxyParamCaption}\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my,  }\item[{double \&}]{wx,  }\item[{double \&}]{wy }\end{DoxyParamCaption}) const}
+
+
+
+Convert from map coordinates to world coordinates 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & The x map coordinate \\
+\hline
+{\em my} & The y map coordinate \\
+\hline
+{\em wx} & Will be set to the associated world x coordinate \\
+\hline
+{\em wy} & Will be set to the associated world y coordinate \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a8e39feaa7ee4446347674b3701a1394c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a404b9898ed689c8f6b1eb3503c358db0}\label{classcostmap__2d_1_1_costmap2_d_a404b9898ed689c8f6b1eb3503c358db0}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!operator=@{operator=}}
+\index{operator=@{operator=}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \& costmap\+\_\+2d\+::\+Costmap2\+D\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Overloaded assignment operator 
+
+
+\begin{DoxyParams}{参数}
+{\em map} & The costmap to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A reference to the map after the copy has finished 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a404b9898ed689c8f6b1eb3503c358db0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_ad0c6f7cb8e11569a02f873c545acec90}\label{classcostmap__2d_1_1_costmap2_d_ad0c6f7cb8e11569a02f873c545acec90}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!polygonOutlineCells@{polygonOutlineCells}}
+\index{polygonOutlineCells@{polygonOutlineCells}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{polygonOutlineCells()}{polygonOutlineCells()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::polygon\+Outline\+Cells (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&}]{polygon,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{Map\+Location}} $>$ \&}]{polygon\+\_\+cells }\end{DoxyParamCaption})}
+
+
+
+Get the map cells that make up the outline of a polygon 
+
+
+\begin{DoxyParams}{参数}
+{\em polygon} & The polygon in map coordinates to rasterize \\
+\hline
+{\em polygon\+\_\+cells} & Will be set to the cells contained in the outline of the polygon \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ad0c6f7cb8e11569a02f873c545acec90_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ad0c6f7cb8e11569a02f873c545acec90_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_af1d619d9b49b6851cb0a33de4e39ec78}\label{classcostmap__2d_1_1_costmap2_d_af1d619d9b49b6851cb0a33de4e39ec78}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!raytraceLine@{raytraceLine}}
+\index{raytraceLine@{raytraceLine}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{raytraceLine()}{raytraceLine()}}
+{\footnotesize\ttfamily template$<$class Action\+Type $>$ \\
+void costmap\+\_\+2d\+::\+Costmap2\+D\+::raytrace\+Line (\begin{DoxyParamCaption}\item[{Action\+Type}]{at,  }\item[{unsigned int}]{x0,  }\item[{unsigned int}]{y0,  }\item[{unsigned int}]{x1,  }\item[{unsigned int}]{y1,  }\item[{unsigned int}]{max\+\_\+length = {\ttfamily UINT\+\_\+MAX} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Raytrace a line and apply some action at each step 
+
+
+\begin{DoxyParams}{参数}
+{\em at} & The action to take... a functor \\
+\hline
+{\em x0} & The starting x coordinate \\
+\hline
+{\em y0} & The starting y coordinate \\
+\hline
+{\em x1} & The ending x coordinate \\
+\hline
+{\em y1} & The ending y coordinate \\
+\hline
+{\em max\+\_\+length} & The maximum desired length of the segment... allows you to not go all the way to the endpoint \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_af1d619d9b49b6851cb0a33de4e39ec78_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_af1d619d9b49b6851cb0a33de4e39ec78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_aba344550cbc08bcc3a54c64290f8f568}\label{classcostmap__2d_1_1_costmap2_d_aba344550cbc08bcc3a54c64290f8f568}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!resetMap@{resetMap}}
+\index{resetMap@{resetMap}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{resetMap()}{resetMap()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::reset\+Map (\begin{DoxyParamCaption}\item[{unsigned int}]{x0,  }\item[{unsigned int}]{y0,  }\item[{unsigned int}]{xn,  }\item[{unsigned int}]{yn }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_aba344550cbc08bcc3a54c64290f8f568_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_ab4424e85f6daaf91eaf455e4bb241c19}\label{classcostmap__2d_1_1_costmap2_d_ab4424e85f6daaf91eaf455e4bb241c19}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!resetMaps@{resetMaps}}
+\index{resetMaps@{resetMaps}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{resetMaps()}{resetMaps()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::reset\+Maps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Resets the costmap and static\+\_\+map to be unknown space 
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a56c9a252631b5d4af75c1d17eac8e052}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ab4424e85f6daaf91eaf455e4bb241c19_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a95bae6eccd820a77d8040562e2a51118}\label{classcostmap__2d_1_1_costmap2_d_a95bae6eccd820a77d8040562e2a51118}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!resizeMap@{resizeMap}}
+\index{resizeMap@{resizeMap}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{resizeMap()}{resizeMap()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::resize\+Map (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y,  }\item[{double}]{resolution,  }\item[{double}]{origin\+\_\+x,  }\item[{double}]{origin\+\_\+y }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a95bae6eccd820a77d8040562e2a51118_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a95bae6eccd820a77d8040562e2a51118_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a04cd3558a672159a3ad1b151b1d19661}\label{classcostmap__2d_1_1_costmap2_d_a04cd3558a672159a3ad1b151b1d19661}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!saveMap@{saveMap}}
+\index{saveMap@{saveMap}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{saveMap()}{saveMap()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+D\+::save\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Save the costmap out to a pgm file 
+
+
+\begin{DoxyParams}{参数}
+{\em file\+\_\+name} & The name of the file to save \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a04cd3558a672159a3ad1b151b1d19661_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a04cd3558a672159a3ad1b151b1d19661_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_afb8a42c3810e796107ed04c0ca3cbf90}\label{classcostmap__2d_1_1_costmap2_d_afb8a42c3810e796107ed04c0ca3cbf90}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!setConvexPolygonCost@{setConvexPolygonCost}}
+\index{setConvexPolygonCost@{setConvexPolygonCost}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{setConvexPolygonCost()}{setConvexPolygonCost()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+D\+::set\+Convex\+Polygon\+Cost (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{polygon,  }\item[{unsigned char}]{cost\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Sets the cost of a convex polygon to a desired value 
+
+
+\begin{DoxyParams}{参数}
+{\em polygon} & The polygon to perform the operation on \\
+\hline
+{\em cost\+\_\+value} & The value to set costs to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the polygon was filled... false if it could not be filled 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_afb8a42c3810e796107ed04c0ca3cbf90_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_afb8a42c3810e796107ed04c0ca3cbf90_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_ae1703900adbbf1e0d929cec0735a8b0e}\label{classcostmap__2d_1_1_costmap2_d_ae1703900adbbf1e0d929cec0735a8b0e}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!setCost@{setCost}}
+\index{setCost@{setCost}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::set\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{mx,  }\item[{unsigned int}]{my,  }\item[{unsigned char}]{cost }\end{DoxyParamCaption})}
+
+
+
+Set the cost of a cell in the costmap 
+
+
+\begin{DoxyParams}{参数}
+{\em mx} & The x coordinate of the cell \\
+\hline
+{\em my} & The y coordinate of the cell \\
+\hline
+{\em cost} & The cost to set the cell to \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ae1703900adbbf1e0d929cec0735a8b0e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ae1703900adbbf1e0d929cec0735a8b0e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a8a9f535f98f1ba4c0a74f88aa706bcd2}\label{classcostmap__2d_1_1_costmap2_d_a8a9f535f98f1ba4c0a74f88aa706bcd2}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!setDefaultValue@{setDefaultValue}}
+\index{setDefaultValue@{setDefaultValue}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{setDefaultValue()}{setDefaultValue()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::set\+Default\+Value (\begin{DoxyParamCaption}\item[{unsigned char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a8a9f535f98f1ba4c0a74f88aa706bcd2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a947041f50d5fb1a44c3fd0601c4fc608}\label{classcostmap__2d_1_1_costmap2_d_a947041f50d5fb1a44c3fd0601c4fc608}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!sign@{sign}}
+\index{sign@{sign}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily int costmap\+\_\+2d\+::\+Costmap2\+D\+::sign (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a947041f50d5fb1a44c3fd0601c4fc608_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a5ca05c95f95e1408ca9e23d2e7f8987a}\label{classcostmap__2d_1_1_costmap2_d_a5ca05c95f95e1408ca9e23d2e7f8987a}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!updateOrigin@{updateOrigin}}
+\index{updateOrigin@{updateOrigin}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{updateOrigin()}{updateOrigin()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::update\+Origin (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+origin\+\_\+x,  }\item[{double}]{new\+\_\+origin\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move the origin of the costmap to a new location.... keeping data when it can 
+
+
+\begin{DoxyParams}{参数}
+{\em new\+\_\+origin\+\_\+x} & The x coordinate of the new origin \\
+\hline
+{\em new\+\_\+origin\+\_\+y} & The y coordinate of the new origin \\
+\hline
+\end{DoxyParams}
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a91dc901da59c768aea0b25037bf46fef}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a5ca05c95f95e1408ca9e23d2e7f8987a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a5ca05c95f95e1408ca9e23d2e7f8987a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a9a2c824d4cd3bcad3ac3435d81982986}\label{classcostmap__2d_1_1_costmap2_d_a9a2c824d4cd3bcad3ac3435d81982986}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!worldToMap@{worldToMap}}
+\index{worldToMap@{worldToMap}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{worldToMap()}{worldToMap()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+D\+::world\+To\+Map (\begin{DoxyParamCaption}\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{unsigned int \&}]{mx,  }\item[{unsigned int \&}]{my }\end{DoxyParamCaption}) const}
+
+
+
+Convert from world coordinates to map coordinates 
+
+世界坐标系向map坐标系转换
+
+
+\begin{DoxyParams}{参数}
+{\em wx} & The x world coordinate \\
+\hline
+{\em wy} & The y world coordinate \\
+\hline
+{\em mx} & Will be set to the associated map x coordinate \\
+\hline
+{\em my} & Will be set to the associated map y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the conversion was successful (legal bounds) false otherwise
+\end{DoxyReturn}
+
+\begin{DoxyParams}{参数}
+{\em wx} & 世界坐标系的x值 \\
+\hline
+{\em wy} & 世界坐标系的y值 \\
+\hline
+{\em mx} & 相关map坐标系下的x值 \\
+\hline
+{\em my} & 相关map坐标系下的y值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the conversion was successful (legal bounds) false otherwise 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_a9a2c824d4cd3bcad3ac3435d81982986_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_ae412173f42af7edba9996f86754b7cbf}\label{classcostmap__2d_1_1_costmap2_d_ae412173f42af7edba9996f86754b7cbf}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!worldToMapEnforceBounds@{worldToMapEnforceBounds}}
+\index{worldToMapEnforceBounds@{worldToMapEnforceBounds}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{worldToMapEnforceBounds()}{worldToMapEnforceBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::world\+To\+Map\+Enforce\+Bounds (\begin{DoxyParamCaption}\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{int \&}]{mx,  }\item[{int \&}]{my }\end{DoxyParamCaption}) const}
+
+
+
+Convert from world coordinates to map coordinates, constraining results to legal bounds. 
+
+
+\begin{DoxyParams}{参数}
+{\em wx} & The x world coordinate \\
+\hline
+{\em wy} & The y world coordinate \\
+\hline
+{\em mx} & Will be set to the associated map x coordinate \\
+\hline
+{\em my} & Will be set to the associated map y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+The returned map coordinates are guaranteed to lie within the map. 
+\end{DoxyNote}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_ae412173f42af7edba9996f86754b7cbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a2da39cb06d192795614df9c2bf00692f}\label{classcostmap__2d_1_1_costmap2_d_a2da39cb06d192795614df9c2bf00692f}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!worldToMapNoBounds@{worldToMapNoBounds}}
+\index{worldToMapNoBounds@{worldToMapNoBounds}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{worldToMapNoBounds()}{worldToMapNoBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+D\+::world\+To\+Map\+No\+Bounds (\begin{DoxyParamCaption}\item[{double}]{wx,  }\item[{double}]{wy,  }\item[{int \&}]{mx,  }\item[{int \&}]{my }\end{DoxyParamCaption}) const}
+
+
+
+Convert from world coordinates to map coordinates without checking for legal bounds 
+
+
+\begin{DoxyParams}{参数}
+{\em wx} & The x world coordinate \\
+\hline
+{\em wy} & The y world coordinate \\
+\hline
+{\em mx} & Will be set to the associated map x coordinate \\
+\hline
+{\em my} & Will be set to the associated map y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+The returned map coordinates {\bfseries{are not guaranteed to lie within the map.}} 
+\end{DoxyNote}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classcostmap__2d_1_1_costmap2_d_a2da39cb06d192795614df9c2bf00692f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{友元及相关函数文档}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a9f13f59f234edd1db20196987ac18fcd}\label{classcostmap__2d_1_1_costmap2_d_a9f13f59f234edd1db20196987ac18fcd}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!CostmapTester@{CostmapTester}}
+\index{CostmapTester@{CostmapTester}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{CostmapTester}{CostmapTester}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classcostmap__2d_1_1_costmap_tester}{Costmap\+Tester}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a509ef0191dacd55f6348f789236d904d}\label{classcostmap__2d_1_1_costmap2_d_a509ef0191dacd55f6348f789236d904d}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!access\_@{access\_}}
+\index{access\_@{access\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{access\_}{access\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\+\_\+t}}$\ast$ costmap\+\_\+2d\+::\+Costmap2\+D\+::access\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a34c8633b0dfec7481300d401d33010c7}\label{classcostmap__2d_1_1_costmap2_d_a34c8633b0dfec7481300d401d33010c7}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily unsigned char$\ast$ costmap\+\_\+2d\+::\+Costmap2\+D\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_af0715f46aa3d358da411f0060e0fe8d2}\label{classcostmap__2d_1_1_costmap2_d_af0715f46aa3d358da411f0060e0fe8d2}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!default\_value\_@{default\_value\_}}
+\index{default\_value\_@{default\_value\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{default\_value\_}{default\_value\_}}
+{\footnotesize\ttfamily unsigned char costmap\+\_\+2d\+::\+Costmap2\+D\+::default\+\_\+value\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a9005fb139b987665bfa799c631953f00}\label{classcostmap__2d_1_1_costmap2_d_a9005fb139b987665bfa799c631953f00}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!origin\_x\_@{origin\_x\_}}
+\index{origin\_x\_@{origin\_x\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{origin\_x\_}{origin\_x\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::origin\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a53bc8ed50d62760245f879d66c5567db}\label{classcostmap__2d_1_1_costmap2_d_a53bc8ed50d62760245f879d66c5567db}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!origin\_y\_@{origin\_y\_}}
+\index{origin\_y\_@{origin\_y\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{origin\_y\_}{origin\_y\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::origin\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_a3d74d58b31973def7e407c7300f1115c}\label{classcostmap__2d_1_1_costmap2_d_a3d74d58b31973def7e407c7300f1115c}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!resolution\_@{resolution\_}}
+\index{resolution\_@{resolution\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{resolution\_}{resolution\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+D\+::resolution\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}\label{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!size\_x\_@{size\_x\_}}
+\index{size\_x\_@{size\_x\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{size\_x\_}{size\_x\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+D\+::size\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_ad25df12283aa78c43878e24633381100}\label{classcostmap__2d_1_1_costmap2_d_ad25df12283aa78c43878e24633381100}} 
+\index{costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}!size\_y\_@{size\_y\_}}
+\index{size\_y\_@{size\_y\_}!costmap\_2d::Costmap2D@{costmap\_2d::Costmap2D}}
+\doxysubsubsection{\texorpdfstring{size\_y\_}{size\_y\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+D\+::size\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{costmap__2d_8h}{costmap\+\_\+2d.\+h}}\item 
+costmap\+\_\+2d/src/\mbox{\hyperlink{costmap__2d_8cpp}{costmap\+\_\+2d.\+cpp}}\end{DoxyCompactItemize}

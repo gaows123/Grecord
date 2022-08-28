@@ -1,0 +1,107 @@
+\hypertarget{navfn_8h}{}\doxysection{navfn/include/navfn/navfn.h 文件参考}
+\label{navfn_8h}\index{navfn/include/navfn/navfn.h@{navfn/include/navfn/navfn.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+navfn.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{navfn_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{navfn_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnavfn_1_1_nav_fn}{navfn\+::\+Nav\+Fn}}
+\begin{DoxyCompactList}\small\item\em Navigation function class. Holds buffers for costmap, navfn map.\+代价地图和\+Nav\+Fn地图是基于像素的，他们的原点在左上方，x 轴向右，y 轴向下 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{命名空间}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacenavfn}{navfn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{navfn_8h_a08d08a154e8e694883ae1162d2edf938}{COST\+\_\+\+UNKNOWN\+\_\+\+ROS}}~255
+\item 
+\#define \mbox{\hyperlink{navfn_8h_afe3f51fbc354670e6c61f8e6f9c9b949}{COST\+\_\+\+OBS}}~254
+\item 
+\#define \mbox{\hyperlink{navfn_8h_a8945359447256feae1e51609e9a9ce50}{COST\+\_\+\+OBS\+\_\+\+ROS}}~253
+\item 
+\#define \mbox{\hyperlink{navfn_8h_a5039fec8588b6e3b45e5d0f98dbffe24}{COST\+\_\+\+NEUTRAL}}~50
+\item 
+\#define \mbox{\hyperlink{navfn_8h_a11548876fdd7ca7181d143df88578847}{COST\+\_\+\+FACTOR}}~0.\+8
+\item 
+\#define \mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}}~unsigned char
+\item 
+\#define \mbox{\hyperlink{navfn_8h_a1ba71eeabfe9ba85c91393f562db6a33}{POT\+\_\+\+HIGH}}~1.\+0e10
+\item 
+\#define \mbox{\hyperlink{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}}~10000
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacenavfn_a43e1cf99d005f4c0b40ce27c85ac3a0f}{navfn\+::create\+\_\+nav\+\_\+plan\+\_\+astar}} (\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$costmap, int nx, int ny, int $\ast$\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, int $\ast$\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, float $\ast$plan, int nplan)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{navfn_8h_a11548876fdd7ca7181d143df88578847}\label{navfn_8h_a11548876fdd7ca7181d143df88578847}} 
+\index{navfn.h@{navfn.h}!COST\_FACTOR@{COST\_FACTOR}}
+\index{COST\_FACTOR@{COST\_FACTOR}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{COST\_FACTOR}{COST\_FACTOR}}
+{\footnotesize\ttfamily \#define COST\+\_\+\+FACTOR~0.\+8}
+
+\mbox{\Hypertarget{navfn_8h_a5039fec8588b6e3b45e5d0f98dbffe24}\label{navfn_8h_a5039fec8588b6e3b45e5d0f98dbffe24}} 
+\index{navfn.h@{navfn.h}!COST\_NEUTRAL@{COST\_NEUTRAL}}
+\index{COST\_NEUTRAL@{COST\_NEUTRAL}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{COST\_NEUTRAL}{COST\_NEUTRAL}}
+{\footnotesize\ttfamily \#define COST\+\_\+\+NEUTRAL~50}
+
+\mbox{\Hypertarget{navfn_8h_afe3f51fbc354670e6c61f8e6f9c9b949}\label{navfn_8h_afe3f51fbc354670e6c61f8e6f9c9b949}} 
+\index{navfn.h@{navfn.h}!COST\_OBS@{COST\_OBS}}
+\index{COST\_OBS@{COST\_OBS}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{COST\_OBS}{COST\_OBS}}
+{\footnotesize\ttfamily \#define COST\+\_\+\+OBS~254}
+
+\mbox{\Hypertarget{navfn_8h_a8945359447256feae1e51609e9a9ce50}\label{navfn_8h_a8945359447256feae1e51609e9a9ce50}} 
+\index{navfn.h@{navfn.h}!COST\_OBS\_ROS@{COST\_OBS\_ROS}}
+\index{COST\_OBS\_ROS@{COST\_OBS\_ROS}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{COST\_OBS\_ROS}{COST\_OBS\_ROS}}
+{\footnotesize\ttfamily \#define COST\+\_\+\+OBS\+\_\+\+ROS~253}
+
+\mbox{\Hypertarget{navfn_8h_a08d08a154e8e694883ae1162d2edf938}\label{navfn_8h_a08d08a154e8e694883ae1162d2edf938}} 
+\index{navfn.h@{navfn.h}!COST\_UNKNOWN\_ROS@{COST\_UNKNOWN\_ROS}}
+\index{COST\_UNKNOWN\_ROS@{COST\_UNKNOWN\_ROS}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{COST\_UNKNOWN\_ROS}{COST\_UNKNOWN\_ROS}}
+{\footnotesize\ttfamily \#define COST\+\_\+\+UNKNOWN\+\_\+\+ROS~255}
+
+\mbox{\Hypertarget{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}\label{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}} 
+\index{navfn.h@{navfn.h}!COSTTYPE@{COSTTYPE}}
+\index{COSTTYPE@{COSTTYPE}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{COSTTYPE}{COSTTYPE}}
+{\footnotesize\ttfamily \#define COSTTYPE~unsigned char}
+
+\mbox{\Hypertarget{navfn_8h_a1ba71eeabfe9ba85c91393f562db6a33}\label{navfn_8h_a1ba71eeabfe9ba85c91393f562db6a33}} 
+\index{navfn.h@{navfn.h}!POT\_HIGH@{POT\_HIGH}}
+\index{POT\_HIGH@{POT\_HIGH}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{POT\_HIGH}{POT\_HIGH}}
+{\footnotesize\ttfamily \#define POT\+\_\+\+HIGH~1.\+0e10}
+
+\mbox{\Hypertarget{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}\label{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}} 
+\index{navfn.h@{navfn.h}!PRIORITYBUFSIZE@{PRIORITYBUFSIZE}}
+\index{PRIORITYBUFSIZE@{PRIORITYBUFSIZE}!navfn.h@{navfn.h}}
+\doxysubsubsection{\texorpdfstring{PRIORITYBUFSIZE}{PRIORITYBUFSIZE}}
+{\footnotesize\ttfamily \#define PRIORITYBUFSIZE~10000}
+

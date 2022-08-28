@@ -1,0 +1,9 @@
+<map id="costmap_2d::CostmapLayer::touch" name="costmap_2d::CostmapLayer::touch">
+<area shape="rect" id="node1" title=" " alt="" coords="705,89,891,130"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a50dac229133e7c22981b0c7e0eafc910" title="根据单次的观测来清除自由空间" alt="" coords="239,28,424,69"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="5,28,191,69"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="15,158,181,200"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_obstacle_layer.html#ac81261d46ebc829ca1d747c024a00603" title=" " alt="" coords="239,93,424,134"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_obstacle_layer.html#aadace7301e7b08f358ea3e9e8a17f452" title=" " alt="" coords="472,148,657,189"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_voxel_layer.html#a6f7c914d410df715e01253b3584d9f21" title="根据单次的观测来清除自由空间" alt="" coords="248,158,415,200"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="costmap_2d::Costmap2D::Costmap2D" name="costmap_2d::Costmap2D::Costmap2D">
+<area shape="rect" id="node1" title="构造代价地图" alt="" coords="5,39,175,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a1da91220df45a19376a3e3df3a517c27" title="Initializes the costmap, static_map, and markers data structures" alt="" coords="223,5,392,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="223,71,392,112"/>
+</map>

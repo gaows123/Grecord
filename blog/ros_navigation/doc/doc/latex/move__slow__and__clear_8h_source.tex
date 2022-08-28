@@ -1,0 +1,89 @@
+\hypertarget{move__slow__and__clear_8h_source}{}\doxysection{move\+\_\+slow\+\_\+and\+\_\+clear.\+h}
+\label{move__slow__and__clear_8h_source}\index{move\_slow\_and\_clear/include/move\_slow\_and\_clear/move\_slow\_and\_clear.h@{move\_slow\_and\_clear/include/move\_slow\_and\_clear/move\_slow\_and\_clear.h}}
+\mbox{\hyperlink{move__slow__and__clear_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2009, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef MOVE\_SLOW\_AND\_CLEAR\_MOVE\_SLOW\_AND\_CLEAR\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define MOVE\_SLOW\_AND\_CLEAR\_MOVE\_SLOW\_AND\_CLEAR\_H\_}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{recovery__behavior_8h}{nav\_core/recovery\_behavior.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__ros_8h}{costmap\_2d/costmap\_2d\_ros.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/Reconfigure.h>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemove__slow__and__clear}{move\_slow\_and\_clear}} }
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   \textcolor{keyword}{class }\mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear}{MoveSlowAndClear}} : \textcolor{keyword}{public} \mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{nav\_core::RecoveryBehavior}}}
+\DoxyCodeLine{49   \{}
+\DoxyCodeLine{50     \textcolor{keyword}{public}:}
+\DoxyCodeLine{51       \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a91ca493b4fba3b1259c763b866ca941f}{MoveSlowAndClear}}();}
+\DoxyCodeLine{52       \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a71c2c276493acf62e2f31ab1770e0033}{\string~MoveSlowAndClear}}();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a8c3abf7314837b065c79f55947ebabf5}{initialize}} (std::string \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, tf2\_ros::Buffer* tf,}
+\DoxyCodeLine{56           \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* global\_costmap,}
+\DoxyCodeLine{57           \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* local\_costmap);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{60       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_abf32e06b525c141d8b7afcac857c241a}{runBehavior}}();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{keyword}{private}:}
+\DoxyCodeLine{63       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a04fa319b6f46d429937aa1e00a1b3dba}{setRobotSpeed}}(\textcolor{keywordtype}{double} trans\_speed, \textcolor{keywordtype}{double} rot\_speed);}
+\DoxyCodeLine{64       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a35a4c0d845dd8b4d0c85a57f3d2d5b1e}{distanceCheck}}(\textcolor{keyword}{const} ros::TimerEvent\& e);}
+\DoxyCodeLine{65       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a2fe9f869a53b89056d292ce47833a68c}{getSqDistance}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67       \textcolor{keywordtype}{void} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ae41f9c43f9e585844b732da55de298f9}{removeSpeedLimit}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69       ros::NodeHandle \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_aa1985d2186775ee057752ea22d32c860}{private\_nh\_}}, \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a252bd9d26a56f0cd224e966fbc7f969b}{planner\_nh\_}};}
+\DoxyCodeLine{70       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ae5654055ace91d16f1dce9b9a683a1ba}{global\_costmap\_}};}
+\DoxyCodeLine{71       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a0915aa5d423a757bbfa337dbf98ee35b}{local\_costmap\_}};}
+\DoxyCodeLine{72       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ae1ed3e0581983a59d0d25ff005a912af}{initialized\_}};}
+\DoxyCodeLine{73       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_aa116f74c651b145552f95ea554da9a4e}{clearing\_distance\_}}, \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a78168673b49504cd9f0594a51b9a7b9c}{limited\_distance\_}};}
+\DoxyCodeLine{74       \textcolor{keywordtype}{double} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a26b98fe2d53fe1bd5013ae242252e391}{limited\_trans\_speed\_}}, \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a4dc72c70a907dd3d2d5b0a8d8e01ccc5}{limited\_rot\_speed\_}}, \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a5ff83e37a6c51ec2c958f5fffad3deef}{old\_trans\_speed\_}}, \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_aa5a82d4a70cf2bc2a53a863cc040f4c3}{old\_rot\_speed\_}};}
+\DoxyCodeLine{75       std::string \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_acc9cacbe882693cb88ae101da2416740}{max\_trans\_param\_name\_}}, \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_ac79651772c9d267e9500b8770eb20133}{max\_rot\_param\_name\_}};}
+\DoxyCodeLine{76       ros::Timer \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a569bed78421733c6a318397629079fa7}{distance\_check\_timer\_}};}
+\DoxyCodeLine{77       geometry\_msgs::PoseStamped \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a907be4f27bc0921cb99a11821759004a}{speed\_limit\_pose\_}};}
+\DoxyCodeLine{78       boost::thread* \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a5c4d93947c60461050632757f8a7d10e}{remove\_limit\_thread\_}};}
+\DoxyCodeLine{79       boost::mutex \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_afb06ba75117f893ae6822f1222b4af2a}{mutex\_}};}
+\DoxyCodeLine{80       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a14257c82762158ca277ece2176f2eae8}{limit\_set\_}};}
+\DoxyCodeLine{81       ros::ServiceClient \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a6c8cb54e07bebed8258587f081516531}{planner\_dynamic\_reconfigure\_service\_}};}
+\DoxyCodeLine{82   \};}
+\DoxyCodeLine{83 \};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

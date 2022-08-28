@@ -1,0 +1,147 @@
+\hypertarget{navfn_8h_source}{}\doxysection{navfn.\+h}
+\label{navfn_8h_source}\index{navfn/include/navfn/navfn.h@{navfn/include/navfn/navfn.h}}
+\mbox{\hyperlink{navfn_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{3 \textcolor{comment}{*}}
+\DoxyCodeLine{4 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{5 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{6 \textcolor{comment}{*}}
+\DoxyCodeLine{7 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{8 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{9 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{10 \textcolor{comment}{*}}
+\DoxyCodeLine{11 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{12 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{13 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{14 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{15 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{16 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{17 \textcolor{comment}{*   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{18 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{19 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{20 \textcolor{comment}{*}}
+\DoxyCodeLine{21 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{22 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{23 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{24 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{25 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{26 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{28 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{29 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{30 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{31 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{32 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{33 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{comment}{//}}
+\DoxyCodeLine{36 \textcolor{comment}{// Navigation function computation}}
+\DoxyCodeLine{37 \textcolor{comment}{// Uses Dijkstra's method}}
+\DoxyCodeLine{38 \textcolor{comment}{// Modified for Euclidean-\/distance computation}}
+\DoxyCodeLine{39 \textcolor{comment}{//}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifndef \_NAVFN\_H}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define \_NAVFN\_H}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{// cost defs}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define COST\_UNKNOWN\_ROS 255        }\textcolor{comment}{// 255 位置信息}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define COST\_OBS 254        }\textcolor{comment}{// 254 禁止区域}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define COST\_OBS\_ROS 253    }\textcolor{comment}{// 253是ROS的障碍物代价值}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{comment}{// navfn cost values are set to}}
+\DoxyCodeLine{55 \textcolor{comment}{// COST\_NEUTRAL + COST\_FACTOR * costmap\_cost\_value.}}
+\DoxyCodeLine{56 \textcolor{comment}{// Incoming costmap cost values are in the range 0 to 252.}}
+\DoxyCodeLine{57 \textcolor{comment}{// With COST\_NEUTRAL of 50, the COST\_FACTOR needs to be about 0.8 to}}
+\DoxyCodeLine{58 \textcolor{comment}{// ensure the input values are spread evenly over the output range, 50}}
+\DoxyCodeLine{59 \textcolor{comment}{// to 253.  If COST\_FACTOR is higher, cost values will have a plateau}}
+\DoxyCodeLine{60 \textcolor{comment}{// around obstacles and the planner will then treat (for example) the}}
+\DoxyCodeLine{61 \textcolor{comment}{// whole width of a narrow hallway as equally undesirable and thus}}
+\DoxyCodeLine{62 \textcolor{comment}{// will not plan paths down the center.}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define COST\_NEUTRAL 50     }\textcolor{comment}{// Set this to "{}open space"{} value}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define COST\_FACTOR 0.8     }\textcolor{comment}{// Used for translating costs in NavFn::setCostmap()}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{comment}{// Define the cost type in the case that it is not set. However, this allows}}
+\DoxyCodeLine{68 \textcolor{comment}{// clients to modify it without changing the file. Arguably, it is better to require it to}}
+\DoxyCodeLine{69 \textcolor{comment}{// be defined by a user explicitly}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#ifndef COSTTYPE}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define COSTTYPE unsigned char  }\textcolor{comment}{// Whatever is used...}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{comment}{// potential defs}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define POT\_HIGH 1.0e10     }\textcolor{comment}{// unassigned cell potential}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{comment}{// priority buffers}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define PRIORITYBUFSIZE 10000}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenavfn}{navfn}} \{}
+\DoxyCodeLine{96   \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacenavfn_a43e1cf99d005f4c0b40ce27c85ac3a0f}{create\_nav\_plan\_astar}}(\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} *costmap, \textcolor{keywordtype}{int} nx, \textcolor{keywordtype}{int} ny,}
+\DoxyCodeLine{97       \textcolor{keywordtype}{int}* \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, \textcolor{keywordtype}{int}* \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}},}
+\DoxyCodeLine{98       \textcolor{keywordtype}{float} *plan, \textcolor{keywordtype}{int} nplan);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 }
+\DoxyCodeLine{106   \textcolor{keyword}{class }\mbox{\hyperlink{classnavfn_1_1_nav_fn}{NavFn}}}
+\DoxyCodeLine{107   \{}
+\DoxyCodeLine{108     \textcolor{keyword}{public}:}
+\DoxyCodeLine{114       \mbox{\hyperlink{classnavfn_1_1_nav_fn_aeed7d6c6f59caf8935ed76bb39a80379}{NavFn}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a0210ff0b5a9c876304957942f5b3b06f}{nx}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_adf2f81d0ab6ed5f1fc70d966833c428b}{ny}});   \textcolor{comment}{// 地图大小}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116       \mbox{\hyperlink{classnavfn_1_1_nav_fn_a75be1c86e8e026a98e993110f54e3ff6}{\string~NavFn}}();}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{123       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a3b0c18b3e87f5f4350814e24b9a722fa}{setNavArr}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a0210ff0b5a9c876304957942f5b3b06f}{nx}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_adf2f81d0ab6ed5f1fc70d966833c428b}{ny}}); }
+\DoxyCodeLine{124       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a0210ff0b5a9c876304957942f5b3b06f}{nx}}, \mbox{\hyperlink{classnavfn_1_1_nav_fn_adf2f81d0ab6ed5f1fc70d966833c428b}{ny}}, \mbox{\hyperlink{classnavfn_1_1_nav_fn_aafecaed0735031096ec1ac9cdda95221}{ns}};     }
+\DoxyCodeLine{132       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a140814a85ec650787a958fc235281c6f}{setCostmap}}(\textcolor{keyword}{const} \mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} *cmap, \textcolor{keywordtype}{bool} isROS=\textcolor{keyword}{true}, \textcolor{keywordtype}{bool} allow\_unknown = \textcolor{keyword}{true}); }
+\DoxyCodeLine{138       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a20f2459aef927442363148b8403ad199}{calcNavFnAstar}}();  }
+\DoxyCodeLine{143       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3}{calcNavFnDijkstra}}(\textcolor{keywordtype}{bool} atStart = \textcolor{keyword}{false});    }
+\DoxyCodeLine{149       \textcolor{keywordtype}{float} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a53d43815e85b2f336fb74008378407f8}{getPathX}}();        }
+\DoxyCodeLine{155       \textcolor{keywordtype}{float} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_adb2f8d5d425eaea34c5a9976582c0c59}{getPathY}}();        }
+\DoxyCodeLine{161       \textcolor{keywordtype}{int}   \mbox{\hyperlink{classnavfn_1_1_nav_fn_a27d0bdd9e1406e3467384b38e562684e}{getPathLen}}();     }
+\DoxyCodeLine{167       \textcolor{keywordtype}{float} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a991e667731691eb111cddc786e2d02d0}{getLastPathCost}}();      }
+\DoxyCodeLine{170       \mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a65f1a68e92cc36905c8adc1ed8419c07}{costarr}};     }
+\DoxyCodeLine{171       \textcolor{keywordtype}{float}   *\mbox{\hyperlink{classnavfn_1_1_nav_fn_ac1c141329d83e70f7ec649eeb74d5930}{potarr}};        }
+\DoxyCodeLine{172       \textcolor{keywordtype}{bool}    *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a7a79ea21c1c230d65349c1a4234a1146}{pending}};      }
+\DoxyCodeLine{173       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a77885790b4fee72d82d34738ecd420e8}{nobs}};         }
+\DoxyCodeLine{176       \textcolor{keywordtype}{int} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a2e511ecff0c963f777149b3112d7d088}{pb1}}, *\mbox{\hyperlink{classnavfn_1_1_nav_fn_ab3bb9ffd5a267db916883bc8adeea45e}{pb2}}, *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a0cc8d5ebae7a7ec08c1c1ebc52f806e1}{pb3}};        }
+\DoxyCodeLine{177       \textcolor{keywordtype}{int} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_ab3804865f546eb599da9384108879ae1}{curP}}, *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a02d3f4d1998b6dcf10e67eb0cc17a3c9}{nextP}}, *\mbox{\hyperlink{classnavfn_1_1_nav_fn_aec4a086d1cd8357f0e9becf3a03e1807}{overP}};  }
+\DoxyCodeLine{178       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a5fea5223a6798e3caafbb09db73f5dcb}{curPe}}, \mbox{\hyperlink{classnavfn_1_1_nav_fn_a57a0981a650734f98cc9110b9c30a622}{nextPe}}, \mbox{\hyperlink{classnavfn_1_1_nav_fn_a967459dcc87c8b99850d74d9b2c8457d}{overPe}}; }
+\DoxyCodeLine{181       \textcolor{keywordtype}{float} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a8c7e3f2353501b6cd5f347d6dab39129}{curT}};           }
+\DoxyCodeLine{182       \textcolor{keywordtype}{float} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a1ac0b9f1455e2bfefd2b7ab37ddf86a6}{priInc}};           }
+\DoxyCodeLine{189       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a11224bd6ba1392f59e2b8e053c29e19f}{setGoal}}(\textcolor{keywordtype}{int} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_aab43846083a47f5e1863675e99e0314c}{goal}});}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{195       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_aae372dff3862f5fddc7de05a8ec9729c}{setStart}}(\textcolor{keywordtype}{int} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a1e91833444b39d86056e74b7c769bcfc}{start}});}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_aab43846083a47f5e1863675e99e0314c}{goal}}[2];}
+\DoxyCodeLine{198       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a1e91833444b39d86056e74b7c769bcfc}{start}}[2];}
+\DoxyCodeLine{204       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a18a538679f3b968ef741dd6ad76f7753}{initCost}}(\textcolor{keywordtype}{int} k, \textcolor{keywordtype}{float} v); }
+\DoxyCodeLine{212       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a5246a7901de2865ac90b19d2434f22c1}{updateCell}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});    }
+\DoxyCodeLine{218       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a45813052a7bd3295909b5eb4d0364e58}{updateCellAstar}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});  }
+\DoxyCodeLine{220       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a}{setupNavFn}}(\textcolor{keywordtype}{bool} keepit = \textcolor{keyword}{false}); }
+\DoxyCodeLine{228       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55}{propNavFnDijkstra}}(\textcolor{keywordtype}{int} cycles, \textcolor{keywordtype}{bool} atStart = \textcolor{keyword}{false}); }
+\DoxyCodeLine{234       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d}{propNavFnAstar}}(\textcolor{keywordtype}{int} cycles); }
+\DoxyCodeLine{237       \textcolor{keywordtype}{float} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a64aa3815ac0d3e6315b205694660109a}{gradx}}, *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a135d509f9624d7e78ebed07f7fb3c71f}{grady}};       }
+\DoxyCodeLine{238       \textcolor{keywordtype}{float} *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a375aad1164c8253c86861e5fb25631e5}{pathx}}, *\mbox{\hyperlink{classnavfn_1_1_nav_fn_a1114910bfef12f5cc403379df0cf0a29}{pathy}};       }
+\DoxyCodeLine{239       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a3df20c72cbc55329e735ca9c244e2829}{npath}};           }
+\DoxyCodeLine{240       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a6d9f6dd7f2d1467bab7687e1c05fb536}{npathbuf}};         }
+\DoxyCodeLine{242       \textcolor{keywordtype}{float} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a591744e902fa225f1557898777a9decd}{last\_path\_cost\_}}; }
+\DoxyCodeLine{250       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a}{calcPath}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, \textcolor{keywordtype}{int} *st = NULL); }
+\DoxyCodeLine{252       \textcolor{keywordtype}{float} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a28b709d5ffb7619f9f2083415a5c96ab}{gradCell}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}});   }
+\DoxyCodeLine{253       \textcolor{keywordtype}{float} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a93b7bc3a8b6ef9e41d2dd84bda5fd264}{pathStep}};       }
+\DoxyCodeLine{256       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_ab42572b5439ae4510a1a261d704082f0}{display}}(\textcolor{keywordtype}{void} fn(\mbox{\hyperlink{classnavfn_1_1_nav_fn}{NavFn}} *nav), \textcolor{keywordtype}{int} \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} = 100); }
+\DoxyCodeLine{257       \textcolor{keywordtype}{int} \mbox{\hyperlink{classnavfn_1_1_nav_fn_ace2319d3eb0aa49e5fe7cf478049fffc}{displayInt}};     }
+\DoxyCodeLine{258       void (*\mbox{\hyperlink{classnavfn_1_1_nav_fn_a1513371ee240294a9f29e2511e725f18}{displayFn}})(\mbox{\hyperlink{classnavfn_1_1_nav_fn}{NavFn}} *nav); }
+\DoxyCodeLine{261       \textcolor{keywordtype}{void} \mbox{\hyperlink{classnavfn_1_1_nav_fn_a8cf5e1fee399f2b501182e01badea3b0}{savemap}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *fname); }
+\DoxyCodeLine{263   \};}
+\DoxyCodeLine{264 \};}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// NAVFN}}
+
+\end{DoxyCode}

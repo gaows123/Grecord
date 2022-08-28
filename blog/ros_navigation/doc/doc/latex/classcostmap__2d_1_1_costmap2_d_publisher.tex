@@ -1,0 +1,326 @@
+\hypertarget{classcostmap__2d_1_1_costmap2_d_publisher}{}\doxysection{costmap\+\_\+2d\+::Costmap2\+DPublisher类 参考}
+\label{classcostmap__2d_1_1_costmap2_d_publisher}\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+
+
+A tool to periodically publish visualization data from a \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}  
+
+
+
+
+{\ttfamily \#include $<$costmap\+\_\+2d\+\_\+publisher.\+h$>$}
+
+
+
+costmap\+\_\+2d\+::Costmap2\+DPublisher 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classcostmap__2d_1_1_costmap2_d_publisher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7}{Costmap2\+DPublisher}} (ros\+::\+Node\+Handle $\ast$ros\+\_\+node, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame, std\+::string topic\+\_\+name, bool always\+\_\+send\+\_\+full\+\_\+costmap=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher}{Costmap2\+DPublisher}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a38077dace67c7ca6aff8fb09ac81e17d}{$\sim$\+Costmap2\+DPublisher}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30}{update\+Bounds}} (unsigned int x0, unsigned int xn, unsigned int y0, unsigned int yn)
+\begin{DoxyCompactList}\small\item\em Include the given bounds in the changed-\/rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953}{publish\+Costmap}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the visualization data over ROS \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a3948a48e3f77d44f0600077470788c38}{active}} ()
+\begin{DoxyCompactList}\small\item\em Check if the publisher is active \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a}{prepare\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Prepare grid\+\_\+ message for publication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add}{on\+New\+Subscription}} (const ros\+::\+Single\+Subscriber\+Publisher \&pub)
+\begin{DoxyCompactList}\small\item\em Publish the latest full costmap to the new subscriber. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_acb9fb47efd7d85f081ea76a7e79f2f10}{node}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a82210756911015a30f981a680be2c651}{costmap\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a13debc4c4c26a8d0c9b088dd0a2f0b53}{global\+\_\+frame\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_ad03e091625a7e64c47d620f001a8778f}{x0\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_aa5bc284341db6fd3c34d505c09f00bbf}{xn\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_abddb9a9625f8c1da0d069d3d23b36731}{y0\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a94802918199a360332554b83200339cc}{yn\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a4601aa9c0a3ae436b679757e4bf23804}{saved\+\_\+origin\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a71533d4ce497adc9b2acda72127ed65c}{saved\+\_\+origin\+\_\+y\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a2c3ba6c3afb098e790fa35bd7dee2b65}{active\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a0b61b35136fca4959ffff8a560f93041}{always\+\_\+send\+\_\+full\+\_\+costmap\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a4ccf18bd721fb672419de1abf491118b}{costmap\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a261f5681cd6342a074271438d74b8d3e}{costmap\+\_\+update\+\_\+pub\+\_\+}}
+\item 
+nav\+\_\+msgs\+::\+Occupancy\+Grid \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_ae19b0300daf08759d4fd8ad4b0792a4b}{grid\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher_a925a0131bf6d351f7c0f145473322800}{cost\+\_\+translation\+\_\+table\+\_\+}} = NULL
+\begin{DoxyCompactList}\small\item\em Translate from 0-\/255 values in costmap to -\/1 to 100 values in message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A tool to periodically publish visualization data from a \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7}\label{classcostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!Costmap2DPublisher@{Costmap2DPublisher}}
+\index{Costmap2DPublisher@{Costmap2DPublisher}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{Costmap2DPublisher()}{Costmap2DPublisher()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::\+Costmap2\+DPublisher (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle $\ast$}]{ros\+\_\+node,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{global\+\_\+frame,  }\item[{std\+::string}]{topic\+\_\+name,  }\item[{bool}]{always\+\_\+send\+\_\+full\+\_\+costmap = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher}{Costmap2\+DPublisher}} 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_a56d27ca488f09b70a8698b2491d036e7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a38077dace67c7ca6aff8fb09ac81e17d}\label{classcostmap__2d_1_1_costmap2_d_publisher_a38077dace67c7ca6aff8fb09ac81e17d}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!````~Costmap2DPublisher@{$\sim$Costmap2DPublisher}}
+\index{````~Costmap2DPublisher@{$\sim$Costmap2DPublisher}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{$\sim$Costmap2DPublisher()}{~Costmap2DPublisher()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::$\sim$\+Costmap2\+DPublisher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a3948a48e3f77d44f0600077470788c38}\label{classcostmap__2d_1_1_costmap2_d_publisher_a3948a48e3f77d44f0600077470788c38}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!active@{active}}
+\index{active@{active}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{active()}{active()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the publisher is active 
+
+\begin{DoxyReturn}{返回}
+True if the frequency for the publisher is non-\/zero, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add}\label{classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!onNewSubscription@{onNewSubscription}}
+\index{onNewSubscription@{onNewSubscription}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{onNewSubscription()}{onNewSubscription()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::on\+New\+Subscription (\begin{DoxyParamCaption}\item[{const ros\+::\+Single\+Subscriber\+Publisher \&}]{pub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Publish the latest full costmap to the new subscriber. 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_aee87acfd9d19093239ec59a88e3e4add_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a}\label{classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!prepareGrid@{prepareGrid}}
+\index{prepareGrid@{prepareGrid}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{prepareGrid()}{prepareGrid()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::prepare\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prepare grid\+\_\+ message for publication. 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_a2bb9ed054a418a59554668a9d1bc723a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953}\label{classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!publishCostmap@{publishCostmap}}
+\index{publishCostmap@{publishCostmap}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{publishCostmap()}{publishCostmap()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::publish\+Costmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Publishes the visualization data over ROS 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_a47e5b5d93113f39786112919a6981953_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30}\label{classcostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::update\+Bounds (\begin{DoxyParamCaption}\item[{unsigned int}]{x0,  }\item[{unsigned int}]{xn,  }\item[{unsigned int}]{y0,  }\item[{unsigned int}]{yn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Include the given bounds in the changed-\/rectangle. 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_costmap2_d_publisher_a51c026184908fb427babad570150df30_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a2c3ba6c3afb098e790fa35bd7dee2b65}\label{classcostmap__2d_1_1_costmap2_d_publisher_a2c3ba6c3afb098e790fa35bd7dee2b65}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!active\_@{active\_}}
+\index{active\_@{active\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{active\_}{active\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::active\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a0b61b35136fca4959ffff8a560f93041}\label{classcostmap__2d_1_1_costmap2_d_publisher_a0b61b35136fca4959ffff8a560f93041}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!always\_send\_full\_costmap\_@{always\_send\_full\_costmap\_}}
+\index{always\_send\_full\_costmap\_@{always\_send\_full\_costmap\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{always\_send\_full\_costmap\_}{always\_send\_full\_costmap\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::always\+\_\+send\+\_\+full\+\_\+costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a925a0131bf6d351f7c0f145473322800}\label{classcostmap__2d_1_1_costmap2_d_publisher_a925a0131bf6d351f7c0f145473322800}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!cost\_translation\_table\_@{cost\_translation\_table\_}}
+\index{cost\_translation\_table\_@{cost\_translation\_table\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{cost\_translation\_table\_}{cost\_translation\_table\_}}
+{\footnotesize\ttfamily char $\ast$ costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::cost\+\_\+translation\+\_\+table\+\_\+ = NULL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Translate from 0-\/255 values in costmap to -\/1 to 100 values in message. 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a82210756911015a30f981a680be2c651}\label{classcostmap__2d_1_1_costmap2_d_publisher_a82210756911015a30f981a680be2c651}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}$\ast$ costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a4ccf18bd721fb672419de1abf491118b}\label{classcostmap__2d_1_1_costmap2_d_publisher_a4ccf18bd721fb672419de1abf491118b}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!costmap\_pub\_@{costmap\_pub\_}}
+\index{costmap\_pub\_@{costmap\_pub\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{costmap\_pub\_}{costmap\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::costmap\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a261f5681cd6342a074271438d74b8d3e}\label{classcostmap__2d_1_1_costmap2_d_publisher_a261f5681cd6342a074271438d74b8d3e}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!costmap\_update\_pub\_@{costmap\_update\_pub\_}}
+\index{costmap\_update\_pub\_@{costmap\_update\_pub\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{costmap\_update\_pub\_}{costmap\_update\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::costmap\+\_\+update\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a13debc4c4c26a8d0c9b088dd0a2f0b53}\label{classcostmap__2d_1_1_costmap2_d_publisher_a13debc4c4c26a8d0c9b088dd0a2f0b53}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_ae19b0300daf08759d4fd8ad4b0792a4b}\label{classcostmap__2d_1_1_costmap2_d_publisher_ae19b0300daf08759d4fd8ad4b0792a4b}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!grid\_@{grid\_}}
+\index{grid\_@{grid\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{grid\_}{grid\_}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Occupancy\+Grid costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::grid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_acb9fb47efd7d85f081ea76a7e79f2f10}\label{classcostmap__2d_1_1_costmap2_d_publisher_acb9fb47efd7d85f081ea76a7e79f2f10}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!node@{node}}
+\index{node@{node}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle$\ast$ costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::node\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a4601aa9c0a3ae436b679757e4bf23804}\label{classcostmap__2d_1_1_costmap2_d_publisher_a4601aa9c0a3ae436b679757e4bf23804}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!saved\_origin\_x\_@{saved\_origin\_x\_}}
+\index{saved\_origin\_x\_@{saved\_origin\_x\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{saved\_origin\_x\_}{saved\_origin\_x\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::saved\+\_\+origin\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a71533d4ce497adc9b2acda72127ed65c}\label{classcostmap__2d_1_1_costmap2_d_publisher_a71533d4ce497adc9b2acda72127ed65c}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!saved\_origin\_y\_@{saved\_origin\_y\_}}
+\index{saved\_origin\_y\_@{saved\_origin\_y\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{saved\_origin\_y\_}{saved\_origin\_y\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::saved\+\_\+origin\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_ad03e091625a7e64c47d620f001a8778f}\label{classcostmap__2d_1_1_costmap2_d_publisher_ad03e091625a7e64c47d620f001a8778f}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!x0\_@{x0\_}}
+\index{x0\_@{x0\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{x0\_}{x0\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::x0\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_aa5bc284341db6fd3c34d505c09f00bbf}\label{classcostmap__2d_1_1_costmap2_d_publisher_aa5bc284341db6fd3c34d505c09f00bbf}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!xn\_@{xn\_}}
+\index{xn\_@{xn\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{xn\_}{xn\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::xn\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_abddb9a9625f8c1da0d069d3d23b36731}\label{classcostmap__2d_1_1_costmap2_d_publisher_abddb9a9625f8c1da0d069d3d23b36731}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!y0\_@{y0\_}}
+\index{y0\_@{y0\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{y0\_}{y0\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::y0\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_costmap2_d_publisher_a94802918199a360332554b83200339cc}\label{classcostmap__2d_1_1_costmap2_d_publisher_a94802918199a360332554b83200339cc}} 
+\index{costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}!yn\_@{yn\_}}
+\index{yn\_@{yn\_}!costmap\_2d::Costmap2DPublisher@{costmap\_2d::Costmap2DPublisher}}
+\doxysubsubsection{\texorpdfstring{yn\_}{yn\_}}
+{\footnotesize\ttfamily unsigned int costmap\+\_\+2d\+::\+Costmap2\+DPublisher\+::yn\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{costmap__2d__publisher_8h}{costmap\+\_\+2d\+\_\+publisher.\+h}}\item 
+costmap\+\_\+2d/src/\mbox{\hyperlink{costmap__2d__publisher_8cpp}{costmap\+\_\+2d\+\_\+publisher.\+cpp}}\end{DoxyCompactItemize}

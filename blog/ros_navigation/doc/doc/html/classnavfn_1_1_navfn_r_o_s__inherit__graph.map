@@ -1,0 +1,5 @@
+<map id="navfn::NavfnROS" name="navfn::NavfnROS">
+<area shape="rect" id="node1" title="Navfn 全局规划器的ROS封装类" alt="" coords="41,80,165,107"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_navfn_with_costmap.html" title=" " alt="" coords="15,155,190,181"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,5,200,32"/>
+</map>

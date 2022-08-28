@@ -1,0 +1,101 @@
+\hypertarget{amcl__sensor_8h_source}{}\doxysection{amcl\+\_\+sensor.\+h}
+\label{amcl__sensor_8h_source}\index{amcl/include/amcl/sensors/amcl\_sensor.h@{amcl/include/amcl/sensors/amcl\_sensor.h}}
+\mbox{\hyperlink{amcl__sensor_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  Player -\/ One Hell of a Robot Server}}
+\DoxyCodeLine{3 \textcolor{comment}{ *  Copyright (C) 2000  Brian Gerkey et al.}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  This library is free software; you can redistribute it and/or}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  modify it under the terms of the GNU Lesser General Public}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  License as published by the Free Software Foundation; either}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  version 2.1 of the License, or (at your option) any later version.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  This library is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU}}
+\DoxyCodeLine{13 \textcolor{comment}{ *  Lesser General Public License for more details.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *}}
+\DoxyCodeLine{15 \textcolor{comment}{ *  You should have received a copy of the GNU Lesser General Public}}
+\DoxyCodeLine{16 \textcolor{comment}{ *  License along with this library; if not, write to the Free Software}}
+\DoxyCodeLine{17 \textcolor{comment}{ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-\/1307  USA}}
+\DoxyCodeLine{18 \textcolor{comment}{ */}}
+\DoxyCodeLine{20 \textcolor{comment}{//}}
+\DoxyCodeLine{21 \textcolor{comment}{// Desc: Adaptive Monte-\/Carlo localization}}
+\DoxyCodeLine{22 \textcolor{comment}{// Author: Andrew Howard}}
+\DoxyCodeLine{23 \textcolor{comment}{// Date: 6 Feb 2003}}
+\DoxyCodeLine{24 \textcolor{comment}{// CVS: \$Id: amcl\_sensor.h 6443 2008-\/05-\/15 19:46:11Z gerkey \$}}
+\DoxyCodeLine{25 \textcolor{comment}{//}}
+\DoxyCodeLine{27 \textcolor{comment}{}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#ifndef AMCL\_SENSOR\_H}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define AMCL\_SENSOR\_H}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}../pf/pf.h"{}}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceamcl}{amcl}}}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{comment}{// Forward declarations}}
+\DoxyCodeLine{37 \textcolor{keyword}{class }AMCLSensorData;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{// Base class for all AMCL sensors}}
+\DoxyCodeLine{41 \textcolor{keyword}{class }\mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor}{AMCLSensor}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43   \textcolor{comment}{// Default constructor}}
+\DoxyCodeLine{44   \textcolor{keyword}{public}: \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_ade685421ea9e858b7cfb921c7060b415}{AMCLSensor}}();}
+\DoxyCodeLine{45          }
+\DoxyCodeLine{46   \textcolor{comment}{// Default destructor}}
+\DoxyCodeLine{47   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_a4f60fbb3a0fc393b5459549dd55fae4c}{\string~AMCLSensor}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49   \textcolor{comment}{// Update the filter based on the action model.  Returns true if the filter}}
+\DoxyCodeLine{50   \textcolor{comment}{// has been updated.}}
+\DoxyCodeLine{51   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_a258db7bc9b5713914527f50dcfdd6800}{UpdateAction}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}} *data);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53   \textcolor{comment}{// Initialize the filter based on the sensor model.  Returns true if the}}
+\DoxyCodeLine{54   \textcolor{comment}{// filter has been initialized.}}
+\DoxyCodeLine{55   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_a5129ccfbedd56821ca6ae9a5e2cbf193}{InitSensor}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}} *data);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{comment}{// Update the filter based on the sensor model.  Returns true if the}}
+\DoxyCodeLine{58   \textcolor{comment}{// filter has been updated.}}
+\DoxyCodeLine{59   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_a5243e92ca32aa4a86e10bc36a896b365}{UpdateSensor}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}} *data);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61   \textcolor{comment}{// Flag is true if this is the action sensor}}
+\DoxyCodeLine{62   \textcolor{keyword}{public}: \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_acc893ca5bd2e1e5f6989c1fa9c14d0fb}{is\_action}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   \textcolor{comment}{// Action pose (action sensors only)}}
+\DoxyCodeLine{65   \textcolor{keyword}{public}: \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_a2938edc4972ba244737bdd113a746fbf}{pose}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67   \textcolor{comment}{// AMCL Base}}
+\DoxyCodeLine{68   \textcolor{comment}{//protected: AdaptiveMCL \& AMCL;}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#ifdef INCLUDE\_RTKGUI}}
+\DoxyCodeLine{71   \textcolor{comment}{// Setup the GUI}}
+\DoxyCodeLine{72   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} SetupGUI(rtk\_canvas\_t *canvas, rtk\_fig\_t *robot\_fig);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{comment}{// Finalize the GUI}}
+\DoxyCodeLine{75   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} ShutdownGUI(rtk\_canvas\_t *canvas, rtk\_fig\_t *robot\_fig);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77   \textcolor{comment}{// Draw sensor data}}
+\DoxyCodeLine{78   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} UpdateGUI(rtk\_canvas\_t *canvas, rtk\_fig\_t *robot\_fig, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}} *data);}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{80 \};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{// Base class for all AMCL sensor measurements}}
+\DoxyCodeLine{85 \textcolor{keyword}{class }\mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}}}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87   \textcolor{comment}{// Pointer to sensor that generated the data}}
+\DoxyCodeLine{88   \textcolor{keyword}{public}: \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor}{AMCLSensor}} *\mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data_a889d8b20f4ad48df9731da00e1fd36c2}{sensor}};}
+\DoxyCodeLine{89           \textcolor{keyword}{virtual} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data_a24fdf156c4508b5bd4962dc22a0d7a09}{\string~AMCLSensorData}}() \{\}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   \textcolor{comment}{// Data timestamp}}
+\DoxyCodeLine{92   \textcolor{keyword}{public}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data_a91586ec7c1fbd02039e1cf38078d2108}{time}};}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

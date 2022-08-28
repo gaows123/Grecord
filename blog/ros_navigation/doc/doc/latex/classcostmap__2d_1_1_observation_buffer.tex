@@ -1,0 +1,354 @@
+\hypertarget{classcostmap__2d_1_1_observation_buffer}{}\doxysection{costmap\+\_\+2d\+::Observation\+Buffer类 参考}
+\label{classcostmap__2d_1_1_observation_buffer}\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+
+
+Takes in point clouds from sensors, transforms them to the desired frame, and stores them  
+
+
+
+
+{\ttfamily \#include $<$observation\+\_\+buffer.\+h$>$}
+
+
+
+costmap\+\_\+2d\+::Observation\+Buffer 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classcostmap__2d_1_1_observation_buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a6a6840d481c0f6fabf5f9b2788bbd205}{Observation\+Buffer}} (std\+::string topic\+\_\+name, double observation\+\_\+keep\+\_\+time, double expected\+\_\+update\+\_\+rate, double min\+\_\+obstacle\+\_\+height, double max\+\_\+obstacle\+\_\+height, double obstacle\+\_\+range, double raytrace\+\_\+range, tf2\+\_\+ros\+::\+Buffer \&tf2\+\_\+buffer, std\+::string global\+\_\+frame, std\+::string sensor\+\_\+frame, double tf\+\_\+tolerance)
+\begin{DoxyCompactList}\small\item\em Constructs an observation buffer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_ad14ce56a9f57bddfecd87d0c2cc2201d}{$\sim$\+Observation\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor... cleans up \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a078a1fab09eb0501fa9f205f818c4c73}{set\+Global\+Frame}} (const std\+::string new\+\_\+global\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Sets the global frame of an observation buffer. This will transform all the currently cached observations to the new global frame \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_af1bdb755c1ed181b2108fc26826bc273}{buffer\+Cloud}} (const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&cloud)
+\begin{DoxyCompactList}\small\item\em Transforms a Point\+Cloud to the global frame and buffers it {\bfseries{Note\+: The burden is on the user to make sure the transform is available... ie they should use a Message\+Notifier}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aa89ff474cd6785349e3c0b2f49e2d738}{get\+Observations}} (std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}} $>$ \&observations)
+\begin{DoxyCompactList}\small\item\em Pushes copies of all current observations onto the end of the vector passed in \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a169930366d75cae5d78e7b069be4a042}{is\+Current}} () const
+\begin{DoxyCompactList}\small\item\em Check if the observation buffer is being update at its expected rate \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_af6e43c89ccb0db68cd1bad60108a8167}{lock}} ()
+\begin{DoxyCompactList}\small\item\em Lock the observation buffer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a5ccb558d025fd254ab9e1bf89f6d82d8}{unlock}} ()
+\begin{DoxyCompactList}\small\item\em Lock the observation buffer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aeb595ff9e1f56003644f4b0743020cd3}{reset\+Last\+Updated}} ()
+\begin{DoxyCompactList}\small\item\em Reset last updated timestamp \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a65b02e4c2e54d86b8e110fbabdab0659}{purge\+Stale\+Observations}} ()
+\begin{DoxyCompactList}\small\item\em Removes any stale observations from the buffer list \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+tf2\+\_\+ros\+::\+Buffer \& \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a73444bf190531d9180e474e9e608b32b}{tf2\+\_\+buffer\+\_\+}}
+\item 
+const ros\+::\+Duration \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a29bc32d920027d37eaeb49e0975ae337}{observation\+\_\+keep\+\_\+time\+\_\+}}
+\item 
+const ros\+::\+Duration \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a10d0c3bc749c7a1710526616b0210cd3}{expected\+\_\+update\+\_\+rate\+\_\+}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a7c9909af13ffca0a992756d4704b05d6}{last\+\_\+updated\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a92c26d155177c15f23501fef11153afa}{global\+\_\+frame\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aab699cc1c65c2bda7fe0e9e1a1f6a380}{sensor\+\_\+frame\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}} $>$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a9f2bf57b5de5b5dd70299dad223b0689}{observation\+\_\+list\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a459fda9f6de13c20340ede0e85a5c26c}{topic\+\_\+name\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_aa4ac1ea1cf1ac01fd1a0cb3f779e623c}{min\+\_\+obstacle\+\_\+height\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a238db75220517e998952c2b411f5ebae}{max\+\_\+obstacle\+\_\+height\+\_\+}}
+\item 
+boost\+::recursive\+\_\+mutex \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a85f23aec440e01fac3ac9f9bdaebbdcc}{lock\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A lock for accessing data in callbacks safely \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a688f4520b698c8ce3b766212e217c2a0}{obstacle\+\_\+range\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_af47e0ad64246605f41dacdcc7fca4edf}{raytrace\+\_\+range\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_observation_buffer_a236a04bad7c2cb033ae307e7b509e430}{tf\+\_\+tolerance\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Takes in point clouds from sensors, transforms them to the desired frame, and stores them 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a6a6840d481c0f6fabf5f9b2788bbd205}\label{classcostmap__2d_1_1_observation_buffer_a6a6840d481c0f6fabf5f9b2788bbd205}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!ObservationBuffer@{ObservationBuffer}}
+\index{ObservationBuffer@{ObservationBuffer}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{ObservationBuffer()}{ObservationBuffer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Observation\+Buffer\+::\+Observation\+Buffer (\begin{DoxyParamCaption}\item[{std\+::string}]{topic\+\_\+name,  }\item[{double}]{observation\+\_\+keep\+\_\+time,  }\item[{double}]{expected\+\_\+update\+\_\+rate,  }\item[{double}]{min\+\_\+obstacle\+\_\+height,  }\item[{double}]{max\+\_\+obstacle\+\_\+height,  }\item[{double}]{obstacle\+\_\+range,  }\item[{double}]{raytrace\+\_\+range,  }\item[{tf2\+\_\+ros\+::\+Buffer \&}]{tf2\+\_\+buffer,  }\item[{std\+::string}]{global\+\_\+frame,  }\item[{std\+::string}]{sensor\+\_\+frame,  }\item[{double}]{tf\+\_\+tolerance }\end{DoxyParamCaption})}
+
+
+
+Constructs an observation buffer 
+
+
+\begin{DoxyParams}{参数}
+{\em topic\+\_\+name} & The topic of the observations, used as an identifier for error and warning messages \\
+\hline
+{\em observation\+\_\+keep\+\_\+time} & Defines the persistence of observations in seconds, 0 means only keep the latest \\
+\hline
+{\em expected\+\_\+update\+\_\+rate} & How often this buffer is expected to be updated, 0 means there is no limit \\
+\hline
+{\em min\+\_\+obstacle\+\_\+height} & The minimum height of a hitpoint to be considered legal \\
+\hline
+{\em max\+\_\+obstacle\+\_\+height} & The minimum height of a hitpoint to be considered legal \\
+\hline
+{\em obstacle\+\_\+range} & The range to which the sensor should be trusted for inserting obstacles \\
+\hline
+{\em raytrace\+\_\+range} & The range to which the sensor should be trusted for raytracing to clear out space \\
+\hline
+{\em tf2\+\_\+buffer} & A reference to a tf2 Buffer \\
+\hline
+{\em global\+\_\+frame} & The frame to transform Point\+Clouds into \\
+\hline
+{\em sensor\+\_\+frame} & The frame of the origin of the sensor, can be left blank to be read from the messages \\
+\hline
+{\em tf\+\_\+tolerance} & The amount of time to wait for a transform to be available when setting a new global frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_ad14ce56a9f57bddfecd87d0c2cc2201d}\label{classcostmap__2d_1_1_observation_buffer_ad14ce56a9f57bddfecd87d0c2cc2201d}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!````~ObservationBuffer@{$\sim$ObservationBuffer}}
+\index{````~ObservationBuffer@{$\sim$ObservationBuffer}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{$\sim$ObservationBuffer()}{~ObservationBuffer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Observation\+Buffer\+::$\sim$\+Observation\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor... cleans up 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_af1bdb755c1ed181b2108fc26826bc273}\label{classcostmap__2d_1_1_observation_buffer_af1bdb755c1ed181b2108fc26826bc273}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!bufferCloud@{bufferCloud}}
+\index{bufferCloud@{bufferCloud}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{bufferCloud()}{bufferCloud()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::buffer\+Cloud (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&}]{cloud }\end{DoxyParamCaption})}
+
+
+
+Transforms a Point\+Cloud to the global frame and buffers it {\bfseries{Note\+: The burden is on the user to make sure the transform is available... ie they should use a Message\+Notifier}} 
+
+
+\begin{DoxyParams}{参数}
+{\em cloud} & The cloud to be buffered \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_observation_buffer_af1bdb755c1ed181b2108fc26826bc273_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_aa89ff474cd6785349e3c0b2f49e2d738}\label{classcostmap__2d_1_1_observation_buffer_aa89ff474cd6785349e3c0b2f49e2d738}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!getObservations@{getObservations}}
+\index{getObservations@{getObservations}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{getObservations()}{getObservations()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::get\+Observations (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}} $>$ \&}]{observations }\end{DoxyParamCaption})}
+
+
+
+Pushes copies of all current observations onto the end of the vector passed in 
+
+
+\begin{DoxyParams}{参数}
+{\em observations} & The vector to be filled \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_observation_buffer_aa89ff474cd6785349e3c0b2f49e2d738_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a169930366d75cae5d78e7b069be4a042}\label{classcostmap__2d_1_1_observation_buffer_a169930366d75cae5d78e7b069be4a042}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!isCurrent@{isCurrent}}
+\index{isCurrent@{isCurrent}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{isCurrent()}{isCurrent()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Observation\+Buffer\+::is\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the observation buffer is being update at its expected rate 
+
+\begin{DoxyReturn}{返回}
+True if it is being updated at the expected rate, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_af6e43c89ccb0db68cd1bad60108a8167}\label{classcostmap__2d_1_1_observation_buffer_af6e43c89ccb0db68cd1bad60108a8167}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!lock@{lock}}
+\index{lock@{lock}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lock the observation buffer 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a65b02e4c2e54d86b8e110fbabdab0659}\label{classcostmap__2d_1_1_observation_buffer_a65b02e4c2e54d86b8e110fbabdab0659}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!purgeStaleObservations@{purgeStaleObservations}}
+\index{purgeStaleObservations@{purgeStaleObservations}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{purgeStaleObservations()}{purgeStaleObservations()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::purge\+Stale\+Observations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Removes any stale observations from the buffer list 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_observation_buffer_a65b02e4c2e54d86b8e110fbabdab0659_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_aeb595ff9e1f56003644f4b0743020cd3}\label{classcostmap__2d_1_1_observation_buffer_aeb595ff9e1f56003644f4b0743020cd3}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!resetLastUpdated@{resetLastUpdated}}
+\index{resetLastUpdated@{resetLastUpdated}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{resetLastUpdated()}{resetLastUpdated()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::reset\+Last\+Updated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset last updated timestamp 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a078a1fab09eb0501fa9f205f818c4c73}\label{classcostmap__2d_1_1_observation_buffer_a078a1fab09eb0501fa9f205f818c4c73}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!setGlobalFrame@{setGlobalFrame}}
+\index{setGlobalFrame@{setGlobalFrame}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{setGlobalFrame()}{setGlobalFrame()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Observation\+Buffer\+::set\+Global\+Frame (\begin{DoxyParamCaption}\item[{const std\+::string}]{new\+\_\+global\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Sets the global frame of an observation buffer. This will transform all the currently cached observations to the new global frame 
+
+
+\begin{DoxyParams}{参数}
+{\em new\+\_\+global\+\_\+frame} & The name of the new global frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the operation succeeds, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a5ccb558d025fd254ab9e1bf89f6d82d8}\label{classcostmap__2d_1_1_observation_buffer_a5ccb558d025fd254ab9e1bf89f6d82d8}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!unlock@{unlock}}
+\index{unlock@{unlock}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Observation\+Buffer\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lock the observation buffer 
+
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a10d0c3bc749c7a1710526616b0210cd3}\label{classcostmap__2d_1_1_observation_buffer_a10d0c3bc749c7a1710526616b0210cd3}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!expected\_update\_rate\_@{expected\_update\_rate\_}}
+\index{expected\_update\_rate\_@{expected\_update\_rate\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{expected\_update\_rate\_}{expected\_update\_rate\_}}
+{\footnotesize\ttfamily const ros\+::\+Duration costmap\+\_\+2d\+::\+Observation\+Buffer\+::expected\+\_\+update\+\_\+rate\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a92c26d155177c15f23501fef11153afa}\label{classcostmap__2d_1_1_observation_buffer_a92c26d155177c15f23501fef11153afa}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Observation\+Buffer\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a7c9909af13ffca0a992756d4704b05d6}\label{classcostmap__2d_1_1_observation_buffer_a7c9909af13ffca0a992756d4704b05d6}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!last\_updated\_@{last\_updated\_}}
+\index{last\_updated\_@{last\_updated\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{last\_updated\_}{last\_updated\_}}
+{\footnotesize\ttfamily ros\+::\+Time costmap\+\_\+2d\+::\+Observation\+Buffer\+::last\+\_\+updated\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a85f23aec440e01fac3ac9f9bdaebbdcc}\label{classcostmap__2d_1_1_observation_buffer_a85f23aec440e01fac3ac9f9bdaebbdcc}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily boost\+::recursive\+\_\+mutex costmap\+\_\+2d\+::\+Observation\+Buffer\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lock for accessing data in callbacks safely 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a238db75220517e998952c2b411f5ebae}\label{classcostmap__2d_1_1_observation_buffer_a238db75220517e998952c2b411f5ebae}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!max\_obstacle\_height\_@{max\_obstacle\_height\_}}
+\index{max\_obstacle\_height\_@{max\_obstacle\_height\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{max\_obstacle\_height\_}{max\_obstacle\_height\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Observation\+Buffer\+::max\+\_\+obstacle\+\_\+height\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_aa4ac1ea1cf1ac01fd1a0cb3f779e623c}\label{classcostmap__2d_1_1_observation_buffer_aa4ac1ea1cf1ac01fd1a0cb3f779e623c}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!min\_obstacle\_height\_@{min\_obstacle\_height\_}}
+\index{min\_obstacle\_height\_@{min\_obstacle\_height\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{min\_obstacle\_height\_}{min\_obstacle\_height\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Observation\+Buffer\+::min\+\_\+obstacle\+\_\+height\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a29bc32d920027d37eaeb49e0975ae337}\label{classcostmap__2d_1_1_observation_buffer_a29bc32d920027d37eaeb49e0975ae337}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!observation\_keep\_time\_@{observation\_keep\_time\_}}
+\index{observation\_keep\_time\_@{observation\_keep\_time\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{observation\_keep\_time\_}{observation\_keep\_time\_}}
+{\footnotesize\ttfamily const ros\+::\+Duration costmap\+\_\+2d\+::\+Observation\+Buffer\+::observation\+\_\+keep\+\_\+time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a9f2bf57b5de5b5dd70299dad223b0689}\label{classcostmap__2d_1_1_observation_buffer_a9f2bf57b5de5b5dd70299dad223b0689}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!observation\_list\_@{observation\_list\_}}
+\index{observation\_list\_@{observation\_list\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{observation\_list\_}{observation\_list\_}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}}$>$ costmap\+\_\+2d\+::\+Observation\+Buffer\+::observation\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a688f4520b698c8ce3b766212e217c2a0}\label{classcostmap__2d_1_1_observation_buffer_a688f4520b698c8ce3b766212e217c2a0}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!obstacle\_range\_@{obstacle\_range\_}}
+\index{obstacle\_range\_@{obstacle\_range\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{obstacle\_range\_}{obstacle\_range\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Observation\+Buffer\+::obstacle\+\_\+range\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_af47e0ad64246605f41dacdcc7fca4edf}\label{classcostmap__2d_1_1_observation_buffer_af47e0ad64246605f41dacdcc7fca4edf}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!raytrace\_range\_@{raytrace\_range\_}}
+\index{raytrace\_range\_@{raytrace\_range\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{raytrace\_range\_}{raytrace\_range\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Observation\+Buffer\+::raytrace\+\_\+range\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_aab699cc1c65c2bda7fe0e9e1a1f6a380}\label{classcostmap__2d_1_1_observation_buffer_aab699cc1c65c2bda7fe0e9e1a1f6a380}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!sensor\_frame\_@{sensor\_frame\_}}
+\index{sensor\_frame\_@{sensor\_frame\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{sensor\_frame\_}{sensor\_frame\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Observation\+Buffer\+::sensor\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a73444bf190531d9180e474e9e608b32b}\label{classcostmap__2d_1_1_observation_buffer_a73444bf190531d9180e474e9e608b32b}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!tf2\_buffer\_@{tf2\_buffer\_}}
+\index{tf2\_buffer\_@{tf2\_buffer\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{tf2\_buffer\_}{tf2\_buffer\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer\& costmap\+\_\+2d\+::\+Observation\+Buffer\+::tf2\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a236a04bad7c2cb033ae307e7b509e430}\label{classcostmap__2d_1_1_observation_buffer_a236a04bad7c2cb033ae307e7b509e430}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!tf\_tolerance\_@{tf\_tolerance\_}}
+\index{tf\_tolerance\_@{tf\_tolerance\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{tf\_tolerance\_}{tf\_tolerance\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Observation\+Buffer\+::tf\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_buffer_a459fda9f6de13c20340ede0e85a5c26c}\label{classcostmap__2d_1_1_observation_buffer_a459fda9f6de13c20340ede0e85a5c26c}} 
+\index{costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}!topic\_name\_@{topic\_name\_}}
+\index{topic\_name\_@{topic\_name\_}!costmap\_2d::ObservationBuffer@{costmap\_2d::ObservationBuffer}}
+\doxysubsubsection{\texorpdfstring{topic\_name\_}{topic\_name\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Observation\+Buffer\+::topic\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{observation__buffer_8h}{observation\+\_\+buffer.\+h}}\item 
+costmap\+\_\+2d/src/\mbox{\hyperlink{observation__buffer_8cpp}{observation\+\_\+buffer.\+cpp}}\end{DoxyCompactItemize}

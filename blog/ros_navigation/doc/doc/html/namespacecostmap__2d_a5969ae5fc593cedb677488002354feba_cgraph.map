@@ -1,0 +1,4 @@
+<map id="costmap_2d::toPointVector" name="costmap_2d::toPointVector">
+<area shape="rect" id="node1" title="Convert Polygon msg to vector of Points." alt="" coords="5,5,185,32"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#a9ffe4eb45b6230a18f56723b49cb0047" title="Convert Point32 to Point" alt="" coords="233,5,376,32"/>
+</map>

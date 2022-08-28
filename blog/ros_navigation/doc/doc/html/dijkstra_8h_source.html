@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner/include/global_planner/dijkstra.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_414b209fa36dd1433a9bb8cd280add1a.html">global_planner</a></li><li class="navelem"><a class="el" href="dir_7b76dca46bce552b8fb66bb9e9404d32.html">include</a></li><li class="navelem"><a class="el" href="dir_b2f73a2221e56eeb39c8f87f953e2d4b.html">global_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">dijkstra.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="dijkstra_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  Copyright (c) 2008, 2013, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *         David V. Lu!!</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef _DIJKSTRA_H</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define _DIJKSTRA_H</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="dijkstra_8h.html#acc292a3d616d167e6b5f3e33cd9dad54">   41</a></span><span class="preprocessor">#define PRIORITYBUFSIZE 10000</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &lt;<a class="code" href="planner__core_8h.html">global_planner/planner_core.h</a>&gt;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &lt;<a class="code" href="expander_8h.html">global_planner/expander.h</a>&gt;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// inserting onto the priority blocks</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="dijkstra_8h.html#a0d84ad97d9e5cbb6547781c77e034df1">   51</a></span><span class="preprocessor">#define push_cur(n)  { if (n&gt;=0 &amp;&amp; n&lt;ns_ &amp;&amp; !pending_[n] &amp;&amp; getCost(costs, n)&lt;lethal_cost_ &amp;&amp; currentEnd_&lt;PRIORITYBUFSIZE){ currentBuffer_[currentEnd_++]=n; pending_[n]=true; }}</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="dijkstra_8h.html#a5a251060a5b8d30b785c40cc337d6fb2">   52</a></span><span class="preprocessor">#define push_next(n) { if (n&gt;=0 &amp;&amp; n&lt;ns_ &amp;&amp; !pending_[n] &amp;&amp; getCost(costs, n)&lt;lethal_cost_ &amp;&amp;    nextEnd_&lt;PRIORITYBUFSIZE){    nextBuffer_[   nextEnd_++]=n; pending_[n]=true; }}</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="dijkstra_8h.html#a9f319625e73c43d623645edec18b90de">   53</a></span><span class="preprocessor">#define push_over(n) { if (n&gt;=0 &amp;&amp; n&lt;ns_ &amp;&amp; !pending_[n] &amp;&amp; getCost(costs, n)&lt;lethal_cost_ &amp;&amp;    overEnd_&lt;PRIORITYBUFSIZE){    overBuffer_[   overEnd_++]=n; pending_[n]=true; }}</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceglobal__planner.html">global_planner</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html">   56</a></span><span class="keyword">class </span><a class="code hl_class" href="classglobal__planner_1_1_dijkstra_expansion.html">DijkstraExpansion</a> : <span class="keyword">public</span> <a class="code hl_class" href="classglobal__planner_1_1_expander.html">Expander</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#a58e6885deccbdab45ecda172bb74c702">DijkstraExpansion</a>(<a class="code hl_class" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a>* p_calc, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#ab535b80f93f16281cdb9f4ff8cd301e0">~DijkstraExpansion</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#a1102e169bb79dac31de8fe5ca5ace39b">calculatePotentials</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costs, <span class="keywordtype">double</span> start_x, <span class="keywordtype">double</span> start_y, <span class="keywordtype">double</span> end_x, <span class="keywordtype">double</span> end_y, <span class="keywordtype">int</span> cycles,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                <span class="keywordtype">float</span>* potential);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#a7d286126b2c478fc55c5e995e1deff29">setSize</a>(<span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny); </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#a2ec5a9b73f4a8680adc8e406bc18b254">   70</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#a2ec5a9b73f4a8680adc8e406bc18b254">setNeutralCost</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> neutral_cost) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a> = neutral_cost;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#ac3256e3646ba17ea885abd80ac12b692">priorityIncrement_</a> = 2 * <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#a5ba5aa2bff86fd1b18b24163379d9e2b">   75</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#a5ba5aa2bff86fd1b18b24163379d9e2b">setPreciseStart</a>(<span class="keywordtype">bool</span> precise){ <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a94dbd3ba373631604ee8cb021e39cd41">precise_</a> = precise; }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#a037961c97a953fddf61bbae64f9c1b97">updateCell</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costs, <span class="keywordtype">float</span>* potential, <span class="keywordtype">int</span> <a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>); </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#a13395ccfa132ce826ee5f88865b73aee">   86</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classglobal__planner_1_1_dijkstra_expansion.html#a13395ccfa132ce826ee5f88865b73aee">getCost</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costs, <span class="keywordtype">int</span> <a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordtype">float</span> c = costs[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>];</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (c &lt; <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a> - 1 || (<a class="code hl_variable" href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">unknown_</a> &amp;&amp; c==255)) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                c = c * <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">factor_</a> + <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="keywordflow">if</span> (c &gt;= <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a>)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    c = <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a> - 1;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">return</span> c;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#abc3bb648b490893ed0102df9d62b8c8e">   98</a></span>        <span class="keywordtype">int</span> *<a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#abc3bb648b490893ed0102df9d62b8c8e">buffer1_</a>, *<a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a5f79af0e0fd56427a7797d1a74b04d7c">buffer2_</a>, *<a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a0b3748fa770dba7b326ee3cd3f9570c2">buffer3_</a>; </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#a7ac2b1b9911253ad9a78995352f30fa0">   99</a></span>        <span class="keywordtype">int</span> *<a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a7ac2b1b9911253ad9a78995352f30fa0">currentBuffer_</a>, *<a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a8a0fc94d2007ad3c5418fe05f150be00">nextBuffer_</a>, *<a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#ab35e9b00bffc3967973cedafee95ca5c">overBuffer_</a>; </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#a2f20397d9d6950d0505effc87151fd99">  100</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a2f20397d9d6950d0505effc87151fd99">currentEnd_</a>, <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#abfb8b6cbadbcf990639f22f159804b5d">nextEnd_</a>, <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a38469ef117b6f192a473884f5595e942">overEnd_</a>; </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#a89d014c133dd833a10f53fcdf8c0bb04">  101</a></span>        <span class="keywordtype">bool</span> *<a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a89d014c133dd833a10f53fcdf8c0bb04">pending_</a>; </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#a94dbd3ba373631604ee8cb021e39cd41">  102</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#a94dbd3ba373631604ee8cb021e39cd41">precise_</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#acc180530057dffbd53ba8c44d9ae1efa">  105</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#acc180530057dffbd53ba8c44d9ae1efa">threshold_</a>; </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_dijkstra_expansion.html#ac3256e3646ba17ea885abd80ac12b692">  106</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classglobal__planner_1_1_dijkstra_expansion.html#ac3256e3646ba17ea885abd80ac12b692">priorityIncrement_</a>; </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>} <span class="comment">//end namespace global_planner</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html">global_planner::DijkstraExpansion</a></div><div class="ttdef"><b>Definition:</b> dijkstra.h:56</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a037961c97a953fddf61bbae64f9c1b97"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a037961c97a953fddf61bbae64f9c1b97">global_planner::DijkstraExpansion::updateCell</a></div><div class="ttdeci">void updateCell(unsigned char *costs, float *potential, int n)</div><div class="ttdoc">Updates the cell at index n</div><div class="ttdef"><b>Definition:</b> dijkstra.cpp:192</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a0b3748fa770dba7b326ee3cd3f9570c2"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a0b3748fa770dba7b326ee3cd3f9570c2">global_planner::DijkstraExpansion::buffer3_</a></div><div class="ttdeci">int * buffer3_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:98</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a1102e169bb79dac31de8fe5ca5ace39b"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a1102e169bb79dac31de8fe5ca5ace39b">global_planner::DijkstraExpansion::calculatePotentials</a></div><div class="ttdeci">bool calculatePotentials(unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)</div><div class="ttdef"><b>Definition:</b> dijkstra.cpp:80</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a13395ccfa132ce826ee5f88865b73aee"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a13395ccfa132ce826ee5f88865b73aee">global_planner::DijkstraExpansion::getCost</a></div><div class="ttdeci">float getCost(unsigned char *costs, int n)</div><div class="ttdef"><b>Definition:</b> dijkstra.h:86</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a2ec5a9b73f4a8680adc8e406bc18b254"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a2ec5a9b73f4a8680adc8e406bc18b254">global_planner::DijkstraExpansion::setNeutralCost</a></div><div class="ttdeci">void setNeutralCost(unsigned char neutral_cost)</div><div class="ttdef"><b>Definition:</b> dijkstra.h:70</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a2f20397d9d6950d0505effc87151fd99"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a2f20397d9d6950d0505effc87151fd99">global_planner::DijkstraExpansion::currentEnd_</a></div><div class="ttdeci">int currentEnd_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:100</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a38469ef117b6f192a473884f5595e942"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a38469ef117b6f192a473884f5595e942">global_planner::DijkstraExpansion::overEnd_</a></div><div class="ttdeci">int overEnd_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:100</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a58e6885deccbdab45ecda172bb74c702"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a58e6885deccbdab45ecda172bb74c702">global_planner::DijkstraExpansion::DijkstraExpansion</a></div><div class="ttdeci">DijkstraExpansion(PotentialCalculator *p_calc, int nx, int ny)</div><div class="ttdef"><b>Definition:</b> dijkstra.cpp:42</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a5ba5aa2bff86fd1b18b24163379d9e2b"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a5ba5aa2bff86fd1b18b24163379d9e2b">global_planner::DijkstraExpansion::setPreciseStart</a></div><div class="ttdeci">void setPreciseStart(bool precise)</div><div class="ttdef"><b>Definition:</b> dijkstra.h:75</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a5f79af0e0fd56427a7797d1a74b04d7c"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a5f79af0e0fd56427a7797d1a74b04d7c">global_planner::DijkstraExpansion::buffer2_</a></div><div class="ttdeci">int * buffer2_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:98</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a7ac2b1b9911253ad9a78995352f30fa0"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a7ac2b1b9911253ad9a78995352f30fa0">global_planner::DijkstraExpansion::currentBuffer_</a></div><div class="ttdeci">int * currentBuffer_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:99</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a7d286126b2c478fc55c5e995e1deff29"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a7d286126b2c478fc55c5e995e1deff29">global_planner::DijkstraExpansion::setSize</a></div><div class="ttdeci">void setSize(int nx, int ny)</div><div class="ttdoc">Sets or resets the size of the map</div><div class="ttdef"><b>Definition:</b> dijkstra.cpp:63</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a89d014c133dd833a10f53fcdf8c0bb04"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a89d014c133dd833a10f53fcdf8c0bb04">global_planner::DijkstraExpansion::pending_</a></div><div class="ttdeci">bool * pending_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:101</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a8a0fc94d2007ad3c5418fe05f150be00"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a8a0fc94d2007ad3c5418fe05f150be00">global_planner::DijkstraExpansion::nextBuffer_</a></div><div class="ttdeci">int * nextBuffer_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:99</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_a94dbd3ba373631604ee8cb021e39cd41"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#a94dbd3ba373631604ee8cb021e39cd41">global_planner::DijkstraExpansion::precise_</a></div><div class="ttdeci">bool precise_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:102</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_ab35e9b00bffc3967973cedafee95ca5c"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#ab35e9b00bffc3967973cedafee95ca5c">global_planner::DijkstraExpansion::overBuffer_</a></div><div class="ttdeci">int * overBuffer_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:99</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_ab535b80f93f16281cdb9f4ff8cd301e0"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#ab535b80f93f16281cdb9f4ff8cd301e0">global_planner::DijkstraExpansion::~DijkstraExpansion</a></div><div class="ttdeci">virtual ~DijkstraExpansion()</div><div class="ttdef"><b>Definition:</b> dijkstra.cpp:52</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_abc3bb648b490893ed0102df9d62b8c8e"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#abc3bb648b490893ed0102df9d62b8c8e">global_planner::DijkstraExpansion::buffer1_</a></div><div class="ttdeci">int * buffer1_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:98</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_abfb8b6cbadbcf990639f22f159804b5d"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#abfb8b6cbadbcf990639f22f159804b5d">global_planner::DijkstraExpansion::nextEnd_</a></div><div class="ttdeci">int nextEnd_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:100</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_ac3256e3646ba17ea885abd80ac12b692"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#ac3256e3646ba17ea885abd80ac12b692">global_planner::DijkstraExpansion::priorityIncrement_</a></div><div class="ttdeci">float priorityIncrement_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:106</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_dijkstra_expansion_html_acc180530057dffbd53ba8c44d9ae1efa"><div class="ttname"><a href="classglobal__planner_1_1_dijkstra_expansion.html#acc180530057dffbd53ba8c44d9ae1efa">global_planner::DijkstraExpansion::threshold_</a></div><div class="ttdeci">float threshold_</div><div class="ttdef"><b>Definition:</b> dijkstra.h:105</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html"><div class="ttname"><a href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></div><div class="ttdef"><b>Definition:</b> expander.h:45</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a044a34d5d5ddd41016afec643cb65d4e"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">global_planner::Expander::lethal_cost_</a></div><div class="ttdeci">unsigned char lethal_cost_</div><div class="ttdef"><b>Definition:</b> expander.h:99</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a999123a5d229a31933a64ba56a4f525d"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">global_planner::Expander::factor_</a></div><div class="ttdeci">float factor_</div><div class="ttdef"><b>Definition:</b> expander.h:101</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_aa8941c07a0f50a2e3ce3088f7ecb8e61"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">global_planner::Expander::neutral_cost_</a></div><div class="ttdeci">unsigned char neutral_cost_</div><div class="ttdef"><b>Definition:</b> expander.h:99</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_abbb2fc0fd78f4ae3e8ffad2981629a91"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">global_planner::Expander::unknown_</a></div><div class="ttdeci">bool unknown_</div><div class="ttdef"><b>Definition:</b> expander.h:98</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_potential_calculator_html"><div class="ttname"><a href="classglobal__planner_1_1_potential_calculator.html">global_planner::PotentialCalculator</a></div><div class="ttdef"><b>Definition:</b> potential_calculator.h:45</div></div>
+<div class="ttc" id="aeig3_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">static int n</div><div class="ttdef"><b>Definition:</b> eig3.c:14</div></div>
+<div class="ttc" id="aexpander_8h_html"><div class="ttname"><a href="expander_8h.html">expander.h</a></div></div>
+<div class="ttc" id="anamespaceglobal__planner_html"><div class="ttname"><a href="namespaceglobal__planner.html">global_planner</a></div><div class="ttdef"><b>Definition:</b> astar.h:46</div></div>
+<div class="ttc" id="aplanner__core_8h_html"><div class="ttname"><a href="planner__core_8h.html">planner_core.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

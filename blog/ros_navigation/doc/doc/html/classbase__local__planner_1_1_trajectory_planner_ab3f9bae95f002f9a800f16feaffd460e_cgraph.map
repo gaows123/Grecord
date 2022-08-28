@@ -1,0 +1,4 @@
+<map id="base_local_planner::TrajectoryPlanner::footprintCost" name="base_local_planner::TrajectoryPlanner::footprintCost">
+<area shape="rect" id="node1" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="5,5,139,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="187,13,367,54"/>
+</map>

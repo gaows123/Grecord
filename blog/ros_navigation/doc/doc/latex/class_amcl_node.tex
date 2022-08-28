@@ -1,0 +1,1284 @@
+\hypertarget{class_amcl_node}{}\doxysection{Amcl\+Node类 参考}
+\label{class_amcl_node}\index{AmclNode@{AmclNode}}
+
+
+Amcl\+Node 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amcl_node_a41e7de8ffa5fdb0aaf4e0d8083950080}{Amcl\+Node}} ()
+\item 
+\mbox{\hyperlink{class_amcl_node_a3aaabb3a67f2a4f8637c64c99e55087e}{$\sim$\+Amcl\+Node}} ()
+\item 
+void \mbox{\hyperlink{class_amcl_node_a0cf31d50e34411030c9046f8a12ae8cb}{run\+From\+Bag}} (const std\+::string \&in\+\_\+bag\+\_\+fn, bool trigger\+\_\+global\+\_\+localization=false)
+\begin{DoxyCompactList}\small\item\em Uses TF and Laser\+Scan messages from bag file to drive AMCL instead \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_amcl_node_a43a5e541eb30b7f8bd2d6525ef353e90}{process}} ()
+\item 
+void \mbox{\hyperlink{class_amcl_node_abdb37d978f9827e356cee35687a108ab}{save\+Pose\+To\+Server}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_aba65e228a714fb29a56d179975dc6ad3}{global\+Localization\+Callback}} (std\+\_\+srvs\+::\+Empty\+::\+Request \&req, std\+\_\+srvs\+::\+Empty\+::\+Response \&res)
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a8fd3afc197768b5f9c2c92945c566688}{nomotion\+Update\+Callback}} (std\+\_\+srvs\+::\+Empty\+::\+Request \&req, std\+\_\+srvs\+::\+Empty\+::\+Response \&res)
+\item 
+bool \mbox{\hyperlink{class_amcl_node_aa7fe96700205b23c00dda87af08a77a6}{set\+Map\+Callback}} (nav\+\_\+msgs\+::\+Set\+Map\+::\+Request \&req, nav\+\_\+msgs\+::\+Set\+Map\+::\+Response \&res)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a701205b2f4b7373a2ab1caa039eed8a5}{laser\+Received}} (const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&laser\+\_\+scan)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a5bab30a294236094c90192b25696bf75}{initial\+Pose\+Received}} (const geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{class_amcl_node_aa0f02087f8d57a91834cc911aa7330b4}{handle\+Initial\+Pose\+Message}} (const geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped \&msg)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a4b33c46a29dd9ecd0b974fe560b8b6d7}{map\+Received}} (const nav\+\_\+msgs\+::\+Occupancy\+Grid\+Const\+Ptr \&msg)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a1e5dc369ab11dfe26dc1ec996ab423a6}{handle\+Map\+Message}} (const nav\+\_\+msgs\+::\+Occupancy\+Grid \&msg)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a6ee0c6604650ae544c08be36df176e4d}{free\+Map\+Dependent\+Memory}} ()
+\item 
+\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$ \mbox{\hyperlink{class_amcl_node_a2a81d4aceba212bde82ce4044d18a55d}{convert\+Map}} (const nav\+\_\+msgs\+::\+Occupancy\+Grid \&map\+\_\+msg)
+\item 
+void \mbox{\hyperlink{class_amcl_node_ad17d58102ca153b5367345bea68732f6}{update\+Pose\+From\+Server}} ()
+\item 
+void \mbox{\hyperlink{class_amcl_node_a58c92caa391a8e7b5061778c724ffa4c}{apply\+Initial\+Pose}} ()
+\item 
+void \mbox{\hyperlink{class_amcl_node_a037c523da934628d0dd126c108266e3b}{request\+Map}} ()
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a3c4e7d02b1dae91cfa328e149a61c908}{get\+Odom\+Pose}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&pose, double \&x, double \&y, double \&yaw, const ros\+::\+Time \&t, const std\+::string \&f)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a40ba76725d139a2b2b5af4cbcac18d51}{standard\+Deviation\+Diagnostics}} (diagnostic\+\_\+updater\+::\+Diagnostic\+Status\+Wrapper \&diagnostic\+\_\+status)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a2a32d93809d3e60334c312f807b020a6}{reconfigure\+CB}} (amcl\+::\+AMCLConfig \&config, uint32\+\_\+t level)
+\item 
+void \mbox{\hyperlink{class_amcl_node_a74d02277d002b2bec9e6e0cc86a0fd51}{check\+Laser\+Received}} (const ros\+::\+Timer\+Event \&event)
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{class_amcl_node_abf847690811aef2483524b793ad6ab1c}{uniform\+Pose\+Generator}} (void $\ast$arg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Transform\+Broadcaster $>$ \mbox{\hyperlink{class_amcl_node_a7056c5b3014eebbddec3df7c477dce7e}{tfb\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Transform\+Listener $>$ \mbox{\hyperlink{class_amcl_node_ab431038143dd036e9af0cb7a6bb07d43}{tfl\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ tf2\+\_\+ros\+::\+Buffer $>$ \mbox{\hyperlink{class_amcl_node_a31987ac849703b9f4937bd13a21ab786}{tf\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a4925c739acd5de3b311ebf6b811c06d0}{sent\+\_\+first\+\_\+transform\+\_\+}}
+\item 
+tf2\+::\+Transform \mbox{\hyperlink{class_amcl_node_adf62933c0c8aca1ed8c4e508a5b8b87a}{latest\+\_\+tf\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a977f7c8171f24442fd88c19ad47815b4}{latest\+\_\+tf\+\_\+valid\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_amcl_node_abf0ea9c5881abb73ca2f4cd31737fa2f}{odom\+\_\+frame\+\_\+id\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{class_amcl_node_a947f516b3ef11501844fdc015f22e20d}{latest\+\_\+odom\+\_\+pose\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_amcl_node_a0fa5c45b5d7af009567712cc7fbe07c5}{base\+\_\+frame\+\_\+id\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_amcl_node_a210c7e22324610f1c94d060c196d7289}{global\+\_\+frame\+\_\+id\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a9a53557c50e5987dbb0cab9820703edd}{use\+\_\+map\+\_\+topic\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_aa5e97d4cd2db050d4031115e7b5d6093}{first\+\_\+map\+\_\+only\+\_\+}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{class_amcl_node_a7cdbd2eb4e755066a601774c884693ed}{gui\+\_\+publish\+\_\+period}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{class_amcl_node_afc5bfcbb8518fd8f51d111038b067344}{save\+\_\+pose\+\_\+last\+\_\+time}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{class_amcl_node_a84f53aa6eeffa430a9e9adf3f2ccd1d1}{save\+\_\+pose\+\_\+period}}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped \mbox{\hyperlink{class_amcl_node_a83b3a4b815451dab5ae12035cbd66686}{last\+\_\+published\+\_\+pose}}
+\item 
+\mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$ \mbox{\hyperlink{class_amcl_node_a6783010eab2fc5a1a7cd32c7c34e1970}{map\+\_\+}}
+\item 
+char $\ast$ \mbox{\hyperlink{class_amcl_node_ae92eb03d4ab9723927d4cc2ee493ade4}{mapdata}}
+\item 
+int \mbox{\hyperlink{class_amcl_node_ad17f811819e627963147f4736da04095}{sx}}
+\item 
+int \mbox{\hyperlink{class_amcl_node_a2f74de096c85d9254eca6af75595e336}{sy}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a195981f9de9d8bbad0f54fe0a9ed6943}{resolution}}
+\item 
+message\+\_\+filters\+::\+Subscriber$<$ sensor\+\_\+msgs\+::\+Laser\+Scan $>$ $\ast$ \mbox{\hyperlink{class_amcl_node_a6f0438ffa885a73250644355b1b90a5b}{laser\+\_\+scan\+\_\+sub\+\_\+}}
+\item 
+tf2\+\_\+ros\+::\+Message\+Filter$<$ sensor\+\_\+msgs\+::\+Laser\+Scan $>$ $\ast$ \mbox{\hyperlink{class_amcl_node_a451f929ad0f0475d7d8a926abf453008}{laser\+\_\+scan\+\_\+filter\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{class_amcl_node_a25e627dec196f9d2b9100fe451b47521}{initial\+\_\+pose\+\_\+sub\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser}{AMCLLaser}} $\ast$ $>$ \mbox{\hyperlink{class_amcl_node_a4b86d26e55e52a3417ff2f0f1afc79af}{lasers\+\_\+}}
+\item 
+std\+::vector$<$ bool $>$ \mbox{\hyperlink{class_amcl_node_a2ecf36892cdecda4bcb31b70675e14fb}{lasers\+\_\+update\+\_\+}}
+\item 
+std\+::map$<$ std\+::string, int $>$ \mbox{\hyperlink{class_amcl_node_ab684d4ca6b3af55d33fb9de098fc7475}{frame\+\_\+to\+\_\+laser\+\_\+}}
+\item 
+\mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}} $\ast$ \mbox{\hyperlink{class_amcl_node_a02578a2b8e2b13a395d878ab58e1d936}{pf\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_afab19bf2c5b907f574011b741d3e77df}{pf\+\_\+err\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a442621f5bd434c838611ab2ae74c389d}{pf\+\_\+z\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_ae3fda9f7fe843418229840c76b0c38bc}{pf\+\_\+init\+\_\+}}
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{class_amcl_node_a96dea4a7569ede71c1016eddfd712518}{pf\+\_\+odom\+\_\+pose\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a0fe2f90ea6b056a7fcb7500592647d21}{d\+\_\+thresh\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a712a6cde404821afacb92529a34f7344}{a\+\_\+thresh\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_amcl_node_a10102b4714afd6738b2b02ab56de9264}{resample\+\_\+interval\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_amcl_node_a7b5fe53187be6f7239750310cab6332c}{resample\+\_\+count\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a63b9a62a8eb0facc4ab203eb461ccb54}{laser\+\_\+min\+\_\+range\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a10a05f1734666edb5c5104fdd285c4d5}{laser\+\_\+max\+\_\+range\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a1f18e58ef7d0a97f341d1cc8ca4cbc3a}{m\+\_\+force\+\_\+update}}
+\item 
+\mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom}{AMCLOdom}} $\ast$ \mbox{\hyperlink{class_amcl_node_a82334ffd72135fcf500957d2f30efa34}{odom\+\_\+}}
+\item 
+\mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser}{AMCLLaser}} $\ast$ \mbox{\hyperlink{class_amcl_node_abafb7248f4bbac58cf0c1be20d2095e8}{laser\+\_\+}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{class_amcl_node_a95ea7f8ad342addadb749ba4ee3d808e}{cloud\+\_\+pub\+\_\+interval}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{class_amcl_node_a09669b612a4139eba48e3ef058873b89}{last\+\_\+cloud\+\_\+pub\+\_\+time}}
+\item 
+ros\+::\+Wall\+Duration \mbox{\hyperlink{class_amcl_node_a38e743eac4d6678daeeb994736bb3f4e}{bag\+\_\+scan\+\_\+period\+\_\+}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{class_amcl_node_aeb76184132ecccc9d01eeee105837c31}{transform\+\_\+tolerance\+\_\+}}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{class_amcl_node_a4cc7912f950a229f89321c8075ce5bea}{nh\+\_\+}}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{class_amcl_node_a9210fba83c3b27efb61c1963731a32ec}{private\+\_\+nh\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{class_amcl_node_a72e4f44467ffef9e744687c0ff8569ba}{pose\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{class_amcl_node_ac781dfe1b51c835fe677245d3e42c830}{particlecloud\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{class_amcl_node_aae306b34835a69ab712e96c13c84a410}{global\+\_\+loc\+\_\+srv\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{class_amcl_node_a7340fbc26cb1dc31ae14266880bbe8a0}{nomotion\+\_\+update\+\_\+srv\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{class_amcl_node_a566b19d919c6be994db02756acefb4b6}{set\+\_\+map\+\_\+srv\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{class_amcl_node_a3fb723c5bc50863001ba6b88d70e1e12}{initial\+\_\+pose\+\_\+sub\+\_\+old\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{class_amcl_node_a2a5d74a1f62e767e2910c51aa990ba59}{map\+\_\+sub\+\_\+}}
+\item 
+diagnostic\+\_\+updater\+::\+Updater \mbox{\hyperlink{class_amcl_node_aa1ae745012380dd8c53bba2914e2d07c}{diagnosic\+\_\+updater\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a1ffe12421c22e3ed6c00fa3ff980a168}{std\+\_\+warn\+\_\+level\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a9c6f0936f5e51286fbca84ec502a706a}{std\+\_\+warn\+\_\+level\+\_\+y\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a2f07ac63153f0ffd5ff7b8592a85aecc}{std\+\_\+warn\+\_\+level\+\_\+yaw\+\_\+}}
+\item 
+\mbox{\hyperlink{structamcl__hyp__t}{amcl\+\_\+hyp\+\_\+t}} $\ast$ \mbox{\hyperlink{class_amcl_node_a80941459e610ad304214aaeaf4915b10}{initial\+\_\+pose\+\_\+hyp\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_aa6ba4e1bc3b19213a476d0c8952c5659}{first\+\_\+map\+\_\+received\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a661ee5aed537195b5d756c002e548dad}{first\+\_\+reconfigure\+\_\+call\+\_\+}}
+\item 
+boost\+::recursive\+\_\+mutex \mbox{\hyperlink{class_amcl_node_a398a879c77add8afa323a7324b149f14}{configuration\+\_\+mutex\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ amcl\+::\+AMCLConfig $>$ $\ast$ \mbox{\hyperlink{class_amcl_node_a37e6b3eba02d2a09137379b63737312e}{dsrv\+\_\+}}
+\item 
+amcl\+::\+AMCLConfig \mbox{\hyperlink{class_amcl_node_ad59b57eb7105b3a71b5d95db0d7f2b07}{default\+\_\+config\+\_\+}}
+\item 
+ros\+::\+Timer \mbox{\hyperlink{class_amcl_node_a20481909864d6640f18e440c01de360b}{check\+\_\+laser\+\_\+timer\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_amcl_node_a06c197a817d303e3cef8d50329866a44}{max\+\_\+beams\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_amcl_node_a36af2a4ee035c7dc1f2562c13662cc05}{min\+\_\+particles\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_amcl_node_acebc356957463f4a8df9700434023335}{max\+\_\+particles\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_add27997bcb12edfb931d5875e2d2efe2}{alpha1\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a4133fc9895643025a3529226522f0c13}{alpha2\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_aa9607cb2500da74cd05843c58a7f3d86}{alpha3\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_abecb1663a97895a3085d55beb4e3f020}{alpha4\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_add9fd52f2b35f0f96b0cbb54f045f313}{alpha5\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a5848f62d1cbfdf6e69e7233cbd7e08c2}{alpha\+\_\+slow\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a89e66e950191b4de35b25e5b694f4caf}{alpha\+\_\+fast\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_affdf3ce4bd35ec5ae857182eb9061069}{z\+\_\+hit\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a9a930d856eb2f51f78565e53ed0967eb}{z\+\_\+short\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_ace5a1338a4050f88a37d90ab40df520f}{z\+\_\+max\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_abd65f3ce85aa9b18501ab2bbc0eddb71}{z\+\_\+rand\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a042815dc4dcf8b513fa8e587645753da}{sigma\+\_\+hit\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_aac03071312cf15fc21a83541676efc93}{lambda\+\_\+short\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_aca7326c25685dae8addd25606be5ed30}{do\+\_\+beamskip\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a3c8d5dc9a163a7ce658107de58372cdf}{beam\+\_\+skip\+\_\+distance\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a2e0323bd91cd2ab57b6d5ce27af89bc4}{beam\+\_\+skip\+\_\+threshold\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_afea1c8f32439be9e8eb6e21c3ed1d907}{beam\+\_\+skip\+\_\+error\+\_\+threshold\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_ad704f32e998d00bf03de77f1464eadf3}{laser\+\_\+likelihood\+\_\+max\+\_\+dist\+\_\+}}
+\item 
+\mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\+\_\+model\+\_\+t}} \mbox{\hyperlink{class_amcl_node_af447f11c2fab931584b9684695d05b8f}{odom\+\_\+model\+\_\+type\+\_\+}}
+\item 
+double \mbox{\hyperlink{class_amcl_node_a79c61678b2dffbc8b178f425dd9037d2}{init\+\_\+pose\+\_\+}} \mbox{[}3\mbox{]}
+\item 
+double \mbox{\hyperlink{class_amcl_node_afd899da0d1c03f7351e8bc5e6f842ccc}{init\+\_\+cov\+\_\+}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9c}{laser\+\_\+model\+\_\+t}} \mbox{\hyperlink{class_amcl_node_ac4857a05f64a13d52fe908916c04d8c7}{laser\+\_\+model\+\_\+type\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_af906ac310779b08e5eb44e54ce4e03dd}{tf\+\_\+broadcast\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_amcl_node_a7615b8f4b35c2743e5d7e1f8feaba57e}{selective\+\_\+resampling\+\_\+}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{class_amcl_node_a9b02947fbd30018bb51ce17faf41a227}{last\+\_\+laser\+\_\+received\+\_\+ts\+\_\+}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{class_amcl_node_a74b9190ca1270eb04c805db69275c3ec}{laser\+\_\+check\+\_\+interval\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{静态 Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_amcl_node_ae92085ece8c8af14d10a2cd0acddb00e}{free\+\_\+space\+\_\+indices}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_amcl_node_a41e7de8ffa5fdb0aaf4e0d8083950080}\label{class_amcl_node_a41e7de8ffa5fdb0aaf4e0d8083950080}} 
+\index{AmclNode@{AmclNode}!AmclNode@{AmclNode}}
+\index{AmclNode@{AmclNode}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{AmclNode()}{AmclNode()}}
+{\footnotesize\ttfamily Amcl\+Node\+::\+Amcl\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a41e7de8ffa5fdb0aaf4e0d8083950080_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a3aaabb3a67f2a4f8637c64c99e55087e}\label{class_amcl_node_a3aaabb3a67f2a4f8637c64c99e55087e}} 
+\index{AmclNode@{AmclNode}!````~AmclNode@{$\sim$AmclNode}}
+\index{````~AmclNode@{$\sim$AmclNode}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{$\sim$AmclNode()}{~AmclNode()}}
+{\footnotesize\ttfamily Amcl\+Node\+::$\sim$\+Amcl\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a3aaabb3a67f2a4f8637c64c99e55087e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_amcl_node_a58c92caa391a8e7b5061778c724ffa4c}\label{class_amcl_node_a58c92caa391a8e7b5061778c724ffa4c}} 
+\index{AmclNode@{AmclNode}!applyInitialPose@{applyInitialPose}}
+\index{applyInitialPose@{applyInitialPose}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{applyInitialPose()}{applyInitialPose()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::apply\+Initial\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+If initial\+\_\+pose\+\_\+hyp\+\_\+ and map\+\_\+ are both non-\/null, apply the initial pose to the particle filter state. initial\+\_\+pose\+\_\+hyp\+\_\+ is deleted and set to NULL after it is used. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a58c92caa391a8e7b5061778c724ffa4c_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a58c92caa391a8e7b5061778c724ffa4c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a74d02277d002b2bec9e6e0cc86a0fd51}\label{class_amcl_node_a74d02277d002b2bec9e6e0cc86a0fd51}} 
+\index{AmclNode@{AmclNode}!checkLaserReceived@{checkLaserReceived}}
+\index{checkLaserReceived@{checkLaserReceived}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{checkLaserReceived()}{checkLaserReceived()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::check\+Laser\+Received (\begin{DoxyParamCaption}\item[{const ros\+::\+Timer\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a74d02277d002b2bec9e6e0cc86a0fd51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a2a81d4aceba212bde82ce4044d18a55d}\label{class_amcl_node_a2a81d4aceba212bde82ce4044d18a55d}} 
+\index{AmclNode@{AmclNode}!convertMap@{convertMap}}
+\index{convertMap@{convertMap}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{convertMap()}{convertMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmap__t}{map\+\_\+t}} $\ast$ Amcl\+Node\+::convert\+Map (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Occupancy\+Grid \&}]{map\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Convert an Occupancy\+Grid map message into the internal representation. This allocates a \mbox{\hyperlink{structmap__t}{map\+\_\+t}} and returns it. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_amcl_node_a2a81d4aceba212bde82ce4044d18a55d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a2a81d4aceba212bde82ce4044d18a55d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a6ee0c6604650ae544c08be36df176e4d}\label{class_amcl_node_a6ee0c6604650ae544c08be36df176e4d}} 
+\index{AmclNode@{AmclNode}!freeMapDependentMemory@{freeMapDependentMemory}}
+\index{freeMapDependentMemory@{freeMapDependentMemory}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{freeMapDependentMemory()}{freeMapDependentMemory()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::free\+Map\+Dependent\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a6ee0c6604650ae544c08be36df176e4d_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a6ee0c6604650ae544c08be36df176e4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a3c4e7d02b1dae91cfa328e149a61c908}\label{class_amcl_node_a3c4e7d02b1dae91cfa328e149a61c908}} 
+\index{AmclNode@{AmclNode}!getOdomPose@{getOdomPose}}
+\index{getOdomPose@{getOdomPose}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{getOdomPose()}{getOdomPose()}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::get\+Odom\+Pose (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{pose,  }\item[{double \&}]{x,  }\item[{double \&}]{y,  }\item[{double \&}]{yaw,  }\item[{const ros\+::\+Time \&}]{t,  }\item[{const std\+::string \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{class_amcl_node_a3c4e7d02b1dae91cfa328e149a61c908_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a3c4e7d02b1dae91cfa328e149a61c908_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_aba65e228a714fb29a56d179975dc6ad3}\label{class_amcl_node_aba65e228a714fb29a56d179975dc6ad3}} 
+\index{AmclNode@{AmclNode}!globalLocalizationCallback@{globalLocalizationCallback}}
+\index{globalLocalizationCallback@{globalLocalizationCallback}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{globalLocalizationCallback()}{globalLocalizationCallback()}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::global\+Localization\+Callback (\begin{DoxyParamCaption}\item[{std\+\_\+srvs\+::\+Empty\+::\+Request \&}]{req,  }\item[{std\+\_\+srvs\+::\+Empty\+::\+Response \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_aba65e228a714fb29a56d179975dc6ad3_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_aba65e228a714fb29a56d179975dc6ad3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_aa0f02087f8d57a91834cc911aa7330b4}\label{class_amcl_node_aa0f02087f8d57a91834cc911aa7330b4}} 
+\index{AmclNode@{AmclNode}!handleInitialPoseMessage@{handleInitialPoseMessage}}
+\index{handleInitialPoseMessage@{handleInitialPoseMessage}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{handleInitialPoseMessage()}{handleInitialPoseMessage()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::handle\+Initial\+Pose\+Message (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_aa0f02087f8d57a91834cc911aa7330b4_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_aa0f02087f8d57a91834cc911aa7330b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a1e5dc369ab11dfe26dc1ec996ab423a6}\label{class_amcl_node_a1e5dc369ab11dfe26dc1ec996ab423a6}} 
+\index{AmclNode@{AmclNode}!handleMapMessage@{handleMapMessage}}
+\index{handleMapMessage@{handleMapMessage}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{handleMapMessage()}{handleMapMessage()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::handle\+Map\+Message (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Occupancy\+Grid \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a1e5dc369ab11dfe26dc1ec996ab423a6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a1e5dc369ab11dfe26dc1ec996ab423a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a5bab30a294236094c90192b25696bf75}\label{class_amcl_node_a5bab30a294236094c90192b25696bf75}} 
+\index{AmclNode@{AmclNode}!initialPoseReceived@{initialPoseReceived}}
+\index{initialPoseReceived@{initialPoseReceived}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{initialPoseReceived()}{initialPoseReceived()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::initial\+Pose\+Received (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a5bab30a294236094c90192b25696bf75_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a5bab30a294236094c90192b25696bf75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a701205b2f4b7373a2ab1caa039eed8a5}\label{class_amcl_node_a701205b2f4b7373a2ab1caa039eed8a5}} 
+\index{AmclNode@{AmclNode}!laserReceived@{laserReceived}}
+\index{laserReceived@{laserReceived}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laserReceived()}{laserReceived()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::laser\+Received (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Laser\+Scan\+Const\+Ptr \&}]{laser\+\_\+scan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+important\+: 是否需要更新滤波器函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a701205b2f4b7373a2ab1caa039eed8a5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a701205b2f4b7373a2ab1caa039eed8a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a4b33c46a29dd9ecd0b974fe560b8b6d7}\label{class_amcl_node_a4b33c46a29dd9ecd0b974fe560b8b6d7}} 
+\index{AmclNode@{AmclNode}!mapReceived@{mapReceived}}
+\index{mapReceived@{mapReceived}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{mapReceived()}{mapReceived()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::map\+Received (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Occupancy\+Grid\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a4b33c46a29dd9ecd0b974fe560b8b6d7_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a4b33c46a29dd9ecd0b974fe560b8b6d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a8fd3afc197768b5f9c2c92945c566688}\label{class_amcl_node_a8fd3afc197768b5f9c2c92945c566688}} 
+\index{AmclNode@{AmclNode}!nomotionUpdateCallback@{nomotionUpdateCallback}}
+\index{nomotionUpdateCallback@{nomotionUpdateCallback}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{nomotionUpdateCallback()}{nomotionUpdateCallback()}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::nomotion\+Update\+Callback (\begin{DoxyParamCaption}\item[{std\+\_\+srvs\+::\+Empty\+::\+Request \&}]{req,  }\item[{std\+\_\+srvs\+::\+Empty\+::\+Response \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a8fd3afc197768b5f9c2c92945c566688_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a43a5e541eb30b7f8bd2d6525ef353e90}\label{class_amcl_node_a43a5e541eb30b7f8bd2d6525ef353e90}} 
+\index{AmclNode@{AmclNode}!process@{process}}
+\index{process@{process}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily int Amcl\+Node\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_amcl_node_a2a32d93809d3e60334c312f807b020a6}\label{class_amcl_node_a2a32d93809d3e60334c312f807b020a6}} 
+\index{AmclNode@{AmclNode}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{amcl\+::\+AMCLConfig \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a2a32d93809d3e60334c312f807b020a6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a2a32d93809d3e60334c312f807b020a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a037c523da934628d0dd126c108266e3b}\label{class_amcl_node_a037c523da934628d0dd126c108266e3b}} 
+\index{AmclNode@{AmclNode}!requestMap@{requestMap}}
+\index{requestMap@{requestMap}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{requestMap()}{requestMap()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::request\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a037c523da934628d0dd126c108266e3b_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_amcl_node_a037c523da934628d0dd126c108266e3b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a0cf31d50e34411030c9046f8a12ae8cb}\label{class_amcl_node_a0cf31d50e34411030c9046f8a12ae8cb}} 
+\index{AmclNode@{AmclNode}!runFromBag@{runFromBag}}
+\index{runFromBag@{runFromBag}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{runFromBag()}{runFromBag()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::run\+From\+Bag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{in\+\_\+bag\+\_\+fn,  }\item[{bool}]{trigger\+\_\+global\+\_\+localization = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Uses TF and Laser\+Scan messages from bag file to drive AMCL instead 
+
+
+\begin{DoxyParams}{参数}
+{\em in\+\_\+bag\+\_\+fn} & input bagfile \\
+\hline
+{\em trigger\+\_\+global\+\_\+localization} & whether to trigger global localization before starting to process the bagfile \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a0cf31d50e34411030c9046f8a12ae8cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_abdb37d978f9827e356cee35687a108ab}\label{class_amcl_node_abdb37d978f9827e356cee35687a108ab}} 
+\index{AmclNode@{AmclNode}!savePoseToServer@{savePoseToServer}}
+\index{savePoseToServer@{savePoseToServer}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{savePoseToServer()}{savePoseToServer()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::save\+Pose\+To\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_abdb37d978f9827e356cee35687a108ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_aa7fe96700205b23c00dda87af08a77a6}\label{class_amcl_node_aa7fe96700205b23c00dda87af08a77a6}} 
+\index{AmclNode@{AmclNode}!setMapCallback@{setMapCallback}}
+\index{setMapCallback@{setMapCallback}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{setMapCallback()}{setMapCallback()}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::set\+Map\+Callback (\begin{DoxyParamCaption}\item[{nav\+\_\+msgs\+::\+Set\+Map\+::\+Request \&}]{req,  }\item[{nav\+\_\+msgs\+::\+Set\+Map\+::\+Response \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_aa7fe96700205b23c00dda87af08a77a6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_aa7fe96700205b23c00dda87af08a77a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_a40ba76725d139a2b2b5af4cbcac18d51}\label{class_amcl_node_a40ba76725d139a2b2b5af4cbcac18d51}} 
+\index{AmclNode@{AmclNode}!standardDeviationDiagnostics@{standardDeviationDiagnostics}}
+\index{standardDeviationDiagnostics@{standardDeviationDiagnostics}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{standardDeviationDiagnostics()}{standardDeviationDiagnostics()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::standard\+Deviation\+Diagnostics (\begin{DoxyParamCaption}\item[{diagnostic\+\_\+updater\+::\+Diagnostic\+Status\+Wrapper \&}]{diagnostic\+\_\+status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_a40ba76725d139a2b2b5af4cbcac18d51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_abf847690811aef2483524b793ad6ab1c}\label{class_amcl_node_abf847690811aef2483524b793ad6ab1c}} 
+\index{AmclNode@{AmclNode}!uniformPoseGenerator@{uniformPoseGenerator}}
+\index{uniformPoseGenerator@{uniformPoseGenerator}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{uniformPoseGenerator()}{uniformPoseGenerator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} Amcl\+Node\+::uniform\+Pose\+Generator (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_amcl_node_abf847690811aef2483524b793ad6ab1c_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_abf847690811aef2483524b793ad6ab1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_amcl_node_ad17d58102ca153b5367345bea68732f6}\label{class_amcl_node_ad17d58102ca153b5367345bea68732f6}} 
+\index{AmclNode@{AmclNode}!updatePoseFromServer@{updatePoseFromServer}}
+\index{updatePoseFromServer@{updatePoseFromServer}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{updatePoseFromServer()}{updatePoseFromServer()}}
+{\footnotesize\ttfamily void Amcl\+Node\+::update\+Pose\+From\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_amcl_node_ad17d58102ca153b5367345bea68732f6_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_amcl_node_a712a6cde404821afacb92529a34f7344}\label{class_amcl_node_a712a6cde404821afacb92529a34f7344}} 
+\index{AmclNode@{AmclNode}!a\_thresh\_@{a\_thresh\_}}
+\index{a\_thresh\_@{a\_thresh\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{a\_thresh\_}{a\_thresh\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::a\+\_\+thresh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_add27997bcb12edfb931d5875e2d2efe2}\label{class_amcl_node_add27997bcb12edfb931d5875e2d2efe2}} 
+\index{AmclNode@{AmclNode}!alpha1\_@{alpha1\_}}
+\index{alpha1\_@{alpha1\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{alpha1\_}{alpha1\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::alpha1\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a4133fc9895643025a3529226522f0c13}\label{class_amcl_node_a4133fc9895643025a3529226522f0c13}} 
+\index{AmclNode@{AmclNode}!alpha2\_@{alpha2\_}}
+\index{alpha2\_@{alpha2\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{alpha2\_}{alpha2\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::alpha2\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aa9607cb2500da74cd05843c58a7f3d86}\label{class_amcl_node_aa9607cb2500da74cd05843c58a7f3d86}} 
+\index{AmclNode@{AmclNode}!alpha3\_@{alpha3\_}}
+\index{alpha3\_@{alpha3\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{alpha3\_}{alpha3\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::alpha3\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_abecb1663a97895a3085d55beb4e3f020}\label{class_amcl_node_abecb1663a97895a3085d55beb4e3f020}} 
+\index{AmclNode@{AmclNode}!alpha4\_@{alpha4\_}}
+\index{alpha4\_@{alpha4\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{alpha4\_}{alpha4\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::alpha4\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_add9fd52f2b35f0f96b0cbb54f045f313}\label{class_amcl_node_add9fd52f2b35f0f96b0cbb54f045f313}} 
+\index{AmclNode@{AmclNode}!alpha5\_@{alpha5\_}}
+\index{alpha5\_@{alpha5\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{alpha5\_}{alpha5\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::alpha5\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a89e66e950191b4de35b25e5b694f4caf}\label{class_amcl_node_a89e66e950191b4de35b25e5b694f4caf}} 
+\index{AmclNode@{AmclNode}!alpha\_fast\_@{alpha\_fast\_}}
+\index{alpha\_fast\_@{alpha\_fast\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{alpha\_fast\_}{alpha\_fast\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::alpha\+\_\+fast\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a5848f62d1cbfdf6e69e7233cbd7e08c2}\label{class_amcl_node_a5848f62d1cbfdf6e69e7233cbd7e08c2}} 
+\index{AmclNode@{AmclNode}!alpha\_slow\_@{alpha\_slow\_}}
+\index{alpha\_slow\_@{alpha\_slow\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{alpha\_slow\_}{alpha\_slow\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::alpha\+\_\+slow\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a38e743eac4d6678daeeb994736bb3f4e}\label{class_amcl_node_a38e743eac4d6678daeeb994736bb3f4e}} 
+\index{AmclNode@{AmclNode}!bag\_scan\_period\_@{bag\_scan\_period\_}}
+\index{bag\_scan\_period\_@{bag\_scan\_period\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{bag\_scan\_period\_}{bag\_scan\_period\_}}
+{\footnotesize\ttfamily ros\+::\+Wall\+Duration Amcl\+Node\+::bag\+\_\+scan\+\_\+period\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a0fa5c45b5d7af009567712cc7fbe07c5}\label{class_amcl_node_a0fa5c45b5d7af009567712cc7fbe07c5}} 
+\index{AmclNode@{AmclNode}!base\_frame\_id\_@{base\_frame\_id\_}}
+\index{base\_frame\_id\_@{base\_frame\_id\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{base\_frame\_id\_}{base\_frame\_id\_}}
+{\footnotesize\ttfamily std\+::string Amcl\+Node\+::base\+\_\+frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a3c8d5dc9a163a7ce658107de58372cdf}\label{class_amcl_node_a3c8d5dc9a163a7ce658107de58372cdf}} 
+\index{AmclNode@{AmclNode}!beam\_skip\_distance\_@{beam\_skip\_distance\_}}
+\index{beam\_skip\_distance\_@{beam\_skip\_distance\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{beam\_skip\_distance\_}{beam\_skip\_distance\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::beam\+\_\+skip\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_afea1c8f32439be9e8eb6e21c3ed1d907}\label{class_amcl_node_afea1c8f32439be9e8eb6e21c3ed1d907}} 
+\index{AmclNode@{AmclNode}!beam\_skip\_error\_threshold\_@{beam\_skip\_error\_threshold\_}}
+\index{beam\_skip\_error\_threshold\_@{beam\_skip\_error\_threshold\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{beam\_skip\_error\_threshold\_}{beam\_skip\_error\_threshold\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::beam\+\_\+skip\+\_\+error\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a2e0323bd91cd2ab57b6d5ce27af89bc4}\label{class_amcl_node_a2e0323bd91cd2ab57b6d5ce27af89bc4}} 
+\index{AmclNode@{AmclNode}!beam\_skip\_threshold\_@{beam\_skip\_threshold\_}}
+\index{beam\_skip\_threshold\_@{beam\_skip\_threshold\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{beam\_skip\_threshold\_}{beam\_skip\_threshold\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::beam\+\_\+skip\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a20481909864d6640f18e440c01de360b}\label{class_amcl_node_a20481909864d6640f18e440c01de360b}} 
+\index{AmclNode@{AmclNode}!check\_laser\_timer\_@{check\_laser\_timer\_}}
+\index{check\_laser\_timer\_@{check\_laser\_timer\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{check\_laser\_timer\_}{check\_laser\_timer\_}}
+{\footnotesize\ttfamily ros\+::\+Timer Amcl\+Node\+::check\+\_\+laser\+\_\+timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a95ea7f8ad342addadb749ba4ee3d808e}\label{class_amcl_node_a95ea7f8ad342addadb749ba4ee3d808e}} 
+\index{AmclNode@{AmclNode}!cloud\_pub\_interval@{cloud\_pub\_interval}}
+\index{cloud\_pub\_interval@{cloud\_pub\_interval}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{cloud\_pub\_interval}{cloud\_pub\_interval}}
+{\footnotesize\ttfamily ros\+::\+Duration Amcl\+Node\+::cloud\+\_\+pub\+\_\+interval\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a398a879c77add8afa323a7324b149f14}\label{class_amcl_node_a398a879c77add8afa323a7324b149f14}} 
+\index{AmclNode@{AmclNode}!configuration\_mutex\_@{configuration\_mutex\_}}
+\index{configuration\_mutex\_@{configuration\_mutex\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{configuration\_mutex\_}{configuration\_mutex\_}}
+{\footnotesize\ttfamily boost\+::recursive\+\_\+mutex Amcl\+Node\+::configuration\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a0fe2f90ea6b056a7fcb7500592647d21}\label{class_amcl_node_a0fe2f90ea6b056a7fcb7500592647d21}} 
+\index{AmclNode@{AmclNode}!d\_thresh\_@{d\_thresh\_}}
+\index{d\_thresh\_@{d\_thresh\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{d\_thresh\_}{d\_thresh\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::d\+\_\+thresh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ad59b57eb7105b3a71b5d95db0d7f2b07}\label{class_amcl_node_ad59b57eb7105b3a71b5d95db0d7f2b07}} 
+\index{AmclNode@{AmclNode}!default\_config\_@{default\_config\_}}
+\index{default\_config\_@{default\_config\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{default\_config\_}{default\_config\_}}
+{\footnotesize\ttfamily amcl\+::\+AMCLConfig Amcl\+Node\+::default\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aa1ae745012380dd8c53bba2914e2d07c}\label{class_amcl_node_aa1ae745012380dd8c53bba2914e2d07c}} 
+\index{AmclNode@{AmclNode}!diagnosic\_updater\_@{diagnosic\_updater\_}}
+\index{diagnosic\_updater\_@{diagnosic\_updater\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{diagnosic\_updater\_}{diagnosic\_updater\_}}
+{\footnotesize\ttfamily diagnostic\+\_\+updater\+::\+Updater Amcl\+Node\+::diagnosic\+\_\+updater\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aca7326c25685dae8addd25606be5ed30}\label{class_amcl_node_aca7326c25685dae8addd25606be5ed30}} 
+\index{AmclNode@{AmclNode}!do\_beamskip\_@{do\_beamskip\_}}
+\index{do\_beamskip\_@{do\_beamskip\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{do\_beamskip\_}{do\_beamskip\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::do\+\_\+beamskip\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a37e6b3eba02d2a09137379b63737312e}\label{class_amcl_node_a37e6b3eba02d2a09137379b63737312e}} 
+\index{AmclNode@{AmclNode}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$amcl\+::\+AMCLConfig$>$$\ast$ Amcl\+Node\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aa5e97d4cd2db050d4031115e7b5d6093}\label{class_amcl_node_aa5e97d4cd2db050d4031115e7b5d6093}} 
+\index{AmclNode@{AmclNode}!first\_map\_only\_@{first\_map\_only\_}}
+\index{first\_map\_only\_@{first\_map\_only\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{first\_map\_only\_}{first\_map\_only\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::first\+\_\+map\+\_\+only\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aa6ba4e1bc3b19213a476d0c8952c5659}\label{class_amcl_node_aa6ba4e1bc3b19213a476d0c8952c5659}} 
+\index{AmclNode@{AmclNode}!first\_map\_received\_@{first\_map\_received\_}}
+\index{first\_map\_received\_@{first\_map\_received\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{first\_map\_received\_}{first\_map\_received\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::first\+\_\+map\+\_\+received\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a661ee5aed537195b5d756c002e548dad}\label{class_amcl_node_a661ee5aed537195b5d756c002e548dad}} 
+\index{AmclNode@{AmclNode}!first\_reconfigure\_call\_@{first\_reconfigure\_call\_}}
+\index{first\_reconfigure\_call\_@{first\_reconfigure\_call\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{first\_reconfigure\_call\_}{first\_reconfigure\_call\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::first\+\_\+reconfigure\+\_\+call\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ab684d4ca6b3af55d33fb9de098fc7475}\label{class_amcl_node_ab684d4ca6b3af55d33fb9de098fc7475}} 
+\index{AmclNode@{AmclNode}!frame\_to\_laser\_@{frame\_to\_laser\_}}
+\index{frame\_to\_laser\_@{frame\_to\_laser\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{frame\_to\_laser\_}{frame\_to\_laser\_}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, int $>$ Amcl\+Node\+::frame\+\_\+to\+\_\+laser\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ae92085ece8c8af14d10a2cd0acddb00e}\label{class_amcl_node_ae92085ece8c8af14d10a2cd0acddb00e}} 
+\index{AmclNode@{AmclNode}!free\_space\_indices@{free\_space\_indices}}
+\index{free\_space\_indices@{free\_space\_indices}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{free\_space\_indices}{free\_space\_indices}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ Amcl\+Node\+::free\+\_\+space\+\_\+indices\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a210c7e22324610f1c94d060c196d7289}\label{class_amcl_node_a210c7e22324610f1c94d060c196d7289}} 
+\index{AmclNode@{AmclNode}!global\_frame\_id\_@{global\_frame\_id\_}}
+\index{global\_frame\_id\_@{global\_frame\_id\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_id\_}{global\_frame\_id\_}}
+{\footnotesize\ttfamily std\+::string Amcl\+Node\+::global\+\_\+frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aae306b34835a69ab712e96c13c84a410}\label{class_amcl_node_aae306b34835a69ab712e96c13c84a410}} 
+\index{AmclNode@{AmclNode}!global\_loc\_srv\_@{global\_loc\_srv\_}}
+\index{global\_loc\_srv\_@{global\_loc\_srv\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{global\_loc\_srv\_}{global\_loc\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server Amcl\+Node\+::global\+\_\+loc\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a7cdbd2eb4e755066a601774c884693ed}\label{class_amcl_node_a7cdbd2eb4e755066a601774c884693ed}} 
+\index{AmclNode@{AmclNode}!gui\_publish\_period@{gui\_publish\_period}}
+\index{gui\_publish\_period@{gui\_publish\_period}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{gui\_publish\_period}{gui\_publish\_period}}
+{\footnotesize\ttfamily ros\+::\+Duration Amcl\+Node\+::gui\+\_\+publish\+\_\+period\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_afd899da0d1c03f7351e8bc5e6f842ccc}\label{class_amcl_node_afd899da0d1c03f7351e8bc5e6f842ccc}} 
+\index{AmclNode@{AmclNode}!init\_cov\_@{init\_cov\_}}
+\index{init\_cov\_@{init\_cov\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{init\_cov\_}{init\_cov\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::init\+\_\+cov\+\_\+\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a79c61678b2dffbc8b178f425dd9037d2}\label{class_amcl_node_a79c61678b2dffbc8b178f425dd9037d2}} 
+\index{AmclNode@{AmclNode}!init\_pose\_@{init\_pose\_}}
+\index{init\_pose\_@{init\_pose\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{init\_pose\_}{init\_pose\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::init\+\_\+pose\+\_\+\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a80941459e610ad304214aaeaf4915b10}\label{class_amcl_node_a80941459e610ad304214aaeaf4915b10}} 
+\index{AmclNode@{AmclNode}!initial\_pose\_hyp\_@{initial\_pose\_hyp\_}}
+\index{initial\_pose\_hyp\_@{initial\_pose\_hyp\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{initial\_pose\_hyp\_}{initial\_pose\_hyp\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structamcl__hyp__t}{amcl\+\_\+hyp\+\_\+t}}$\ast$ Amcl\+Node\+::initial\+\_\+pose\+\_\+hyp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a25e627dec196f9d2b9100fe451b47521}\label{class_amcl_node_a25e627dec196f9d2b9100fe451b47521}} 
+\index{AmclNode@{AmclNode}!initial\_pose\_sub\_@{initial\_pose\_sub\_}}
+\index{initial\_pose\_sub\_@{initial\_pose\_sub\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{initial\_pose\_sub\_}{initial\_pose\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber Amcl\+Node\+::initial\+\_\+pose\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a3fb723c5bc50863001ba6b88d70e1e12}\label{class_amcl_node_a3fb723c5bc50863001ba6b88d70e1e12}} 
+\index{AmclNode@{AmclNode}!initial\_pose\_sub\_old\_@{initial\_pose\_sub\_old\_}}
+\index{initial\_pose\_sub\_old\_@{initial\_pose\_sub\_old\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{initial\_pose\_sub\_old\_}{initial\_pose\_sub\_old\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber Amcl\+Node\+::initial\+\_\+pose\+\_\+sub\+\_\+old\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aac03071312cf15fc21a83541676efc93}\label{class_amcl_node_aac03071312cf15fc21a83541676efc93}} 
+\index{AmclNode@{AmclNode}!lambda\_short\_@{lambda\_short\_}}
+\index{lambda\_short\_@{lambda\_short\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{lambda\_short\_}{lambda\_short\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::lambda\+\_\+short\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_abafb7248f4bbac58cf0c1be20d2095e8}\label{class_amcl_node_abafb7248f4bbac58cf0c1be20d2095e8}} 
+\index{AmclNode@{AmclNode}!laser\_@{laser\_}}
+\index{laser\_@{laser\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_}{laser\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser}{AMCLLaser}}$\ast$ Amcl\+Node\+::laser\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a74b9190ca1270eb04c805db69275c3ec}\label{class_amcl_node_a74b9190ca1270eb04c805db69275c3ec}} 
+\index{AmclNode@{AmclNode}!laser\_check\_interval\_@{laser\_check\_interval\_}}
+\index{laser\_check\_interval\_@{laser\_check\_interval\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_check\_interval\_}{laser\_check\_interval\_}}
+{\footnotesize\ttfamily ros\+::\+Duration Amcl\+Node\+::laser\+\_\+check\+\_\+interval\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ad704f32e998d00bf03de77f1464eadf3}\label{class_amcl_node_ad704f32e998d00bf03de77f1464eadf3}} 
+\index{AmclNode@{AmclNode}!laser\_likelihood\_max\_dist\_@{laser\_likelihood\_max\_dist\_}}
+\index{laser\_likelihood\_max\_dist\_@{laser\_likelihood\_max\_dist\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_likelihood\_max\_dist\_}{laser\_likelihood\_max\_dist\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::laser\+\_\+likelihood\+\_\+max\+\_\+dist\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a10a05f1734666edb5c5104fdd285c4d5}\label{class_amcl_node_a10a05f1734666edb5c5104fdd285c4d5}} 
+\index{AmclNode@{AmclNode}!laser\_max\_range\_@{laser\_max\_range\_}}
+\index{laser\_max\_range\_@{laser\_max\_range\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_max\_range\_}{laser\_max\_range\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::laser\+\_\+max\+\_\+range\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a63b9a62a8eb0facc4ab203eb461ccb54}\label{class_amcl_node_a63b9a62a8eb0facc4ab203eb461ccb54}} 
+\index{AmclNode@{AmclNode}!laser\_min\_range\_@{laser\_min\_range\_}}
+\index{laser\_min\_range\_@{laser\_min\_range\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_min\_range\_}{laser\_min\_range\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::laser\+\_\+min\+\_\+range\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ac4857a05f64a13d52fe908916c04d8c7}\label{class_amcl_node_ac4857a05f64a13d52fe908916c04d8c7}} 
+\index{AmclNode@{AmclNode}!laser\_model\_type\_@{laser\_model\_type\_}}
+\index{laser\_model\_type\_@{laser\_model\_type\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_model\_type\_}{laser\_model\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamcl_a69e6e5bb29ff703c50bfc787216e5d9c}{laser\+\_\+model\+\_\+t}} Amcl\+Node\+::laser\+\_\+model\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a451f929ad0f0475d7d8a926abf453008}\label{class_amcl_node_a451f929ad0f0475d7d8a926abf453008}} 
+\index{AmclNode@{AmclNode}!laser\_scan\_filter\_@{laser\_scan\_filter\_}}
+\index{laser\_scan\_filter\_@{laser\_scan\_filter\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_scan\_filter\_}{laser\_scan\_filter\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Message\+Filter$<$sensor\+\_\+msgs\+::\+Laser\+Scan$>$$\ast$ Amcl\+Node\+::laser\+\_\+scan\+\_\+filter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a6f0438ffa885a73250644355b1b90a5b}\label{class_amcl_node_a6f0438ffa885a73250644355b1b90a5b}} 
+\index{AmclNode@{AmclNode}!laser\_scan\_sub\_@{laser\_scan\_sub\_}}
+\index{laser\_scan\_sub\_@{laser\_scan\_sub\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{laser\_scan\_sub\_}{laser\_scan\_sub\_}}
+{\footnotesize\ttfamily message\+\_\+filters\+::\+Subscriber$<$sensor\+\_\+msgs\+::\+Laser\+Scan$>$$\ast$ Amcl\+Node\+::laser\+\_\+scan\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a4b86d26e55e52a3417ff2f0f1afc79af}\label{class_amcl_node_a4b86d26e55e52a3417ff2f0f1afc79af}} 
+\index{AmclNode@{AmclNode}!lasers\_@{lasers\_}}
+\index{lasers\_@{lasers\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{lasers\_}{lasers\_}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classamcl_1_1_a_m_c_l_laser}{AMCLLaser}}$\ast$ $>$ Amcl\+Node\+::lasers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a2ecf36892cdecda4bcb31b70675e14fb}\label{class_amcl_node_a2ecf36892cdecda4bcb31b70675e14fb}} 
+\index{AmclNode@{AmclNode}!lasers\_update\_@{lasers\_update\_}}
+\index{lasers\_update\_@{lasers\_update\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{lasers\_update\_}{lasers\_update\_}}
+{\footnotesize\ttfamily std\+::vector$<$ bool $>$ Amcl\+Node\+::lasers\+\_\+update\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a09669b612a4139eba48e3ef058873b89}\label{class_amcl_node_a09669b612a4139eba48e3ef058873b89}} 
+\index{AmclNode@{AmclNode}!last\_cloud\_pub\_time@{last\_cloud\_pub\_time}}
+\index{last\_cloud\_pub\_time@{last\_cloud\_pub\_time}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{last\_cloud\_pub\_time}{last\_cloud\_pub\_time}}
+{\footnotesize\ttfamily ros\+::\+Time Amcl\+Node\+::last\+\_\+cloud\+\_\+pub\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a9b02947fbd30018bb51ce17faf41a227}\label{class_amcl_node_a9b02947fbd30018bb51ce17faf41a227}} 
+\index{AmclNode@{AmclNode}!last\_laser\_received\_ts\_@{last\_laser\_received\_ts\_}}
+\index{last\_laser\_received\_ts\_@{last\_laser\_received\_ts\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{last\_laser\_received\_ts\_}{last\_laser\_received\_ts\_}}
+{\footnotesize\ttfamily ros\+::\+Time Amcl\+Node\+::last\+\_\+laser\+\_\+received\+\_\+ts\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a83b3a4b815451dab5ae12035cbd66686}\label{class_amcl_node_a83b3a4b815451dab5ae12035cbd66686}} 
+\index{AmclNode@{AmclNode}!last\_published\_pose@{last\_published\_pose}}
+\index{last\_published\_pose@{last\_published\_pose}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{last\_published\_pose}{last\_published\_pose}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+With\+Covariance\+Stamped Amcl\+Node\+::last\+\_\+published\+\_\+pose\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a947f516b3ef11501844fdc015f22e20d}\label{class_amcl_node_a947f516b3ef11501844fdc015f22e20d}} 
+\index{AmclNode@{AmclNode}!latest\_odom\_pose\_@{latest\_odom\_pose\_}}
+\index{latest\_odom\_pose\_@{latest\_odom\_pose\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{latest\_odom\_pose\_}{latest\_odom\_pose\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped Amcl\+Node\+::latest\+\_\+odom\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_adf62933c0c8aca1ed8c4e508a5b8b87a}\label{class_amcl_node_adf62933c0c8aca1ed8c4e508a5b8b87a}} 
+\index{AmclNode@{AmclNode}!latest\_tf\_@{latest\_tf\_}}
+\index{latest\_tf\_@{latest\_tf\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{latest\_tf\_}{latest\_tf\_}}
+{\footnotesize\ttfamily tf2\+::\+Transform Amcl\+Node\+::latest\+\_\+tf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a977f7c8171f24442fd88c19ad47815b4}\label{class_amcl_node_a977f7c8171f24442fd88c19ad47815b4}} 
+\index{AmclNode@{AmclNode}!latest\_tf\_valid\_@{latest\_tf\_valid\_}}
+\index{latest\_tf\_valid\_@{latest\_tf\_valid\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{latest\_tf\_valid\_}{latest\_tf\_valid\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::latest\+\_\+tf\+\_\+valid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a1f18e58ef7d0a97f341d1cc8ca4cbc3a}\label{class_amcl_node_a1f18e58ef7d0a97f341d1cc8ca4cbc3a}} 
+\index{AmclNode@{AmclNode}!m\_force\_update@{m\_force\_update}}
+\index{m\_force\_update@{m\_force\_update}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{m\_force\_update}{m\_force\_update}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::m\+\_\+force\+\_\+update\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a6783010eab2fc5a1a7cd32c7c34e1970}\label{class_amcl_node_a6783010eab2fc5a1a7cd32c7c34e1970}} 
+\index{AmclNode@{AmclNode}!map\_@{map\_}}
+\index{map\_@{map\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{map\_}{map\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmap__t}{map\+\_\+t}}$\ast$ Amcl\+Node\+::map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a2a5d74a1f62e767e2910c51aa990ba59}\label{class_amcl_node_a2a5d74a1f62e767e2910c51aa990ba59}} 
+\index{AmclNode@{AmclNode}!map\_sub\_@{map\_sub\_}}
+\index{map\_sub\_@{map\_sub\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{map\_sub\_}{map\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber Amcl\+Node\+::map\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ae92eb03d4ab9723927d4cc2ee493ade4}\label{class_amcl_node_ae92eb03d4ab9723927d4cc2ee493ade4}} 
+\index{AmclNode@{AmclNode}!mapdata@{mapdata}}
+\index{mapdata@{mapdata}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{mapdata}{mapdata}}
+{\footnotesize\ttfamily char$\ast$ Amcl\+Node\+::mapdata\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a06c197a817d303e3cef8d50329866a44}\label{class_amcl_node_a06c197a817d303e3cef8d50329866a44}} 
+\index{AmclNode@{AmclNode}!max\_beams\_@{max\_beams\_}}
+\index{max\_beams\_@{max\_beams\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{max\_beams\_}{max\_beams\_}}
+{\footnotesize\ttfamily int Amcl\+Node\+::max\+\_\+beams\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_acebc356957463f4a8df9700434023335}\label{class_amcl_node_acebc356957463f4a8df9700434023335}} 
+\index{AmclNode@{AmclNode}!max\_particles\_@{max\_particles\_}}
+\index{max\_particles\_@{max\_particles\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{max\_particles\_}{max\_particles\_}}
+{\footnotesize\ttfamily int Amcl\+Node\+::max\+\_\+particles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a36af2a4ee035c7dc1f2562c13662cc05}\label{class_amcl_node_a36af2a4ee035c7dc1f2562c13662cc05}} 
+\index{AmclNode@{AmclNode}!min\_particles\_@{min\_particles\_}}
+\index{min\_particles\_@{min\_particles\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{min\_particles\_}{min\_particles\_}}
+{\footnotesize\ttfamily int Amcl\+Node\+::min\+\_\+particles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a4cc7912f950a229f89321c8075ce5bea}\label{class_amcl_node_a4cc7912f950a229f89321c8075ce5bea}} 
+\index{AmclNode@{AmclNode}!nh\_@{nh\_}}
+\index{nh\_@{nh\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{nh\_}{nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle Amcl\+Node\+::nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a7340fbc26cb1dc31ae14266880bbe8a0}\label{class_amcl_node_a7340fbc26cb1dc31ae14266880bbe8a0}} 
+\index{AmclNode@{AmclNode}!nomotion\_update\_srv\_@{nomotion\_update\_srv\_}}
+\index{nomotion\_update\_srv\_@{nomotion\_update\_srv\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{nomotion\_update\_srv\_}{nomotion\_update\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server Amcl\+Node\+::nomotion\+\_\+update\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a82334ffd72135fcf500957d2f30efa34}\label{class_amcl_node_a82334ffd72135fcf500957d2f30efa34}} 
+\index{AmclNode@{AmclNode}!odom\_@{odom\_}}
+\index{odom\_@{odom\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{odom\_}{odom\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom}{AMCLOdom}}$\ast$ Amcl\+Node\+::odom\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_abf0ea9c5881abb73ca2f4cd31737fa2f}\label{class_amcl_node_abf0ea9c5881abb73ca2f4cd31737fa2f}} 
+\index{AmclNode@{AmclNode}!odom\_frame\_id\_@{odom\_frame\_id\_}}
+\index{odom\_frame\_id\_@{odom\_frame\_id\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{odom\_frame\_id\_}{odom\_frame\_id\_}}
+{\footnotesize\ttfamily std\+::string Amcl\+Node\+::odom\+\_\+frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_af447f11c2fab931584b9684695d05b8f}\label{class_amcl_node_af447f11c2fab931584b9684695d05b8f}} 
+\index{AmclNode@{AmclNode}!odom\_model\_type\_@{odom\_model\_type\_}}
+\index{odom\_model\_type\_@{odom\_model\_type\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{odom\_model\_type\_}{odom\_model\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\+\_\+model\+\_\+t}} Amcl\+Node\+::odom\+\_\+model\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ac781dfe1b51c835fe677245d3e42c830}\label{class_amcl_node_ac781dfe1b51c835fe677245d3e42c830}} 
+\index{AmclNode@{AmclNode}!particlecloud\_pub\_@{particlecloud\_pub\_}}
+\index{particlecloud\_pub\_@{particlecloud\_pub\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{particlecloud\_pub\_}{particlecloud\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher Amcl\+Node\+::particlecloud\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a02578a2b8e2b13a395d878ab58e1d936}\label{class_amcl_node_a02578a2b8e2b13a395d878ab58e1d936}} 
+\index{AmclNode@{AmclNode}!pf\_@{pf\_}}
+\index{pf\_@{pf\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{pf\_}{pf\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\+\_\+t}}$\ast$ Amcl\+Node\+::pf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_afab19bf2c5b907f574011b741d3e77df}\label{class_amcl_node_afab19bf2c5b907f574011b741d3e77df}} 
+\index{AmclNode@{AmclNode}!pf\_err\_@{pf\_err\_}}
+\index{pf\_err\_@{pf\_err\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{pf\_err\_}{pf\_err\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::pf\+\_\+err\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ae3fda9f7fe843418229840c76b0c38bc}\label{class_amcl_node_ae3fda9f7fe843418229840c76b0c38bc}} 
+\index{AmclNode@{AmclNode}!pf\_init\_@{pf\_init\_}}
+\index{pf\_init\_@{pf\_init\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{pf\_init\_}{pf\_init\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::pf\+\_\+init\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a96dea4a7569ede71c1016eddfd712518}\label{class_amcl_node_a96dea4a7569ede71c1016eddfd712518}} 
+\index{AmclNode@{AmclNode}!pf\_odom\_pose\_@{pf\_odom\_pose\_}}
+\index{pf\_odom\_pose\_@{pf\_odom\_pose\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{pf\_odom\_pose\_}{pf\_odom\_pose\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} Amcl\+Node\+::pf\+\_\+odom\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a442621f5bd434c838611ab2ae74c389d}\label{class_amcl_node_a442621f5bd434c838611ab2ae74c389d}} 
+\index{AmclNode@{AmclNode}!pf\_z\_@{pf\_z\_}}
+\index{pf\_z\_@{pf\_z\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{pf\_z\_}{pf\_z\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::pf\+\_\+z\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a72e4f44467ffef9e744687c0ff8569ba}\label{class_amcl_node_a72e4f44467ffef9e744687c0ff8569ba}} 
+\index{AmclNode@{AmclNode}!pose\_pub\_@{pose\_pub\_}}
+\index{pose\_pub\_@{pose\_pub\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{pose\_pub\_}{pose\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher Amcl\+Node\+::pose\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a9210fba83c3b27efb61c1963731a32ec}\label{class_amcl_node_a9210fba83c3b27efb61c1963731a32ec}} 
+\index{AmclNode@{AmclNode}!private\_nh\_@{private\_nh\_}}
+\index{private\_nh\_@{private\_nh\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{private\_nh\_}{private\_nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle Amcl\+Node\+::private\+\_\+nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a7b5fe53187be6f7239750310cab6332c}\label{class_amcl_node_a7b5fe53187be6f7239750310cab6332c}} 
+\index{AmclNode@{AmclNode}!resample\_count\_@{resample\_count\_}}
+\index{resample\_count\_@{resample\_count\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{resample\_count\_}{resample\_count\_}}
+{\footnotesize\ttfamily int Amcl\+Node\+::resample\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a10102b4714afd6738b2b02ab56de9264}\label{class_amcl_node_a10102b4714afd6738b2b02ab56de9264}} 
+\index{AmclNode@{AmclNode}!resample\_interval\_@{resample\_interval\_}}
+\index{resample\_interval\_@{resample\_interval\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{resample\_interval\_}{resample\_interval\_}}
+{\footnotesize\ttfamily int Amcl\+Node\+::resample\+\_\+interval\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a195981f9de9d8bbad0f54fe0a9ed6943}\label{class_amcl_node_a195981f9de9d8bbad0f54fe0a9ed6943}} 
+\index{AmclNode@{AmclNode}!resolution@{resolution}}
+\index{resolution@{resolution}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{resolution}{resolution}}
+{\footnotesize\ttfamily double Amcl\+Node\+::resolution\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_afc5bfcbb8518fd8f51d111038b067344}\label{class_amcl_node_afc5bfcbb8518fd8f51d111038b067344}} 
+\index{AmclNode@{AmclNode}!save\_pose\_last\_time@{save\_pose\_last\_time}}
+\index{save\_pose\_last\_time@{save\_pose\_last\_time}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{save\_pose\_last\_time}{save\_pose\_last\_time}}
+{\footnotesize\ttfamily ros\+::\+Time Amcl\+Node\+::save\+\_\+pose\+\_\+last\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a84f53aa6eeffa430a9e9adf3f2ccd1d1}\label{class_amcl_node_a84f53aa6eeffa430a9e9adf3f2ccd1d1}} 
+\index{AmclNode@{AmclNode}!save\_pose\_period@{save\_pose\_period}}
+\index{save\_pose\_period@{save\_pose\_period}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{save\_pose\_period}{save\_pose\_period}}
+{\footnotesize\ttfamily ros\+::\+Duration Amcl\+Node\+::save\+\_\+pose\+\_\+period\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a7615b8f4b35c2743e5d7e1f8feaba57e}\label{class_amcl_node_a7615b8f4b35c2743e5d7e1f8feaba57e}} 
+\index{AmclNode@{AmclNode}!selective\_resampling\_@{selective\_resampling\_}}
+\index{selective\_resampling\_@{selective\_resampling\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{selective\_resampling\_}{selective\_resampling\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::selective\+\_\+resampling\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a4925c739acd5de3b311ebf6b811c06d0}\label{class_amcl_node_a4925c739acd5de3b311ebf6b811c06d0}} 
+\index{AmclNode@{AmclNode}!sent\_first\_transform\_@{sent\_first\_transform\_}}
+\index{sent\_first\_transform\_@{sent\_first\_transform\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{sent\_first\_transform\_}{sent\_first\_transform\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::sent\+\_\+first\+\_\+transform\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a566b19d919c6be994db02756acefb4b6}\label{class_amcl_node_a566b19d919c6be994db02756acefb4b6}} 
+\index{AmclNode@{AmclNode}!set\_map\_srv\_@{set\_map\_srv\_}}
+\index{set\_map\_srv\_@{set\_map\_srv\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{set\_map\_srv\_}{set\_map\_srv\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server Amcl\+Node\+::set\+\_\+map\+\_\+srv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a042815dc4dcf8b513fa8e587645753da}\label{class_amcl_node_a042815dc4dcf8b513fa8e587645753da}} 
+\index{AmclNode@{AmclNode}!sigma\_hit\_@{sigma\_hit\_}}
+\index{sigma\_hit\_@{sigma\_hit\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{sigma\_hit\_}{sigma\_hit\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::sigma\+\_\+hit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a1ffe12421c22e3ed6c00fa3ff980a168}\label{class_amcl_node_a1ffe12421c22e3ed6c00fa3ff980a168}} 
+\index{AmclNode@{AmclNode}!std\_warn\_level\_x\_@{std\_warn\_level\_x\_}}
+\index{std\_warn\_level\_x\_@{std\_warn\_level\_x\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{std\_warn\_level\_x\_}{std\_warn\_level\_x\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::std\+\_\+warn\+\_\+level\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a9c6f0936f5e51286fbca84ec502a706a}\label{class_amcl_node_a9c6f0936f5e51286fbca84ec502a706a}} 
+\index{AmclNode@{AmclNode}!std\_warn\_level\_y\_@{std\_warn\_level\_y\_}}
+\index{std\_warn\_level\_y\_@{std\_warn\_level\_y\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{std\_warn\_level\_y\_}{std\_warn\_level\_y\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::std\+\_\+warn\+\_\+level\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a2f07ac63153f0ffd5ff7b8592a85aecc}\label{class_amcl_node_a2f07ac63153f0ffd5ff7b8592a85aecc}} 
+\index{AmclNode@{AmclNode}!std\_warn\_level\_yaw\_@{std\_warn\_level\_yaw\_}}
+\index{std\_warn\_level\_yaw\_@{std\_warn\_level\_yaw\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{std\_warn\_level\_yaw\_}{std\_warn\_level\_yaw\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::std\+\_\+warn\+\_\+level\+\_\+yaw\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ad17f811819e627963147f4736da04095}\label{class_amcl_node_ad17f811819e627963147f4736da04095}} 
+\index{AmclNode@{AmclNode}!sx@{sx}}
+\index{sx@{sx}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{sx}{sx}}
+{\footnotesize\ttfamily int Amcl\+Node\+::sx\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a2f74de096c85d9254eca6af75595e336}\label{class_amcl_node_a2f74de096c85d9254eca6af75595e336}} 
+\index{AmclNode@{AmclNode}!sy@{sy}}
+\index{sy@{sy}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{sy}{sy}}
+{\footnotesize\ttfamily int Amcl\+Node\+::sy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a31987ac849703b9f4937bd13a21ab786}\label{class_amcl_node_a31987ac849703b9f4937bd13a21ab786}} 
+\index{AmclNode@{AmclNode}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Buffer$>$ Amcl\+Node\+::tf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_af906ac310779b08e5eb44e54ce4e03dd}\label{class_amcl_node_af906ac310779b08e5eb44e54ce4e03dd}} 
+\index{AmclNode@{AmclNode}!tf\_broadcast\_@{tf\_broadcast\_}}
+\index{tf\_broadcast\_@{tf\_broadcast\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{tf\_broadcast\_}{tf\_broadcast\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::tf\+\_\+broadcast\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a7056c5b3014eebbddec3df7c477dce7e}\label{class_amcl_node_a7056c5b3014eebbddec3df7c477dce7e}} 
+\index{AmclNode@{AmclNode}!tfb\_@{tfb\_}}
+\index{tfb\_@{tfb\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{tfb\_}{tfb\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Transform\+Broadcaster$>$ Amcl\+Node\+::tfb\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ab431038143dd036e9af0cb7a6bb07d43}\label{class_amcl_node_ab431038143dd036e9af0cb7a6bb07d43}} 
+\index{AmclNode@{AmclNode}!tfl\_@{tfl\_}}
+\index{tfl\_@{tfl\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{tfl\_}{tfl\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$tf2\+\_\+ros\+::\+Transform\+Listener$>$ Amcl\+Node\+::tfl\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_aeb76184132ecccc9d01eeee105837c31}\label{class_amcl_node_aeb76184132ecccc9d01eeee105837c31}} 
+\index{AmclNode@{AmclNode}!transform\_tolerance\_@{transform\_tolerance\_}}
+\index{transform\_tolerance\_@{transform\_tolerance\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{transform\_tolerance\_}{transform\_tolerance\_}}
+{\footnotesize\ttfamily ros\+::\+Duration Amcl\+Node\+::transform\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a9a53557c50e5987dbb0cab9820703edd}\label{class_amcl_node_a9a53557c50e5987dbb0cab9820703edd}} 
+\index{AmclNode@{AmclNode}!use\_map\_topic\_@{use\_map\_topic\_}}
+\index{use\_map\_topic\_@{use\_map\_topic\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{use\_map\_topic\_}{use\_map\_topic\_}}
+{\footnotesize\ttfamily bool Amcl\+Node\+::use\+\_\+map\+\_\+topic\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_affdf3ce4bd35ec5ae857182eb9061069}\label{class_amcl_node_affdf3ce4bd35ec5ae857182eb9061069}} 
+\index{AmclNode@{AmclNode}!z\_hit\_@{z\_hit\_}}
+\index{z\_hit\_@{z\_hit\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{z\_hit\_}{z\_hit\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::z\+\_\+hit\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_ace5a1338a4050f88a37d90ab40df520f}\label{class_amcl_node_ace5a1338a4050f88a37d90ab40df520f}} 
+\index{AmclNode@{AmclNode}!z\_max\_@{z\_max\_}}
+\index{z\_max\_@{z\_max\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{z\_max\_}{z\_max\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::z\+\_\+max\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_abd65f3ce85aa9b18501ab2bbc0eddb71}\label{class_amcl_node_abd65f3ce85aa9b18501ab2bbc0eddb71}} 
+\index{AmclNode@{AmclNode}!z\_rand\_@{z\_rand\_}}
+\index{z\_rand\_@{z\_rand\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{z\_rand\_}{z\_rand\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::z\+\_\+rand\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_amcl_node_a9a930d856eb2f51f78565e53ed0967eb}\label{class_amcl_node_a9a930d856eb2f51f78565e53ed0967eb}} 
+\index{AmclNode@{AmclNode}!z\_short\_@{z\_short\_}}
+\index{z\_short\_@{z\_short\_}!AmclNode@{AmclNode}}
+\doxysubsubsection{\texorpdfstring{z\_short\_}{z\_short\_}}
+{\footnotesize\ttfamily double Amcl\+Node\+::z\+\_\+short\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+amcl/src/\mbox{\hyperlink{amcl__node_8cpp}{amcl\+\_\+node.\+cpp}}\end{DoxyCompactItemize}

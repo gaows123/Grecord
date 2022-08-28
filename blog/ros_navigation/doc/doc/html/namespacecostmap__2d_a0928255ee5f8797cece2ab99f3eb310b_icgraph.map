@@ -1,0 +1,15 @@
+<map id="costmap_2d::transformFootprint" name="costmap_2d::transformFootprint">
+<area shape="rect" id="node1" title="Given a pose and base footprint, build the oriented footprint of the robot (list of Points)" alt="" coords="1091,78,1297,105"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a66b8eaac1ba4252fd663adfddfecbb7e" title="Build the oriented footprint of the robot at the robot&#39;s current pose" alt="" coords="845,5,1043,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_obstacle_layer.html#ac81261d46ebc829ca1d747c024a00603" title=" " alt="" coords="851,71,1037,112"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9c3aa244e7890b363a6317500d66e900" title=" " alt="" coords="845,172,1043,213"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="606,5,791,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="615,71,782,112"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="600,136,797,177"/>
+<area shape="rect" id="node10" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4" title="Run the ClearCostmapRecovery recovery behavior. Reverts the costmap to the static map outside of a us..." alt="" coords="615,202,782,258"/>
+<area shape="rect" id="node12" href="$clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="151,253,265,279"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="355,136,552,177"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="109,136,307,177"/>
+<area shape="rect" id="node11" href="$clear__tester_8cpp.html#a401dad5e820a56943c7223955000dc1b" title=" " alt="" coords="391,223,516,250"/>
+<area shape="rect" id="node13" href="$clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,253,61,279"/>
+</map>

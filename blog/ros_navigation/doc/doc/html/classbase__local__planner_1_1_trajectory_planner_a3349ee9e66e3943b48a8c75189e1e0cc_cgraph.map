@@ -1,0 +1,5 @@
+<map id="base_local_planner::TrajectoryPlanner::getFootprintPolygon" name="base_local_planner::TrajectoryPlanner::getFootprintPolygon">
+<area shape="rect" id="node1" title="Return the footprint specification of the robot." alt="" coords="5,5,152,61"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#a137137a824a6a667fbf9a850c762c6ec" title="Convert vector of Points to Polygon msg" alt="" coords="200,20,359,47"/>
+<area shape="rect" id="node3" href="$namespacecostmap__2d.html#a50f77e1c7e28435a7707e1991b9a82a1" title="Convert Point to Point32" alt="" coords="407,20,563,47"/>
+</map>

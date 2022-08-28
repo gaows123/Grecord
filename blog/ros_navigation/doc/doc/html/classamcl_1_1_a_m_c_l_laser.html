@@ -1,0 +1,1171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl::AMCLLaser类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceamcl.html">amcl</a></li><li class="navelem"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html">AMCLLaser</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classamcl_1_1_a_m_c_l_laser-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">amcl::AMCLLaser类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="amcl__laser_8h_source.html">amcl_laser.h</a>&gt;</code></p>
+<div class="dynheader">
+类 amcl::AMCLLaser 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser__inherit__graph.png" border="0" usemap="#aamcl_1_1_a_m_c_l_laser_inherit__map" alt="Inheritance graph"/></div>
+<map name="aamcl_1_1_a_m_c_l_laser_inherit__map" id="aamcl_1_1_a_m_c_l_laser_inherit__map">
+<area shape="rect" title=" " alt="" coords="9,80,136,107"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_sensor.html" title=" " alt="" coords="5,5,140,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+amcl::AMCLLaser 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser__coll__graph.png" border="0" usemap="#aamcl_1_1_a_m_c_l_laser_coll__map" alt="Collaboration graph"/></div>
+<map name="aamcl_1_1_a_m_c_l_laser_coll__map" id="aamcl_1_1_a_m_c_l_laser_coll__map">
+<area shape="rect" title=" " alt="" coords="96,184,223,211"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_sensor.html" title=" " alt="" coords="92,95,227,121"/>
+<area shape="rect" href="structpf__vector__t.html" title=" " alt="" coords="8,5,95,32"/>
+<area shape="rect" href="structmap__t.html" title=" " alt="" coords="251,95,310,121"/>
+<area shape="rect" href="structmap__cell__t.html" title=" " alt="" coords="238,5,323,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0d360f75989d1378130c7d6112093f99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a0d360f75989d1378130c7d6112093f99">AMCLLaser</a> (size_t <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a835da7db1c326bf22bdfac480f757586">max_beams</a>, <a class="el" href="structmap__t.html">map_t</a> *<a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a5bd2fca718a57e75ae943501ba6c39e9">map</a>)</td></tr>
+<tr class="separator:a0d360f75989d1378130c7d6112093f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048db5ebf58d50b126e7c58cb0ee856c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a048db5ebf58d50b126e7c58cb0ee856c">~AMCLLaser</a> ()</td></tr>
+<tr class="separator:a048db5ebf58d50b126e7c58cb0ee856c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc6d5bb46e3f7ae7320f4fe0f959d4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#affc6d5bb46e3f7ae7320f4fe0f959d4e">SetModelBeam</a> (double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a4b6f6c0f2f7bdd2f6ef90de6bd95c635">z_hit</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#aeb158fe1146ff61768e56c816d9b9a65">z_short</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a8d238fa084dd954c6416a5b522d7c476">z_max</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a224ab025360c5d70d2fafff73e4fca3f">z_rand</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a71b2ea74d6bf3aaed5d259874298ad72">sigma_hit</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a57f1c5ae05afe2446e8c18dc49fd7fde">lambda_short</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ac057ee3f2684d7925b120455ca7fa4b9">chi_outlier</a>)</td></tr>
+<tr class="separator:affc6d5bb46e3f7ae7320f4fe0f959d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9115fca9c56ad6f745efe8442c2d52f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ab9115fca9c56ad6f745efe8442c2d52f">SetModelLikelihoodField</a> (double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a4b6f6c0f2f7bdd2f6ef90de6bd95c635">z_hit</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a224ab025360c5d70d2fafff73e4fca3f">z_rand</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a71b2ea74d6bf3aaed5d259874298ad72">sigma_hit</a>, double max_occ_dist)</td></tr>
+<tr class="separator:ab9115fca9c56ad6f745efe8442c2d52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdde5209bb6d160b6b561742036fcb09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#acdde5209bb6d160b6b561742036fcb09">SetModelLikelihoodFieldProb</a> (double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a4b6f6c0f2f7bdd2f6ef90de6bd95c635">z_hit</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a224ab025360c5d70d2fafff73e4fca3f">z_rand</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a71b2ea74d6bf3aaed5d259874298ad72">sigma_hit</a>, double max_occ_dist, bool <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a136604601e713521c949eef56cea4bcb">do_beamskip</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a09096056f75e634eeb06bc788fbb4f32">beam_skip_distance</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ab8d9ad94c5815ee4a5614f7592d4842f">beam_skip_threshold</a>, double <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a57e7d9451d88daec73966558117129eb">beam_skip_error_threshold</a>)</td></tr>
+<tr class="separator:acdde5209bb6d160b6b561742036fcb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179090d0bcf37e2a3927010e5726ffe7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a179090d0bcf37e2a3927010e5726ffe7">UpdateSensor</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a179090d0bcf37e2a3927010e5726ffe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6803650b65b0ece79767ee64490fa5e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a6803650b65b0ece79767ee64490fa5e8">SetLaserPose</a> (<a class="el" href="structpf__vector__t.html">pf_vector_t</a> &amp;<a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a53383765386d9aba71db8bef973a00b6">laser_pose</a>)</td></tr>
+<tr class="separator:a6803650b65b0ece79767ee64490fa5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classamcl_1_1_a_m_c_l_sensor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classamcl_1_1_a_m_c_l_sensor')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classamcl_1_1_a_m_c_l_sensor.html">amcl::AMCLSensor</a></td></tr>
+<tr class="memitem:ade685421ea9e858b7cfb921c7060b415 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#ade685421ea9e858b7cfb921c7060b415">AMCLSensor</a> ()</td></tr>
+<tr class="separator:ade685421ea9e858b7cfb921c7060b415 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f60fbb3a0fc393b5459549dd55fae4c inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a4f60fbb3a0fc393b5459549dd55fae4c">~AMCLSensor</a> ()</td></tr>
+<tr class="separator:a4f60fbb3a0fc393b5459549dd55fae4c inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258db7bc9b5713914527f50dcfdd6800 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a258db7bc9b5713914527f50dcfdd6800">UpdateAction</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a258db7bc9b5713914527f50dcfdd6800 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5129ccfbedd56821ca6ae9a5e2cbf193 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a5129ccfbedd56821ca6ae9a5e2cbf193">InitSensor</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a5129ccfbedd56821ca6ae9a5e2cbf193 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5243e92ca32aa4a86e10bc36a896b365 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a5243e92ca32aa4a86e10bc36a896b365">UpdateSensor</a> (<a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *pf, <a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *data)</td></tr>
+<tr class="separator:a5243e92ca32aa4a86e10bc36a896b365 inherit pub_methods_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aaab1b8b1be18b2e14b81229e4f4e8d13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#aaab1b8b1be18b2e14b81229e4f4e8d13">reallocTempData</a> (int <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ad00b22f35fbdcb2d4ea9574d0acdcbd1">max_samples</a>, int <a class="el" href="classamcl_1_1_a_m_c_l_laser.html#acd97aabb72e32f8b8f14c496168c2ecd">max_obs</a>)</td></tr>
+<tr class="separator:aaab1b8b1be18b2e14b81229e4f4e8d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a9cc5e4e32e3f5a1d3051729928215b35"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a9cc5e4e32e3f5a1d3051729928215b35">BeamModel</a> (<a class="el" href="classamcl_1_1_a_m_c_l_laser_data.html">AMCLLaserData</a> *data, <a class="el" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a> *set)</td></tr>
+<tr class="separator:a9cc5e4e32e3f5a1d3051729928215b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b48b3b2f50003cec1ba3adf2792bacc"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a0b48b3b2f50003cec1ba3adf2792bacc">LikelihoodFieldModel</a> (<a class="el" href="classamcl_1_1_a_m_c_l_laser_data.html">AMCLLaserData</a> *data, <a class="el" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a> *set)</td></tr>
+<tr class="separator:a0b48b3b2f50003cec1ba3adf2792bacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b28821a86e6057ab81241f304bc2a2"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ab7b28821a86e6057ab81241f304bc2a2">LikelihoodFieldModelProb</a> (<a class="el" href="classamcl_1_1_a_m_c_l_laser_data.html">AMCLLaserData</a> *data, <a class="el" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a> *set)</td></tr>
+<tr class="separator:ab7b28821a86e6057ab81241f304bc2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ab8e5528c2b2eca4cd49fb8caebe4efeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceamcl.html#a69e6e5bb29ff703c50bfc787216e5d9c">laser_model_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ab8e5528c2b2eca4cd49fb8caebe4efeb">model_type</a></td></tr>
+<tr class="separator:ab8e5528c2b2eca4cd49fb8caebe4efeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6949cb5201e9416de6a8da5bd392be"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#abf6949cb5201e9416de6a8da5bd392be">time</a></td></tr>
+<tr class="separator:abf6949cb5201e9416de6a8da5bd392be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd2fca718a57e75ae943501ba6c39e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a5bd2fca718a57e75ae943501ba6c39e9">map</a></td></tr>
+<tr class="separator:a5bd2fca718a57e75ae943501ba6c39e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53383765386d9aba71db8bef973a00b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a53383765386d9aba71db8bef973a00b6">laser_pose</a></td></tr>
+<tr class="separator:a53383765386d9aba71db8bef973a00b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835da7db1c326bf22bdfac480f757586"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a835da7db1c326bf22bdfac480f757586">max_beams</a></td></tr>
+<tr class="separator:a835da7db1c326bf22bdfac480f757586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136604601e713521c949eef56cea4bcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a136604601e713521c949eef56cea4bcb">do_beamskip</a></td></tr>
+<tr class="separator:a136604601e713521c949eef56cea4bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09096056f75e634eeb06bc788fbb4f32"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a09096056f75e634eeb06bc788fbb4f32">beam_skip_distance</a></td></tr>
+<tr class="separator:a09096056f75e634eeb06bc788fbb4f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d9ad94c5815ee4a5614f7592d4842f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ab8d9ad94c5815ee4a5614f7592d4842f">beam_skip_threshold</a></td></tr>
+<tr class="separator:ab8d9ad94c5815ee4a5614f7592d4842f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e7d9451d88daec73966558117129eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a57e7d9451d88daec73966558117129eb">beam_skip_error_threshold</a></td></tr>
+<tr class="separator:a57e7d9451d88daec73966558117129eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad00b22f35fbdcb2d4ea9574d0acdcbd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ad00b22f35fbdcb2d4ea9574d0acdcbd1">max_samples</a></td></tr>
+<tr class="separator:ad00b22f35fbdcb2d4ea9574d0acdcbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd97aabb72e32f8b8f14c496168c2ecd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#acd97aabb72e32f8b8f14c496168c2ecd">max_obs</a></td></tr>
+<tr class="separator:acd97aabb72e32f8b8f14c496168c2ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab6c8f338eea17b16557fd577e20719"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a2ab6c8f338eea17b16557fd577e20719">temp_obs</a></td></tr>
+<tr class="separator:a2ab6c8f338eea17b16557fd577e20719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6f6c0f2f7bdd2f6ef90de6bd95c635"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a4b6f6c0f2f7bdd2f6ef90de6bd95c635">z_hit</a></td></tr>
+<tr class="separator:a4b6f6c0f2f7bdd2f6ef90de6bd95c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb158fe1146ff61768e56c816d9b9a65"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#aeb158fe1146ff61768e56c816d9b9a65">z_short</a></td></tr>
+<tr class="separator:aeb158fe1146ff61768e56c816d9b9a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d238fa084dd954c6416a5b522d7c476"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a8d238fa084dd954c6416a5b522d7c476">z_max</a></td></tr>
+<tr class="separator:a8d238fa084dd954c6416a5b522d7c476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a224ab025360c5d70d2fafff73e4fca3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a224ab025360c5d70d2fafff73e4fca3f">z_rand</a></td></tr>
+<tr class="separator:a224ab025360c5d70d2fafff73e4fca3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b2ea74d6bf3aaed5d259874298ad72"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a71b2ea74d6bf3aaed5d259874298ad72">sigma_hit</a></td></tr>
+<tr class="separator:a71b2ea74d6bf3aaed5d259874298ad72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f1c5ae05afe2446e8c18dc49fd7fde"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#a57f1c5ae05afe2446e8c18dc49fd7fde">lambda_short</a></td></tr>
+<tr class="separator:a57f1c5ae05afe2446e8c18dc49fd7fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac057ee3f2684d7925b120455ca7fa4b9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_laser.html#ac057ee3f2684d7925b120455ca7fa4b9">chi_outlier</a></td></tr>
+<tr class="separator:ac057ee3f2684d7925b120455ca7fa4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classamcl_1_1_a_m_c_l_sensor')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classamcl_1_1_a_m_c_l_sensor.html">amcl::AMCLSensor</a></td></tr>
+<tr class="memitem:acc893ca5bd2e1e5f6989c1fa9c14d0fb inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#acc893ca5bd2e1e5f6989c1fa9c14d0fb">is_action</a></td></tr>
+<tr class="separator:acc893ca5bd2e1e5f6989c1fa9c14d0fb inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2938edc4972ba244737bdd113a746fbf inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpf__vector__t.html">pf_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a2938edc4972ba244737bdd113a746fbf">pose</a></td></tr>
+<tr class="separator:a2938edc4972ba244737bdd113a746fbf inherit pub_attribs_classamcl_1_1_a_m_c_l_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0d360f75989d1378130c7d6112093f99" name="a0d360f75989d1378130c7d6112093f99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d360f75989d1378130c7d6112093f99">&#9670;&nbsp;</a></span>AMCLLaser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AMCLLaser::AMCLLaser </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_beams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmap__t.html">map_t</a> *&#160;</td>
+          <td class="paramname"><em>map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a048db5ebf58d50b126e7c58cb0ee856c" name="a048db5ebf58d50b126e7c58cb0ee856c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048db5ebf58d50b126e7c58cb0ee856c">&#9670;&nbsp;</a></span>~AMCLLaser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AMCLLaser::~AMCLLaser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9cc5e4e32e3f5a1d3051729928215b35" name="a9cc5e4e32e3f5a1d3051729928215b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc5e4e32e3f5a1d3051729928215b35">&#9670;&nbsp;</a></span>BeamModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double AMCLLaser::BeamModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamcl_1_1_a_m_c_l_laser_data.html">AMCLLaserData</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a> *&#160;</td>
+          <td class="paramname"><em>set</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_cgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_cgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_cgraph" id="aclassamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,208,57"/>
+<area shape="rect" href="map__range_8c.html#aafef11c4d8efd07a4cb20bad5fc4bc83" title=" " alt="" coords="269,5,386,32"/>
+<area shape="rect" href="pf__vector_8c.html#afe6b50abf661ef62686a25eccfb406e1" title=" " alt="" coords="256,56,399,83"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_icgraph" id="aclassamcl_1_1_a_m_c_l_laser_a9cc5e4e32e3f5a1d3051729928215b35_icgraph">
+<area shape="rect" title=" " alt="" coords="269,5,472,32"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a179090d0bcf37e2a3927010e5726ffe7" title=" " alt="" coords="5,5,221,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0b48b3b2f50003cec1ba3adf2792bacc" name="a0b48b3b2f50003cec1ba3adf2792bacc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b48b3b2f50003cec1ba3adf2792bacc">&#9670;&nbsp;</a></span>LikelihoodFieldModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double AMCLLaser::LikelihoodFieldModel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamcl_1_1_a_m_c_l_laser_data.html">AMCLLaserData</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a> *&#160;</td>
+          <td class="paramname"><em>set</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_cgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_cgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_cgraph" id="aclassamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,197,47"/>
+<area shape="rect" href="pf__vector_8c.html#afe6b50abf661ef62686a25eccfb406e1" title=" " alt="" coords="245,13,388,39"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_icgraph" id="aclassamcl_1_1_a_m_c_l_laser_a0b48b3b2f50003cec1ba3adf2792bacc_icgraph">
+<area shape="rect" title=" " alt="" coords="269,5,461,47"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a179090d0bcf37e2a3927010e5726ffe7" title=" " alt="" coords="5,13,221,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7b28821a86e6057ab81241f304bc2a2" name="ab7b28821a86e6057ab81241f304bc2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b28821a86e6057ab81241f304bc2a2">&#9670;&nbsp;</a></span>LikelihoodFieldModelProb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double AMCLLaser::LikelihoodFieldModelProb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classamcl_1_1_a_m_c_l_laser_data.html">AMCLLaserData</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a> *&#160;</td>
+          <td class="paramname"><em>set</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_cgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_cgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_cgraph" id="aclassamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,197,69"/>
+<area shape="rect" href="pf__vector_8c.html#afe6b50abf661ef62686a25eccfb406e1" title=" " alt="" coords="260,5,403,32"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#aaab1b8b1be18b2e14b81229e4f4e8d13" title=" " alt="" coords="245,57,417,98"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_icgraph" id="aclassamcl_1_1_a_m_c_l_laser_ab7b28821a86e6057ab81241f304bc2a2_icgraph">
+<area shape="rect" title=" " alt="" coords="269,5,461,47"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a179090d0bcf37e2a3927010e5726ffe7" title=" " alt="" coords="5,13,221,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaab1b8b1be18b2e14b81229e4f4e8d13" name="aaab1b8b1be18b2e14b81229e4f4e8d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab1b8b1be18b2e14b81229e4f4e8d13">&#9670;&nbsp;</a></span>reallocTempData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMCLLaser::reallocTempData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_obs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13_icgraph" id="aclassamcl_1_1_a_m_c_l_laser_aaab1b8b1be18b2e14b81229e4f4e8d13_icgraph">
+<area shape="rect" title=" " alt="" coords="509,5,681,47"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#ab7b28821a86e6057ab81241f304bc2a2" title=" " alt="" coords="269,5,461,47"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a179090d0bcf37e2a3927010e5726ffe7" title=" " alt="" coords="5,13,221,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6803650b65b0ece79767ee64490fa5e8" name="a6803650b65b0ece79767ee64490fa5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6803650b65b0ece79767ee64490fa5e8">&#9670;&nbsp;</a></span>SetLaserPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void amcl::AMCLLaser::SetLaserPose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpf__vector__t.html">pf_vector_t</a> &amp;&#160;</td>
+          <td class="paramname"><em>laser_pose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affc6d5bb46e3f7ae7320f4fe0f959d4e" name="affc6d5bb46e3f7ae7320f4fe0f959d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc6d5bb46e3f7ae7320f4fe0f959d4e">&#9670;&nbsp;</a></span>SetModelBeam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMCLLaser::SetModelBeam </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_hit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_short</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_rand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma_hit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lambda_short</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>chi_outlier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e_icgraph" id="aclassamcl_1_1_a_m_c_l_laser_affc6d5bb46e3f7ae7320f4fe0f959d4e_icgraph">
+<area shape="rect" title=" " alt="" coords="689,107,912,133"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,69,641,96"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="452,132,624,159"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,81,156,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab9115fca9c56ad6f745efe8442c2d52f" name="ab9115fca9c56ad6f745efe8442c2d52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9115fca9c56ad6f745efe8442c2d52f">&#9670;&nbsp;</a></span>SetModelLikelihoodField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMCLLaser::SetModelLikelihoodField </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_hit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_rand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma_hit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_occ_dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_cgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_cgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_cgraph" id="aclassamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,195,65"/>
+<area shape="rect" href="map__cspace_8cpp.html#a7a2e9876667cad69c3b70881c1aaf1ac" title=" " alt="" coords="243,31,385,57"/>
+<area shape="rect" href="map__cspace_8cpp.html#a494ed82d2dc7c22daa80385f65351656" title=" " alt="" coords="462,5,533,32"/>
+<area shape="rect" href="map__cspace_8cpp.html#a862166a1d511336b3211ff838427d582" title=" " alt="" coords="433,56,561,83"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="609,5,680,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_icgraph" id="aclassamcl_1_1_a_m_c_l_laser_ab9115fca9c56ad6f745efe8442c2d52f_icgraph">
+<area shape="rect" title=" " alt="" coords="689,99,879,141"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,69,641,96"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="452,132,624,159"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,81,156,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acdde5209bb6d160b6b561742036fcb09" name="acdde5209bb6d160b6b561742036fcb09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdde5209bb6d160b6b561742036fcb09">&#9670;&nbsp;</a></span>SetModelLikelihoodFieldProb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMCLLaser::SetModelLikelihoodFieldProb </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_hit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z_rand</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma_hit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_occ_dist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>do_beamskip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beam_skip_distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beam_skip_threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>beam_skip_error_threshold</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_cgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_cgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_cgraph" id="aclassamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,195,65"/>
+<area shape="rect" href="map__cspace_8cpp.html#a7a2e9876667cad69c3b70881c1aaf1ac" title=" " alt="" coords="243,31,385,57"/>
+<area shape="rect" href="map__cspace_8cpp.html#a494ed82d2dc7c22daa80385f65351656" title=" " alt="" coords="462,5,533,32"/>
+<area shape="rect" href="map__cspace_8cpp.html#a862166a1d511336b3211ff838427d582" title=" " alt="" coords="433,56,561,83"/>
+<area shape="rect" href="costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="609,5,680,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_icgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_icgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_icgraph" id="aclassamcl_1_1_a_m_c_l_laser_acdde5209bb6d160b6b561742036fcb09_icgraph">
+<area shape="rect" title=" " alt="" coords="689,99,879,141"/>
+<area shape="rect" href="class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,69,641,96"/>
+<area shape="rect" href="class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="452,132,624,159"/>
+<area shape="rect" href="class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,5,380,32"/>
+<area shape="rect" href="class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,56,375,83"/>
+<area shape="rect" href="class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,107,387,133"/>
+<area shape="rect" href="class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,81,156,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a179090d0bcf37e2a3927010e5726ffe7" name="a179090d0bcf37e2a3927010e5726ffe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a179090d0bcf37e2a3927010e5726ffe7">&#9670;&nbsp;</a></span>UpdateSensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AMCLLaser::UpdateSensor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classamcl_1_1_a_m_c_l_sensor_data.html">AMCLSensorData</a> *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="classamcl_1_1_a_m_c_l_sensor.html#a5243e92ca32aa4a86e10bc36a896b365">amcl::AMCLSensor</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7_cgraph.png" border="0" usemap="#aclassamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7_cgraph" alt=""/></div>
+<map name="aclassamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7_cgraph" id="aclassamcl_1_1_a_m_c_l_laser_a179090d0bcf37e2a3927010e5726ffe7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,97,221,124"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a9cc5e4e32e3f5a1d3051729928215b35" title=" " alt="" coords="269,5,472,32"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#a0b48b3b2f50003cec1ba3adf2792bacc" title=" " alt="" coords="275,57,467,98"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#ab7b28821a86e6057ab81241f304bc2a2" title=" " alt="" coords="275,122,467,163"/>
+<area shape="rect" href="pf_8c.html#a477f66612c4752dd8f1ab73cab84a1fd" title=" " alt="" coords="308,188,433,215"/>
+<area shape="rect" href="map__range_8c.html#aafef11c4d8efd07a4cb20bad5fc4bc83" title=" " alt="" coords="547,5,665,32"/>
+<area shape="rect" href="pf__vector_8c.html#afe6b50abf661ef62686a25eccfb406e1" title=" " alt="" coords="535,64,677,91"/>
+<area shape="rect" href="classamcl_1_1_a_m_c_l_laser.html#aaab1b8b1be18b2e14b81229e4f4e8d13" title=" " alt="" coords="520,122,692,163"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a09096056f75e634eeb06bc788fbb4f32" name="a09096056f75e634eeb06bc788fbb4f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09096056f75e634eeb06bc788fbb4f32">&#9670;&nbsp;</a></span>beam_skip_distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::beam_skip_distance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57e7d9451d88daec73966558117129eb" name="a57e7d9451d88daec73966558117129eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e7d9451d88daec73966558117129eb">&#9670;&nbsp;</a></span>beam_skip_error_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::beam_skip_error_threshold</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8d9ad94c5815ee4a5614f7592d4842f" name="ab8d9ad94c5815ee4a5614f7592d4842f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d9ad94c5815ee4a5614f7592d4842f">&#9670;&nbsp;</a></span>beam_skip_threshold</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::beam_skip_threshold</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac057ee3f2684d7925b120455ca7fa4b9" name="ac057ee3f2684d7925b120455ca7fa4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac057ee3f2684d7925b120455ca7fa4b9">&#9670;&nbsp;</a></span>chi_outlier</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::chi_outlier</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a136604601e713521c949eef56cea4bcb" name="a136604601e713521c949eef56cea4bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a136604601e713521c949eef56cea4bcb">&#9670;&nbsp;</a></span>do_beamskip</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool amcl::AMCLLaser::do_beamskip</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57f1c5ae05afe2446e8c18dc49fd7fde" name="a57f1c5ae05afe2446e8c18dc49fd7fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f1c5ae05afe2446e8c18dc49fd7fde">&#9670;&nbsp;</a></span>lambda_short</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::lambda_short</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53383765386d9aba71db8bef973a00b6" name="a53383765386d9aba71db8bef973a00b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53383765386d9aba71db8bef973a00b6">&#9670;&nbsp;</a></span>laser_pose</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpf__vector__t.html">pf_vector_t</a> amcl::AMCLLaser::laser_pose</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bd2fca718a57e75ae943501ba6c39e9" name="a5bd2fca718a57e75ae943501ba6c39e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd2fca718a57e75ae943501ba6c39e9">&#9670;&nbsp;</a></span>map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmap__t.html">map_t</a>* amcl::AMCLLaser::map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a835da7db1c326bf22bdfac480f757586" name="a835da7db1c326bf22bdfac480f757586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835da7db1c326bf22bdfac480f757586">&#9670;&nbsp;</a></span>max_beams</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amcl::AMCLLaser::max_beams</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd97aabb72e32f8b8f14c496168c2ecd" name="acd97aabb72e32f8b8f14c496168c2ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd97aabb72e32f8b8f14c496168c2ecd">&#9670;&nbsp;</a></span>max_obs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amcl::AMCLLaser::max_obs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad00b22f35fbdcb2d4ea9574d0acdcbd1" name="ad00b22f35fbdcb2d4ea9574d0acdcbd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00b22f35fbdcb2d4ea9574d0acdcbd1">&#9670;&nbsp;</a></span>max_samples</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int amcl::AMCLLaser::max_samples</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8e5528c2b2eca4cd49fb8caebe4efeb" name="ab8e5528c2b2eca4cd49fb8caebe4efeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8e5528c2b2eca4cd49fb8caebe4efeb">&#9670;&nbsp;</a></span>model_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceamcl.html#a69e6e5bb29ff703c50bfc787216e5d9c">laser_model_t</a> amcl::AMCLLaser::model_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71b2ea74d6bf3aaed5d259874298ad72" name="a71b2ea74d6bf3aaed5d259874298ad72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b2ea74d6bf3aaed5d259874298ad72">&#9670;&nbsp;</a></span>sigma_hit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::sigma_hit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ab6c8f338eea17b16557fd577e20719" name="a2ab6c8f338eea17b16557fd577e20719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab6c8f338eea17b16557fd577e20719">&#9670;&nbsp;</a></span>temp_obs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double** amcl::AMCLLaser::temp_obs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf6949cb5201e9416de6a8da5bd392be" name="abf6949cb5201e9416de6a8da5bd392be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6949cb5201e9416de6a8da5bd392be">&#9670;&nbsp;</a></span>time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b6f6c0f2f7bdd2f6ef90de6bd95c635" name="a4b6f6c0f2f7bdd2f6ef90de6bd95c635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6f6c0f2f7bdd2f6ef90de6bd95c635">&#9670;&nbsp;</a></span>z_hit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::z_hit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d238fa084dd954c6416a5b522d7c476" name="a8d238fa084dd954c6416a5b522d7c476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d238fa084dd954c6416a5b522d7c476">&#9670;&nbsp;</a></span>z_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::z_max</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a224ab025360c5d70d2fafff73e4fca3f" name="a224ab025360c5d70d2fafff73e4fca3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a224ab025360c5d70d2fafff73e4fca3f">&#9670;&nbsp;</a></span>z_rand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::z_rand</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb158fe1146ff61768e56c816d9b9a65" name="aeb158fe1146ff61768e56c816d9b9a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb158fe1146ff61768e56c816d9b9a65">&#9670;&nbsp;</a></span>z_short</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double amcl::AMCLLaser::z_short</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>amcl/include/amcl/sensors/<a class="el" href="amcl__laser_8h_source.html">amcl_laser.h</a></li>
+<li>amcl/src/amcl/sensors/<a class="el" href="amcl__laser_8cpp.html">amcl_laser.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

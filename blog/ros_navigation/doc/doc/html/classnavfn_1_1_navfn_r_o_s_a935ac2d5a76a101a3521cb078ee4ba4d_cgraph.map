@@ -1,0 +1,7 @@
+<map id="navfn::NavfnROS::initialize" name="navfn::NavfnROS::initialize">
+<area shape="rect" id="node1" title="avFnROS 对象的初始化函数" alt="" coords="5,78,184,105"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="243,5,412,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="243,71,412,112"/>
+<area shape="rect" id="node4" href="$classnavfn_1_1_navfn_r_o_s.html#a81643ac812bc02a5652f691c30834c27" title=" " alt="" coords="232,136,423,177"/>
+<area shape="rect" id="node5" href="$classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9" title="根据目标位姿计算全局路径" alt="" coords="471,143,661,170"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="navfn::NavfnROS::getPointPotential" name="navfn::NavfnROS::getPointPotential">
+<area shape="rect" id="node1" title="获得 potential 或者 导航的代价 (注意: 要先调用 computePotential)" alt="" coords="244,27,424,69"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_navfn_r_o_s.html#a1925183250dd36115daadd91b14656aa" title="根据目标位姿计算全局路径" alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_navfn_r_o_s.html#a2df71f9e257d604ba8cf630848eb3529" title="检查potential值是否有效 (注意: 要先调用 computePotential)" alt="" coords="6,57,195,98"/>
+</map>

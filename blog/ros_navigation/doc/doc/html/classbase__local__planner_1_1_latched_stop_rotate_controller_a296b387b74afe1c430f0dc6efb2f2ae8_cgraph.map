@@ -1,0 +1,10 @@
+<map id="base_local_planner::LatchedStopRotateController::isGoalReached" name="base_local_planner::LatchedStopRotateController::isGoalReached">
+<area shape="rect" id="node1" title=" " alt="" coords="5,192,201,248"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="298,5,431,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="298,85,431,141"/>
+<area shape="rect" id="node5" href="$namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="249,166,480,207"/>
+<area shape="rect" id="node6" href="$namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="278,231,451,273"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="291,297,438,353"/>
+<area shape="rect" id="node8" href="$namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="298,378,431,419"/>
+<area shape="rect" id="node4" href="$namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="528,93,661,134"/>
+</map>

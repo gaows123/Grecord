@@ -1,0 +1,7 @@
+<map id="base_local_planner::MapGrid::updatePathCell" name="base_local_planner::MapGrid::updatePathCell">
+<area shape="rect" id="node1" title="Used to update the distance of a cell in path distance computation" alt="" coords="5,71,180,112"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="247,5,380,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="229,71,398,112"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="228,136,399,177"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="447,71,616,112"/>
+</map>

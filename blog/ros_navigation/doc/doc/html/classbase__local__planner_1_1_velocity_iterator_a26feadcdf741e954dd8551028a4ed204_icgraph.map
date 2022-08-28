@@ -1,0 +1,5 @@
+<map id="base_local_planner::VelocityIterator::isFinished" name="base_local_planner::VelocityIterator::isFinished">
+<area shape="rect" id="node1" title=" " alt="" coords="239,43,372,99"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_simple_trajectory_generator.html#a56881a7d1e6cf7027eb2243a764dc0fa" title="这里重载了initialise，跟上一个initialise相比，少了输入参数additional_samples" alt="" coords="5,5,191,61"/>
+<area shape="rect" id="node3" href="$namespacebase__local__planner.html#ae3f9c95f5bf8b692b9ebd44acfd3263f" title=" " alt="" coords="31,86,165,127"/>
+</map>

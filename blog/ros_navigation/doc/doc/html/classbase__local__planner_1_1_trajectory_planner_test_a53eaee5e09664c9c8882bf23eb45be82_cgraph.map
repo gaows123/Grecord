@@ -1,0 +1,11 @@
+<map id="base_local_planner::TrajectoryPlannerTest::checkPathDistance" name="base_local_planner::TrajectoryPlannerTest::checkPathDistance">
+<area shape="rect" id="node1" title=" " alt="" coords="5,101,164,157"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="212,73,437,115"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11" title="reset path distance fields for all cells" alt="" coords="241,140,408,181"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="487,71,662,112"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="731,5,864,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="713,71,882,112"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="712,136,883,177"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="931,71,1100,112"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="485,137,664,193"/>
+</map>

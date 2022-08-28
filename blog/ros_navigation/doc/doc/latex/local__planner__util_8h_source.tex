@@ -1,0 +1,110 @@
+\hypertarget{local__planner__util_8h_source}{}\doxysection{local\+\_\+planner\+\_\+util.\+h}
+\label{local__planner__util_8h_source}\index{base\_local\_planner/include/base\_local\_planner/local\_planner\_util.h@{base\_local\_planner/include/base\_local\_planner/local\_planner\_util.h}}
+\mbox{\hyperlink{local__planner__util_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef ABSTRACT\_LOCAL\_PLANNER\_ODOM\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define ABSTRACT\_LOCAL\_PLANNER\_ODOM\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{base__local__planner_8h}{nav\_core/base\_local\_planner.h}}>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <tf2\_ros/buffer.h>}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{local__planner__limits_8h}{base\_local\_planner/local\_planner\_limits.h}}>}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{57 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{LocalPlannerUtil}} \{}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{keyword}{private}:}
+\DoxyCodeLine{60   \textcolor{comment}{// things we get from move\_base}}
+\DoxyCodeLine{61   std::string \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a3f5ac7c944ef593b3dbfc16fa086fd99}{name\_}};}
+\DoxyCodeLine{62   std::string \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a9a90d33ba8cb74115d0fe7c10e8b43aa}{global\_frame\_}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a7ba7a900fb226af8a1f4692a84b03754}{costmap\_}};}
+\DoxyCodeLine{65   tf2\_ros::Buffer* \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a68722f79013d0b0f84cefa1eaeef560a}{tf\_}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   std::vector<geometry\_msgs::PoseStamped> \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ac4e6de10f12cb8a00f38e82de02db4ea}{global\_plan\_}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71   boost::mutex \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a6125321f7ff074d6261cb34d94797265}{limits\_configuration\_mutex\_}};}
+\DoxyCodeLine{72   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ad4a59530d806c5e6f0adf35b843ce16a}{setup\_}};}
+\DoxyCodeLine{73   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{LocalPlannerLimits}} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_af033b08607865ddfc1126f8204011a65}{default\_limits\_}};}
+\DoxyCodeLine{74   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{LocalPlannerLimits}} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_aceaa38407121d1e78969013b2686a236}{limits\_}};}
+\DoxyCodeLine{75   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a908bf32f9021d95ede64145a657f5603}{initialized\_}};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{public}:}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{82   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a84581c07b821dbdb93f78a6def7f8850}{reconfigureCB}}(\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{LocalPlannerLimits}} \&config, \textcolor{keywordtype}{bool} restore\_defaults);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a2dcf1b1b2e55e587f65d289ce3ebdc9a}{LocalPlannerUtil}}() : \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a908bf32f9021d95ede64145a657f5603}{initialized\_}}(false) \{\}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ac34e4f518922c568863f53006d5cfcca}{\string~LocalPlannerUtil}}() \{}
+\DoxyCodeLine{87   \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_aef146076f0095773cb6e89827ff06b4b}{initialize}}(tf2\_ros::Buffer* tf,}
+\DoxyCodeLine{90       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap,}
+\DoxyCodeLine{91       std::string global\_frame);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a40a75811cc424cb2f4e205a0ec18cb41}{getGoal}}(geometry\_msgs::PoseStamped\& goal\_pose);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_af0eb515ddb49387ac87153ed4401a248}{setPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& orig\_global\_plan);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_adb22b6981dc80e9159298c8f3dc738eb}{getLocalPlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& global\_pose, std::vector<geometry\_msgs::PoseStamped>\& transformed\_plan);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_aba7095b7858de54294341d4a916c2555}{getCostmap}}();}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{LocalPlannerLimits}} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ab872bb31110cc8cf9d1fa7f5b339c6fd}{getCurrentLimits}}();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103   std::string \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ac3e2070b5a7adcc1ba141d41d3f6865c}{getGlobalFrame}}()\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a9a90d33ba8cb74115d0fe7c10e8b43aa}{global\_frame\_}}; \}}
+\DoxyCodeLine{104 \};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ABSTRACT\_LOCAL\_PLANNER\_ODOM\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

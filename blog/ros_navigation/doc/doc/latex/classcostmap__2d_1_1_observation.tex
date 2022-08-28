@@ -1,0 +1,157 @@
+\hypertarget{classcostmap__2d_1_1_observation}{}\doxysection{costmap\+\_\+2d\+::Observation类 参考}
+\label{classcostmap__2d_1_1_observation}\index{costmap\_2d::Observation@{costmap\_2d::Observation}}
+
+
+Stores an observation in terms of a point cloud and the origin of the source  
+
+
+
+
+{\ttfamily \#include $<$observation.\+h$>$}
+
+
+
+costmap\+\_\+2d\+::Observation 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classcostmap__2d_1_1_observation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_observation_ab3b54bbb4ea6f16e3b51565990a2dc6b}{Observation}} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty observation \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcostmap__2d_1_1_observation_a883a07a854be2d0c42e9e0dee4b8b141}{$\sim$\+Observation}} ()
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_observation_a5e401bcb67757893cef8dc990914c053}{Observation}} (geometry\+\_\+msgs\+::\+Point \&origin, const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&cloud, double obstacle\+\_\+range, double raytrace\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Creates an observation from an origin point and a point cloud \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_observation_ab2d183c4dbf581b5cd17d413b4a0bd15}{Observation}} (const \mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}} \&obs)
+\begin{DoxyCompactList}\small\item\em Copy constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_observation_a7b575e70158fec46b4ed125e3dd5231a}{Observation}} (const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&cloud, double obstacle\+\_\+range)
+\begin{DoxyCompactList}\small\item\em Creates an observation from a point cloud \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+geometry\+\_\+msgs\+::\+Point \mbox{\hyperlink{classcostmap__2d_1_1_observation_a8095d100ad18cc1c7864c69c82be4c08}{origin\+\_\+}}
+\item 
+sensor\+\_\+msgs\+::\+Point\+Cloud2 $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}{cloud\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}{obstacle\+\_\+range\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}{raytrace\+\_\+range\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Stores an observation in terms of a point cloud and the origin of the source 
+
+\begin{DoxyNote}{注解}
+Tried to make members and constructor arguments const but the compiler would not accept the default assignment operator for vector insertion! 
+\end{DoxyNote}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_ab3b54bbb4ea6f16e3b51565990a2dc6b}\label{classcostmap__2d_1_1_observation_ab3b54bbb4ea6f16e3b51565990a2dc6b}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!Observation@{Observation}}
+\index{Observation@{Observation}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{Observation()}{Observation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Observation\+::\+Observation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an empty observation 
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_a883a07a854be2d0c42e9e0dee4b8b141}\label{classcostmap__2d_1_1_observation_a883a07a854be2d0c42e9e0dee4b8b141}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!````~Observation@{$\sim$Observation}}
+\index{````~Observation@{$\sim$Observation}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{$\sim$Observation()}{~Observation()}}
+{\footnotesize\ttfamily virtual costmap\+\_\+2d\+::\+Observation\+::$\sim$\+Observation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_a5e401bcb67757893cef8dc990914c053}\label{classcostmap__2d_1_1_observation_a5e401bcb67757893cef8dc990914c053}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!Observation@{Observation}}
+\index{Observation@{Observation}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{Observation()}{Observation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Observation\+::\+Observation (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Point \&}]{origin,  }\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&}]{cloud,  }\item[{double}]{obstacle\+\_\+range,  }\item[{double}]{raytrace\+\_\+range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an observation from an origin point and a point cloud 
+
+
+\begin{DoxyParams}{参数}
+{\em origin} & The origin point of the observation \\
+\hline
+{\em cloud} & The point cloud of the observation \\
+\hline
+{\em obstacle\+\_\+range} & The range out to which an observation should be able to insert obstacles \\
+\hline
+{\em raytrace\+\_\+range} & The range out to which an observation should be able to clear via raytracing \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_ab2d183c4dbf581b5cd17d413b4a0bd15}\label{classcostmap__2d_1_1_observation_ab2d183c4dbf581b5cd17d413b4a0bd15}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!Observation@{Observation}}
+\index{Observation@{Observation}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{Observation()}{Observation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Observation\+::\+Observation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_observation}{Observation}} \&}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor 
+
+
+\begin{DoxyParams}{参数}
+{\em obs} & The observation to copy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_a7b575e70158fec46b4ed125e3dd5231a}\label{classcostmap__2d_1_1_observation_a7b575e70158fec46b4ed125e3dd5231a}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!Observation@{Observation}}
+\index{Observation@{Observation}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{Observation()}{Observation()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Observation\+::\+Observation (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud2 \&}]{cloud,  }\item[{double}]{obstacle\+\_\+range }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an observation from a point cloud 
+
+
+\begin{DoxyParams}{参数}
+{\em cloud} & The point cloud of the observation \\
+\hline
+{\em obstacle\+\_\+range} & The range out to which an observation should be able to insert obstacles \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}\label{classcostmap__2d_1_1_observation_ab8c978e705ccda394fb3a1f55e86ac62}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!cloud\_@{cloud\_}}
+\index{cloud\_@{cloud\_}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{cloud\_}{cloud\_}}
+{\footnotesize\ttfamily sensor\+\_\+msgs\+::\+Point\+Cloud2$\ast$ costmap\+\_\+2d\+::\+Observation\+::cloud\+\_\+}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}\label{classcostmap__2d_1_1_observation_a0b437e4f5adbe6bf77c31e2c450ef6b9}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!obstacle\_range\_@{obstacle\_range\_}}
+\index{obstacle\_range\_@{obstacle\_range\_}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{obstacle\_range\_}{obstacle\_range\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Observation\+::obstacle\+\_\+range\+\_\+}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_a8095d100ad18cc1c7864c69c82be4c08}\label{classcostmap__2d_1_1_observation_a8095d100ad18cc1c7864c69c82be4c08}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!origin\_@{origin\_}}
+\index{origin\_@{origin\_}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{origin\_}{origin\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Point costmap\+\_\+2d\+::\+Observation\+::origin\+\_\+}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}\label{classcostmap__2d_1_1_observation_a294ab9f395c665c81502d3f04b997d75}} 
+\index{costmap\_2d::Observation@{costmap\_2d::Observation}!raytrace\_range\_@{raytrace\_range\_}}
+\index{raytrace\_range\_@{raytrace\_range\_}!costmap\_2d::Observation@{costmap\_2d::Observation}}
+\doxysubsubsection{\texorpdfstring{raytrace\_range\_}{raytrace\_range\_}}
+{\footnotesize\ttfamily double costmap\+\_\+2d\+::\+Observation\+::raytrace\+\_\+range\+\_\+}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{observation_8h}{observation.\+h}}\end{DoxyCompactItemize}

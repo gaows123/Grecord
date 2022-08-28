@@ -1,0 +1,8 @@
+<map id="costmap_2d::VoxelLayer::reset" name="costmap_2d::VoxelLayer::reset">
+<area shape="rect" id="node1" title=" " alt="" coords="5,100,172,141"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a96d2b1af3b09d35e02e6d2fc8366195f" title="Restart publishers if they&#39;ve been stopped." alt="" coords="220,5,405,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_obstacle_layer.html#a4b5054749c568e2df8180c2a7c0e6177" title="Stop publishers." alt="" coords="220,71,405,112"/>
+<area shape="rect" id="node4" href="$classvoxel__grid_1_1_voxel_grid.html#aab30ed5d435c878574d0769186d196ac" title=" " alt="" coords="465,129,611,171"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_voxel_layer.html#a56c9a252631b5d4af75c1d17eac8e052" title="Resets the costmap and static_map to be unknown space" alt="" coords="229,188,396,229"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="453,195,623,236"/>
+</map>

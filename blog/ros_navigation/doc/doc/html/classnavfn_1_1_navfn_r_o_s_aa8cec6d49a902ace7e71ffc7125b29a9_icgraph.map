@@ -1,0 +1,8 @@
+<map id="navfn::NavfnROS::makePlan" name="navfn::NavfnROS::makePlan">
+<area shape="rect" id="node1" title="根据目标位姿计算全局路径" alt="" coords="471,78,661,105"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_navfn_with_costmap.html#aa8e245ce4b1e4d9a6d4616107f993d6f" title=" " alt="" coords="240,5,415,47"/>
+<area shape="rect" id="node4" href="$classnavfn_1_1_navfn_r_o_s.html#a81643ac812bc02a5652f691c30834c27" title=" " alt="" coords="232,136,423,177"/>
+<area shape="rect" id="node6" href="$classnavfn_1_1_navfn_with_costmap.html#a793a74f16803f58b9293d13e87a3537e" title=" " alt="" coords="240,71,415,112"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_navfn_with_costmap.html#aba48f2e70ebe9c84bd9b3de9ce1c3e33" title=" " alt="" coords="7,39,182,80"/>
+<area shape="rect" id="node5" href="$classnavfn_1_1_navfn_r_o_s.html#a935ac2d5a76a101a3521cb078ee4ba4d" title="avFnROS 对象的初始化函数" alt="" coords="5,143,184,170"/>
+</map>

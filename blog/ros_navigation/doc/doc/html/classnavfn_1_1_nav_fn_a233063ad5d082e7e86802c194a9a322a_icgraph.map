@@ -1,0 +1,8 @@
+<map id="navfn::NavFn::setupNavFn" name="navfn::NavFn::setupNavFn">
+<area shape="rect" id="node1" title=" " alt="" coords="372,81,551,108"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="116,5,317,32"/>
+<area shape="rect" id="node3" href="$classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,107,324,133"/>
+<area shape="rect" id="node4" href="$navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,56,59,83"/>
+<area shape="rect" id="node6" href="$namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="138,158,295,199"/>
+<area shape="rect" id="node5" href="$path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,107,61,133"/>
+</map>

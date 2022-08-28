@@ -1,0 +1,8 @@
+<map id="base_local_planner::PointGrid::sq_distance" name="base_local_planner::PointGrid::sq_distance">
+<area shape="rect" id="node1" title="Compute the squared distance between two points" alt="" coords="968,35,1131,76"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="732,5,920,47"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="497,27,684,83"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_point_grid.html#a5276643487b1ab03a4a9602b3f338ba8" title="Insert a point into the point grid" alt="" coords="316,35,449,76"/>
+<area shape="rect" id="node5" href="$point__grid__node_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,42,56,69"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_point_grid.html#adb8a9a0665445fe274510a86dd0e8277" title="插入传感器观察值到point grid" alt="" coords="104,64,268,105"/>
+</map>

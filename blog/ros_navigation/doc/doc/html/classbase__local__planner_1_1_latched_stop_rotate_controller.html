@@ -1,0 +1,647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::LatchedStopRotateController类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html">LatchedStopRotateController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_latched_stop_rotate_controller-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::LatchedStopRotateController类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="latched__stop__rotate__controller_8h_source.html">latched_stop_rotate_controller.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a217e37ce23f57c28f157d2287d9ad02a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a217e37ce23f57c28f157d2287d9ad02a">LatchedStopRotateController</a> (const std::string &amp;name=&quot;&quot;)</td></tr>
+<tr class="separator:a217e37ce23f57c28f157d2287d9ad02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a816ca2255215d346a5ea56e91edad"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a11a816ca2255215d346a5ea56e91edad">~LatchedStopRotateController</a> ()</td></tr>
+<tr class="separator:a11a816ca2255215d346a5ea56e91edad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22892ae258fb69ab1cbb78b3e076fba3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a22892ae258fb69ab1cbb78b3e076fba3">isPositionReached</a> (<a class="el" href="classbase__local__planner_1_1_local_planner_util.html">LocalPlannerUtil</a> *planner_util, const geometry_msgs::PoseStamped &amp;global_pose)</td></tr>
+<tr class="separator:a22892ae258fb69ab1cbb78b3e076fba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296b387b74afe1c430f0dc6efb2f2ae8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a296b387b74afe1c430f0dc6efb2f2ae8">isGoalReached</a> (<a class="el" href="classbase__local__planner_1_1_local_planner_util.html">LocalPlannerUtil</a> *planner_util, <a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">OdometryHelperRos</a> &amp;odom_helper, const geometry_msgs::PoseStamped &amp;global_pose)</td></tr>
+<tr class="separator:a296b387b74afe1c430f0dc6efb2f2ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b08514bca9dfc212b770a071f85b3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#af3b08514bca9dfc212b770a071f85b3b">resetLatching</a> ()</td></tr>
+<tr class="separator:af3b08514bca9dfc212b770a071f85b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae204da0df3c727a7f655e7c12a7dae75"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#ae204da0df3c727a7f655e7c12a7dae75">stopWithAccLimits</a> (const geometry_msgs::PoseStamped &amp;global_pose, const geometry_msgs::PoseStamped &amp;robot_vel, geometry_msgs::Twist &amp;cmd_vel, Eigen::Vector3f acc_lim, double sim_period, boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt; obstacle_check)</td></tr>
+<tr class="memdesc:ae204da0df3c727a7f655e7c12a7dae75"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止机器人同时考虑加速度的限制  <a href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#ae204da0df3c727a7f655e7c12a7dae75">更多...</a><br /></td></tr>
+<tr class="separator:ae204da0df3c727a7f655e7c12a7dae75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1784c0f8eb383822d41d0905cb6bda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a3f1784c0f8eb383822d41d0905cb6bda">rotateToGoal</a> (const geometry_msgs::PoseStamped &amp;global_pose, const geometry_msgs::PoseStamped &amp;robot_vel, double goal_th, geometry_msgs::Twist &amp;cmd_vel, Eigen::Vector3f acc_lim, double sim_period, <a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a> &amp;limits, boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt; obstacle_check)</td></tr>
+<tr class="memdesc:a3f1784c0f8eb383822d41d0905cb6bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐  <a href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a3f1784c0f8eb383822d41d0905cb6bda">更多...</a><br /></td></tr>
+<tr class="separator:a3f1784c0f8eb383822d41d0905cb6bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd9394ca5cabf2a35526dcb193e36be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a5bd9394ca5cabf2a35526dcb193e36be">computeVelocityCommandsStopRotate</a> (geometry_msgs::Twist &amp;cmd_vel, Eigen::Vector3f acc_lim, double sim_period, <a class="el" href="classbase__local__planner_1_1_local_planner_util.html">LocalPlannerUtil</a> *planner_util, <a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">OdometryHelperRos</a> &amp;odom_helper, const geometry_msgs::PoseStamped &amp;global_pose, boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt; obstacle_check)</td></tr>
+<tr class="separator:a5bd9394ca5cabf2a35526dcb193e36be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a8648f8df161c70441a60ec202a137b18"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a8648f8df161c70441a60ec202a137b18">sign</a> (double x)</td></tr>
+<tr class="separator:a8648f8df161c70441a60ec202a137b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:adfd4e505101739501cf59d1a7129ced4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#adfd4e505101739501cf59d1a7129ced4">latch_xy_goal_tolerance_</a></td></tr>
+<tr class="separator:adfd4e505101739501cf59d1a7129ced4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a965f0ef85f1103ad80b6bbfc0f2b1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a7a965f0ef85f1103ad80b6bbfc0f2b1b">xy_tolerance_latch_</a></td></tr>
+<tr class="separator:a7a965f0ef85f1103ad80b6bbfc0f2b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb20eb5fc414868654de760ad6666412"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#afb20eb5fc414868654de760ad6666412">rotating_to_goal_</a></td></tr>
+<tr class="separator:afb20eb5fc414868654de760ad6666412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a217e37ce23f57c28f157d2287d9ad02a" name="a217e37ce23f57c28f157d2287d9ad02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217e37ce23f57c28f157d2287d9ad02a">&#9670;&nbsp;</a></span>LatchedStopRotateController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::LatchedStopRotateController::LatchedStopRotateController </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11a816ca2255215d346a5ea56e91edad" name="a11a816ca2255215d346a5ea56e91edad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a816ca2255215d346a5ea56e91edad">&#9670;&nbsp;</a></span>~LatchedStopRotateController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::LatchedStopRotateController::~LatchedStopRotateController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a5bd9394ca5cabf2a35526dcb193e36be" name="a5bd9394ca5cabf2a35526dcb193e36be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bd9394ca5cabf2a35526dcb193e36be">&#9670;&nbsp;</a></span>computeVelocityCommandsStopRotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::computeVelocityCommandsStopRotate </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>acc_lim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_local_planner_util.html">LocalPlannerUtil</a> *&#160;</td>
+          <td class="paramname"><em>planner_util</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">OdometryHelperRos</a> &amp;&#160;</td>
+          <td class="paramname"><em>odom_helper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt;&#160;</td>
+          <td class="paramname"><em>obstacle_check</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_cgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_cgraph">
+<area shape="rect" title=" " alt="" coords="5,272,264,328"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="361,5,494,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="361,85,494,141"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="312,166,543,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="354,232,501,288"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ab70a70a7a3f3d8e6788e6e1f0503a717" title=" " alt="" coords="354,312,501,368"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a3f1784c0f8eb383822d41d0905cb6bda" title="Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐" alt="" coords="329,392,525,448"/>
+<area shape="rect" href="namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="361,473,494,514"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#ae204da0df3c727a7f655e7c12a7dae75" title="停止机器人同时考虑加速度的限制" alt="" coords="329,539,525,595"/>
+<area shape="rect" href="namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="638,93,771,134"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a8648f8df161c70441a60ec202a137b18" title=" " alt="" coords="591,546,819,587"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_icgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a5bd9394ca5cabf2a35526dcb193e36be_icgraph">
+<area shape="rect" title=" " alt="" coords="283,5,541,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a296b387b74afe1c430f0dc6efb2f2ae8" name="a296b387b74afe1c430f0dc6efb2f2ae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296b387b74afe1c430f0dc6efb2f2ae8">&#9670;&nbsp;</a></span>isGoalReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::isGoalReached </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_local_planner_util.html">LocalPlannerUtil</a> *&#160;</td>
+          <td class="paramname"><em>planner_util</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">OdometryHelperRos</a> &amp;&#160;</td>
+          <td class="paramname"><em>odom_helper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >returns true if we have passed the goal position and have reached goal orientation. Meaning we might have overshot on the position beyond tolerance, yet still return true. </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_cgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,192,201,248"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="298,5,431,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="298,85,431,141"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="249,166,480,207"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="278,231,451,273"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="291,297,438,353"/>
+<area shape="rect" href="namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="298,378,431,419"/>
+<area shape="rect" href="namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="528,93,661,134"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_icgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a296b387b74afe1c430f0dc6efb2f2ae8_icgraph">
+<area shape="rect" title=" " alt="" coords="273,5,469,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941" title="是否到达目标点" alt="" coords="5,13,225,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a22892ae258fb69ab1cbb78b3e076fba3" name="a22892ae258fb69ab1cbb78b3e076fba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22892ae258fb69ab1cbb78b3e076fba3">&#9670;&nbsp;</a></span>isPositionReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::isPositionReached </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_local_planner_util.html">LocalPlannerUtil</a> *&#160;</td>
+          <td class="paramname"><em>planner_util</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >returns true if we have passed the goal position. Meaning we might have overshot on the position beyond tolerance, yet still return true. Also goal orientation might not yet be true </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_cgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,85,201,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="269,5,403,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="269,85,403,141"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="249,166,423,207"/>
+<area shape="rect" href="namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="471,93,604,134"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_icgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a22892ae258fb69ab1cbb78b3e076fba3_icgraph">
+<area shape="rect" title=" " alt="" coords="283,5,479,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3b08514bca9dfc212b770a071f85b3b" name="af3b08514bca9dfc212b770a071f85b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b08514bca9dfc212b770a071f85b3b">&#9670;&nbsp;</a></span>resetLatching()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::LatchedStopRotateController::resetLatching </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b_icgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_af3b08514bca9dfc212b770a071f85b3b_icgraph">
+<area shape="rect" title=" " alt="" coords="229,5,425,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a0cfcf517c3112678a7eabeb498d9b2ce" title="更新全局路径" alt="" coords="5,13,181,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f1784c0f8eb383822d41d0905cb6bda" name="a3f1784c0f8eb383822d41d0905cb6bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f1784c0f8eb383822d41d0905cb6bda">&#9670;&nbsp;</a></span>rotateToGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::rotateToGoal </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>robot_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>goal_th</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>acc_lim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a> &amp;&#160;</td>
+          <td class="paramname"><em>limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt;&#160;</td>
+          <td class="paramname"><em>obstacle_check</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>机器人位置 </td></tr>
+    <tr><td class="paramname">robot_vel</td><td>机器人速度 </td></tr>
+    <tr><td class="paramname">goal_th</td><td>期望的朝向角度 </td></tr>
+    <tr><td class="paramname">cmd_vel</td><td>下发速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True : 找到有效路径 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda_icgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a3f1784c0f8eb383822d41d0905cb6bda_icgraph">
+<area shape="rect" title="Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐" alt="" coords="589,5,785,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a5bd9394ca5cabf2a35526dcb193e36be" title=" " alt="" coords="283,5,541,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8648f8df161c70441a60ec202a137b18" name="a8648f8df161c70441a60ec202a137b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8648f8df161c70441a60ec202a137b18">&#9670;&nbsp;</a></span>sign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::LatchedStopRotateController::sign </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18_icgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_a8648f8df161c70441a60ec202a137b18_icgraph">
+<area shape="rect" title=" " alt="" coords="833,13,1061,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#ae204da0df3c727a7f655e7c12a7dae75" title="停止机器人同时考虑加速度的限制" alt="" coords="589,5,785,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a5bd9394ca5cabf2a35526dcb193e36be" title=" " alt="" coords="283,5,541,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae204da0df3c727a7f655e7c12a7dae75" name="ae204da0df3c727a7f655e7c12a7dae75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae204da0df3c727a7f655e7c12a7dae75">&#9670;&nbsp;</a></span>stopWithAccLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::stopWithAccLimits </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>robot_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>acc_lim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::function&lt; bool(Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f vel_samples)&gt;&#160;</td>
+          <td class="paramname"><em>obstacle_check</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止机器人同时考虑加速度的限制 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">global_pose</td><td>机器人位姿 </td></tr>
+    <tr><td class="paramname">robot_vel</td><td>机器人速度 </td></tr>
+    <tr><td class="paramname">cmd_vel</td><td>下发速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True : 找到有效路径 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_cgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_cgraph">
+<area shape="rect" title="停止机器人同时考虑加速度的限制" alt="" coords="5,5,201,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a8648f8df161c70441a60ec202a137b18" title=" " alt="" coords="249,13,477,54"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_icgraph" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_ae204da0df3c727a7f655e7c12a7dae75_icgraph">
+<area shape="rect" title="停止机器人同时考虑加速度的限制" alt="" coords="589,5,785,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a5bd9394ca5cabf2a35526dcb193e36be" title=" " alt="" coords="283,5,541,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="adfd4e505101739501cf59d1a7129ced4" name="adfd4e505101739501cf59d1a7129ced4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfd4e505101739501cf59d1a7129ced4">&#9670;&nbsp;</a></span>latch_xy_goal_tolerance_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::latch_xy_goal_tolerance_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb20eb5fc414868654de760ad6666412" name="afb20eb5fc414868654de760ad6666412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb20eb5fc414868654de760ad6666412">&#9670;&nbsp;</a></span>rotating_to_goal_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::rotating_to_goal_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a965f0ef85f1103ad80b6bbfc0f2b1b" name="a7a965f0ef85f1103ad80b6bbfc0f2b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a965f0ef85f1103ad80b6bbfc0f2b1b">&#9670;&nbsp;</a></span>xy_tolerance_latch_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::LatchedStopRotateController::xy_tolerance_latch_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="latched__stop__rotate__controller_8h_source.html">latched_stop_rotate_controller.h</a></li>
+<li>base_local_planner/src/<a class="el" href="latched__stop__rotate__controller_8cpp.html">latched_stop_rotate_controller.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

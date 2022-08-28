@@ -1,0 +1,107 @@
+\hypertarget{struct__pf__sample__set__t}{}\doxysection{\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t结构体 参考}
+\label{struct__pf__sample__set__t}\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+
+
+{\ttfamily \#include $<$pf.\+h$>$}
+
+
+
+\+\_\+pf\+\_\+sample\+\_\+set\+\_\+t 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct__pf__sample__set__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct__pf__sample__set__t_a3675a8bce5f799f6c394c95a5ca68af5}{sample\+\_\+count}}
+\item 
+\mbox{\hyperlink{structpf__sample__t}{pf\+\_\+sample\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__pf__sample__set__t_ad70713ed63fc4d5619197f06017f246a}{samples}}
+\item 
+\mbox{\hyperlink{structpf__kdtree__t}{pf\+\_\+kdtree\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__pf__sample__set__t_a4a220e98a56568d37d0be50ee5ad30c9}{kdtree}}
+\item 
+int \mbox{\hyperlink{struct__pf__sample__set__t_a0a6cc28513a0f672bb76655d651dd54a}{cluster\+\_\+count}}
+\item 
+int \mbox{\hyperlink{struct__pf__sample__set__t_a2694043163f3283670e2b0b20062a7b5}{cluster\+\_\+max\+\_\+count}}
+\item 
+\mbox{\hyperlink{structpf__cluster__t}{pf\+\_\+cluster\+\_\+t}} $\ast$ \mbox{\hyperlink{struct__pf__sample__set__t_ab4f4541da504ceab98942599c3157c78}{clusters}}
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{struct__pf__sample__set__t_a610c806c7e94496351372ac870fcd45e}{mean}}
+\item 
+\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} \mbox{\hyperlink{struct__pf__sample__set__t_ac900d759311cfad78aa89516e3d8e443}{cov}}
+\item 
+int \mbox{\hyperlink{struct__pf__sample__set__t_a93820b25bc66464f8a202b3c57520535}{converged}}
+\item 
+double \mbox{\hyperlink{struct__pf__sample__set__t_ae31b0b1175e6355530af7577b1c1afca}{n\+\_\+effective}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{struct__pf__sample__set__t_a0a6cc28513a0f672bb76655d651dd54a}\label{struct__pf__sample__set__t_a0a6cc28513a0f672bb76655d651dd54a}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!cluster\_count@{cluster\_count}}
+\index{cluster\_count@{cluster\_count}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{cluster\_count}{cluster\_count}}
+{\footnotesize\ttfamily int \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::cluster\+\_\+count}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_a2694043163f3283670e2b0b20062a7b5}\label{struct__pf__sample__set__t_a2694043163f3283670e2b0b20062a7b5}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!cluster\_max\_count@{cluster\_max\_count}}
+\index{cluster\_max\_count@{cluster\_max\_count}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{cluster\_max\_count}{cluster\_max\_count}}
+{\footnotesize\ttfamily int \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::cluster\+\_\+max\+\_\+count}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_ab4f4541da504ceab98942599c3157c78}\label{struct__pf__sample__set__t_ab4f4541da504ceab98942599c3157c78}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!clusters@{clusters}}
+\index{clusters@{clusters}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{clusters}{clusters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__cluster__t}{pf\+\_\+cluster\+\_\+t}}$\ast$ \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::clusters}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_a93820b25bc66464f8a202b3c57520535}\label{struct__pf__sample__set__t_a93820b25bc66464f8a202b3c57520535}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!converged@{converged}}
+\index{converged@{converged}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{converged}{converged}}
+{\footnotesize\ttfamily int \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::converged}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_ac900d759311cfad78aa89516e3d8e443}\label{struct__pf__sample__set__t_ac900d759311cfad78aa89516e3d8e443}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!cov@{cov}}
+\index{cov@{cov}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{cov}{cov}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::cov}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_a4a220e98a56568d37d0be50ee5ad30c9}\label{struct__pf__sample__set__t_a4a220e98a56568d37d0be50ee5ad30c9}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!kdtree@{kdtree}}
+\index{kdtree@{kdtree}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{kdtree}{kdtree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__kdtree__t}{pf\+\_\+kdtree\+\_\+t}}$\ast$ \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::kdtree}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_a610c806c7e94496351372ac870fcd45e}\label{struct__pf__sample__set__t_a610c806c7e94496351372ac870fcd45e}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!mean@{mean}}
+\index{mean@{mean}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{mean}{mean}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::mean}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_ae31b0b1175e6355530af7577b1c1afca}\label{struct__pf__sample__set__t_ae31b0b1175e6355530af7577b1c1afca}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!n\_effective@{n\_effective}}
+\index{n\_effective@{n\_effective}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{n\_effective}{n\_effective}}
+{\footnotesize\ttfamily double \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::n\+\_\+effective}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_a3675a8bce5f799f6c394c95a5ca68af5}\label{struct__pf__sample__set__t_a3675a8bce5f799f6c394c95a5ca68af5}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!sample\_count@{sample\_count}}
+\index{sample\_count@{sample\_count}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{sample\_count}{sample\_count}}
+{\footnotesize\ttfamily int \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::sample\+\_\+count}
+
+\mbox{\Hypertarget{struct__pf__sample__set__t_ad70713ed63fc4d5619197f06017f246a}\label{struct__pf__sample__set__t_ad70713ed63fc4d5619197f06017f246a}} 
+\index{\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}!samples@{samples}}
+\index{samples@{samples}!\_pf\_sample\_set\_t@{\_pf\_sample\_set\_t}}
+\doxysubsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__sample__t}{pf\+\_\+sample\+\_\+t}}$\ast$ \+\_\+pf\+\_\+sample\+\_\+set\+\_\+t\+::samples}
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+amcl/include/amcl/pf/\mbox{\hyperlink{pf_8h}{pf.\+h}}\end{DoxyCompactItemize}

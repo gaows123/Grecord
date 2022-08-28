@@ -1,0 +1,8 @@
+<map id="base_local_planner::PointGrid::removePointsInScanBoundry" name="base_local_planner::PointGrid::removePointsInScanBoundry">
+<area shape="rect" id="node1" title="Removes points from the grid that lie within a laser scan" alt="" coords="5,97,188,153"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#af222229f74f1bc4e14536548c316e755" title="返回位于特定范围内单元格中的点，有些点可能超过了特定的范围." alt="" coords="236,71,431,112"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_point_grid.html#a763e1d4207cc1ecbc670936074211155" title="Checks to see if a point is within a laser scan specification" alt="" coords="261,136,405,177"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="479,5,633,47"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="483,71,629,112"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_point_grid.html#ab3604c15e0eebb45dcaf4ae5403c5f7e" title="Check the orientation of a pt c with respect to the vector a&#45;&gt;b" alt="" coords="489,136,623,177"/>
+</map>

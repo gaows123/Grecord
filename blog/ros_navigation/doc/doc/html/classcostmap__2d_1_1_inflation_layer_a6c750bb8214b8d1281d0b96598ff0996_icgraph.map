@@ -1,0 +1,4 @@
+<map id="costmap_2d::InflationLayer::enqueue" name="costmap_2d::InflationLayer::enqueue">
+<area shape="rect" id="node1" title="Given an index of a cell in the costmap, place it into a list pending for obstacle inflation" alt="" coords="232,5,411,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_inflation_layer.html#a2d5d3eef9b0e8c91dfde79c0e40a65af" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="5,5,184,47"/>
+</map>

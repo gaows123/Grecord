@@ -1,0 +1,7 @@
+<map id="move_base::MoveBase::resetState" name="move_base::MoveBase::resetState">
+<area shape="rect" id="node1" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="625,24,784,66"/>
+<area shape="rect" id="node2" href="$classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,18,371,59"/>
+<area shape="rect" id="node4" href="$classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="419,24,577,66"/>
+<area shape="rect" id="node5" href="$classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="212,83,371,124"/>
+<area shape="rect" id="node3" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,51,164,92"/>
+</map>

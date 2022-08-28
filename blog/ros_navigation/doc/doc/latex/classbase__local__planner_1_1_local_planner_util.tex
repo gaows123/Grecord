@@ -1,0 +1,289 @@
+\hypertarget{classbase__local__planner_1_1_local_planner_util}{}\doxysection{base\+\_\+local\+\_\+planner\+::Local\+Planner\+Util类 参考}
+\label{classbase__local__planner_1_1_local_planner_util}\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+
+
+Helper class implementing infrastructure code many local planner implementations may need.  
+
+
+
+
+{\ttfamily \#include $<$local\+\_\+planner\+\_\+util.\+h$>$}
+
+
+
+base\+\_\+local\+\_\+planner\+::Local\+Planner\+Util 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a84581c07b821dbdb93f78a6def7f8850}{reconfigure\+CB}} (\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} \&config, bool restore\+\_\+defaults)
+\begin{DoxyCompactList}\small\item\em 更新局部规划器参数的回调函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a2dcf1b1b2e55e587f65d289ce3ebdc9a}{Local\+Planner\+Util}} ()
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ac34e4f518922c568863f53006d5cfcca}{$\sim$\+Local\+Planner\+Util}} ()
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_aef146076f0095773cb6e89827ff06b4b}{initialize}} (tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap, std\+::string global\+\_\+frame)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a40a75811cc424cb2f4e205a0ec18cb41}{get\+Goal}} (geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal\+\_\+pose)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_af0eb515ddb49387ac87153ed4401a248}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_adb22b6981dc80e9159298c8f3dc738eb}{get\+Local\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&transformed\+\_\+plan)
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_aba7095b7858de54294341d4a916c2555}{get\+Costmap}} ()
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ab872bb31110cc8cf9d1fa7f5b339c6fd}{get\+Current\+Limits}} ()
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ac3e2070b5a7adcc1ba141d41d3f6865c}{get\+Global\+Frame}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a3f5ac7c944ef593b3dbfc16fa086fd99}{name\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a9a90d33ba8cb74115d0fe7c10e8b43aa}{global\+\_\+frame\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a7ba7a900fb226af8a1f4692a84b03754}{costmap\+\_\+}}
+\item 
+tf2\+\_\+ros\+::\+Buffer $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a68722f79013d0b0f84cefa1eaeef560a}{tf\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ac4e6de10f12cb8a00f38e82de02db4ea}{global\+\_\+plan\+\_\+}}
+\item 
+boost\+::mutex \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a6125321f7ff074d6261cb34d94797265}{limits\+\_\+configuration\+\_\+mutex\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_ad4a59530d806c5e6f0adf35b843ce16a}{setup\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_af033b08607865ddfc1126f8204011a65}{default\+\_\+limits\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_aceaa38407121d1e78969013b2686a236}{limits\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util_a908bf32f9021d95ede64145a657f5603}{initialized\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Helper class implementing infrastructure code many local planner implementations may need. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a2dcf1b1b2e55e587f65d289ce3ebdc9a}\label{classbase__local__planner_1_1_local_planner_util_a2dcf1b1b2e55e587f65d289ce3ebdc9a}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!LocalPlannerUtil@{LocalPlannerUtil}}
+\index{LocalPlannerUtil@{LocalPlannerUtil}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{LocalPlannerUtil()}{LocalPlannerUtil()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::\+Local\+Planner\+Util (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_ac34e4f518922c568863f53006d5cfcca}\label{classbase__local__planner_1_1_local_planner_util_ac34e4f518922c568863f53006d5cfcca}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!````~LocalPlannerUtil@{$\sim$LocalPlannerUtil}}
+\index{````~LocalPlannerUtil@{$\sim$LocalPlannerUtil}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{$\sim$LocalPlannerUtil()}{~LocalPlannerUtil()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::$\sim$\+Local\+Planner\+Util (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_aba7095b7858de54294341d4a916c2555}\label{classbase__local__planner_1_1_local_planner_util_aba7095b7858de54294341d4a916c2555}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!getCostmap@{getCostmap}}
+\index{getCostmap@{getCostmap}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{getCostmap()}{getCostmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::get\+Costmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_aba7095b7858de54294341d4a916c2555_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_ab872bb31110cc8cf9d1fa7f5b339c6fd}\label{classbase__local__planner_1_1_local_planner_util_ab872bb31110cc8cf9d1fa7f5b339c6fd}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!getCurrentLimits@{getCurrentLimits}}
+\index{getCurrentLimits@{getCurrentLimits}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{getCurrentLimits()}{getCurrentLimits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::get\+Current\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_ab872bb31110cc8cf9d1fa7f5b339c6fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_ac3e2070b5a7adcc1ba141d41d3f6865c}\label{classbase__local__planner_1_1_local_planner_util_ac3e2070b5a7adcc1ba141d41d3f6865c}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!getGlobalFrame@{getGlobalFrame}}
+\index{getGlobalFrame@{getGlobalFrame}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{getGlobalFrame()}{getGlobalFrame()}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::get\+Global\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_ac3e2070b5a7adcc1ba141d41d3f6865c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a40a75811cc424cb2f4e205a0ec18cb41}\label{classbase__local__planner_1_1_local_planner_util_a40a75811cc424cb2f4e205a0ec18cb41}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!getGoal@{getGoal}}
+\index{getGoal@{getGoal}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{getGoal()}{getGoal()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::get\+Goal (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal\+\_\+pose }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classbase__local__planner_1_1_local_planner_util_a40a75811cc424cb2f4e205a0ec18cb41_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_a40a75811cc424cb2f4e205a0ec18cb41_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_adb22b6981dc80e9159298c8f3dc738eb}\label{classbase__local__planner_1_1_local_planner_util_adb22b6981dc80e9159298c8f3dc738eb}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!getLocalPlan@{getLocalPlan}}
+\index{getLocalPlan@{getLocalPlan}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{getLocalPlan()}{getLocalPlan()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::get\+Local\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{transformed\+\_\+plan }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_adb22b6981dc80e9159298c8f3dc738eb_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_adb22b6981dc80e9159298c8f3dc738eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_aef146076f0095773cb6e89827ff06b4b}\label{classbase__local__planner_1_1_local_planner_util_aef146076f0095773cb6e89827ff06b4b}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!initialize@{initialize}}
+\index{initialize@{initialize}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::initialize (\begin{DoxyParamCaption}\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap,  }\item[{std\+::string}]{global\+\_\+frame }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_aef146076f0095773cb6e89827ff06b4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a84581c07b821dbdb93f78a6def7f8850}\label{classbase__local__planner_1_1_local_planner_util_a84581c07b821dbdb93f78a6def7f8850}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} \&}]{config,  }\item[{bool}]{restore\+\_\+defaults }\end{DoxyParamCaption})}
+
+
+
+更新局部规划器参数的回调函数 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_local_planner_util_a84581c07b821dbdb93f78a6def7f8850_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_af0eb515ddb49387ac87153ed4401a248}\label{classbase__local__planner_1_1_local_planner_util_af0eb515ddb49387ac87153ed4401a248}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classbase__local__planner_1_1_local_planner_util_af0eb515ddb49387ac87153ed4401a248_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a7ba7a900fb226af8a1f4692a84b03754}\label{classbase__local__planner_1_1_local_planner_util_a7ba7a900fb226af8a1f4692a84b03754}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_af033b08607865ddfc1126f8204011a65}\label{classbase__local__planner_1_1_local_planner_util_af033b08607865ddfc1126f8204011a65}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!default\_limits\_@{default\_limits\_}}
+\index{default\_limits\_@{default\_limits\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{default\_limits\_}{default\_limits\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::default\+\_\+limits\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a9a90d33ba8cb74115d0fe7c10e8b43aa}\label{classbase__local__planner_1_1_local_planner_util_a9a90d33ba8cb74115d0fe7c10e8b43aa}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_ac4e6de10f12cb8a00f38e82de02db4ea}\label{classbase__local__planner_1_1_local_planner_util_ac4e6de10f12cb8a00f38e82de02db4ea}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!global\_plan\_@{global\_plan\_}}
+\index{global\_plan\_@{global\_plan\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{global\_plan\_}{global\_plan\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::global\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a908bf32f9021d95ede64145a657f5603}\label{classbase__local__planner_1_1_local_planner_util_a908bf32f9021d95ede64145a657f5603}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_aceaa38407121d1e78969013b2686a236}\label{classbase__local__planner_1_1_local_planner_util_aceaa38407121d1e78969013b2686a236}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!limits\_@{limits\_}}
+\index{limits\_@{limits\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{limits\_}{limits\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{Local\+Planner\+Limits}} base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::limits\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a6125321f7ff074d6261cb34d94797265}\label{classbase__local__planner_1_1_local_planner_util_a6125321f7ff074d6261cb34d94797265}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!limits\_configuration\_mutex\_@{limits\_configuration\_mutex\_}}
+\index{limits\_configuration\_mutex\_@{limits\_configuration\_mutex\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{limits\_configuration\_mutex\_}{limits\_configuration\_mutex\_}}
+{\footnotesize\ttfamily boost\+::mutex base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::limits\+\_\+configuration\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a3f5ac7c944ef593b3dbfc16fa086fd99}\label{classbase__local__planner_1_1_local_planner_util_a3f5ac7c944ef593b3dbfc16fa086fd99}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!name\_@{name\_}}
+\index{name\_@{name\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_ad4a59530d806c5e6f0adf35b843ce16a}\label{classbase__local__planner_1_1_local_planner_util_ad4a59530d806c5e6f0adf35b843ce16a}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!setup\_@{setup\_}}
+\index{setup\_@{setup\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{setup\_}{setup\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::setup\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_local_planner_util_a68722f79013d0b0f84cefa1eaeef560a}\label{classbase__local__planner_1_1_local_planner_util_a68722f79013d0b0f84cefa1eaeef560a}} 
+\index{base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!base\_local\_planner::LocalPlannerUtil@{base\_local\_planner::LocalPlannerUtil}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer$\ast$ base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util\+::tf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{local__planner__util_8h}{local\+\_\+planner\+\_\+util.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{local__planner__util_8cpp}{local\+\_\+planner\+\_\+util.\+cpp}}\end{DoxyCompactItemize}

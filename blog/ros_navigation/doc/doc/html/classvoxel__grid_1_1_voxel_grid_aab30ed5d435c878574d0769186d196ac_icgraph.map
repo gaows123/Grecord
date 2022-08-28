@@ -1,0 +1,11 @@
+<map id="voxel_grid::VoxelGrid::reset" name="voxel_grid::VoxelGrid::reset">
+<area shape="rect" id="node1" title=" " alt="" coords="880,69,1027,111"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_voxel_layer.html#af5f57588c57a8a5c8dff065b5a76a0db" title=" " alt="" coords="451,5,617,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_voxel_layer.html#a56c9a252631b5d4af75c1d17eac8e052" title="Resets the costmap and static_map to be unknown space" alt="" coords="665,69,832,111"/>
+<area shape="rect" id="node6" href="$classvoxel__grid_1_1_voxel_grid.html#a5b03e57131d3ae12440c701cb1216688" title="Resizes a voxel grid to the desired size" alt="" coords="675,135,822,176"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_voxel_layer.html#a91dc901da59c768aea0b25037bf46fef" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="451,71,617,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="236,71,403,112"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_voxel_layer.html#a0528c59b3cbe4c1b81748284ae0a3dc5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="451,136,617,177"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_voxel_layer.html#a2361abd50823db1734c1cc05a70d0c97" title=" " alt="" coords="236,136,403,177"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_voxel_layer.html#a7e9b75bd9cee13aa9f893a17d549fbee" title=" " alt="" coords="5,136,188,177"/>
+</map>

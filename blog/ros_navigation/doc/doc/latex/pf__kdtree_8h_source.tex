@@ -1,0 +1,115 @@
+\hypertarget{pf__kdtree_8h_source}{}\doxysection{pf\+\_\+kdtree.\+h}
+\label{pf__kdtree_8h_source}\index{amcl/include/amcl/pf/pf\_kdtree.h@{amcl/include/amcl/pf/pf\_kdtree.h}}
+\mbox{\hyperlink{pf__kdtree_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  Player -\/ One Hell of a Robot Server}}
+\DoxyCodeLine{3 \textcolor{comment}{ *  Copyright (C) 2000  Brian Gerkey   \&  Kasper Stoy}}
+\DoxyCodeLine{4 \textcolor{comment}{ *                      gerkey@usc.edu    kaspers@robotics.usc.edu}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  This library is free software; you can redistribute it and/or}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  modify it under the terms of the GNU Lesser General Public}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  License as published by the Free Software Foundation; either}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  version 2.1 of the License, or (at your option) any later version.}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  This library is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{13 \textcolor{comment}{ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU}}
+\DoxyCodeLine{14 \textcolor{comment}{ *  Lesser General Public License for more details.}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ *  You should have received a copy of the GNU Lesser General Public}}
+\DoxyCodeLine{17 \textcolor{comment}{ *  License along with this library; if not, write to the Free Software}}
+\DoxyCodeLine{18 \textcolor{comment}{ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-\/1307  USA}}
+\DoxyCodeLine{19 \textcolor{comment}{ *}}
+\DoxyCodeLine{20 \textcolor{comment}{ */}}
+\DoxyCodeLine{21 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{22 \textcolor{comment}{ * Desc: KD tree functions}}
+\DoxyCodeLine{23 \textcolor{comment}{ * Author: Andrew Howard}}
+\DoxyCodeLine{24 \textcolor{comment}{ * Date: 18 Dec 2002}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CVS: \$Id: pf\_kdtree.h 6532 2008-\/06-\/11 02:45:56Z gbiggs \$}}
+\DoxyCodeLine{26 \textcolor{comment}{ *************************************************************************/}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#ifndef PF\_KDTREE\_H}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define PF\_KDTREE\_H}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#ifdef INCLUDE\_RTKGUI}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}rtk.h"{}}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{comment}{// Info for a node in the tree}}
+\DoxyCodeLine{37 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structpf__kdtree__node}{pf\_kdtree\_node}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39   \textcolor{comment}{// Depth in the tree}}
+\DoxyCodeLine{40   \textcolor{keywordtype}{int} \mbox{\hyperlink{structpf__kdtree__node_aca122fa0177209a6b87be053c6f2b882}{leaf}}, \mbox{\hyperlink{structpf__kdtree__node_a7aeffc9c557e170d875328d4ff4f669e}{depth}};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \textcolor{comment}{// Pivot dimension and value}}
+\DoxyCodeLine{43   \textcolor{keywordtype}{int} \mbox{\hyperlink{structpf__kdtree__node_a5df8870ca5ffbb2bd6a0fd3cf28e175f}{pivot\_dim}};}
+\DoxyCodeLine{44   \textcolor{keywordtype}{double} \mbox{\hyperlink{structpf__kdtree__node_ade0d28797ae474896d933e81628100cb}{pivot\_value}};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{comment}{// The key for this node}}
+\DoxyCodeLine{47   \textcolor{keywordtype}{int} \mbox{\hyperlink{structpf__kdtree__node_a6ace1029289ed12095844110faac1b35}{key}}[3];}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49   \textcolor{comment}{// The value for this node}}
+\DoxyCodeLine{50   \textcolor{keywordtype}{double} \mbox{\hyperlink{structpf__kdtree__node_a8df6d7d10dde36dcd28b4c8c5aa0118a}{value}};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52   \textcolor{comment}{// The cluster label (leaf nodes)}}
+\DoxyCodeLine{53   \textcolor{keywordtype}{int} \mbox{\hyperlink{structpf__kdtree__node_a614cd21deb9335383e9bba968fb3acce}{cluster}};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55   \textcolor{comment}{// Child nodes}}
+\DoxyCodeLine{56   \textcolor{keyword}{struct }\mbox{\hyperlink{structpf__kdtree__node}{pf\_kdtree\_node}} *\mbox{\hyperlink{structpf__kdtree__node_a894275d80a5aa21e4977420b8a8c2676}{children}}[2];}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \} \mbox{\hyperlink{pf__kdtree_8h_a05fb8223798c8ce1e5d56e4bf6756ee2}{pf\_kdtree\_node\_t}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{// A kd tree}}
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   \textcolor{comment}{// Cell size}}
+\DoxyCodeLine{65   \textcolor{keywordtype}{double} size[3];}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67   \textcolor{comment}{// The root node of the tree}}
+\DoxyCodeLine{68   \mbox{\hyperlink{structpf__kdtree__node}{pf\_kdtree\_node\_t}} *\mbox{\hyperlink{structpf__kdtree__t_a9cb724eb99359c14a2bd4aabc40de3c1}{root}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70   \textcolor{comment}{// The number of nodes in the tree}}
+\DoxyCodeLine{71   \textcolor{keywordtype}{int} \mbox{\hyperlink{structpf__kdtree__t_a93584814fb661d6b39fd9e2a8048ba89}{node\_count}}, node\_max\_count;}
+\DoxyCodeLine{72   \mbox{\hyperlink{structpf__kdtree__node}{pf\_kdtree\_node\_t}} *\mbox{\hyperlink{structpf__kdtree__t_a33a087dd559a8d7b98e350c383ee82e6}{nodes}};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{comment}{// The number of leaf nodes in the tree}}
+\DoxyCodeLine{75   \textcolor{keywordtype}{int} \mbox{\hyperlink{structpf__kdtree__t_a8eae6112056438894b842ce7e489bcc8}{leaf\_count}};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \} \mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{comment}{// Create a tree}}
+\DoxyCodeLine{81 \textcolor{keyword}{extern} \mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *\mbox{\hyperlink{pf__kdtree_8h_ad5e3895479fc829100d1a627ae34e2ec}{pf\_kdtree\_alloc}}(\textcolor{keywordtype}{int} max\_size);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{comment}{// Destroy a tree}}
+\DoxyCodeLine{84 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{pf__kdtree_8h_ac1f471ee15033bbe30a96abe56f1e072}{pf\_kdtree\_free}}(\mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *self);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{// Clear all entries from the tree}}
+\DoxyCodeLine{87 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{pf__kdtree_8h_afc558bc7d59167c6d5ebcd23b06c5129}{pf\_kdtree\_clear}}(\mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *self);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{comment}{// Insert a pose into the tree}}
+\DoxyCodeLine{90 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{pf__kdtree_8h_a25bb0665463cacfc166b50be94079940}{pf\_kdtree\_insert}}(\mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *self, \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{namespaceset__pose_ab2d96ec820df187b492eaf659226e766}{pose}}, \textcolor{keywordtype}{double} \mbox{\hyperlink{structpf__kdtree__node_a8df6d7d10dde36dcd28b4c8c5aa0118a}{value}});}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{// Cluster the leaves in the tree}}
+\DoxyCodeLine{93 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{pf__kdtree_8h_a8757b78853ad243c2b823b8560c1027a}{pf\_kdtree\_cluster}}(\mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *self);}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{comment}{// Determine the probability estimate for the given pose}}
+\DoxyCodeLine{96 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{pf__kdtree_8h_a0f854496ce2d903ba3cc0efd7577afce}{pf\_kdtree\_get\_prob}}(\mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *self, \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{namespaceset__pose_ab2d96ec820df187b492eaf659226e766}{pose}});}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{comment}{// Determine the cluster label for the given pose}}
+\DoxyCodeLine{99 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} \mbox{\hyperlink{pf__kdtree_8h_a84700cffabc8cd46af8145cb215fbc56}{pf\_kdtree\_get\_cluster}}(\mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *self, \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{namespaceset__pose_ab2d96ec820df187b492eaf659226e766}{pose}});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#ifdef INCLUDE\_RTKGUI}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{comment}{// Draw the tree}}
+\DoxyCodeLine{105 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} pf\_kdtree\_draw(\mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *self, rtk\_fig\_t *fig);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

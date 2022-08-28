@@ -1,0 +1,11 @@
+<map id="AmclNode::uniformPoseGenerator" name="AmclNode::uniformPoseGenerator">
+<area shape="rect" id="node1" title=" " alt="" coords="689,140,909,166"/>
+<area shape="rect" id="node2" href="$class_amcl_node.html#aba65e228a714fb29a56d179975dc6ad3" title=" " alt="" coords="441,31,635,72"/>
+<area shape="rect" id="node5" href="$class_amcl_node.html#a1e5dc369ab11dfe26dc1ec996ab423a6" title=" " alt="" coords="435,140,641,166"/>
+<area shape="rect" id="node9" href="$class_amcl_node.html#a2a32d93809d3e60334c312f807b020a6" title=" " alt="" coords="452,216,624,242"/>
+<area shape="rect" id="node3" href="$class_amcl_node.html#a41e7de8ffa5fdb0aaf4e0d8083950080" title=" " alt="" coords="5,140,156,166"/>
+<area shape="rect" id="node4" href="$class_amcl_node.html#a0cf31d50e34411030c9046f8a12ae8cb" title="Uses TF and LaserScan messages from bag file to drive AMCL instead" alt="" coords="215,38,376,65"/>
+<area shape="rect" id="node6" href="$class_amcl_node.html#a4b33c46a29dd9ecd0b974fe560b8b6d7" title=" " alt="" coords="211,89,380,116"/>
+<area shape="rect" id="node7" href="$class_amcl_node.html#a037c523da934628d0dd126c108266e3b" title=" " alt="" coords="216,140,375,166"/>
+<area shape="rect" id="node8" href="$class_amcl_node.html#aa7fe96700205b23c00dda87af08a77a6" title=" " alt="" coords="204,190,387,217"/>
+</map>

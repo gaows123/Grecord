@@ -1,0 +1,188 @@
+\hypertarget{point__grid_8h_source}{}\doxysection{point\+\_\+grid.\+h}
+\label{point__grid_8h_source}\index{base\_local\_planner/include/base\_local\_planner/point\_grid.h@{base\_local\_planner/include/base\_local\_planner/point\_grid.h}}
+\mbox{\hyperlink{point__grid_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef POINT\_GRID\_H\_}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define POINT\_GRID\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <cfloat>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{observation_8h}{costmap\_2d/observation.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{world__model_8h}{base\_local\_planner/world\_model.h}}>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <sensor\_msgs/PointCloud2.h>}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{54   \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_point_grid}{PointGrid}} : \textcolor{keyword}{public} \mbox{\hyperlink{classbase__local__planner_1_1_world_model}{WorldModel}} \{}
+\DoxyCodeLine{55     \textcolor{keyword}{public}:}
+\DoxyCodeLine{66       \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_adaccd0818cd5b3334f1410f6cfca93dc}{PointGrid}}(\textcolor{keywordtype}{double} width, \textcolor{keywordtype}{double} height, \textcolor{keywordtype}{double} resolution, geometry\_msgs::Point origin,}
+\DoxyCodeLine{67           \textcolor{keywordtype}{double} max\_z, \textcolor{keywordtype}{double} obstacle\_range, \textcolor{keywordtype}{double} min\_separation);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{72       \textcolor{keyword}{virtual} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_adcf3cf7ebf7d52a909fb2744560bf1e4}{\string~PointGrid}}()\{\}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{80       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_af222229f74f1bc4e14536548c316e755}{getPointsInRange}}(\textcolor{keyword}{const} geometry\_msgs::Point\& lower\_left, \textcolor{keyword}{const} geometry\_msgs::Point\& upper\_right, std::vector< std::list<geometry\_msgs::Point32>* >\& points);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{90       \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ae9398ded210128450fbdb86f231cf588}{footprintCost}}(\textcolor{keyword}{const} geometry\_msgs::Point\& position, \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint,}
+\DoxyCodeLine{91           \textcolor{keywordtype}{double} inscribed\_radius, \textcolor{keywordtype}{double} circumscribed\_radius);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93       \textcolor{keyword}{using} \mbox{\hyperlink{classbase__local__planner_1_1_world_model_a36d4c808bc441e2b87b0ac038099993a}{WorldModel::footprintCost}};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{101       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_adb8a9a0665445fe274510a86dd0e8277}{updateWorld}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint,}
+\DoxyCodeLine{102           \textcolor{keyword}{const} std::vector<costmap\_2d::Observation>\& observations, \textcolor{keyword}{const} std::vector<PlanarLaserScan>\& laser\_scans);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{111       \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a85f9826c14353e9a75696be52d438554}{gridCoords}}(geometry\_msgs::Point pt, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& gx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& gy)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{if}(pt.x < \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.x || pt.y < \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.y)\{}
+\DoxyCodeLine{113           gx = 0;}
+\DoxyCodeLine{114           gy = 0;}
+\DoxyCodeLine{115           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{116         \}}
+\DoxyCodeLine{117         gx = (int) ((pt.x -\/ \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.x)/\mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}});}
+\DoxyCodeLine{118         gy = (int) ((pt.y -\/ \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.y)/\mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}});}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120         \textcolor{keywordflow}{if}(gx >= \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ae8cfcc3891fd32ab51f0a10bcc7edd62}{width\_}} || gy >= \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a1c02ee4d4ef45459067a91f2288911a6}{height\_}})\{}
+\DoxyCodeLine{121           gx = 0;}
+\DoxyCodeLine{122           gy = 0;}
+\DoxyCodeLine{123           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{124         \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{127       \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{136       \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_aa98a155058a5045be350a89eb3858f41}{getCellBounds}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} gx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} gy, geometry\_msgs::Point\& lower\_left, geometry\_msgs::Point\& upper\_right)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{137         lower\_left.x = gx * \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}} + \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.x;}
+\DoxyCodeLine{138         lower\_left.y = gy * \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}} + \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.y;}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140         upper\_right.x = lower\_left.x + \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}};}
+\DoxyCodeLine{141         upper\_right.y = lower\_left.y + \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}};}
+\DoxyCodeLine{142       \}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 }
+\DoxyCodeLine{151       \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a70991650fe65105f90f31acdab32a830}{sq\_distance}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt1, \textcolor{keyword}{const} geometry\_msgs::Point32\& pt2)\{}
+\DoxyCodeLine{152         \textcolor{keywordflow}{return} (pt1.x -\/ pt2.x) * (pt1.x -\/ pt2.x) + (pt1.y -\/ pt2.y) * (pt1.y -\/ pt2.y);}
+\DoxyCodeLine{153       \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{162       \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a35f097e6894731b7d9963e46b16d0d6f}{gridCoords}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& gx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& gy)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{163         \textcolor{keywordflow}{if}(pt.x < \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.x || pt.y < \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.y)\{}
+\DoxyCodeLine{164           gx = 0;}
+\DoxyCodeLine{165           gy = 0;}
+\DoxyCodeLine{166           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{167         \}}
+\DoxyCodeLine{168         gx = (int) ((pt.x -\/ \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.x)/\mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}});}
+\DoxyCodeLine{169         gy = (int) ((pt.y -\/ \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}.y)/\mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}});}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171         \textcolor{keywordflow}{if}(gx >= \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ae8cfcc3891fd32ab51f0a10bcc7edd62}{width\_}} || gy >= \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a1c02ee4d4ef45459067a91f2288911a6}{height\_}})\{}
+\DoxyCodeLine{172           gx = 0;}
+\DoxyCodeLine{173           gy = 0;}
+\DoxyCodeLine{174           \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{175         \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{178       \}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{186       \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a107ea768298e5560e962498692674d5a}{gridIndex}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} gx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} gy)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{187         \textcolor{comment}{/*}}
+\DoxyCodeLine{188 \textcolor{comment}{         * (0, 0) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ (width, 0)}}
+\DoxyCodeLine{189 \textcolor{comment}{         *  |                               |}}
+\DoxyCodeLine{190 \textcolor{comment}{         *  |                               |}}
+\DoxyCodeLine{191 \textcolor{comment}{         *  |                               |}}
+\DoxyCodeLine{192 \textcolor{comment}{         *  |                               |}}
+\DoxyCodeLine{193 \textcolor{comment}{         *  |                               |}}
+\DoxyCodeLine{194 \textcolor{comment}{         * (0, height) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ (width, height)}}
+\DoxyCodeLine{195 \textcolor{comment}{         */}}
+\DoxyCodeLine{196         \textcolor{keywordflow}{return}(gx + gy * \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ae8cfcc3891fd32ab51f0a10bcc7edd62}{width\_}});}
+\DoxyCodeLine{197       \}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{206       \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e}{orient}}(\textcolor{keyword}{const} geometry\_msgs::Point\& a, \textcolor{keyword}{const} geometry\_msgs::Point\& b, \textcolor{keyword}{const} geometry\_msgs::Point32\& c)\{}
+\DoxyCodeLine{207         \textcolor{keywordtype}{double} acx = a.x -\/ c.x;}
+\DoxyCodeLine{208         \textcolor{keywordtype}{double} bcx = b.x -\/ c.x;}
+\DoxyCodeLine{209         \textcolor{keywordtype}{double} acy = a.y -\/ c.y;}
+\DoxyCodeLine{210         \textcolor{keywordtype}{double} bcy = b.y -\/ c.y;}
+\DoxyCodeLine{211         \textcolor{keywordflow}{return} acx * bcy -\/ acy * bcx;}
+\DoxyCodeLine{212       \}}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{221       \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{222       \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a8558a1d185f1299007cb4a92726f8541}{orient}}(\textcolor{keyword}{const} T\& a, \textcolor{keyword}{const} T\& b, \textcolor{keyword}{const} T\& c)\{}
+\DoxyCodeLine{223         \textcolor{keywordtype}{double} acx = a.x -\/ c.x;}
+\DoxyCodeLine{224         \textcolor{keywordtype}{double} bcx = b.x -\/ c.x;}
+\DoxyCodeLine{225         \textcolor{keywordtype}{double} acy = a.y -\/ c.y;}
+\DoxyCodeLine{226         \textcolor{keywordtype}{double} bcy = b.y -\/ c.y;}
+\DoxyCodeLine{227         \textcolor{keywordflow}{return} acx * bcy -\/ acy * bcx;}
+\DoxyCodeLine{228       \}}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{238       \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_af11952049cf710f3e49d27181a7c09e9}{segIntersect}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& v1, \textcolor{keyword}{const} geometry\_msgs::Point32\& v2,}
+\DoxyCodeLine{239           \textcolor{keyword}{const} geometry\_msgs::Point32\& u1, \textcolor{keyword}{const} geometry\_msgs::Point32\& u2)\{}
+\DoxyCodeLine{240         \textcolor{keywordflow}{return} (\mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e}{orient}}(v1, v2, u1) * \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e}{orient}}(v1, v2, u2) < 0) \&\& (\mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e}{orient}}(u1, u2, v1) * \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ab3604c15e0eebb45dcaf4ae5403c5f7e}{orient}}(u1, u2, v2) < 0);}
+\DoxyCodeLine{241       \}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{251       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a42d9b62516e5e401669b618e790979ad}{intersectionPoint}}(\textcolor{keyword}{const} geometry\_msgs::Point\& v1, \textcolor{keyword}{const} geometry\_msgs::Point\& v2,}
+\DoxyCodeLine{252           \textcolor{keyword}{const} geometry\_msgs::Point\& u1, \textcolor{keyword}{const} geometry\_msgs::Point\& u2,}
+\DoxyCodeLine{253           geometry\_msgs::Point\& result);}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{261       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a7d813f2a10631747b458377fdd4a2a4f}{ptInPolygon}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt, \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& poly);}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{267       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a5276643487b1ab03a4a9602b3f338ba8}{insert}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt);}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{274       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_aebd6e4378342589f07e5700aac825550}{nearestNeighborDistance}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt);}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{283       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_aace5884f03d444ee13dffd0dbe866678}{getNearestInCell}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} gx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} gy);}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{289       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_afb743eed27facd44c2ed0e59e9f04449}{removePointsInPolygon}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::Point> poly);}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{295       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a693cf4b2962ea0ffb4e74daf44a317a4}{removePointsInScanBoundry}}(\textcolor{keyword}{const} \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan}{PlanarLaserScan}}\& laser\_scan);}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{303       \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a763e1d4207cc1ecbc670936074211155}{ptInScan}}(\textcolor{keyword}{const} geometry\_msgs::Point32\& pt, \textcolor{keyword}{const} \mbox{\hyperlink{classbase__local__planner_1_1_planar_laser_scan}{PlanarLaserScan}}\& laser\_scan);}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{309       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a60a0ccb34b0468c2249c32ebad03623c}{getPoints}}(sensor\_msgs::PointCloud2\& cloud);}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{311     \textcolor{keyword}{private}:}
+\DoxyCodeLine{312       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2232220cabac42c77df3651ef8706c5b}{resolution\_}}; }
+\DoxyCodeLine{313       geometry\_msgs::Point \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a49056e465b626fd351301147a697b6aa}{origin\_}}; }
+\DoxyCodeLine{314       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_ae8cfcc3891fd32ab51f0a10bcc7edd62}{width\_}}; }
+\DoxyCodeLine{315       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a1c02ee4d4ef45459067a91f2288911a6}{height\_}}; }
+\DoxyCodeLine{316       std::vector< std::list<geometry\_msgs::Point32> > \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a231b46dbba3e029edf94d5cc122147e9}{cells\_}}; }
+\DoxyCodeLine{317       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2036620b9d1149e833273c43c5a727eb}{max\_z\_}};  }
+\DoxyCodeLine{318       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a753727a1119075f27b7a840bc6f1be0a}{sq\_obstacle\_range\_}};  }
+\DoxyCodeLine{319       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a3688e671583e2ff4ff50308226477111}{sq\_min\_separation\_}};  }
+\DoxyCodeLine{320       std::vector< std::list<geometry\_msgs::Point32>* > \mbox{\hyperlink{classbase__local__planner_1_1_point_grid_a2fc679229c93a4507d4b50144f7b6d32}{points\_}};  }
+\DoxyCodeLine{321   \};}
+\DoxyCodeLine{322 \};}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

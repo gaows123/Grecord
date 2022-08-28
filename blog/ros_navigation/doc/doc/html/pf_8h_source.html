@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/include/amcl/pf/pf.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_a9188d7c3d194212696f636cafd54aab.html">include</a></li><li class="navelem"><a class="el" href="dir_d1b05214bc26678a70bc66257a1f97b6.html">amcl</a></li><li class="navelem"><a class="el" href="dir_b250c90a420d93df9de30b473e4ce096.html">pf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pf.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pf_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *  Player - One Hell of a Robot Server</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *  Copyright (C) 2000  Brian Gerkey   &amp;  Kasper Stoy</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                      gerkey@usc.edu    kaspers@robotics.usc.edu</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  This library is free software; you can redistribute it and/or</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *  modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *  This library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *  Lesser General Public License for more details.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *  You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *  License along with this library; if not, write to the Free Software</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/**************************************************************************</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * Desc: Simple particle filter for localization.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * Author: Andrew Howard</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * Date: 10 Dec 2002</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * CVS: $Id: pf.h 3293 2005-11-19 08:37:45Z gerkey $</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *************************************************************************/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef PF_H</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define PF_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="pf__vector_8h.html">pf_vector.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="pf__kdtree_8h.html">pf_kdtree.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// Forward declarations</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">struct </span><a class="code hl_struct" href="struct__pf__t.html">_pf_t</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">struct </span>_rtk_fig_t;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">struct </span><a class="code hl_struct" href="struct__pf__sample__set__t.html">_pf_sample_set_t</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// Function prototype for the initialization model; generates a sample pose from</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// an appropriate distribution.</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// pf_init_model_fn_t是函数指针，(void *init_data)是函数的形参</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// void *表示无类型指针，可以指向任意类型的变量; pf_vector_t返回类型。</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="pf_8h.html#ab75fbbe45feaecb5c13415d373e0d8e6">   47</a></span><span class="keyword">typedef</span> <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> (*<a class="code hl_typedef" href="pf_8h.html#ab75fbbe45feaecb5c13415d373e0d8e6">pf_init_model_fn_t</a>) (<span class="keywordtype">void</span> *init_data);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// Function prototype for the action model; generates a sample pose from</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// an appropriate distribution</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// pf_action_model_fn_t同样是函数指针，指向带两个参数的函数，无返回类型</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="pf_8h.html#a8e8299c4c339c8eacc4a5a6f536313d9">   52</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="pf_8h.html#a8e8299c4c339c8eacc4a5a6f536313d9">pf_action_model_fn_t</a>) (<span class="keywordtype">void</span> *action_data,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                      <span class="keyword">struct </span><a class="code hl_struct" href="struct__pf__sample__set__t.html">_pf_sample_set_t</a>* set);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// Function prototype for the sensor model; determines the probability</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// for the given set of sample poses.</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="pf_8h.html#abac0d80ca317cca97247df42fda3476d">   57</a></span><span class="keyword">typedef</span> double (*<a class="code hl_typedef" href="pf_8h.html#abac0d80ca317cca97247df42fda3476d">pf_sensor_model_fn_t</a>) (<span class="keywordtype">void</span> *sensor_data,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                        <span class="keyword">struct </span><a class="code hl_struct" href="struct__pf__sample__set__t.html">_pf_sample_set_t</a>* set);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// 单个粒子代表位姿和相关的权重</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structpf__sample__t.html">   62</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// Pose represented by this sample</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structpf__sample__t.html#ac3ef3426ea73debfc921d832e4073d44">   65</a></span>  <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="structpf__sample__t.html#ac3ef3426ea73debfc921d832e4073d44">pose</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// Weight for this pose</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structpf__sample__t.html#af816652fe9bbeebfe723909d41004f29">   68</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structpf__sample__t.html#af816652fe9bbeebfe723909d41004f29">weight</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>} <a class="code hl_struct" href="structpf__sample__t.html">pf_sample_t</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// 一个位姿的粒子群</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structpf__cluster__t.html">   74</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">// Number of samples</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structpf__cluster__t.html#a65ad802d21b6998bbf776d7d210845c0">   77</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpf__cluster__t.html#a65ad802d21b6998bbf776d7d210845c0">count</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="comment">// Total weight of samples in this cluster</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structpf__cluster__t.html#aa635a7fa9ac89114cb5fc91ea1882ed3">   80</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structpf__cluster__t.html#aa635a7fa9ac89114cb5fc91ea1882ed3">weight</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">// Cluster statistics</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structpf__cluster__t.html#ab9d9b7bc29209d213b8ccef5a7c5d63c">   83</a></span>  <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="structpf__cluster__t.html#ab9d9b7bc29209d213b8ccef5a7c5d63c">mean</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structpf__cluster__t.html#aa86523382c704fe9a0691416c7bf78af">   84</a></span>  <a class="code hl_struct" href="structpf__matrix__t.html">pf_matrix_t</a> <a class="code hl_variable" href="structpf__cluster__t.html#aa86523382c704fe9a0691416c7bf78af">cov</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="comment">// Workspace</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structpf__cluster__t.html#aa219f8157f3f94537b0a1210c2d3a64b">   87</a></span>  <span class="keywordtype">double</span> m[4], c[2][2];</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>} <a class="code hl_struct" href="structpf__cluster__t.html">pf_cluster_t</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">//  粒子集合，多个位姿粒子群</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html">   93</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct__pf__sample__set__t.html">_pf_sample_set_t</a></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="comment">// The samples</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#a3675a8bce5f799f6c394c95a5ca68af5">   96</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__pf__sample__set__t.html#a3675a8bce5f799f6c394c95a5ca68af5">sample_count</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#ad70713ed63fc4d5619197f06017f246a">   97</a></span>  <a class="code hl_struct" href="structpf__sample__t.html">pf_sample_t</a> *<a class="code hl_variable" href="struct__pf__sample__set__t.html#ad70713ed63fc4d5619197f06017f246a">samples</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="comment">// A kdtree encoding the histogram</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#a4a220e98a56568d37d0be50ee5ad30c9">  100</a></span>  <a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *<a class="code hl_variable" href="struct__pf__sample__set__t.html#a4a220e98a56568d37d0be50ee5ad30c9">kdtree</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="comment">// Clusters</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#a0a6cc28513a0f672bb76655d651dd54a">  103</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__pf__sample__set__t.html#a0a6cc28513a0f672bb76655d651dd54a">cluster_count</a>, <a class="code hl_variable" href="struct__pf__sample__set__t.html#a2694043163f3283670e2b0b20062a7b5">cluster_max_count</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#ab4f4541da504ceab98942599c3157c78">  104</a></span>  <a class="code hl_struct" href="structpf__cluster__t.html">pf_cluster_t</a> *<a class="code hl_variable" href="struct__pf__sample__set__t.html#ab4f4541da504ceab98942599c3157c78">clusters</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="comment">// Filter statistics</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#a610c806c7e94496351372ac870fcd45e">  107</a></span>  <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="struct__pf__sample__set__t.html#a610c806c7e94496351372ac870fcd45e">mean</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#ac900d759311cfad78aa89516e3d8e443">  108</a></span>  <a class="code hl_struct" href="structpf__matrix__t.html">pf_matrix_t</a> <a class="code hl_variable" href="struct__pf__sample__set__t.html#ac900d759311cfad78aa89516e3d8e443">cov</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#a93820b25bc66464f8a202b3c57520535">  109</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__pf__sample__set__t.html#a93820b25bc66464f8a202b3c57520535">converged</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="struct__pf__sample__set__t.html#ae31b0b1175e6355530af7577b1c1afca">  110</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct__pf__sample__set__t.html#ae31b0b1175e6355530af7577b1c1afca">n_effective</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">  111</a></span>} <a class="code hl_typedef" href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">// 代表整个粒子滤波器的结构体</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="struct__pf__t.html">  115</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct__pf__t.html">_pf_t</a></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="comment">// This min and max number of samples</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="struct__pf__t.html#a8434c18b71246a187cb705e5aba049e6">  118</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__pf__t.html#a7116f78f8d05ca35ad17240967bf30c4">min_samples</a>, <a class="code hl_variable" href="struct__pf__t.html#a8434c18b71246a187cb705e5aba049e6">max_samples</a>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="comment">// Population size parameters</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="struct__pf__t.html#afa176e9527cb51f3ef2563fe86a3861e">  121</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct__pf__t.html#afa176e9527cb51f3ef2563fe86a3861e">pop_err</a>, <a class="code hl_variable" href="struct__pf__t.html#ab70ff4e12ee6ed1469a67aff0de36ebc">pop_z</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="comment">// Resample limit cache</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="struct__pf__t.html#afec7a84a3ccfacb42791f786acfbcf81">  124</a></span>  <span class="keywordtype">int</span> *<a class="code hl_variable" href="struct__pf__t.html#afec7a84a3ccfacb42791f786acfbcf81">limit_cache</a>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="comment">// The sample sets.  We keep two sets and use [current_set]</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="comment">// to identify the active set.</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="struct__pf__t.html#a23cf0448c8b5f76f60c56e848865d484">  128</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__pf__t.html#a23cf0448c8b5f76f60c56e848865d484">current_set</a>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="struct__pf__t.html#a56013d9af994b1781074b0e8f30c495a">  129</a></span>  <a class="code hl_struct" href="struct__pf__sample__set__t.html">pf_sample_set_t</a> <a class="code hl_variable" href="struct__pf__t.html#a56013d9af994b1781074b0e8f30c495a">sets</a>[2];</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <span class="comment">// Running averages, slow and fast, of likelihood</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="struct__pf__t.html#a8c9011dce69524801db184a5d524e5d2">  132</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct__pf__t.html#a4a272f2ad96b0353bdca47f9c7f66ea1">w_slow</a>, <a class="code hl_variable" href="struct__pf__t.html#a8c9011dce69524801db184a5d524e5d2">w_fast</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">// Decay rates for running averages</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="struct__pf__t.html#a9ff6ca9bd519a956aa01797694e5f15c">  135</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct__pf__t.html#a80816db3ffb4c399ca221e2f19e3c2e0">alpha_slow</a>, <a class="code hl_variable" href="struct__pf__t.html#a9ff6ca9bd519a956aa01797694e5f15c">alpha_fast</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="comment">// Function used to draw random pose samples</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="struct__pf__t.html#a4ea2363cb6fb0cd4cd70b7817ffdfff6">  138</a></span>  <a class="code hl_typedef" href="pf_8h.html#ab75fbbe45feaecb5c13415d373e0d8e6">pf_init_model_fn_t</a> <a class="code hl_variable" href="struct__pf__t.html#a4ea2363cb6fb0cd4cd70b7817ffdfff6">random_pose_fn</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="struct__pf__t.html#a4f8ab4cfeeda1f7ee91a633dfc37728f">  139</a></span>  <span class="keywordtype">void</span> *<a class="code hl_variable" href="struct__pf__t.html#a4f8ab4cfeeda1f7ee91a633dfc37728f">random_pose_data</a>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="struct__pf__t.html#aa1efadfc08ba59f8fe55071519d209c2">  141</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct__pf__t.html#aa1efadfc08ba59f8fe55071519d209c2">dist_threshold</a>; <span class="comment">//distance threshold in each axis over which the pf is considered to not be converged</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="struct__pf__t.html#abc25dc55eae0b4a166755f45048019e7">  142</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__pf__t.html#abc25dc55eae0b4a166755f45048019e7">converged</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="comment">// boolean parameter to enamble/diable selective resampling</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="struct__pf__t.html#abc6252ca850fe993667913d7ade00a40">  145</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct__pf__t.html#abc6252ca850fe993667913d7ade00a40">selective_resampling</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="pf_8h.html#a948299995556a7ce16489221a916997f">  146</a></span>} <a class="code hl_typedef" href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">// Create a new filter</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *<a class="code hl_function" href="pf_8h.html#ab59ea6182aba307dd9faa7926219885e">pf_alloc</a>(<span class="keywordtype">int</span> min_samples, <span class="keywordtype">int</span> max_samples,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>               <span class="keywordtype">double</span> alpha_slow, <span class="keywordtype">double</span> alpha_fast,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>               <a class="code hl_typedef" href="pf_8h.html#ab75fbbe45feaecb5c13415d373e0d8e6">pf_init_model_fn_t</a> random_pose_fn, <span class="keywordtype">void</span> *random_pose_data);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">// Free an existing filter</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#a340271a4464113cbe3c4448d514b23c7">pf_free</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">// Initialize the filter using a guassian</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#aa158e637ec3c10493f2729f063146944">pf_init</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> mean, <a class="code hl_struct" href="structpf__matrix__t.html">pf_matrix_t</a> cov);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">// Initialize the filter using some model</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#ae2b239fe8546df136beca661cede73e2">pf_init_model</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <a class="code hl_typedef" href="pf_8h.html#ab75fbbe45feaecb5c13415d373e0d8e6">pf_init_model_fn_t</a> init_fn, <span class="keywordtype">void</span> *init_data);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">// Update the filter with some new action</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#a241694fcc56ec6459fef6acc68996eb8">pf_update_action</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <a class="code hl_typedef" href="pf_8h.html#a8e8299c4c339c8eacc4a5a6f536313d9">pf_action_model_fn_t</a> action_fn, <span class="keywordtype">void</span> *action_data);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">// Update the filter with some new sensor observation</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#a477f66612c4752dd8f1ab73cab84a1fd">pf_update_sensor</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <a class="code hl_typedef" href="pf_8h.html#abac0d80ca317cca97247df42fda3476d">pf_sensor_model_fn_t</a> sensor_fn, <span class="keywordtype">void</span> *sensor_data);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">// Resample the distribution</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#a3e18db8990238fb9edc912009f64e3db">pf_update_resample</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">// set selective resampling parameter</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#adbdbc82024445c0a81904c3abb8c2dce">pf_set_selective_resampling</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <span class="keywordtype">int</span> selective_resampling);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">// Compute the CEP statistics (mean and variance).</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#abdccd5641a5c2a1ff66d4fe80e723bd2">pf_get_cep_stats</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> *mean, <span class="keywordtype">double</span> *var);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">// Compute the statistics for a particular cluster.  Returns 0 if</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment">// there is no such cluster.</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordtype">int</span> <a class="code hl_function" href="pf_8h.html#a818930949b3b6d5afd4d216bb69e6e78">pf_get_cluster_stats</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <span class="keywordtype">int</span> cluster, <span class="keywordtype">double</span> *weight,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                         <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> *mean, <a class="code hl_struct" href="structpf__matrix__t.html">pf_matrix_t</a> *cov);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment">// Re-compute the cluster statistics for a sample set</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#af2ae5d54790e0aca689b71a16fe4c7cb">pf_cluster_stats</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <a class="code hl_struct" href="struct__pf__sample__set__t.html">pf_sample_set_t</a> *set);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">// Display the sample set</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="pf_8h.html#a633c764333b25a6cbcee8309003bc199">  188</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#a633c764333b25a6cbcee8309003bc199">pf_draw_samples</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <span class="keyword">struct</span> _rtk_fig_t *fig, <span class="keywordtype">int</span> max_samples);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">// Draw the histogram (kdtree)</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="pf_8h.html#a1809f29acf541a1bbad75d65ee3a619f">  191</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#a1809f29acf541a1bbad75d65ee3a619f">pf_draw_hist</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <span class="keyword">struct</span> _rtk_fig_t *fig);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">// Draw the CEP statistics</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="pf_8h.html#aa6eb2cdfec481645840b74703a82d416">  194</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#aa6eb2cdfec481645840b74703a82d416">pf_draw_cep_stats</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <span class="keyword">struct</span> _rtk_fig_t *fig);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">// Draw the cluster statistics</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="pf_8h.html#ac98d0b8f0a0711c7db5e7420705c9eda">  197</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#ac98d0b8f0a0711c7db5e7420705c9eda">pf_draw_cluster_stats</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf, <span class="keyword">struct</span> _rtk_fig_t *fig);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">//calculate if the particle filter has converged -</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">//and sets the converged flag in the current set and the pf</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keywordtype">int</span> <a class="code hl_function" href="pf_8h.html#a6caa24ec973890583e691fc8616e10e0">pf_update_converged</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment">//sets the current set and pf converged values to zero</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#a8093be5fa7501f1a8e903c43b5705be0">pf_init_converged</a>(<a class="code hl_struct" href="struct__pf__t.html">pf_t</a> *pf);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="pf_8h.html#aa04ad7b926ac346cd2c15a0ef66a4835">  206</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pf_8h.html#aa04ad7b926ac346cd2c15a0ef66a4835">pf_copy_set</a>(<a class="code hl_struct" href="struct__pf__sample__set__t.html">pf_sample_set_t</a>* set_a, <a class="code hl_struct" href="struct__pf__sample__set__t.html">pf_sample_set_t</a>* set_b);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>}</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="apf_8h_html_a1809f29acf541a1bbad75d65ee3a619f"><div class="ttname"><a href="pf_8h.html#a1809f29acf541a1bbad75d65ee3a619f">pf_draw_hist</a></div><div class="ttdeci">void pf_draw_hist(pf_t *pf, struct _rtk_fig_t *fig)</div></div>
+<div class="ttc" id="apf_8h_html_a241694fcc56ec6459fef6acc68996eb8"><div class="ttname"><a href="pf_8h.html#a241694fcc56ec6459fef6acc68996eb8">pf_update_action</a></div><div class="ttdeci">void pf_update_action(pf_t *pf, pf_action_model_fn_t action_fn, void *action_data)</div><div class="ttdef"><b>Definition:</b> pf.c:254</div></div>
+<div class="ttc" id="apf_8h_html_a3075ae6e6dffed65457385e575f889c4"><div class="ttname"><a href="pf_8h.html#a3075ae6e6dffed65457385e575f889c4">pf_sample_set_t</a></div><div class="ttdeci">struct _pf_sample_set_t pf_sample_set_t</div></div>
+<div class="ttc" id="apf_8h_html_a340271a4464113cbe3c4448d514b23c7"><div class="ttname"><a href="pf_8h.html#a340271a4464113cbe3c4448d514b23c7">pf_free</a></div><div class="ttdeci">void pf_free(pf_t *pf)</div><div class="ttdef"><b>Definition:</b> pf.c:118</div></div>
+<div class="ttc" id="apf_8h_html_a3e18db8990238fb9edc912009f64e3db"><div class="ttname"><a href="pf_8h.html#a3e18db8990238fb9edc912009f64e3db">pf_update_resample</a></div><div class="ttdeci">void pf_update_resample(pf_t *pf)</div><div class="ttdef"><b>Definition:</b> pf.c:363</div></div>
+<div class="ttc" id="apf_8h_html_a477f66612c4752dd8f1ab73cab84a1fd"><div class="ttname"><a href="pf_8h.html#a477f66612c4752dd8f1ab73cab84a1fd">pf_update_sensor</a></div><div class="ttdeci">void pf_update_sensor(pf_t *pf, pf_sensor_model_fn_t sensor_fn, void *sensor_data)</div><div class="ttdef"><b>Definition:</b> pf.c:268</div></div>
+<div class="ttc" id="apf_8h_html_a633c764333b25a6cbcee8309003bc199"><div class="ttname"><a href="pf_8h.html#a633c764333b25a6cbcee8309003bc199">pf_draw_samples</a></div><div class="ttdeci">void pf_draw_samples(pf_t *pf, struct _rtk_fig_t *fig, int max_samples)</div></div>
+<div class="ttc" id="apf_8h_html_a6caa24ec973890583e691fc8616e10e0"><div class="ttname"><a href="pf_8h.html#a6caa24ec973890583e691fc8616e10e0">pf_update_converged</a></div><div class="ttdeci">int pf_update_converged(pf_t *pf)</div><div class="ttdef"><b>Definition:</b> pf.c:220</div></div>
+<div class="ttc" id="apf_8h_html_a8093be5fa7501f1a8e903c43b5705be0"><div class="ttname"><a href="pf_8h.html#a8093be5fa7501f1a8e903c43b5705be0">pf_init_converged</a></div><div class="ttdeci">void pf_init_converged(pf_t *pf)</div><div class="ttdef"><b>Definition:</b> pf.c:213</div></div>
+<div class="ttc" id="apf_8h_html_a818930949b3b6d5afd4d216bb69e6e78"><div class="ttname"><a href="pf_8h.html#a818930949b3b6d5afd4d216bb69e6e78">pf_get_cluster_stats</a></div><div class="ttdeci">int pf_get_cluster_stats(pf_t *pf, int cluster, double *weight, pf_vector_t *mean, pf_matrix_t *cov)</div><div class="ttdef"><b>Definition:</b> pf.c:744</div></div>
+<div class="ttc" id="apf_8h_html_a8e8299c4c339c8eacc4a5a6f536313d9"><div class="ttname"><a href="pf_8h.html#a8e8299c4c339c8eacc4a5a6f536313d9">pf_action_model_fn_t</a></div><div class="ttdeci">void(* pf_action_model_fn_t)(void *action_data, struct _pf_sample_set_t *set)</div><div class="ttdef"><b>Definition:</b> pf.h:52</div></div>
+<div class="ttc" id="apf_8h_html_a948299995556a7ce16489221a916997f"><div class="ttname"><a href="pf_8h.html#a948299995556a7ce16489221a916997f">pf_t</a></div><div class="ttdeci">struct _pf_t pf_t</div></div>
+<div class="ttc" id="apf_8h_html_aa04ad7b926ac346cd2c15a0ef66a4835"><div class="ttname"><a href="pf_8h.html#aa04ad7b926ac346cd2c15a0ef66a4835">pf_copy_set</a></div><div class="ttdeci">void pf_copy_set(pf_sample_set_t *set_a, pf_sample_set_t *set_b)</div></div>
+<div class="ttc" id="apf_8h_html_aa158e637ec3c10493f2729f063146944"><div class="ttname"><a href="pf_8h.html#aa158e637ec3c10493f2729f063146944">pf_init</a></div><div class="ttdeci">void pf_init(pf_t *pf, pf_vector_t mean, pf_matrix_t cov)</div><div class="ttdef"><b>Definition:</b> pf.c:136</div></div>
+<div class="ttc" id="apf_8h_html_aa6eb2cdfec481645840b74703a82d416"><div class="ttname"><a href="pf_8h.html#aa6eb2cdfec481645840b74703a82d416">pf_draw_cep_stats</a></div><div class="ttdeci">void pf_draw_cep_stats(pf_t *pf, struct _rtk_fig_t *fig)</div></div>
+<div class="ttc" id="apf_8h_html_ab59ea6182aba307dd9faa7926219885e"><div class="ttname"><a href="pf_8h.html#ab59ea6182aba307dd9faa7926219885e">pf_alloc</a></div><div class="ttdeci">pf_t * pf_alloc(int min_samples, int max_samples, double alpha_slow, double alpha_fast, pf_init_model_fn_t random_pose_fn, void *random_pose_data)</div><div class="ttdef"><b>Definition:</b> pf.c:46</div></div>
+<div class="ttc" id="apf_8h_html_ab75fbbe45feaecb5c13415d373e0d8e6"><div class="ttname"><a href="pf_8h.html#ab75fbbe45feaecb5c13415d373e0d8e6">pf_init_model_fn_t</a></div><div class="ttdeci">pf_vector_t(* pf_init_model_fn_t)(void *init_data)</div><div class="ttdef"><b>Definition:</b> pf.h:47</div></div>
+<div class="ttc" id="apf_8h_html_abac0d80ca317cca97247df42fda3476d"><div class="ttname"><a href="pf_8h.html#abac0d80ca317cca97247df42fda3476d">pf_sensor_model_fn_t</a></div><div class="ttdeci">double(* pf_sensor_model_fn_t)(void *sensor_data, struct _pf_sample_set_t *set)</div><div class="ttdef"><b>Definition:</b> pf.h:57</div></div>
+<div class="ttc" id="apf_8h_html_abdccd5641a5c2a1ff66d4fe80e723bd2"><div class="ttname"><a href="pf_8h.html#abdccd5641a5c2a1ff66d4fe80e723bd2">pf_get_cep_stats</a></div><div class="ttdeci">void pf_get_cep_stats(pf_t *pf, pf_vector_t *mean, double *var)</div><div class="ttdef"><b>Definition:</b> pf.c:701</div></div>
+<div class="ttc" id="apf_8h_html_ac98d0b8f0a0711c7db5e7420705c9eda"><div class="ttname"><a href="pf_8h.html#ac98d0b8f0a0711c7db5e7420705c9eda">pf_draw_cluster_stats</a></div><div class="ttdeci">void pf_draw_cluster_stats(pf_t *pf, struct _rtk_fig_t *fig)</div></div>
+<div class="ttc" id="apf_8h_html_adbdbc82024445c0a81904c3abb8c2dce"><div class="ttname"><a href="pf_8h.html#adbdbc82024445c0a81904c3abb8c2dce">pf_set_selective_resampling</a></div><div class="ttdeci">void pf_set_selective_resampling(pf_t *pf, int selective_resampling)</div><div class="ttdef"><b>Definition:</b> pf.c:695</div></div>
+<div class="ttc" id="apf_8h_html_ae2b239fe8546df136beca661cede73e2"><div class="ttname"><a href="pf_8h.html#ae2b239fe8546df136beca661cede73e2">pf_init_model</a></div><div class="ttdeci">void pf_init_model(pf_t *pf, pf_init_model_fn_t init_fn, void *init_data)</div><div class="ttdef"><b>Definition:</b> pf.c:178</div></div>
+<div class="ttc" id="apf_8h_html_af2ae5d54790e0aca689b71a16fe4c7cb"><div class="ttname"><a href="pf_8h.html#af2ae5d54790e0aca689b71a16fe4c7cb">pf_cluster_stats</a></div><div class="ttdeci">void pf_cluster_stats(pf_t *pf, pf_sample_set_t *set)</div><div class="ttdef"><b>Definition:</b> pf.c:559</div></div>
+<div class="ttc" id="apf__kdtree_8h_html"><div class="ttname"><a href="pf__kdtree_8h.html">pf_kdtree.h</a></div></div>
+<div class="ttc" id="apf__vector_8h_html"><div class="ttname"><a href="pf__vector_8h.html">pf_vector.h</a></div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html"><div class="ttname"><a href="struct__pf__sample__set__t.html">_pf_sample_set_t</a></div><div class="ttdef"><b>Definition:</b> pf.h:94</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_a0a6cc28513a0f672bb76655d651dd54a"><div class="ttname"><a href="struct__pf__sample__set__t.html#a0a6cc28513a0f672bb76655d651dd54a">_pf_sample_set_t::cluster_count</a></div><div class="ttdeci">int cluster_count</div><div class="ttdef"><b>Definition:</b> pf.h:103</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_a2694043163f3283670e2b0b20062a7b5"><div class="ttname"><a href="struct__pf__sample__set__t.html#a2694043163f3283670e2b0b20062a7b5">_pf_sample_set_t::cluster_max_count</a></div><div class="ttdeci">int cluster_max_count</div><div class="ttdef"><b>Definition:</b> pf.h:103</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_a3675a8bce5f799f6c394c95a5ca68af5"><div class="ttname"><a href="struct__pf__sample__set__t.html#a3675a8bce5f799f6c394c95a5ca68af5">_pf_sample_set_t::sample_count</a></div><div class="ttdeci">int sample_count</div><div class="ttdef"><b>Definition:</b> pf.h:96</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_a4a220e98a56568d37d0be50ee5ad30c9"><div class="ttname"><a href="struct__pf__sample__set__t.html#a4a220e98a56568d37d0be50ee5ad30c9">_pf_sample_set_t::kdtree</a></div><div class="ttdeci">pf_kdtree_t * kdtree</div><div class="ttdef"><b>Definition:</b> pf.h:100</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_a610c806c7e94496351372ac870fcd45e"><div class="ttname"><a href="struct__pf__sample__set__t.html#a610c806c7e94496351372ac870fcd45e">_pf_sample_set_t::mean</a></div><div class="ttdeci">pf_vector_t mean</div><div class="ttdef"><b>Definition:</b> pf.h:107</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_a93820b25bc66464f8a202b3c57520535"><div class="ttname"><a href="struct__pf__sample__set__t.html#a93820b25bc66464f8a202b3c57520535">_pf_sample_set_t::converged</a></div><div class="ttdeci">int converged</div><div class="ttdef"><b>Definition:</b> pf.h:109</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_ab4f4541da504ceab98942599c3157c78"><div class="ttname"><a href="struct__pf__sample__set__t.html#ab4f4541da504ceab98942599c3157c78">_pf_sample_set_t::clusters</a></div><div class="ttdeci">pf_cluster_t * clusters</div><div class="ttdef"><b>Definition:</b> pf.h:104</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_ac900d759311cfad78aa89516e3d8e443"><div class="ttname"><a href="struct__pf__sample__set__t.html#ac900d759311cfad78aa89516e3d8e443">_pf_sample_set_t::cov</a></div><div class="ttdeci">pf_matrix_t cov</div><div class="ttdef"><b>Definition:</b> pf.h:108</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_ad70713ed63fc4d5619197f06017f246a"><div class="ttname"><a href="struct__pf__sample__set__t.html#ad70713ed63fc4d5619197f06017f246a">_pf_sample_set_t::samples</a></div><div class="ttdeci">pf_sample_t * samples</div><div class="ttdef"><b>Definition:</b> pf.h:97</div></div>
+<div class="ttc" id="astruct__pf__sample__set__t_html_ae31b0b1175e6355530af7577b1c1afca"><div class="ttname"><a href="struct__pf__sample__set__t.html#ae31b0b1175e6355530af7577b1c1afca">_pf_sample_set_t::n_effective</a></div><div class="ttdeci">double n_effective</div><div class="ttdef"><b>Definition:</b> pf.h:110</div></div>
+<div class="ttc" id="astruct__pf__t_html"><div class="ttname"><a href="struct__pf__t.html">_pf_t</a></div><div class="ttdef"><b>Definition:</b> pf.h:116</div></div>
+<div class="ttc" id="astruct__pf__t_html_a23cf0448c8b5f76f60c56e848865d484"><div class="ttname"><a href="struct__pf__t.html#a23cf0448c8b5f76f60c56e848865d484">_pf_t::current_set</a></div><div class="ttdeci">int current_set</div><div class="ttdef"><b>Definition:</b> pf.h:128</div></div>
+<div class="ttc" id="astruct__pf__t_html_a4a272f2ad96b0353bdca47f9c7f66ea1"><div class="ttname"><a href="struct__pf__t.html#a4a272f2ad96b0353bdca47f9c7f66ea1">_pf_t::w_slow</a></div><div class="ttdeci">double w_slow</div><div class="ttdef"><b>Definition:</b> pf.h:132</div></div>
+<div class="ttc" id="astruct__pf__t_html_a4ea2363cb6fb0cd4cd70b7817ffdfff6"><div class="ttname"><a href="struct__pf__t.html#a4ea2363cb6fb0cd4cd70b7817ffdfff6">_pf_t::random_pose_fn</a></div><div class="ttdeci">pf_init_model_fn_t random_pose_fn</div><div class="ttdef"><b>Definition:</b> pf.h:138</div></div>
+<div class="ttc" id="astruct__pf__t_html_a4f8ab4cfeeda1f7ee91a633dfc37728f"><div class="ttname"><a href="struct__pf__t.html#a4f8ab4cfeeda1f7ee91a633dfc37728f">_pf_t::random_pose_data</a></div><div class="ttdeci">void * random_pose_data</div><div class="ttdef"><b>Definition:</b> pf.h:139</div></div>
+<div class="ttc" id="astruct__pf__t_html_a56013d9af994b1781074b0e8f30c495a"><div class="ttname"><a href="struct__pf__t.html#a56013d9af994b1781074b0e8f30c495a">_pf_t::sets</a></div><div class="ttdeci">pf_sample_set_t sets[2]</div><div class="ttdef"><b>Definition:</b> pf.h:129</div></div>
+<div class="ttc" id="astruct__pf__t_html_a7116f78f8d05ca35ad17240967bf30c4"><div class="ttname"><a href="struct__pf__t.html#a7116f78f8d05ca35ad17240967bf30c4">_pf_t::min_samples</a></div><div class="ttdeci">int min_samples</div><div class="ttdef"><b>Definition:</b> pf.h:118</div></div>
+<div class="ttc" id="astruct__pf__t_html_a80816db3ffb4c399ca221e2f19e3c2e0"><div class="ttname"><a href="struct__pf__t.html#a80816db3ffb4c399ca221e2f19e3c2e0">_pf_t::alpha_slow</a></div><div class="ttdeci">double alpha_slow</div><div class="ttdef"><b>Definition:</b> pf.h:135</div></div>
+<div class="ttc" id="astruct__pf__t_html_a8434c18b71246a187cb705e5aba049e6"><div class="ttname"><a href="struct__pf__t.html#a8434c18b71246a187cb705e5aba049e6">_pf_t::max_samples</a></div><div class="ttdeci">int max_samples</div><div class="ttdef"><b>Definition:</b> pf.h:118</div></div>
+<div class="ttc" id="astruct__pf__t_html_a8c9011dce69524801db184a5d524e5d2"><div class="ttname"><a href="struct__pf__t.html#a8c9011dce69524801db184a5d524e5d2">_pf_t::w_fast</a></div><div class="ttdeci">double w_fast</div><div class="ttdef"><b>Definition:</b> pf.h:132</div></div>
+<div class="ttc" id="astruct__pf__t_html_a9ff6ca9bd519a956aa01797694e5f15c"><div class="ttname"><a href="struct__pf__t.html#a9ff6ca9bd519a956aa01797694e5f15c">_pf_t::alpha_fast</a></div><div class="ttdeci">double alpha_fast</div><div class="ttdef"><b>Definition:</b> pf.h:135</div></div>
+<div class="ttc" id="astruct__pf__t_html_aa1efadfc08ba59f8fe55071519d209c2"><div class="ttname"><a href="struct__pf__t.html#aa1efadfc08ba59f8fe55071519d209c2">_pf_t::dist_threshold</a></div><div class="ttdeci">double dist_threshold</div><div class="ttdef"><b>Definition:</b> pf.h:141</div></div>
+<div class="ttc" id="astruct__pf__t_html_ab70ff4e12ee6ed1469a67aff0de36ebc"><div class="ttname"><a href="struct__pf__t.html#ab70ff4e12ee6ed1469a67aff0de36ebc">_pf_t::pop_z</a></div><div class="ttdeci">double pop_z</div><div class="ttdef"><b>Definition:</b> pf.h:121</div></div>
+<div class="ttc" id="astruct__pf__t_html_abc25dc55eae0b4a166755f45048019e7"><div class="ttname"><a href="struct__pf__t.html#abc25dc55eae0b4a166755f45048019e7">_pf_t::converged</a></div><div class="ttdeci">int converged</div><div class="ttdef"><b>Definition:</b> pf.h:142</div></div>
+<div class="ttc" id="astruct__pf__t_html_abc6252ca850fe993667913d7ade00a40"><div class="ttname"><a href="struct__pf__t.html#abc6252ca850fe993667913d7ade00a40">_pf_t::selective_resampling</a></div><div class="ttdeci">int selective_resampling</div><div class="ttdef"><b>Definition:</b> pf.h:145</div></div>
+<div class="ttc" id="astruct__pf__t_html_afa176e9527cb51f3ef2563fe86a3861e"><div class="ttname"><a href="struct__pf__t.html#afa176e9527cb51f3ef2563fe86a3861e">_pf_t::pop_err</a></div><div class="ttdeci">double pop_err</div><div class="ttdef"><b>Definition:</b> pf.h:121</div></div>
+<div class="ttc" id="astruct__pf__t_html_afec7a84a3ccfacb42791f786acfbcf81"><div class="ttname"><a href="struct__pf__t.html#afec7a84a3ccfacb42791f786acfbcf81">_pf_t::limit_cache</a></div><div class="ttdeci">int * limit_cache</div><div class="ttdef"><b>Definition:</b> pf.h:124</div></div>
+<div class="ttc" id="astructpf__cluster__t_html"><div class="ttname"><a href="structpf__cluster__t.html">pf_cluster_t</a></div><div class="ttdef"><b>Definition:</b> pf.h:75</div></div>
+<div class="ttc" id="astructpf__cluster__t_html_a65ad802d21b6998bbf776d7d210845c0"><div class="ttname"><a href="structpf__cluster__t.html#a65ad802d21b6998bbf776d7d210845c0">pf_cluster_t::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> pf.h:77</div></div>
+<div class="ttc" id="astructpf__cluster__t_html_aa635a7fa9ac89114cb5fc91ea1882ed3"><div class="ttname"><a href="structpf__cluster__t.html#aa635a7fa9ac89114cb5fc91ea1882ed3">pf_cluster_t::weight</a></div><div class="ttdeci">double weight</div><div class="ttdef"><b>Definition:</b> pf.h:80</div></div>
+<div class="ttc" id="astructpf__cluster__t_html_aa86523382c704fe9a0691416c7bf78af"><div class="ttname"><a href="structpf__cluster__t.html#aa86523382c704fe9a0691416c7bf78af">pf_cluster_t::cov</a></div><div class="ttdeci">pf_matrix_t cov</div><div class="ttdef"><b>Definition:</b> pf.h:84</div></div>
+<div class="ttc" id="astructpf__cluster__t_html_ab9d9b7bc29209d213b8ccef5a7c5d63c"><div class="ttname"><a href="structpf__cluster__t.html#ab9d9b7bc29209d213b8ccef5a7c5d63c">pf_cluster_t::mean</a></div><div class="ttdeci">pf_vector_t mean</div><div class="ttdef"><b>Definition:</b> pf.h:83</div></div>
+<div class="ttc" id="astructpf__kdtree__t_html"><div class="ttname"><a href="structpf__kdtree__t.html">pf_kdtree_t</a></div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:63</div></div>
+<div class="ttc" id="astructpf__matrix__t_html"><div class="ttname"><a href="structpf__matrix__t.html">pf_matrix_t</a></div><div class="ttdef"><b>Definition:</b> pf_vector.h:46</div></div>
+<div class="ttc" id="astructpf__sample__t_html"><div class="ttname"><a href="structpf__sample__t.html">pf_sample_t</a></div><div class="ttdef"><b>Definition:</b> pf.h:63</div></div>
+<div class="ttc" id="astructpf__sample__t_html_ac3ef3426ea73debfc921d832e4073d44"><div class="ttname"><a href="structpf__sample__t.html#ac3ef3426ea73debfc921d832e4073d44">pf_sample_t::pose</a></div><div class="ttdeci">pf_vector_t pose</div><div class="ttdef"><b>Definition:</b> pf.h:65</div></div>
+<div class="ttc" id="astructpf__sample__t_html_af816652fe9bbeebfe723909d41004f29"><div class="ttname"><a href="structpf__sample__t.html#af816652fe9bbeebfe723909d41004f29">pf_sample_t::weight</a></div><div class="ttdeci">double weight</div><div class="ttdef"><b>Definition:</b> pf.h:68</div></div>
+<div class="ttc" id="astructpf__vector__t_html"><div class="ttname"><a href="structpf__vector__t.html">pf_vector_t</a></div><div class="ttdef"><b>Definition:</b> pf_vector.h:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

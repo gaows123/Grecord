@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: dwa_local_planner/include/dwa_local_planner/dwa_planner_ros.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2cc68a6132e9273d64afb7235e6f46d2.html">dwa_local_planner</a></li><li class="navelem"><a class="el" href="dir_30c3668e3322fa4a3725bafdc83b1b59.html">include</a></li><li class="navelem"><a class="el" href="dir_858bc23697a7030ee6f1e350c24b6121.html">dwa_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">dwa_planner_ros.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="dwa__planner__ros_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">*</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">* Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">*</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">*  Copyright (c) 2009, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">*</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">*  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">*  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">*</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">*   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">*   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">*     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">*     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">*     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">*</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">*  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">*</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">* Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">*********************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef DWA_LOCAL_PLANNER_DWA_PLANNER_ROS_H_</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define DWA_LOCAL_PLANNER_DWA_PLANNER_ROS_H_</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;boost/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;boost/thread.hpp&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;tf2_ros/buffer.h&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;dynamic_reconfigure/server.h&gt;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;dwa_local_planner/DWAPlannerConfig.h&gt;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &lt;angles/angles.h&gt;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &lt;nav_msgs/Odometry.h&gt;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &lt;<a class="code" href="costmap__2d__ros_8h.html">costmap_2d/costmap_2d_ros.h</a>&gt;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &lt;<a class="code" href="base__local__planner_8h.html">nav_core/base_local_planner.h</a>&gt;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &lt;<a class="code" href="latched__stop__rotate__controller_8h.html">base_local_planner/latched_stop_rotate_controller.h</a>&gt;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &lt;<a class="code" href="odometry__helper__ros_8h.html">base_local_planner/odometry_helper_ros.h</a>&gt;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &lt;<a class="code" href="dwa__planner_8h.html">dwa_local_planner/dwa_planner.h</a>&gt;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacedwa__local__planner.html">dwa_local_planner</a> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html">   65</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html">DWAPlannerROS</a> : <span class="keyword">public</span> <a class="code hl_class" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a> {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a53854eb5a69270d2935db6115da00b07">DWAPlannerROS</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85">initialize</a>(std::string name, tf2_ros::Buffer* tf,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>          <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* costmap_ros);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ab4a313f013569f71f59101ba8529640a">~DWAPlannerROS</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0">computeVelocityCommands</a>(geometry_msgs::Twist&amp; cmd_vel);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e">dwaComputeVelocityCommands</a>(geometry_msgs::PoseStamped&amp; global_pose, geometry_msgs::Twist&amp; cmd_vel);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a0cfcf517c3112678a7eabeb498d9b2ce">setPlan</a>(<span class="keyword">const</span> std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; orig_global_plan);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941">isGoalReached</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8">  116</a></span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8">isInitialized</a>() {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3f9060b4d745f7ff5cc0ac6e0869cfda">initialized_</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a75d528df04f8600bf205441855c28695">reconfigureCB</a>(DWAPlannerConfig &amp;config, uint32_t level);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3ed5e8084732aae21c15adc1f98a68ca">publishLocalPlan</a>(std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; path);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#acf570c8f336f17667f8a068b77aa9c48">publishGlobalPlan</a>(std::vector&lt;geometry_msgs::PoseStamped&gt;&amp; path);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#aac8917d72216bad23d03aae6d9b05a4b">  130</a></span>      tf2_ros::Buffer* <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#aac8917d72216bad23d03aae6d9b05a4b">tf_</a>; </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="comment">// 全局和局部路径的可视化</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a858610dbe18fa5f37f1da9dbeaa47af6">  133</a></span>      ros::Publisher <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a858610dbe18fa5f37f1da9dbeaa47af6">g_plan_pub_</a>, <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a7756f098cafda35d4acc1f4ff6af0a28">l_plan_pub_</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="comment">// 用来存储运动控制参数以及costmap2d、tf等，会被传入dp_</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#af153046111302f3258ebd2bf2d2aa505">  136</a></span>      <a class="code hl_class" href="classbase__local__planner_1_1_local_planner_util.html">base_local_planner::LocalPlannerUtil</a> <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#af153046111302f3258ebd2bf2d2aa505">planner_util_</a>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <span class="comment">// 指向dwa局部路径规划器类的共享指针</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e786447ddb9daccacf0df6fceadd71f">  138</a></span>      boost::shared_ptr&lt;DWAPlanner&gt; <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e786447ddb9daccacf0df6fceadd71f">dp_</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4122daf0cf82134cc935ba26e16969ab">  140</a></span>      <a class="code hl_class" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4122daf0cf82134cc935ba26e16969ab">costmap_ros_</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a2719957a5e10b456a2044b01eebfdb9d">  142</a></span>      dynamic_reconfigure::Server&lt;DWAPlannerConfig&gt; *<a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a2719957a5e10b456a2044b01eebfdb9d">dsrv_</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a5d7933f2f2a867eccc49626cc870fd34">  143</a></span>      dwa_local_planner::DWAPlannerConfig <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a5d7933f2f2a867eccc49626cc870fd34">default_config_</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a721d5e2364754273a369a32d445ca771">  144</a></span>      <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a721d5e2364754273a369a32d445ca771">setup_</a>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a622801b690be44d668b967d29708c58c">  145</a></span>      geometry_msgs::PoseStamped <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a622801b690be44d668b967d29708c58c">current_pose_</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <span class="comment">// 到达目标点后的停止然后旋转的运动控制类</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6132be586af38569fd58f75da07dc6e0">  147</a></span>      <a class="code hl_class" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html">base_local_planner::LatchedStopRotateController</a> <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6132be586af38569fd58f75da07dc6e0">latchedStopRotateController_</a>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3f9060b4d745f7ff5cc0ac6e0869cfda">  150</a></span>      <span class="keywordtype">bool</span> <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3f9060b4d745f7ff5cc0ac6e0869cfda">initialized_</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <span class="comment">// 用来辅助获取odom信息，会被传入dp_</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4fd27149428a4010d44439caa2d749de">  153</a></span>      <a class="code hl_class" href="classbase__local__planner_1_1_odometry_helper_ros.html">base_local_planner::OdometryHelperRos</a> <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4fd27149428a4010d44439caa2d749de">odom_helper_</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e81ef8eb8c07c08c031b74c9f68bc6e">  154</a></span>      std::string <a class="code hl_variable" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e81ef8eb8c07c08c031b74c9f68bc6e">odom_topic_</a>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  };</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abase__local__planner_8h_html"><div class="ttname"><a href="base__local__planner_8h.html">base_local_planner.h</a></div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_latched_stop_rotate_controller_html"><div class="ttname"><a href="classbase__local__planner_1_1_latched_stop_rotate_controller.html">base_local_planner::LatchedStopRotateController</a></div><div class="ttdef"><b>Definition:</b> latched_stop_rotate_controller.h:21</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_local_planner_util_html"><div class="ttname"><a href="classbase__local__planner_1_1_local_planner_util.html">base_local_planner::LocalPlannerUtil</a></div><div class="ttdoc">Helper class implementing infrastructure code many local planner implementations may need.</div><div class="ttdef"><b>Definition:</b> local_planner_util.h:57</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_odometry_helper_ros_html"><div class="ttname"><a href="classbase__local__planner_1_1_odometry_helper_ros.html">base_local_planner::OdometryHelperRos</a></div><div class="ttdef"><b>Definition:</b> odometry_helper_ros.h:48</div></div>
+<div class="ttc" id="aclasscostmap__2d_1_1_costmap2_d_r_o_s_html"><div class="ttname"><a href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a></div><div class="ttdoc">A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl...</div><div class="ttdef"><b>Definition:</b> costmap_2d_ros.h:75</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html">dwa_local_planner::DWAPlannerROS</a></div><div class="ttdoc">DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:65</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a0cfcf517c3112678a7eabeb498d9b2ce"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a0cfcf517c3112678a7eabeb498d9b2ce">dwa_local_planner::DWAPlannerROS::setPlan</a></div><div class="ttdeci">bool setPlan(const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</div><div class="ttdoc">更新全局路径</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:143</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a1e786447ddb9daccacf0df6fceadd71f"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e786447ddb9daccacf0df6fceadd71f">dwa_local_planner::DWAPlannerROS::dp_</a></div><div class="ttdeci">boost::shared_ptr&lt; DWAPlanner &gt; dp_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:138</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a1e81ef8eb8c07c08c031b74c9f68bc6e"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e81ef8eb8c07c08c031b74c9f68bc6e">dwa_local_planner::DWAPlannerROS::odom_topic_</a></div><div class="ttdeci">std::string odom_topic_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:154</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a2719957a5e10b456a2044b01eebfdb9d"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a2719957a5e10b456a2044b01eebfdb9d">dwa_local_planner::DWAPlannerROS::dsrv_</a></div><div class="ttdeci">dynamic_reconfigure::Server&lt; DWAPlannerConfig &gt; * dsrv_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:142</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a3ed5e8084732aae21c15adc1f98a68ca"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3ed5e8084732aae21c15adc1f98a68ca">dwa_local_planner::DWAPlannerROS::publishLocalPlan</a></div><div class="ttdeci">void publishLocalPlan(std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:173</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a3f9060b4d745f7ff5cc0ac6e0869cfda"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3f9060b4d745f7ff5cc0ac6e0869cfda">dwa_local_planner::DWAPlannerROS::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:150</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a4122daf0cf82134cc935ba26e16969ab"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4122daf0cf82134cc935ba26e16969ab">dwa_local_planner::DWAPlannerROS::costmap_ros_</a></div><div class="ttdeci">costmap_2d::Costmap2DROS * costmap_ros_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:140</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a4fd27149428a4010d44439caa2d749de"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4fd27149428a4010d44439caa2d749de">dwa_local_planner::DWAPlannerROS::odom_helper_</a></div><div class="ttdeci">base_local_planner::OdometryHelperRos odom_helper_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:153</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a53854eb5a69270d2935db6115da00b07"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a53854eb5a69270d2935db6115da00b07">dwa_local_planner::DWAPlannerROS::DWAPlannerROS</a></div><div class="ttdeci">DWAPlannerROS()</div><div class="ttdoc">DWAPlannerROS 封装类的构造</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:92</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a5d7933f2f2a867eccc49626cc870fd34"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a5d7933f2f2a867eccc49626cc870fd34">dwa_local_planner::DWAPlannerROS::default_config_</a></div><div class="ttdeci">dwa_local_planner::DWAPlannerConfig default_config_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:143</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a6132be586af38569fd58f75da07dc6e0"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6132be586af38569fd58f75da07dc6e0">dwa_local_planner::DWAPlannerROS::latchedStopRotateController_</a></div><div class="ttdeci">base_local_planner::LatchedStopRotateController latchedStopRotateController_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:147</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a61c4737a8e5eb82f4c2407326e411d85"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85">dwa_local_planner::DWAPlannerROS::initialize</a></div><div class="ttdeci">void initialize(std::string name, tf2_ros::Buffer *tf, costmap_2d::Costmap2DROS *costmap_ros)</div><div class="ttdoc">构建ros的封装</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:98</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a622801b690be44d668b967d29708c58c"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a622801b690be44d668b967d29708c58c">dwa_local_planner::DWAPlannerROS::current_pose_</a></div><div class="ttdeci">geometry_msgs::PoseStamped current_pose_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:145</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a6d5796c54a10c3e2c89ec9afb64e9b5e"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e">dwa_local_planner::DWAPlannerROS::dwaComputeVelocityCommands</a></div><div class="ttdeci">bool dwaComputeVelocityCommands(geometry_msgs::PoseStamped &amp;global_pose, geometry_msgs::Twist &amp;cmd_vel)</div><div class="ttdoc">根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:189</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a700178e32159b614d328326b6ba5f8b0"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0">dwa_local_planner::DWAPlannerROS::computeVelocityCommands</a></div><div class="ttdeci">bool computeVelocityCommands(geometry_msgs::Twist &amp;cmd_vel)</div><div class="ttdoc">计算下发速度根据机器人的位姿，当前速度和目标点</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:267</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a721d5e2364754273a369a32d445ca771"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a721d5e2364754273a369a32d445ca771">dwa_local_planner::DWAPlannerROS::setup_</a></div><div class="ttdeci">bool setup_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:144</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a75d528df04f8600bf205441855c28695"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a75d528df04f8600bf205441855c28695">dwa_local_planner::DWAPlannerROS::reconfigureCB</a></div><div class="ttdeci">void reconfigureCB(DWAPlannerConfig &amp;config, uint32_t level)</div><div class="ttdoc">动态更新局部规划器参数的回调函数</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:57</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a7756f098cafda35d4acc1f4ff6af0a28"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a7756f098cafda35d4acc1f4ff6af0a28">dwa_local_planner::DWAPlannerROS::l_plan_pub_</a></div><div class="ttdeci">ros::Publisher l_plan_pub_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:133</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a847c1877d967acd515d7ddf1ac246941"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941">dwa_local_planner::DWAPlannerROS::isGoalReached</a></div><div class="ttdeci">bool isGoalReached()</div><div class="ttdoc">是否到达目标点</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:155</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_a858610dbe18fa5f37f1da9dbeaa47af6"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a858610dbe18fa5f37f1da9dbeaa47af6">dwa_local_planner::DWAPlannerROS::g_plan_pub_</a></div><div class="ttdeci">ros::Publisher g_plan_pub_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:133</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_aac8917d72216bad23d03aae6d9b05a4b"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#aac8917d72216bad23d03aae6d9b05a4b">dwa_local_planner::DWAPlannerROS::tf_</a></div><div class="ttdeci">tf2_ros::Buffer * tf_</div><div class="ttdoc">用于点云转换</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:130</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_ab4a313f013569f71f59101ba8529640a"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ab4a313f013569f71f59101ba8529640a">dwa_local_planner::DWAPlannerROS::~DWAPlannerROS</a></div><div class="ttdeci">~DWAPlannerROS()</div><div class="ttdoc">封装类的析构</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:182</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_acf570c8f336f17667f8a068b77aa9c48"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#acf570c8f336f17667f8a068b77aa9c48">dwa_local_planner::DWAPlannerROS::publishGlobalPlan</a></div><div class="ttdeci">void publishGlobalPlan(std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.cpp:178</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_ae6d59b99f11c5998b10fba331ef077a8"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8">dwa_local_planner::DWAPlannerROS::isInitialized</a></div><div class="ttdeci">bool isInitialized()</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:116</div></div>
+<div class="ttc" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_html_af153046111302f3258ebd2bf2d2aa505"><div class="ttname"><a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#af153046111302f3258ebd2bf2d2aa505">dwa_local_planner::DWAPlannerROS::planner_util_</a></div><div class="ttdeci">base_local_planner::LocalPlannerUtil planner_util_</div><div class="ttdef"><b>Definition:</b> dwa_planner_ros.h:136</div></div>
+<div class="ttc" id="aclassnav__core_1_1_base_local_planner_html"><div class="ttname"><a href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a></div><div class="ttdoc">提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口.</div><div class="ttdef"><b>Definition:</b> base_local_planner.h:50</div></div>
+<div class="ttc" id="acostmap__2d__ros_8h_html"><div class="ttname"><a href="costmap__2d__ros_8h.html">costmap_2d_ros.h</a></div></div>
+<div class="ttc" id="adwa__planner_8h_html"><div class="ttname"><a href="dwa__planner_8h.html">dwa_planner.h</a></div></div>
+<div class="ttc" id="alatched__stop__rotate__controller_8h_html"><div class="ttname"><a href="latched__stop__rotate__controller_8h.html">latched_stop_rotate_controller.h</a></div></div>
+<div class="ttc" id="anamespacedwa__local__planner_html"><div class="ttname"><a href="namespacedwa__local__planner.html">dwa_local_planner</a></div><div class="ttdef"><b>Definition:</b> dwa_planner.h:65</div></div>
+<div class="ttc" id="aodometry__helper__ros_8h_html"><div class="ttname"><a href="odometry__helper__ros_8h.html">odometry_helper_ros.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

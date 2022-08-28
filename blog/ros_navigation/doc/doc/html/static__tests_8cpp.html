@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d/test/static_tests.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_937d906ccfe5ef58b0167ee489be34b2.html">test</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">static_tests.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="costmap__2d_8h_source.html">costmap_2d/costmap_2d.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="layered__costmap_8h_source.html">costmap_2d/layered_costmap.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="obstacle__layer_8h_source.html">costmap_2d/obstacle_layer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="static__layer_8h_source.html">costmap_2d/static_layer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="observation__buffer_8h_source.html">costmap_2d/observation_buffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="testing__helper_8h_source.html">costmap_2d/testing_helper.h</a>&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;gtest/gtest.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+static_tests.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="static__tests_8cpp__incl.png" border="0" usemap="#acostmap__2d_2test_2static__tests_8cpp" alt=""/></div>
+<map name="acostmap__2d_2test_2static__tests_8cpp" id="acostmap__2d_2test_2static__tests_8cpp">
+<area shape="rect" title=" " alt="" coords="2852,5,3007,47"/>
+<area shape="rect" href="costmap__2d_8h.html" title=" " alt="" coords="2593,541,2772,568"/>
+<area shape="rect" href="layered__costmap_8h.html" title=" " alt="" coords="2487,363,2625,404"/>
+<area shape="rect" href="obstacle__layer_8h.html" title=" " alt="" coords="1229,184,1376,225"/>
+<area shape="rect" href="observation__buffer_8h.html" title=" " alt="" coords="1419,452,1583,493"/>
+<area shape="rect" href="static__layer_8h.html" title=" " alt="" coords="2191,191,2366,218"/>
+<area shape="rect" href="testing__helper_8h.html" title=" " alt="" coords="2748,95,2884,136"/>
+<area shape="rect" title=" " alt="" coords="3132,102,3172,129"/>
+<area shape="rect" title=" " alt="" coords="3197,102,3291,129"/>
+<area shape="rect" title=" " alt="" coords="2527,616,2585,643"/>
+<area shape="rect" title=" " alt="" coords="2631,616,2689,643"/>
+<area shape="rect" title=" " alt="" coords="1713,616,1873,643"/>
+<area shape="rect" title=" " alt="" coords="2713,616,2831,643"/>
+<area shape="rect" href="cost__values_8h.html" title=" " alt="" coords="2711,459,2889,486"/>
+<area shape="rect" href="layer_8h.html" title=" " alt="" coords="2332,459,2468,486"/>
+<area shape="rect" title=" " alt="" coords="2373,541,2427,568"/>
+<area shape="rect" title=" " alt="" coords="2035,541,2146,568"/>
+<area shape="rect" title=" " alt="" coords="1882,370,1955,397"/>
+<area shape="rect" href="costmap__layer_8h.html" title=" " alt="" coords="1455,273,1601,315"/>
+<area shape="rect" title=" " alt="" coords="1286,616,1471,643"/>
+<area shape="rect" title=" " alt="" coords="1727,281,1913,307"/>
+<area shape="rect" title=" " alt="" coords="62,281,239,307"/>
+<area shape="rect" title=" " alt="" coords="263,273,406,315"/>
+<area shape="rect" title=" " alt="" coords="431,281,609,307"/>
+<area shape="rect" title=" " alt="" coords="633,273,804,315"/>
+<area shape="rect" title=" " alt="" coords="828,281,991,307"/>
+<area shape="rect" title=" " alt="" coords="1937,281,2127,307"/>
+<area shape="rect" title=" " alt="" coords="2143,363,2286,404"/>
+<area shape="rect" title=" " alt="" coords="1015,273,1201,315"/>
+<area shape="rect" href="footprint_8h.html" title=" " alt="" coords="1225,281,1380,307"/>
+<area shape="rect" title=" " alt="" coords="1417,541,1455,568"/>
+<area shape="rect" title=" " alt="" coords="1261,541,1341,568"/>
+<area shape="rect" href="observation_8h.html" title=" " alt="" coords="1479,541,1654,568"/>
+<area shape="rect" title=" " alt="" coords="1414,370,1591,397"/>
+<area shape="rect" title=" " alt="" coords="961,370,1191,397"/>
+<area shape="rect" title=" " alt="" coords="1215,370,1390,397"/>
+<area shape="rect" title=" " alt="" coords="2252,273,2431,315"/>
+<area shape="rect" title=" " alt="" coords="2455,281,2687,307"/>
+<area shape="rect" href="inflation__layer_8h.html" title=" " alt="" coords="2762,273,2905,315"/>
+<area shape="rect" title=" " alt="" coords="2727,184,2905,225"/>
+<area shape="rect" title=" " alt="" coords="2727,363,2905,404"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="static__tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Tests the reset method</p>
+<p ><a class="el" href="module__tests_8cpp.html#ad60e6773a46c10dda1470224e1f13f21">TEST(costmap, testResetForStaticMap)</a>{ Define a static map with a large object in the center std::vector&lt;unsigned char&gt; staticMap; for(unsigned int i=0; i&lt;10; i++){ for(unsigned int j=0; j&lt;10; j++){ staticMap.push_back(costmap_2d::LETHAL_OBSTACLE); } }</p>
+<p >Allocate the cost map, with a inflation to 3 cells all around Costmap2D map(10, 10, RESOLUTION, 0.0, 0.0, 3, 3, 3, OBSTACLE_RANGE, MAX_Z, RAYTRACE_RANGE, 25, staticMap, THRESHOLD);</p>
+<p >Populate the cost map with a wall around the perimeter. Free space should clear out the room. pcl::PointCloud&lt;pcl::PointXYZ&gt; cloud; cloud.points.resize(40);</p>
+<p >Left wall unsigned int ind = 0; for (unsigned int i = 0; i &lt; 10; i++){ Left cloud.points[ind].x = 0; cloud.points[ind].y = i; cloud.points[ind].z = MAX_Z; ind++;</p>
+<p >Top cloud.points[ind].x = i; cloud.points[ind].y = 0; cloud.points[ind].z = MAX_Z; ind++;</p>
+<p >Right cloud.points[ind].x = 9; cloud.points[ind].y = i; cloud.points[ind].z = MAX_Z; ind++;</p>
+<p >Bottom cloud.points[ind].x = i; cloud.points[ind].y = 9; cloud.points[ind].z = MAX_Z; ind++; }</p>
+<p >double wx = 5.0, wy = 5.0; geometry_msgs::Point p; p.x = wx; p.y = wy; p.z = MAX_Z; Observation obs(p, cloud, OBSTACLE_RANGE, RAYTRACE_RANGE); std::vector&lt;Observation&gt; obsBuf; obsBuf.push_back(obs);</p>
+<p >Update the cost map for this observation map.updateWorld(wx, wy, obsBuf, obsBuf);</p>
+<p >Verify that we now have only 36 cells with lethal cost, thus provong that we have correctly cleared free space int hitCount = 0; for(unsigned int i=0; i &lt; 10; ++i){ for(unsigned int j=0; j &lt; 10; ++j){ if(map.getCost(i, j) == <a class="el" href="namespacecostmap__2d.html#aab110f187082d88d103ee84c8e420872">costmap_2d::LETHAL_OBSTACLE</a>){ hitCount++; } } } ASSERT_EQ(hitCount, 36);</p>
+<p >Veriy that we have 64 non-leathal hitCount = 0; for(unsigned int i=0; i &lt; 10; ++i){ for(unsigned int j=0; j &lt; 10; ++j){ if(map.getCost(i, j) != <a class="el" href="namespacecostmap__2d.html#aab110f187082d88d103ee84c8e420872">costmap_2d::LETHAL_OBSTACLE</a>) hitCount++; } } ASSERT_EQ(hitCount, 64);</p>
+<p >Now if we reset the cost map, we should have our map go back to being completely occupied map.resetMapOutsideWindow(wx, wy, 0.0, 0.0);</p>
+<p >We should now go back to everything being occupied hitCount = 0; for(unsigned int i=0; i &lt; 10; ++i){ for(unsigned int j=0; j &lt; 10; ++j){ if(map.getCost(i, j) == <a class="el" href="namespacecostmap__2d.html#aab110f187082d88d103ee84c8e420872">costmap_2d::LETHAL_OBSTACLE</a>) hitCount++; } } ASSERT_EQ(hitCount, 100);</p>
+<p >}</p>
+<p >/** Test for copying a window of a costmap * <a class="el" href="module__tests_8cpp.html#a4d5daedd5dde37cf984f593d5c719e92">TEST(costmap, testWindowCopy)</a>{ Costmap2D map(GRID_WIDTH, GRID_HEIGHT, RESOLUTION, 0.0, 0.0, ROBOT_RADIUS, ROBOT_RADIUS, ROBOT_RADIUS, 10.0, MAX_Z, 10.0, 25, MAP_10_BY_10, THRESHOLD);</p>
+<p >/* for(unsigned int i = 0; i &lt; 10; ++i){ for(unsigned int j = 0; j &lt; 10; ++j){ printf("%3d ", map.getCost(i, j)); } printf("\n"); } printf("\n");</p>
+<p >Costmap2D windowCopy;</p>
+<p >first test that if we try to make a window that is too big, things fail windowCopy.copyCostmapWindow(map, 2.0, 2.0, 6.0, 12.0); ASSERT_EQ(windowCopy.getSizeInCellsX(), (unsigned int)0); ASSERT_EQ(windowCopy.getSizeInCellsY(), (unsigned int)0);</p>
+<p >Next, test that trying to make a map window itself fails map.copyCostmapWindow(map, 2.0, 2.0, 6.0, 6.0); ASSERT_EQ(map.getSizeInCellsX(), (unsigned int)10); ASSERT_EQ(map.getSizeInCellsY(), (unsigned int)10);</p>
+<p >Next, test that legal input generates the result that we expect windowCopy.copyCostmapWindow(map, 2.0, 2.0, 6.0, 6.0); ASSERT_EQ(windowCopy.getSizeInCellsX(), (unsigned int)6); ASSERT_EQ(windowCopy.getSizeInCellsY(), (unsigned int)6);</p>
+<p >check that we actually get the windo that we expect for(unsigned int i = 0; i &lt; windowCopy.getSizeInCellsX(); ++i){ for(unsigned int j = 0; j &lt; windowCopy.getSizeInCellsY(); ++j){ ASSERT_EQ(windowCopy.getCost(i, j), map.getCost(i + 2, j + 2)); printf("%3d ", windowCopy.getCost(i, j)); } printf("\n"); }</p>
+<p >}</p>
+<p >test for updating costmaps with static data <a class="el" href="module__tests_8cpp.html#a81989f28bba6fb2f0503b643903a72cd">TEST(costmap, testFullyContainedStaticMapUpdate)</a>{ Costmap2D map(5, 5, RESOLUTION, 0.0, 0.0, ROBOT_RADIUS, ROBOT_RADIUS, ROBOT_RADIUS, 10.0, MAX_Z, 10.0, 25, MAP_5_BY_5, THRESHOLD);</p>
+<p >Costmap2D static_map(GRID_WIDTH, GRID_HEIGHT, RESOLUTION, 0.0, 0.0, ROBOT_RADIUS, ROBOT_RADIUS, ROBOT_RADIUS, 10.0, MAX_Z, 10.0, 25, MAP_10_BY_10, THRESHOLD);</p>
+<p >map.updateStaticMapWindow(0, 0, 10, 10, MAP_10_BY_10);</p>
+<p >for(unsigned int i = 0; i &lt; map.getSizeInCellsX(); ++i){ for(unsigned int j = 0; j &lt; map.getSizeInCellsY(); ++j){ ASSERT_EQ(map.getCost(i, j), static_map.getCost(i, j)); } } }</p>
+<p ><a class="el" href="module__tests_8cpp.html#ac9fc7e80b7d8b53b7aafb59c12c4e32c">TEST(costmap, testOverlapStaticMapUpdate)</a>{ Costmap2D map(5, 5, RESOLUTION, 0.0, 0.0, ROBOT_RADIUS, ROBOT_RADIUS, ROBOT_RADIUS, 10.0, MAX_Z, 10.0, 25, MAP_5_BY_5, THRESHOLD);</p>
+<p >Costmap2D static_map(GRID_WIDTH, GRID_HEIGHT, RESOLUTION, 0.0, 0.0, ROBOT_RADIUS, ROBOT_RADIUS, ROBOT_RADIUS, 10.0, MAX_Z, 10.0, 25, MAP_10_BY_10, THRESHOLD);</p>
+<p >map.updateStaticMapWindow(-10, -10, 10, 10, MAP_10_BY_10);</p>
+<p >ASSERT_FLOAT_EQ(map.getOriginX(), -10); ASSERT_FLOAT_EQ(map.getOriginX(), -10); ASSERT_EQ(map.getSizeInCellsX(), (unsigned int)15); ASSERT_EQ(map.getSizeInCellsY(), (unsigned int)15); for(unsigned int i = 0; i &lt; 10; ++i){ for(unsigned int j = 0; j &lt; 10; ++j){ ASSERT_EQ(map.getCost(i, j), static_map.getCost(i, j)); } }</p>
+<p >std::vector&lt;unsigned char&gt; blank(100);</p>
+<p >check to make sure that inflation on updates are being done correctly map.updateStaticMapWindow(-10, -10, 10, 10, blank);</p>
+<p >for(unsigned int i = 0; i &lt; map.getSizeInCellsX(); ++i){ for(unsigned int j = 0; j &lt; map.getSizeInCellsY(); ++j){ ASSERT_EQ(map.getCost(i, j), 0); } }</p>
+<p >std::vector&lt;unsigned char&gt; fully_contained(25); fully_contained[0] = 254; fully_contained[4] = 254; fully_contained[5] = 254; fully_contained[9] = 254;</p>
+<p >Costmap2D small_static_map(5, 5, RESOLUTION, 0.0, 0.0, ROBOT_RADIUS, ROBOT_RADIUS, ROBOT_RADIUS, 10.0, MAX_Z, 10.0, 25, fully_contained, THRESHOLD);</p>
+<p >map.updateStaticMapWindow(0, 0, 5, 5, fully_contained);</p>
+<p >ASSERT_FLOAT_EQ(map.getOriginX(), -10); ASSERT_FLOAT_EQ(map.getOriginX(), -10); ASSERT_EQ(map.getSizeInCellsX(), (unsigned int)15); ASSERT_EQ(map.getSizeInCellsY(), (unsigned int)15); for(unsigned int j = 0; j &lt; 5; ++j){ for(unsigned int i = 0; i &lt; 5; ++i){ ASSERT_EQ(map.getCost(i + 10, j + 10), small_static_map.getCost(i, j)); } }</p>
+<p >}</p>
+<p ><a class="el" href="module__tests_8cpp.html#a0e9c8b5f0a3eba4d6e0db102be312cfa">TEST(costmap, testStaticMap)</a>{ Costmap2D map(GRID_WIDTH, GRID_HEIGHT, RESOLUTION, 0.0, 0.0, ROBOT_RADIUS, ROBOT_RADIUS, ROBOT_RADIUS, 10.0, MAX_Z, 10.0, 25, MAP_10_BY_10, THRESHOLD);</p>
+<p >ASSERT_EQ(map.getSizeInCellsX(), (unsigned int)10); ASSERT_EQ(map.getSizeInCellsY(), (unsigned int)10);</p>
+<p >Verify that obstacles correctly identified from the static map. std::vector&lt;unsigned int&gt; occupiedCells;</p>
+<p >for(unsigned int i = 0; i &lt; 10; ++i){ for(unsigned int j = 0; j &lt; 10; ++j){ if(map.getCost(i, j) == <a class="el" href="namespacecostmap__2d.html#aab110f187082d88d103ee84c8e420872">costmap_2d::LETHAL_OBSTACLE</a>){ occupiedCells.push_back(map.getIndex(i, j)); } } }</p>
+<p >ASSERT_EQ(occupiedCells.size(), (unsigned int)20);</p>
+<p >Iterate over all id's and verify that they are present according to their for(std::vector&lt;unsigned int&gt;::const_iterator it = occupiedCells.begin(); it != occupiedCells.end(); ++it){ unsigned int ind = *it; unsigned int x, y; map.indexToCells(ind, x, y); ASSERT_EQ(find(occupiedCells, map.getIndex(x, y)), true); ASSERT_EQ(MAP_10_BY_10[ind] &gt;= 100, true); ASSERT_EQ(map.getCost(x, y) &gt;= 100, true); }</p>
+<p >Block of 200 ASSERT_EQ(find(occupiedCells, map.getIndex(7, 2)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(8, 2)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(9, 2)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(7, 3)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(8, 3)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(9, 3)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(7, 4)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(8, 4)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(9, 4)), true);</p>
+<p >Block of 100 ASSERT_EQ(find(occupiedCells, map.getIndex(4, 3)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(4, 4)), true);</p>
+<p >Block of 200 ASSERT_EQ(find(occupiedCells, map.getIndex(3, 7)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(4, 7)), true); ASSERT_EQ(find(occupiedCells, map.getIndex(5, 7)), true);</p>
+<p >Verify Coordinate Transformations, ROW MAJOR ORDER ASSERT_EQ(worldToIndex(map, 0.0, 0.0), (unsigned int)0); ASSERT_EQ(worldToIndex(map, 0.0, 0.99), (unsigned int)0); ASSERT_EQ(worldToIndex(map, 0.0, 1.0), (unsigned int)10); ASSERT_EQ(worldToIndex(map, 1.0, 0.99), (unsigned int)1); ASSERT_EQ(worldToIndex(map, 9.99, 9.99), (unsigned int)99); ASSERT_EQ(worldToIndex(map, 8.2, 3.4), (unsigned int)38);</p>
+<p >Ensure we hit the middle of the cell for world co-ordinates double wx, wy; indexToWorld(map, 99, wx, wy); ASSERT_EQ(wx, 9.5); ASSERT_EQ(wy, 9.5); } </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

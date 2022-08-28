@@ -1,0 +1,5 @@
+<map id="base_local_planner::MapGridVisualizer::publishCostCloud" name="base_local_planner::MapGridVisualizer::publishCostCloud">
+<area shape="rect" id="node1" title="Build and publish a PointCloud if the publish_cost_grid_pc parameter was true. Only include points fo..." alt="" coords="247,43,383,99"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,5,199,61"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="13,86,191,127"/>
+</map>

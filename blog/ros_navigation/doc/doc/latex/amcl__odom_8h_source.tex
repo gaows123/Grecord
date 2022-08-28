@@ -1,0 +1,102 @@
+\hypertarget{amcl__odom_8h_source}{}\doxysection{amcl\+\_\+odom.\+h}
+\label{amcl__odom_8h_source}\index{amcl/include/amcl/sensors/amcl\_odom.h@{amcl/include/amcl/sensors/amcl\_odom.h}}
+\mbox{\hyperlink{amcl__odom_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  Player -\/ One Hell of a Robot Server}}
+\DoxyCodeLine{3 \textcolor{comment}{ *  Copyright (C) 2000  Brian Gerkey et al.}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  This library is free software; you can redistribute it and/or}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  modify it under the terms of the GNU Lesser General Public}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  License as published by the Free Software Foundation; either}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  version 2.1 of the License, or (at your option) any later version.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  This library is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU}}
+\DoxyCodeLine{13 \textcolor{comment}{ *  Lesser General Public License for more details.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *}}
+\DoxyCodeLine{15 \textcolor{comment}{ *  You should have received a copy of the GNU Lesser General Public}}
+\DoxyCodeLine{16 \textcolor{comment}{ *  License along with this library; if not, write to the Free Software}}
+\DoxyCodeLine{17 \textcolor{comment}{ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-\/1307  USA}}
+\DoxyCodeLine{18 \textcolor{comment}{ *}}
+\DoxyCodeLine{19 \textcolor{comment}{ */}}
+\DoxyCodeLine{21 \textcolor{comment}{//}}
+\DoxyCodeLine{22 \textcolor{comment}{// Desc: Odometry sensor model for AMCL}}
+\DoxyCodeLine{23 \textcolor{comment}{// Author: Andrew Howard}}
+\DoxyCodeLine{24 \textcolor{comment}{// Date: 17 Aug 2003}}
+\DoxyCodeLine{25 \textcolor{comment}{// CVS: \$Id: amcl\_odom.h 4135 2007-\/08-\/23 19:58:48Z gerkey \$}}
+\DoxyCodeLine{26 \textcolor{comment}{//}}
+\DoxyCodeLine{28 \textcolor{comment}{}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#ifndef AMCL\_ODOM\_H}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define AMCL\_ODOM\_H}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{amcl__sensor_8h}{amcl\_sensor.h}}"{}}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include "{}../pf/pf\_pdf.h"{}}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceamcl}{amcl}}}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40   \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10a0eb5b686452f3575925e1f7bef0b7b2e}{ODOM\_MODEL\_DIFF}},}
+\DoxyCodeLine{41   \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10a8b7593c4540c7c13f3d3c6a08a0a23dd}{ODOM\_MODEL\_OMNI}},}
+\DoxyCodeLine{42   \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10a3e17b1b8f3d72adc2de32892c23c6226}{ODOM\_MODEL\_DIFF\_CORRECTED}},}
+\DoxyCodeLine{43   \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10a6e71a81ee9a05f7fcbbdcef59284119f}{ODOM\_MODEL\_OMNI\_CORRECTED}}}
+\DoxyCodeLine{44 \} \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\_model\_t}};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{// Odometric sensor data}}
+\DoxyCodeLine{47 \textcolor{keyword}{class }\mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_data}{AMCLOdomData}} : \textcolor{keyword}{public} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}}}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49   \textcolor{comment}{// Odometric pose}}
+\DoxyCodeLine{50   \textcolor{keyword}{public}: \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_data_a217a2f09d058d7ec6523f95596a921df}{pose}};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52   \textcolor{comment}{// Change in odometric pose}}
+\DoxyCodeLine{53   \textcolor{keyword}{public}: \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_data_a4403e69c97556119bfced14d4be4c725}{delta}};}
+\DoxyCodeLine{54 \};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{// Odometric sensor model}}
+\DoxyCodeLine{58 \textcolor{keyword}{class }\mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom}{AMCLOdom}} : \textcolor{keyword}{public} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor}{AMCLSensor}}}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{60   \textcolor{comment}{// Default constructor}}
+\DoxyCodeLine{61   \textcolor{keyword}{public}: \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a4d615017ed598fc2fa9991d3d2ed4e6b}{AMCLOdom}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   \textcolor{keyword}{public}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a562f4c2f26dbd299b1eefb4bc2fc9cad}{SetModelDiff}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}}, }
+\DoxyCodeLine{64                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}}, }
+\DoxyCodeLine{65                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}}, }
+\DoxyCodeLine{66                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}});}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   \textcolor{keyword}{public}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a64bcc31384882facd705eff2bb6ae7eb}{SetModelOmni}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}}, }
+\DoxyCodeLine{69                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}}, }
+\DoxyCodeLine{70                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}}, }
+\DoxyCodeLine{71                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}},}
+\DoxyCodeLine{72                             \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}{alpha5}});}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74   \textcolor{keyword}{public}: \textcolor{keywordtype}{void} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a678c97475e8924ebc3541bfec91a65fc}{SetModel}}( \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\_model\_t}} type,}
+\DoxyCodeLine{75                          \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}},}
+\DoxyCodeLine{76                          \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}},}
+\DoxyCodeLine{77                          \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}},}
+\DoxyCodeLine{78                          \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}},}
+\DoxyCodeLine{79                          \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}{alpha5}} = 0 );}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \textcolor{comment}{// Update the filter based on the action model.  Returns true if the filter}}
+\DoxyCodeLine{82   \textcolor{comment}{// has been updated.}}
+\DoxyCodeLine{83   \textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a94a2e645cfae2fb775f454ebab9fa110}{UpdateAction}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_sensor_data}{AMCLSensorData}} *data);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   \textcolor{comment}{// Current data timestamp}}
+\DoxyCodeLine{86   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a80d9caeaa9d1893441ae64099738ec82}{time}};}
+\DoxyCodeLine{87   }
+\DoxyCodeLine{88   \textcolor{comment}{// Model type}}
+\DoxyCodeLine{89   \textcolor{keyword}{private}: \mbox{\hyperlink{namespaceamcl_a1ef53c9692e3c0b6788bc841cbf7ff10}{odom\_model\_t}} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a6fa2c5c80b0e935db3308bf8cb7de298}{model\_type}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   \textcolor{comment}{// Drift parameters}}
+\DoxyCodeLine{92   \textcolor{keyword}{private}: \textcolor{keywordtype}{double} \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_af679317686100fc3f9b5637acb31393e}{alpha1}}, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a38a57e0d1ad1185f9d1a00fd0f48dcd4}{alpha2}}, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_ae767f512d15fd0e82e71f1d2da2448e2}{alpha3}}, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a634de155c88b3470b2802f302b33881a}{alpha4}}, \mbox{\hyperlink{classamcl_1_1_a_m_c_l_odom_a1bfedc6206efbb79333fbd9226e3610c}{alpha5}};}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="costmap_2d::LayeredCostmap::setFootprint" name="costmap_2d::LayeredCostmap::setFootprint">
+<area shape="rect" id="node1" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha..." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$namespacecostmap__2d.html#a6eeafbd231ad1ec2de69e61754773742" title="Calculate the extreme distances for the footprint" alt="" coords="252,5,427,47"/>
+<area shape="rect" id="node3" href="$costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="633,13,704,39"/>
+<area shape="rect" id="node4" href="$costmap__math_8cpp.html#a31fe9c9633687b41b7c65a18dcab85f9" title=" " alt="" coords="475,38,585,65"/>
+</map>

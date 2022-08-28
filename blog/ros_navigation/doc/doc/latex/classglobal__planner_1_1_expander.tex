@@ -1,0 +1,300 @@
+\hypertarget{classglobal__planner_1_1_expander}{}\doxysection{global\+\_\+planner\+::Expander类 参考}
+\label{classglobal__planner_1_1_expander}\index{global\_planner::Expander@{global\_planner::Expander}}
+
+
+{\ttfamily \#include $<$expander.\+h$>$}
+
+
+
+类 global\+\_\+planner\+::Expander 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander__inherit__graph}
+\end{center}
+\end{figure}
+
+
+global\+\_\+planner\+::Expander 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classglobal__planner_1_1_expander__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_expander_a8ccb306a28ea41d2bfd9202d4b16f26a}{Expander}} (\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$p\+\_\+calc, int nx, int ny)
+\item 
+virtual \mbox{\hyperlink{classglobal__planner_1_1_expander_af3350230a12f804b95b0aa45435631c7}{$\sim$\+Expander}} ()
+\item 
+virtual bool \mbox{\hyperlink{classglobal__planner_1_1_expander_a7c352121a2ea1e1b650b219004c98786}{calculate\+Potentials}} (unsigned char $\ast$costs, double start\+\_\+x, double start\+\_\+y, double end\+\_\+x, double end\+\_\+y, int cycles, float $\ast$potential)=0
+\item 
+virtual void \mbox{\hyperlink{classglobal__planner_1_1_expander_aeeaa60103de1ee71a1969e40a3735094}{set\+Size}} (int nx, int ny)
+\begin{DoxyCompactList}\small\item\em Sets or resets the size of the map \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_expander_aee9c360fb6316c538bbadcccc6bf98b1}{set\+Lethal\+Cost}} (unsigned char lethal\+\_\+cost)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_expander_a386d3239f3aaa7a5e583bad9893a8ca1}{set\+Neutral\+Cost}} (unsigned char neutral\+\_\+cost)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_expander_a53a3174aef024f0a4d01ac3fa7a74489}{set\+Factor}} (float factor)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_expander_a1dcbac968719e195552d063c4314618e}{set\+Has\+Unknown}} (bool unknown)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_expander_a02060106b60c2661cb1f1878a151a40e}{clear\+Endpoint}} (unsigned char $\ast$costs, float $\ast$potential, int gx, int gy, int s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_expander_ab9ed0e500049774014960dfb68f1e50c}{to\+Index}} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_expander_a72bbafddd4f838603ebe42cf7fb57cbc}{nx\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_expander_a3d1877778a6ed03533dace263d0dbe7e}{ny\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_expander_a0538b977e9cd0022810096b79e61e529}{ns\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classglobal__planner_1_1_expander_abbb2fc0fd78f4ae3e8ffad2981629a91}{unknown\+\_\+}}
+\item 
+unsigned char \mbox{\hyperlink{classglobal__planner_1_1_expander_a044a34d5d5ddd41016afec643cb65d4e}{lethal\+\_\+cost\+\_\+}}
+\item 
+unsigned char \mbox{\hyperlink{classglobal__planner_1_1_expander_aa8941c07a0f50a2e3ce3088f7ecb8e61}{neutral\+\_\+cost\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_expander_ad51bd3f97e8d1ca48c357175d723f3f4}{cells\+\_\+visited\+\_\+}}
+\item 
+float \mbox{\hyperlink{classglobal__planner_1_1_expander_a999123a5d229a31933a64ba56a4f525d}{factor\+\_\+}}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_expander_a3d991703be557e08056daedd3d872fff}{p\+\_\+calc\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a8ccb306a28ea41d2bfd9202d4b16f26a}\label{classglobal__planner_1_1_expander_a8ccb306a28ea41d2bfd9202d4b16f26a}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!Expander@{Expander}}
+\index{Expander@{Expander}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{Expander()}{Expander()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Expander\+::\+Expander (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$}]{p\+\_\+calc,  }\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_a8ccb306a28ea41d2bfd9202d4b16f26a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_af3350230a12f804b95b0aa45435631c7}\label{classglobal__planner_1_1_expander_af3350230a12f804b95b0aa45435631c7}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!````~Expander@{$\sim$Expander}}
+\index{````~Expander@{$\sim$Expander}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{$\sim$Expander()}{~Expander()}}
+{\footnotesize\ttfamily virtual global\+\_\+planner\+::\+Expander\+::$\sim$\+Expander (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a7c352121a2ea1e1b650b219004c98786}\label{classglobal__planner_1_1_expander_a7c352121a2ea1e1b650b219004c98786}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!calculatePotentials@{calculatePotentials}}
+\index{calculatePotentials@{calculatePotentials}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{calculatePotentials()}{calculatePotentials()}}
+{\footnotesize\ttfamily virtual bool global\+\_\+planner\+::\+Expander\+::calculate\+Potentials (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costs,  }\item[{double}]{start\+\_\+x,  }\item[{double}]{start\+\_\+y,  }\item[{double}]{end\+\_\+x,  }\item[{double}]{end\+\_\+y,  }\item[{int}]{cycles,  }\item[{float $\ast$}]{potential }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \mbox{\hyperlink{classglobal__planner_1_1_a_star_expansion_a71ddf1440a2f487c6f10af7a25757371}{global\+\_\+planner\+::\+AStar\+Expansion}} , 以及 \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b}{global\+\_\+planner\+::\+Dijkstra\+Expansion}} 内被实现.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_a7c352121a2ea1e1b650b219004c98786_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a02060106b60c2661cb1f1878a151a40e}\label{classglobal__planner_1_1_expander_a02060106b60c2661cb1f1878a151a40e}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!clearEndpoint@{clearEndpoint}}
+\index{clearEndpoint@{clearEndpoint}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{clearEndpoint()}{clearEndpoint()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Expander\+::clear\+Endpoint (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{costs,  }\item[{float $\ast$}]{potential,  }\item[{int}]{gx,  }\item[{int}]{gy,  }\item[{int}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_a02060106b60c2661cb1f1878a151a40e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_a02060106b60c2661cb1f1878a151a40e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a53a3174aef024f0a4d01ac3fa7a74489}\label{classglobal__planner_1_1_expander_a53a3174aef024f0a4d01ac3fa7a74489}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!setFactor@{setFactor}}
+\index{setFactor@{setFactor}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{setFactor()}{setFactor()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Expander\+::set\+Factor (\begin{DoxyParamCaption}\item[{float}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_a53a3174aef024f0a4d01ac3fa7a74489_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a1dcbac968719e195552d063c4314618e}\label{classglobal__planner_1_1_expander_a1dcbac968719e195552d063c4314618e}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!setHasUnknown@{setHasUnknown}}
+\index{setHasUnknown@{setHasUnknown}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{setHasUnknown()}{setHasUnknown()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Expander\+::set\+Has\+Unknown (\begin{DoxyParamCaption}\item[{bool}]{unknown }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_a1dcbac968719e195552d063c4314618e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_aee9c360fb6316c538bbadcccc6bf98b1}\label{classglobal__planner_1_1_expander_aee9c360fb6316c538bbadcccc6bf98b1}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!setLethalCost@{setLethalCost}}
+\index{setLethalCost@{setLethalCost}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{setLethalCost()}{setLethalCost()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Expander\+::set\+Lethal\+Cost (\begin{DoxyParamCaption}\item[{unsigned char}]{lethal\+\_\+cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_aee9c360fb6316c538bbadcccc6bf98b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a386d3239f3aaa7a5e583bad9893a8ca1}\label{classglobal__planner_1_1_expander_a386d3239f3aaa7a5e583bad9893a8ca1}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!setNeutralCost@{setNeutralCost}}
+\index{setNeutralCost@{setNeutralCost}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{setNeutralCost()}{setNeutralCost()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Expander\+::set\+Neutral\+Cost (\begin{DoxyParamCaption}\item[{unsigned char}]{neutral\+\_\+cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_a386d3239f3aaa7a5e583bad9893a8ca1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_aeeaa60103de1ee71a1969e40a3735094}\label{classglobal__planner_1_1_expander_aeeaa60103de1ee71a1969e40a3735094}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!setSize@{setSize}}
+\index{setSize@{setSize}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily virtual void global\+\_\+planner\+::\+Expander\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{nx,  }\item[{int}]{ny }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets or resets the size of the map 
+
+
+\begin{DoxyParams}{参数}
+{\em nx} & The x size of the map \\
+\hline
+{\em ny} & The y size of the map sets or resets the size of the map \\
+\hline
+\end{DoxyParams}
+
+
+被 \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29}{global\+\_\+planner\+::\+Dijkstra\+Expansion}} 重载.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_aeeaa60103de1ee71a1969e40a3735094_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_ab9ed0e500049774014960dfb68f1e50c}\label{classglobal__planner_1_1_expander_ab9ed0e500049774014960dfb68f1e50c}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!toIndex@{toIndex}}
+\index{toIndex@{toIndex}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{toIndex()}{toIndex()}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Expander\+::to\+Index (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_expander_ab9ed0e500049774014960dfb68f1e50c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_ad51bd3f97e8d1ca48c357175d723f3f4}\label{classglobal__planner_1_1_expander_ad51bd3f97e8d1ca48c357175d723f3f4}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!cells\_visited\_@{cells\_visited\_}}
+\index{cells\_visited\_@{cells\_visited\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{cells\_visited\_}{cells\_visited\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Expander\+::cells\+\_\+visited\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a999123a5d229a31933a64ba56a4f525d}\label{classglobal__planner_1_1_expander_a999123a5d229a31933a64ba56a4f525d}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!factor\_@{factor\_}}
+\index{factor\_@{factor\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{factor\_}{factor\_}}
+{\footnotesize\ttfamily float global\+\_\+planner\+::\+Expander\+::factor\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a044a34d5d5ddd41016afec643cb65d4e}\label{classglobal__planner_1_1_expander_a044a34d5d5ddd41016afec643cb65d4e}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!lethal\_cost\_@{lethal\_cost\_}}
+\index{lethal\_cost\_@{lethal\_cost\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{lethal\_cost\_}{lethal\_cost\_}}
+{\footnotesize\ttfamily unsigned char global\+\_\+planner\+::\+Expander\+::lethal\+\_\+cost\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_aa8941c07a0f50a2e3ce3088f7ecb8e61}\label{classglobal__planner_1_1_expander_aa8941c07a0f50a2e3ce3088f7ecb8e61}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!neutral\_cost\_@{neutral\_cost\_}}
+\index{neutral\_cost\_@{neutral\_cost\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{neutral\_cost\_}{neutral\_cost\_}}
+{\footnotesize\ttfamily unsigned char global\+\_\+planner\+::\+Expander\+::neutral\+\_\+cost\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a0538b977e9cd0022810096b79e61e529}\label{classglobal__planner_1_1_expander_a0538b977e9cd0022810096b79e61e529}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!ns\_@{ns\_}}
+\index{ns\_@{ns\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{ns\_}{ns\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Expander\+::ns\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+size of grid, in pixels \mbox{\Hypertarget{classglobal__planner_1_1_expander_a72bbafddd4f838603ebe42cf7fb57cbc}\label{classglobal__planner_1_1_expander_a72bbafddd4f838603ebe42cf7fb57cbc}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!nx\_@{nx\_}}
+\index{nx\_@{nx\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{nx\_}{nx\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Expander\+::nx\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a3d1877778a6ed03533dace263d0dbe7e}\label{classglobal__planner_1_1_expander_a3d1877778a6ed03533dace263d0dbe7e}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!ny\_@{ny\_}}
+\index{ny\_@{ny\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{ny\_}{ny\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Expander\+::ny\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_a3d991703be557e08056daedd3d872fff}\label{classglobal__planner_1_1_expander_a3d991703be557e08056daedd3d872fff}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!p\_calc\_@{p\_calc\_}}
+\index{p\_calc\_@{p\_calc\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{p\_calc\_}{p\_calc\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}}$\ast$ global\+\_\+planner\+::\+Expander\+::p\+\_\+calc\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_expander_abbb2fc0fd78f4ae3e8ffad2981629a91}\label{classglobal__planner_1_1_expander_abbb2fc0fd78f4ae3e8ffad2981629a91}} 
+\index{global\_planner::Expander@{global\_planner::Expander}!unknown\_@{unknown\_}}
+\index{unknown\_@{unknown\_}!global\_planner::Expander@{global\_planner::Expander}}
+\doxysubsubsection{\texorpdfstring{unknown\_}{unknown\_}}
+{\footnotesize\ttfamily bool global\+\_\+planner\+::\+Expander\+::unknown\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+global\+\_\+planner/include/global\+\_\+planner/\mbox{\hyperlink{expander_8h}{expander.\+h}}\end{DoxyCompactItemize}

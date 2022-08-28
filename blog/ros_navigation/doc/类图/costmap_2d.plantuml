@@ -1,0 +1,48 @@
+@startuml
+scale 5
+package navigation #green {
+    package costmap_2d #Yellow {
+        class Costmap2d {
+
+        }
+
+        class Layer {
+
+        }
+
+        class InflationLayer #pink{
+
+        }
+
+        class CostmapLayer {
+
+        }
+
+        class ObstacleLayer #pink{
+
+        }
+
+        class StaticLayer #pink{
+
+        }
+        
+        class VoxelLayer {
+            //三维的
+        }
+
+        class WavefrontMapAccessor {
+
+        }
+
+        CostmapLayer <|-- ObstacleLayer
+        CostmapLayer <|-- StaticLayer
+        ObstacleLayer <|-- VoxelLayer
+        Costmap2d <|-- CostmapLayer
+        Layer <|-- CostmapLayer
+        Layer <|-- InflationLayer
+        Costmap2d <|-- WavefrontMapAccessor
+
+        
+    }
+}
+@enduml

@@ -1,0 +1,1464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: navfn::NavFn类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacenavfn.html">navfn</a></li><li class="navelem"><a class="el" href="classnavfn_1_1_nav_fn.html">NavFn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classnavfn_1_1_nav_fn-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">navfn::NavFn类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Navigation function class. Holds buffers for costmap, navfn map.代价地图和NavFn地图是基于像素的，他们的原点在左上方，x 轴向右，y 轴向下  
+ <a href="classnavfn_1_1_nav_fn.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="navfn_8h_source.html">navfn.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aeed7d6c6f59caf8935ed76bb39a80379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#aeed7d6c6f59caf8935ed76bb39a80379">NavFn</a> (int <a class="el" href="classnavfn_1_1_nav_fn.html#a0210ff0b5a9c876304957942f5b3b06f">nx</a>, int <a class="el" href="classnavfn_1_1_nav_fn.html#adf2f81d0ab6ed5f1fc70d966833c428b">ny</a>)</td></tr>
+<tr class="memdesc:aeed7d6c6f59caf8935ed76bb39a80379"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造全局规划器  <a href="classnavfn_1_1_nav_fn.html#aeed7d6c6f59caf8935ed76bb39a80379">更多...</a><br /></td></tr>
+<tr class="separator:aeed7d6c6f59caf8935ed76bb39a80379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75be1c86e8e026a98e993110f54e3ff6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a75be1c86e8e026a98e993110f54e3ff6">~NavFn</a> ()</td></tr>
+<tr class="separator:a75be1c86e8e026a98e993110f54e3ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0c18b3e87f5f4350814e24b9a722fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a3b0c18b3e87f5f4350814e24b9a722fa">setNavArr</a> (int <a class="el" href="classnavfn_1_1_nav_fn.html#a0210ff0b5a9c876304957942f5b3b06f">nx</a>, int <a class="el" href="classnavfn_1_1_nav_fn.html#adf2f81d0ab6ed5f1fc70d966833c428b">ny</a>)</td></tr>
+<tr class="memdesc:a3b0c18b3e87f5f4350814e24b9a722fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or resets the size of the map  <a href="classnavfn_1_1_nav_fn.html#a3b0c18b3e87f5f4350814e24b9a722fa">更多...</a><br /></td></tr>
+<tr class="separator:a3b0c18b3e87f5f4350814e24b9a722fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140814a85ec650787a958fc235281c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a140814a85ec650787a958fc235281c6f">setCostmap</a> (const <a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *cmap, bool isROS=true, bool allow_unknown=true)</td></tr>
+<tr class="memdesc:a140814a85ec650787a958fc235281c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the cost array for the planner, usually from ROS  <a href="classnavfn_1_1_nav_fn.html#a140814a85ec650787a958fc235281c6f">更多...</a><br /></td></tr>
+<tr class="separator:a140814a85ec650787a958fc235281c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f2459aef927442363148b8403ad199"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199">calcNavFnAstar</a> ()</td></tr>
+<tr class="memdesc:a20f2459aef927442363148b8403ad199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates a plan using the A* heuristic, returns true if one is found  <a href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199">更多...</a><br /></td></tr>
+<tr class="separator:a20f2459aef927442363148b8403ad199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3516a575e782e45168ee810a983befa3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3">calcNavFnDijkstra</a> (bool atStart=false)</td></tr>
+<tr class="memdesc:a3516a575e782e45168ee810a983befa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caclulates the full navigation function using Dijkstra  <a href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3">更多...</a><br /></td></tr>
+<tr class="separator:a3516a575e782e45168ee810a983befa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d43815e85b2f336fb74008378407f8"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a53d43815e85b2f336fb74008378407f8">getPathX</a> ()</td></tr>
+<tr class="memdesc:a53d43815e85b2f336fb74008378407f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the x-coordinates of a path  <a href="classnavfn_1_1_nav_fn.html#a53d43815e85b2f336fb74008378407f8">更多...</a><br /></td></tr>
+<tr class="separator:a53d43815e85b2f336fb74008378407f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2f8d5d425eaea34c5a9976582c0c59"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#adb2f8d5d425eaea34c5a9976582c0c59">getPathY</a> ()</td></tr>
+<tr class="memdesc:adb2f8d5d425eaea34c5a9976582c0c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the y-coordinates of a path  <a href="classnavfn_1_1_nav_fn.html#adb2f8d5d425eaea34c5a9976582c0c59">更多...</a><br /></td></tr>
+<tr class="separator:adb2f8d5d425eaea34c5a9976582c0c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d0bdd9e1406e3467384b38e562684e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a27d0bdd9e1406e3467384b38e562684e">getPathLen</a> ()</td></tr>
+<tr class="memdesc:a27d0bdd9e1406e3467384b38e562684e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for the length of a path  <a href="classnavfn_1_1_nav_fn.html#a27d0bdd9e1406e3467384b38e562684e">更多...</a><br /></td></tr>
+<tr class="separator:a27d0bdd9e1406e3467384b38e562684e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991e667731691eb111cddc786e2d02d0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a991e667731691eb111cddc786e2d02d0">getLastPathCost</a> ()</td></tr>
+<tr class="memdesc:a991e667731691eb111cddc786e2d02d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the cost of the path found the last time a navigation function was computed  <a href="classnavfn_1_1_nav_fn.html#a991e667731691eb111cddc786e2d02d0">更多...</a><br /></td></tr>
+<tr class="separator:a991e667731691eb111cddc786e2d02d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11224bd6ba1392f59e2b8e053c29e19f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a11224bd6ba1392f59e2b8e053c29e19f">setGoal</a> (int *<a class="el" href="classnavfn_1_1_nav_fn.html#aab43846083a47f5e1863675e99e0314c">goal</a>)</td></tr>
+<tr class="memdesc:a11224bd6ba1392f59e2b8e053c29e19f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the goal position for the planner. Note: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start.  <a href="classnavfn_1_1_nav_fn.html#a11224bd6ba1392f59e2b8e053c29e19f">更多...</a><br /></td></tr>
+<tr class="separator:a11224bd6ba1392f59e2b8e053c29e19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae372dff3862f5fddc7de05a8ec9729c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#aae372dff3862f5fddc7de05a8ec9729c">setStart</a> (int *<a class="el" href="classnavfn_1_1_nav_fn.html#a1e91833444b39d86056e74b7c769bcfc">start</a>)</td></tr>
+<tr class="memdesc:aae372dff3862f5fddc7de05a8ec9729c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the start position for the planner. Note: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start.  <a href="classnavfn_1_1_nav_fn.html#aae372dff3862f5fddc7de05a8ec9729c">更多...</a><br /></td></tr>
+<tr class="separator:aae372dff3862f5fddc7de05a8ec9729c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a538679f3b968ef741dd6ad76f7753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a18a538679f3b968ef741dd6ad76f7753">initCost</a> (int k, float v)</td></tr>
+<tr class="memdesc:a18a538679f3b968ef741dd6ad76f7753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize cell k with cost v for propagation  <a href="classnavfn_1_1_nav_fn.html#a18a538679f3b968ef741dd6ad76f7753">更多...</a><br /></td></tr>
+<tr class="separator:a18a538679f3b968ef741dd6ad76f7753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5246a7901de2865ac90b19d2434f22c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a5246a7901de2865ac90b19d2434f22c1">updateCell</a> (int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="memdesc:a5246a7901de2865ac90b19d2434f22c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the cell at index n  <a href="classnavfn_1_1_nav_fn.html#a5246a7901de2865ac90b19d2434f22c1">更多...</a><br /></td></tr>
+<tr class="separator:a5246a7901de2865ac90b19d2434f22c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45813052a7bd3295909b5eb4d0364e58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a45813052a7bd3295909b5eb4d0364e58">updateCellAstar</a> (int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="memdesc:a45813052a7bd3295909b5eb4d0364e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the cell at index n using the A* heuristic  <a href="classnavfn_1_1_nav_fn.html#a45813052a7bd3295909b5eb4d0364e58">更多...</a><br /></td></tr>
+<tr class="separator:a45813052a7bd3295909b5eb4d0364e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233063ad5d082e7e86802c194a9a322a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a233063ad5d082e7e86802c194a9a322a">setupNavFn</a> (bool keepit=false)</td></tr>
+<tr class="separator:a233063ad5d082e7e86802c194a9a322a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076842de1d6d76769040f21856b7cb55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a076842de1d6d76769040f21856b7cb55">propNavFnDijkstra</a> (int cycles, bool atStart=false)</td></tr>
+<tr class="memdesc:a076842de1d6d76769040f21856b7cb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth-first Dijkstra method  <a href="classnavfn_1_1_nav_fn.html#a076842de1d6d76769040f21856b7cb55">更多...</a><br /></td></tr>
+<tr class="separator:a076842de1d6d76769040f21856b7cb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561511e57e6590da2dcfe7d5a4cf751d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a561511e57e6590da2dcfe7d5a4cf751d">propNavFnAstar</a> (int cycles)</td></tr>
+<tr class="memdesc:a561511e57e6590da2dcfe7d5a4cf751d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run propagation for &lt;cycles&gt; iterations, or until start is reached using the best-first A* method with Euclidean distance heuristic  <a href="classnavfn_1_1_nav_fn.html#a561511e57e6590da2dcfe7d5a4cf751d">更多...</a><br /></td></tr>
+<tr class="separator:a561511e57e6590da2dcfe7d5a4cf751d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672ab629393be0eb4b91696cb1b6c01a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a672ab629393be0eb4b91696cb1b6c01a">calcPath</a> (int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>, int *st=NULL)</td></tr>
+<tr class="memdesc:a672ab629393be0eb4b91696cb1b6c01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the path for at mose &lt;n&gt; cycles  <a href="classnavfn_1_1_nav_fn.html#a672ab629393be0eb4b91696cb1b6c01a">更多...</a><br /></td></tr>
+<tr class="separator:a672ab629393be0eb4b91696cb1b6c01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b709d5ffb7619f9f2083415a5c96ab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a28b709d5ffb7619f9f2083415a5c96ab">gradCell</a> (int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="separator:a28b709d5ffb7619f9f2083415a5c96ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42572b5439ae4510a1a261d704082f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#ab42572b5439ae4510a1a261d704082f0">display</a> (void fn(<a class="el" href="classnavfn_1_1_nav_fn.html">NavFn</a> *nav), int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>=100)</td></tr>
+<tr class="separator:ab42572b5439ae4510a1a261d704082f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf5e1fee399f2b501182e01badea3b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a8cf5e1fee399f2b501182e01badea3b0">savemap</a> (const char *fname)</td></tr>
+<tr class="separator:a8cf5e1fee399f2b501182e01badea3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a0210ff0b5a9c876304957942f5b3b06f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a0210ff0b5a9c876304957942f5b3b06f">nx</a></td></tr>
+<tr class="separator:a0210ff0b5a9c876304957942f5b3b06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2f81d0ab6ed5f1fc70d966833c428b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#adf2f81d0ab6ed5f1fc70d966833c428b">ny</a></td></tr>
+<tr class="separator:adf2f81d0ab6ed5f1fc70d966833c428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafecaed0735031096ec1ac9cdda95221"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#aafecaed0735031096ec1ac9cdda95221">ns</a></td></tr>
+<tr class="separator:aafecaed0735031096ec1ac9cdda95221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f1a68e92cc36905c8adc1ed8419c07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a65f1a68e92cc36905c8adc1ed8419c07">costarr</a></td></tr>
+<tr class="separator:a65f1a68e92cc36905c8adc1ed8419c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c141329d83e70f7ec649eeb74d5930"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#ac1c141329d83e70f7ec649eeb74d5930">potarr</a></td></tr>
+<tr class="separator:ac1c141329d83e70f7ec649eeb74d5930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a79ea21c1c230d65349c1a4234a1146"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a7a79ea21c1c230d65349c1a4234a1146">pending</a></td></tr>
+<tr class="separator:a7a79ea21c1c230d65349c1a4234a1146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77885790b4fee72d82d34738ecd420e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a77885790b4fee72d82d34738ecd420e8">nobs</a></td></tr>
+<tr class="separator:a77885790b4fee72d82d34738ecd420e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e511ecff0c963f777149b3112d7d088"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a2e511ecff0c963f777149b3112d7d088">pb1</a></td></tr>
+<tr class="separator:a2e511ecff0c963f777149b3112d7d088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3bb9ffd5a267db916883bc8adeea45e"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#ab3bb9ffd5a267db916883bc8adeea45e">pb2</a></td></tr>
+<tr class="separator:ab3bb9ffd5a267db916883bc8adeea45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc8d5ebae7a7ec08c1c1ebc52f806e1"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a0cc8d5ebae7a7ec08c1c1ebc52f806e1">pb3</a></td></tr>
+<tr class="separator:a0cc8d5ebae7a7ec08c1c1ebc52f806e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3804865f546eb599da9384108879ae1"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#ab3804865f546eb599da9384108879ae1">curP</a></td></tr>
+<tr class="separator:ab3804865f546eb599da9384108879ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d3f4d1998b6dcf10e67eb0cc17a3c9"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a02d3f4d1998b6dcf10e67eb0cc17a3c9">nextP</a></td></tr>
+<tr class="separator:a02d3f4d1998b6dcf10e67eb0cc17a3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec4a086d1cd8357f0e9becf3a03e1807"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#aec4a086d1cd8357f0e9becf3a03e1807">overP</a></td></tr>
+<tr class="separator:aec4a086d1cd8357f0e9becf3a03e1807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fea5223a6798e3caafbb09db73f5dcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a5fea5223a6798e3caafbb09db73f5dcb">curPe</a></td></tr>
+<tr class="separator:a5fea5223a6798e3caafbb09db73f5dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a0981a650734f98cc9110b9c30a622"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a57a0981a650734f98cc9110b9c30a622">nextPe</a></td></tr>
+<tr class="separator:a57a0981a650734f98cc9110b9c30a622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967459dcc87c8b99850d74d9b2c8457d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a967459dcc87c8b99850d74d9b2c8457d">overPe</a></td></tr>
+<tr class="separator:a967459dcc87c8b99850d74d9b2c8457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7e3f2353501b6cd5f347d6dab39129"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a8c7e3f2353501b6cd5f347d6dab39129">curT</a></td></tr>
+<tr class="separator:a8c7e3f2353501b6cd5f347d6dab39129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac0b9f1455e2bfefd2b7ab37ddf86a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a1ac0b9f1455e2bfefd2b7ab37ddf86a6">priInc</a></td></tr>
+<tr class="separator:a1ac0b9f1455e2bfefd2b7ab37ddf86a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab43846083a47f5e1863675e99e0314c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#aab43846083a47f5e1863675e99e0314c">goal</a> [2]</td></tr>
+<tr class="separator:aab43846083a47f5e1863675e99e0314c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e91833444b39d86056e74b7c769bcfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a1e91833444b39d86056e74b7c769bcfc">start</a> [2]</td></tr>
+<tr class="separator:a1e91833444b39d86056e74b7c769bcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64aa3815ac0d3e6315b205694660109a"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a64aa3815ac0d3e6315b205694660109a">gradx</a></td></tr>
+<tr class="separator:a64aa3815ac0d3e6315b205694660109a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135d509f9624d7e78ebed07f7fb3c71f"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a135d509f9624d7e78ebed07f7fb3c71f">grady</a></td></tr>
+<tr class="separator:a135d509f9624d7e78ebed07f7fb3c71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375aad1164c8253c86861e5fb25631e5"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a375aad1164c8253c86861e5fb25631e5">pathx</a></td></tr>
+<tr class="separator:a375aad1164c8253c86861e5fb25631e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1114910bfef12f5cc403379df0cf0a29"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a1114910bfef12f5cc403379df0cf0a29">pathy</a></td></tr>
+<tr class="separator:a1114910bfef12f5cc403379df0cf0a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df20c72cbc55329e735ca9c244e2829"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a3df20c72cbc55329e735ca9c244e2829">npath</a></td></tr>
+<tr class="separator:a3df20c72cbc55329e735ca9c244e2829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9f6dd7f2d1467bab7687e1c05fb536"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a6d9f6dd7f2d1467bab7687e1c05fb536">npathbuf</a></td></tr>
+<tr class="separator:a6d9f6dd7f2d1467bab7687e1c05fb536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591744e902fa225f1557898777a9decd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a591744e902fa225f1557898777a9decd">last_path_cost_</a></td></tr>
+<tr class="separator:a591744e902fa225f1557898777a9decd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b7bc3a8b6ef9e41d2dd84bda5fd264"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a93b7bc3a8b6ef9e41d2dd84bda5fd264">pathStep</a></td></tr>
+<tr class="separator:a93b7bc3a8b6ef9e41d2dd84bda5fd264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace2319d3eb0aa49e5fe7cf478049fffc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#ace2319d3eb0aa49e5fe7cf478049fffc">displayInt</a></td></tr>
+<tr class="separator:ace2319d3eb0aa49e5fe7cf478049fffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1513371ee240294a9f29e2511e725f18"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_nav_fn.html#a1513371ee240294a9f29e2511e725f18">displayFn</a> )(<a class="el" href="classnavfn_1_1_nav_fn.html">NavFn</a> *nav)</td></tr>
+<tr class="separator:a1513371ee240294a9f29e2511e725f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >Navigation function class. Holds buffers for costmap, navfn map.代价地图和NavFn地图是基于像素的，他们的原点在左上方，x 轴向右，y 轴向下 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aeed7d6c6f59caf8935ed76bb39a80379" name="aeed7d6c6f59caf8935ed76bb39a80379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed7d6c6f59caf8935ed76bb39a80379">&#9670;&nbsp;</a></span>NavFn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">navfn::NavFn::NavFn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构造全局规划器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nx</td><td>地图x轴方向的大小 </td></tr>
+    <tr><td class="paramname">ny</td><td>地图y轴方向的大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_aeed7d6c6f59caf8935ed76bb39a80379_cgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_aeed7d6c6f59caf8935ed76bb39a80379_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_aeed7d6c6f59caf8935ed76bb39a80379_cgraph" id="aclassnavfn_1_1_nav_fn_aeed7d6c6f59caf8935ed76bb39a80379_cgraph">
+<area shape="rect" title="构造全局规划器" alt="" coords="5,5,152,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3b0c18b3e87f5f4350814e24b9a722fa" title="Sets or resets the size of the map" alt="" coords="200,5,367,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a75be1c86e8e026a98e993110f54e3ff6" name="a75be1c86e8e026a98e993110f54e3ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75be1c86e8e026a98e993110f54e3ff6">&#9670;&nbsp;</a></span>~NavFn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">navfn::NavFn::~NavFn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a20f2459aef927442363148b8403ad199" name="a20f2459aef927442363148b8403ad199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f2459aef927442363148b8403ad199">&#9670;&nbsp;</a></span>calcNavFnAstar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavFn::calcNavFnAstar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates a plan using the A* heuristic, returns true if one is found </p>
+<dl class="section return"><dt>返回</dt><dd>True if a plan is found, false otherwise calculates a plan, returns true if found </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a20f2459aef927442363148b8403ad199_cgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a20f2459aef927442363148b8403ad199_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a20f2459aef927442363148b8403ad199_cgraph" id="aclassnavfn_1_1_nav_fn_a20f2459aef927442363148b8403ad199_cgraph">
+<area shape="rect" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="5,64,207,91"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a672ab629393be0eb4b91696cb1b6c01a" title="Calculates the path for at mose &lt;n&gt; cycles" alt="" coords="277,9,435,36"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a561511e57e6590da2dcfe7d5a4cf751d" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using the best&#45;first A* method wit..." alt="" coords="255,64,457,91"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a233063ad5d082e7e86802c194a9a322a" title=" " alt="" coords="267,119,445,145"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a28b709d5ffb7619f9f2083415a5c96ab" title=" " alt="" coords="513,5,667,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a45813052a7bd3295909b5eb4d0364e58" title="Updates the cell at index n using the A* heuristic" alt="" coords="505,57,675,98"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a18a538679f3b968ef741dd6ad76f7753" title="Initialize cell k with cost v for propagation" alt="" coords="514,123,666,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3516a575e782e45168ee810a983befa3" name="a3516a575e782e45168ee810a983befa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3516a575e782e45168ee810a983befa3">&#9670;&nbsp;</a></span>calcNavFnDijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavFn::calcNavFnDijkstra </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>atStart</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Caclulates the full navigation function using Dijkstra </p>
+<p >calculates the full navigation function </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_cgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_cgraph" id="aclassnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_cgraph">
+<area shape="rect" title="Caclulates the full navigation function using Dijkstra" alt="" coords="5,56,220,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a672ab629393be0eb4b91696cb1b6c01a" title="Calculates the path for at mose &lt;n&gt; cycles" alt="" coords="296,5,455,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a076842de1d6d76769040f21856b7cb55" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth&#45;first Dijkstra metho..." alt="" coords="268,56,483,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a233063ad5d082e7e86802c194a9a322a" title=" " alt="" coords="286,107,465,133"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a28b709d5ffb7619f9f2083415a5c96ab" title=" " alt="" coords="538,5,693,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a5246a7901de2865ac90b19d2434f22c1" title="Updates the cell at index n" alt="" coords="531,56,700,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a18a538679f3b968ef741dd6ad76f7753" title="Initialize cell k with cost v for propagation" alt="" coords="539,107,691,133"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_icgraph" id="aclassnavfn_1_1_nav_fn_a3516a575e782e45168ee810a983befa3_icgraph">
+<area shape="rect" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,31,324,57"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,5,59,32"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a672ab629393be0eb4b91696cb1b6c01a" name="a672ab629393be0eb4b91696cb1b6c01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672ab629393be0eb4b91696cb1b6c01a">&#9670;&nbsp;</a></span>calcPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::calcPath </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>st</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the path for at mose &lt;n&gt; cycles </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The maximum number of cycles to run for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>The length of the path found calculates path for at most &lt;n&gt; cycles, returns path length, 0 if none </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_cgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_cgraph" id="aclassnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_cgraph">
+<area shape="rect" title="Calculates the path for at mose &lt;n&gt; cycles" alt="" coords="5,5,164,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a28b709d5ffb7619f9f2083415a5c96ab" title=" " alt="" coords="212,5,367,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_icgraph" id="aclassnavfn_1_1_nav_fn_a672ab629393be0eb4b91696cb1b6c01a_icgraph">
+<area shape="rect" title="Calculates the path for at mose &lt;n&gt; cycles" alt="" coords="372,56,531,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="116,5,317,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,56,324,83"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="138,107,295,149"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,31,59,57"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,81,61,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab42572b5439ae4510a1a261d704082f0" name="ab42572b5439ae4510a1a261d704082f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42572b5439ae4510a1a261d704082f0">&#9670;&nbsp;</a></span>display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::display </td>
+          <td>(</td>
+          <td class="paramtype">void &#160;</td>
+          <td class="paramname"><em>fn</em>NavFn *nav, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em> = <code>100</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >display callback &lt;n&gt; is the number of cycles between updates <br  />
+ </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_ab42572b5439ae4510a1a261d704082f0_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_ab42572b5439ae4510a1a261d704082f0_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_ab42572b5439ae4510a1a261d704082f0_icgraph" id="aclassnavfn_1_1_nav_fn_ab42572b5439ae4510a1a261d704082f0_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,253,32"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a991e667731691eb111cddc786e2d02d0" name="a991e667731691eb111cddc786e2d02d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991e667731691eb111cddc786e2d02d0">&#9670;&nbsp;</a></span>getLastPathCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float navfn::NavFn::getLastPathCost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the cost of the path found the last time a navigation function was computed </p>
+<dl class="section return"><dt>返回</dt><dd>The cost of the last path found Return cost of path found the last time A* was called </dd></dl>
+
+</div>
+</div>
+<a id="a27d0bdd9e1406e3467384b38e562684e" name="a27d0bdd9e1406e3467384b38e562684e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d0bdd9e1406e3467384b38e562684e">&#9670;&nbsp;</a></span>getPathLen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::getPathLen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accessor for the length of a path </p>
+<dl class="section return"><dt>返回</dt><dd>The length of a path length of path, 0 if not found </dd></dl>
+
+</div>
+</div>
+<a id="a53d43815e85b2f336fb74008378407f8" name="a53d43815e85b2f336fb74008378407f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d43815e85b2f336fb74008378407f8">&#9670;&nbsp;</a></span>getPathX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * navfn::NavFn::getPathX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accessor for the x-coordinates of a path </p>
+<dl class="section return"><dt>返回</dt><dd>The x-coordinates of a path x-coordinates of path </dd></dl>
+
+</div>
+</div>
+<a id="adb2f8d5d425eaea34c5a9976582c0c59" name="adb2f8d5d425eaea34c5a9976582c0c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2f8d5d425eaea34c5a9976582c0c59">&#9670;&nbsp;</a></span>getPathY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * navfn::NavFn::getPathY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accessor for the y-coordinates of a path </p>
+<dl class="section return"><dt>返回</dt><dd>The y-coordinates of a path y-coordinates of path </dd></dl>
+
+</div>
+</div>
+<a id="a28b709d5ffb7619f9f2083415a5c96ab" name="a28b709d5ffb7619f9f2083415a5c96ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b709d5ffb7619f9f2083415a5c96ab">&#9670;&nbsp;</a></span>gradCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float navfn::NavFn::gradCell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >calculates gradient at cell &lt;n&gt;, returns norm </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a28b709d5ffb7619f9f2083415a5c96ab_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a28b709d5ffb7619f9f2083415a5c96ab_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a28b709d5ffb7619f9f2083415a5c96ab_icgraph" id="aclassnavfn_1_1_nav_fn_a28b709d5ffb7619f9f2083415a5c96ab_icgraph">
+<area shape="rect" title=" " alt="" coords="579,56,733,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a672ab629393be0eb4b91696cb1b6c01a" title="Calculates the path for at mose &lt;n&gt; cycles" alt="" coords="372,56,531,83"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="116,5,317,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,56,324,83"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="138,107,295,149"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,31,59,57"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,81,61,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18a538679f3b968ef741dd6ad76f7753" name="a18a538679f3b968ef741dd6ad76f7753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a538679f3b968ef741dd6ad76f7753">&#9670;&nbsp;</a></span>initCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::initCost </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize cell k with cost v for propagation </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>the cell to initialize </td></tr>
+    <tr><td class="paramname">v</td><td>the cost to give to the cell initialize cell &lt;k&gt; with cost &lt;v&gt;, for propagation </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a18a538679f3b968ef741dd6ad76f7753_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a18a538679f3b968ef741dd6ad76f7753_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a18a538679f3b968ef741dd6ad76f7753_icgraph" id="aclassnavfn_1_1_nav_fn_a18a538679f3b968ef741dd6ad76f7753_icgraph">
+<area shape="rect" title="Initialize cell k with cost v for propagation" alt="" coords="599,81,751,108"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a233063ad5d082e7e86802c194a9a322a" title=" " alt="" coords="372,81,551,108"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="116,5,317,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,107,324,133"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,56,59,83"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="138,158,295,199"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,107,61,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a561511e57e6590da2dcfe7d5a4cf751d" name="a561511e57e6590da2dcfe7d5a4cf751d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a561511e57e6590da2dcfe7d5a4cf751d">&#9670;&nbsp;</a></span>propNavFnAstar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavFn::propNavFnAstar </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cycles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run propagation for &lt;cycles&gt; iterations, or until start is reached using the best-first A* method with Euclidean distance heuristic </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cycles</td><td>The maximum number of iterations to run for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if the start point is reached returns true if start point found </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_cgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_cgraph" id="aclassnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_cgraph">
+<area shape="rect" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using the best&#45;first A* method wit..." alt="" coords="5,13,208,39"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a45813052a7bd3295909b5eb4d0364e58" title="Updates the cell at index n using the A* heuristic" alt="" coords="256,5,425,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_icgraph" id="aclassnavfn_1_1_nav_fn_a561511e57e6590da2dcfe7d5a4cf751d_icgraph">
+<area shape="rect" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using the best&#45;first A* method wit..." alt="" coords="255,35,457,61"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="5,5,207,32"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="27,57,185,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a076842de1d6d76769040f21856b7cb55" name="a076842de1d6d76769040f21856b7cb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a076842de1d6d76769040f21856b7cb55">&#9670;&nbsp;</a></span>propNavFnDijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavFn::propNavFnDijkstra </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cycles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>atStart</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth-first Dijkstra method </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cycles</td><td>The maximum number of iterations to run for </td></tr>
+    <tr><td class="paramname">atStart</td><td>Whether or not to stop when the start point is reached </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if the start point is reached returns true if start point found or full prop </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_cgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_cgraph" id="aclassnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_cgraph">
+<area shape="rect" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth&#45;first Dijkstra metho..." alt="" coords="5,5,220,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a5246a7901de2865ac90b19d2434f22c1" title="Updates the cell at index n" alt="" coords="268,5,437,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_icgraph" id="aclassnavfn_1_1_nav_fn_a076842de1d6d76769040f21856b7cb55_icgraph">
+<area shape="rect" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth&#45;first Dijkstra metho..." alt="" coords="372,31,587,57"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,31,324,57"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,5,59,32"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8cf5e1fee399f2b501182e01badea3b0" name="a8cf5e1fee399f2b501182e01badea3b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf5e1fee399f2b501182e01badea3b0">&#9670;&nbsp;</a></span>savemap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::savemap </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >save costmap write out costmap and start/goal states as fname.pgm and fname.txt </p>
+
+</div>
+</div>
+<a id="a140814a85ec650787a958fc235281c6f" name="a140814a85ec650787a958fc235281c6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140814a85ec650787a958fc235281c6f">&#9670;&nbsp;</a></span>setCostmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::setCostmap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a> *&#160;</td>
+          <td class="paramname"><em>cmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isROS</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allow_unknown</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set up the cost array for the planner, usually from ROS </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmap</td><td>The costmap </td></tr>
+    <tr><td class="paramname">isROS</td><td>Whether or not the costmap is coming in in ROS format </td></tr>
+    <tr><td class="paramname">allow_unknown</td><td>Whether or not the planner should be allowed to plan through unknown space sets up the cost map </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11224bd6ba1392f59e2b8e053c29e19f" name="a11224bd6ba1392f59e2b8e053c29e19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11224bd6ba1392f59e2b8e053c29e19f">&#9670;&nbsp;</a></span>setGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::setGoal </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>goal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the goal position for the planner. Note: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start. </p>
+<p >goal and start positions </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">goal</td><td>the goal position </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a11224bd6ba1392f59e2b8e053c29e19f_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a11224bd6ba1392f59e2b8e053c29e19f_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a11224bd6ba1392f59e2b8e053c29e19f_icgraph" id="aclassnavfn_1_1_nav_fn_a11224bd6ba1392f59e2b8e053c29e19f_icgraph">
+<area shape="rect" title="Sets the goal position for the planner. Note: the navigation cost field computed gives the cost to ge..." alt="" coords="211,71,364,98"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="5,5,163,47"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="59,71,109,98"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="56,122,112,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b0c18b3e87f5f4350814e24b9a722fa" name="a3b0c18b3e87f5f4350814e24b9a722fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0c18b3e87f5f4350814e24b9a722fa">&#9670;&nbsp;</a></span>setNavArr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::setNavArr </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets or resets the size of the map </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nx</td><td>The x size of the map </td></tr>
+    <tr><td class="paramname">ny</td><td>The y size of the map sets or resets the size of the map </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a3b0c18b3e87f5f4350814e24b9a722fa_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a3b0c18b3e87f5f4350814e24b9a722fa_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a3b0c18b3e87f5f4350814e24b9a722fa_icgraph" id="aclassnavfn_1_1_nav_fn_a3b0c18b3e87f5f4350814e24b9a722fa_icgraph">
+<area shape="rect" title="Sets or resets the size of the map" alt="" coords="200,5,367,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#aeed7d6c6f59caf8935ed76bb39a80379" title="构造全局规划器" alt="" coords="5,5,152,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aae372dff3862f5fddc7de05a8ec9729c" name="aae372dff3862f5fddc7de05a8ec9729c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae372dff3862f5fddc7de05a8ec9729c">&#9670;&nbsp;</a></span>setStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::setStart </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>start</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the start position for the planner. Note: the navigation cost field computed gives the cost to get to a given point from the goal, not from the start. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>the start position </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_aae372dff3862f5fddc7de05a8ec9729c_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_aae372dff3862f5fddc7de05a8ec9729c_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_aae372dff3862f5fddc7de05a8ec9729c_icgraph" id="aclassnavfn_1_1_nav_fn_aae372dff3862f5fddc7de05a8ec9729c_icgraph">
+<area shape="rect" title="Sets the start position for the planner. Note: the navigation cost field computed gives the cost to g..." alt="" coords="211,71,365,98"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="5,5,163,47"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="59,71,109,98"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="56,122,112,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a233063ad5d082e7e86802c194a9a322a" name="a233063ad5d082e7e86802c194a9a322a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233063ad5d082e7e86802c194a9a322a">&#9670;&nbsp;</a></span>setupNavFn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::setupNavFn </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>keepit</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >resets all nav fn arrays for propagation </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_cgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_cgraph" id="aclassnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a18a538679f3b968ef741dd6ad76f7753" title="Initialize cell k with cost v for propagation" alt="" coords="232,5,384,32"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_icgraph" id="aclassnavfn_1_1_nav_fn_a233063ad5d082e7e86802c194a9a322a_icgraph">
+<area shape="rect" title=" " alt="" coords="372,81,551,108"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="116,5,317,32"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,107,324,133"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,56,59,83"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="138,158,295,199"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,107,61,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5246a7901de2865ac90b19d2434f22c1" name="a5246a7901de2865ac90b19d2434f22c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5246a7901de2865ac90b19d2434f22c1">&#9670;&nbsp;</a></span>updateCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::updateCell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the cell at index n </p>
+<p >propagation </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The index to update updates the cell at index &lt;n&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a5246a7901de2865ac90b19d2434f22c1_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a5246a7901de2865ac90b19d2434f22c1_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a5246a7901de2865ac90b19d2434f22c1_icgraph" id="aclassnavfn_1_1_nav_fn_a5246a7901de2865ac90b19d2434f22c1_icgraph">
+<area shape="rect" title="Updates the cell at index n" alt="" coords="635,31,804,57"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a076842de1d6d76769040f21856b7cb55" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using breadth&#45;first Dijkstra metho..." alt="" coords="372,31,587,57"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a3516a575e782e45168ee810a983befa3" title="Caclulates the full navigation function using Dijkstra" alt="" coords="109,31,324,57"/>
+<area shape="rect" href="navtest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="8,5,59,32"/>
+<area shape="rect" href="path__calc__test_8cpp.html#a1cc564604d7ce869e4a03dcb9c17c68a" title=" " alt="" coords="5,56,61,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a45813052a7bd3295909b5eb4d0364e58" name="a45813052a7bd3295909b5eb4d0364e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45813052a7bd3295909b5eb4d0364e58">&#9670;&nbsp;</a></span>updateCellAstar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavFn::updateCellAstar </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the cell at index n using the A* heuristic </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The index to update updates the cell at index &lt;n&gt;, uses A* heuristic </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_nav_fn_a45813052a7bd3295909b5eb4d0364e58_icgraph.png" border="0" usemap="#aclassnavfn_1_1_nav_fn_a45813052a7bd3295909b5eb4d0364e58_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_nav_fn_a45813052a7bd3295909b5eb4d0364e58_icgraph" id="aclassnavfn_1_1_nav_fn_a45813052a7bd3295909b5eb4d0364e58_icgraph">
+<area shape="rect" title="Updates the cell at index n using the A* heuristic" alt="" coords="505,27,675,69"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a561511e57e6590da2dcfe7d5a4cf751d" title="Run propagation for &lt;cycles&gt; iterations, or until start is reached using the best&#45;first A* method wit..." alt="" coords="255,35,457,61"/>
+<area shape="rect" href="classnavfn_1_1_nav_fn.html#a20f2459aef927442363148b8403ad199" title="Calculates a plan using the A* heuristic, returns true if one is found" alt="" coords="5,5,207,32"/>
+<area shape="rect" href="namespacenavfn.html#a43e1cf99d005f4c0b40ce27c85ac3a0f" title=" " alt="" coords="27,57,185,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a65f1a68e92cc36905c8adc1ed8419c07" name="a65f1a68e92cc36905c8adc1ed8419c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f1a68e92cc36905c8adc1ed8419c07">&#9670;&nbsp;</a></span>costarr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="navfn_8h.html#a137fdfc9b1a4312004400270e5f999ea">COSTTYPE</a>* navfn::NavFn::costarr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >几个重要的数组 2D空间的代价数组 </p>
+
+</div>
+</div>
+<a id="ab3804865f546eb599da9384108879ae1" name="ab3804865f546eb599da9384108879ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3804865f546eb599da9384108879ae1">&#9670;&nbsp;</a></span>curP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* navfn::NavFn::curP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fea5223a6798e3caafbb09db73f5dcb" name="a5fea5223a6798e3caafbb09db73f5dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fea5223a6798e3caafbb09db73f5dcb">&#9670;&nbsp;</a></span>curPe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::curPe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c7e3f2353501b6cd5f347d6dab39129" name="a8c7e3f2353501b6cd5f347d6dab39129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c7e3f2353501b6cd5f347d6dab39129">&#9670;&nbsp;</a></span>curT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float navfn::NavFn::curT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >block priority thresholds 当前传播阈值 </p>
+
+</div>
+</div>
+<a id="a1513371ee240294a9f29e2511e725f18" name="a1513371ee240294a9f29e2511e725f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1513371ee240294a9f29e2511e725f18">&#9670;&nbsp;</a></span>displayFn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* navfn::NavFn::displayFn) (<a class="el" href="classnavfn_1_1_nav_fn.html">NavFn</a> *nav)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >display function itself </p>
+
+</div>
+</div>
+<a id="ace2319d3eb0aa49e5fe7cf478049fffc" name="ace2319d3eb0aa49e5fe7cf478049fffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace2319d3eb0aa49e5fe7cf478049fffc">&#9670;&nbsp;</a></span>displayInt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::displayInt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >save second argument of <a class="el" href="classnavfn_1_1_nav_fn.html#ab42572b5439ae4510a1a261d704082f0">display()</a> above </p>
+
+</div>
+</div>
+<a id="aab43846083a47f5e1863675e99e0314c" name="aab43846083a47f5e1863675e99e0314c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab43846083a47f5e1863675e99e0314c">&#9670;&nbsp;</a></span>goal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::goal[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64aa3815ac0d3e6315b205694660109a" name="a64aa3815ac0d3e6315b205694660109a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64aa3815ac0d3e6315b205694660109a">&#9670;&nbsp;</a></span>gradx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* navfn::NavFn::gradx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >gradient and paths </p>
+
+</div>
+</div>
+<a id="a135d509f9624d7e78ebed07f7fb3c71f" name="a135d509f9624d7e78ebed07f7fb3c71f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135d509f9624d7e78ebed07f7fb3c71f">&#9670;&nbsp;</a></span>grady</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * navfn::NavFn::grady</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >gradient arrays, size of potential array </p>
+
+</div>
+</div>
+<a id="a591744e902fa225f1557898777a9decd" name="a591744e902fa225f1557898777a9decd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591744e902fa225f1557898777a9decd">&#9670;&nbsp;</a></span>last_path_cost_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float navfn::NavFn::last_path_cost_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Holds the cost of the path found the last time A* was called </p>
+
+</div>
+</div>
+<a id="a02d3f4d1998b6dcf10e67eb0cc17a3c9" name="a02d3f4d1998b6dcf10e67eb0cc17a3c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d3f4d1998b6dcf10e67eb0cc17a3c9">&#9670;&nbsp;</a></span>nextP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * navfn::NavFn::nextP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57a0981a650734f98cc9110b9c30a622" name="a57a0981a650734f98cc9110b9c30a622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a0981a650734f98cc9110b9c30a622">&#9670;&nbsp;</a></span>nextPe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::nextPe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77885790b4fee72d82d34738ecd420e8" name="a77885790b4fee72d82d34738ecd420e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77885790b4fee72d82d34738ecd420e8">&#9670;&nbsp;</a></span>nobs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::nobs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >障碍物单元格的数量 </p>
+
+</div>
+</div>
+<a id="a3df20c72cbc55329e735ca9c244e2829" name="a3df20c72cbc55329e735ca9c244e2829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df20c72cbc55329e735ca9c244e2829">&#9670;&nbsp;</a></span>npath</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::npath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >number of path points </p>
+
+</div>
+</div>
+<a id="a6d9f6dd7f2d1467bab7687e1c05fb536" name="a6d9f6dd7f2d1467bab7687e1c05fb536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9f6dd7f2d1467bab7687e1c05fb536">&#9670;&nbsp;</a></span>npathbuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::npathbuf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >size of pathx, pathy buffers </p>
+
+</div>
+</div>
+<a id="aafecaed0735031096ec1ac9cdda95221" name="aafecaed0735031096ec1ac9cdda95221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafecaed0735031096ec1ac9cdda95221">&#9670;&nbsp;</a></span>ns</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::ns</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >size of grid, in pixels </p>
+
+</div>
+</div>
+<a id="a0210ff0b5a9c876304957942f5b3b06f" name="a0210ff0b5a9c876304957942f5b3b06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0210ff0b5a9c876304957942f5b3b06f">&#9670;&nbsp;</a></span>nx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::nx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf2f81d0ab6ed5f1fc70d966833c428b" name="adf2f81d0ab6ed5f1fc70d966833c428b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2f81d0ab6ed5f1fc70d966833c428b">&#9670;&nbsp;</a></span>ny</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::ny</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec4a086d1cd8357f0e9becf3a03e1807" name="aec4a086d1cd8357f0e9becf3a03e1807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec4a086d1cd8357f0e9becf3a03e1807">&#9670;&nbsp;</a></span>overP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * navfn::NavFn::overP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >priority buffer block 指针 </p>
+
+</div>
+</div>
+<a id="a967459dcc87c8b99850d74d9b2c8457d" name="a967459dcc87c8b99850d74d9b2c8457d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967459dcc87c8b99850d74d9b2c8457d">&#9670;&nbsp;</a></span>overPe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::overPe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >curP, nextP, overP 数组的最后一个点 </p>
+
+</div>
+</div>
+<a id="a93b7bc3a8b6ef9e41d2dd84bda5fd264" name="a93b7bc3a8b6ef9e41d2dd84bda5fd264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b7bc3a8b6ef9e41d2dd84bda5fd264">&#9670;&nbsp;</a></span>pathStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float navfn::NavFn::pathStep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >step size for following gradient </p>
+
+</div>
+</div>
+<a id="a375aad1164c8253c86861e5fb25631e5" name="a375aad1164c8253c86861e5fb25631e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375aad1164c8253c86861e5fb25631e5">&#9670;&nbsp;</a></span>pathx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* navfn::NavFn::pathx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1114910bfef12f5cc403379df0cf0a29" name="a1114910bfef12f5cc403379df0cf0a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1114910bfef12f5cc403379df0cf0a29">&#9670;&nbsp;</a></span>pathy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float * navfn::NavFn::pathy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >path points, as subpixel cell coordinates </p>
+
+</div>
+</div>
+<a id="a2e511ecff0c963f777149b3112d7d088" name="a2e511ecff0c963f777149b3112d7d088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e511ecff0c963f777149b3112d7d088">&#9670;&nbsp;</a></span>pb1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* navfn::NavFn::pb1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >block priority buffers </p>
+
+</div>
+</div>
+<a id="ab3bb9ffd5a267db916883bc8adeea45e" name="ab3bb9ffd5a267db916883bc8adeea45e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3bb9ffd5a267db916883bc8adeea45e">&#9670;&nbsp;</a></span>pb2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * navfn::NavFn::pb2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cc8d5ebae7a7ec08c1c1ebc52f806e1" name="a0cc8d5ebae7a7ec08c1c1ebc52f806e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc8d5ebae7a7ec08c1c1ebc52f806e1">&#9670;&nbsp;</a></span>pb3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * navfn::NavFn::pb3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >priority blocks 的缓冲存储 </p>
+
+</div>
+</div>
+<a id="a7a79ea21c1c230d65349c1a4234a1146" name="a7a79ea21c1c230d65349c1a4234a1146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a79ea21c1c230d65349c1a4234a1146">&#9670;&nbsp;</a></span>pending</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool* navfn::NavFn::pending</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >传播时的pending cells </p>
+
+</div>
+</div>
+<a id="ac1c141329d83e70f7ec649eeb74d5930" name="ac1c141329d83e70f7ec649eeb74d5930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c141329d83e70f7ec649eeb74d5930">&#9670;&nbsp;</a></span>potarr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* navfn::NavFn::potarr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >potential的数组， navigation function potential </p>
+
+</div>
+</div>
+<a id="a1ac0b9f1455e2bfefd2b7ab37ddf86a6" name="a1ac0b9f1455e2bfefd2b7ab37ddf86a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ac0b9f1455e2bfefd2b7ab37ddf86a6">&#9670;&nbsp;</a></span>priInc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float navfn::NavFn::priInc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >priority 阈值增量 </p>
+
+</div>
+</div>
+<a id="a1e91833444b39d86056e74b7c769bcfc" name="a1e91833444b39d86056e74b7c769bcfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e91833444b39d86056e74b7c769bcfc">&#9670;&nbsp;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int navfn::NavFn::start[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>navfn/include/navfn/<a class="el" href="navfn_8h_source.html">navfn.h</a></li>
+<li>navfn/src/<a class="el" href="navfn_8cpp.html">navfn.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

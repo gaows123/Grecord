@@ -1,0 +1,9 @@
+<map id="costmap_2d::Costmap2DROS::getRobotFootprint" name="costmap_2d::Costmap2DROS::getRobotFootprint">
+<area shape="rect" id="node1" title="Return the current footprint of the robot as a vector of points." alt="" coords="521,123,719,165"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="244,5,473,61"/>
+<area shape="rect" id="node3" href="$classcarrot__planner_1_1_carrot_planner.html#afb2445d0a140b7f9a47a4bed3ee3a63d" title="Checks the legality of the robot footprint at a position and orientation using the world model" alt="" coords="263,86,454,127"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="279,152,439,208"/>
+<area shape="rect" id="node7" href="$classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9" title="启动旋转恢复行为" alt="" coords="252,233,465,274"/>
+<area shape="rect" id="node4" href="$classcarrot__planner_1_1_carrot_planner.html#a59c64d61f2e992d08b32438116614ab5" title="Given a goal pose in the world, compute a plan" alt="" coords="5,86,196,127"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="21,152,181,208"/>
+</map>

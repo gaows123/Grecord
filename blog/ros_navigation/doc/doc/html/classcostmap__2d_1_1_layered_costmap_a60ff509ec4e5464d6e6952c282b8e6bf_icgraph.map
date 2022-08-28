@@ -1,0 +1,12 @@
+<map id="costmap_2d::LayeredCostmap::isRolling" name="costmap_2d::LayeredCostmap::isRolling">
+<area shape="rect" id="node1" title=" " alt="" coords="668,168,867,209"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_static_layer.html#aa9d8d26c675b2ecebeb1f2ba2a7ccfd6" title="Callback to update the costmap&#39;s map from the map_server" alt="" coords="444,37,611,79"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_static_layer.html#a3c8a9c7ea061ad416e09d2f1f18cdc8a" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="444,103,611,144"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="435,168,620,209"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_static_layer.html#ad433844bcb32418450e0fcb763173b6a" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="444,233,611,275"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_static_layer.html#a9ebed8f042ee945073031e51f82229f1" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="444,299,611,340"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,37,387,79"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="5,71,172,112"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,168,387,209"/>
+</map>

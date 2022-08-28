@@ -1,0 +1,22 @@
+<map id="costmap_2d::Costmap2DROS::getGlobalFrameID" name="costmap_2d::Costmap2DROS::getGlobalFrameID">
+<area shape="rect" id="node1" title="Returns the global frame of the costmap" alt="" coords="999,461,1196,502"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="696,64,951,120"/>
+<area shape="rect" id="node4" href="$classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,285,371,326"/>
+<area shape="rect" id="node6" href="$classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="744,203,903,245"/>
+<area shape="rect" id="node12" href="$classmove__base_1_1_move_base.html#ae2511210a27b06b9a515df783c074534" title=" " alt="" coords="454,386,613,427"/>
+<area shape="rect" id="node13" href="$classglobal__planner_1_1_global_planner.html#a280ebb6723d46b462eb66ec73a2fe266" title="PlannerCore 对象的初始化函数" alt="" coords="726,461,921,502"/>
+<area shape="rect" id="node15" href="$classnavfn_1_1_navfn_r_o_s.html#a7f1e06b4e3b390aaaa3e4733a0668c4d" title="NavFnROS 对象的初始化函数" alt="" coords="734,551,913,577"/>
+<area shape="rect" id="node17" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="743,601,903,657"/>
+<area shape="rect" id="node19" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85" title="构建ros的封装" alt="" coords="734,682,913,723"/>
+<area shape="rect" id="node20" href="$classcarrot__planner_1_1_carrot_planner.html#a59c64d61f2e992d08b32438116614ab5" title="Given a goal pose in the world, compute a plan" alt="" coords="728,747,919,789"/>
+<area shape="rect" id="node3" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="419,5,648,61"/>
+<area shape="rect" id="node5" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,190,164,231"/>
+<area shape="rect" id="node7" href="$classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="452,203,615,245"/>
+<area shape="rect" id="node8" href="$classmove__base_1_1_move_base.html#a02b97ca12b73c0caf06aaafde2c930e7" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="212,190,371,231"/>
+<area shape="rect" id="node9" href="$classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="454,269,613,310"/>
+<area shape="rect" id="node10" href="$classmove__base_1_1_move_base.html#af48f0d98ba773f9799e0a970bf092089" title="Make a new global plan" alt="" coords="454,86,613,127"/>
+<area shape="rect" id="node11" href="$classmove__base_1_1_move_base.html#a12b28ebdf00058e1ffc8b29ec92c320a" title=" " alt="" coords="212,99,371,141"/>
+<area shape="rect" id="node14" href="$classglobal__planner_1_1_global_planner.html#aaeb34983765b053861cbef08e9614bb5" title="构造函数" alt="" coords="436,461,631,502"/>
+<area shape="rect" id="node16" href="$classnavfn_1_1_navfn_r_o_s.html#a06ba0ae6bd1cac9ee89110290c5b86e6" title="NavFnROS对象的构造函数" alt="" coords="436,551,631,577"/>
+<area shape="rect" id="node18" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="453,601,613,657"/>
+</map>

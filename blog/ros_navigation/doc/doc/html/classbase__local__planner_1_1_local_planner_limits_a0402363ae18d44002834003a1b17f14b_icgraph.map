@@ -1,0 +1,8 @@
+<map id="base_local_planner::LocalPlannerLimits::getAccLimits" name="base_local_planner::LocalPlannerLimits::getAccLimits">
+<area shape="rect" id="node1" title="Get the acceleration limits of the robot" alt="" coords="761,41,901,97"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_simple_trajectory_generator.html#a09675e3d736eaf9ff3b8c8bc3587b768" title=" " alt="" coords="528,41,713,97"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_simple_trajectory_generator.html#a56881a7d1e6cf7027eb2243a764dc0fa" title="这里重载了initialise，跟上一个initialise相比，少了输入参数additional_samples" alt="" coords="528,121,713,177"/>
+<area shape="rect" id="node4" href="$classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="283,42,480,83"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_simple_trajectory_generator.html#adb064b57ea297fc3810e185861e444e8" title=" " alt="" coords="289,108,474,164"/>
+</map>

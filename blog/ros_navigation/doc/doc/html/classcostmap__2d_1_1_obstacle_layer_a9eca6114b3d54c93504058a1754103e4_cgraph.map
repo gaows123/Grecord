@@ -1,0 +1,6 @@
+<map id="costmap_2d::ObstacleLayer::reset" name="costmap_2d::ObstacleLayer::reset">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,191,112"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a96d2b1af3b09d35e02e6d2fc8366195f" title="Restart publishers if they&#39;ve been stopped." alt="" coords="239,5,424,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_obstacle_layer.html#a4b5054749c568e2df8180c2a7c0e6177" title="Stop publishers." alt="" coords="239,71,424,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="247,136,416,177"/>
+</map>

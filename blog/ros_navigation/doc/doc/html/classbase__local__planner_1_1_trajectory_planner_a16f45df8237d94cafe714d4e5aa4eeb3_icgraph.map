@@ -1,0 +1,7 @@
+<map id="base_local_planner::TrajectoryPlanner::checkTrajectory" name="base_local_planner::TrajectoryPlanner::checkTrajectory">
+<area shape="rect" id="node1" title="产生和打分单个局部路径" alt="" coords="455,85,588,141"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="247,5,407,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="247,85,407,141"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3" title="基于加速度限制让机器人停止" alt="" coords="247,165,407,221"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,125,199,181"/>
+</map>

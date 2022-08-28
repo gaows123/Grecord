@@ -1,0 +1,10 @@
+<map id="global_planner::GlobalPlanner" name="global_planner::GlobalPlanner">
+<area shape="rect" id="node1" title=" " alt="" coords="613,159,808,185"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="267,5,461,32"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="279,56,449,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="337,107,391,133"/>
+<area shape="rect" id="node5" href="$classglobal__planner_1_1_potential_calculator.html" title=" " alt="" coords="5,213,169,254"/>
+<area shape="rect" id="node6" href="$classglobal__planner_1_1_expander.html" title=" " alt="" coords="280,220,448,247"/>
+<area shape="rect" id="node7" href="$classglobal__planner_1_1_traceback.html" title=" " alt="" coords="277,271,451,297"/>
+<area shape="rect" id="node8" href="$classglobal__planner_1_1_orientation_filter.html" title=" " alt="" coords="276,322,452,363"/>
+</map>

@@ -1,0 +1,72 @@
+\hypertarget{rotate__recovery_8h_source}{}\doxysection{rotate\+\_\+recovery.\+h}
+\label{rotate__recovery_8h_source}\index{rotate\_recovery/include/rotate\_recovery/rotate\_recovery.h@{rotate\_recovery/include/rotate\_recovery/rotate\_recovery.h}}
+\mbox{\hyperlink{rotate__recovery_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{*}}
+\DoxyCodeLine{3 \textcolor{comment}{* Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{*}}
+\DoxyCodeLine{5 \textcolor{comment}{*  Copyright (c) 2009, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{*  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{*}}
+\DoxyCodeLine{8 \textcolor{comment}{*  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{*  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{*  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{*}}
+\DoxyCodeLine{12 \textcolor{comment}{*   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{*     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{*   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{*     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{*     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{*     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{*   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{*     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{*     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{*}}
+\DoxyCodeLine{22 \textcolor{comment}{*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{*  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{*  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{*  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{*  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{*  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{*  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{*  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{*  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{*  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{*  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{*}}
+\DoxyCodeLine{35 \textcolor{comment}{* Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{*********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef ROTATE\_RECOVERY\_ROTATE\_RECOVERY\_H}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define ROTATE\_RECOVERY\_ROTATE\_RECOVERY\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{recovery__behavior_8h}{nav\_core/recovery\_behavior.h}}>}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__ros_8h}{costmap\_2d/costmap\_2d\_ros.h}}>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <tf2\_ros/buffer.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__model_8h}{base\_local\_planner/costmap\_model.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerotate__recovery}{rotate\_recovery}}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{51 \textcolor{keyword}{class }\mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery}{RotateRecovery}} : \textcolor{keyword}{public} \mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{nav\_core::RecoveryBehavior}}}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53 \textcolor{keyword}{public}:}
+\DoxyCodeLine{57   \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a783abdd0af0c982eeaac51f8032005c7}{RotateRecovery}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{66   \textcolor{keywordtype}{void} \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204}{initialize}}(std::string name, tf2\_ros::Buffer*,}
+\DoxyCodeLine{67                   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}*, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* local\_costmap);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{72   \textcolor{keywordtype}{void} \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9}{runBehavior}}();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77   \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a71067cd6e9b261a37b6cd52ac33e41b4}{\string~RotateRecovery}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{private}:}
+\DoxyCodeLine{80   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\_2d::Costmap2DROS}}* \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a74a92df840d2e5fa5cadd27250fcd7ca}{local\_costmap\_}};}
+\DoxyCodeLine{81   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a90c717275985636f3154ee08bc726e45}{initialized\_}};}
+\DoxyCodeLine{82   \textcolor{keywordtype}{double} \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_aa1b541b963d3409168b6c428445b3ff6}{sim\_granularity\_}}, \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a89ed5b08934db5665f7e5a5ae7435f95}{min\_rotational\_vel\_}}, \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a475480288dc80dd1ddc83cea95927782}{max\_rotational\_vel\_}}, \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a83a0bfe2d336bc45afe710d4a906d8d5}{acc\_lim\_th\_}}, \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a31ee929ac22fcd7b304db75787c00645}{tolerance\_}}, \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_ab3734f38f8aebbacd7b50b0293d00b22}{frequency\_}};}
+\DoxyCodeLine{83   \mbox{\hyperlink{classbase__local__planner_1_1_costmap_model}{base\_local\_planner::CostmapModel}}* \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a14f4f958977686f37a135f1e05d6bdda}{world\_model\_}};}
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 \};  \textcolor{comment}{// namespace rotate\_recovery}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// ROTATE\_RECOVERY\_ROTATE\_RECOVERY\_H}}
+
+\end{DoxyCode}

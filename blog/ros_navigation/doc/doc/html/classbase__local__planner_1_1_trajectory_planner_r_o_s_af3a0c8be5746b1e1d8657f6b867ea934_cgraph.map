@@ -1,0 +1,4 @@
+<map id="base_local_planner::TrajectoryPlannerROS::setPlan" name="base_local_planner::TrajectoryPlannerROS::setPlan">
+<area shape="rect" id="node1" title="更新局部规划器要跟随的路径" alt="" coords="5,5,165,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a99bc029d01fb414521862b83f81aa5c9" title=" " alt="" coords="213,5,373,61"/>
+</map>

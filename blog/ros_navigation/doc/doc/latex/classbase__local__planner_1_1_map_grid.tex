@@ -1,0 +1,541 @@
+\hypertarget{classbase__local__planner_1_1_map_grid}{}\doxysection{base\+\_\+local\+\_\+planner\+::Map\+Grid类 参考}
+\label{classbase__local__planner_1_1_map_grid}\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+
+
+A grid of \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} cells that is used to propagate path and goal distances for the trajectory controller.  
+
+
+
+
+{\ttfamily \#include $<$map\+\_\+grid.\+h$>$}
+
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ad10445cf88357f857c8e03b47262b732}{Map\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Creates a 0x0 map by default \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92}{Map\+Grid}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Creates a map of size\+\_\+x by size\+\_\+y \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} \& \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a1dfe8cec7bc6c5ac8c6c177ebd13fa99}{operator()}} (unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Returns a map cell accessed by (col, row) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a28b6b750b5eae5778c55b9cb4bfca04f}{operator()}} (unsigned int x, unsigned int y) const
+\begin{DoxyCompactList}\small\item\em Returns a map cell accessed by (col, row) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} \& \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d}{get\+Cell}} (unsigned int x, unsigned int y)
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8efc6461e975c937560ef8e68b471a78}{$\sim$\+Map\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a374361ae0ac1a7e046ff0013af4285b6}{Map\+Grid}} (const \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \&mg)
+\begin{DoxyCompactList}\small\item\em Copy constructor for a \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \& \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a058863c16849dab1495f4206bed28321}{operator=}} (const \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \&mg)
+\begin{DoxyCompactList}\small\item\em Assignment operator for a \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11}{reset\+Path\+Dist}} ()
+\begin{DoxyCompactList}\small\item\em reset path distance fields for all cells \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d}{size\+Check}} (unsigned int size\+\_\+x, unsigned int size\+\_\+y)
+\begin{DoxyCompactList}\small\item\em check if we need to resize \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432}{common\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Utility to share initialization code across constructors \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423}{get\+Index}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Returns a 1D index into the \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} array for a 2D index \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe}{obstacle\+Costs}} ()
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420}{unreachable\+Cell\+Costs}} ()
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9}{update\+Path\+Cell}} (\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$current\+\_\+cell, \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$check\+\_\+cell, const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap)
+\begin{DoxyCompactList}\small\item\em Used to update the distance of a cell in path distance computation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2}{compute\+Target\+Distance}} (std\+::queue$<$ \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$ $>$ \&dist\+\_\+queue, const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap)
+\begin{DoxyCompactList}\small\item\em Compute the distance from each cell in the local map grid to the planned path \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a35b47e664abc157ef47e8a1ed5d0d357}{compute\+Goal\+Distance}} (std\+::queue$<$ \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$ $>$ \&dist\+\_\+queue, const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap)
+\begin{DoxyCompactList}\small\item\em Compute the distance from each cell in the local map grid to the local goal point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5}{set\+Target\+Cells}} (const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Update what cells are considered path based on the global plan \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5}{set\+Local\+Goal}} (const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&costmap, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em Update what cell is considered the next local goal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a}{adjust\+Plan\+Resolution}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan\+\_\+in, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&global\+\_\+plan\+\_\+out, double resolution)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a6153b07220fff0cad38a82491d288510}{goal\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ab53586ea5096453439256dd47545559b}{goal\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The goal distance was last computed from \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a41702016ab4edc01a0b23fc05a9c64de}{size\+\_\+x\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_afac1b094ef9469b56c59c3ab1008de47}{size\+\_\+y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The dimensions of the grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $>$ \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}{map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Storage for the Map\+Cells \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A grid of \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} cells that is used to propagate path and goal distances for the trajectory controller. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_ad10445cf88357f857c8e03b47262b732}\label{classbase__local__planner_1_1_map_grid_ad10445cf88357f857c8e03b47262b732}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!MapGrid@{MapGrid}}
+\index{MapGrid@{MapGrid}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{MapGrid()}{MapGrid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::\+Map\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a 0x0 map by default 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92}\label{classbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!MapGrid@{MapGrid}}
+\index{MapGrid@{MapGrid}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{MapGrid()}{MapGrid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::\+Map\+Grid (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Creates a map of size\+\_\+x by size\+\_\+y 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The width of the map \\
+\hline
+{\em size\+\_\+y} & The height of the map \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classbase__local__planner_1_1_map_grid_a55e83a26cdb3c6614d9ca4635da5dc92_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a8efc6461e975c937560ef8e68b471a78}\label{classbase__local__planner_1_1_map_grid_a8efc6461e975c937560ef8e68b471a78}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!````~MapGrid@{$\sim$MapGrid}}
+\index{````~MapGrid@{$\sim$MapGrid}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{$\sim$MapGrid()}{~MapGrid()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::$\sim$\+Map\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for a \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a374361ae0ac1a7e046ff0013af4285b6}\label{classbase__local__planner_1_1_map_grid_a374361ae0ac1a7e046ff0013af4285b6}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!MapGrid@{MapGrid}}
+\index{MapGrid@{MapGrid}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{MapGrid()}{MapGrid()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::\+Map\+Grid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \&}]{mg }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for a \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} 
+
+
+\begin{DoxyParams}{参数}
+{\em mg} & The \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} to copy \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a}\label{classbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!adjustPlanResolution@{adjustPlanResolution}}
+\index{adjustPlanResolution@{adjustPlanResolution}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{adjustPlanResolution()}{adjustPlanResolution()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::adjust\+Plan\+Resolution (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan\+\_\+in,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan\+\_\+out,  }\item[{double}]{resolution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+increase global plan resolution to match that of the costmap by adding points linearly between global plan points This is necessary where global planners produce plans with few points. 
+\begin{DoxyParams}{参数}
+{\em global\+\_\+plan\+\_\+in} & input \\
+\hline
+{\em global\+\_\+plan\+\_\+output} & output \\
+\hline
+{\em resolution} & desired distance between waypoints \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432}\label{classbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!commonInit@{commonInit}}
+\index{commonInit@{commonInit}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{commonInit()}{commonInit()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::common\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Utility to share initialization code across constructors 
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a35b47e664abc157ef47e8a1ed5d0d357}\label{classbase__local__planner_1_1_map_grid_a35b47e664abc157ef47e8a1ed5d0d357}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!computeGoalDistance@{computeGoalDistance}}
+\index{computeGoalDistance@{computeGoalDistance}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{computeGoalDistance()}{computeGoalDistance()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::compute\+Goal\+Distance (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$ $>$ \&}]{dist\+\_\+queue,  }\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{costmap }\end{DoxyParamCaption})}
+
+
+
+Compute the distance from each cell in the local map grid to the local goal point 
+
+
+\begin{DoxyParams}{参数}
+{\em goal\+\_\+queue} & A queue containing the local goal cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2}\label{classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!computeTargetDistance@{computeTargetDistance}}
+\index{computeTargetDistance@{computeTargetDistance}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{computeTargetDistance()}{computeTargetDistance()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::compute\+Target\+Distance (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$ $>$ \&}]{dist\+\_\+queue,  }\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{costmap }\end{DoxyParamCaption})}
+
+
+
+Compute the distance from each cell in the local map grid to the planned path 
+
+
+\begin{DoxyParams}{参数}
+{\em dist\+\_\+queue} & A queue of the initial cells on the path \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d}\label{classbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!getCell@{getCell}}
+\index{getCell@{getCell}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{getCell()}{getCell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} \& base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::get\+Cell (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423}\label{classbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily size\+\_\+t base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::get\+Index (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Returns a 1D index into the \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} array for a 2D index 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & The desired x coordinate \\
+\hline
+{\em y} & The desired y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The associated 1D index 
+\end{DoxyReturn}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe}\label{classbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!obstacleCosts@{obstacleCosts}}
+\index{obstacleCosts@{obstacleCosts}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{obstacleCosts()}{obstacleCosts()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::obstacle\+Costs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return a value that indicates cell is in obstacle 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a1dfe8cec7bc6c5ac8c6c177ebd13fa99}\label{classbase__local__planner_1_1_map_grid_a1dfe8cec7bc6c5ac8c6c177ebd13fa99}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!operator()@{operator()}}
+\index{operator()@{operator()}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} \& base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a map cell accessed by (col, row) 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & The x coordinate of the cell \\
+\hline
+{\em y} & The y coordinate of the cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A reference to the desired cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a28b6b750b5eae5778c55b9cb4bfca04f}\label{classbase__local__planner_1_1_map_grid_a28b6b750b5eae5778c55b9cb4bfca04f}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!operator()@{operator()}}
+\index{operator()@{operator()}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a map cell accessed by (col, row) 
+
+
+\begin{DoxyParams}{参数}
+{\em x} & The x coordinate of the cell \\
+\hline
+{\em y} & The y coordinate of the cell \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A copy of the desired cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a058863c16849dab1495f4206bed28321}\label{classbase__local__planner_1_1_map_grid_a058863c16849dab1495f4206bed28321}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!operator=@{operator=}}
+\index{operator=@{operator=}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \& base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} \&}]{mg }\end{DoxyParamCaption})}
+
+
+
+Assignment operator for a \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} 
+
+
+\begin{DoxyParams}{参数}
+{\em mg} & The \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{Map\+Grid}} to assign from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11}\label{classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!resetPathDist@{resetPathDist}}
+\index{resetPathDist@{resetPathDist}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{resetPathDist()}{resetPathDist()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::reset\+Path\+Dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reset path distance fields for all cells 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5}\label{classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!setLocalGoal@{setLocalGoal}}
+\index{setLocalGoal@{setLocalGoal}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{setLocalGoal()}{setLocalGoal()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::set\+Local\+Goal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{costmap,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan }\end{DoxyParamCaption})}
+
+
+
+Update what cell is considered the next local goal 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5}\label{classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!setTargetCells@{setTargetCells}}
+\index{setTargetCells@{setTargetCells}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{setTargetCells()}{setTargetCells()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::set\+Target\+Cells (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{costmap,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{global\+\_\+plan }\end{DoxyParamCaption})}
+
+
+
+Update what cells are considered path based on the global plan 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d}\label{classbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!sizeCheck@{sizeCheck}}
+\index{sizeCheck@{sizeCheck}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{sizeCheck()}{sizeCheck()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::size\+Check (\begin{DoxyParamCaption}\item[{unsigned int}]{size\+\_\+x,  }\item[{unsigned int}]{size\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+check if we need to resize 
+
+
+\begin{DoxyParams}{参数}
+{\em size\+\_\+x} & The desired width \\
+\hline
+{\em size\+\_\+y} & The desired height \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420}\label{classbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!unreachableCellCosts@{unreachableCellCosts}}
+\index{unreachableCellCosts@{unreachableCellCosts}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{unreachableCellCosts()}{unreachableCellCosts()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::unreachable\+Cell\+Costs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns a value indicating cell was not reached by wavefront propagation of set cells. (is behind walls, regarding the region covered by grid) 这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9}\label{classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!updatePathCell@{updatePathCell}}
+\index{updatePathCell@{updatePathCell}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{updatePathCell()}{updatePathCell()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::update\+Path\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$}]{current\+\_\+cell,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}} $\ast$}]{check\+\_\+cell,  }\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} \&}]{costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Used to update the distance of a cell in path distance computation 
+
+
+\begin{DoxyParams}{参数}
+{\em current\+\_\+cell} & The cell we\textquotesingle{}re currently in \\
+\hline
+{\em check\+\_\+cell} & The cell to be updated \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a6153b07220fff0cad38a82491d288510}\label{classbase__local__planner_1_1_map_grid_a6153b07220fff0cad38a82491d288510}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!goal\_x\_@{goal\_x\_}}
+\index{goal\_x\_@{goal\_x\_}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{goal\_x\_}{goal\_x\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::goal\+\_\+x\+\_\+}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_ab53586ea5096453439256dd47545559b}\label{classbase__local__planner_1_1_map_grid_ab53586ea5096453439256dd47545559b}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!goal\_y\_@{goal\_y\_}}
+\index{goal\_y\_@{goal\_y\_}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{goal\_y\_}{goal\_y\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::goal\+\_\+y\+\_\+}
+
+
+
+The goal distance was last computed from 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}\label{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!map\_@{map\_}}
+\index{map\_@{map\_}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{map\_}{map\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{Map\+Cell}}$>$ base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Storage for the Map\+Cells 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_a41702016ab4edc01a0b23fc05a9c64de}\label{classbase__local__planner_1_1_map_grid_a41702016ab4edc01a0b23fc05a9c64de}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!size\_x\_@{size\_x\_}}
+\index{size\_x\_@{size\_x\_}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{size\_x\_}{size\_x\_}}
+{\footnotesize\ttfamily unsigned int base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::size\+\_\+x\+\_\+}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_afac1b094ef9469b56c59c3ab1008de47}\label{classbase__local__planner_1_1_map_grid_afac1b094ef9469b56c59c3ab1008de47}} 
+\index{base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}!size\_y\_@{size\_y\_}}
+\index{size\_y\_@{size\_y\_}!base\_local\_planner::MapGrid@{base\_local\_planner::MapGrid}}
+\doxysubsubsection{\texorpdfstring{size\_y\_}{size\_y\_}}
+{\footnotesize\ttfamily unsigned int base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+::size\+\_\+y\+\_\+}
+
+
+
+The dimensions of the grid 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{map__grid_8h}{map\+\_\+grid.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{map__grid_8cpp}{map\+\_\+grid.\+cpp}}\end{DoxyCompactItemize}

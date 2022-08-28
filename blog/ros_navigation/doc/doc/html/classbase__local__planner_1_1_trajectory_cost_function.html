@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::TrajectoryCostFunction类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html">TrajectoryCostFunction</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_trajectory_cost_function-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::TrajectoryCostFunction类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for critics of trajectories During each sampling run, a batch of many trajectories will be scored using such a cost function. The prepare method is called before each batch run, and then for each trajectory of the sampling set, score_trajectory may be called.  
+ <a href="classbase__local__planner_1_1_trajectory_cost_function.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="trajectory__cost__function_8h_source.html">trajectory_cost_function.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::TrajectoryCostFunction 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_cost_function__inherit__graph.png" border="0" usemap="#abase__local__planner_1_1_trajectory_cost_function_inherit__map" alt="Inheritance graph"/></div>
+<map name="abase__local__planner_1_1_trajectory_cost_function_inherit__map" id="abase__local__planner_1_1_trajectory_cost_function_inherit__map">
+<area shape="rect" title="Provides an interface for critics of trajectories During each sampling run, a batch of many trajector..." alt="" coords="5,136,171,177"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html" title=" " alt="" coords="235,5,391,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_obstacle_cost_function.html" title="Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajec..." alt="" coords="233,71,392,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_oscillation_cost_function.html" title=" " alt="" coords="229,136,397,177"/>
+<area shape="rect" href="classbase__local__planner_1_1_prefer_forward_cost_function.html" title=" " alt="" coords="219,201,407,243"/>
+<area shape="rect" href="classbase__local__planner_1_1_twirling_cost_function.html" title=" " alt="" coords="237,267,388,308"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a351dddca226f210a09bd10c151e2975f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a351dddca226f210a09bd10c151e2975f">prepare</a> ()=0</td></tr>
+<tr class="separator:a351dddca226f210a09bd10c151e2975f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6908a8071270b455fc25b48db76e2d3c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a6908a8071270b455fc25b48db76e2d3c">scoreTrajectory</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj)=0</td></tr>
+<tr class="separator:a6908a8071270b455fc25b48db76e2d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaae8d899bd41d8baf02bf7aa175ded9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#abaae8d899bd41d8baf02bf7aa175ded9">getScale</a> ()</td></tr>
+<tr class="separator:abaae8d899bd41d8baf02bf7aa175ded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816da4ed3c9be419fc00abb271d5a8b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a816da4ed3c9be419fc00abb271d5a8b5">setScale</a> (double scale)</td></tr>
+<tr class="separator:a816da4ed3c9be419fc00abb271d5a8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac606d6ffc0a09f96d04cbb671c903d68"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#ac606d6ffc0a09f96d04cbb671c903d68">~TrajectoryCostFunction</a> ()</td></tr>
+<tr class="separator:ac606d6ffc0a09f96d04cbb671c903d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a5a80d6bb3fade55e28d8cb234936c43a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a5a80d6bb3fade55e28d8cb234936c43a">TrajectoryCostFunction</a> (double scale=1.0)</td></tr>
+<tr class="separator:a5a80d6bb3fade55e28d8cb234936c43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8773ccf955aaca24cb37c4855ca4d582"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a8773ccf955aaca24cb37c4855ca4d582">scale_</a></td></tr>
+<tr class="separator:a8773ccf955aaca24cb37c4855ca4d582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >Provides an interface for critics of trajectories During each sampling run, a batch of many trajectories will be scored using such a cost function. The prepare method is called before each batch run, and then for each trajectory of the sampling set, score_trajectory may be called. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac606d6ffc0a09f96d04cbb671c903d68" name="ac606d6ffc0a09f96d04cbb671c903d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac606d6ffc0a09f96d04cbb671c903d68">&#9670;&nbsp;</a></span>~TrajectoryCostFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual base_local_planner::TrajectoryCostFunction::~TrajectoryCostFunction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a80d6bb3fade55e28d8cb234936c43a" name="a5a80d6bb3fade55e28d8cb234936c43a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a80d6bb3fade55e28d8cb234936c43a">&#9670;&nbsp;</a></span>TrajectoryCostFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::TrajectoryCostFunction::TrajectoryCostFunction </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="abaae8d899bd41d8baf02bf7aa175ded9" name="abaae8d899bd41d8baf02bf7aa175ded9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaae8d899bd41d8baf02bf7aa175ded9">&#9670;&nbsp;</a></span>getScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryCostFunction::getScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_cost_function_abaae8d899bd41d8baf02bf7aa175ded9_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_cost_function_abaae8d899bd41d8baf02bf7aa175ded9_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_cost_function_abaae8d899bd41d8baf02bf7aa175ded9_icgraph" id="aclassbase__local__planner_1_1_trajectory_cost_function_abaae8d899bd41d8baf02bf7aa175ded9_icgraph">
+<area shape="rect" title=" " alt="" coords="797,43,963,99"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_scored_sampling_planner.html#ac11a2d2fbf69d6ed55f720c5ebe1b541" title=" " alt="" coords="540,43,749,99"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="289,13,486,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_scored_sampling_planner.html#ad1a365b0504879a2e57f1a9d713acdc4" title=" " alt="" coords="283,79,492,135"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="31,86,209,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a351dddca226f210a09bd10c151e2975f" name="a351dddca226f210a09bd10c151e2975f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351dddca226f210a09bd10c151e2975f">&#9670;&nbsp;</a></span>prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool base_local_planner::TrajectoryCostFunction::prepare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >更新常用的变量 毕竟纯虚函数，子类中必须重写该函数 </p>
+
+<p>在 <a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc">base_local_planner::MapGridCostFunction</a>, <a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a9a9929d60bfd91f8814d8b31e51969cf">base_local_planner::ObstacleCostFunction</a>, <a class="el" href="classbase__local__planner_1_1_oscillation_cost_function.html#a1cc7c1cd4c49df97515da3c12400f4df">base_local_planner::OscillationCostFunction</a>, <a class="el" href="classbase__local__planner_1_1_prefer_forward_cost_function.html#a3f378ae4e7f2c01b0af4acff71ed564f">base_local_planner::PreferForwardCostFunction</a> , 以及 <a class="el" href="classbase__local__planner_1_1_twirling_cost_function.html#ab371127d4584e608d012e3447e2680b3">base_local_planner::TwirlingCostFunction</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_cost_function_a351dddca226f210a09bd10c151e2975f_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_cost_function_a351dddca226f210a09bd10c151e2975f_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_cost_function_a351dddca226f210a09bd10c151e2975f_icgraph" id="aclassbase__local__planner_1_1_trajectory_cost_function_a351dddca226f210a09bd10c151e2975f_icgraph">
+<area shape="rect" title=" " alt="" coords="489,5,655,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_scored_sampling_planner.html#ad1a365b0504879a2e57f1a9d713acdc4" title=" " alt="" coords="232,5,441,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="5,13,184,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6908a8071270b455fc25b48db76e2d3c" name="a6908a8071270b455fc25b48db76e2d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6908a8071270b455fc25b48db76e2d3c">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double base_local_planner::TrajectoryCostFunction::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >返回一个局部轨迹的评分，也是纯虚函数 </p>
+
+<p>在 <a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a4332b1fd1c72795c87fb5d3a427df476">base_local_planner::MapGridCostFunction</a>, <a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a3bac5a99d333a755440449809270e638">base_local_planner::ObstacleCostFunction</a>, <a class="el" href="classbase__local__planner_1_1_oscillation_cost_function.html#ac9fd440e97142115b8bbe81408eadc14">base_local_planner::OscillationCostFunction</a>, <a class="el" href="classbase__local__planner_1_1_prefer_forward_cost_function.html#a87ba9f1a9598d9851af39578ce62beda">base_local_planner::PreferForwardCostFunction</a> , 以及 <a class="el" href="classbase__local__planner_1_1_twirling_cost_function.html#ae6744c50c77888cb4f59d3a6650227ee">base_local_planner::TwirlingCostFunction</a> 内被实现.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_cost_function_a6908a8071270b455fc25b48db76e2d3c_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_cost_function_a6908a8071270b455fc25b48db76e2d3c_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_cost_function_a6908a8071270b455fc25b48db76e2d3c_icgraph" id="aclassbase__local__planner_1_1_trajectory_cost_function_a6908a8071270b455fc25b48db76e2d3c_icgraph">
+<area shape="rect" title=" " alt="" coords="797,43,963,99"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_scored_sampling_planner.html#ac11a2d2fbf69d6ed55f720c5ebe1b541" title=" " alt="" coords="540,43,749,99"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="289,13,486,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_scored_sampling_planner.html#ad1a365b0504879a2e57f1a9d713acdc4" title=" " alt="" coords="283,79,492,135"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="31,86,209,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a816da4ed3c9be419fc00abb271d5a8b5" name="a816da4ed3c9be419fc00abb271d5a8b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a816da4ed3c9be419fc00abb271d5a8b5">&#9670;&nbsp;</a></span>setScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::TrajectoryCostFunction::setScale </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_trajectory_cost_function_a816da4ed3c9be419fc00abb271d5a8b5_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_trajectory_cost_function_a816da4ed3c9be419fc00abb271d5a8b5_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_trajectory_cost_function_a816da4ed3c9be419fc00abb271d5a8b5_icgraph" id="aclassbase__local__planner_1_1_trajectory_cost_function_a816da4ed3c9be419fc00abb271d5a8b5_icgraph">
+<area shape="rect" title=" " alt="" coords="276,35,441,91"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a9388b62309f6148c697aef4ebf5fe20a" title="配置局部规划器" alt="" coords="33,5,201,47"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#aa681debca2e138a957652e9451893f67" title="在路径规划前更新代价函数" alt="" coords="5,71,228,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a8773ccf955aaca24cb37c4855ca4d582" name="a8773ccf955aaca24cb37c4855ca4d582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8773ccf955aaca24cb37c4855ca4d582">&#9670;&nbsp;</a></span>scale_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::TrajectoryCostFunction::scale_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="trajectory__cost__function_8h_source.html">trajectory_cost_function.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

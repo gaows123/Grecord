@@ -1,0 +1,199 @@
+\hypertarget{costmap__2d__ros_8h_source}{}\doxysection{costmap\+\_\+2d\+\_\+ros.\+h}
+\label{costmap__2d__ros_8h_source}\index{costmap\_2d/include/costmap\_2d/costmap\_2d\_ros.h@{costmap\_2d/include/costmap\_2d/costmap\_2d\_ros.h}}
+\mbox{\hyperlink{costmap__2d__ros_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_COSTMAP\_2D\_ROS\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_COSTMAP\_2D\_ROS\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layered__costmap_8h}{costmap\_2d/layered\_costmap.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layer_8h}{costmap\_2d/layer.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d__publisher_8h}{costmap\_2d/costmap\_2d\_publisher.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <costmap\_2d/Costmap2DConfig.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{footprint_8h}{costmap\_2d/footprint.h}}>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <geometry\_msgs/Polygon.h>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <geometry\_msgs/PolygonStamped.h>}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/server.h>}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#include <pluginlib/class\_loader.hpp>}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#include <tf2/LinearMath/Transform.h>}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }\mbox{\hyperlink{class_super_value}{SuperValue}} : \textcolor{keyword}{public} XmlRpc::XmlRpcValue}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_super_value_abe535082c89a49359388d095b0196d5c}{setStruct}}(XmlRpc::XmlRpcValue::ValueStruct* a)}
+\DoxyCodeLine{57   \{}
+\DoxyCodeLine{58     \_type = TypeStruct;}
+\DoxyCodeLine{59     \_value.asStruct = \textcolor{keyword}{new} XmlRpc::XmlRpcValue::ValueStruct(*a);}
+\DoxyCodeLine{60   \}}
+\DoxyCodeLine{61   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_super_value_ab1ba33f545994f45cd0e30cc7b83adcb}{setArray}}(XmlRpc::XmlRpcValue::ValueArray* a)}
+\DoxyCodeLine{62   \{}
+\DoxyCodeLine{63     \_type = TypeArray;}
+\DoxyCodeLine{64     \_value.asArray = \textcolor{keyword}{new} std::vector<XmlRpc::XmlRpcValue>(*a);}
+\DoxyCodeLine{65   \}}
+\DoxyCodeLine{66 \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2DROS}}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76 \textcolor{keyword}{public}:}
+\DoxyCodeLine{82   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8e6acdb79ef3eb738e8f4d9a5197a9ed}{Costmap2DROS}}(\textcolor{keyword}{const} std::string \&name, tf2\_ros::Buffer\& tf);}
+\DoxyCodeLine{83   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a22cf571bfd4cd4434c2d203cd341d2c7}{\string~Costmap2DROS}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{90   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a426e3bfc085f9534b908807d1d734396}{start}}();}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{95   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6034554ce34557a2426eda649629c670}{stop}}();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{100   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9df641b15f263c18d7a39e55224d5df3}{pause}}();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{105   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a881910f6dbefabddbf012b8c51c4dd0a}{resume}}();}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9c3aa244e7890b363a6317500d66e900}{updateMap}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{112   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af0370b7b97c5d8cfcc961abb8d190f21}{resetLayers}}();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{115   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a1c8735ead3c927906ca31e015bfc9ab7}{isCurrent}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{116 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{117       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_acab094b1a98d6ab5b598123aa9b88640}{layered\_costmap\_}}-\/>\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_a7fdc879ceb88df60b51ee4e5f4a1ec6e}{isCurrent}}();}
+\DoxyCodeLine{118     \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{123   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a46937f798f630d7d17efc4754743cf70}{isStopped}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{124 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{125       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a18881202657a9b25c7ce0703aa0dbac9}{stopped\_}};}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{133   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_adcf3512b555a02dbbe2f57e784defce9}{getRobotPose}}(geometry\_msgs::PoseStamped\& global\_pose) \textcolor{keyword}{const};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{136   \textcolor{keyword}{inline} \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a94655d85e11b8c1e542a26674bcdc9b2}{getName}}() const noexcept}
+\DoxyCodeLine{137     \{}
+\DoxyCodeLine{138       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8db674938a25c40af469413238c25dca}{name\_}};}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{142   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa96116a5847c4cbbe872e7ace18dc67c}{getTransformTolerance}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{143 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{144       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a285fdb30fb75f5bc94091e4f40de4b0b}{transform\_tolerance\_}};}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{150   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a1fe322e03f6a103e3fbf9beeef530c0f}{getCostmap}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{151 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{152       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_acab094b1a98d6ab5b598123aa9b88640}{layered\_costmap\_}}-\/>\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_a22e2f5d750be195f71da46b2062460f2}{getCostmap}}();}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{159   \textcolor{keyword}{inline} \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa2942240e1eb2ecadf166c56f8e79bd7}{getGlobalFrameID}}() const noexcept}
+\DoxyCodeLine{160     \{}
+\DoxyCodeLine{161       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aee5cf95f348f42b83a7b5733b452a4b1}{global\_frame\_}};}
+\DoxyCodeLine{162     \}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{168   \textcolor{keyword}{inline} \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d02596d6352e0153a579427bbc2c394}{getBaseFrameID}}() const noexcept}
+\DoxyCodeLine{169     \{}
+\DoxyCodeLine{170       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_abd4149bf56e6935f1adc9114c2db162c}{robot\_base\_frame\_}};}
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172   \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{LayeredCostmap}}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ad95bf403e3210d99bcd207529cf6b5ba}{getLayeredCostmap}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{173 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{174       \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_acab094b1a98d6ab5b598123aa9b88640}{layered\_costmap\_}};}
+\DoxyCodeLine{175     \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{178   geometry\_msgs::Polygon \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ae3688f38a8066eb3b6867f224edcc697}{getRobotFootprintPolygon}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{179 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{180     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecostmap__2d_a137137a824a6a667fbf9a850c762c6ec}{costmap\_2d::toPolygon}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa6a97f23c2388faf3ff348af597882db}{padded\_footprint\_}});}
+\DoxyCodeLine{181   \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{191   \textcolor{keyword}{inline} \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a4688b58dc94afe64bdaed02dceab5afd}{getRobotFootprint}}() const noexcept}
+\DoxyCodeLine{192   \{}
+\DoxyCodeLine{193     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa6a97f23c2388faf3ff348af597882db}{padded\_footprint\_}};}
+\DoxyCodeLine{194   \}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{203   \textcolor{keyword}{inline} \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ade62170037e2d39e69a611206efce4d5}{getUnpaddedRobotFootprint}}() const noexcept}
+\DoxyCodeLine{204   \{}
+\DoxyCodeLine{205     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8718514d98191c6f0ebba9381ed33798}{unpadded\_footprint\_}};}
+\DoxyCodeLine{206   \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{212   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a66b8eaac1ba4252fd663adfddfecbb7e}{getOrientedFootprint}}(std::vector<geometry\_msgs::Point>\& oriented\_footprint) \textcolor{keyword}{const};}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{224   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a220a578102cf3592a744ad5264bf09ed}{setUnpaddedRobotFootprint}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& points);}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{236   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a05c662c0ad169c124480ed3d9ee500e8}{setUnpaddedRobotFootprintPolygon}}(\textcolor{keyword}{const} geometry\_msgs::Polygon\& footprint);}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{239   \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{LayeredCostmap}}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_acab094b1a98d6ab5b598123aa9b88640}{layered\_costmap\_}};}
+\DoxyCodeLine{240   std::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8db674938a25c40af469413238c25dca}{name\_}};}
+\DoxyCodeLine{241   tf2\_ros::Buffer\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ac93f26f0c6816cb16e4b17b2aa4d5ff8}{tf\_}};  }
+\DoxyCodeLine{242   std::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aee5cf95f348f42b83a7b5733b452a4b1}{global\_frame\_}};  }
+\DoxyCodeLine{243   std::string \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_abd4149bf56e6935f1adc9114c2db162c}{robot\_base\_frame\_}};  }
+\DoxyCodeLine{244   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a285fdb30fb75f5bc94091e4f40de4b0b}{transform\_tolerance\_}};  }
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246 \textcolor{keyword}{private}:}
+\DoxyCodeLine{251   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ae68ab88626d6d5f7a8b3f9dd44d60ff2}{readFootprintFromConfig}}(\textcolor{keyword}{const} costmap\_2d::Costmap2DConfig \&new\_config,}
+\DoxyCodeLine{252                                \textcolor{keyword}{const} costmap\_2d::Costmap2DConfig \&old\_config);}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_abb434405d6047ba76c6cbe4eeaa17d6f}{loadOldParameters}}(ros::NodeHandle\& nh);}
+\DoxyCodeLine{255   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a202e22282dc4902dcde5b51e8a467268}{warnForOldParameters}}(ros::NodeHandle\& nh);}
+\DoxyCodeLine{256   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a2a604f02c2216cb8c18e0a224016dd37}{checkOldParam}}(ros::NodeHandle\& nh, \textcolor{keyword}{const} std::string \&param\_name);}
+\DoxyCodeLine{257   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6109471406414a981d79f582082687af}{copyParentParameters}}(\textcolor{keyword}{const} std::string\& plugin\_name, \textcolor{keyword}{const} std::string\& plugin\_type, ros::NodeHandle\& nh);}
+\DoxyCodeLine{258   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a600b1395b84f782470c4c7a7fa661834}{reconfigureCB}}(costmap\_2d::Costmap2DConfig \&config, uint32\_t level);}
+\DoxyCodeLine{259   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ad6876d803a3eaa3006984e94b5a82397}{movementCB}}(\textcolor{keyword}{const} ros::TimerEvent \&event);}
+\DoxyCodeLine{260   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a82872c177faeaaf9c5e0c93039329391}{mapUpdateLoop}}(\textcolor{keywordtype}{double} frequency);}
+\DoxyCodeLine{261   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a4b26022f7ce51516c8118f501e707472}{map\_update\_thread\_shutdown\_}};}
+\DoxyCodeLine{262   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ae63a5864cc6e5411d2aa2c05d2187b42}{stop\_updates\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af9bc9850199403564dab557ebb8e8a70}{initialized\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a18881202657a9b25c7ce0703aa0dbac9}{stopped\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a66735fcdeccd24253a35d50759c60bbe}{robot\_stopped\_}};}
+\DoxyCodeLine{263   boost::thread* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af08941ccf0414c7f04937a4f3f8bacf3}{map\_update\_thread\_}};  }
+\DoxyCodeLine{264   ros::Timer \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a46b444123eebb59220bc09f4f4feae24}{timer\_}};}
+\DoxyCodeLine{265   ros::Time \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_add8201c3048fc6f509fd872dc695b16d}{last\_publish\_}};}
+\DoxyCodeLine{266   ros::Duration \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a3b2996a47b417758d52b0947361bde8b}{publish\_cycle}};}
+\DoxyCodeLine{267   pluginlib::ClassLoader<Layer> \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a21aa388f4c63a6406788a2446f369779}{plugin\_loader\_}};}
+\DoxyCodeLine{268   geometry\_msgs::PoseStamped \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a5a7e28ac8ccb1b560fda113a727b35e4}{old\_pose\_}};}
+\DoxyCodeLine{269   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_publisher}{Costmap2DPublisher}}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_ade91d9d7967ad7fc2ccc0a508267448d}{publisher\_}};}
+\DoxyCodeLine{270   dynamic\_reconfigure::Server<costmap\_2d::Costmap2DConfig> *\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a04bc8bb389192a495f40e947559cca43}{dsrv\_}};}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272   boost::recursive\_mutex \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a6e5eee71f1e1bf650bfe333906640d85}{configuration\_mutex\_}};}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274   ros::Subscriber \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a28859e2fc52ed24ff719a83744044156}{footprint\_sub\_}};}
+\DoxyCodeLine{275   ros::Publisher \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_afa085eecd1043d3b21888081f8a4d2d2}{footprint\_pub\_}};}
+\DoxyCodeLine{276   std::vector<geometry\_msgs::Point> \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a8718514d98191c6f0ebba9381ed33798}{unpadded\_footprint\_}};}
+\DoxyCodeLine{277   std::vector<geometry\_msgs::Point> \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_aa6a97f23c2388faf3ff348af597882db}{padded\_footprint\_}};}
+\DoxyCodeLine{278   \textcolor{keywordtype}{float} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_a9d3599834c81da03f864d4de3799bf00}{footprint\_padding\_}};}
+\DoxyCodeLine{279   costmap\_2d::Costmap2DConfig \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s_af0aa50eee701701c079b09137eaf7df8}{old\_config\_}};}
+\DoxyCodeLine{280 \};}
+\DoxyCodeLine{281 \textcolor{comment}{// class Costmap2DROS}}
+\DoxyCodeLine{282 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_COSTMAP\_2D\_ROS\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="costmap_2d::CostmapTester::compareCellToNeighbors" name="costmap_2d::CostmapTester::compareCellToNeighbors">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,196,112"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap_tester.html#a027acc4743f9e864ac5216ef32bd4a79" title=" " alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="255,71,424,112"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="255,136,424,177"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="700,5,869,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a04cd3558a672159a3ad1b151b1d19661" title="Save the costmap out to a pgm file" alt="" coords="483,35,652,76"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="917,5,1087,47"/>
+</map>

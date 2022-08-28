@@ -1,0 +1,15 @@
+<map id="base_local_planner::TrajectoryPlanner::computeNewXPosition" name="base_local_planner::TrajectoryPlanner::computeNewXPosition">
+<area shape="rect" id="node1" title="Compute x position based on velocity" alt="" coords="1056,85,1217,141"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner.html#a78ea0a479b32f589f518c55a78dcb755" title="Generate and score a single trajectory" alt="" coords="869,85,1008,141"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory_planner.html#a44c8434c9df68efb24eef36fc670ae7c" title="Create the trajectories we wish to explore, score them, and return the best option" alt="" coords="675,5,809,61"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_trajectory_planner_test.html#aed6310ad3775b62007fa12ea9a3df4da" title=" " alt="" coords="663,85,821,141"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_trajectory_planner.html#a8ff397f04fbb25760ab68e2ac65a99b0" title="Generate and score a single trajectory" alt="" coords="675,165,809,221"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory_planner.html#a0fa1222899b6f8d630924f7de5e32a66" title="找到要跟随的路径" alt="" coords="260,5,393,61"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="5,165,199,221"/>
+<area shape="rect" id="node7" href="$namespacebase__local__planner.html#a2ecfd39db1caed1dfc893a87ded32a7b" title=" " alt="" coords="468,93,601,134"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_trajectory_planner.html#a16f45df8237d94cafe714d4e5aa4eeb3" title="产生和打分单个局部路径" alt="" coords="468,165,601,221"/>
+<area shape="rect" id="node13" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af883fc515db5a2234cd6b6d366ca31a5" title="产生和打分单个局部轨迹" alt="" coords="455,245,615,301"/>
+<area shape="rect" id="node10" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9155bebb3d073ae4b19b8d0da87478a6" title="计算轨迹并且为其打分" alt="" coords="247,85,407,141"/>
+<area shape="rect" id="node11" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a668b3cdefa51616c2fdf44b5ae2299b6" title="一旦到了目标点位置上，开始旋转对齐" alt="" coords="247,165,407,221"/>
+<area shape="rect" id="node12" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#ab82e06f9bf7a71996678689b83d5d1e3" title="基于加速度限制让机器人停止" alt="" coords="247,245,407,301"/>
+</map>

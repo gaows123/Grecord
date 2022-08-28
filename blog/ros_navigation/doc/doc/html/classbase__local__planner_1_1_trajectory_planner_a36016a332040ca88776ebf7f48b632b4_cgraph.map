@@ -1,0 +1,9 @@
+<map id="base_local_planner::TrajectoryPlanner::headingDiff" name="base_local_planner::TrajectoryPlanner::headingDiff">
+<area shape="rect" id="node1" title=" " alt="" coords="5,79,139,135"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner.html#abd8710866ba7bd693c63919e93c87813" title=" " alt="" coords="205,5,338,61"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="187,86,356,127"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="187,151,356,193"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory_planner.html#ab1d5ed02ab5ede53f48fad6d426c27e9" title=" " alt="" coords="404,5,537,61"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="585,13,755,54"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="803,13,972,54"/>
+</map>

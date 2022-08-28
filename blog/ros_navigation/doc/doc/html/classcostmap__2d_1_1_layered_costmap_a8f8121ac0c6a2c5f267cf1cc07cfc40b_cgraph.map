@@ -1,0 +1,7 @@
+<map id="costmap_2d::LayeredCostmap::resizeMap" name="costmap_2d::LayeredCostmap::resizeMap">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,204,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="252,5,421,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a95bae6eccd820a77d8040562e2a51118" title=" " alt="" coords="252,71,421,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a1da91220df45a19376a3e3df3a517c27" title="Initializes the costmap, static_map, and markers data structures" alt="" coords="469,37,639,79"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="469,103,639,144"/>
+</map>

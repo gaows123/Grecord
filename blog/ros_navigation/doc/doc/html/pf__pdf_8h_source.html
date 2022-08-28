@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/include/amcl/pf/pf_pdf.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_a9188d7c3d194212696f636cafd54aab.html">include</a></li><li class="navelem"><a class="el" href="dir_d1b05214bc26678a70bc66257a1f97b6.html">amcl</a></li><li class="navelem"><a class="el" href="dir_b250c90a420d93df9de30b473e4ce096.html">pf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pf_pdf.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pf__pdf_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *  Player - One Hell of a Robot Server</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *  Copyright (C) 2000  Brian Gerkey   &amp;  Kasper Stoy</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                      gerkey@usc.edu    kaspers@robotics.usc.edu</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  This library is free software; you can redistribute it and/or</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *  modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *  This library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *  Lesser General Public License for more details.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *  You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *  License along with this library; if not, write to the Free Software</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/**************************************************************************</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * Desc: Useful pdf functions</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * Author: Andrew Howard</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * Date: 10 Dec 2002</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * CVS: $Id: pf_pdf.h 6345 2008-04-17 01:36:39Z gerkey $</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *************************************************************************/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef PF_PDF_H</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define PF_PDF_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="pf__vector_8h.html">pf_vector.h</a>&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//#include &lt;gsl/gsl_rng.h&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//#include &lt;gsl/gsl_randist.h&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">/**************************************************************************</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> * Gaussian</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> *************************************************************************/</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// Gaussian PDF info</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structpf__pdf__gaussian__t.html">   45</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">// Mean, covariance and inverse covariance</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structpf__pdf__gaussian__t.html#ad83562454967d8470cc0915679cff402">   48</a></span>  <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="structpf__pdf__gaussian__t.html#ad83562454967d8470cc0915679cff402">x</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structpf__pdf__gaussian__t.html#a8e0bcb303f3de1f5cb9508993c45807e">   49</a></span>  <a class="code hl_struct" href="structpf__matrix__t.html">pf_matrix_t</a> <a class="code hl_variable" href="structpf__pdf__gaussian__t.html#a8e0bcb303f3de1f5cb9508993c45807e">cx</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">//pf_matrix_t cxi;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structpf__pdf__gaussian__t.html#ac98af0406c5245f1fb9e69df2aa1541f">   51</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structpf__pdf__gaussian__t.html#ac98af0406c5245f1fb9e69df2aa1541f">cxdet</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">// Decomposed covariance matrix (rotation * diagonal)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structpf__pdf__gaussian__t.html#a1492c02a6d6c55525b7c6ee59f1793df">   54</a></span>  <a class="code hl_struct" href="structpf__matrix__t.html">pf_matrix_t</a> <a class="code hl_variable" href="structpf__pdf__gaussian__t.html#a1492c02a6d6c55525b7c6ee59f1793df">cr</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structpf__pdf__gaussian__t.html#a175e05c59c811f79a414f37c607e4ed9">   55</a></span>  <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="structpf__pdf__gaussian__t.html#a175e05c59c811f79a414f37c607e4ed9">cd</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// A random number generator</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">//gsl_rng *rng;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <a class="code hl_struct" href="structpf__pdf__gaussian__t.html">pf_pdf_gaussian_t</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// Create a gaussian pdf</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><a class="code hl_struct" href="structpf__pdf__gaussian__t.html">pf_pdf_gaussian_t</a> *<a class="code hl_function" href="pf__pdf_8h.html#a12898e7b473af8d3441c66baf203c7e1">pf_pdf_gaussian_alloc</a>(<a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> x, <a class="code hl_struct" href="structpf__matrix__t.html">pf_matrix_t</a> cx);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// Destroy the pdf</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> <a class="code hl_function" href="pf__pdf_8h.html#a6a02cc46438e272cbb9d5f80ef4581e9">pf_pdf_gaussian_free</a>(<a class="code hl_struct" href="structpf__pdf__gaussian__t.html">pf_pdf_gaussian_t</a> *pdf);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// Compute the value of the pdf at some point [z].</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">//double pf_pdf_gaussian_value(pf_pdf_gaussian_t *pdf, pf_vector_t z);</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">// Draw randomly from a zero-mean Gaussian distribution, with standard</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">// deviation sigma.</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// We use the polar form of the Box-Muller transformation, explained here:</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//   http://www.taygeta.com/random/gaussian.html</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">double</span> <a class="code hl_function" href="pf__pdf_8h.html#abdfc0a4cb6ab83434b698504774ef885">pf_ran_gaussian</a>(<span class="keywordtype">double</span> sigma);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// Generate a sample from the pdf.</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_function" href="pf__pdf_8h.html#ae5c36efbbf482e91fe7ec9fa31747770">pf_pdf_gaussian_sample</a>(<a class="code hl_struct" href="structpf__pdf__gaussian__t.html">pf_pdf_gaussian_t</a> *pdf);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="apf__pdf_8h_html_a12898e7b473af8d3441c66baf203c7e1"><div class="ttname"><a href="pf__pdf_8h.html#a12898e7b473af8d3441c66baf203c7e1">pf_pdf_gaussian_alloc</a></div><div class="ttdeci">pf_pdf_gaussian_t * pf_pdf_gaussian_alloc(pf_vector_t x, pf_matrix_t cx)</div><div class="ttdef"><b>Definition:</b> pf_pdf.c:47</div></div>
+<div class="ttc" id="apf__pdf_8h_html_a6a02cc46438e272cbb9d5f80ef4581e9"><div class="ttname"><a href="pf__pdf_8h.html#a6a02cc46438e272cbb9d5f80ef4581e9">pf_pdf_gaussian_free</a></div><div class="ttdeci">void pf_pdf_gaussian_free(pf_pdf_gaussian_t *pdf)</div><div class="ttdef"><b>Definition:</b> pf_pdf.c:75</div></div>
+<div class="ttc" id="apf__pdf_8h_html_abdfc0a4cb6ab83434b698504774ef885"><div class="ttname"><a href="pf__pdf_8h.html#abdfc0a4cb6ab83434b698504774ef885">pf_ran_gaussian</a></div><div class="ttdeci">double pf_ran_gaussian(double sigma)</div><div class="ttdef"><b>Definition:</b> pf_pdf.c:133</div></div>
+<div class="ttc" id="apf__pdf_8h_html_ae5c36efbbf482e91fe7ec9fa31747770"><div class="ttname"><a href="pf__pdf_8h.html#ae5c36efbbf482e91fe7ec9fa31747770">pf_pdf_gaussian_sample</a></div><div class="ttdeci">pf_vector_t pf_pdf_gaussian_sample(pf_pdf_gaussian_t *pdf)</div><div class="ttdef"><b>Definition:</b> pf_pdf.c:106</div></div>
+<div class="ttc" id="apf__vector_8h_html"><div class="ttname"><a href="pf__vector_8h.html">pf_vector.h</a></div></div>
+<div class="ttc" id="astructpf__matrix__t_html"><div class="ttname"><a href="structpf__matrix__t.html">pf_matrix_t</a></div><div class="ttdef"><b>Definition:</b> pf_vector.h:46</div></div>
+<div class="ttc" id="astructpf__pdf__gaussian__t_html"><div class="ttname"><a href="structpf__pdf__gaussian__t.html">pf_pdf_gaussian_t</a></div><div class="ttdef"><b>Definition:</b> pf_pdf.h:46</div></div>
+<div class="ttc" id="astructpf__pdf__gaussian__t_html_a1492c02a6d6c55525b7c6ee59f1793df"><div class="ttname"><a href="structpf__pdf__gaussian__t.html#a1492c02a6d6c55525b7c6ee59f1793df">pf_pdf_gaussian_t::cr</a></div><div class="ttdeci">pf_matrix_t cr</div><div class="ttdef"><b>Definition:</b> pf_pdf.h:54</div></div>
+<div class="ttc" id="astructpf__pdf__gaussian__t_html_a175e05c59c811f79a414f37c607e4ed9"><div class="ttname"><a href="structpf__pdf__gaussian__t.html#a175e05c59c811f79a414f37c607e4ed9">pf_pdf_gaussian_t::cd</a></div><div class="ttdeci">pf_vector_t cd</div><div class="ttdef"><b>Definition:</b> pf_pdf.h:55</div></div>
+<div class="ttc" id="astructpf__pdf__gaussian__t_html_a8e0bcb303f3de1f5cb9508993c45807e"><div class="ttname"><a href="structpf__pdf__gaussian__t.html#a8e0bcb303f3de1f5cb9508993c45807e">pf_pdf_gaussian_t::cx</a></div><div class="ttdeci">pf_matrix_t cx</div><div class="ttdef"><b>Definition:</b> pf_pdf.h:49</div></div>
+<div class="ttc" id="astructpf__pdf__gaussian__t_html_ac98af0406c5245f1fb9e69df2aa1541f"><div class="ttname"><a href="structpf__pdf__gaussian__t.html#ac98af0406c5245f1fb9e69df2aa1541f">pf_pdf_gaussian_t::cxdet</a></div><div class="ttdeci">double cxdet</div><div class="ttdef"><b>Definition:</b> pf_pdf.h:51</div></div>
+<div class="ttc" id="astructpf__pdf__gaussian__t_html_ad83562454967d8470cc0915679cff402"><div class="ttname"><a href="structpf__pdf__gaussian__t.html#ad83562454967d8470cc0915679cff402">pf_pdf_gaussian_t::x</a></div><div class="ttdeci">pf_vector_t x</div><div class="ttdef"><b>Definition:</b> pf_pdf.h:48</div></div>
+<div class="ttc" id="astructpf__vector__t_html"><div class="ttname"><a href="structpf__vector__t.html">pf_vector_t</a></div><div class="ttdef"><b>Definition:</b> pf_vector.h:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="base_local_planner::PointGrid::insert" name="base_local_planner::PointGrid::insert">
+<area shape="rect" id="node1" title="Insert a point into the point grid" alt="" coords="5,25,139,67"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_point_grid.html#a85f9826c14353e9a75696be52d438554" title="从世界坐标系转换到网格坐标系" alt="" coords="438,25,593,67"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_point_grid.html#a107ea768298e5560e962498692674d5a" title="Converts cell coordinates to an index value that can be used to look up the correct grid cell" alt="" coords="666,11,811,52"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_point_grid.html#aebd6e4378342589f07e5700aac825550" title="Find the distance between a point and its nearest neighbor in the grid" alt="" coords="187,83,373,139"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_point_grid.html#aa98a155058a5045be350a89eb3858f41" title="Get the bounds in world coordinates of a cell in the point grid, assumes a legal cell when called" alt="" coords="427,208,603,249"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_point_grid.html#aace5884f03d444ee13dffd0dbe866678" title="Find the distance between a point and its nearest neighbor in a cell" alt="" coords="421,91,609,132"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_point_grid.html#a70991650fe65105f90f31acdab32a830" title="Compute the squared distance between two points" alt="" coords="657,120,820,161"/>
+</map>

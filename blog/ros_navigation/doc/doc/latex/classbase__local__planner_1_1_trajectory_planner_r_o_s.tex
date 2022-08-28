@@ -1,0 +1,774 @@
+\hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s}{}\doxysection{base\+\_\+local\+\_\+planner\+::Trajectory\+Planner\+ROS类 参考}
+\label{classbase__local__planner_1_1_trajectory_planner_r_o_s}\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+
+
+A ROS wrapper for the trajectory controller that queries the param server to construct a controller  
+
+
+
+
+{\ttfamily \#include $<$trajectory\+\_\+planner\+\_\+ros.\+h$>$}
+
+
+
+类 base\+\_\+local\+\_\+planner\+::Trajectory\+Planner\+ROS 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s__inherit__graph}
+\end{center}
+\end{figure}
+
+
+base\+\_\+local\+\_\+planner\+::Trajectory\+Planner\+ROS 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3b6817c8d9f2a49b00ccdda3bc166548}{Trajectory\+Planner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f}{Trajectory\+Planner\+ROS}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em 构造ros封装类 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$costmap\+\_\+ros)
+\begin{DoxyCompactList}\small\item\em 构造ros封装类 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a79384acb51a894dbcec4447bee1ca90f}{$\sim$\+Trajectory\+Planner\+ROS}} ()
+\begin{DoxyCompactList}\small\item\em 封装类的析构函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af}{compute\+Velocity\+Commands}} (geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em 根据当前机器人坐标，朝向和速度，计算下个下发速度 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\begin{DoxyCompactList}\small\item\em 更新局部规划器要跟随的路径 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541}{is\+Goal\+Reached}} ()
+\begin{DoxyCompactList}\small\item\em 检查是否已经到达了目标点 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6}{check\+Trajectory}} (double vx\+\_\+samp, double vy\+\_\+samp, double vtheta\+\_\+samp, bool update\+\_\+map=true)
+\begin{DoxyCompactList}\small\item\em 计算轨迹并且为其打分 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5}{score\+Trajectory}} (double vx\+\_\+samp, double vy\+\_\+samp, double vtheta\+\_\+samp, bool update\+\_\+map=true)
+\begin{DoxyCompactList}\small\item\em 产生和打分单个局部轨迹 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9}{is\+Initialized}} ()
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner}{Trajectory\+Planner}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af232d29db5af486516c48cf10c3b3ad6}{get\+Planner}} () const
+\begin{DoxyCompactList}\small\item\em 返回内部的\+Trajectory\+Planner对象，只有在initialize()后才有效 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630}{reconfigure\+CB}} (Base\+Local\+Planner\+Config \&config, uint32\+\_\+t level)
+\begin{DoxyCompactList}\small\item\em 用于更新局部规划器参数的回调函数 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6}{rotate\+To\+Goal}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel, double goal\+\_\+th, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em 一旦到了目标点位置上，开始旋转对齐 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3}{stop\+With\+Acc\+Limits}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&robot\+\_\+vel, geometry\+\_\+msgs\+::\+Twist \&cmd\+\_\+vel)
+\begin{DoxyCompactList}\small\item\em 基于加速度限制让机器人停止 \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414}{load\+YVels}} (ros\+::\+Node\+Handle node)
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b}{sign}} (double x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_world_model}{World\+Model}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5b05092eccb2fb636c597265d5ed40b2}{world\+\_\+model\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner}{Trajectory\+Planner}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a46e956dac438ffd88c237d3dd2964869}{tc\+\_\+}}
+\begin{DoxyCompactList}\small\item\em 轨迹局部规划器，tc是 trajectory controller的缩写 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a88bcbda99e0430a9674784b7e6e552e5}{costmap\+\_\+ros\+\_\+}}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a91ac556f41430e2f77e4b3e363174955}{costmap\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{Map\+Grid\+Visualizer}} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac473c8569b7c79663162376818a2b353}{map\+\_\+viz\+\_\+}}
+\item 
+tf2\+\_\+ros\+::\+Buffer $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_afbe6f3cc698dfcc7afb3d89d321e4550}{tf\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae1ef03662ad6972629e2f40db458ed79}{global\+\_\+frame\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ad870ec0a030496c3f00570d5b7492947}{max\+\_\+sensor\+\_\+range\+\_\+}}
+\item 
+nav\+\_\+msgs\+::\+Odometry \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1696ab6bd7f735c93a1bc0ed71713f78}{base\+\_\+odom\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae76406da45ddc78af258c3c514edd6f2}{robot\+\_\+base\+\_\+frame\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a09ff11c255348f097b206d5bbb407f4d}{rot\+\_\+stopped\+\_\+velocity\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2d24f42ed1e07067887fd1745b0c13c}{trans\+\_\+stopped\+\_\+velocity\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3c00302b7da1fa156f5041ae41c1b493}{xy\+\_\+goal\+\_\+tolerance\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a21f3bfe629bbe670733042823f49584e}{yaw\+\_\+goal\+\_\+tolerance\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_aab87187e1f93b2202ca5b2ccdc54a133}{min\+\_\+in\+\_\+place\+\_\+vel\+\_\+th\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a226445fba5513d89198ff40f8673b1ad}{global\+\_\+plan\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af604f4e53309a3c6bced47e540c22e78}{prune\+\_\+plan\+\_\+}}
+\item 
+boost\+::recursive\+\_\+mutex \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6b8c9cb6ff03cb4a88ef3c43662bef91}{odom\+\_\+lock\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2942f48b2c9fecff51b1889daf5e5d4}{max\+\_\+vel\+\_\+th\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a64133d6019a4dcf33eec70a71830ee1c}{min\+\_\+vel\+\_\+th\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a56643b042c9ab1f755c01690153b24fb}{acc\+\_\+lim\+\_\+x\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a69c43326c04a92417c9daaf212ce4bda}{acc\+\_\+lim\+\_\+y\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a41ba3f1430e5c76121e82fae51d3e8b2}{acc\+\_\+lim\+\_\+theta\+\_\+}}
+\item 
+double \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae40f0600cfee52046c949523aef364b7}{sim\+\_\+period\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a53a875c2c222307d1cbc06679164f214}{rotating\+\_\+to\+\_\+goal\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a221b620ba41f3e3bc499d7b30a36de63}{reached\+\_\+goal\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a688aca3f50ec29a81f048e1e49017abf}{latch\+\_\+xy\+\_\+goal\+\_\+tolerance\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3ab2b17659e6233084ebb0856f7d801a}{xy\+\_\+tolerance\+\_\+latch\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3d15245f94d7d5ba0c00bd09823e32d3}{g\+\_\+plan\+\_\+pub\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a33f0bdeafb5bd4e2097afaf193cecdc9}{l\+\_\+plan\+\_\+pub\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Server$<$ Base\+Local\+Planner\+Config $>$ $\ast$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a4d459ec3873d93b98a43747dafc1644e}{dsrv\+\_\+}}
+\item 
+base\+\_\+local\+\_\+planner\+::\+Base\+Local\+Planner\+Config \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a8a236aa31c9c2336f6bcf71c86adbf89}{default\+\_\+config\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a027afe3c5cb208ede6b5ac7a10ef819e}{setup\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a49c099ecf00a17b0d01b8dd0707897b8}{initialized\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros}} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_af9e936569e83535c63bf5a3b8a7a8c73}{odom\+\_\+helper\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6c8582d06e60dce9e1f0edc22fef3272}{footprint\+\_\+spec\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{详细描述}
+A ROS wrapper for the trajectory controller that queries the param server to construct a controller 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3b6817c8d9f2a49b00ccdda3bc166548}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3b6817c8d9f2a49b00ccdda3bc166548}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!TrajectoryPlannerROS@{TrajectoryPlannerROS}}
+\index{TrajectoryPlannerROS@{TrajectoryPlannerROS}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{TrajectoryPlannerROS()}{TrajectoryPlannerROS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::\+Trajectory\+Planner\+ROS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+默认构造函数 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!TrajectoryPlannerROS@{TrajectoryPlannerROS}}
+\index{TrajectoryPlannerROS@{TrajectoryPlannerROS}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{TrajectoryPlannerROS()}{TrajectoryPlannerROS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::\+Trajectory\+Planner\+ROS (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})}
+
+
+
+构造ros封装类 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 局部轨迹规划器的名字 \\
+\hline
+{\em tf} & transform listener的指针 \\
+\hline
+{\em costmap} & 代价地图 \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a0ea81ba7bfd31aaa999477ae8f9e0d0f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a79384acb51a894dbcec4447bee1ca90f}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a79384acb51a894dbcec4447bee1ca90f}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!````~TrajectoryPlannerROS@{$\sim$TrajectoryPlannerROS}}
+\index{````~TrajectoryPlannerROS@{$\sim$TrajectoryPlannerROS}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{$\sim$TrajectoryPlannerROS()}{~TrajectoryPlannerROS()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::$\sim$\+Trajectory\+Planner\+ROS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+封装类的析构函数 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{double}]{vx\+\_\+samp,  }\item[{double}]{vy\+\_\+samp,  }\item[{double}]{vtheta\+\_\+samp,  }\item[{bool}]{update\+\_\+map = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+计算轨迹并且为其打分 
+
+
+\begin{DoxyParams}{参数}
+{\em vx\+\_\+samp} & 用于推算出路径的x方向速度 \\
+\hline
+{\em vy\+\_\+samp} & 用于推算出路径的y方向速度 \\
+\hline
+{\em vtheta\+\_\+samp} & 用于推算出路径的角速度 \\
+\hline
+{\em update\+\_\+map} & 是否更新地图 when computing the legality of the trajectory, this is useful to set to false if you\textquotesingle{}re going to be doing a lot of trajectory checking over a short period of time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True if the trajectory is legal, false otherwise 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9155bebb3d073ae4b19b8d0da87478a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!computeVelocityCommands@{computeVelocityCommands}}
+\index{computeVelocityCommands@{computeVelocityCommands}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{computeVelocityCommands()}{computeVelocityCommands()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::compute\+Velocity\+Commands (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+根据当前机器人坐标，朝向和速度，计算下个下发速度 
+
+
+\begin{DoxyParams}{参数}
+{\em cmd\+\_\+vel} & 存储者下发速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True意味着找到有效轨迹 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_aa02dad5e3be910ae7d5159b7a53c0188}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_adb2d96332da31a154db84930754409af_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_af232d29db5af486516c48cf10c3b3ad6}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_af232d29db5af486516c48cf10c3b3ad6}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!getPlanner@{getPlanner}}
+\index{getPlanner@{getPlanner}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{getPlanner()}{getPlanner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner}{Trajectory\+Planner}} $\ast$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::get\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+返回内部的\+Trajectory\+Planner对象，只有在initialize()后才有效 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!initialize@{initialize}}
+\index{initialize@{initialize}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{costmap\+\_\+ros }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+构造ros封装类 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 局部轨迹规划器的名字 \\
+\hline
+{\em tf} & transform listener的指针 \\
+\hline
+{\em costmap} & 代价地图 \\
+\hline
+\end{DoxyParams}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_a488521ac3d0ff67000aed87ab3fea84b}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9a758c9bd9cb0202ed06c07c5aa49c03_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!isGoalReached@{isGoalReached}}
+\index{isGoalReached@{isGoalReached}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{isGoalReached()}{isGoalReached()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::is\+Goal\+Reached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+检查是否已经到达了目标点 
+
+\begin{DoxyReturn}{返回}
+True 代表已经到达 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_a27b2312d3218496be06a298767b26716}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5196b75a728ab7c37d6bdd99faa7b541_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!isInitialized@{isInitialized}}
+\index{isInitialized@{isInitialized}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{isInitialized()}{isInitialized()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a99bc029d01fb414521862b83f81aa5c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!loadYVels@{loadYVels}}
+\index{loadYVels@{loadYVels}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{loadYVels()}{loadYVels()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::load\+YVels (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1a94734b46ffd4a4b0cc58ac894e9414_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!reconfigureCB@{reconfigureCB}}
+\index{reconfigureCB@{reconfigureCB}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{reconfigureCB()}{reconfigureCB()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::reconfigure\+CB (\begin{DoxyParamCaption}\item[{Base\+Local\+Planner\+Config \&}]{config,  }\item[{uint32\+\_\+t}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+用于更新局部规划器参数的回调函数 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a9fa1e0775ebaf2cc0d46d65011b68630_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!rotateToGoal@{rotateToGoal}}
+\index{rotateToGoal@{rotateToGoal}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{rotateToGoal()}{rotateToGoal()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::rotate\+To\+Goal (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{robot\+\_\+vel,  }\item[{double}]{goal\+\_\+th,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+一旦到了目标点位置上，开始旋转对齐 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & 机器人在全局坐标系下的位姿 \\
+\hline
+{\em robot\+\_\+vel} & 机器人速度 \\
+\hline
+{\em goal\+\_\+th} & 期望的th 速度 \\
+\hline
+{\em cmd\+\_\+vel} & 速度命令的载体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表找到有效的局部路径规划 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_a668b3cdefa51616c2fdf44b5ae2299b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!scoreTrajectory@{scoreTrajectory}}
+\index{scoreTrajectory@{scoreTrajectory}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{scoreTrajectory()}{scoreTrajectory()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::score\+Trajectory (\begin{DoxyParamCaption}\item[{double}]{vx\+\_\+samp,  }\item[{double}]{vy\+\_\+samp,  }\item[{double}]{vtheta\+\_\+samp,  }\item[{bool}]{update\+\_\+map = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+产生和打分单个局部轨迹 
+
+
+\begin{DoxyParams}{参数}
+{\em vx\+\_\+samp} & 用于推算出路径的x方向速度 \\
+\hline
+{\em vy\+\_\+samp} & 用于推算出路径的y方向速度 \\
+\hline
+{\em vtheta\+\_\+samp} & 用于推算出路径的角速度 \\
+\hline
+{\em update\+\_\+map} & 是否更新地图 when computing the legality of the trajectory, this is useful to set to false if you\textquotesingle{}re going to be doing a lot of trajectory checking over a short period of time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+score of trajectory (double) 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_af883fc515db5a2234cd6b6d366ca31a5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新局部规划器要跟随的路径 
+
+
+\begin{DoxyParams}{参数}
+{\em orig\+\_\+global\+\_\+plan} & 更新的路径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 表示更新成功 
+\end{DoxyReturn}
+
+
+实现了 \mbox{\hyperlink{classnav__core_1_1_base_local_planner_ac30adc27a5c123f129ef7046ffbb0f3e}{nav\+\_\+core\+::\+Base\+Local\+Planner}}.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_af3a0c8be5746b1e1d8657f6b867ea934_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!sign@{sign}}
+\index{sign@{sign}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::sign (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_ada7a715a0c6fb57fa5254b817519362b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!stopWithAccLimits@{stopWithAccLimits}}
+\index{stopWithAccLimits@{stopWithAccLimits}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{stopWithAccLimits()}{stopWithAccLimits()}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::stop\+With\+Acc\+Limits (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{robot\+\_\+vel,  }\item[{geometry\+\_\+msgs\+::\+Twist \&}]{cmd\+\_\+vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+基于加速度限制让机器人停止 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & 机器人在全局坐标系下的位姿 \\
+\hline
+{\em robot\+\_\+vel} & 机器人速度 \\
+\hline
+{\em cmd\+\_\+vel} & 速度命令的载体 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True 代表找到有效的局部路径规划 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_trajectory_planner_r_o_s_ab82e06f9bf7a71996678689b83d5d1e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a41ba3f1430e5c76121e82fae51d3e8b2}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a41ba3f1430e5c76121e82fae51d3e8b2}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!acc\_lim\_theta\_@{acc\_lim\_theta\_}}
+\index{acc\_lim\_theta\_@{acc\_lim\_theta\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{acc\_lim\_theta\_}{acc\_lim\_theta\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::acc\+\_\+lim\+\_\+theta\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a56643b042c9ab1f755c01690153b24fb}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a56643b042c9ab1f755c01690153b24fb}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!acc\_lim\_x\_@{acc\_lim\_x\_}}
+\index{acc\_lim\_x\_@{acc\_lim\_x\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{acc\_lim\_x\_}{acc\_lim\_x\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::acc\+\_\+lim\+\_\+x\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a69c43326c04a92417c9daaf212ce4bda}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a69c43326c04a92417c9daaf212ce4bda}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!acc\_lim\_y\_@{acc\_lim\_y\_}}
+\index{acc\_lim\_y\_@{acc\_lim\_y\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{acc\_lim\_y\_}{acc\_lim\_y\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::acc\+\_\+lim\+\_\+y\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1696ab6bd7f735c93a1bc0ed71713f78}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a1696ab6bd7f735c93a1bc0ed71713f78}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!base\_odom\_@{base\_odom\_}}
+\index{base\_odom\_@{base\_odom\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{base\_odom\_}{base\_odom\_}}
+{\footnotesize\ttfamily nav\+\_\+msgs\+::\+Odometry base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::base\+\_\+odom\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a91ac556f41430e2f77e4b3e363174955}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a91ac556f41430e2f77e4b3e363174955}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a88bcbda99e0430a9674784b7e6e552e5}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a88bcbda99e0430a9674784b7e6e552e5}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!costmap\_ros\_@{costmap\_ros\_}}
+\index{costmap\_ros\_@{costmap\_ros\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{costmap\_ros\_}{costmap\_ros\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::costmap\+\_\+ros\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a8a236aa31c9c2336f6bcf71c86adbf89}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a8a236aa31c9c2336f6bcf71c86adbf89}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!default\_config\_@{default\_config\_}}
+\index{default\_config\_@{default\_config\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{default\_config\_}{default\_config\_}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Base\+Local\+Planner\+Config base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::default\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a4d459ec3873d93b98a43747dafc1644e}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a4d459ec3873d93b98a43747dafc1644e}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!dsrv\_@{dsrv\_}}
+\index{dsrv\_@{dsrv\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{dsrv\_}{dsrv\_}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Server$<$Base\+Local\+Planner\+Config$>$$\ast$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::dsrv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6c8582d06e60dce9e1f0edc22fef3272}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6c8582d06e60dce9e1f0edc22fef3272}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!footprint\_spec\_@{footprint\_spec\_}}
+\index{footprint\_spec\_@{footprint\_spec\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{footprint\_spec\_}{footprint\_spec\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::footprint\+\_\+spec\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3d15245f94d7d5ba0c00bd09823e32d3}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3d15245f94d7d5ba0c00bd09823e32d3}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!g\_plan\_pub\_@{g\_plan\_pub\_}}
+\index{g\_plan\_pub\_@{g\_plan\_pub\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{g\_plan\_pub\_}{g\_plan\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::g\+\_\+plan\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae1ef03662ad6972629e2f40db458ed79}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae1ef03662ad6972629e2f40db458ed79}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!global\_frame\_@{global\_frame\_}}
+\index{global\_frame\_@{global\_frame\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{global\_frame\_}{global\_frame\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::global\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a226445fba5513d89198ff40f8673b1ad}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a226445fba5513d89198ff40f8673b1ad}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!global\_plan\_@{global\_plan\_}}
+\index{global\_plan\_@{global\_plan\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{global\_plan\_}{global\_plan\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::global\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a49c099ecf00a17b0d01b8dd0707897b8}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a49c099ecf00a17b0d01b8dd0707897b8}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a33f0bdeafb5bd4e2097afaf193cecdc9}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a33f0bdeafb5bd4e2097afaf193cecdc9}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!l\_plan\_pub\_@{l\_plan\_pub\_}}
+\index{l\_plan\_pub\_@{l\_plan\_pub\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{l\_plan\_pub\_}{l\_plan\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::l\+\_\+plan\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a688aca3f50ec29a81f048e1e49017abf}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a688aca3f50ec29a81f048e1e49017abf}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!latch\_xy\_goal\_tolerance\_@{latch\_xy\_goal\_tolerance\_}}
+\index{latch\_xy\_goal\_tolerance\_@{latch\_xy\_goal\_tolerance\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{latch\_xy\_goal\_tolerance\_}{latch\_xy\_goal\_tolerance\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::latch\+\_\+xy\+\_\+goal\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac473c8569b7c79663162376818a2b353}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac473c8569b7c79663162376818a2b353}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!map\_viz\_@{map\_viz\_}}
+\index{map\_viz\_@{map\_viz\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{map\_viz\_}{map\_viz\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{Map\+Grid\+Visualizer}} base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::map\+\_\+viz\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ad870ec0a030496c3f00570d5b7492947}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ad870ec0a030496c3f00570d5b7492947}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!max\_sensor\_range\_@{max\_sensor\_range\_}}
+\index{max\_sensor\_range\_@{max\_sensor\_range\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{max\_sensor\_range\_}{max\_sensor\_range\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::max\+\_\+sensor\+\_\+range\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2942f48b2c9fecff51b1889daf5e5d4}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2942f48b2c9fecff51b1889daf5e5d4}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!max\_vel\_th\_@{max\_vel\_th\_}}
+\index{max\_vel\_th\_@{max\_vel\_th\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{max\_vel\_th\_}{max\_vel\_th\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::max\+\_\+vel\+\_\+th\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_aab87187e1f93b2202ca5b2ccdc54a133}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_aab87187e1f93b2202ca5b2ccdc54a133}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!min\_in\_place\_vel\_th\_@{min\_in\_place\_vel\_th\_}}
+\index{min\_in\_place\_vel\_th\_@{min\_in\_place\_vel\_th\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{min\_in\_place\_vel\_th\_}{min\_in\_place\_vel\_th\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::min\+\_\+in\+\_\+place\+\_\+vel\+\_\+th\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a64133d6019a4dcf33eec70a71830ee1c}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a64133d6019a4dcf33eec70a71830ee1c}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!min\_vel\_th\_@{min\_vel\_th\_}}
+\index{min\_vel\_th\_@{min\_vel\_th\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{min\_vel\_th\_}{min\_vel\_th\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::min\+\_\+vel\+\_\+th\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_af9e936569e83535c63bf5a3b8a7a8c73}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_af9e936569e83535c63bf5a3b8a7a8c73}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!odom\_helper\_@{odom\_helper\_}}
+\index{odom\_helper\_@{odom\_helper\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{odom\_helper\_}{odom\_helper\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_odometry_helper_ros}{base\+\_\+local\+\_\+planner\+::\+Odometry\+Helper\+Ros}} base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::odom\+\_\+helper\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6b8c9cb6ff03cb4a88ef3c43662bef91}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a6b8c9cb6ff03cb4a88ef3c43662bef91}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!odom\_lock\_@{odom\_lock\_}}
+\index{odom\_lock\_@{odom\_lock\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{odom\_lock\_}{odom\_lock\_}}
+{\footnotesize\ttfamily boost\+::recursive\+\_\+mutex base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::odom\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_af604f4e53309a3c6bced47e540c22e78}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_af604f4e53309a3c6bced47e540c22e78}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!prune\_plan\_@{prune\_plan\_}}
+\index{prune\_plan\_@{prune\_plan\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{prune\_plan\_}{prune\_plan\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::prune\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a221b620ba41f3e3bc499d7b30a36de63}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a221b620ba41f3e3bc499d7b30a36de63}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!reached\_goal\_@{reached\_goal\_}}
+\index{reached\_goal\_@{reached\_goal\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{reached\_goal\_}{reached\_goal\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::reached\+\_\+goal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae76406da45ddc78af258c3c514edd6f2}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae76406da45ddc78af258c3c514edd6f2}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!robot\_base\_frame\_@{robot\_base\_frame\_}}
+\index{robot\_base\_frame\_@{robot\_base\_frame\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{robot\_base\_frame\_}{robot\_base\_frame\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::robot\+\_\+base\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a09ff11c255348f097b206d5bbb407f4d}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a09ff11c255348f097b206d5bbb407f4d}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!rot\_stopped\_velocity\_@{rot\_stopped\_velocity\_}}
+\index{rot\_stopped\_velocity\_@{rot\_stopped\_velocity\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{rot\_stopped\_velocity\_}{rot\_stopped\_velocity\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::rot\+\_\+stopped\+\_\+velocity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a53a875c2c222307d1cbc06679164f214}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a53a875c2c222307d1cbc06679164f214}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!rotating\_to\_goal\_@{rotating\_to\_goal\_}}
+\index{rotating\_to\_goal\_@{rotating\_to\_goal\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{rotating\_to\_goal\_}{rotating\_to\_goal\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::rotating\+\_\+to\+\_\+goal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a027afe3c5cb208ede6b5ac7a10ef819e}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a027afe3c5cb208ede6b5ac7a10ef819e}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!setup\_@{setup\_}}
+\index{setup\_@{setup\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{setup\_}{setup\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::setup\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae40f0600cfee52046c949523aef364b7}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ae40f0600cfee52046c949523aef364b7}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!sim\_period\_@{sim\_period\_}}
+\index{sim\_period\_@{sim\_period\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{sim\_period\_}{sim\_period\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::sim\+\_\+period\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a46e956dac438ffd88c237d3dd2964869}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a46e956dac438ffd88c237d3dd2964869}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!tc\_@{tc\_}}
+\index{tc\_@{tc\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{tc\_}{tc\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_planner}{Trajectory\+Planner}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::tc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+轨迹局部规划器，tc是 trajectory controller的缩写 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_afbe6f3cc698dfcc7afb3d89d321e4550}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_afbe6f3cc698dfcc7afb3d89d321e4550}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer$\ast$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::tf\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2d24f42ed1e07067887fd1745b0c13c}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_ac2d24f42ed1e07067887fd1745b0c13c}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!trans\_stopped\_velocity\_@{trans\_stopped\_velocity\_}}
+\index{trans\_stopped\_velocity\_@{trans\_stopped\_velocity\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{trans\_stopped\_velocity\_}{trans\_stopped\_velocity\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::trans\+\_\+stopped\+\_\+velocity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5b05092eccb2fb636c597265d5ed40b2}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a5b05092eccb2fb636c597265d5ed40b2}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!world\_model\_@{world\_model\_}}
+\index{world\_model\_@{world\_model\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{world\_model\_}{world\_model\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_world_model}{World\+Model}}$\ast$ base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::world\+\_\+model\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3c00302b7da1fa156f5041ae41c1b493}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3c00302b7da1fa156f5041ae41c1b493}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!xy\_goal\_tolerance\_@{xy\_goal\_tolerance\_}}
+\index{xy\_goal\_tolerance\_@{xy\_goal\_tolerance\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{xy\_goal\_tolerance\_}{xy\_goal\_tolerance\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::xy\+\_\+goal\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3ab2b17659e6233084ebb0856f7d801a}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a3ab2b17659e6233084ebb0856f7d801a}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!xy\_tolerance\_latch\_@{xy\_tolerance\_latch\_}}
+\index{xy\_tolerance\_latch\_@{xy\_tolerance\_latch\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{xy\_tolerance\_latch\_}{xy\_tolerance\_latch\_}}
+{\footnotesize\ttfamily bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::xy\+\_\+tolerance\+\_\+latch\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_planner_r_o_s_a21f3bfe629bbe670733042823f49584e}\label{classbase__local__planner_1_1_trajectory_planner_r_o_s_a21f3bfe629bbe670733042823f49584e}} 
+\index{base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}!yaw\_goal\_tolerance\_@{yaw\_goal\_tolerance\_}}
+\index{yaw\_goal\_tolerance\_@{yaw\_goal\_tolerance\_}!base\_local\_planner::TrajectoryPlannerROS@{base\_local\_planner::TrajectoryPlannerROS}}
+\doxysubsubsection{\texorpdfstring{yaw\_goal\_tolerance\_}{yaw\_goal\_tolerance\_}}
+{\footnotesize\ttfamily double base\+\_\+local\+\_\+planner\+::\+Trajectory\+Planner\+ROS\+::yaw\+\_\+goal\+\_\+tolerance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{trajectory__planner__ros_8h}{trajectory\+\_\+planner\+\_\+ros.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{trajectory__planner__ros_8cpp}{trajectory\+\_\+planner\+\_\+ros.\+cpp}}\end{DoxyCompactItemize}

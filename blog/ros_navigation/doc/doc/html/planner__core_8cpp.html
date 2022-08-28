@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner/src/planner_core.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_414b209fa36dd1433a9bb8cd280add1a.html">global_planner</a></li><li class="navelem"><a class="el" href="dir_6ede81091fb6f1cdfdb43393ef24926f.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">planner_core.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="planner__core_8h_source.html">global_planner/planner_core.h</a>&gt;</code><br />
+<code>#include &lt;pluginlib/class_list_macros.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="cost__values_8h_source.html">costmap_2d/cost_values.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="costmap__2d_8h_source.html">costmap_2d/costmap_2d.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="dijkstra_8h_source.html">global_planner/dijkstra.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="astar_8h_source.html">global_planner/astar.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="grid__path_8h_source.html">global_planner/grid_path.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="gradient__path_8h_source.html">global_planner/gradient_path.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="quadratic__calculator_8h_source.html">global_planner/quadratic_calculator.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+planner_core.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="planner__core_8cpp__incl.png" border="0" usemap="#aglobal__planner_2src_2planner__core_8cpp" alt=""/></div>
+<map name="aglobal__planner_2src_2planner__core_8cpp" id="aglobal__planner_2src_2planner__core_8cpp">
+<area shape="rect" title=" " alt="" coords="822,5,949,47"/>
+<area shape="rect" href="planner__core_8h.html" title=" " alt="" coords="845,184,995,225"/>
+<area shape="rect" href="costmap__2d_8h.html" title=" " alt="" coords="2043,616,2221,643"/>
+<area shape="rect" href="cost__values_8h.html" title=" " alt="" coords="1405,541,1584,568"/>
+<area shape="rect" title=" " alt="" coords="3083,95,3211,136"/>
+<area shape="rect" href="dijkstra_8h.html" title=" " alt="" coords="923,102,1085,129"/>
+<area shape="rect" href="astar_8h.html" title=" " alt="" coords="487,102,636,129"/>
+<area shape="rect" href="grid__path_8h.html" title=" " alt="" coords="24,184,155,225"/>
+<area shape="rect" href="gradient__path_8h.html" title=" " alt="" coords="660,95,815,136"/>
+<area shape="rect" href="quadratic__calculator_8h.html" title=" " alt="" coords="43,273,205,315"/>
+<area shape="rect" title=" " alt="" coords="2366,541,2439,568"/>
+<area shape="rect" title=" " alt="" coords="264,691,323,717"/>
+<area shape="rect" title=" " alt="" coords="2216,691,2376,717"/>
+<area shape="rect" title=" " alt="" coords="961,459,1173,486"/>
+<area shape="rect" title=" " alt="" coords="970,370,1094,397"/>
+<area shape="rect" href="base__global__planner_8h.html" title=" " alt="" coords="1614,273,1762,315"/>
+<area shape="rect" title=" " alt="" coords="794,452,937,493"/>
+<area shape="rect" title=" " alt="" coords="1179,281,1323,307"/>
+<area shape="rect" href="potential__calculator_8h.html" title=" " alt="" coords="585,363,743,404"/>
+<area shape="rect" href="expander_8h.html" title=" " alt="" coords="584,281,757,307"/>
+<area shape="rect" href="traceback_8h.html" title=" " alt="" coords="331,281,509,307"/>
+<area shape="rect" href="orientation__filter_8h.html" title=" " alt="" coords="985,273,1154,315"/>
+<area shape="rect" title=" " alt="" coords="1347,273,1538,315"/>
+<area shape="rect" title=" " alt="" coords="1991,691,2049,717"/>
+<area shape="rect" title=" " alt="" coords="2073,691,2191,717"/>
+<area shape="rect" href="costmap__2d__ros_8h.html" title=" " alt="" coords="1639,363,1785,404"/>
+<area shape="rect" href="layered__costmap_8h.html" title=" " alt="" coords="1248,452,1387,493"/>
+<area shape="rect" href="layer_8h.html" title=" " alt="" coords="1144,541,1280,568"/>
+<area shape="rect" href="costmap__2d__publisher_8h.html" title=" " alt="" coords="2477,452,2624,493"/>
+<area shape="rect" title=" " alt="" coords="1461,459,1675,486"/>
+<area shape="rect" href="footprint_8h.html" title=" " alt="" coords="2197,459,2352,486"/>
+<area shape="rect" title=" " alt="" coords="1609,541,1786,568"/>
+<area shape="rect" title=" " alt="" coords="1811,541,2040,568"/>
+<area shape="rect" title=" " alt="" coords="1749,459,1920,486"/>
+<area shape="rect" title=" " alt="" coords="1944,459,2123,486"/>
+<area shape="rect" title=" " alt="" coords="1290,616,1345,643"/>
+<area shape="rect" title=" " alt="" coords="1155,616,1266,643"/>
+<area shape="rect" title=" " alt="" coords="2771,541,2957,568"/>
+<area shape="rect" title=" " alt="" coords="2515,541,2747,568"/>
+<area shape="rect" title=" " alt="" coords="2065,541,2239,568"/>
+<area shape="rect" title=" " alt="" coords="509,459,584,486"/>
+<area shape="rect" title=" " alt="" coords="706,191,769,218"/>
+<area shape="rect" title=" " alt="" coords="1106,191,1171,218"/>
+<area shape="rect" title=" " alt="" coords="1195,191,1261,218"/>
+<area shape="rect" title=" " alt="" coords="1020,191,1081,218"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceglobal__planner"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceglobal__planner.html">global_planner</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

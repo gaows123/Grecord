@@ -1,0 +1,4 @@
+<map id="nav_core::BaseGlobalPlanner::makePlan" name="nav_core::BaseGlobalPlanner::makePlan">
+<area shape="rect" id="node1" title="已知世界坐标系下的目标点，计算全局路径" alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node2" href="$classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c" title="已知世界坐标系下的目标点，计算全局路径" alt="" coords="248,5,443,47"/>
+</map>

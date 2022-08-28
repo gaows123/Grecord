@@ -1,0 +1,77 @@
+\hypertarget{trajectory_8h_source}{}\doxysection{trajectory.\+h}
+\label{trajectory_8h_source}\index{base\_local\_planner/include/base\_local\_planner/trajectory.h@{base\_local\_planner/include/base\_local\_planner/trajectory.h}}
+\mbox{\hyperlink{trajectory_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{12 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{13 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{14 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{17 \textcolor{comment}{ *   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{18 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{20 \textcolor{comment}{ *}}
+\DoxyCodeLine{21 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{33 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#ifndef TRAJECTORY\_ROLLOUT\_TRAJECTORY\_H\_}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define TRAJECTORY\_ROLLOUT\_TRAJECTORY\_H\_}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{44   \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \{}
+\DoxyCodeLine{45     \textcolor{keyword}{public}:}
+\DoxyCodeLine{49       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a38089bc04dc5c68da14083dacb4d8bb7}{Trajectory}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{58       \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a38089bc04dc5c68da14083dacb4d8bb7}{Trajectory}}(\textcolor{keywordtype}{double} xv, \textcolor{keywordtype}{double} yv, \textcolor{keywordtype}{double} thetav, \textcolor{keywordtype}{double} time\_delta, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num\_pts);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a228fb59ff438692ebedddb6899c8d957}{xv\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_abb4fc9493587f61f888f2cdfec62b89a}{yv\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a9a93bfe9bb3c3b1d65b3627ce7cbae33}{thetav\_}}; }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_ab4d255b7614df1a8f381d4e7eb44d385}{cost\_}}; }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a48b175bc769a70d1182a48996d068c25}{time\_delta\_}}; }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{73       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_aefeea7b81d210b228cfe041938be6a14}{getPoint}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{double}\& x, \textcolor{keywordtype}{double}\& y, \textcolor{keywordtype}{double}\& th) \textcolor{keyword}{const};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{82       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a36da2c9c1cc3e13facc6bc258d2e91e2}{setPoint}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} th);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{90       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a94ff45de82ae4417fdbb1158c5c2b204}{addPoint}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} th);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{98       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a7247858ecf5432a6557d8daf55e3e3f5}{getEndpoint}}(\textcolor{keywordtype}{double}\& x, \textcolor{keywordtype}{double}\& y, \textcolor{keywordtype}{double}\& th) \textcolor{keyword}{const};}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{103       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a35c05c071ce0f8e54c18f0f8816315d3}{resetPoints}}();}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{109       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_a825364365ad68291ce701c0e97bef3d5}{getPointsSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     \textcolor{keyword}{private}:}
+\DoxyCodeLine{112       std::vector<double> \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_aceba1ac2da65c147f18120eb18c2cb50}{x\_pts\_}}; }
+\DoxyCodeLine{113       std::vector<double> \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_aeb5297a196ec8d7190278a8aa9a1289a}{y\_pts\_}}; }
+\DoxyCodeLine{114       std::vector<double> \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_aeb1b21476d54b700d52ef914ab101476}{th\_pts\_}}; }
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116   \};}
+\DoxyCodeLine{117 \};}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$classbase__local__planner_1_1_trajectory_search.html" title="作为一个纯虚类，提供寻找局部轨迹的模块接口" alt="" coords="5,5,139,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_simple_scored_sampling_planner.html" title="根据给定的产生器和代价函数计算一个局部轨迹.这里假设代价越小越好同时负值的代价意味着无穷大" alt="" coords="187,5,396,47"/>
+</map>

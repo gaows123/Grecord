@@ -1,0 +1,6 @@
+<map id="base_local_planner::transformGlobalPlan" name="base_local_planner::transformGlobalPlan">
+<area shape="rect" id="node1" title="Transforms the global plan of the robot from the planner frame to the frame of the costmap,..." alt="" coords="524,53,672,94"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="283,5,476,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_local_planner_util.html#adb22b6981dc80e9159298c8f3dc738eb" title=" " alt="" coords="313,85,446,141"/>
+<area shape="rect" id="node4" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,85,235,141"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="base_local_planner::MapGrid::getIndex" name="base_local_planner::MapGrid::getIndex">
+<area shape="rect" id="node1" title="Returns a 1D index into the MapCell array for a 2D index" alt="" coords="187,5,324,47"/>
+<area shape="rect" id="node2" href="$namespacebase__local__planner.html#a20d60d586e40c99bd35548561a200726" title=" " alt="" coords="5,5,139,47"/>
+</map>

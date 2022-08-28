@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: navfn::NavfnWithCostmap类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacenavfn.html">navfn</a></li><li class="navelem"><a class="el" href="classnavfn_1_1_navfn_with_costmap.html">NavfnWithCostmap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classnavfn_1_1_navfn_with_costmap-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">navfn::NavfnWithCostmap类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 navfn::NavfnWithCostmap 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_navfn_with_costmap__inherit__graph.png" border="0" usemap="#anavfn_1_1_navfn_with_costmap_inherit__map" alt="Inheritance graph"/></div>
+<map name="anavfn_1_1_navfn_with_costmap_inherit__map" id="anavfn_1_1_navfn_with_costmap_inherit__map">
+<area shape="rect" title=" " alt="" coords="15,155,190,181"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html" title="Navfn 全局规划器的ROS封装类" alt="" coords="41,80,165,107"/>
+<area shape="rect" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,5,200,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+navfn::NavfnWithCostmap 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_navfn_with_costmap__coll__graph.png" border="0" usemap="#anavfn_1_1_navfn_with_costmap_coll__map" alt="Collaboration graph"/></div>
+<map name="anavfn_1_1_navfn_with_costmap_coll__map" id="anavfn_1_1_navfn_with_costmap_coll__map">
+<area shape="rect" title=" " alt="" coords="1004,136,1179,163"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html" title="Navfn 全局规划器的ROS封装类" alt="" coords="383,71,507,97"/>
+<area shape="rect" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,5,200,32"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="18,85,187,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="345,152,544,179"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="333,203,556,229"/>
+<area shape="rect" title=" " alt="" coords="75,244,130,271"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="715,176,912,203"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aba48f2e70ebe9c84bd9b3de9ce1c3e33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_with_costmap.html#aba48f2e70ebe9c84bd9b3de9ce1c3e33">NavfnWithCostmap</a> (string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a> *cmap)</td></tr>
+<tr class="separator:aba48f2e70ebe9c84bd9b3de9ce1c3e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e245ce4b1e4d9a6d4616107f993d6f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_with_costmap.html#aa8e245ce4b1e4d9a6d4616107f993d6f">makePlanService</a> (MakeNavPlan::Request &amp;req, MakeNavPlan::Response &amp;resp)</td></tr>
+<tr class="separator:aa8e245ce4b1e4d9a6d4616107f993d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnavfn_1_1_navfn_r_o_s"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnavfn_1_1_navfn_r_o_s')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classnavfn_1_1_navfn_r_o_s.html">navfn::NavfnROS</a></td></tr>
+<tr class="memitem:a1b21c7105bc040df6e5d8f6c8adfb6a6 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a1b21c7105bc040df6e5d8f6c8adfb6a6">NavfnROS</a> ()</td></tr>
+<tr class="memdesc:a1b21c7105bc040df6e5d8f6c8adfb6a6 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">NavFnROS对象的默认构造函数  <a href="classnavfn_1_1_navfn_r_o_s.html#a1b21c7105bc040df6e5d8f6c8adfb6a6">更多...</a><br /></td></tr>
+<tr class="separator:a1b21c7105bc040df6e5d8f6c8adfb6a6 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ba0ae6bd1cac9ee89110290c5b86e6 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a06ba0ae6bd1cac9ee89110290c5b86e6">NavfnROS</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a06ba0ae6bd1cac9ee89110290c5b86e6 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">NavFnROS对象的构造函数  <a href="classnavfn_1_1_navfn_r_o_s.html#a06ba0ae6bd1cac9ee89110290c5b86e6">更多...</a><br /></td></tr>
+<tr class="separator:a06ba0ae6bd1cac9ee89110290c5b86e6 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af405588d08b37d071e72d85dc33c6523 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#af405588d08b37d071e72d85dc33c6523">NavfnROS</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *costmap, std::string global_frame)</td></tr>
+<tr class="memdesc:af405588d08b37d071e72d85dc33c6523 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">还是NavFnROS对象的构造函数  <a href="classnavfn_1_1_navfn_r_o_s.html#af405588d08b37d071e72d85dc33c6523">更多...</a><br /></td></tr>
+<tr class="separator:af405588d08b37d071e72d85dc33c6523 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1e06b4e3b390aaaa3e4733a0668c4d inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a7f1e06b4e3b390aaaa3e4733a0668c4d">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a7f1e06b4e3b390aaaa3e4733a0668c4d inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">NavFnROS 对象的初始化函数  <a href="classnavfn_1_1_navfn_r_o_s.html#a7f1e06b4e3b390aaaa3e4733a0668c4d">更多...</a><br /></td></tr>
+<tr class="separator:a7f1e06b4e3b390aaaa3e4733a0668c4d inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a935ac2d5a76a101a3521cb078ee4ba4d inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a935ac2d5a76a101a3521cb078ee4ba4d">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *costmap, std::string global_frame)</td></tr>
+<tr class="memdesc:a935ac2d5a76a101a3521cb078ee4ba4d inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">avFnROS 对象的初始化函数  <a href="classnavfn_1_1_navfn_r_o_s.html#a935ac2d5a76a101a3521cb078ee4ba4d">更多...</a><br /></td></tr>
+<tr class="separator:a935ac2d5a76a101a3521cb078ee4ba4d inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cec6d49a902ace7e71ffc7125b29a9 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:aa8cec6d49a902ace7e71ffc7125b29a9 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据目标位姿计算全局路径  <a href="classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9">更多...</a><br /></td></tr>
+<tr class="separator:aa8cec6d49a902ace7e71ffc7125b29a9 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1925183250dd36115daadd91b14656aa inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a1925183250dd36115daadd91b14656aa">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, double tolerance, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:a1925183250dd36115daadd91b14656aa inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据目标位姿计算全局路径  <a href="classnavfn_1_1_navfn_r_o_s.html#a1925183250dd36115daadd91b14656aa">更多...</a><br /></td></tr>
+<tr class="separator:a1925183250dd36115daadd91b14656aa inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01635a5d9947ae1b51ce70603db0c843 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a01635a5d9947ae1b51ce70603db0c843">computePotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:a01635a5d9947ae1b51ce70603db0c843 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算全局地图的导航函数，从已知的起始点到目标点  <a href="classnavfn_1_1_navfn_r_o_s.html#a01635a5d9947ae1b51ce70603db0c843">更多...</a><br /></td></tr>
+<tr class="separator:a01635a5d9947ae1b51ce70603db0c843 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad645a775f99aa2a120bb0b7f6cd08fd5 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#ad645a775f99aa2a120bb0b7f6cd08fd5">getPlanFromPotential</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:ad645a775f99aa2a120bb0b7f6cd08fd5 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">当起始点的potential被计算出来后，计算全局路径 (注意: 要先调用 computePotential)  <a href="classnavfn_1_1_navfn_r_o_s.html#ad645a775f99aa2a120bb0b7f6cd08fd5">更多...</a><br /></td></tr>
+<tr class="separator:ad645a775f99aa2a120bb0b7f6cd08fd5 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f40b93d0f1c181f94fb7da28a476e2 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a51f40b93d0f1c181f94fb7da28a476e2">getPointPotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:a51f40b93d0f1c181f94fb7da28a476e2 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得 potential 或者 导航的代价 (注意: 要先调用 computePotential)  <a href="classnavfn_1_1_navfn_r_o_s.html#a51f40b93d0f1c181f94fb7da28a476e2">更多...</a><br /></td></tr>
+<tr class="separator:a51f40b93d0f1c181f94fb7da28a476e2 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b915897586064db5c861658133e909 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#ad2b915897586064db5c861658133e909">validPointPotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:ad2b915897586064db5c861658133e909 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查potential值是否有效 (注意: 要先调用 computePotential)  <a href="classnavfn_1_1_navfn_r_o_s.html#ad2b915897586064db5c861658133e909">更多...</a><br /></td></tr>
+<tr class="separator:ad2b915897586064db5c861658133e909 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df71f9e257d604ba8cf630848eb3529 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a2df71f9e257d604ba8cf630848eb3529">validPointPotential</a> (const geometry_msgs::Point &amp;world_point, double tolerance)</td></tr>
+<tr class="memdesc:a2df71f9e257d604ba8cf630848eb3529 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查potential值是否有效 (注意: 要先调用 computePotential)  <a href="classnavfn_1_1_navfn_r_o_s.html#a2df71f9e257d604ba8cf630848eb3529">更多...</a><br /></td></tr>
+<tr class="separator:a2df71f9e257d604ba8cf630848eb3529 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b4ca9b40c385791f4cb7be8237e4bb inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a05b4ca9b40c385791f4cb7be8237e4bb">publishPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path, double r, double g, double b, double a)</td></tr>
+<tr class="memdesc:a05b4ca9b40c385791f4cb7be8237e4bb inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">可视化路径  <a href="classnavfn_1_1_navfn_r_o_s.html#a05b4ca9b40c385791f4cb7be8237e4bb">更多...</a><br /></td></tr>
+<tr class="separator:a05b4ca9b40c385791f4cb7be8237e4bb inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a157abea36af92ed9ad78e79328eb0489 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a157abea36af92ed9ad78e79328eb0489">~NavfnROS</a> ()</td></tr>
+<tr class="separator:a157abea36af92ed9ad78e79328eb0489 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81643ac812bc02a5652f691c30834c27 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a81643ac812bc02a5652f691c30834c27">makePlanService</a> (nav_msgs::GetPlan::Request &amp;req, nav_msgs::GetPlan::Response &amp;resp)</td></tr>
+<tr class="separator:a81643ac812bc02a5652f691c30834c27 inherit pub_methods_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnav__core_1_1_base_global_planner"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnav__core_1_1_base_global_planner')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a></td></tr>
+<tr class="memitem:ae34a7c7cf96ebdfaf6b33f24a646156c inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</td></tr>
+<tr class="memdesc:ae34a7c7cf96ebdfaf6b33f24a646156c inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知世界坐标系下的目标点，计算全局路径  <a href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">更多...</a><br /></td></tr>
+<tr class="separator:ae34a7c7cf96ebdfaf6b33f24a646156c inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double &amp;cost)</td></tr>
+<tr class="memdesc:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知世界坐标系下的目标点，计算全局路径  <a href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">更多...</a><br /></td></tr>
+<tr class="separator:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485461ff314103dac95744f771107c43 inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)=0</td></tr>
+<tr class="memdesc:a485461ff314103dac95744f771107c43 inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口.">BaseGlobalPlanner</a> 的初始化函数  <a href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">更多...</a><br /></td></tr>
+<tr class="separator:a485461ff314103dac95744f771107c43 inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">~BaseGlobalPlanner</a> ()</td></tr>
+<tr class="memdesc:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚析构  <a href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">更多...</a><br /></td></tr>
+<tr class="separator:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a793a74f16803f58b9293d13e87a3537e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_with_costmap.html#a793a74f16803f58b9293d13e87a3537e">poseCallback</a> (const rm::PoseStamped::ConstPtr &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>)</td></tr>
+<tr class="separator:a793a74f16803f58b9293d13e87a3537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a0f6aca724624e0e196d38de936576da7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_with_costmap.html#a0f6aca724624e0e196d38de936576da7">cmap_</a></td></tr>
+<tr class="separator:a0f6aca724624e0e196d38de936576da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36af68fd4b9091e74b8dd0ec8896e70d"><td class="memItemLeft" align="right" valign="top">ros::ServiceServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_with_costmap.html#a36af68fd4b9091e74b8dd0ec8896e70d">make_plan_service_</a></td></tr>
+<tr class="separator:a36af68fd4b9091e74b8dd0ec8896e70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a08245b9d0d55a6e6e29c0b6f4c29f8"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_with_costmap.html#a4a08245b9d0d55a6e6e29c0b6f4c29f8">pose_sub_</a></td></tr>
+<tr class="separator:a4a08245b9d0d55a6e6e29c0b6f4c29f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classnav__core_1_1_base_global_planner"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classnav__core_1_1_base_global_planner')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a></td></tr>
+<tr class="memitem:a9a5877f3f1c7c09dca8ddb735487ef61 inherit pro_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a9a5877f3f1c7c09dca8ddb735487ef61">BaseGlobalPlanner</a> ()</td></tr>
+<tr class="separator:a9a5877f3f1c7c09dca8ddb735487ef61 inherit pro_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classnavfn_1_1_navfn_r_o_s"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classnavfn_1_1_navfn_r_o_s')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classnavfn_1_1_navfn_r_o_s.html">navfn::NavfnROS</a></td></tr>
+<tr class="memitem:aee612188ce6bbae6daa19353499bcf1c inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#aee612188ce6bbae6daa19353499bcf1c">costmap_</a></td></tr>
+<tr class="memdesc:aee612188ce6bbae6daa19353499bcf1c inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a copy of the current costmap in <em>costmap</em>. Called by makePlan.  <a href="classnavfn_1_1_navfn_r_o_s.html#aee612188ce6bbae6daa19353499bcf1c">更多...</a><br /></td></tr>
+<tr class="separator:aee612188ce6bbae6daa19353499bcf1c inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ba1f9fa50ad74e2c41a8c93f9b74e0 inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classnavfn_1_1_nav_fn.html">NavFn</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a36ba1f9fa50ad74e2c41a8c93f9b74e0">planner_</a></td></tr>
+<tr class="separator:a36ba1f9fa50ad74e2c41a8c93f9b74e0 inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7e371d85298da82ad4e2f7965efe4f inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a2e7e371d85298da82ad4e2f7965efe4f">plan_pub_</a></td></tr>
+<tr class="separator:a2e7e371d85298da82ad4e2f7965efe4f inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa70e7aeb1abdcbcd0787a87d11c464 inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a2fa70e7aeb1abdcbcd0787a87d11c464">potarr_pub_</a></td></tr>
+<tr class="separator:a2fa70e7aeb1abdcbcd0787a87d11c464 inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd08548cdff16315eef20424b1203dc inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#affd08548cdff16315eef20424b1203dc">initialized_</a></td></tr>
+<tr class="separator:affd08548cdff16315eef20424b1203dc inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4003d3313fc2e0ede53223559c0ed9c5 inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a4003d3313fc2e0ede53223559c0ed9c5">allow_unknown_</a></td></tr>
+<tr class="separator:a4003d3313fc2e0ede53223559c0ed9c5 inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17cf4a3a4d61adfc9276cc2ef7cc5f4d inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnavfn_1_1_navfn_r_o_s.html#a17cf4a3a4d61adfc9276cc2ef7cc5f4d">visualize_potential_</a></td></tr>
+<tr class="separator:a17cf4a3a4d61adfc9276cc2ef7cc5f4d inherit pro_attribs_classnavfn_1_1_navfn_r_o_s"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aba48f2e70ebe9c84bd9b3de9ce1c3e33" name="aba48f2e70ebe9c84bd9b3de9ce1c3e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba48f2e70ebe9c84bd9b3de9ce1c3e33">&#9670;&nbsp;</a></span>NavfnWithCostmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">navfn::NavfnWithCostmap::NavfnWithCostmap </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>cmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33_cgraph.png" border="0" usemap="#aclassnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33_cgraph" id="aclassnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33_cgraph">
+<area shape="rect" title=" " alt="" coords="5,51,180,93"/>
+<area shape="rect" href="classnavfn_1_1_navfn_with_costmap.html#aa8e245ce4b1e4d9a6d4616107f993d6f" title=" " alt="" coords="228,18,403,59"/>
+<area shape="rect" href="classnavfn_1_1_navfn_with_costmap.html#a793a74f16803f58b9293d13e87a3537e" title=" " alt="" coords="228,83,403,125"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9" title="根据目标位姿计算全局路径" alt="" coords="454,29,645,56"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="451,83,648,125"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa8e245ce4b1e4d9a6d4616107f993d6f" name="aa8e245ce4b1e4d9a6d4616107f993d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e245ce4b1e4d9a6d4616107f993d6f">&#9670;&nbsp;</a></span>makePlanService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool navfn::NavfnWithCostmap::makePlanService </td>
+          <td>(</td>
+          <td class="paramtype">MakeNavPlan::Request &amp;&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MakeNavPlan::Response &amp;&#160;</td>
+          <td class="paramname"><em>resp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_cgraph.png" border="0" usemap="#aclassnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_cgraph" id="aclassnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,22,180,63"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9" title="根据目标位姿计算全局路径" alt="" coords="228,29,419,56"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_icgraph.png" border="0" usemap="#aclassnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_icgraph" id="aclassnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,403,47"/>
+<area shape="rect" href="classnavfn_1_1_navfn_with_costmap.html#aba48f2e70ebe9c84bd9b3de9ce1c3e33" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a793a74f16803f58b9293d13e87a3537e" name="a793a74f16803f58b9293d13e87a3537e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a793a74f16803f58b9293d13e87a3537e">&#9670;&nbsp;</a></span>poseCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void navfn::NavfnWithCostmap::poseCallback </td>
+          <td>(</td>
+          <td class="paramtype">const rm::PoseStamped::ConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>goal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_cgraph.png" border="0" usemap="#aclassnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_cgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_cgraph" id="aclassnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,47,180,88"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="228,5,425,47"/>
+<area shape="rect" href="classnavfn_1_1_navfn_r_o_s.html#aa8cec6d49a902ace7e71ffc7125b29a9" title="根据目标位姿计算全局路径" alt="" coords="231,95,422,122"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_icgraph.png" border="0" usemap="#aclassnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_icgraph" alt=""/></div>
+<map name="aclassnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_icgraph" id="aclassnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,403,47"/>
+<area shape="rect" href="classnavfn_1_1_navfn_with_costmap.html#aba48f2e70ebe9c84bd9b3de9ce1c3e33" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a0f6aca724624e0e196d38de936576da7" name="a0f6aca724624e0e196d38de936576da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6aca724624e0e196d38de936576da7">&#9670;&nbsp;</a></span>cmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a>* navfn::NavfnWithCostmap::cmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36af68fd4b9091e74b8dd0ec8896e70d" name="a36af68fd4b9091e74b8dd0ec8896e70d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36af68fd4b9091e74b8dd0ec8896e70d">&#9670;&nbsp;</a></span>make_plan_service_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::ServiceServer navfn::NavfnWithCostmap::make_plan_service_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a08245b9d0d55a6e6e29c0b6f4c29f8" name="a4a08245b9d0d55a6e6e29c0b6f4c29f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a08245b9d0d55a6e6e29c0b6f4c29f8">&#9670;&nbsp;</a></span>pose_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Subscriber navfn::NavfnWithCostmap::pose_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>navfn/src/<a class="el" href="navfn__node_8cpp.html">navfn_node.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

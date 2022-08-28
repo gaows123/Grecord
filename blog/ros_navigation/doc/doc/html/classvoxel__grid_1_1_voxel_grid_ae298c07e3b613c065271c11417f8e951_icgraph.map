@@ -1,0 +1,5 @@
+<map id="voxel_grid::VoxelGrid::getData" name="voxel_grid::VoxelGrid::getData">
+<area shape="rect" id="node1" title=" " alt="" coords="435,5,581,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_voxel_layer.html#ab28185cd71c8e42f72880b779ef08ae2" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_voxel_layer.html#a91dc901da59c768aea0b25037bf46fef" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="220,35,387,76"/>
+</map>

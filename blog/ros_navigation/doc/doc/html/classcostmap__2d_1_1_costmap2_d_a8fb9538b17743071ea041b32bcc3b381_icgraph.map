@@ -1,0 +1,4 @@
+<map id="costmap_2d::Costmap2D::copyCostmapWindow" name="costmap_2d::Costmap2D::copyCostmapWindow">
+<area shape="rect" id="node1" title="Turn this costmap into a copy of a window of a costmap passed in" alt="" coords="109,5,279,47"/>
+<area shape="rect" id="node2" href="$module__tests_8cpp.html#a4d5daedd5dde37cf984f593d5c719e92" title=" " alt="" coords="5,13,61,39"/>
+</map>

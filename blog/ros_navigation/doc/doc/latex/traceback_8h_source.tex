@@ -1,0 +1,73 @@
+\hypertarget{traceback_8h_source}{}\doxysection{traceback.\+h}
+\label{traceback_8h_source}\index{global\_planner/include/global\_planner/traceback.h@{global\_planner/include/global\_planner/traceback.h}}
+\mbox{\hyperlink{traceback_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef \_TRACEBACK\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define \_TRACEBACK\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include<vector>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include<\mbox{\hyperlink{potential__calculator_8h}{global\_planner/potential\_calculator.h}}>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglobal__planner}{global\_planner}} \{}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{classglobal__planner_1_1_traceback}{Traceback}} \{}
+\DoxyCodeLine{46     \textcolor{keyword}{public}:}
+\DoxyCodeLine{47         \mbox{\hyperlink{classglobal__planner_1_1_traceback_abf48245c8bc021ba9df355ae74ded3e4}{Traceback}}(\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{PotentialCalculator}}* p\_calc) : \mbox{\hyperlink{classglobal__planner_1_1_traceback_a918825f1ecb2858a3b4a6d516ad144b4}{p\_calc\_}}(p\_calc) \{\}}
+\DoxyCodeLine{48         \textcolor{keyword}{virtual} \mbox{\hyperlink{classglobal__planner_1_1_traceback_adfced6929e49afbd1b0ce8e42ed3a81c}{\string~Traceback}}() \{\}}
+\DoxyCodeLine{49         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classglobal__planner_1_1_traceback_ad3562c3ff5dc3a1e4465d2ddbe62f812}{getPath}}(\textcolor{keywordtype}{float}* potential, \textcolor{keywordtype}{double} start\_x, \textcolor{keywordtype}{double} start\_y, \textcolor{keywordtype}{double} end\_x, \textcolor{keywordtype}{double} end\_y, std::vector<std::pair<float, float> >\& path) = 0;}
+\DoxyCodeLine{50         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_traceback_a75fa8c3628baa7debd94ac83b02e03a7}{setSize}}(\textcolor{keywordtype}{int} xs, \textcolor{keywordtype}{int} ys) \{}
+\DoxyCodeLine{51             \mbox{\hyperlink{classglobal__planner_1_1_traceback_a062d8297437fb132a87a9adff70c2c8f}{xs\_}} = xs;}
+\DoxyCodeLine{52             \mbox{\hyperlink{classglobal__planner_1_1_traceback_a1d7c2fd48b6d48696ee7fcd650e5cc4b}{ys\_}} = ys;}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54         \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_traceback_a9565bfa976f8ce019ce4e4d814b3b575}{getIndex}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \{}
+\DoxyCodeLine{55             \textcolor{keywordflow}{return} x + y * \mbox{\hyperlink{classglobal__planner_1_1_traceback_a062d8297437fb132a87a9adff70c2c8f}{xs\_}};}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_traceback_af411eb96102bcedea2d530137b13a002}{setLethalCost}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} lethal\_cost) \{}
+\DoxyCodeLine{58             \mbox{\hyperlink{classglobal__planner_1_1_traceback_a61b0a5a5dfb61d942d2dfd7c0d7a58ea}{lethal\_cost\_}} = lethal\_cost;}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{61         \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_traceback_a062d8297437fb132a87a9adff70c2c8f}{xs\_}}, \mbox{\hyperlink{classglobal__planner_1_1_traceback_a1d7c2fd48b6d48696ee7fcd650e5cc4b}{ys\_}};}
+\DoxyCodeLine{62         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classglobal__planner_1_1_traceback_a61b0a5a5dfb61d942d2dfd7c0d7a58ea}{lethal\_cost\_}};}
+\DoxyCodeLine{63         \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{PotentialCalculator}}* \mbox{\hyperlink{classglobal__planner_1_1_traceback_a918825f1ecb2858a3b4a6d516ad144b4}{p\_calc\_}};  \textcolor{comment}{// 计算“一个点”的可行性}}
+\DoxyCodeLine{64 \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \} \textcolor{comment}{//end namespace global\_planner}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

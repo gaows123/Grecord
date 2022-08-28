@@ -1,0 +1,305 @@
+\hypertarget{costmap__2d_8h_source}{}\doxysection{costmap\+\_\+2d.\+h}
+\label{costmap__2d_8h_source}\index{costmap\_2d/include/costmap\_2d/costmap\_2d.h@{costmap\_2d/include/costmap\_2d/costmap\_2d.h}}
+\mbox{\hyperlink{costmap__2d_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_COSTMAP\_2D\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_COSTMAP\_2D\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{// convenient for storing x/y point pairs}}
+\DoxyCodeLine{50 \textcolor{comment}{// 方便记录位置信息}}
+\DoxyCodeLine{51 \textcolor{keyword}{struct }\mbox{\hyperlink{structcostmap__2d_1_1_map_location}{MapLocation}}}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{structcostmap__2d_1_1_map_location_a3614d10851d1729e0116d070c5603aa7}{x}};}
+\DoxyCodeLine{54   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{structcostmap__2d_1_1_map_location_ac002c47e0c201e764c980132020fedeb}{y}};}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63   \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_costmap_tester}{CostmapTester}};  \textcolor{comment}{// Need this for gtest to work correctly}}
+\DoxyCodeLine{64 \textcolor{keyword}{public}:}
+\DoxyCodeLine{74   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a1ec52799b2b673306902fcfe01285d7a}{Costmap2D}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cells\_size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cells\_size\_y, \textcolor{keywordtype}{double} resolution,}
+\DoxyCodeLine{75             \textcolor{keywordtype}{double} origin\_x, \textcolor{keywordtype}{double} origin\_y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} default\_value = 0);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a1ec52799b2b673306902fcfe01285d7a}{Costmap2D}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}\& map);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a404b9898ed689c8f6b1eb3503c358db0}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}\& map);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{98   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a8fb9538b17743071ea041b32bcc3b381}{copyCostmapWindow}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}\& map, \textcolor{keywordtype}{double} win\_origin\_x, \textcolor{keywordtype}{double} win\_origin\_y, \textcolor{keywordtype}{double} win\_size\_x,}
+\DoxyCodeLine{99                          \textcolor{keywordtype}{double} win\_size\_y);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{104   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a1ec52799b2b673306902fcfe01285d7a}{Costmap2D}}();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{109   \textcolor{keyword}{virtual} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a3087bd649bca6c2fb4f795d433e93f3a}{\string~Costmap2D}}();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{117   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a2a8ad2c3fc3aa47be8d2d0f9ae113c27}{getCost}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my) \textcolor{keyword}{const};}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{125   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ae1703900adbbf1e0d929cec0735a8b0e}{setCost}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cost);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{134   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a8e39feaa7ee4446347674b3701a1394c}{mapToWorld}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my, \textcolor{keywordtype}{double}\& wx, \textcolor{keywordtype}{double}\& wy) \textcolor{keyword}{const};}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{144   \textcolor{comment}{// 作用：从世界坐标(wx, wy)向地图坐标(mx, my)转换,不一定会转换成功，}}
+\DoxyCodeLine{145   \textcolor{comment}{// 地图坐标系小于世界坐标系，如果转换成功（合法界限），则为True；否则为false}}
+\DoxyCodeLine{146   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a9a2c824d4cd3bcad3ac3435d81982986}{worldToMap}}(\textcolor{keywordtype}{double} wx, \textcolor{keywordtype}{double} wy, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& my) \textcolor{keyword}{const};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{156   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a2da39cb06d192795614df9c2bf00692f}{worldToMapNoBounds}}(\textcolor{keywordtype}{double} wx, \textcolor{keywordtype}{double} wy, \textcolor{keywordtype}{int}\& mx, \textcolor{keywordtype}{int}\& my) \textcolor{keyword}{const};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{166   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ae412173f42af7edba9996f86754b7cbf}{worldToMapEnforceBounds}}(\textcolor{keywordtype}{double} wx, \textcolor{keywordtype}{double} wy, \textcolor{keywordtype}{int}\& mx, \textcolor{keywordtype}{int}\& my) \textcolor{keyword}{const};}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{174   \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a57d2ea3f3a039d72640c159cd149ff9d}{getIndex}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my)\textcolor{keyword}{ const}}
+\DoxyCodeLine{175 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{176     \textcolor{keywordflow}{return} my * \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}} + mx;}
+\DoxyCodeLine{177   \}}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{185   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa10c1734472f485473302598113fcddc}{indexToCells}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& my)\textcolor{keyword}{ const}}
+\DoxyCodeLine{186 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{187     my = index / \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}};}
+\DoxyCodeLine{188     mx = index -\/ (my * \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}});}
+\DoxyCodeLine{189   \}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{195   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a951c218252d6e66e23062a123dbde34d}{getCharMap}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{201   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a615a4186649d8970111f8a356906b320}{getSizeInCellsX}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{207   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a702f4ed109f94c8513500cf97ff066a4}{getSizeInCellsY}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{208 }
+\DoxyCodeLine{213   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a645ea4720d5cab8bcf662687cc81d087}{getSizeInMetersX}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{219   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_afb1d6cdc01d77452175487955e6aff4d}{getSizeInMetersY}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{225   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a9aae81be964f5fff675f9a10c3bf2e82}{getOriginX}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{231   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a686124b010e121eb87629ff17a032d7f}{getOriginY}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{237   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ade55f512e27c62cec28a3de5ca775759}{getResolution}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a8a9f535f98f1ba4c0a74f88aa706bcd2}{setDefaultValue}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c)}
+\DoxyCodeLine{240   \{}
+\DoxyCodeLine{241     \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af0715f46aa3d358da411f0060e0fe8d2}{default\_value\_}} = c;}
+\DoxyCodeLine{242   \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a35fbb86d10502ab91fb6e133c1364cd9}{getDefaultValue}}()}
+\DoxyCodeLine{245   \{}
+\DoxyCodeLine{246     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af0715f46aa3d358da411f0060e0fe8d2}{default\_value\_}};}
+\DoxyCodeLine{247   \}}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{255   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_afb8a42c3810e796107ed04c0ca3cbf90}{setConvexPolygonCost}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& polygon, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cost\_value);}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{262   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ad0c6f7cb8e11569a02f873c545acec90}{polygonOutlineCells}}(\textcolor{keyword}{const} std::vector<MapLocation>\& polygon, std::vector<MapLocation>\& polygon\_cells);}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{269   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa3c49f2d63f6edfb7396d1b0c79a4b12}{convexFillCells}}(\textcolor{keyword}{const} std::vector<MapLocation>\& polygon, std::vector<MapLocation>\& polygon\_cells);}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{276   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a5ca05c95f95e1408ca9e23d2e7f8987a}{updateOrigin}}(\textcolor{keywordtype}{double} new\_origin\_x, \textcolor{keywordtype}{double} new\_origin\_y);}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{282   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a04cd3558a672159a3ad1b151b1d19661}{saveMap}}(std::string file\_name);}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a95bae6eccd820a77d8040562e2a51118}{resizeMap}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_y, \textcolor{keywordtype}{double} resolution, \textcolor{keywordtype}{double} origin\_x,}
+\DoxyCodeLine{285                  \textcolor{keywordtype}{double} origin\_y);}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aba344550cbc08bcc3a54c64290f8f568}{resetMap}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} xn, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} yn);}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{294   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_abffbb5c7d49fae947d70c4e6d0fbeae9}{cellDistance}}(\textcolor{keywordtype}{double} world\_dist);}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296   \textcolor{comment}{// Provide a typedef to ease future code maintenance}}
+\DoxyCodeLine{297   \textcolor{keyword}{typedef} boost::recursive\_mutex \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\_t}};}
+\DoxyCodeLine{298   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\_t}}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a48c32f1cbe1cae7d2fb6a0a96192db21}{getMutex}}()}
+\DoxyCodeLine{299   \{}
+\DoxyCodeLine{300     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a509ef0191dacd55f6348f789236d904d}{access\_}};}
+\DoxyCodeLine{301   \}}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{317   \textcolor{keyword}{template}<\textcolor{keyword}{typename} data\_type>}
+\DoxyCodeLine{318     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ab857ec41de2e14d601b85bbf6497b612}{copyMapRegion}}(data\_type* source\_map, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sm\_lower\_left\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sm\_lower\_left\_y,}
+\DoxyCodeLine{319                        \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sm\_size\_x, data\_type* dest\_map, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dm\_lower\_left\_x,}
+\DoxyCodeLine{320                        \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dm\_lower\_left\_y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dm\_size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} region\_size\_x,}
+\DoxyCodeLine{321                        \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} region\_size\_y)}
+\DoxyCodeLine{322     \{}
+\DoxyCodeLine{323       \textcolor{comment}{// we'll first need to compute the starting points for each map}}
+\DoxyCodeLine{324       data\_type* sm\_index = source\_map + (sm\_lower\_left\_y * sm\_size\_x + sm\_lower\_left\_x);}
+\DoxyCodeLine{325       data\_type* dm\_index = dest\_map + (dm\_lower\_left\_y * dm\_size\_x + dm\_lower\_left\_x);}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327       \textcolor{comment}{// now, we'll copy the source map into the destination map}}
+\DoxyCodeLine{328       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < region\_size\_y; ++i)}
+\DoxyCodeLine{329       \{}
+\DoxyCodeLine{330         memcpy(dm\_index, sm\_index, region\_size\_x * \textcolor{keyword}{sizeof}(data\_type));}
+\DoxyCodeLine{331         sm\_index += sm\_size\_x;}
+\DoxyCodeLine{332         dm\_index += dm\_size\_x;}
+\DoxyCodeLine{333       \}}
+\DoxyCodeLine{334     \}}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{339   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af536407a80cef61e20226c28dbef9eee}{deleteMaps}}();}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{344   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ab4424e85f6daaf91eaf455e4bb241c19}{resetMaps}}();}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{351   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a1da91220df45a19376a3e3df3a517c27}{initMaps}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_y);}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{362   \textcolor{keyword}{template}<\textcolor{keyword}{class} ActionType>}
+\DoxyCodeLine{363     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af1d619d9b49b6851cb0a33de4e39ec78}{raytraceLine}}(ActionType at, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y0, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y1,}
+\DoxyCodeLine{364                              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_length = UINT\_MAX)}
+\DoxyCodeLine{365     \{}
+\DoxyCodeLine{366       \textcolor{keywordtype}{int} dx = x1 -\/ x0;}
+\DoxyCodeLine{367       \textcolor{keywordtype}{int} dy = y1 -\/ y0;}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{369       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_dx = abs(dx);}
+\DoxyCodeLine{370       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_dy = abs(dy);}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372       \textcolor{comment}{// 标记x是前进一格还是后退一个单元格}}
+\DoxyCodeLine{373       \textcolor{keywordtype}{int} offset\_dx = \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a947041f50d5fb1a44c3fd0601c4fc608}{sign}}(dx);}
+\DoxyCodeLine{374       \textcolor{keywordtype}{int} offset\_dy = \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a947041f50d5fb1a44c3fd0601c4fc608}{sign}}(dy) * \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}};}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset = y0 * \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}} + x0;}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378       \textcolor{comment}{// we need to chose how much to scale our dominant dimension, based on the maximum length of the line}}
+\DoxyCodeLine{379       \textcolor{keywordtype}{double} dist = hypot(dx, dy);}
+\DoxyCodeLine{380       \textcolor{keywordtype}{double} scale = (dist == 0.0) ? 1.0 : std::min(1.0, max\_length / dist);}
+\DoxyCodeLine{381 }
+\DoxyCodeLine{382       \textcolor{comment}{// if x is dominant}}
+\DoxyCodeLine{383       \textcolor{keywordflow}{if} (abs\_dx >= abs\_dy)}
+\DoxyCodeLine{384       \{}
+\DoxyCodeLine{385         \textcolor{keywordtype}{int} error\_y = abs\_dx / 2;}
+\DoxyCodeLine{386         \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a54462e95337134adf0a59785b39b57f6}{bresenham2D}}(at, abs\_dx, abs\_dy, error\_y, offset\_dx, offset\_dy, offset, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(scale * abs\_dx));}
+\DoxyCodeLine{387         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{388       \}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390       \textcolor{comment}{// otherwise y is dominant}}
+\DoxyCodeLine{391       \textcolor{keywordtype}{int} error\_x = abs\_dy / 2;}
+\DoxyCodeLine{392       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a54462e95337134adf0a59785b39b57f6}{bresenham2D}}(at, abs\_dy, abs\_dx, error\_x, offset\_dy, offset\_dx, offset, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})(scale * abs\_dy));}
+\DoxyCodeLine{393     \}}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{395 \textcolor{keyword}{private}:}
+\DoxyCodeLine{400   \textcolor{keyword}{template}<\textcolor{keyword}{class} ActionType>}
+\DoxyCodeLine{401     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a54462e95337134adf0a59785b39b57f6}{bresenham2D}}(ActionType at, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_da, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} abs\_db, \textcolor{keywordtype}{int} error\_b, \textcolor{keywordtype}{int} offset\_a,}
+\DoxyCodeLine{402                             \textcolor{keywordtype}{int} offset\_b, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_length)}
+\DoxyCodeLine{403     \{}
+\DoxyCodeLine{404       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} end = std::min(max\_length, abs\_da);}
+\DoxyCodeLine{405       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < end; ++i)}
+\DoxyCodeLine{406       \{}
+\DoxyCodeLine{407         at(offset);}
+\DoxyCodeLine{408         offset += offset\_a;}
+\DoxyCodeLine{409        \textcolor{comment}{/*}}
+\DoxyCodeLine{410 \textcolor{comment}{         * 下面这个情况，error\_b + abs\_db就会超过abs\_da，所以每次x+1后，y也会+1}}
+\DoxyCodeLine{411 \textcolor{comment}{         *         \_}}
+\DoxyCodeLine{412 \textcolor{comment}{         *       \_|}}
+\DoxyCodeLine{413 \textcolor{comment}{         *     \_|}}
+\DoxyCodeLine{414 \textcolor{comment}{         *   \_|}}
+\DoxyCodeLine{415 \textcolor{comment}{         * \_|}}
+\DoxyCodeLine{416 \textcolor{comment}{         *}}
+\DoxyCodeLine{417 \textcolor{comment}{         * 下面这个情况，error\_b + n* abs\_db才会超过abs\_da,所以每次x+n后，y才会+1}}
+\DoxyCodeLine{418 \textcolor{comment}{         *             \_\_\_|}}
+\DoxyCodeLine{419 \textcolor{comment}{         *         \_\_\_|}}
+\DoxyCodeLine{420 \textcolor{comment}{         *     \_\_\_|}}
+\DoxyCodeLine{421 \textcolor{comment}{         * \_\_\_|}}
+\DoxyCodeLine{422 \textcolor{comment}{          */}}
+\DoxyCodeLine{423         \textcolor{comment}{// https://blog.csdn.net/TurboIan/article/details/86611713}}
+\DoxyCodeLine{424         error\_b += abs\_db;  \textcolor{comment}{// 为了控制前进上升的斜率}}
+\DoxyCodeLine{425         \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})error\_b >= abs\_da)}
+\DoxyCodeLine{426         \{}
+\DoxyCodeLine{427           offset += offset\_b;}
+\DoxyCodeLine{428           error\_b -\/= abs\_da;}
+\DoxyCodeLine{429         \}}
+\DoxyCodeLine{430       \}}
+\DoxyCodeLine{431       at(offset);}
+\DoxyCodeLine{432     \}}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434   \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a947041f50d5fb1a44c3fd0601c4fc608}{sign}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{435   \{}
+\DoxyCodeLine{436     \textcolor{keywordflow}{return} x > 0 ? 1.0 : -\/1.0;}
+\DoxyCodeLine{437   \}}
+\DoxyCodeLine{438 }
+\DoxyCodeLine{439   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a723f8f016f2b699e9081c25e5dfdbcf4}{mutex\_t}}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a509ef0191dacd55f6348f789236d904d}{access\_}};}
+\DoxyCodeLine{440 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{441   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa71bf88a183222496f17b3a95e852e75}{size\_x\_}};  \textcolor{comment}{// 表示x方向最大距离（x方向像素点个数）}}
+\DoxyCodeLine{442   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_ad25df12283aa78c43878e24633381100}{size\_y\_}};  \textcolor{comment}{// 表示y方向最大距离（y方向像素点个数）}}
+\DoxyCodeLine{443   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a3d74d58b31973def7e407c7300f1115c}{resolution\_}};  \textcolor{comment}{// 分辨率大小，像素点之间的距离}}
+\DoxyCodeLine{444   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a9005fb139b987665bfa799c631953f00}{origin\_x\_}}; \textcolor{comment}{// 地图的下标计数原点x}}
+\DoxyCodeLine{445   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a53bc8ed50d62760245f879d66c5567db}{origin\_y\_}};  \textcolor{comment}{// 地图的下标计数原点y}}
+\DoxyCodeLine{446   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_a34c8633b0dfec7481300d401d33010c7}{costmap\_}};  \textcolor{comment}{// 地图数据}}
+\DoxyCodeLine{447   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_af0715f46aa3d358da411f0060e0fe8d2}{default\_value\_}};  \textcolor{comment}{// 默认代价值}}
+\DoxyCodeLine{448 }
+\DoxyCodeLine{449   \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell}{MarkCell}}}
+\DoxyCodeLine{450   \{}
+\DoxyCodeLine{451   \textcolor{keyword}{public}:}
+\DoxyCodeLine{452     \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_a0c0747cfaf1293397f308d2b3ebdb674}{MarkCell}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* costmap, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value) :}
+\DoxyCodeLine{453         \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_a7f350dd3faa737ff7d2cb8d261eec0bf}{costmap\_}}(costmap), \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_aaf47a4a0a8a5e3bb5ca0f8d5d8519f0a}{value\_}}(value)}
+\DoxyCodeLine{454     \{}
+\DoxyCodeLine{455     \}}
+\DoxyCodeLine{456     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_a3dafe4233194da04815cbb3c34883b78}{operator()}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset)}
+\DoxyCodeLine{457     \{}
+\DoxyCodeLine{458       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_a7f350dd3faa737ff7d2cb8d261eec0bf}{costmap\_}}[offset] = \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_aaf47a4a0a8a5e3bb5ca0f8d5d8519f0a}{value\_}};}
+\DoxyCodeLine{459     \}}
+\DoxyCodeLine{460   \textcolor{keyword}{private}:}
+\DoxyCodeLine{461     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_a7f350dd3faa737ff7d2cb8d261eec0bf}{costmap\_}};}
+\DoxyCodeLine{462     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_mark_cell_aaf47a4a0a8a5e3bb5ca0f8d5d8519f0a}{value\_}};}
+\DoxyCodeLine{463   \};}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{465   \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells}{PolygonOutlineCells}}}
+\DoxyCodeLine{466   \{}
+\DoxyCodeLine{467   \textcolor{keyword}{public}:}
+\DoxyCodeLine{468     \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_a6ff35c3f6f5daca7c0e7034b5cefdb6d}{PolygonOutlineCells}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}\& costmap, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* char\_map, std::vector<MapLocation>\& cells) :}
+\DoxyCodeLine{469         \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_ab5f3c615c3b2fde93fcff039a8972a5d}{costmap\_}}(costmap), \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_a96e584d684a878032ccfd7914e24be7d}{char\_map\_}}(char\_map), \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_a8e8d1837c3c5747605b5c894c9ca9a38}{cells\_}}(cells)}
+\DoxyCodeLine{470     \{}
+\DoxyCodeLine{471     \}}
+\DoxyCodeLine{472 }
+\DoxyCodeLine{473     \textcolor{comment}{// just push the relevant cells back onto the list}}
+\DoxyCodeLine{474     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_a719a499677280caa41ec7cdde8c2508b}{operator()}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} offset)}
+\DoxyCodeLine{475     \{}
+\DoxyCodeLine{476       \mbox{\hyperlink{structcostmap__2d_1_1_map_location}{MapLocation}} loc;}
+\DoxyCodeLine{477       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_ab5f3c615c3b2fde93fcff039a8972a5d}{costmap\_}}.\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_aa10c1734472f485473302598113fcddc}{indexToCells}}(offset, loc.\mbox{\hyperlink{structcostmap__2d_1_1_map_location_a3614d10851d1729e0116d070c5603aa7}{x}}, loc.\mbox{\hyperlink{structcostmap__2d_1_1_map_location_ac002c47e0c201e764c980132020fedeb}{y}});}
+\DoxyCodeLine{478       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_a8e8d1837c3c5747605b5c894c9ca9a38}{cells\_}}.push\_back(loc);}
+\DoxyCodeLine{479     \}}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481   \textcolor{keyword}{private}:}
+\DoxyCodeLine{482     \textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}}\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_ab5f3c615c3b2fde93fcff039a8972a5d}{costmap\_}};}
+\DoxyCodeLine{483     \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_a96e584d684a878032ccfd7914e24be7d}{char\_map\_}};}
+\DoxyCodeLine{484     std::vector<MapLocation>\& \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_1_1_polygon_outline_cells_a8e8d1837c3c5747605b5c894c9ca9a38}{cells\_}};}
+\DoxyCodeLine{485   \};}
+\DoxyCodeLine{486 \};}
+\DoxyCodeLine{487 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{488 }
+\DoxyCodeLine{489 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_COSTMAP\_2D\_H}}
+
+\end{DoxyCode}

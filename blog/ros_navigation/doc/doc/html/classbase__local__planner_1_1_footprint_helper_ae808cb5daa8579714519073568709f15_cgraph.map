@@ -1,0 +1,6 @@
+<map id="base_local_planner::FootprintHelper::getFootprintCells" name="base_local_planner::FootprintHelper::getFootprintCells">
+<area shape="rect" id="node1" title="获得组成机器人footprint的单元格" alt="" coords="5,85,200,141"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_footprint_helper.html#a6bb46e8dcf95d5694a1aa5b03ab83892" title="填充多边形的轮廓，即机器人的footprint" alt="" coords="252,5,413,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_footprint_helper.html#ab65128ff1acf0eb1d8b398ad0741ee55" title="Bresenham&#39;s 算法追踪网格中连接两点的线" alt="" coords="249,85,417,141"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="248,166,417,207"/>
+</map>

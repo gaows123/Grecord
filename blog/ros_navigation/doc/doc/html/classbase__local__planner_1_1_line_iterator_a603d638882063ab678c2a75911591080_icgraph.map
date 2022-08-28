@@ -1,0 +1,7 @@
+<map id="base_local_planner::LineIterator::isValid" name="base_local_planner::LineIterator::isValid">
+<area shape="rect" id="node1" title=" " alt="" coords="733,35,876,76"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_costmap_model.html#a8c65ee26aa8032afb635c3cb544e57cf" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="513,5,685,47"/>
+<area shape="rect" id="node5" href="$line__iterator__test_8cpp.html#a063fd5c1eea3a6858a1addd0d81e046e" title=" " alt="" coords="571,71,627,98"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_costmap_model.html#a80d896d06af4f1c0bd5b61cd758743af" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="267,5,465,47"/>
+<area shape="rect" id="node4" href="$classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9" title="启动旋转恢复行为" alt="" coords="5,5,219,47"/>
+</map>

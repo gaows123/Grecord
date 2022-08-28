@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner/include/global_planner/expander.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_414b209fa36dd1433a9bb8cd280add1a.html">global_planner</a></li><li class="navelem"><a class="el" href="dir_7b76dca46bce552b8fb66bb9e9404d32.html">include</a></li><li class="navelem"><a class="el" href="dir_b2f73a2221e56eeb39c8f87f953e2d4b.html">global_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">expander.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="expander_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  Copyright (c) 2008, 2013, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Author: Eitan Marder-Eppstein</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *         David V. Lu!!</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef _EXPANDER_H</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define _EXPANDER_H</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;<a class="code" href="potential__calculator_8h.html">global_planner/potential_calculator.h</a>&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="planner__core_8h.html">global_planner/planner_core.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceglobal__planner.html">global_planner</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html">   45</a></span><span class="keyword">class </span><a class="code hl_class" href="classglobal__planner_1_1_expander.html">Expander</a> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a8ccb306a28ea41d2bfd9202d4b16f26a">   47</a></span>        <a class="code hl_function" href="classglobal__planner_1_1_expander.html#a8ccb306a28ea41d2bfd9202d4b16f26a">Expander</a>(<a class="code hl_class" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a>* p_calc, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny) :</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">unknown_</a>(true), <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a>(253), <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a>(50), <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">factor_</a>(3.0), <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a3d991703be557e08056daedd3d872fff">p_calc_</a>(p_calc) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_function" href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">setSize</a>(nx, ny);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#af3350230a12f804b95b0aa45435631c7">   51</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#af3350230a12f804b95b0aa45435631c7">~Expander</a>() {}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a7c352121a2ea1e1b650b219004c98786">   52</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#a7c352121a2ea1e1b650b219004c98786">calculatePotentials</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costs, <span class="keywordtype">double</span> start_x, <span class="keywordtype">double</span> start_y, <span class="keywordtype">double</span> end_x, <span class="keywordtype">double</span> end_y,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                        <span class="keywordtype">int</span> cycles, <span class="keywordtype">float</span>* potential) = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">   60</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">setSize</a>(<span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> ny) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a72bbafddd4f838603ebe42cf7fb57cbc">nx_</a> = nx;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a3d1877778a6ed03533dace263d0dbe7e">ny_</a> = ny;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a0538b977e9cd0022810096b79e61e529">ns_</a> = nx * ny;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        } </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#aee9c360fb6316c538bbadcccc6bf98b1">   65</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#aee9c360fb6316c538bbadcccc6bf98b1">setLethalCost</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> lethal_cost) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a> = lethal_cost;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a386d3239f3aaa7a5e583bad9893a8ca1">   68</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#a386d3239f3aaa7a5e583bad9893a8ca1">setNeutralCost</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> neutral_cost) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a> = neutral_cost;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a53a3174aef024f0a4d01ac3fa7a74489">   71</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#a53a3174aef024f0a4d01ac3fa7a74489">setFactor</a>(<span class="keywordtype">float</span> factor) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">factor_</a> = factor;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a1dcbac968719e195552d063c4314618e">   74</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#a1dcbac968719e195552d063c4314618e">setHasUnknown</a>(<span class="keywordtype">bool</span> unknown) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">unknown_</a> = unknown;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a02060106b60c2661cb1f1878a151a40e">   78</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#a02060106b60c2661cb1f1878a151a40e">clearEndpoint</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* costs, <span class="keywordtype">float</span>* potential, <span class="keywordtype">int</span> gx, <span class="keywordtype">int</span> gy, <span class="keywordtype">int</span> s){</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordtype">int</span> startCell = <a class="code hl_function" href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c">toIndex</a>(gx, gy);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=-s;i&lt;=s;i++){</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=-s;j&lt;=s;j++){</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordtype">int</span> <a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = startCell+i+<a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a72bbafddd4f838603ebe42cf7fb57cbc">nx_</a>*j;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">if</span>(potential[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]&lt;<a class="code hl_define" href="planner__core_8h.html#a1ba71eeabfe9ba85c91393f562db6a33">POT_HIGH</a>)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordtype">float</span> c = costs[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>]+<a class="code hl_variable" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordtype">float</span> pot = <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a3d991703be557e08056daedd3d872fff">p_calc_</a>-&gt;<a class="code hl_function" href="classglobal__planner_1_1_potential_calculator.html#a4befc4819934603d43c8dc539f445fd4">calculatePotential</a>(potential, c, <a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                potential[<a class="code hl_variable" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>] = pot;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c">   93</a></span>        <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c">toIndex</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">return</span> x + <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a72bbafddd4f838603ebe42cf7fb57cbc">nx_</a> * y;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a0538b977e9cd0022810096b79e61e529">   97</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a72bbafddd4f838603ebe42cf7fb57cbc">nx_</a>, <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a3d1877778a6ed03533dace263d0dbe7e">ny_</a>, <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a0538b977e9cd0022810096b79e61e529">ns_</a>; </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">   98</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">unknown_</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">   99</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a>, <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#ad51bd3f97e8d1ca48c357175d723f3f4">  100</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#ad51bd3f97e8d1ca48c357175d723f3f4">cells_visited_</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">  101</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">factor_</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classglobal__planner_1_1_expander.html#a3d991703be557e08056daedd3d872fff">  102</a></span>        <a class="code hl_class" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a>* <a class="code hl_variable" href="classglobal__planner_1_1_expander.html#a3d991703be557e08056daedd3d872fff">p_calc_</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} <span class="comment">//end namespace global_planner</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html"><div class="ttname"><a href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></div><div class="ttdef"><b>Definition:</b> expander.h:45</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a02060106b60c2661cb1f1878a151a40e"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a02060106b60c2661cb1f1878a151a40e">global_planner::Expander::clearEndpoint</a></div><div class="ttdeci">void clearEndpoint(unsigned char *costs, float *potential, int gx, int gy, int s)</div><div class="ttdef"><b>Definition:</b> expander.h:78</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a044a34d5d5ddd41016afec643cb65d4e"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">global_planner::Expander::lethal_cost_</a></div><div class="ttdeci">unsigned char lethal_cost_</div><div class="ttdef"><b>Definition:</b> expander.h:99</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a0538b977e9cd0022810096b79e61e529"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a0538b977e9cd0022810096b79e61e529">global_planner::Expander::ns_</a></div><div class="ttdeci">int ns_</div><div class="ttdef"><b>Definition:</b> expander.h:97</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a1dcbac968719e195552d063c4314618e"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a1dcbac968719e195552d063c4314618e">global_planner::Expander::setHasUnknown</a></div><div class="ttdeci">void setHasUnknown(bool unknown)</div><div class="ttdef"><b>Definition:</b> expander.h:74</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a386d3239f3aaa7a5e583bad9893a8ca1"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a386d3239f3aaa7a5e583bad9893a8ca1">global_planner::Expander::setNeutralCost</a></div><div class="ttdeci">void setNeutralCost(unsigned char neutral_cost)</div><div class="ttdef"><b>Definition:</b> expander.h:68</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a3d1877778a6ed03533dace263d0dbe7e"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a3d1877778a6ed03533dace263d0dbe7e">global_planner::Expander::ny_</a></div><div class="ttdeci">int ny_</div><div class="ttdef"><b>Definition:</b> expander.h:97</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a3d991703be557e08056daedd3d872fff"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a3d991703be557e08056daedd3d872fff">global_planner::Expander::p_calc_</a></div><div class="ttdeci">PotentialCalculator * p_calc_</div><div class="ttdef"><b>Definition:</b> expander.h:102</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a53a3174aef024f0a4d01ac3fa7a74489"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a53a3174aef024f0a4d01ac3fa7a74489">global_planner::Expander::setFactor</a></div><div class="ttdeci">void setFactor(float factor)</div><div class="ttdef"><b>Definition:</b> expander.h:71</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a72bbafddd4f838603ebe42cf7fb57cbc"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a72bbafddd4f838603ebe42cf7fb57cbc">global_planner::Expander::nx_</a></div><div class="ttdeci">int nx_</div><div class="ttdef"><b>Definition:</b> expander.h:97</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a7c352121a2ea1e1b650b219004c98786"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a7c352121a2ea1e1b650b219004c98786">global_planner::Expander::calculatePotentials</a></div><div class="ttdeci">virtual bool calculatePotentials(unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)=0</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a8ccb306a28ea41d2bfd9202d4b16f26a"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a8ccb306a28ea41d2bfd9202d4b16f26a">global_planner::Expander::Expander</a></div><div class="ttdeci">Expander(PotentialCalculator *p_calc, int nx, int ny)</div><div class="ttdef"><b>Definition:</b> expander.h:47</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_a999123a5d229a31933a64ba56a4f525d"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">global_planner::Expander::factor_</a></div><div class="ttdeci">float factor_</div><div class="ttdef"><b>Definition:</b> expander.h:101</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_aa8941c07a0f50a2e3ce3088f7ecb8e61"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">global_planner::Expander::neutral_cost_</a></div><div class="ttdeci">unsigned char neutral_cost_</div><div class="ttdef"><b>Definition:</b> expander.h:99</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_ab9ed0e500049774014960dfb68f1e50c"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c">global_planner::Expander::toIndex</a></div><div class="ttdeci">int toIndex(int x, int y)</div><div class="ttdef"><b>Definition:</b> expander.h:93</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_abbb2fc0fd78f4ae3e8ffad2981629a91"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">global_planner::Expander::unknown_</a></div><div class="ttdeci">bool unknown_</div><div class="ttdef"><b>Definition:</b> expander.h:98</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_ad51bd3f97e8d1ca48c357175d723f3f4"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#ad51bd3f97e8d1ca48c357175d723f3f4">global_planner::Expander::cells_visited_</a></div><div class="ttdeci">int cells_visited_</div><div class="ttdef"><b>Definition:</b> expander.h:100</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_aee9c360fb6316c538bbadcccc6bf98b1"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#aee9c360fb6316c538bbadcccc6bf98b1">global_planner::Expander::setLethalCost</a></div><div class="ttdeci">void setLethalCost(unsigned char lethal_cost)</div><div class="ttdef"><b>Definition:</b> expander.h:65</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_aeeaa60103de1ee71a1969e40a3735094"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">global_planner::Expander::setSize</a></div><div class="ttdeci">virtual void setSize(int nx, int ny)</div><div class="ttdoc">Sets or resets the size of the map</div><div class="ttdef"><b>Definition:</b> expander.h:60</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_expander_html_af3350230a12f804b95b0aa45435631c7"><div class="ttname"><a href="classglobal__planner_1_1_expander.html#af3350230a12f804b95b0aa45435631c7">global_planner::Expander::~Expander</a></div><div class="ttdeci">virtual ~Expander()</div><div class="ttdef"><b>Definition:</b> expander.h:51</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_potential_calculator_html"><div class="ttname"><a href="classglobal__planner_1_1_potential_calculator.html">global_planner::PotentialCalculator</a></div><div class="ttdef"><b>Definition:</b> potential_calculator.h:45</div></div>
+<div class="ttc" id="aclassglobal__planner_1_1_potential_calculator_html_a4befc4819934603d43c8dc539f445fd4"><div class="ttname"><a href="classglobal__planner_1_1_potential_calculator.html#a4befc4819934603d43c8dc539f445fd4">global_planner::PotentialCalculator::calculatePotential</a></div><div class="ttdeci">virtual float calculatePotential(float *potential, unsigned char cost, int n, float prev_potential=-1)</div><div class="ttdef"><b>Definition:</b> potential_calculator.h:51</div></div>
+<div class="ttc" id="aeig3_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">static int n</div><div class="ttdef"><b>Definition:</b> eig3.c:14</div></div>
+<div class="ttc" id="anamespaceglobal__planner_html"><div class="ttname"><a href="namespaceglobal__planner.html">global_planner</a></div><div class="ttdef"><b>Definition:</b> astar.h:46</div></div>
+<div class="ttc" id="aplanner__core_8h_html"><div class="ttname"><a href="planner__core_8h.html">planner_core.h</a></div></div>
+<div class="ttc" id="aplanner__core_8h_html_a1ba71eeabfe9ba85c91393f562db6a33"><div class="ttname"><a href="planner__core_8h.html#a1ba71eeabfe9ba85c91393f562db6a33">POT_HIGH</a></div><div class="ttdeci">#define POT_HIGH</div><div class="ttdef"><b>Definition:</b> planner_core.h:40</div></div>
+<div class="ttc" id="apotential__calculator_8h_html"><div class="ttname"><a href="potential__calculator_8h.html">potential_calculator.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

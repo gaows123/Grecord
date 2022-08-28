@@ -1,0 +1,126 @@
+\hypertarget{obstacle__tests_8cpp}{}\doxysection{costmap\+\_\+2d/test/obstacle\+\_\+tests.cpp 文件参考}
+\label{obstacle__tests_8cpp}\index{costmap\_2d/test/obstacle\_tests.cpp@{costmap\_2d/test/obstacle\_tests.cpp}}
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/layered\+\_\+costmap.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/observation\+\_\+buffer.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/testing\+\_\+helper.\+h$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+obstacle\+\_\+tests.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{obstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb}{TEST}} (costmap, test\+Raytracing)
+\item 
+\mbox{\hyperlink{obstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34}{TEST}} (costmap, test\+Raytracing2)
+\item 
+\mbox{\hyperlink{obstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a}{TEST}} (costmap, test\+Wave\+Interference)
+\item 
+\mbox{\hyperlink{obstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981}{TEST}} (costmap, test\+ZThreshold)
+\item 
+\mbox{\hyperlink{obstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7}{TEST}} (costmap, test\+Dynamic\+Obstacles)
+\item 
+\mbox{\hyperlink{obstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816}{TEST}} (costmap, test\+Multiple\+Additions)
+\item 
+int \mbox{\hyperlink{obstacle__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{obstacle__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{obstacle__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{obstacle\_tests.cpp@{obstacle\_tests.cpp}!main@{main}}
+\index{main@{main}!obstacle\_tests.cpp@{obstacle\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{obstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7}\label{obstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7}} 
+\index{obstacle\_tests.cpp@{obstacle\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!obstacle\_tests.cpp@{obstacle\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Dynamic\+Obstacles}]{ }\end{DoxyParamCaption})}
+
+Verify that dynamic obstacles are added 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{obstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816}\label{obstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816}} 
+\index{obstacle\_tests.cpp@{obstacle\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!obstacle\_tests.cpp@{obstacle\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Multiple\+Additions}]{ }\end{DoxyParamCaption})}
+
+Verify that if we add a point that is already a static obstacle we do not end up with a new ostacle 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{obstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb}\label{obstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb}} 
+\index{obstacle\_tests.cpp@{obstacle\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!obstacle\_tests.cpp@{obstacle\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Raytracing}]{ }\end{DoxyParamCaption})}
+
+Test for ray tracing free space 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{obstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34}\label{obstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34}} 
+\index{obstacle\_tests.cpp@{obstacle\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!obstacle\_tests.cpp@{obstacle\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Raytracing2}]{ }\end{DoxyParamCaption})}
+
+Test for ray tracing free space 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{obstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a}\label{obstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a}} 
+\index{obstacle\_tests.cpp@{obstacle\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!obstacle\_tests.cpp@{obstacle\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Wave\+Interference}]{ }\end{DoxyParamCaption})}
+
+Test for wave interference 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{obstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981}\label{obstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981}} 
+\index{obstacle\_tests.cpp@{obstacle\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!obstacle\_tests.cpp@{obstacle\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+ZThreshold}]{ }\end{DoxyParamCaption})}
+
+Make sure we ignore points outside of our z threshold 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{obstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981_cgraph}
+\end{center}
+\end{figure}

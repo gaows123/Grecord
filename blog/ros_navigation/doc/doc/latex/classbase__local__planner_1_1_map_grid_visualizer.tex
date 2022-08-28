@@ -1,0 +1,154 @@
+\hypertarget{classbase__local__planner_1_1_map_grid_visualizer}{}\doxysection{base\+\_\+local\+\_\+planner\+::Map\+Grid\+Visualizer类 参考}
+\label{classbase__local__planner_1_1_map_grid_visualizer}\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+
+
+{\ttfamily \#include $<$map\+\_\+grid\+\_\+visualizer.\+h$>$}
+
+
+
+base\+\_\+local\+\_\+planner\+::Map\+Grid\+Visualizer 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classbase__local__planner_1_1_map_grid_visualizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a420b3e168a5a208620f1dffe7845ae4e}{Map\+Grid\+Visualizer}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a4145416ab13ea8b513d7707d65f3e8f3}{initialize}} (const std\+::string \&name, std\+::string frame, boost\+::function$<$ bool(int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)$>$ cost\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{Map\+Grid\+Visualizer}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_abc768f1e16ce0cdf87dec9f25a60ee64}{publish\+Cost\+Cloud}} (const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$costmap\+\_\+p\+\_\+)
+\begin{DoxyCompactList}\small\item\em Build and publish a Point\+Cloud if the publish\+\_\+cost\+\_\+grid\+\_\+pc parameter was true. Only include points for which the cost\+\_\+function at (cx,cy) returns true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a2aad521bd530b881880604871b698407}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The name to get parameters relative to. \end{DoxyCompactList}\item 
+boost\+::function$<$ bool(int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)$>$ \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_ac4b8d39eae362637bad41f242a6a3c29}{cost\+\_\+function\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The function to be used to generate the cost components for the output Point\+Cloud \end{DoxyCompactList}\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a8118b16aef9c4fd8c4745bb95205e2ae}{ns\+\_\+nh\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a9c994379fd31b6219a5515bea76972f8}{frame\+\_\+id\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer_a2e3e32d68502d65965de29432319464c}{pub\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_a420b3e168a5a208620f1dffe7845ae4e}\label{classbase__local__planner_1_1_map_grid_visualizer_a420b3e168a5a208620f1dffe7845ae4e}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!MapGridVisualizer@{MapGridVisualizer}}
+\index{MapGridVisualizer@{MapGridVisualizer}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{MapGridVisualizer()}{MapGridVisualizer()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::\+Map\+Grid\+Visualizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor 
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_a4145416ab13ea8b513d7707d65f3e8f3}\label{classbase__local__planner_1_1_map_grid_visualizer_a4145416ab13ea8b513d7707d65f3e8f3}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!initialize@{initialize}}
+\index{initialize@{initialize}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::initialize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{std\+::string}]{frame,  }\item[{boost\+::function$<$ bool(int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)$>$}]{cost\+\_\+function }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{Map\+Grid\+Visualizer}} 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & The name to be appended to $\sim$/ in order to get the proper namespace for parameters \\
+\hline
+{\em costmap} & The costmap instance to use to get the size of the map to generate a point cloud for \\
+\hline
+{\em cost\+\_\+function} & The function to use to compute the cost values to be inserted into each point in the output Point\+Cloud as well as whether to include a given point or not \\
+\hline
+\end{DoxyParams}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_visualizer_a4145416ab13ea8b513d7707d65f3e8f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_abc768f1e16ce0cdf87dec9f25a60ee64}\label{classbase__local__planner_1_1_map_grid_visualizer_abc768f1e16ce0cdf87dec9f25a60ee64}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!publishCostCloud@{publishCostCloud}}
+\index{publishCostCloud@{publishCostCloud}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{publishCostCloud()}{publishCostCloud()}}
+{\footnotesize\ttfamily void base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::publish\+Cost\+Cloud (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\+\_\+2d\+::\+Costmap2D}} $\ast$}]{costmap\+\_\+p\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Build and publish a Point\+Cloud if the publish\+\_\+cost\+\_\+grid\+\_\+pc parameter was true. Only include points for which the cost\+\_\+function at (cx,cy) returns true. 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classbase__local__planner_1_1_map_grid_visualizer_abc768f1e16ce0cdf87dec9f25a60ee64_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbase__local__planner_1_1_map_grid_visualizer_abc768f1e16ce0cdf87dec9f25a60ee64_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_ac4b8d39eae362637bad41f242a6a3c29}\label{classbase__local__planner_1_1_map_grid_visualizer_ac4b8d39eae362637bad41f242a6a3c29}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!cost\_function\_@{cost\_function\_}}
+\index{cost\_function\_@{cost\_function\_}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{cost\_function\_}{cost\_function\_}}
+{\footnotesize\ttfamily boost\+::function$<$bool (int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)$>$ base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::cost\+\_\+function\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The function to be used to generate the cost components for the output Point\+Cloud 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_a9c994379fd31b6219a5515bea76972f8}\label{classbase__local__planner_1_1_map_grid_visualizer_a9c994379fd31b6219a5515bea76972f8}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!frame\_id\_@{frame\_id\_}}
+\index{frame\_id\_@{frame\_id\_}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{frame\_id\_}{frame\_id\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_a2aad521bd530b881880604871b698407}\label{classbase__local__planner_1_1_map_grid_visualizer_a2aad521bd530b881880604871b698407}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!name\_@{name\_}}
+\index{name\_@{name\_}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name to get parameters relative to. 
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_a8118b16aef9c4fd8c4745bb95205e2ae}\label{classbase__local__planner_1_1_map_grid_visualizer_a8118b16aef9c4fd8c4745bb95205e2ae}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!ns\_nh\_@{ns\_nh\_}}
+\index{ns\_nh\_@{ns\_nh\_}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{ns\_nh\_}{ns\_nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::ns\+\_\+nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_map_grid_visualizer_a2e3e32d68502d65965de29432319464c}\label{classbase__local__planner_1_1_map_grid_visualizer_a2e3e32d68502d65965de29432319464c}} 
+\index{base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}!pub\_@{pub\_}}
+\index{pub\_@{pub\_}!base\_local\_planner::MapGridVisualizer@{base\_local\_planner::MapGridVisualizer}}
+\doxysubsubsection{\texorpdfstring{pub\_}{pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer\+::pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{map__grid__visualizer_8h}{map\+\_\+grid\+\_\+visualizer.\+h}}\item 
+base\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{map__grid__visualizer_8cpp}{map\+\_\+grid\+\_\+visualizer.\+cpp}}\end{DoxyCompactItemize}

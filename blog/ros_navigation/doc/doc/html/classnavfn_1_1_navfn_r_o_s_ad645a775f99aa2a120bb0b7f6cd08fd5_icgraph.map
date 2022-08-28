@@ -1,0 +1,4 @@
+<map id="navfn::NavfnROS::getPlanFromPotential" name="navfn::NavfnROS::getPlanFromPotential">
+<area shape="rect" id="node1" title="当起始点的potential被计算出来后，计算全局路径 (注意: 要先调用 computePotential)" alt="" coords="244,5,420,47"/>
+<area shape="rect" id="node2" href="$classnavfn_1_1_navfn_r_o_s.html#a1925183250dd36115daadd91b14656aa" title="根据目标位姿计算全局路径" alt="" coords="5,13,196,39"/>
+</map>

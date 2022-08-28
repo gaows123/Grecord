@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner::PlannerWithCostmap类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceglobal__planner.html">global_planner</a></li><li class="navelem"><a class="el" href="classglobal__planner_1_1_planner_with_costmap.html">PlannerWithCostmap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classglobal__planner_1_1_planner_with_costmap-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">global_planner::PlannerWithCostmap类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 global_planner::PlannerWithCostmap 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_planner_with_costmap__inherit__graph.png" border="0" usemap="#aglobal__planner_1_1_planner_with_costmap_inherit__map" alt="Inheritance graph"/></div>
+<map name="aglobal__planner_1_1_planner_with_costmap_inherit__map" id="aglobal__planner_1_1_planner_with_costmap_inherit__map">
+<area shape="rect" title=" " alt="" coords="11,155,194,196"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html" title=" " alt="" coords="5,80,200,107"/>
+<area shape="rect" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="5,5,200,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+global_planner::PlannerWithCostmap 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_planner_with_costmap__coll__graph.png" border="0" usemap="#aglobal__planner_1_1_planner_with_costmap_coll__map" alt="Collaboration graph"/></div>
+<map name="aglobal__planner_1_1_planner_with_costmap_coll__map" id="aglobal__planner_1_1_planner_with_costmap_coll__map">
+<area shape="rect" title=" " alt="" coords="1284,319,1467,361"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html" title=" " alt="" coords="627,195,822,221"/>
+<area shape="rect" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口." alt="" coords="267,173,461,200"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="279,296,449,323"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="625,343,824,369"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="613,393,836,420"/>
+<area shape="rect" title=" " alt="" coords="337,455,391,481"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="995,372,1192,399"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html" title=" " alt="" coords="5,49,169,90"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html" title=" " alt="" coords="280,5,448,32"/>
+<area shape="rect" href="classglobal__planner_1_1_traceback.html" title=" " alt="" coords="277,56,451,83"/>
+<area shape="rect" href="classglobal__planner_1_1_orientation_filter.html" title=" " alt="" coords="276,107,452,149"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abf6efea3cec2f9f41ae7104005f777c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_planner_with_costmap.html#abf6efea3cec2f9f41ae7104005f777c7">PlannerWithCostmap</a> (string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a> *cmap)</td></tr>
+<tr class="separator:abf6efea3cec2f9f41ae7104005f777c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735f4750a1e88ab01b22a4d12d8dfc0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_planner_with_costmap.html#a735f4750a1e88ab01b22a4d12d8dfc0d">makePlanService</a> (navfn::MakeNavPlan::Request &amp;req, navfn::MakeNavPlan::Response &amp;resp)</td></tr>
+<tr class="separator:a735f4750a1e88ab01b22a4d12d8dfc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classglobal__planner_1_1_global_planner"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classglobal__planner_1_1_global_planner')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classglobal__planner_1_1_global_planner.html">global_planner::GlobalPlanner</a></td></tr>
+<tr class="memitem:a69b66f59b51665f826a51587afa720ff inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a69b66f59b51665f826a51587afa720ff">GlobalPlanner</a> ()</td></tr>
+<tr class="memdesc:a69b66f59b51665f826a51587afa720ff inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认构造函数  <a href="classglobal__planner_1_1_global_planner.html#a69b66f59b51665f826a51587afa720ff">更多...</a><br /></td></tr>
+<tr class="separator:a69b66f59b51665f826a51587afa720ff inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb34983765b053861cbef08e9614bb5 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#aaeb34983765b053861cbef08e9614bb5">GlobalPlanner</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *costmap, std::string frame_id)</td></tr>
+<tr class="memdesc:aaeb34983765b053861cbef08e9614bb5 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <a href="classglobal__planner_1_1_global_planner.html#aaeb34983765b053861cbef08e9614bb5">更多...</a><br /></td></tr>
+<tr class="separator:aaeb34983765b053861cbef08e9614bb5 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49ab75794afdbec6aa7c6c3902de4c0 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#aa49ab75794afdbec6aa7c6c3902de4c0">~GlobalPlanner</a> ()</td></tr>
+<tr class="memdesc:aa49ab75794afdbec6aa7c6c3902de4c0 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <a href="classglobal__planner_1_1_global_planner.html#aa49ab75794afdbec6aa7c6c3902de4c0">更多...</a><br /></td></tr>
+<tr class="separator:aa49ab75794afdbec6aa7c6c3902de4c0 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a280ebb6723d46b462eb66ec73a2fe266 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a280ebb6723d46b462eb66ec73a2fe266">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a280ebb6723d46b462eb66ec73a2fe266 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_planner_core.html" title="给全局路径规划器提供了封装类">PlannerCore</a> 对象的初始化函数  <a href="classglobal__planner_1_1_global_planner.html#a280ebb6723d46b462eb66ec73a2fe266">更多...</a><br /></td></tr>
+<tr class="separator:a280ebb6723d46b462eb66ec73a2fe266 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ade8f9f487fe2ddd109f0845a6ffb2 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#af3ade8f9f487fe2ddd109f0845a6ffb2">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *costmap, std::string frame_id)</td></tr>
+<tr class="separator:af3ade8f9f487fe2ddd109f0845a6ffb2 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb7f40f6a851f88e6b7668a38571712a inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#abb7f40f6a851f88e6b7668a38571712a">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:abb7f40f6a851f88e6b7668a38571712a inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据目标点规划处全局路径  <a href="classglobal__planner_1_1_global_planner.html#abb7f40f6a851f88e6b7668a38571712a">更多...</a><br /></td></tr>
+<tr class="separator:abb7f40f6a851f88e6b7668a38571712a inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6bfa5acf58670c01a5b8c684a2f20c inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a4f6bfa5acf58670c01a5b8c684a2f20c">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, double tolerance, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:a4f6bfa5acf58670c01a5b8c684a2f20c inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据目标点规划处全局路径  <a href="classglobal__planner_1_1_global_planner.html#a4f6bfa5acf58670c01a5b8c684a2f20c">更多...</a><br /></td></tr>
+<tr class="separator:a4f6bfa5acf58670c01a5b8c684a2f20c inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64e1114c4a78980256bd04bd0e79efa inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#aa64e1114c4a78980256bd04bd0e79efa">computePotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:aa64e1114c4a78980256bd04bd0e79efa inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the full navigation function for the map given a point in the world to start from  <a href="classglobal__planner_1_1_global_planner.html#aa64e1114c4a78980256bd04bd0e79efa">更多...</a><br /></td></tr>
+<tr class="separator:aa64e1114c4a78980256bd04bd0e79efa inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bae9ef237ecc53aa3027abd3dc063b5 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a4bae9ef237ecc53aa3027abd3dc063b5">getPlanFromPotential</a> (double start_x, double start_y, double end_x, double end_y, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)</td></tr>
+<tr class="memdesc:a4bae9ef237ecc53aa3027abd3dc063b5 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a plan to a goal after the potential for a start point has already been computed (Note: You should call computePotential first)  <a href="classglobal__planner_1_1_global_planner.html#a4bae9ef237ecc53aa3027abd3dc063b5">更多...</a><br /></td></tr>
+<tr class="separator:a4bae9ef237ecc53aa3027abd3dc063b5 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0a8eaf0e715f682480ef447a63cd67 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a7f0a8eaf0e715f682480ef447a63cd67">getPointPotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:a7f0a8eaf0e715f682480ef447a63cd67 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the potential, or naviagation cost, at a given point in the world (Note: You should call computePotential first)  <a href="classglobal__planner_1_1_global_planner.html#a7f0a8eaf0e715f682480ef447a63cd67">更多...</a><br /></td></tr>
+<tr class="separator:a7f0a8eaf0e715f682480ef447a63cd67 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c50827ebb21a48825d55bda56dd38ac inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a7c50827ebb21a48825d55bda56dd38ac">validPointPotential</a> (const geometry_msgs::Point &amp;world_point)</td></tr>
+<tr class="memdesc:a7c50827ebb21a48825d55bda56dd38ac inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a valid potential value at a given point in the world (Note: You should call computePotential first)  <a href="classglobal__planner_1_1_global_planner.html#a7c50827ebb21a48825d55bda56dd38ac">更多...</a><br /></td></tr>
+<tr class="separator:a7c50827ebb21a48825d55bda56dd38ac inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27405d9450075e6dcc7fc73bd56fb6dc inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a27405d9450075e6dcc7fc73bd56fb6dc">validPointPotential</a> (const geometry_msgs::Point &amp;world_point, double tolerance)</td></tr>
+<tr class="memdesc:a27405d9450075e6dcc7fc73bd56fb6dc inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a valid potential value at a given point in the world (Note: You should call computePotential first)  <a href="classglobal__planner_1_1_global_planner.html#a27405d9450075e6dcc7fc73bd56fb6dc">更多...</a><br /></td></tr>
+<tr class="separator:a27405d9450075e6dcc7fc73bd56fb6dc inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9844153b2bea9032522a2ed528be963f inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a9844153b2bea9032522a2ed528be963f">publishPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</td></tr>
+<tr class="memdesc:a9844153b2bea9032522a2ed528be963f inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">发布路径信息，用于可视化  <a href="classglobal__planner_1_1_global_planner.html#a9844153b2bea9032522a2ed528be963f">更多...</a><br /></td></tr>
+<tr class="separator:a9844153b2bea9032522a2ed528be963f inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a760dc206a99babddfacded0558d35208 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a760dc206a99babddfacded0558d35208">makePlanService</a> (nav_msgs::GetPlan::Request &amp;req, nav_msgs::GetPlan::Response &amp;resp)</td></tr>
+<tr class="separator:a760dc206a99babddfacded0558d35208 inherit pub_methods_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnav__core_1_1_base_global_planner"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnav__core_1_1_base_global_planner')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a></td></tr>
+<tr class="memitem:ae34a7c7cf96ebdfaf6b33f24a646156c inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</td></tr>
+<tr class="memdesc:ae34a7c7cf96ebdfaf6b33f24a646156c inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知世界坐标系下的目标点，计算全局路径  <a href="classnav__core_1_1_base_global_planner.html#ae34a7c7cf96ebdfaf6b33f24a646156c">更多...</a><br /></td></tr>
+<tr class="separator:ae34a7c7cf96ebdfaf6b33f24a646156c inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">makePlan</a> (const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a035d2eadd3e54f4a028144044585cd71">start</a>, const geometry_msgs::PoseStamped &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan, double &amp;cost)</td></tr>
+<tr class="memdesc:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知世界坐标系下的目标点，计算全局路径  <a href="classnav__core_1_1_base_global_planner.html#afbc2b0f16bdd55a8b619f9fb5b7aa8da">更多...</a><br /></td></tr>
+<tr class="separator:afbc2b0f16bdd55a8b619f9fb5b7aa8da inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485461ff314103dac95744f771107c43 inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">initialize</a> (std::string name, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)=0</td></tr>
+<tr class="memdesc:a485461ff314103dac95744f771107c43 inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnav__core_1_1_base_global_planner.html" title="提供全局路径规划的接口. navigation stack调用的所有全局路径规划器插件都要实现这个接口.">BaseGlobalPlanner</a> 的初始化函数  <a href="classnav__core_1_1_base_global_planner.html#a485461ff314103dac95744f771107c43">更多...</a><br /></td></tr>
+<tr class="separator:a485461ff314103dac95744f771107c43 inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">~BaseGlobalPlanner</a> ()</td></tr>
+<tr class="memdesc:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">虚析构  <a href="classnav__core_1_1_base_global_planner.html#a98120c1d76f7a5badb74adef9694a06d">更多...</a><br /></td></tr>
+<tr class="separator:a98120c1d76f7a5badb74adef9694a06d inherit pub_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ae259e4a6eda8cca0b6fec1018f152b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_planner_with_costmap.html#ae259e4a6eda8cca0b6fec1018f152b55">poseCallback</a> (const rm::PoseStamped::ConstPtr &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>)</td></tr>
+<tr class="separator:ae259e4a6eda8cca0b6fec1018f152b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:adff859c9a38b2345e73d4cd199bd89d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_planner_with_costmap.html#adff859c9a38b2345e73d4cd199bd89d1">cmap_</a></td></tr>
+<tr class="separator:adff859c9a38b2345e73d4cd199bd89d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7e84b20f5e574d74dc9bb8f0540fcb"><td class="memItemLeft" align="right" valign="top">ros::ServiceServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_planner_with_costmap.html#a3c7e84b20f5e574d74dc9bb8f0540fcb">make_plan_service_</a></td></tr>
+<tr class="separator:a3c7e84b20f5e574d74dc9bb8f0540fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c876e6b578c375a6a885357a5e11d8"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_planner_with_costmap.html#a51c876e6b578c375a6a885357a5e11d8">pose_sub_</a></td></tr>
+<tr class="separator:a51c876e6b578c375a6a885357a5e11d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classnav__core_1_1_base_global_planner"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classnav__core_1_1_base_global_planner')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_global_planner.html">nav_core::BaseGlobalPlanner</a></td></tr>
+<tr class="memitem:a9a5877f3f1c7c09dca8ddb735487ef61 inherit pro_methods_classnav__core_1_1_base_global_planner"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_global_planner.html#a9a5877f3f1c7c09dca8ddb735487ef61">BaseGlobalPlanner</a> ()</td></tr>
+<tr class="separator:a9a5877f3f1c7c09dca8ddb735487ef61 inherit pro_methods_classnav__core_1_1_base_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classglobal__planner_1_1_global_planner"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classglobal__planner_1_1_global_planner')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classglobal__planner_1_1_global_planner.html">global_planner::GlobalPlanner</a></td></tr>
+<tr class="memitem:a790fb19fb46e1a1edc15f98b1075e849 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a790fb19fb46e1a1edc15f98b1075e849">costmap_</a></td></tr>
+<tr class="memdesc:a790fb19fb46e1a1edc15f98b1075e849 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">拷贝了一份当前代价地图，会被makePlan调用  <a href="classglobal__planner_1_1_global_planner.html#a790fb19fb46e1a1edc15f98b1075e849">更多...</a><br /></td></tr>
+<tr class="separator:a790fb19fb46e1a1edc15f98b1075e849 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8bf49e32dcae69b02adabe35b99ed0 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#a4a8bf49e32dcae69b02adabe35b99ed0">frame_id_</a></td></tr>
+<tr class="separator:a4a8bf49e32dcae69b02adabe35b99ed0 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90f4043291a203f62ad9259796792dc inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#ae90f4043291a203f62ad9259796792dc">plan_pub_</a></td></tr>
+<tr class="separator:ae90f4043291a203f62ad9259796792dc inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd54fe2b4a6f92fec92e49da3739e016 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#abd54fe2b4a6f92fec92e49da3739e016">initialized_</a></td></tr>
+<tr class="separator:abd54fe2b4a6f92fec92e49da3739e016 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc356fbcaa27c897710becc5f7ad9777 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_global_planner.html#adc356fbcaa27c897710becc5f7ad9777">allow_unknown_</a></td></tr>
+<tr class="separator:adc356fbcaa27c897710becc5f7ad9777 inherit pro_attribs_classglobal__planner_1_1_global_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="abf6efea3cec2f9f41ae7104005f777c7" name="abf6efea3cec2f9f41ae7104005f777c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6efea3cec2f9f41ae7104005f777c7">&#9670;&nbsp;</a></span>PlannerWithCostmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">global_planner::PlannerWithCostmap::PlannerWithCostmap </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>cmap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_planner_with_costmap_abf6efea3cec2f9f41ae7104005f777c7_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_planner_with_costmap_abf6efea3cec2f9f41ae7104005f777c7_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_planner_with_costmap_abf6efea3cec2f9f41ae7104005f777c7_cgraph" id="aclassglobal__planner_1_1_planner_with_costmap_abf6efea3cec2f9f41ae7104005f777c7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,63,209,104"/>
+<area shape="rect" href="classglobal__planner_1_1_planner_with_costmap.html#a735f4750a1e88ab01b22a4d12d8dfc0d" title=" " alt="" coords="257,29,441,71"/>
+<area shape="rect" href="classglobal__planner_1_1_planner_with_costmap.html#ae259e4a6eda8cca0b6fec1018f152b55" title=" " alt="" coords="258,95,441,136"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#abb7f40f6a851f88e6b7668a38571712a" title="根据目标点规划处全局路径" alt="" coords="491,29,685,71"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="489,95,687,136"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a735f4750a1e88ab01b22a4d12d8dfc0d" name="a735f4750a1e88ab01b22a4d12d8dfc0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735f4750a1e88ab01b22a4d12d8dfc0d">&#9670;&nbsp;</a></span>makePlanService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_planner::PlannerWithCostmap::makePlanService </td>
+          <td>(</td>
+          <td class="paramtype">navfn::MakeNavPlan::Request &amp;&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">navfn::MakeNavPlan::Response &amp;&#160;</td>
+          <td class="paramname"><em>resp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_cgraph" id="aclassglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,189,71"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#abb7f40f6a851f88e6b7668a38571712a" title="根据目标点规划处全局路径" alt="" coords="237,29,432,71"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_icgraph" id="aclassglobal__planner_1_1_planner_with_costmap_a735f4750a1e88ab01b22a4d12d8dfc0d_icgraph">
+<area shape="rect" title=" " alt="" coords="257,5,441,47"/>
+<area shape="rect" href="classglobal__planner_1_1_planner_with_costmap.html#abf6efea3cec2f9f41ae7104005f777c7" title=" " alt="" coords="5,5,209,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae259e4a6eda8cca0b6fec1018f152b55" name="ae259e4a6eda8cca0b6fec1018f152b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae259e4a6eda8cca0b6fec1018f152b55">&#9670;&nbsp;</a></span>poseCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_planner::PlannerWithCostmap::poseCallback </td>
+          <td>(</td>
+          <td class="paramtype">const rm::PoseStamped::ConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>goal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_cgraph" id="aclassglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_cgraph">
+<area shape="rect" title=" " alt="" coords="5,51,188,92"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="236,5,433,47"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#abb7f40f6a851f88e6b7668a38571712a" title="根据目标点规划处全局路径" alt="" coords="237,95,432,136"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_icgraph" id="aclassglobal__planner_1_1_planner_with_costmap_ae259e4a6eda8cca0b6fec1018f152b55_icgraph">
+<area shape="rect" title=" " alt="" coords="257,5,440,47"/>
+<area shape="rect" href="classglobal__planner_1_1_planner_with_costmap.html#abf6efea3cec2f9f41ae7104005f777c7" title=" " alt="" coords="5,5,209,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="adff859c9a38b2345e73d4cd199bd89d1" name="adff859c9a38b2345e73d4cd199bd89d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff859c9a38b2345e73d4cd199bd89d1">&#9670;&nbsp;</a></span>cmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">Costmap2DROS</a>* global_planner::PlannerWithCostmap::cmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c7e84b20f5e574d74dc9bb8f0540fcb" name="a3c7e84b20f5e574d74dc9bb8f0540fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7e84b20f5e574d74dc9bb8f0540fcb">&#9670;&nbsp;</a></span>make_plan_service_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::ServiceServer global_planner::PlannerWithCostmap::make_plan_service_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51c876e6b578c375a6a885357a5e11d8" name="a51c876e6b578c375a6a885357a5e11d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c876e6b578c375a6a885357a5e11d8">&#9670;&nbsp;</a></span>pose_sub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Subscriber global_planner::PlannerWithCostmap::pose_sub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>global_planner/src/<a class="el" href="plan__node_8cpp.html">plan_node.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

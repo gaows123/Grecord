@@ -1,0 +1,91 @@
+\hypertarget{pf__pdf_8h_source}{}\doxysection{pf\+\_\+pdf.\+h}
+\label{pf__pdf_8h_source}\index{amcl/include/amcl/pf/pf\_pdf.h@{amcl/include/amcl/pf/pf\_pdf.h}}
+\mbox{\hyperlink{pf__pdf_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  Player -\/ One Hell of a Robot Server}}
+\DoxyCodeLine{3 \textcolor{comment}{ *  Copyright (C) 2000  Brian Gerkey   \&  Kasper Stoy}}
+\DoxyCodeLine{4 \textcolor{comment}{ *                      gerkey@usc.edu    kaspers@robotics.usc.edu}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  This library is free software; you can redistribute it and/or}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  modify it under the terms of the GNU Lesser General Public}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  License as published by the Free Software Foundation; either}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  version 2.1 of the License, or (at your option) any later version.}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  This library is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{13 \textcolor{comment}{ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU}}
+\DoxyCodeLine{14 \textcolor{comment}{ *  Lesser General Public License for more details.}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ *  You should have received a copy of the GNU Lesser General Public}}
+\DoxyCodeLine{17 \textcolor{comment}{ *  License along with this library; if not, write to the Free Software}}
+\DoxyCodeLine{18 \textcolor{comment}{ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-\/1307  USA}}
+\DoxyCodeLine{19 \textcolor{comment}{ *}}
+\DoxyCodeLine{20 \textcolor{comment}{ */}}
+\DoxyCodeLine{21 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{22 \textcolor{comment}{ * Desc: Useful pdf functions}}
+\DoxyCodeLine{23 \textcolor{comment}{ * Author: Andrew Howard}}
+\DoxyCodeLine{24 \textcolor{comment}{ * Date: 10 Dec 2002}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CVS: \$Id: pf\_pdf.h 6345 2008-\/04-\/17 01:36:39Z gerkey \$}}
+\DoxyCodeLine{26 \textcolor{comment}{ *************************************************************************/}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#ifndef PF\_PDF\_H}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define PF\_PDF\_H}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pf__vector_8h}{pf\_vector.h}}"{}}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{//\#include <gsl/gsl\_rng.h>}}
+\DoxyCodeLine{34 \textcolor{comment}{//\#include <gsl/gsl\_randist.h>}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{37 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{41 \textcolor{comment}{ * Gaussian}}
+\DoxyCodeLine{42 \textcolor{comment}{ *************************************************************************/}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{comment}{// Gaussian PDF info}}
+\DoxyCodeLine{45 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47   \textcolor{comment}{// Mean, covariance and inverse covariance}}
+\DoxyCodeLine{48   \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{structpf__pdf__gaussian__t_ad83562454967d8470cc0915679cff402}{x}};}
+\DoxyCodeLine{49   \mbox{\hyperlink{structpf__matrix__t}{pf\_matrix\_t}} \mbox{\hyperlink{structpf__pdf__gaussian__t_a8e0bcb303f3de1f5cb9508993c45807e}{cx}};}
+\DoxyCodeLine{50   \textcolor{comment}{//pf\_matrix\_t cxi;}}
+\DoxyCodeLine{51   \textcolor{keywordtype}{double} \mbox{\hyperlink{structpf__pdf__gaussian__t_ac98af0406c5245f1fb9e69df2aa1541f}{cxdet}};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53   \textcolor{comment}{// Decomposed covariance matrix (rotation * diagonal)}}
+\DoxyCodeLine{54   \mbox{\hyperlink{structpf__matrix__t}{pf\_matrix\_t}} \mbox{\hyperlink{structpf__pdf__gaussian__t_a1492c02a6d6c55525b7c6ee59f1793df}{cr}};}
+\DoxyCodeLine{55   \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{structpf__pdf__gaussian__t_a175e05c59c811f79a414f37c607e4ed9}{cd}};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{comment}{// A random number generator}}
+\DoxyCodeLine{58   \textcolor{comment}{//gsl\_rng *rng;}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \} \mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\_pdf\_gaussian\_t}};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{comment}{// Create a gaussian pdf}}
+\DoxyCodeLine{64 \mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\_pdf\_gaussian\_t}} *\mbox{\hyperlink{pf__pdf_8h_a12898e7b473af8d3441c66baf203c7e1}{pf\_pdf\_gaussian\_alloc}}(\mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} x, \mbox{\hyperlink{structpf__matrix__t}{pf\_matrix\_t}} cx);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{comment}{// Destroy the pdf}}
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf__pdf_8h_a6a02cc46438e272cbb9d5f80ef4581e9}{pf\_pdf\_gaussian\_free}}(\mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\_pdf\_gaussian\_t}} *pdf);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{// Compute the value of the pdf at some point [z].}}
+\DoxyCodeLine{70 \textcolor{comment}{//double pf\_pdf\_gaussian\_value(pf\_pdf\_gaussian\_t *pdf, pf\_vector\_t z);}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{// Draw randomly from a zero-\/mean Gaussian distribution, with standard}}
+\DoxyCodeLine{73 \textcolor{comment}{// deviation sigma.}}
+\DoxyCodeLine{74 \textcolor{comment}{// We use the polar form of the Box-\/Muller transformation, explained here:}}
+\DoxyCodeLine{75 \textcolor{comment}{//   http://www.taygeta.com/random/gaussian.html}}
+\DoxyCodeLine{76 \textcolor{keywordtype}{double} \mbox{\hyperlink{pf__pdf_8h_abdfc0a4cb6ab83434b698504774ef885}{pf\_ran\_gaussian}}(\textcolor{keywordtype}{double} sigma);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{comment}{// Generate a sample from the pdf.}}
+\DoxyCodeLine{79 \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{pf__pdf_8h_ae5c36efbbf482e91fe7ec9fa31747770}{pf\_pdf\_gaussian\_sample}}(\mbox{\hyperlink{structpf__pdf__gaussian__t}{pf\_pdf\_gaussian\_t}} *pdf);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{82 \}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

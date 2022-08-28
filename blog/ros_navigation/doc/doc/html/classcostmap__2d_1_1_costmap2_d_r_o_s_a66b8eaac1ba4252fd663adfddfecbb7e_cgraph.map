@@ -1,0 +1,5 @@
+<map id="costmap_2d::Costmap2DROS::getOrientedFootprint" name="costmap_2d::Costmap2DROS::getOrientedFootprint">
+<area shape="rect" id="node1" title="Build the oriented footprint of the robot at the robot&#39;s current pose" alt="" coords="5,35,203,76"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="255,5,453,47"/>
+<area shape="rect" id="node3" href="$namespacecostmap__2d.html#a0928255ee5f8797cece2ab99f3eb310b" title="Given a pose and base footprint, build the oriented footprint of the robot (list of Points)" alt="" coords="251,71,457,98"/>
+</map>

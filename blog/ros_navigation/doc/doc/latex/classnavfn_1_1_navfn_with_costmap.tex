@@ -1,0 +1,134 @@
+\hypertarget{classnavfn_1_1_navfn_with_costmap}{}\doxysection{navfn\+::Navfn\+With\+Costmap类 参考}
+\label{classnavfn_1_1_navfn_with_costmap}\index{navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}}
+
+
+类 navfn\+::Navfn\+With\+Costmap 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classnavfn_1_1_navfn_with_costmap__inherit__graph}
+\end{center}
+\end{figure}
+
+
+navfn\+::Navfn\+With\+Costmap 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_with_costmap__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33}{Navfn\+With\+Costmap}} (string name, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}} $\ast$cmap)
+\item 
+bool \mbox{\hyperlink{classnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f}{make\+Plan\+Service}} (Make\+Nav\+Plan\+::\+Request \&req, Make\+Nav\+Plan\+::\+Response \&resp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e}{pose\+Callback}} (const rm\+::\+Pose\+Stamped\+::\+Const\+Ptr \&\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}} $\ast$ \mbox{\hyperlink{classnavfn_1_1_navfn_with_costmap_a0f6aca724624e0e196d38de936576da7}{cmap\+\_\+}}
+\item 
+ros\+::\+Service\+Server \mbox{\hyperlink{classnavfn_1_1_navfn_with_costmap_a36af68fd4b9091e74b8dd0ec8896e70d}{make\+\_\+plan\+\_\+service\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{classnavfn_1_1_navfn_with_costmap_a4a08245b9d0d55a6e6e29c0b6f4c29f8}{pose\+\_\+sub\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{额外继承的成员函数}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33}\label{classnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33}} 
+\index{navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}!NavfnWithCostmap@{NavfnWithCostmap}}
+\index{NavfnWithCostmap@{NavfnWithCostmap}!navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}}
+\doxysubsubsection{\texorpdfstring{NavfnWithCostmap()}{NavfnWithCostmap()}}
+{\footnotesize\ttfamily navfn\+::\+Navfn\+With\+Costmap\+::\+Navfn\+With\+Costmap (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}} $\ast$}]{cmap }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_with_costmap_aba48f2e70ebe9c84bd9b3de9ce1c3e33_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f}\label{classnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f}} 
+\index{navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}!makePlanService@{makePlanService}}
+\index{makePlanService@{makePlanService}!navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}}
+\doxysubsubsection{\texorpdfstring{makePlanService()}{makePlanService()}}
+{\footnotesize\ttfamily bool navfn\+::\+Navfn\+With\+Costmap\+::make\+Plan\+Service (\begin{DoxyParamCaption}\item[{Make\+Nav\+Plan\+::\+Request \&}]{req,  }\item[{Make\+Nav\+Plan\+::\+Response \&}]{resp }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_with_costmap_aa8e245ce4b1e4d9a6d4616107f993d6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e}\label{classnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e}} 
+\index{navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}!poseCallback@{poseCallback}}
+\index{poseCallback@{poseCallback}!navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}}
+\doxysubsubsection{\texorpdfstring{poseCallback()}{poseCallback()}}
+{\footnotesize\ttfamily void navfn\+::\+Navfn\+With\+Costmap\+::pose\+Callback (\begin{DoxyParamCaption}\item[{const rm\+::\+Pose\+Stamped\+::\+Const\+Ptr \&}]{goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnavfn_1_1_navfn_with_costmap_a793a74f16803f58b9293d13e87a3537e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classnavfn_1_1_navfn_with_costmap_a0f6aca724624e0e196d38de936576da7}\label{classnavfn_1_1_navfn_with_costmap_a0f6aca724624e0e196d38de936576da7}} 
+\index{navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}!cmap\_@{cmap\_}}
+\index{cmap\_@{cmap\_}!navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}}
+\doxysubsubsection{\texorpdfstring{cmap\_}{cmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{Costmap2\+DROS}}$\ast$ navfn\+::\+Navfn\+With\+Costmap\+::cmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_with_costmap_a36af68fd4b9091e74b8dd0ec8896e70d}\label{classnavfn_1_1_navfn_with_costmap_a36af68fd4b9091e74b8dd0ec8896e70d}} 
+\index{navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}!make\_plan\_service\_@{make\_plan\_service\_}}
+\index{make\_plan\_service\_@{make\_plan\_service\_}!navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}}
+\doxysubsubsection{\texorpdfstring{make\_plan\_service\_}{make\_plan\_service\_}}
+{\footnotesize\ttfamily ros\+::\+Service\+Server navfn\+::\+Navfn\+With\+Costmap\+::make\+\_\+plan\+\_\+service\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnavfn_1_1_navfn_with_costmap_a4a08245b9d0d55a6e6e29c0b6f4c29f8}\label{classnavfn_1_1_navfn_with_costmap_a4a08245b9d0d55a6e6e29c0b6f4c29f8}} 
+\index{navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}!pose\_sub\_@{pose\_sub\_}}
+\index{pose\_sub\_@{pose\_sub\_}!navfn::NavfnWithCostmap@{navfn::NavfnWithCostmap}}
+\doxysubsubsection{\texorpdfstring{pose\_sub\_}{pose\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber navfn\+::\+Navfn\+With\+Costmap\+::pose\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+navfn/src/\mbox{\hyperlink{navfn__node_8cpp}{navfn\+\_\+node.\+cpp}}\end{DoxyCompactItemize}

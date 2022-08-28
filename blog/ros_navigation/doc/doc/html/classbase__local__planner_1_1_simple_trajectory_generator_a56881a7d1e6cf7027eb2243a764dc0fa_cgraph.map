@@ -1,0 +1,7 @@
+<map id="base_local_planner::SimpleTrajectoryGenerator::initialise" name="base_local_planner::SimpleTrajectoryGenerator::initialise">
+<area shape="rect" id="node1" title="这里重载了initialise，跟上一个initialise相比，少了输入参数additional_samples" alt="" coords="5,125,191,181"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_local_planner_limits.html#a0402363ae18d44002834003a1b17f14b" title="Get the acceleration limits of the robot" alt="" coords="246,5,386,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_velocity_iterator.html#aa89af2f5352eda024084506787e45a01" title=" " alt="" coords="249,85,383,141"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_velocity_iterator.html#a26feadcdf741e954dd8551028a4ed204" title=" " alt="" coords="249,165,383,221"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_velocity_iterator.html#a305df916173f8e725ae5cd81e75d2306" title=" " alt="" coords="239,246,393,287"/>
+</map>

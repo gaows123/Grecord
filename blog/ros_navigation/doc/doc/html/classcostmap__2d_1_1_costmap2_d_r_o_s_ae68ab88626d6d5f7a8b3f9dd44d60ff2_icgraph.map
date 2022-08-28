@@ -1,0 +1,5 @@
+<map id="costmap_2d::Costmap2DROS::readFootprintFromConfig" name="costmap_2d::Costmap2DROS::readFootprintFromConfig">
+<area shape="rect" id="node1" title="Set the footprint from the new_config object." alt="" coords="496,5,693,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,5,448,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,5,203,47"/>
+</map>

@@ -1,0 +1,155 @@
+\hypertarget{pf__vector_8c}{}\doxysection{amcl/src/amcl/pf/pf\+\_\+vector.c 文件参考}
+\label{pf__vector_8c}\index{amcl/src/amcl/pf/pf\_vector.c@{amcl/src/amcl/pf/pf\_vector.c}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}amcl/pf/pf\+\_\+vector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amcl/pf/eig3.\+h\char`\"{}}\newline
+pf\+\_\+vector.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{pf__vector_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{pf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff}{pf\+\_\+vector\+\_\+zero}} ()
+\item 
+int \mbox{\hyperlink{pf__vector_8c_ad9d8ddf05b11454accf79e19ff59e81e}{pf\+\_\+vector\+\_\+finite}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} a)
+\item 
+void \mbox{\hyperlink{pf__vector_8c_a9c41679324d1baa74c013fc1f0f03db4}{pf\+\_\+vector\+\_\+fprintf}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} a, FILE $\ast$file, const char $\ast$fmt)
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{pf__vector_8c_a2051f656596498eac7fdfb91ba63c4cc}{pf\+\_\+vector\+\_\+add}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} a, \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} b)
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{pf__vector_8c_a247856e0c7581f87362cb7b044e812ef}{pf\+\_\+vector\+\_\+sub}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} a, \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} b)
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{pf__vector_8c_afe6b50abf661ef62686a25eccfb406e1}{pf\+\_\+vector\+\_\+coord\+\_\+add}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} a, \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} b)
+\item 
+\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} \mbox{\hyperlink{pf__vector_8c_a2aab3aeff86a6459df4aaf510b58977a}{pf\+\_\+vector\+\_\+coord\+\_\+sub}} (\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} a, \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} b)
+\item 
+\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} \mbox{\hyperlink{pf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a}{pf\+\_\+matrix\+\_\+zero}} ()
+\item 
+int \mbox{\hyperlink{pf__vector_8c_aed54fc5a3049ab08b50346e48bbf133f}{pf\+\_\+matrix\+\_\+finite}} (\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} a)
+\item 
+void \mbox{\hyperlink{pf__vector_8c_aa22be9ace91468ebf9c8d9070304a79a}{pf\+\_\+matrix\+\_\+fprintf}} (\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} a, FILE $\ast$file, const char $\ast$fmt)
+\item 
+void \mbox{\hyperlink{pf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab}{pf\+\_\+matrix\+\_\+unitary}} (\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} $\ast$r, \mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} $\ast$d, \mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{pf__vector_8c_aed54fc5a3049ab08b50346e48bbf133f}\label{pf__vector_8c_aed54fc5a3049ab08b50346e48bbf133f}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_matrix\_finite@{pf\_matrix\_finite}}
+\index{pf\_matrix\_finite@{pf\_matrix\_finite}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_matrix\_finite()}{pf\_matrix\_finite()}}
+{\footnotesize\ttfamily int pf\+\_\+matrix\+\_\+finite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}}}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf__vector_8c_aa22be9ace91468ebf9c8d9070304a79a}\label{pf__vector_8c_aa22be9ace91468ebf9c8d9070304a79a}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_matrix\_fprintf@{pf\_matrix\_fprintf}}
+\index{pf\_matrix\_fprintf@{pf\_matrix\_fprintf}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_matrix\_fprintf()}{pf\_matrix\_fprintf()}}
+{\footnotesize\ttfamily void pf\+\_\+matrix\+\_\+fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}}}]{a,  }\item[{FILE $\ast$}]{file,  }\item[{const char $\ast$}]{fmt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab}\label{pf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_matrix\_unitary@{pf\_matrix\_unitary}}
+\index{pf\_matrix\_unitary@{pf\_matrix\_unitary}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_matrix\_unitary()}{pf\_matrix\_unitary()}}
+{\footnotesize\ttfamily void pf\+\_\+matrix\+\_\+unitary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} $\ast$}]{r,  }\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} $\ast$}]{d,  }\item[{\mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}}}]{a }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{pf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__vector_8c_ad944a39674d5646c0b5c9924ae70dbab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a}\label{pf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_matrix\_zero@{pf\_matrix\_zero}}
+\index{pf\_matrix\_zero@{pf\_matrix\_zero}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_matrix\_zero()}{pf\_matrix\_zero()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__matrix__t}{pf\+\_\+matrix\+\_\+t}} pf\+\_\+matrix\+\_\+zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__vector_8c_a01593a3f7444c9a71fd6d4576725d47a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf__vector_8c_a2051f656596498eac7fdfb91ba63c4cc}\label{pf__vector_8c_a2051f656596498eac7fdfb91ba63c4cc}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_vector\_add@{pf\_vector\_add}}
+\index{pf\_vector\_add@{pf\_vector\_add}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_vector\_add()}{pf\_vector\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} pf\+\_\+vector\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{a,  }\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf__vector_8c_afe6b50abf661ef62686a25eccfb406e1}\label{pf__vector_8c_afe6b50abf661ef62686a25eccfb406e1}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_vector\_coord\_add@{pf\_vector\_coord\_add}}
+\index{pf\_vector\_coord\_add@{pf\_vector\_coord\_add}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_vector\_coord\_add()}{pf\_vector\_coord\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} pf\+\_\+vector\+\_\+coord\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{a,  }\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{b }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__vector_8c_afe6b50abf661ef62686a25eccfb406e1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf__vector_8c_a2aab3aeff86a6459df4aaf510b58977a}\label{pf__vector_8c_a2aab3aeff86a6459df4aaf510b58977a}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_vector\_coord\_sub@{pf\_vector\_coord\_sub}}
+\index{pf\_vector\_coord\_sub@{pf\_vector\_coord\_sub}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_vector\_coord\_sub()}{pf\_vector\_coord\_sub()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} pf\+\_\+vector\+\_\+coord\+\_\+sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{a,  }\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf__vector_8c_ad9d8ddf05b11454accf79e19ff59e81e}\label{pf__vector_8c_ad9d8ddf05b11454accf79e19ff59e81e}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_vector\_finite@{pf\_vector\_finite}}
+\index{pf\_vector\_finite@{pf\_vector\_finite}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_vector\_finite()}{pf\_vector\_finite()}}
+{\footnotesize\ttfamily int pf\+\_\+vector\+\_\+finite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf__vector_8c_a9c41679324d1baa74c013fc1f0f03db4}\label{pf__vector_8c_a9c41679324d1baa74c013fc1f0f03db4}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_vector\_fprintf@{pf\_vector\_fprintf}}
+\index{pf\_vector\_fprintf@{pf\_vector\_fprintf}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_vector\_fprintf()}{pf\_vector\_fprintf()}}
+{\footnotesize\ttfamily void pf\+\_\+vector\+\_\+fprintf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{a,  }\item[{FILE $\ast$}]{file,  }\item[{const char $\ast$}]{fmt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pf__vector_8c_a247856e0c7581f87362cb7b044e812ef}\label{pf__vector_8c_a247856e0c7581f87362cb7b044e812ef}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_vector\_sub@{pf\_vector\_sub}}
+\index{pf\_vector\_sub@{pf\_vector\_sub}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_vector\_sub()}{pf\_vector\_sub()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} pf\+\_\+vector\+\_\+sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{a,  }\item[{\mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}}}]{b }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__vector_8c_a247856e0c7581f87362cb7b044e812ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff}\label{pf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff}} 
+\index{pf\_vector.c@{pf\_vector.c}!pf\_vector\_zero@{pf\_vector\_zero}}
+\index{pf\_vector\_zero@{pf\_vector\_zero}!pf\_vector.c@{pf\_vector.c}}
+\doxysubsubsection{\texorpdfstring{pf\_vector\_zero()}{pf\_vector\_zero()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpf__vector__t}{pf\+\_\+vector\+\_\+t}} pf\+\_\+vector\+\_\+zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pf__vector_8c_ad2d4a1744eaacdc7b4525a019a3bbcff_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,88 @@
+\hypertarget{footprint_8h_source}{}\doxysection{footprint.\+h}
+\label{footprint_8h_source}\index{costmap\_2d/include/costmap\_2d/footprint.h@{costmap\_2d/include/costmap\_2d/footprint.h}}
+\mbox{\hyperlink{footprint_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_FOOTPRINT\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_FOOTPRINT\_H}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <geometry\_msgs/Polygon.h>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <geometry\_msgs/PolygonStamped.h>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <geometry\_msgs/Point32.h>}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{57 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacecostmap__2d_a6eeafbd231ad1ec2de69e61754773742}{calculateMinAndMaxDistances}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint,}
+\DoxyCodeLine{58                                  \textcolor{keywordtype}{double}\& min\_dist, \textcolor{keywordtype}{double}\& max\_dist);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63 geometry\_msgs::Point              \mbox{\hyperlink{namespacecostmap__2d_a9ffe4eb45b6230a18f56723b49cb0047}{toPoint}}(geometry\_msgs::Point32 pt);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68 geometry\_msgs::Point32            \mbox{\hyperlink{namespacecostmap__2d_a50f77e1c7e28435a7707e1991b9a82a1}{toPoint32}}(geometry\_msgs::Point   pt);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73 geometry\_msgs::Polygon            \mbox{\hyperlink{namespacecostmap__2d_a137137a824a6a667fbf9a850c762c6ec}{toPolygon}}(std::vector<geometry\_msgs::Point> pts);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78 std::vector<geometry\_msgs::Point> \mbox{\hyperlink{namespacecostmap__2d_a5969ae5fc593cedb677488002354feba}{toPointVector}}(geometry\_msgs::Polygon polygon);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{88 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacecostmap__2d_a0928255ee5f8797cece2ab99f3eb310b}{transformFootprint}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} theta, \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint\_spec,}
+\DoxyCodeLine{89                         std::vector<geometry\_msgs::Point>\& oriented\_footprint);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{99 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacecostmap__2d_a0928255ee5f8797cece2ab99f3eb310b}{transformFootprint}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} theta, \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint\_spec,}
+\DoxyCodeLine{100                         geometry\_msgs::PolygonStamped \& oriented\_footprint);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{105 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacecostmap__2d_a16dd6a7064ce2ed191b40c7009512489}{padFootprint}}(std::vector<geometry\_msgs::Point>\& footprint, \textcolor{keywordtype}{double} padding);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{110 std::vector<geometry\_msgs::Point> \mbox{\hyperlink{namespacecostmap__2d_ac13ae420906acd9f42c9cc2a73e9de41}{makeFootprintFromRadius}}(\textcolor{keywordtype}{double} radius);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{118 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacecostmap__2d_a0c5b34c84596c37289f90800701d5aa2}{makeFootprintFromString}}(\textcolor{keyword}{const} std::string\& footprint\_string, std::vector<geometry\_msgs::Point>\& footprint);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{124 std::vector<geometry\_msgs::Point> \mbox{\hyperlink{namespacecostmap__2d_a983825dbb0ea5cf30ea3fa2763375e98}{makeFootprintFromParams}}(ros::NodeHandle\& nh);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{137 std::vector<geometry\_msgs::Point> \mbox{\hyperlink{namespacecostmap__2d_a80f6a207189166bd1c1375c46fa23abb}{makeFootprintFromXMLRPC}}(XmlRpc::XmlRpcValue\& footprint\_xmlrpc,}
+\DoxyCodeLine{138                                 \textcolor{keyword}{const} std::string\& full\_param\_name);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{143 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacecostmap__2d_ae02b98da234ff50b2ef1e3fa6d53f33b}{writeFootprintToParam}}(ros::NodeHandle\& nh, \textcolor{keyword}{const} std::vector<geometry\_msgs::Point>\& footprint);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \}  \textcolor{comment}{// end namespace costmap\_2d}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_FOOTPRINT\_H}}
+
+\end{DoxyCode}

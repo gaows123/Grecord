@@ -1,0 +1,219 @@
+\hypertarget{pf_8h_source}{}\doxysection{pf.\+h}
+\label{pf_8h_source}\index{amcl/include/amcl/pf/pf.h@{amcl/include/amcl/pf/pf.h}}
+\mbox{\hyperlink{pf_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ *  Player -\/ One Hell of a Robot Server}}
+\DoxyCodeLine{3 \textcolor{comment}{ *  Copyright (C) 2000  Brian Gerkey   \&  Kasper Stoy}}
+\DoxyCodeLine{4 \textcolor{comment}{ *                      gerkey@usc.edu    kaspers@robotics.usc.edu}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  This library is free software; you can redistribute it and/or}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  modify it under the terms of the GNU Lesser General Public}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  License as published by the Free Software Foundation; either}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  version 2.1 of the License, or (at your option) any later version.}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *  This library is distributed in the hope that it will be useful,}}
+\DoxyCodeLine{12 \textcolor{comment}{ *  but WITHOUT ANY WARRANTY; without even the implied warranty of}}
+\DoxyCodeLine{13 \textcolor{comment}{ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU}}
+\DoxyCodeLine{14 \textcolor{comment}{ *  Lesser General Public License for more details.}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ *  You should have received a copy of the GNU Lesser General Public}}
+\DoxyCodeLine{17 \textcolor{comment}{ *  License along with this library; if not, write to the Free Software}}
+\DoxyCodeLine{18 \textcolor{comment}{ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-\/1307  USA}}
+\DoxyCodeLine{19 \textcolor{comment}{ *}}
+\DoxyCodeLine{20 \textcolor{comment}{ */}}
+\DoxyCodeLine{21 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{22 \textcolor{comment}{ * Desc: Simple particle filter for localization.}}
+\DoxyCodeLine{23 \textcolor{comment}{ * Author: Andrew Howard}}
+\DoxyCodeLine{24 \textcolor{comment}{ * Date: 10 Dec 2002}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CVS: \$Id: pf.h 3293 2005-\/11-\/19 08:37:45Z gerkey \$}}
+\DoxyCodeLine{26 \textcolor{comment}{ *************************************************************************/}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#ifndef PF\_H}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define PF\_H}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pf__vector_8h}{pf\_vector.h}}"{}}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{pf__kdtree_8h}{pf\_kdtree.h}}"{}}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{35 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{// Forward declarations}}
+\DoxyCodeLine{39 \textcolor{keyword}{struct }\mbox{\hyperlink{struct__pf__t}{\_pf\_t}};}
+\DoxyCodeLine{40 \textcolor{keyword}{struct }\_rtk\_fig\_t;}
+\DoxyCodeLine{41 \textcolor{keyword}{struct }\mbox{\hyperlink{struct__pf__sample__set__t}{\_pf\_sample\_set\_t}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{// Function prototype for the initialization model; generates a sample pose from}}
+\DoxyCodeLine{44 \textcolor{comment}{// an appropriate distribution.}}
+\DoxyCodeLine{45 \textcolor{comment}{// pf\_init\_model\_fn\_t是函数指针，(void *init\_data)是函数的形参}}
+\DoxyCodeLine{46 \textcolor{comment}{// void *表示无类型指针，可以指向任意类型的变量; pf\_vector\_t返回类型。}}
+\DoxyCodeLine{47 \textcolor{keyword}{typedef} \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} (*\mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\_init\_model\_fn\_t}}) (\textcolor{keywordtype}{void} *init\_data);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{comment}{// Function prototype for the action model; generates a sample pose from}}
+\DoxyCodeLine{50 \textcolor{comment}{// an appropriate distribution}}
+\DoxyCodeLine{51 \textcolor{comment}{// pf\_action\_model\_fn\_t同样是函数指针，指向带两个参数的函数，无返回类型}}
+\DoxyCodeLine{52 \textcolor{keyword}{typedef} void (*\mbox{\hyperlink{pf_8h_a8e8299c4c339c8eacc4a5a6f536313d9}{pf\_action\_model\_fn\_t}}) (\textcolor{keywordtype}{void} *action\_data,}
+\DoxyCodeLine{53                                       \textcolor{keyword}{struct }\mbox{\hyperlink{struct__pf__sample__set__t}{\_pf\_sample\_set\_t}}* set);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{// Function prototype for the sensor model; determines the probability}}
+\DoxyCodeLine{56 \textcolor{comment}{// for the given set of sample poses.}}
+\DoxyCodeLine{57 \textcolor{keyword}{typedef} double (*\mbox{\hyperlink{pf_8h_abac0d80ca317cca97247df42fda3476d}{pf\_sensor\_model\_fn\_t}}) (\textcolor{keywordtype}{void} *sensor\_data,}
+\DoxyCodeLine{58                                         \textcolor{keyword}{struct }\mbox{\hyperlink{struct__pf__sample__set__t}{\_pf\_sample\_set\_t}}* set);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{// 单个粒子代表位姿和相关的权重}}
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   \textcolor{comment}{// Pose represented by this sample}}
+\DoxyCodeLine{65   \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{structpf__sample__t_ac3ef3426ea73debfc921d832e4073d44}{pose}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67   \textcolor{comment}{// Weight for this pose}}
+\DoxyCodeLine{68   \textcolor{keywordtype}{double} \mbox{\hyperlink{structpf__sample__t_af816652fe9bbeebfe723909d41004f29}{weight}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \} \mbox{\hyperlink{structpf__sample__t}{pf\_sample\_t}};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{comment}{// 一个位姿的粒子群}}
+\DoxyCodeLine{74 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76   \textcolor{comment}{// Number of samples}}
+\DoxyCodeLine{77   \textcolor{keywordtype}{int} \mbox{\hyperlink{structpf__cluster__t_a65ad802d21b6998bbf776d7d210845c0}{count}};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79   \textcolor{comment}{// Total weight of samples in this cluster}}
+\DoxyCodeLine{80   \textcolor{keywordtype}{double} \mbox{\hyperlink{structpf__cluster__t_aa635a7fa9ac89114cb5fc91ea1882ed3}{weight}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82   \textcolor{comment}{// Cluster statistics}}
+\DoxyCodeLine{83   \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{structpf__cluster__t_ab9d9b7bc29209d213b8ccef5a7c5d63c}{mean}};}
+\DoxyCodeLine{84   \mbox{\hyperlink{structpf__matrix__t}{pf\_matrix\_t}} \mbox{\hyperlink{structpf__cluster__t_aa86523382c704fe9a0691416c7bf78af}{cov}};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86   \textcolor{comment}{// Workspace}}
+\DoxyCodeLine{87   \textcolor{keywordtype}{double} m[4], c[2][2];}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \} \mbox{\hyperlink{structpf__cluster__t}{pf\_cluster\_t}};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{comment}{//  粒子集合，多个位姿粒子群}}
+\DoxyCodeLine{93 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct__pf__sample__set__t}{\_pf\_sample\_set\_t}}}
+\DoxyCodeLine{94 \{}
+\DoxyCodeLine{95   \textcolor{comment}{// The samples}}
+\DoxyCodeLine{96   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct__pf__sample__set__t_a3675a8bce5f799f6c394c95a5ca68af5}{sample\_count}};}
+\DoxyCodeLine{97   \mbox{\hyperlink{structpf__sample__t}{pf\_sample\_t}} *\mbox{\hyperlink{struct__pf__sample__set__t_ad70713ed63fc4d5619197f06017f246a}{samples}};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \textcolor{comment}{// A kdtree encoding the histogram}}
+\DoxyCodeLine{100   \mbox{\hyperlink{structpf__kdtree__t}{pf\_kdtree\_t}} *\mbox{\hyperlink{struct__pf__sample__set__t_a4a220e98a56568d37d0be50ee5ad30c9}{kdtree}};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102   \textcolor{comment}{// Clusters}}
+\DoxyCodeLine{103   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct__pf__sample__set__t_a0a6cc28513a0f672bb76655d651dd54a}{cluster\_count}}, \mbox{\hyperlink{struct__pf__sample__set__t_a2694043163f3283670e2b0b20062a7b5}{cluster\_max\_count}};}
+\DoxyCodeLine{104   \mbox{\hyperlink{structpf__cluster__t}{pf\_cluster\_t}} *\mbox{\hyperlink{struct__pf__sample__set__t_ab4f4541da504ceab98942599c3157c78}{clusters}};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106   \textcolor{comment}{// Filter statistics}}
+\DoxyCodeLine{107   \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} \mbox{\hyperlink{struct__pf__sample__set__t_a610c806c7e94496351372ac870fcd45e}{mean}};}
+\DoxyCodeLine{108   \mbox{\hyperlink{structpf__matrix__t}{pf\_matrix\_t}} \mbox{\hyperlink{struct__pf__sample__set__t_ac900d759311cfad78aa89516e3d8e443}{cov}};}
+\DoxyCodeLine{109   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct__pf__sample__set__t_a93820b25bc66464f8a202b3c57520535}{converged}};}
+\DoxyCodeLine{110   \textcolor{keywordtype}{double} \mbox{\hyperlink{struct__pf__sample__set__t_ae31b0b1175e6355530af7577b1c1afca}{n\_effective}};}
+\DoxyCodeLine{111 \} \mbox{\hyperlink{pf_8h_a3075ae6e6dffed65457385e575f889c4}{pf\_sample\_set\_t}};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{// 代表整个粒子滤波器的结构体}}
+\DoxyCodeLine{115 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct__pf__t}{\_pf\_t}}}
+\DoxyCodeLine{116 \{}
+\DoxyCodeLine{117   \textcolor{comment}{// This min and max number of samples}}
+\DoxyCodeLine{118   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct__pf__t_a7116f78f8d05ca35ad17240967bf30c4}{min\_samples}}, \mbox{\hyperlink{struct__pf__t_a8434c18b71246a187cb705e5aba049e6}{max\_samples}};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120   \textcolor{comment}{// Population size parameters}}
+\DoxyCodeLine{121   \textcolor{keywordtype}{double} \mbox{\hyperlink{struct__pf__t_afa176e9527cb51f3ef2563fe86a3861e}{pop\_err}}, \mbox{\hyperlink{struct__pf__t_ab70ff4e12ee6ed1469a67aff0de36ebc}{pop\_z}};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123   \textcolor{comment}{// Resample limit cache}}
+\DoxyCodeLine{124   \textcolor{keywordtype}{int} *\mbox{\hyperlink{struct__pf__t_afec7a84a3ccfacb42791f786acfbcf81}{limit\_cache}};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126   \textcolor{comment}{// The sample sets.  We keep two sets and use [current\_set]}}
+\DoxyCodeLine{127   \textcolor{comment}{// to identify the active set.}}
+\DoxyCodeLine{128   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct__pf__t_a23cf0448c8b5f76f60c56e848865d484}{current\_set}};}
+\DoxyCodeLine{129   \mbox{\hyperlink{struct__pf__sample__set__t}{pf\_sample\_set\_t}} \mbox{\hyperlink{struct__pf__t_a56013d9af994b1781074b0e8f30c495a}{sets}}[2];}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131   \textcolor{comment}{// Running averages, slow and fast, of likelihood}}
+\DoxyCodeLine{132   \textcolor{keywordtype}{double} \mbox{\hyperlink{struct__pf__t_a4a272f2ad96b0353bdca47f9c7f66ea1}{w\_slow}}, \mbox{\hyperlink{struct__pf__t_a8c9011dce69524801db184a5d524e5d2}{w\_fast}};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134   \textcolor{comment}{// Decay rates for running averages}}
+\DoxyCodeLine{135   \textcolor{keywordtype}{double} \mbox{\hyperlink{struct__pf__t_a80816db3ffb4c399ca221e2f19e3c2e0}{alpha\_slow}}, \mbox{\hyperlink{struct__pf__t_a9ff6ca9bd519a956aa01797694e5f15c}{alpha\_fast}};}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137   \textcolor{comment}{// Function used to draw random pose samples}}
+\DoxyCodeLine{138   \mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\_init\_model\_fn\_t}} \mbox{\hyperlink{struct__pf__t_a4ea2363cb6fb0cd4cd70b7817ffdfff6}{random\_pose\_fn}};}
+\DoxyCodeLine{139   \textcolor{keywordtype}{void} *\mbox{\hyperlink{struct__pf__t_a4f8ab4cfeeda1f7ee91a633dfc37728f}{random\_pose\_data}};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141   \textcolor{keywordtype}{double} \mbox{\hyperlink{struct__pf__t_aa1efadfc08ba59f8fe55071519d209c2}{dist\_threshold}}; \textcolor{comment}{//distance threshold in each axis over which the pf is considered to not be converged}}
+\DoxyCodeLine{142   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct__pf__t_abc25dc55eae0b4a166755f45048019e7}{converged}};}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   \textcolor{comment}{// boolean parameter to enamble/diable selective resampling}}
+\DoxyCodeLine{145   \textcolor{keywordtype}{int} \mbox{\hyperlink{struct__pf__t_abc6252ca850fe993667913d7ade00a40}{selective\_resampling}};}
+\DoxyCodeLine{146 \} \mbox{\hyperlink{pf_8h_a948299995556a7ce16489221a916997f}{pf\_t}};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{comment}{// Create a new filter}}
+\DoxyCodeLine{150 \mbox{\hyperlink{struct__pf__t}{pf\_t}} *\mbox{\hyperlink{pf_8h_ab59ea6182aba307dd9faa7926219885e}{pf\_alloc}}(\textcolor{keywordtype}{int} min\_samples, \textcolor{keywordtype}{int} max\_samples,}
+\DoxyCodeLine{151                \textcolor{keywordtype}{double} alpha\_slow, \textcolor{keywordtype}{double} alpha\_fast,}
+\DoxyCodeLine{152                \mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\_init\_model\_fn\_t}} random\_pose\_fn, \textcolor{keywordtype}{void} *random\_pose\_data);}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{comment}{// Free an existing filter}}
+\DoxyCodeLine{155 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_a340271a4464113cbe3c4448d514b23c7}{pf\_free}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf);}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \textcolor{comment}{// Initialize the filter using a guassian}}
+\DoxyCodeLine{158 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_aa158e637ec3c10493f2729f063146944}{pf\_init}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} mean, \mbox{\hyperlink{structpf__matrix__t}{pf\_matrix\_t}} cov);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{comment}{// Initialize the filter using some model}}
+\DoxyCodeLine{161 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_ae2b239fe8546df136beca661cede73e2}{pf\_init\_model}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{pf_8h_ab75fbbe45feaecb5c13415d373e0d8e6}{pf\_init\_model\_fn\_t}} init\_fn, \textcolor{keywordtype}{void} *init\_data);}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{comment}{// Update the filter with some new action}}
+\DoxyCodeLine{164 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_a241694fcc56ec6459fef6acc68996eb8}{pf\_update\_action}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{pf_8h_a8e8299c4c339c8eacc4a5a6f536313d9}{pf\_action\_model\_fn\_t}} action\_fn, \textcolor{keywordtype}{void} *action\_data);}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \textcolor{comment}{// Update the filter with some new sensor observation}}
+\DoxyCodeLine{167 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_a477f66612c4752dd8f1ab73cab84a1fd}{pf\_update\_sensor}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{pf_8h_abac0d80ca317cca97247df42fda3476d}{pf\_sensor\_model\_fn\_t}} sensor\_fn, \textcolor{keywordtype}{void} *sensor\_data);}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{comment}{// Resample the distribution}}
+\DoxyCodeLine{170 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_a3e18db8990238fb9edc912009f64e3db}{pf\_update\_resample}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf);}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \textcolor{comment}{// set selective resampling parameter}}
+\DoxyCodeLine{173 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_adbdbc82024445c0a81904c3abb8c2dce}{pf\_set\_selective\_resampling}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \textcolor{keywordtype}{int} selective\_resampling);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \textcolor{comment}{// Compute the CEP statistics (mean and variance).}}
+\DoxyCodeLine{176 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_abdccd5641a5c2a1ff66d4fe80e723bd2}{pf\_get\_cep\_stats}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} *mean, \textcolor{keywordtype}{double} *var);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178 \textcolor{comment}{// Compute the statistics for a particular cluster.  Returns 0 if}}
+\DoxyCodeLine{179 \textcolor{comment}{// there is no such cluster.}}
+\DoxyCodeLine{180 \textcolor{keywordtype}{int} \mbox{\hyperlink{pf_8h_a818930949b3b6d5afd4d216bb69e6e78}{pf\_get\_cluster\_stats}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \textcolor{keywordtype}{int} cluster, \textcolor{keywordtype}{double} *weight,}
+\DoxyCodeLine{181                          \mbox{\hyperlink{structpf__vector__t}{pf\_vector\_t}} *mean, \mbox{\hyperlink{structpf__matrix__t}{pf\_matrix\_t}} *cov);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{comment}{// Re-\/compute the cluster statistics for a sample set}}
+\DoxyCodeLine{184 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_af2ae5d54790e0aca689b71a16fe4c7cb}{pf\_cluster\_stats}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \mbox{\hyperlink{struct__pf__sample__set__t}{pf\_sample\_set\_t}} *set);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{comment}{// Display the sample set}}
+\DoxyCodeLine{188 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_a633c764333b25a6cbcee8309003bc199}{pf\_draw\_samples}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \textcolor{keyword}{struct} \_rtk\_fig\_t *fig, \textcolor{keywordtype}{int} max\_samples);}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190 \textcolor{comment}{// Draw the histogram (kdtree)}}
+\DoxyCodeLine{191 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_a1809f29acf541a1bbad75d65ee3a619f}{pf\_draw\_hist}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \textcolor{keyword}{struct} \_rtk\_fig\_t *fig);}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{comment}{// Draw the CEP statistics}}
+\DoxyCodeLine{194 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_aa6eb2cdfec481645840b74703a82d416}{pf\_draw\_cep\_stats}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \textcolor{keyword}{struct} \_rtk\_fig\_t *fig);}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 \textcolor{comment}{// Draw the cluster statistics}}
+\DoxyCodeLine{197 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_ac98d0b8f0a0711c7db5e7420705c9eda}{pf\_draw\_cluster\_stats}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf, \textcolor{keyword}{struct} \_rtk\_fig\_t *fig);}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 \textcolor{comment}{//calculate if the particle filter has converged -\/}}
+\DoxyCodeLine{200 \textcolor{comment}{//and sets the converged flag in the current set and the pf}}
+\DoxyCodeLine{201 \textcolor{keywordtype}{int} \mbox{\hyperlink{pf_8h_a6caa24ec973890583e691fc8616e10e0}{pf\_update\_converged}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf);}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 \textcolor{comment}{//sets the current set and pf converged values to zero}}
+\DoxyCodeLine{204 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_a8093be5fa7501f1a8e903c43b5705be0}{pf\_init\_converged}}(\mbox{\hyperlink{struct__pf__t}{pf\_t}} *pf);}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 \textcolor{keywordtype}{void} \mbox{\hyperlink{pf_8h_aa04ad7b926ac346cd2c15a0ef66a4835}{pf\_copy\_set}}(\mbox{\hyperlink{struct__pf__sample__set__t}{pf\_sample\_set\_t}}* set\_a, \mbox{\hyperlink{struct__pf__sample__set__t}{pf\_sample\_set\_t}}* set\_b);}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{209 \}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

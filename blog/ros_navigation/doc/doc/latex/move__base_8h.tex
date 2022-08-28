@@ -1,0 +1,62 @@
+\hypertarget{move__base_8h}{}\doxysection{move\+\_\+base/include/move\+\_\+base/move\+\_\+base.h 文件参考}
+\label{move__base_8h}\index{move\_base/include/move\_base/move\_base.h@{move\_base/include/move\_base/move\_base.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$actionlib/server/simple\+\_\+action\+\_\+server.\+h$>$}\newline
+{\ttfamily \#include $<$move\+\_\+base\+\_\+msgs/\+Move\+Base\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+core/base\+\_\+local\+\_\+planner.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+core/base\+\_\+global\+\_\+planner.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+core/recovery\+\_\+behavior.\+h$>$}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Pose\+Stamped.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d\+\_\+ros.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d.\+h$>$}\newline
+{\ttfamily \#include $<$nav\+\_\+msgs/\+Get\+Plan.\+h$>$}\newline
+{\ttfamily \#include $<$pluginlib/class\+\_\+loader.\+hpp$>$}\newline
+{\ttfamily \#include $<$std\+\_\+srvs/\+Empty.\+h$>$}\newline
+{\ttfamily \#include $<$dynamic\+\_\+reconfigure/server.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}move\+\_\+base/\+Move\+Base\+Config.\+h\char`\"{}}\newline
+move\+\_\+base.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{move__base_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{move__base_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmove__base_1_1_move_base}{move\+\_\+base\+::\+Move\+Base}}
+\begin{DoxyCompactList}\small\item\em A class that uses the actionlib\+::\+Action\+Server interface that moves the robot base to a goal location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{命名空间}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemove__base}{move\+\_\+base}}
+\end{DoxyCompactItemize}
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef actionlib\+::\+Simple\+Action\+Server$<$ move\+\_\+base\+\_\+msgs\+::\+Move\+Base\+Action $>$ \mbox{\hyperlink{namespacemove__base_ac8da40ec5525ddc900973cc3c6ced790}{move\+\_\+base\+::\+Move\+Base\+Action\+Server}}
+\end{DoxyCompactItemize}
+\doxysubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26}{move\+\_\+base\+::\+Move\+Base\+State}} \{ \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26a1bb8a67349b4edf976140f78efd1a7e6}{move\+\_\+base\+::\+PLANNING}}
+, \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26ab4e93792615711bdc7cee7e8643a441c}{move\+\_\+base\+::\+CONTROLLING}}
+, \mbox{\hyperlink{namespacemove__base_a834c14e8a0d367042661457a3278cf26a667b5668dc058d5e7cf4e8e313d26a27}{move\+\_\+base\+::\+CLEARING}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548}{move\+\_\+base\+::\+Recovery\+Trigger}} \{ \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548a833edae0a0dc88c8953ce211ae2be2a8}{move\+\_\+base\+::\+PLANNING\+\_\+R}}
+, \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548a8f7a7afa2cd39bacddd2eb4ff4833d09}{move\+\_\+base\+::\+CONTROLLING\+\_\+R}}
+, \mbox{\hyperlink{namespacemove__base_ad1e7ef837dae3dd211a77e7d3a7d1548a6eb6a3211dc9649f160fe738589559da}{move\+\_\+base\+::\+OSCILLATION\+\_\+R}}
+ \}
+\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+<map id="move_base::MoveBase::clearCostmapsService" name="move_base::MoveBase::clearCostmapsService">
+<area shape="rect" id="node1" title="A service call that clears the costmaps of obstacles" alt="" coords="5,71,167,112"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="215,5,412,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="229,71,398,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#af0370b7b97c5d8cfcc961abb8d190f21" title="Reset each individual layer" alt="" coords="215,136,412,177"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="460,5,659,47"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_layered_costmap.html#a56d0806d545bfbe019fb5cac308f10b5" title=" " alt="" coords="460,71,659,112"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="475,136,644,177"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="475,201,644,243"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="475,267,644,308"/>
+</map>

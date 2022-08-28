@@ -1,0 +1,18 @@
+<map id="costmap_2d::Costmap2D::resizeMap" name="costmap_2d::Costmap2D::resizeMap">
+<area shape="rect" id="node1" title=" " alt="" coords="973,152,1143,193"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_static_layer.html#aa9d8d26c675b2ecebeb1f2ba2a7ccfd6" title="Callback to update the costmap&#39;s map from the map_server" alt="" coords="497,151,663,192"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap_layer.html#a9260d210630b6522cad87397506f9696" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="733,64,919,105"/>
+<area shape="rect" id="node12" href="$classcostmap__2d_1_1_static_layer.html#a3c8a9c7ea061ad416e09d2f1f18cdc8a" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="743,181,909,223"/>
+<area shape="rect" id="node13" href="$classcostmap__2d_1_1_layered_costmap.html#a8f8121ac0c6a2c5f267cf1cc07cfc40b" title=" " alt="" coords="727,247,925,288"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="251,151,418,192"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="13,144,180,185"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="13,209,180,251"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_voxel_layer.html#a0528c59b3cbe4c1b81748284ae0a3dc5" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="497,71,663,112"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_obstacle_layer.html#a370822e3b19d717ef04311b7b967f496" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="487,5,673,47"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_voxel_layer.html#a2361abd50823db1734c1cc05a70d0c97" title=" " alt="" coords="251,71,418,112"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_voxel_layer.html#a7e9b75bd9cee13aa9f893a17d549fbee" title=" " alt="" coords="5,71,188,112"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_voxel_layer.html#a7b0d5249f27fd757f206493b491fd37a" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="251,5,418,47"/>
+<area shape="rect" id="node14" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="481,297,679,339"/>
+<area shape="rect" id="node16" href="$inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="552,246,608,273"/>
+<area shape="rect" id="node15" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="236,297,433,339"/>
+</map>

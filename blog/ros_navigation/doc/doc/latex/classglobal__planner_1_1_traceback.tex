@@ -1,0 +1,166 @@
+\hypertarget{classglobal__planner_1_1_traceback}{}\doxysection{global\+\_\+planner\+::Traceback类 参考}
+\label{classglobal__planner_1_1_traceback}\index{global\_planner::Traceback@{global\_planner::Traceback}}
+
+
+{\ttfamily \#include $<$traceback.\+h$>$}
+
+
+
+类 global\+\_\+planner\+::Traceback 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_traceback__inherit__graph}
+\end{center}
+\end{figure}
+
+
+global\+\_\+planner\+::Traceback 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classglobal__planner_1_1_traceback__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_traceback_abf48245c8bc021ba9df355ae74ded3e4}{Traceback}} (\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$p\+\_\+calc)
+\item 
+virtual \mbox{\hyperlink{classglobal__planner_1_1_traceback_adfced6929e49afbd1b0ce8e42ed3a81c}{$\sim$\+Traceback}} ()
+\item 
+virtual bool \mbox{\hyperlink{classglobal__planner_1_1_traceback_ad3562c3ff5dc3a1e4465d2ddbe62f812}{get\+Path}} (float $\ast$potential, double start\+\_\+x, double start\+\_\+y, double end\+\_\+x, double end\+\_\+y, std\+::vector$<$ std\+::pair$<$ float, float $>$ $>$ \&path)=0
+\item 
+virtual void \mbox{\hyperlink{classglobal__planner_1_1_traceback_a75fa8c3628baa7debd94ac83b02e03a7}{set\+Size}} (int xs, int ys)
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_traceback_a9565bfa976f8ce019ce4e4d814b3b575}{get\+Index}} (int x, int y)
+\item 
+void \mbox{\hyperlink{classglobal__planner_1_1_traceback_af411eb96102bcedea2d530137b13a002}{set\+Lethal\+Cost}} (unsigned char lethal\+\_\+cost)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_traceback_a062d8297437fb132a87a9adff70c2c8f}{xs\+\_\+}}
+\item 
+int \mbox{\hyperlink{classglobal__planner_1_1_traceback_a1d7c2fd48b6d48696ee7fcd650e5cc4b}{ys\+\_\+}}
+\item 
+unsigned char \mbox{\hyperlink{classglobal__planner_1_1_traceback_a61b0a5a5dfb61d942d2dfd7c0d7a58ea}{lethal\+\_\+cost\+\_\+}}
+\item 
+\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$ \mbox{\hyperlink{classglobal__planner_1_1_traceback_a918825f1ecb2858a3b4a6d516ad144b4}{p\+\_\+calc\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_abf48245c8bc021ba9df355ae74ded3e4}\label{classglobal__planner_1_1_traceback_abf48245c8bc021ba9df355ae74ded3e4}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!Traceback@{Traceback}}
+\index{Traceback@{Traceback}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{Traceback()}{Traceback()}}
+{\footnotesize\ttfamily global\+\_\+planner\+::\+Traceback\+::\+Traceback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}} $\ast$}]{p\+\_\+calc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_adfced6929e49afbd1b0ce8e42ed3a81c}\label{classglobal__planner_1_1_traceback_adfced6929e49afbd1b0ce8e42ed3a81c}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!````~Traceback@{$\sim$Traceback}}
+\index{````~Traceback@{$\sim$Traceback}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{$\sim$Traceback()}{~Traceback()}}
+{\footnotesize\ttfamily virtual global\+\_\+planner\+::\+Traceback\+::$\sim$\+Traceback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_a9565bfa976f8ce019ce4e4d814b3b575}\label{classglobal__planner_1_1_traceback_a9565bfa976f8ce019ce4e4d814b3b575}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!getIndex@{getIndex}}
+\index{getIndex@{getIndex}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{getIndex()}{getIndex()}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Traceback\+::get\+Index (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_traceback_a9565bfa976f8ce019ce4e4d814b3b575_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_ad3562c3ff5dc3a1e4465d2ddbe62f812}\label{classglobal__planner_1_1_traceback_ad3562c3ff5dc3a1e4465d2ddbe62f812}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!getPath@{getPath}}
+\index{getPath@{getPath}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily virtual bool global\+\_\+planner\+::\+Traceback\+::get\+Path (\begin{DoxyParamCaption}\item[{float $\ast$}]{potential,  }\item[{double}]{start\+\_\+x,  }\item[{double}]{start\+\_\+y,  }\item[{double}]{end\+\_\+x,  }\item[{double}]{end\+\_\+y,  }\item[{std\+::vector$<$ std\+::pair$<$ float, float $>$ $>$ \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+在 \mbox{\hyperlink{classglobal__planner_1_1_gradient_path_a740775a18f446f585017e7051850a8bf}{global\+\_\+planner\+::\+Gradient\+Path}} , 以及 \mbox{\hyperlink{classglobal__planner_1_1_grid_path_a11f2838b30fdaca0e29ccff49d0e6c58}{global\+\_\+planner\+::\+Grid\+Path}} 内被实现.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_traceback_ad3562c3ff5dc3a1e4465d2ddbe62f812_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_af411eb96102bcedea2d530137b13a002}\label{classglobal__planner_1_1_traceback_af411eb96102bcedea2d530137b13a002}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!setLethalCost@{setLethalCost}}
+\index{setLethalCost@{setLethalCost}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{setLethalCost()}{setLethalCost()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::\+Traceback\+::set\+Lethal\+Cost (\begin{DoxyParamCaption}\item[{unsigned char}]{lethal\+\_\+cost }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_traceback_af411eb96102bcedea2d530137b13a002_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_a75fa8c3628baa7debd94ac83b02e03a7}\label{classglobal__planner_1_1_traceback_a75fa8c3628baa7debd94ac83b02e03a7}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!setSize@{setSize}}
+\index{setSize@{setSize}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily virtual void global\+\_\+planner\+::\+Traceback\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{xs,  }\item[{int}]{ys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+被 \mbox{\hyperlink{classglobal__planner_1_1_gradient_path_a58c7221bd0f4891a218403206953c0b4}{global\+\_\+planner\+::\+Gradient\+Path}} 重载.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classglobal__planner_1_1_traceback_a75fa8c3628baa7debd94ac83b02e03a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_a61b0a5a5dfb61d942d2dfd7c0d7a58ea}\label{classglobal__planner_1_1_traceback_a61b0a5a5dfb61d942d2dfd7c0d7a58ea}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!lethal\_cost\_@{lethal\_cost\_}}
+\index{lethal\_cost\_@{lethal\_cost\_}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{lethal\_cost\_}{lethal\_cost\_}}
+{\footnotesize\ttfamily unsigned char global\+\_\+planner\+::\+Traceback\+::lethal\+\_\+cost\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_a918825f1ecb2858a3b4a6d516ad144b4}\label{classglobal__planner_1_1_traceback_a918825f1ecb2858a3b4a6d516ad144b4}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!p\_calc\_@{p\_calc\_}}
+\index{p\_calc\_@{p\_calc\_}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{p\_calc\_}{p\_calc\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}}$\ast$ global\+\_\+planner\+::\+Traceback\+::p\+\_\+calc\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_a062d8297437fb132a87a9adff70c2c8f}\label{classglobal__planner_1_1_traceback_a062d8297437fb132a87a9adff70c2c8f}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!xs\_@{xs\_}}
+\index{xs\_@{xs\_}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{xs\_}{xs\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Traceback\+::xs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classglobal__planner_1_1_traceback_a1d7c2fd48b6d48696ee7fcd650e5cc4b}\label{classglobal__planner_1_1_traceback_a1d7c2fd48b6d48696ee7fcd650e5cc4b}} 
+\index{global\_planner::Traceback@{global\_planner::Traceback}!ys\_@{ys\_}}
+\index{ys\_@{ys\_}!global\_planner::Traceback@{global\_planner::Traceback}}
+\doxysubsubsection{\texorpdfstring{ys\_}{ys\_}}
+{\footnotesize\ttfamily int global\+\_\+planner\+::\+Traceback\+::ys\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+global\+\_\+planner/include/global\+\_\+planner/\mbox{\hyperlink{traceback_8h}{traceback.\+h}}\end{DoxyCompactItemize}

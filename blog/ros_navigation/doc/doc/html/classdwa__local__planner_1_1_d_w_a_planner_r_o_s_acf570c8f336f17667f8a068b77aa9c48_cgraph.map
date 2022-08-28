@@ -1,0 +1,4 @@
+<map id="dwa_local_planner::DWAPlannerROS::publishGlobalPlan" name="dwa_local_planner::DWAPlannerROS::publishGlobalPlan">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,241,47"/>
+<area shape="rect" id="node2" href="$namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="289,5,423,47"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="costmap_2d::StaticLayer::interpretValue" name="costmap_2d::StaticLayer::interpretValue">
+<area shape="rect" id="node1" title=" " alt="" coords="649,39,816,80"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_static_layer.html#aa9d8d26c675b2ecebeb1f2ba2a7ccfd6" title="Callback to update the costmap&#39;s map from the map_server" alt="" coords="435,5,601,47"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_static_layer.html#a07ac2871f5f93542598677f06ba0b5b2" title=" " alt="" coords="435,71,601,112"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_static_layer.html#a05ac3b3a903d45c76d076fed8ae220f6" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="220,39,387,80"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_static_layer.html#a4b70375c6f9b105dd2fa765657cc46f8" title="Restart publishers if they&#39;ve been stopped." alt="" coords="5,5,172,47"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_static_layer.html#a80083e19e7d50881f3d46c79e324dd93" title=" " alt="" coords="5,71,172,112"/>
+</map>

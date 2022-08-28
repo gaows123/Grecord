@@ -1,0 +1,5 @@
+<map id="costmap_2d::VoxelLayer::resetMaps" name="costmap_2d::VoxelLayer::resetMaps">
+<area shape="rect" id="node1" title="Resets the costmap and static_map to be unknown space" alt="" coords="5,39,172,80"/>
+<area shape="rect" id="node2" href="$classvoxel__grid_1_1_voxel_grid.html#aab30ed5d435c878574d0769186d196ac" title=" " alt="" coords="231,5,378,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="220,71,389,112"/>
+</map>

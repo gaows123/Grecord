@@ -1,0 +1,120 @@
+\hypertarget{map__grid_8h_source}{}\doxysection{map\+\_\+grid.\+h}
+\label{map__grid_8h_source}\index{base\_local\_planner/include/base\_local\_planner/map\_grid.h@{base\_local\_planner/include/base\_local\_planner/map\_grid.h}}
+\mbox{\hyperlink{map__grid_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{12 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{13 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{14 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{17 \textcolor{comment}{ *   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{18 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{20 \textcolor{comment}{ *}}
+\DoxyCodeLine{21 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{33 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#ifndef TRAJECTORY\_ROLLOUT\_MAP\_GRID\_H\_}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define TRAJECTORY\_ROLLOUT\_MAP\_GRID\_H\_}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__inc_8h}{base\_local\_planner/trajectory\_inc.h}}>}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <ros/console.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{map__cell_8h}{base\_local\_planner/map\_cell.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}}\{}
+\DoxyCodeLine{52   \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{MapGrid}}\{}
+\DoxyCodeLine{53     \textcolor{keyword}{public}:}
+\DoxyCodeLine{57       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ad10445cf88357f857c8e03b47262b732}{MapGrid}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ad10445cf88357f857c8e03b47262b732}{MapGrid}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_y);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 }
+\DoxyCodeLine{73       \textcolor{keyword}{inline} \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{MapCell}}\& \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a1dfe8cec7bc6c5ac8c6c177ebd13fa99}{operator() }}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y)\{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}{map\_}}[\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a41702016ab4edc01a0b23fc05a9c64de}{size\_x\_}} * y + x];}
+\DoxyCodeLine{75       \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{83       \textcolor{keyword}{inline} \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{MapCell}} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a1dfe8cec7bc6c5ac8c6c177ebd13fa99}{operator() }}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}{map\_}}[\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a41702016ab4edc01a0b23fc05a9c64de}{size\_x\_}} * y + x];}
+\DoxyCodeLine{85       \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87       \textcolor{keyword}{inline} \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{MapCell}}\& \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a46a736f0ff4e89771ee50544a625988d}{getCell}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y)\{}
+\DoxyCodeLine{88         \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}{map\_}}[\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a41702016ab4edc01a0b23fc05a9c64de}{size\_x\_}} * y + x];}
+\DoxyCodeLine{89       \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{94       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8efc6461e975c937560ef8e68b471a78}{\string~MapGrid}}()\{\}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{100       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ad10445cf88357f857c8e03b47262b732}{MapGrid}}(\textcolor{keyword}{const} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{MapGrid}}\& mg);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{106       \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{MapGrid}}\& \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a058863c16849dab1495f4206bed28321}{operator= }}(\textcolor{keyword}{const} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid}{MapGrid}}\& mg);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_aaede39518e77d4eb1f7fc7766da5cb11}{resetPathDist}}();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{118       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ada7418321ccc809a6dfa8e45ada16c6d}{sizeCheck}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size\_y);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{123       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a68495bea908d9bf692ef8520ca4fb432}{commonInit}}();}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{131       \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a3fd22c28f3c45c9336ec7f1ecb33d423}{getIndex}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{136       \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_af3db024faefa9420ec75b18d4da90cfe}{obstacleCosts}}() \{}
+\DoxyCodeLine{137         \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}{map\_}}.size();}
+\DoxyCodeLine{138       \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{144       \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a1b7145c6781d0d3703a1003b9f753420}{unreachableCellCosts}}() \{}
+\DoxyCodeLine{145         \textcolor{keywordflow}{return} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}{map\_}}.size() + 1;}
+\DoxyCodeLine{146       \}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{153       \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a88efaf02a2735770450745f47239f0d9}{updatePathCell}}(\mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{MapCell}}* current\_cell, \mbox{\hyperlink{classbase__local__planner_1_1_map_cell}{MapCell}}* check\_cell,}
+\DoxyCodeLine{154           \textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& costmap);}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{163       \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a0af367c6272d3c4b7c16dde4a41c306a}{adjustPlanResolution}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& global\_plan\_in,}
+\DoxyCodeLine{164             std::vector<geometry\_msgs::PoseStamped>\& global\_plan\_out, \textcolor{keywordtype}{double} resolution);}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{170       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ab29d565af28ed4dc377ac997c70070f2}{computeTargetDistance}}(std::queue<MapCell*>\& dist\_queue, \textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& costmap);}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{176       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a35b47e664abc157ef47e8a1ed5d0d357}{computeGoalDistance}}(std::queue<MapCell*>\& dist\_queue, \textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& costmap);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{181       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e3227190b9f67376ee2890f493079d5}{setTargetCells}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& costmap, \textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& global\_plan);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{186       \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ab73fe99a7ad21b36a3178e26296945d5}{setLocalGoal}}(\textcolor{keyword}{const} \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& costmap,}
+\DoxyCodeLine{187             \textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped>\& global\_plan);}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189       \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a6153b07220fff0cad38a82491d288510}{goal\_x\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_ab53586ea5096453439256dd47545559b}{goal\_y\_}}; }
+\DoxyCodeLine{191       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a41702016ab4edc01a0b23fc05a9c64de}{size\_x\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_afac1b094ef9469b56c59c3ab1008de47}{size\_y\_}}; }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     \textcolor{keyword}{private}:}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195       std::vector<MapCell> \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_a8e42b62548d1e12c82db5a7e843a0b0e}{map\_}}; }
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197   \};}
+\DoxyCodeLine{198 \};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

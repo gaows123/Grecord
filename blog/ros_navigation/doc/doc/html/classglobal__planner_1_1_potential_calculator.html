@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner::PotentialCalculator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceglobal__planner.html">global_planner</a></li><li class="navelem"><a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classglobal__planner_1_1_potential_calculator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">global_planner::PotentialCalculator类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="potential__calculator_8h_source.html">potential_calculator.h</a>&gt;</code></p>
+<div class="dynheader">
+类 global_planner::PotentialCalculator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_potential_calculator__inherit__graph.png" border="0" usemap="#aglobal__planner_1_1_potential_calculator_inherit__map" alt="Inheritance graph"/></div>
+<map name="aglobal__planner_1_1_potential_calculator_inherit__map" id="aglobal__planner_1_1_potential_calculator_inherit__map">
+<area shape="rect" title=" " alt="" coords="8,5,172,47"/>
+<area shape="rect" href="classglobal__planner_1_1_quadratic_calculator.html" title=" " alt="" coords="5,95,175,136"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9e785461ad18ae3e6a393dedcf903a6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#a9e785461ad18ae3e6a393dedcf903a6a">PotentialCalculator</a> (int nx, int ny)</td></tr>
+<tr class="separator:a9e785461ad18ae3e6a393dedcf903a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5185d5f8a422b99aaf56d0d2c8a578"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#a3c5185d5f8a422b99aaf56d0d2c8a578">~PotentialCalculator</a> ()</td></tr>
+<tr class="separator:a3c5185d5f8a422b99aaf56d0d2c8a578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4befc4819934603d43c8dc539f445fd4"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#a4befc4819934603d43c8dc539f445fd4">calculatePotential</a> (float *potential, unsigned char cost, int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>, float prev_potential=-1)</td></tr>
+<tr class="separator:a4befc4819934603d43c8dc539f445fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff19259198704723eb62d515ea91e58"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#a9ff19259198704723eb62d515ea91e58">setSize</a> (int nx, int ny)</td></tr>
+<tr class="memdesc:a9ff19259198704723eb62d515ea91e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or resets the size of the map  <a href="classglobal__planner_1_1_potential_calculator.html#a9ff19259198704723eb62d515ea91e58">更多...</a><br /></td></tr>
+<tr class="separator:a9ff19259198704723eb62d515ea91e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a82306cd4356d50c5f9a11b22c7668202"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#a82306cd4356d50c5f9a11b22c7668202">toIndex</a> (int x, int y)</td></tr>
+<tr class="separator:a82306cd4356d50c5f9a11b22c7668202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ad5102b7868d243fef672bbe772571339"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#ad5102b7868d243fef672bbe772571339">nx_</a></td></tr>
+<tr class="separator:ad5102b7868d243fef672bbe772571339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6e7eb5facdf52141299329b546e745"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#a2f6e7eb5facdf52141299329b546e745">ny_</a></td></tr>
+<tr class="separator:a2f6e7eb5facdf52141299329b546e745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c62eff3a3c95db6cd6dedcb9cfb3e2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_potential_calculator.html#a5c62eff3a3c95db6cd6dedcb9cfb3e2a">ns_</a></td></tr>
+<tr class="separator:a5c62eff3a3c95db6cd6dedcb9cfb3e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a9e785461ad18ae3e6a393dedcf903a6a" name="a9e785461ad18ae3e6a393dedcf903a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e785461ad18ae3e6a393dedcf903a6a">&#9670;&nbsp;</a></span>PotentialCalculator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global_planner::PotentialCalculator::PotentialCalculator </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_potential_calculator_a9e785461ad18ae3e6a393dedcf903a6a_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_potential_calculator_a9e785461ad18ae3e6a393dedcf903a6a_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_potential_calculator_a9e785461ad18ae3e6a393dedcf903a6a_cgraph" id="aclassglobal__planner_1_1_potential_calculator_a9e785461ad18ae3e6a393dedcf903a6a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,203,47"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html#a9ff19259198704723eb62d515ea91e58" title="Sets or resets the size of the map" alt="" coords="251,5,415,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c5185d5f8a422b99aaf56d0d2c8a578" name="a3c5185d5f8a422b99aaf56d0d2c8a578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5185d5f8a422b99aaf56d0d2c8a578">&#9670;&nbsp;</a></span>~PotentialCalculator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual global_planner::PotentialCalculator::~PotentialCalculator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4befc4819934603d43c8dc539f445fd4" name="a4befc4819934603d43c8dc539f445fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4befc4819934603d43c8dc539f445fd4">&#9670;&nbsp;</a></span>calculatePotential()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float global_planner::PotentialCalculator::calculatePotential </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>potential</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>prev_potential</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="classglobal__planner_1_1_quadratic_calculator.html#a5cb0a0126df397b4b5d86d871ddab1d4">global_planner::QuadraticCalculator</a> 重载.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_potential_calculator_a4befc4819934603d43c8dc539f445fd4_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_potential_calculator_a4befc4819934603d43c8dc539f445fd4_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_potential_calculator_a4befc4819934603d43c8dc539f445fd4_icgraph" id="aclassglobal__planner_1_1_potential_calculator_a4befc4819934603d43c8dc539f445fd4_icgraph">
+<area shape="rect" title=" " alt="" coords="544,71,735,112"/>
+<area shape="rect" href="classglobal__planner_1_1_a_star_expansion.html#a14922f2bde1222050478a4c6289ea874" title=" " alt="" coords="260,17,496,43"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html#a02060106b60c2661cb1f1878a151a40e" title=" " alt="" coords="294,71,462,112"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a037961c97a953fddf61bbae64f9c1b97" title="Updates the cell at index n" alt="" coords="299,136,457,177"/>
+<area shape="rect" href="classglobal__planner_1_1_a_star_expansion.html#a71ddf1440a2f487c6f10af7a25757371" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#a4f6bfa5acf58670c01a5b8c684a2f20c" title="根据目标点规划处全局路径" alt="" coords="11,71,206,112"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a1102e169bb79dac31de8fe5ca5ace39b" title=" " alt="" coords="8,136,209,177"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ff19259198704723eb62d515ea91e58" name="a9ff19259198704723eb62d515ea91e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff19259198704723eb62d515ea91e58">&#9670;&nbsp;</a></span>setSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void global_planner::PotentialCalculator::setSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets or resets the size of the map </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nx</td><td>The x size of the map </td></tr>
+    <tr><td class="paramname">ny</td><td>The y size of the map sets or resets the size of the map </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_potential_calculator_a9ff19259198704723eb62d515ea91e58_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_potential_calculator_a9ff19259198704723eb62d515ea91e58_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_potential_calculator_a9ff19259198704723eb62d515ea91e58_icgraph" id="aclassglobal__planner_1_1_potential_calculator_a9ff19259198704723eb62d515ea91e58_icgraph">
+<area shape="rect" title="Sets or resets the size of the map" alt="" coords="251,39,415,80"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#a4f6bfa5acf58670c01a5b8c684a2f20c" title="根据目标点规划处全局路径" alt="" coords="7,5,201,47"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html#a9e785461ad18ae3e6a393dedcf903a6a" title=" " alt="" coords="5,71,203,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a82306cd4356d50c5f9a11b22c7668202" name="a82306cd4356d50c5f9a11b22c7668202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82306cd4356d50c5f9a11b22c7668202">&#9670;&nbsp;</a></span>toIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_planner::PotentialCalculator::toIndex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a5c62eff3a3c95db6cd6dedcb9cfb3e2a" name="a5c62eff3a3c95db6cd6dedcb9cfb3e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c62eff3a3c95db6cd6dedcb9cfb3e2a">&#9670;&nbsp;</a></span>ns_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_planner::PotentialCalculator::ns_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >size of grid, in pixels </p>
+
+</div>
+</div>
+<a id="ad5102b7868d243fef672bbe772571339" name="ad5102b7868d243fef672bbe772571339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5102b7868d243fef672bbe772571339">&#9670;&nbsp;</a></span>nx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_planner::PotentialCalculator::nx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f6e7eb5facdf52141299329b546e745" name="a2f6e7eb5facdf52141299329b546e745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6e7eb5facdf52141299329b546e745">&#9670;&nbsp;</a></span>ny_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_planner::PotentialCalculator::ny_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>global_planner/include/global_planner/<a class="el" href="potential__calculator_8h_source.html">potential_calculator.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,112 @@
+\hypertarget{class_map_generator}{}\doxysection{Map\+Generator类 参考}
+\label{class_map_generator}\index{MapGenerator@{MapGenerator}}
+
+
+Map generation node.  
+
+
+
+
+Map\+Generator 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_map_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_generator_a6dd0e88a42d371aae38807df66fa8486}{Map\+Generator}} (const std\+::string \&mapname, int threshold\+\_\+occupied, int threshold\+\_\+free)
+\item 
+void \mbox{\hyperlink{class_map_generator_a609548d83b6a77a5cd3056f7c5224962}{map\+Callback}} (const nav\+\_\+msgs\+::\+Occupancy\+Grid\+Const\+Ptr \&map)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_map_generator_a8d2814ddf2d6231239cfd3703c682eb8}{mapname\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{class_map_generator_ab64021c24a4a1b07626119c2099abe77}{map\+\_\+sub\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_map_generator_ad899126ba6b03388bd076e1418ae7120}{saved\+\_\+map\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_map_generator_a269e00c1fa8e2f0c5b702333b0e0bfc3}{threshold\+\_\+occupied\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_map_generator_a47a2190eff057c9ba251cbc58e583468}{threshold\+\_\+free\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Map generation node. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{class_map_generator_a6dd0e88a42d371aae38807df66fa8486}\label{class_map_generator_a6dd0e88a42d371aae38807df66fa8486}} 
+\index{MapGenerator@{MapGenerator}!MapGenerator@{MapGenerator}}
+\index{MapGenerator@{MapGenerator}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{\texorpdfstring{MapGenerator()}{MapGenerator()}}
+{\footnotesize\ttfamily Map\+Generator\+::\+Map\+Generator (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mapname,  }\item[{int}]{threshold\+\_\+occupied,  }\item[{int}]{threshold\+\_\+free }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_a6dd0e88a42d371aae38807df66fa8486_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{class_map_generator_a609548d83b6a77a5cd3056f7c5224962}\label{class_map_generator_a609548d83b6a77a5cd3056f7c5224962}} 
+\index{MapGenerator@{MapGenerator}!mapCallback@{mapCallback}}
+\index{mapCallback@{mapCallback}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{\texorpdfstring{mapCallback()}{mapCallback()}}
+{\footnotesize\ttfamily void Map\+Generator\+::map\+Callback (\begin{DoxyParamCaption}\item[{const nav\+\_\+msgs\+::\+Occupancy\+Grid\+Const\+Ptr \&}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_generator_a609548d83b6a77a5cd3056f7c5224962_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{class_map_generator_ab64021c24a4a1b07626119c2099abe77}\label{class_map_generator_ab64021c24a4a1b07626119c2099abe77}} 
+\index{MapGenerator@{MapGenerator}!map\_sub\_@{map\_sub\_}}
+\index{map\_sub\_@{map\_sub\_}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{\texorpdfstring{map\_sub\_}{map\_sub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber Map\+Generator\+::map\+\_\+sub\+\_\+}
+
+\mbox{\Hypertarget{class_map_generator_a8d2814ddf2d6231239cfd3703c682eb8}\label{class_map_generator_a8d2814ddf2d6231239cfd3703c682eb8}} 
+\index{MapGenerator@{MapGenerator}!mapname\_@{mapname\_}}
+\index{mapname\_@{mapname\_}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{\texorpdfstring{mapname\_}{mapname\_}}
+{\footnotesize\ttfamily std\+::string Map\+Generator\+::mapname\+\_\+}
+
+\mbox{\Hypertarget{class_map_generator_ad899126ba6b03388bd076e1418ae7120}\label{class_map_generator_ad899126ba6b03388bd076e1418ae7120}} 
+\index{MapGenerator@{MapGenerator}!saved\_map\_@{saved\_map\_}}
+\index{saved\_map\_@{saved\_map\_}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{\texorpdfstring{saved\_map\_}{saved\_map\_}}
+{\footnotesize\ttfamily bool Map\+Generator\+::saved\+\_\+map\+\_\+}
+
+\mbox{\Hypertarget{class_map_generator_a47a2190eff057c9ba251cbc58e583468}\label{class_map_generator_a47a2190eff057c9ba251cbc58e583468}} 
+\index{MapGenerator@{MapGenerator}!threshold\_free\_@{threshold\_free\_}}
+\index{threshold\_free\_@{threshold\_free\_}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{\texorpdfstring{threshold\_free\_}{threshold\_free\_}}
+{\footnotesize\ttfamily int Map\+Generator\+::threshold\+\_\+free\+\_\+}
+
+\mbox{\Hypertarget{class_map_generator_a269e00c1fa8e2f0c5b702333b0e0bfc3}\label{class_map_generator_a269e00c1fa8e2f0c5b702333b0e0bfc3}} 
+\index{MapGenerator@{MapGenerator}!threshold\_occupied\_@{threshold\_occupied\_}}
+\index{threshold\_occupied\_@{threshold\_occupied\_}!MapGenerator@{MapGenerator}}
+\doxysubsubsection{\texorpdfstring{threshold\_occupied\_}{threshold\_occupied\_}}
+{\footnotesize\ttfamily int Map\+Generator\+::threshold\+\_\+occupied\+\_\+}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+map\+\_\+server/src/\mbox{\hyperlink{map__saver_8cpp}{map\+\_\+saver.\+cpp}}\end{DoxyCompactItemize}

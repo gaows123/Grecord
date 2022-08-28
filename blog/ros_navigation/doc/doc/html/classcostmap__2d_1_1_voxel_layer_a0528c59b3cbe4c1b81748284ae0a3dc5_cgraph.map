@@ -1,0 +1,17 @@
+<map id="costmap_2d::VoxelLayer::matchSize" name="costmap_2d::VoxelLayer::matchSize">
+<area shape="rect" id="node1" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="5,415,172,456"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap_layer.html#a9260d210630b6522cad87397506f9696" title="Implement this to make this layer match the size of the parent costmap." alt="" coords="220,235,405,276"/>
+<area shape="rect" id="node12" href="$classvoxel__grid_1_1_voxel_grid.html#a5b03e57131d3ae12440c701cb1216688" title="Resizes a voxel grid to the desired size" alt="" coords="239,381,386,423"/>
+<area shape="rect" id="node14" href="$classvoxel__grid_1_1_voxel_grid.html#a443198a401b95b15c75c3f33c7064646" title=" " alt="" coords="239,447,386,488"/>
+<area shape="rect" id="node15" href="$classvoxel__grid_1_1_voxel_grid.html#a53c39103a03b74959a128b6df7343aaa" title=" " alt="" coords="239,512,386,553"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="453,5,652,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a9aae81be964f5fff675f9a10c3bf2e82" title="Accessor for the x origin of the costmap" alt="" coords="468,71,637,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a686124b010e121eb87629ff17a032d7f" title="Accessor for the y origin of the costmap" alt="" coords="468,136,637,177"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="468,201,637,243"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="468,267,637,308"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="468,332,637,373"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#a95bae6eccd820a77d8040562e2a51118" title=" " alt="" coords="468,397,637,439"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d.html#a1da91220df45a19376a3e3df3a517c27" title="Initializes the costmap, static_map, and markers data structures" alt="" coords="700,365,869,407"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="700,431,869,472"/>
+<area shape="rect" id="node13" href="$classvoxel__grid_1_1_voxel_grid.html#aab30ed5d435c878574d0769186d196ac" title=" " alt="" coords="479,463,626,504"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="base_local_planner::MapGrid::MapGrid" name="base_local_planner::MapGrid::MapGrid">
+<area shape="rect" id="node1" title="Creates a map of size_x by size_y" alt="" coords="5,5,141,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid.html#a68495bea908d9bf692ef8520ca4fb432" title="Utility to share initialization code across constructors" alt="" coords="189,5,344,47"/>
+</map>

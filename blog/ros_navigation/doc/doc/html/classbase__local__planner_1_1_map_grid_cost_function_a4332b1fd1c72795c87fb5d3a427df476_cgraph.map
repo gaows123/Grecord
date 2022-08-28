@@ -1,0 +1,9 @@
+<map id="base_local_planner::MapGridCostFunction::scoreTrajectory" name="base_local_planner::MapGridCostFunction::scoreTrajectory">
+<area shape="rect" id="node1" title=" " alt="" coords="5,177,161,233"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid_cost_function.html#a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33" title=" " alt="" coords="221,5,377,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="227,86,371,127"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="210,151,387,193"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="213,217,384,258"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="209,283,388,339"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="214,363,383,405"/>
+</map>

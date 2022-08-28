@@ -1,0 +1,621 @@
+\hypertarget{module__tests_8cpp}{}\doxysection{costmap\+\_\+2d/test/module\+\_\+tests.cpp 文件参考}
+\label{module__tests_8cpp}\index{costmap\_2d/test/module\_tests.cpp@{costmap\_2d/test/module\_tests.cpp}}
+{\ttfamily \#include $<$costmap\+\_\+2d/costmap\+\_\+2d.\+h$>$}\newline
+{\ttfamily \#include $<$costmap\+\_\+2d/observation\+\_\+buffer.\+h$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+module\+\_\+tests.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned int \mbox{\hyperlink{module__tests_8cpp_ae02379f018d4ff35a260c0fb1204b865}{GRID\+\_\+\+WIDTH}} (10)
+\item 
+const unsigned int \mbox{\hyperlink{module__tests_8cpp_acc165508c976d24c0ae0232c85978557}{GRID\+\_\+\+HEIGHT}} (10)
+\item 
+const double \mbox{\hyperlink{module__tests_8cpp_a214cb9adfc50b4abd0e2132640f639dd}{RESOLUTION}} (1)
+\item 
+const double \mbox{\hyperlink{module__tests_8cpp_a39d70538066e6e893bfefa668c2359a7}{WINDOW\+\_\+\+LENGTH}} (10)
+\item 
+const unsigned char \mbox{\hyperlink{module__tests_8cpp_a25cb91905492fcb0c5020df1664a0275}{THRESHOLD}} (100)
+\item 
+const double \mbox{\hyperlink{module__tests_8cpp_a80945e4c9ec06fccdb5342cacfea6e3d}{MAX\+\_\+Z}} (1.\+0)
+\item 
+const double \mbox{\hyperlink{module__tests_8cpp_ae25a9ab4d4972c7478e701ae44ca439e}{RAYTRACE\+\_\+\+RANGE}} (20.\+0)
+\item 
+const double \mbox{\hyperlink{module__tests_8cpp_ad55f1fdf708504277f888d6d0419bb42}{OBSTACLE\+\_\+\+RANGE}} (20.\+0)
+\item 
+const double \mbox{\hyperlink{module__tests_8cpp_adf4461009ef21f644777aadc0f469132}{ROBOT\+\_\+\+RADIUS}} (1.\+0)
+\item 
+bool \mbox{\hyperlink{module__tests_8cpp_a2b0cc958b6ecca420d0f0ca89744b564}{find}} (const std\+::vector$<$ unsigned int $>$ \&l, unsigned int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\item 
+\mbox{\hyperlink{module__tests_8cpp_ad60e6773a46c10dda1470224e1f13f21}{TEST}} (costmap, test\+Reset\+For\+Static\+Map)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276}{TEST}} (costmap, test\+Cost\+Function\+Correctness)
+\item 
+char \mbox{\hyperlink{module__tests_8cpp_ab67d48c3e97782150aac66598f768972}{printable\+Cost}} (unsigned char cost)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a}{TEST}} (costmap, test\+Wave\+Interference)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a4d5daedd5dde37cf984f593d5c719e92}{TEST}} (costmap, test\+Window\+Copy)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a81989f28bba6fb2f0503b643903a72cd}{TEST}} (costmap, test\+Fully\+Contained\+Static\+Map\+Update)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_ac9fc7e80b7d8b53b7aafb59c12c4e32c}{TEST}} (costmap, test\+Overlap\+Static\+Map\+Update)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb}{TEST}} (costmap, test\+Raytracing)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f}{TEST}} (costmap, test\+Adjacent\+To\+Obstacle\+Can\+Still\+Move)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a7944d546ff12543615d752c882c1ae12}{TEST}} (costmap, test\+Inflation\+Should\+Not\+Create\+Unknowns)
+\item 
+unsigned int \mbox{\hyperlink{module__tests_8cpp_acaf55aec82e7bf50a889e6a81db0b207}{world\+To\+Index}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&map, double wx, double wy)
+\item 
+void \mbox{\hyperlink{module__tests_8cpp_a3a3ece35a35957830a0f90c2d25e8fe9}{index\+To\+World}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&map, unsigned int index, double \&wx, double \&wy)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a0e9c8b5f0a3eba4d6e0db102be312cfa}{TEST}} (costmap, test\+Static\+Map)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7}{TEST}} (costmap, test\+Dynamic\+Obstacles)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a21809284d087f0beef9c2ad655520816}{TEST}} (costmap, test\+Multiple\+Additions)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981}{TEST}} (costmap, test\+ZThreshold)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1}{TEST}} (costmap, test\+Inflation)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179}{TEST}} (costmap, test\+Inflation2)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838}{TEST}} (costmap, test\+Inflation3)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34}{TEST}} (costmap, test\+Raytracing2)
+\item 
+\mbox{\hyperlink{module__tests_8cpp_a2c735efbf2d2bd86320b8b984579b979}{TEST}} (costmap, test\+Tricky\+Propagation)
+\item 
+int \mbox{\hyperlink{module__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char \mbox{\hyperlink{module__tests_8cpp_ab0015d273e3592b6b73ed299306e2b7c}{MAP\+\_\+10\+\_\+\+BY\+\_\+10\+\_\+\+CHAR}} \mbox{[}$\,$\mbox{]}
+\item 
+const unsigned char \mbox{\hyperlink{module__tests_8cpp_aca8f2e89280381e05df0ce8e125ba5c4}{MAP\+\_\+5\+\_\+\+BY\+\_\+5\+\_\+\+CHAR}} \mbox{[}$\,$\mbox{]}
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{module__tests_8cpp_ae0701fb016711ce10eb3cba639c9d24d}{MAP\+\_\+5\+\_\+\+BY\+\_\+5}}
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{module__tests_8cpp_a967817a947c7820679c1c3d9aaeccb89}{MAP\+\_\+10\+\_\+\+BY\+\_\+10}}
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{module__tests_8cpp_a03c09f55deafc8e6bfc9bbcc6e7c4807}{EMPTY\+\_\+10\+\_\+\+BY\+\_\+10}}
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{module__tests_8cpp_a893be74b15dd0554d17c6d3bce41557a}{EMPTY\+\_\+100\+\_\+\+BY\+\_\+100}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{module__tests_8cpp_a2b0cc958b6ecca420d0f0ca89744b564}\label{module__tests_8cpp_a2b0cc958b6ecca420d0f0ca89744b564}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!find@{find}}
+\index{find@{find}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily bool find (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ unsigned int $>$ \&}]{l,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{module__tests_8cpp_a2b0cc958b6ecca420d0f0ca89744b564_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_acc165508c976d24c0ae0232c85978557}\label{module__tests_8cpp_acc165508c976d24c0ae0232c85978557}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!GRID\_HEIGHT@{GRID\_HEIGHT}}
+\index{GRID\_HEIGHT@{GRID\_HEIGHT}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{GRID\_HEIGHT()}{GRID\_HEIGHT()}}
+{\footnotesize\ttfamily const unsigned int GRID\+\_\+\+HEIGHT (\begin{DoxyParamCaption}\item[{10}]{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{module__tests_8cpp_acc165508c976d24c0ae0232c85978557_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ae02379f018d4ff35a260c0fb1204b865}\label{module__tests_8cpp_ae02379f018d4ff35a260c0fb1204b865}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!GRID\_WIDTH@{GRID\_WIDTH}}
+\index{GRID\_WIDTH@{GRID\_WIDTH}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{GRID\_WIDTH()}{GRID\_WIDTH()}}
+{\footnotesize\ttfamily const unsigned int GRID\+\_\+\+WIDTH (\begin{DoxyParamCaption}\item[{10}]{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{module__tests_8cpp_ae02379f018d4ff35a260c0fb1204b865_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a3a3ece35a35957830a0f90c2d25e8fe9}\label{module__tests_8cpp_a3a3ece35a35957830a0f90c2d25e8fe9}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!indexToWorld@{indexToWorld}}
+\index{indexToWorld@{indexToWorld}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{indexToWorld()}{indexToWorld()}}
+{\footnotesize\ttfamily void index\+To\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&}]{map,  }\item[{unsigned int}]{index,  }\item[{double \&}]{wx,  }\item[{double \&}]{wy }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{module__tests_8cpp_a3a3ece35a35957830a0f90c2d25e8fe9_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{module__tests_8cpp_a3a3ece35a35957830a0f90c2d25e8fe9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{module__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!main@{main}}
+\index{main@{main}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{module__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a80945e4c9ec06fccdb5342cacfea6e3d}\label{module__tests_8cpp_a80945e4c9ec06fccdb5342cacfea6e3d}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!MAX\_Z@{MAX\_Z}}
+\index{MAX\_Z@{MAX\_Z}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_Z()}{MAX\_Z()}}
+{\footnotesize\ttfamily const double MAX\+\_\+Z (\begin{DoxyParamCaption}\item[{1.}]{0 }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{module__tests_8cpp_a80945e4c9ec06fccdb5342cacfea6e3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ad55f1fdf708504277f888d6d0419bb42}\label{module__tests_8cpp_ad55f1fdf708504277f888d6d0419bb42}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!OBSTACLE\_RANGE@{OBSTACLE\_RANGE}}
+\index{OBSTACLE\_RANGE@{OBSTACLE\_RANGE}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{OBSTACLE\_RANGE()}{OBSTACLE\_RANGE()}}
+{\footnotesize\ttfamily const double OBSTACLE\+\_\+\+RANGE (\begin{DoxyParamCaption}\item[{20.}]{0 }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{module__tests_8cpp_ad55f1fdf708504277f888d6d0419bb42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ab67d48c3e97782150aac66598f768972}\label{module__tests_8cpp_ab67d48c3e97782150aac66598f768972}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!printableCost@{printableCost}}
+\index{printableCost@{printableCost}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{printableCost()}{printableCost()}}
+{\footnotesize\ttfamily char printable\+Cost (\begin{DoxyParamCaption}\item[{unsigned char}]{cost }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{module__tests_8cpp_ab67d48c3e97782150aac66598f768972_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ae25a9ab4d4972c7478e701ae44ca439e}\label{module__tests_8cpp_ae25a9ab4d4972c7478e701ae44ca439e}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!RAYTRACE\_RANGE@{RAYTRACE\_RANGE}}
+\index{RAYTRACE\_RANGE@{RAYTRACE\_RANGE}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{RAYTRACE\_RANGE()}{RAYTRACE\_RANGE()}}
+{\footnotesize\ttfamily const double RAYTRACE\+\_\+\+RANGE (\begin{DoxyParamCaption}\item[{20.}]{0 }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{module__tests_8cpp_ae25a9ab4d4972c7478e701ae44ca439e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a214cb9adfc50b4abd0e2132640f639dd}\label{module__tests_8cpp_a214cb9adfc50b4abd0e2132640f639dd}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!RESOLUTION@{RESOLUTION}}
+\index{RESOLUTION@{RESOLUTION}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{RESOLUTION()}{RESOLUTION()}}
+{\footnotesize\ttfamily const double RESOLUTION (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{module__tests_8cpp_a214cb9adfc50b4abd0e2132640f639dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_adf4461009ef21f644777aadc0f469132}\label{module__tests_8cpp_adf4461009ef21f644777aadc0f469132}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!ROBOT\_RADIUS@{ROBOT\_RADIUS}}
+\index{ROBOT\_RADIUS@{ROBOT\_RADIUS}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{ROBOT\_RADIUS()}{ROBOT\_RADIUS()}}
+{\footnotesize\ttfamily const double ROBOT\+\_\+\+RADIUS (\begin{DoxyParamCaption}\item[{1.}]{0 }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{module__tests_8cpp_adf4461009ef21f644777aadc0f469132_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f}\label{module__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Adjacent\+To\+Obstacle\+Can\+Still\+Move}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_ad4ae0b82faed5db2b710a038b9cf895f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276}\label{module__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Cost\+Function\+Correctness}]{ }\end{DoxyParamCaption})}
+
+Test for the cost function correctness with a larger range and different values 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a9f9609b5ae2cbb941f8c326f3fd90276_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7}\label{module__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Dynamic\+Obstacles}]{ }\end{DoxyParamCaption})}
+
+Verify that dynamic obstacles are added 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a81989f28bba6fb2f0503b643903a72cd}\label{module__tests_8cpp_a81989f28bba6fb2f0503b643903a72cd}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Fully\+Contained\+Static\+Map\+Update}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a81989f28bba6fb2f0503b643903a72cd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1}\label{module__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation}]{ }\end{DoxyParamCaption})}
+
+Test inflation for both static and dynamic obstacles 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a790b8d46b7472f667bc70b1ac2b485e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179}\label{module__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation2}]{ }\end{DoxyParamCaption})}
+
+Test specific inflation scenario to ensure we do not set inflated obstacles to be raw obstacles. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a94fa7b221aed2d9a56fb3effca4d4179_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838}\label{module__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation3}]{ }\end{DoxyParamCaption})}
+
+Test inflation behavior, starting with an empty map 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_ad0876c1fbe3e36f9dbcfddcd309a2838_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a7944d546ff12543615d752c882c1ae12}\label{module__tests_8cpp_a7944d546ff12543615d752c882c1ae12}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Inflation\+Should\+Not\+Create\+Unknowns}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a7944d546ff12543615d752c882c1ae12_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a21809284d087f0beef9c2ad655520816}\label{module__tests_8cpp_a21809284d087f0beef9c2ad655520816}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Multiple\+Additions}]{ }\end{DoxyParamCaption})}
+
+Verify that if we add a point that is already a static obstacle we do not end up with a new ostacle 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a21809284d087f0beef9c2ad655520816_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ac9fc7e80b7d8b53b7aafb59c12c4e32c}\label{module__tests_8cpp_ac9fc7e80b7d8b53b7aafb59c12c4e32c}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Overlap\+Static\+Map\+Update}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_ac9fc7e80b7d8b53b7aafb59c12c4e32c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb}\label{module__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Raytracing}]{ }\end{DoxyParamCaption})}
+
+Test for ray tracing free space 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34}\label{module__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Raytracing2}]{ }\end{DoxyParamCaption})}
+
+Test for ray tracing free space 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ad60e6773a46c10dda1470224e1f13f21}\label{module__tests_8cpp_ad60e6773a46c10dda1470224e1f13f21}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Reset\+For\+Static\+Map}]{ }\end{DoxyParamCaption})}
+
+Tests the reset method 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_ad60e6773a46c10dda1470224e1f13f21_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a0e9c8b5f0a3eba4d6e0db102be312cfa}\label{module__tests_8cpp_a0e9c8b5f0a3eba4d6e0db102be312cfa}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Static\+Map}]{ }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a0e9c8b5f0a3eba4d6e0db102be312cfa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a2c735efbf2d2bd86320b8b984579b979}\label{module__tests_8cpp_a2c735efbf2d2bd86320b8b984579b979}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Tricky\+Propagation}]{ }\end{DoxyParamCaption})}
+
+Within a certian radius of the robot, the cost map most propagate obstacles. This is to avoid a case where a hit on a far obstacle clears inscribed radius around a near one. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a2c735efbf2d2bd86320b8b984579b979_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a}\label{module__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Wave\+Interference}]{ }\end{DoxyParamCaption})}
+
+Test for wave interference 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a4d5daedd5dde37cf984f593d5c719e92}\label{module__tests_8cpp_a4d5daedd5dde37cf984f593d5c719e92}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+Window\+Copy}]{ }\end{DoxyParamCaption})}
+
+Test for copying a window of a costmap 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_a4d5daedd5dde37cf984f593d5c719e92_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981}\label{module__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/18]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{costmap}]{,  }\item[{test\+ZThreshold}]{ }\end{DoxyParamCaption})}
+
+Make sure we ignore points outside of our z threshold 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{module__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a25cb91905492fcb0c5020df1664a0275}\label{module__tests_8cpp_a25cb91905492fcb0c5020df1664a0275}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!THRESHOLD@{THRESHOLD}}
+\index{THRESHOLD@{THRESHOLD}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{THRESHOLD()}{THRESHOLD()}}
+{\footnotesize\ttfamily const unsigned char THRESHOLD (\begin{DoxyParamCaption}\item[{100}]{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{module__tests_8cpp_a25cb91905492fcb0c5020df1664a0275_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{module__tests_8cpp_a39d70538066e6e893bfefa668c2359a7}\label{module__tests_8cpp_a39d70538066e6e893bfefa668c2359a7}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!WINDOW\_LENGTH@{WINDOW\_LENGTH}}
+\index{WINDOW\_LENGTH@{WINDOW\_LENGTH}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_LENGTH()}{WINDOW\_LENGTH()}}
+{\footnotesize\ttfamily const double WINDOW\+\_\+\+LENGTH (\begin{DoxyParamCaption}\item[{10}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{module__tests_8cpp_acaf55aec82e7bf50a889e6a81db0b207}\label{module__tests_8cpp_acaf55aec82e7bf50a889e6a81db0b207}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!worldToIndex@{worldToIndex}}
+\index{worldToIndex@{worldToIndex}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{worldToIndex()}{worldToIndex()}}
+{\footnotesize\ttfamily unsigned int world\+To\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&}]{map,  }\item[{double}]{wx,  }\item[{double}]{wy }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{module__tests_8cpp_acaf55aec82e7bf50a889e6a81db0b207_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{module__tests_8cpp_acaf55aec82e7bf50a889e6a81db0b207_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{module__tests_8cpp_a893be74b15dd0554d17c6d3bce41557a}\label{module__tests_8cpp_a893be74b15dd0554d17c6d3bce41557a}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!EMPTY\_100\_BY\_100@{EMPTY\_100\_BY\_100}}
+\index{EMPTY\_100\_BY\_100@{EMPTY\_100\_BY\_100}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_100\_BY\_100}{EMPTY\_100\_BY\_100}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ EMPTY\+\_\+100\+\_\+\+BY\+\_\+100}
+
+\mbox{\Hypertarget{module__tests_8cpp_a03c09f55deafc8e6bfc9bbcc6e7c4807}\label{module__tests_8cpp_a03c09f55deafc8e6bfc9bbcc6e7c4807}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!EMPTY\_10\_BY\_10@{EMPTY\_10\_BY\_10}}
+\index{EMPTY\_10\_BY\_10@{EMPTY\_10\_BY\_10}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_10\_BY\_10}{EMPTY\_10\_BY\_10}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ EMPTY\+\_\+10\+\_\+\+BY\+\_\+10}
+
+\mbox{\Hypertarget{module__tests_8cpp_a967817a947c7820679c1c3d9aaeccb89}\label{module__tests_8cpp_a967817a947c7820679c1c3d9aaeccb89}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!MAP\_10\_BY\_10@{MAP\_10\_BY\_10}}
+\index{MAP\_10\_BY\_10@{MAP\_10\_BY\_10}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{MAP\_10\_BY\_10}{MAP\_10\_BY\_10}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ MAP\+\_\+10\+\_\+\+BY\+\_\+10}
+
+\mbox{\Hypertarget{module__tests_8cpp_ab0015d273e3592b6b73ed299306e2b7c}\label{module__tests_8cpp_ab0015d273e3592b6b73ed299306e2b7c}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!MAP\_10\_BY\_10\_CHAR@{MAP\_10\_BY\_10\_CHAR}}
+\index{MAP\_10\_BY\_10\_CHAR@{MAP\_10\_BY\_10\_CHAR}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{MAP\_10\_BY\_10\_CHAR}{MAP\_10\_BY\_10\_CHAR}}
+{\footnotesize\ttfamily const unsigned char MAP\+\_\+10\+\_\+\+BY\+\_\+10\+\_\+\+CHAR\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 初始值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0, 0, 0, 200, 200, 200,}
+\DoxyCodeLine{  0, 0, 0, 0, 100, 0, 0, 200, 200, 200,}
+\DoxyCodeLine{  0, 0, 0, 0, 100, 0, 0, 200, 200, 200,}
+\DoxyCodeLine{  70, 70, 0, 0, 0, 0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 200, 200, 200, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0, 0, 0, 255, 255, 255,}
+\DoxyCodeLine{  0, 0, 0, 0, 0, 0, 0, 255, 255, 255}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{module__tests_8cpp_ae0701fb016711ce10eb3cba639c9d24d}\label{module__tests_8cpp_ae0701fb016711ce10eb3cba639c9d24d}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!MAP\_5\_BY\_5@{MAP\_5\_BY\_5}}
+\index{MAP\_5\_BY\_5@{MAP\_5\_BY\_5}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{MAP\_5\_BY\_5}{MAP\_5\_BY\_5}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ MAP\+\_\+5\+\_\+\+BY\+\_\+5}
+
+\mbox{\Hypertarget{module__tests_8cpp_aca8f2e89280381e05df0ce8e125ba5c4}\label{module__tests_8cpp_aca8f2e89280381e05df0ce8e125ba5c4}} 
+\index{module\_tests.cpp@{module\_tests.cpp}!MAP\_5\_BY\_5\_CHAR@{MAP\_5\_BY\_5\_CHAR}}
+\index{MAP\_5\_BY\_5\_CHAR@{MAP\_5\_BY\_5\_CHAR}!module\_tests.cpp@{module\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{MAP\_5\_BY\_5\_CHAR}{MAP\_5\_BY\_5\_CHAR}}
+{\footnotesize\ttfamily const unsigned char MAP\+\_\+5\+\_\+\+BY\+\_\+5\+\_\+\+CHAR\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 初始值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0,}
+\DoxyCodeLine{  0, 0, 0, 0, 0,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

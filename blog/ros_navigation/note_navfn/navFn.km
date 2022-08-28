@@ -1,0 +1,598 @@
+{
+    "root": {
+        "data": {
+            "id": "cmhpwz9bcpc0",
+            "created": 1661695563203,
+            "text": "NavFn全局规划器"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cmhq9ujbkz40",
+                    "created": 1661696571658,
+                    "text": "NavFnROS::"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cmhqazdbkww0",
+                            "created": 1661696660544,
+                            "text": "initialize",
+                            "layout_right_offset": {
+                                "x": 24.999999627471084,
+                                "y": -39.99999940395355
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhqdgjdw6o0",
+                                    "created": 1661696854644,
+                                    "text": "全局代价地图costmap_",
+                                    "priority": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqcvpa1y80",
+                                    "created": 1661696809288,
+                                    "text": "NavFn类实例，planner_",
+                                    "priority": 2
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqe22zorc0",
+                                    "created": 1661696901542,
+                                    "text": "创建全局规划器名称下的句柄",
+                                    "priority": 3
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqelbkaeo0",
+                                    "created": 1661696943419,
+                                    "text": "发布全局规划器名称/plan，plan_pub_",
+                                    "priority": 4
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqfjkqnjs0",
+                                    "created": 1661697017984,
+                                    "text": "发布make_plan的服务，make_plan_srv_",
+                                    "priority": 5
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cmhqb658qeo0",
+                            "created": 1661696675293,
+                            "text": "makePlan",
+                            "note": "负责调用包括NavFn类成员在内的函数完成计算，控制着全局规划的整个流程。"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhrk9huqmo0",
+                                    "created": 1661700208973,
+                                    "text": "plan.clear(),等待tf",
+                                    "layout_right_offset": {
+                                        "x": 0,
+                                        "y": 6.2499999068677425
+                                    },
+                                    "priority": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhrl49mxe00",
+                                    "created": 1661700275956,
+                                    "text": "clearRobotCell",
+                                    "priority": 2,
+                                    "layout_right_offset": {
+                                        "x": 0,
+                                        "y": 7.499999888241291
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhrlbe13kw0",
+                                            "created": 1661700291459,
+                                            "text": "清理起始位置"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqd0s1z1c0",
+                                    "created": 1661696820340,
+                                    "text": "planner_->setNavArr",
+                                    "priority": 3
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhqz2yzpy80",
+                                            "created": 1661698549124,
+                                            "text": "创建costarr数组（记录全局costmap信息）"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhr0nwvgv40",
+                                            "created": 1661698673073,
+                                            "text": "potarr数组（储存各cell的Potential值）"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhr12vy9eo0",
+                                            "created": 1661698705669,
+                                            "text": "梯度数组gradx和grady（用于生成路径）"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhr26wx9xk0",
+                                            "created": 1661698792799,
+                                            "text": "传播时的pending cells"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqq969pxc0",
+                                    "created": 1661697857347,
+                                    "text": "planner_->setCostmap",
+                                    "priority": 4
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhr2yuj9ns0",
+                                            "created": 1661698853604,
+                                            "text": "给全局地图costarr赋值"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqr0wdt0g0",
+                                    "created": 1661697917700,
+                                    "text": "planner_->setStart(map_goal)",
+                                    "priority": 5
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhr4qigl2o0",
+                                            "created": 1661698992188,
+                                            "text": "设置起点，实际是终点"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqr4cg3ko0",
+                                    "created": 1661697925201,
+                                    "text": "planner_->setGoal(map_start)",
+                                    "priority": 6
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhr4yc4gc00",
+                                            "created": 1661699009219,
+                                            "text": "设置终点，其实是起点"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqrefzbog0",
+                                    "created": 1661697947184,
+                                    "text": "planner_->calcNavFnDijkstra",
+                                    "priority": 7
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhr588os1s0",
+                                            "created": 1661699030780,
+                                            "text": "完成全局路径计算"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqwewsx3k0",
+                                    "created": 1661698340021,
+                                    "text": "在目标位置附近2*tolerance的矩形范围内，寻找与目标位置最近的、且不是障碍物的cell，作为全局路径实际的终点",
+                                    "priority": 8,
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhqs81k7hc0",
+                                            "created": 1661698011614,
+                                            "text": "getPointPotential，目的是获取单点Potential值，与DBL_MAX比较，确定是否是障碍物"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cmhqsddz5z40",
+                                    "created": 1661698023249,
+                                    "text": "getPlanFromPotential",
+                                    "priority": 9
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhr75r4ozs0",
+                                            "created": 1661699182092,
+                                            "text": "plan.clear()"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhr77j6o2w0",
+                                            "created": 1661699185966,
+                                            "text": "planner_->setStart(map_goal)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhr78zgjog0",
+                                            "created": 1661699189126,
+                                            "text": "planner_->calcPath(costmap_->getSizeInCellsX() * 4)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhr7nqossg0",
+                                            "created": 1661699221248,
+                                            "text": "publishPlan"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cmhq9z0lifs0",
+                    "created": 1661696581410,
+                    "text": "NavFn::",
+                    "layout_mind_offset": {
+                        "x": 528.7499921210112,
+                        "y": 1047.499984391034
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cmhrnlnbzew0",
+                            "created": 1661700470518,
+                            "text": "将costmap赋值给costarr数组",
+                            "expandState": "expand",
+                            "layout_right_offset": {
+                                "x": 2,
+                                "y": 30
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhqgru6daw0",
+                                    "created": 1661697114333,
+                                    "text": "setCostmap",
+                                    "layout_left_offset": {
+                                        "x": -70.83333051866964,
+                                        "y": 0.8333333002196355
+                                    },
+                                    "layout_right_offset": {
+                                        "x": 594.8333328904379,
+                                        "y": -1.7500000807144716
+                                    },
+                                    "priority": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cmhrnxtkw880",
+                            "created": 1661700497017,
+                            "text": "Dijkstra计算主体",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhrn5zltio0",
+                                    "created": 1661700436432,
+                                    "text": "calcNavFnDijkstra",
+                                    "layout_left_offset": {
+                                        "x": -106.66666242811431,
+                                        "y": 2.4999999006589633
+                                    },
+                                    "layout_right_offset": {
+                                        "x": 663.7499757669876,
+                                        "y": 4.416666482471783
+                                    },
+                                    "priority": 2
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhqgt8uoug0",
+                                            "created": 1661697117398,
+                                            "text": "setupNavFn",
+                                            "layout_left_offset": {
+                                                "x": -139.9999944369,
+                                                "y": -3.333333200878684
+                                            }
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhqgwd7bjk0",
+                                            "created": 1661697124191,
+                                            "text": "propNavFnDijkstra",
+                                            "layout_left_offset": {
+                                                "x": -111.66666222943212,
+                                                "y": 1.6666666004393278
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cmhrnd6xzu00",
+                                                    "created": 1661700452113,
+                                                    "text": "updateCell",
+                                                    "layout_left_offset": {
+                                                        "x": 15.833332704173301,
+                                                        "y": -5.684341886080802e-14
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cmhqh2a4g5c0",
+                                            "created": 1661697137066,
+                                            "text": "calcPath",
+                                            "layout_left_offset": {
+                                                "x": -159.1666603419518,
+                                                "y": 3.333333200878542
+                                            }
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cmhroh29n7k0",
+                            "created": 1661700538901,
+                            "text": "处理costarr，初始化potarr、gradx、grady",
+                            "expandState": "expand",
+                            "layout_right_offset": {
+                                "x": 2,
+                                "y": -23
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhqgt8uoug0",
+                                    "created": 1661697117398,
+                                    "text": "setupNavFn",
+                                    "layout_right_offset": {
+                                        "x": 525.9999997268125,
+                                        "y": 2
+                                    },
+                                    "priority": 3
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cmhrp3w2zio0",
+                            "created": 1661700588593,
+                            "text": "更新potarr数组,主要的传播函数，Dijkstra算法，一个广度优先算法， 运行cycles次或者直到所以的单元格被更新或者起始单元格已经被找到",
+                            "expandState": "expand",
+                            "layout_right_offset": {
+                                "x": 1.666666600439271,
+                                "y": -15.833332704173358
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhqgwd7bjk0",
+                                    "created": 1661697124191,
+                                    "text": "propNavFnDijkstra",
+                                    "layout_left_offset": {
+                                        "x": -111.66666222943212,
+                                        "y": 1.6666666004393278
+                                    },
+                                    "layout_right_offset": {
+                                        "x": 17.666642485394277,
+                                        "y": -1.1666668984624948
+                                    },
+                                    "priority": 4
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhrnd6xzu00",
+                                            "created": 1661700452113,
+                                            "text": "updateCell",
+                                            "layout_left_offset": {
+                                                "x": -136.6666612360214,
+                                                "y": 1.666666600439271
+                                            },
+                                            "layout_right_offset": {
+                                                "x": 9,
+                                                "y": 0
+                                            }
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cmhrpcmi0og0",
+                            "created": 1661700607605,
+                            "text": "单点potential传播,updateCell用于更新某个单元格(cell) 的Potential值，先获取当前cell四周邻点的potential值，并取最小的值存入ta",
+                            "expandState": "expand",
+                            "layout_right_offset": {
+                                "x": 7.333333200878542,
+                                "y": 58.333336280452045
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhrnd6xzu00",
+                                    "created": 1661700452113,
+                                    "text": "updateCell",
+                                    "layout_left_offset": {
+                                        "x": -136.6666612360214,
+                                        "y": 1.666666600439271
+                                    },
+                                    "layout_right_offset": {
+                                        "x": 62.91666665631874,
+                                        "y": -0.833333300219465
+                                    },
+                                    "priority": 7
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cmhrpinlx2o0",
+                            "created": 1661700620733,
+                            "text": "负责在potarr数组的基础上选取一些cell点来生成最终的全局规划路径，从起点开始沿着最优行走代价值梯度下降的方向寻找到目标点的最优轨迹",
+                            "expandState": "expand",
+                            "layout_right_offset": {
+                                "x": 1.8333333002196923,
+                                "y": -48.999999205271365
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhqh2a4g5c0",
+                                    "created": 1661697137066,
+                                    "text": "calcPath",
+                                    "layout_left_offset": {
+                                        "x": -193.33332565095714,
+                                        "y": 0.8333333002196355
+                                    },
+                                    "layout_right_offset": {
+                                        "x": -6.00000632603917,
+                                        "y": -1
+                                    },
+                                    "priority": 5
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cmhs1kxc94g0",
+                                            "created": 1661701566045,
+                                            "text": "gradCell",
+                                            "layout_right_offset": {
+                                                "x": 29.999999999999886,
+                                                "y": 0
+                                            }
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cmhryqni5fc0",
+                            "created": 1661701343418,
+                            "text": "给cell进行梯度计算，正值表示向右和向下",
+                            "layout_right_offset": {
+                                "x": 7.666666600439385,
+                                "y": -44.499999105930556
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cmhs1kxc94g0",
+                                    "created": 1661701566045,
+                                    "text": "gradCell",
+                                    "layout_right_offset": {
+                                        "x": 525.5000000372528,
+                                        "y": -3
+                                    },
+                                    "priority": 6
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-purple-compat",
+    "version": "1.4.43"
+}

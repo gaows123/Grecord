@@ -1,0 +1,5 @@
+<map id="global_planner::PlannerWithCostmap::poseCallback" name="global_planner::PlannerWithCostmap::poseCallback">
+<area shape="rect" id="node1" title=" " alt="" coords="5,51,188,92"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="236,5,433,47"/>
+<area shape="rect" id="node3" href="$classglobal__planner_1_1_global_planner.html#abb7f40f6a851f88e6b7668a38571712a" title="根据目标点规划处全局路径" alt="" coords="237,95,432,136"/>
+</map>

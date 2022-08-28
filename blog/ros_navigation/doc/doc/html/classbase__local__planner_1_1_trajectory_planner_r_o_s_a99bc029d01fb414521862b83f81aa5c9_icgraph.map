@@ -1,0 +1,8 @@
+<map id="base_local_planner::TrajectoryPlannerROS::isInitialized" name="base_local_planner::TrajectoryPlannerROS::isInitialized">
+<area shape="rect" id="node1" title=" " alt="" coords="455,125,615,181"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#adb2d96332da31a154db84930754409af" title="根据当前机器人坐标，朝向和速度，计算下个下发速度" alt="" coords="213,5,407,61"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a9a758c9bd9cb0202ed06c07c5aa49c03" title="构造ros封装类" alt="" coords="230,85,390,141"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a5196b75a728ab7c37d6bdd99faa7b541" title="检查是否已经到达了目标点" alt="" coords="230,165,390,221"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#af3a0c8be5746b1e1d8657f6b867ea934" title="更新局部规划器要跟随的路径" alt="" coords="230,245,390,301"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory_planner_r_o_s.html#a0ea81ba7bfd31aaa999477ae8f9e0d0f" title="构造ros封装类" alt="" coords="5,85,165,141"/>
+</map>

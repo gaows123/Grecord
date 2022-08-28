@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d/plugins/voxel_layer.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_a0da6f6d3a3bdeb2612e0b1538cfeb20.html">plugins</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle"><div class="title">voxel_layer.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="voxel__layer_8h_source.html">costmap_2d/voxel_layer.h</a>&gt;</code><br />
+<code>#include &lt;pluginlib/class_list_macros.h&gt;</code><br />
+<code>#include &lt;sensor_msgs/point_cloud2_iterator.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+voxel_layer.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="voxel__layer_8cpp__incl.png" border="0" usemap="#acostmap__2d_2plugins_2voxel__layer_8cpp" alt=""/></div>
+<map name="acostmap__2d_2plugins_2voxel__layer_8cpp" id="acostmap__2d_2plugins_2voxel__layer_8cpp">
+<area shape="rect" title=" " alt="" coords="1596,5,1735,47"/>
+<area shape="rect" href="voxel__layer_8h.html" title=" " alt="" coords="1402,102,1577,129"/>
+<area shape="rect" title=" " alt="" coords="1602,95,1730,136"/>
+<area shape="rect" title=" " alt="" coords="1754,95,1932,136"/>
+<area shape="rect" title=" " alt="" coords="1634,370,1708,397"/>
+<area shape="rect" href="layer_8h.html" title=" " alt="" coords="767,370,903,397"/>
+<area shape="rect" href="layered__costmap_8h.html" title=" " alt="" coords="766,452,904,493"/>
+<area shape="rect" href="observation__buffer_8h.html" title=" " alt="" coords="1732,363,1896,404"/>
+<area shape="rect" title=" " alt="" coords="1865,541,2050,568"/>
+<area shape="rect" title=" " alt="" coords="707,191,872,218"/>
+<area shape="rect" title=" " alt="" coords="27,281,214,307"/>
+<area shape="rect" title=" " alt="" coords="238,281,416,307"/>
+<area shape="rect" title=" " alt="" coords="440,273,582,315"/>
+<area shape="rect" title=" " alt="" coords="607,281,786,307"/>
+<area shape="rect" title=" " alt="" coords="1810,273,1980,315"/>
+<area shape="rect" title=" " alt="" coords="2004,281,2194,307"/>
+<area shape="rect" title=" " alt="" coords="2218,273,2361,315"/>
+<area shape="rect" title=" " alt="" coords="2488,191,2702,218"/>
+<area shape="rect" href="obstacle__layer_8h.html" title=" " alt="" coords="1362,184,1508,225"/>
+<area shape="rect" href="voxel__grid_8h.html" title=" " alt="" coords="3044,191,3199,218"/>
+<area shape="rect" href="costmap__2d_8h.html" title=" " alt="" coords="952,541,1131,568"/>
+<area shape="rect" title=" " alt="" coords="1156,541,1210,568"/>
+<area shape="rect" title=" " alt="" coords="1192,459,1302,486"/>
+<area shape="rect" title=" " alt="" coords="971,616,1030,643"/>
+<area shape="rect" title=" " alt="" coords="1054,616,1112,643"/>
+<area shape="rect" title=" " alt="" coords="1486,616,1646,643"/>
+<area shape="rect" title=" " alt="" coords="1240,616,1358,643"/>
+<area shape="rect" href="cost__values_8h.html" title=" " alt="" coords="699,541,878,568"/>
+<area shape="rect" title=" " alt="" coords="1752,459,1790,486"/>
+<area shape="rect" title=" " alt="" coords="1815,459,1895,486"/>
+<area shape="rect" href="observation_8h.html" title=" " alt="" coords="1553,459,1728,486"/>
+<area shape="rect" href="costmap__layer_8h.html" title=" " alt="" coords="911,273,1058,315"/>
+<area shape="rect" title=" " alt="" coords="1260,281,1423,307"/>
+<area shape="rect" title=" " alt="" coords="1448,273,1633,315"/>
+<area shape="rect" href="footprint_8h.html" title=" " alt="" coords="1082,281,1236,307"/>
+<area shape="rect" title=" " alt="" coords="928,370,1105,397"/>
+<area shape="rect" title=" " alt="" coords="1130,370,1359,397"/>
+<area shape="rect" title=" " alt="" coords="1384,370,1558,397"/>
+<area shape="rect" title=" " alt="" coords="3470,281,3531,307"/>
+<area shape="rect" title=" " alt="" coords="3556,281,3621,307"/>
+<area shape="rect" title=" " alt="" coords="2778,281,2842,307"/>
+<area shape="rect" title=" " alt="" coords="2866,281,2932,307"/>
+<area shape="rect" title=" " alt="" coords="2956,281,3018,307"/>
+<area shape="rect" title=" " alt="" coords="3043,281,3107,307"/>
+<area shape="rect" title=" " alt="" coords="3131,281,3206,307"/>
+<area shape="rect" title=" " alt="" coords="3230,281,3330,307"/>
+<area shape="rect" title=" " alt="" coords="3355,281,3446,307"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacecostmap__2d"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecostmap__2d.html">costmap_2d</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a4fdbd648eb843338bbc94b90cd7e5ec5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="voxel__layer_8cpp.html#a4fdbd648eb843338bbc94b90cd7e5ec5">VOXEL_BITS</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:a4fdbd648eb843338bbc94b90cd7e5ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a4fdbd648eb843338bbc94b90cd7e5ec5" name="a4fdbd648eb843338bbc94b90cd7e5ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fdbd648eb843338bbc94b90cd7e5ec5">&#9670;&nbsp;</a></span>VOXEL_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VOXEL_BITS&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

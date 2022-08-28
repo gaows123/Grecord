@@ -1,0 +1,54 @@
+@startuml
+scale 2
+package "navigation" #green{
+
+package "nav_core" #pink {
+class RecoveryBehavior {
+    +virtual void initialize() = 0
+    +virtual void runBehavior() = 0
+    +virtual ~RecoveryBehavior(){}
+    #RecoveryBehavior(){}
+}
+
+}
+
+class ClearCostmapRecovery {
+    +ClearCostmapRecovery()
+    +void initialize()
+    +void runBehavior()
+    -void clear()
+    -void clearMap()
+    -costmap_2d::Costmap2DROS* global_costmap_
+    -costmap_2d::Costmap2DROS*local_costmap_
+}
+
+
+
+class RotateRecovery {
+    +RotateRecovery()
+    +void initialize()
+    +void runBehavior()
+    +~RotateRecovery()
+    -costmap_2d::Costmap2DROS* local_costmap_
+}
+
+
+
+class MoveSlowAndClear {
+    +MoveSlowAndClear();
+    +~MoveSlowAndClear()
+    +void initialize()
+    +void runBehavior()
+    -void setRobotSpeed()
+    -void distanceCheck()
+    -double getSqDistance()
+    -void removeSpeedLimit()
+}
+
+
+RecoveryBehavior <|-- ClearCostmapRecovery
+RecoveryBehavior <|-- RotateRecovery
+RecoveryBehavior <|-- MoveSlowAndClear
+
+}
+@enduml

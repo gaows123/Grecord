@@ -1,0 +1,180 @@
+\hypertarget{navtest_8cpp}{}\doxysection{navfn/src/navtest/navtest.cpp 文件参考}
+\label{navtest_8cpp}\index{navfn/src/navtest/navtest.cpp@{navfn/src/navtest/navtest.cpp}}
+{\ttfamily \#include $<$navfn/navfn.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}navwin.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$pgm.\+h$>$}\newline
+navtest.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{navtest_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{navtest_8cpp_a6eba94ef0ee9b78c14e3926a0643f4d5}{unknown\+\_\+gray}}~0x\+CC
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{navtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c}{get\+\_\+ms}} ()
+\item 
+void \mbox{\hyperlink{navtest_8cpp_a467f6e28bdb16df250528f1daa41751f}{disp\+Pot}} (\mbox{\hyperlink{classnavfn_1_1_nav_fn}{Nav\+Fn}} $\ast$nav)
+\item 
+\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$ \mbox{\hyperlink{navtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2}{read\+PGM}} (const char $\ast$fname, int $\ast$width, int $\ast$height, bool raw=false)
+\item 
+int \mbox{\hyperlink{navtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{navtest_8cpp_ace863d8925ca590c1f53eb63ff29a680}{setcostobs}} (\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$cmap, int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, int w)
+\item 
+void \mbox{\hyperlink{navtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a}{setcostunk}} (\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$cmap, int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, int w)
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}} \mbox{[}2\mbox{]}
+\item 
+int \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{classnavfn_1_1_nav_win}{Nav\+Win}} $\ast$ \mbox{\hyperlink{navtest_8cpp_ad0fd31a885376dad3beac0f13b131713}{nwin}}
+\item 
+static int \mbox{\hyperlink{navtest_8cpp_addb1c8b80d92527208410cfd13abb55d}{CS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{navtest_8cpp_a6eba94ef0ee9b78c14e3926a0643f4d5}\label{navtest_8cpp_a6eba94ef0ee9b78c14e3926a0643f4d5}} 
+\index{navtest.cpp@{navtest.cpp}!unknown\_gray@{unknown\_gray}}
+\index{unknown\_gray@{unknown\_gray}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{unknown\_gray}{unknown\_gray}}
+{\footnotesize\ttfamily \#define unknown\+\_\+gray~0x\+CC}
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{navtest_8cpp_a467f6e28bdb16df250528f1daa41751f}\label{navtest_8cpp_a467f6e28bdb16df250528f1daa41751f}} 
+\index{navtest.cpp@{navtest.cpp}!dispPot@{dispPot}}
+\index{dispPot@{dispPot}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{dispPot()}{dispPot()}}
+{\footnotesize\ttfamily void disp\+Pot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnavfn_1_1_nav_fn}{Nav\+Fn}} $\ast$}]{nav }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{navtest_8cpp_a467f6e28bdb16df250528f1daa41751f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{navtest_8cpp_a467f6e28bdb16df250528f1daa41751f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{navtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c}\label{navtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c}} 
+\index{navtest.cpp@{navtest.cpp}!get\_ms@{get\_ms}}
+\index{get\_ms@{get\_ms}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_ms()}{get\_ms()}}
+{\footnotesize\ttfamily double get\+\_\+ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{navtest_8cpp_ab1a8ed925b36720afb4df2ed29d1fb0c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{navtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{navtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{navtest.cpp@{navtest.cpp}!main@{main}}
+\index{main@{main}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{navtest_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{navtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2}\label{navtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2}} 
+\index{navtest.cpp@{navtest.cpp}!readPGM@{readPGM}}
+\index{readPGM@{readPGM}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{readPGM()}{readPGM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$ read\+PGM (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fname,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{bool}]{raw = {\ttfamily false} }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{navtest_8cpp_a1116faf9c12b574e1b58a41e9d35a1c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{navtest_8cpp_ace863d8925ca590c1f53eb63ff29a680}\label{navtest_8cpp_ace863d8925ca590c1f53eb63ff29a680}} 
+\index{navtest.cpp@{navtest.cpp}!setcostobs@{setcostobs}}
+\index{setcostobs@{setcostobs}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{setcostobs()}{setcostobs()}}
+{\footnotesize\ttfamily void setcostobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$}]{cmap,  }\item[{int}]{n,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{navtest_8cpp_ace863d8925ca590c1f53eb63ff29a680_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{navtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a}\label{navtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a}} 
+\index{navtest.cpp@{navtest.cpp}!setcostunk@{setcostunk}}
+\index{setcostunk@{setcostunk}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{setcostunk()}{setcostunk()}}
+{\footnotesize\ttfamily void setcostunk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$}]{cmap,  }\item[{int}]{n,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{navtest_8cpp_a0be847867182c4112b953ae0f7ee5a5a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{navtest_8cpp_addb1c8b80d92527208410cfd13abb55d}\label{navtest_8cpp_addb1c8b80d92527208410cfd13abb55d}} 
+\index{navtest.cpp@{navtest.cpp}!CS@{CS}}
+\index{CS@{CS}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{CS}{CS}}
+{\footnotesize\ttfamily int CS\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}\label{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}} 
+\index{navtest.cpp@{navtest.cpp}!goal@{goal}}
+\index{goal@{goal}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{goal}{goal}}
+{\footnotesize\ttfamily int goal\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{navtest_8cpp_ad0fd31a885376dad3beac0f13b131713}\label{navtest_8cpp_ad0fd31a885376dad3beac0f13b131713}} 
+\index{navtest.cpp@{navtest.cpp}!nwin@{nwin}}
+\index{nwin@{nwin}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{nwin}{nwin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnavfn_1_1_nav_win}{Nav\+Win}}$\ast$ nwin}
+
+\mbox{\Hypertarget{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}\label{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}} 
+\index{navtest.cpp@{navtest.cpp}!start@{start}}
+\index{start@{start}!navtest.cpp@{navtest.cpp}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily int start\mbox{[}2\mbox{]}}
+

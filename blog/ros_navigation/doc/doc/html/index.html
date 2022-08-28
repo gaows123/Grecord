@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: navigation-noetic</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">navigation-noetic </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><dl class="section author"><dt>作者</dt><dd>Ioan Sucan</dd></dl>
+<p ><b>odom_localization</b> Takes in ground truth pose information for a robot base (e.g., from a simulator or motion capture system) and republishes it as if a localization system were in use.</p>
+<hr  />
+<h1><a class="anchor" id="usage"></a>
+Usage</h1>
+<pre class="fragment">$ fake_localization
+</pre><hr  />
+<h1><a class="anchor" id="topic"></a>
+ROS topics</h1>
+<p >Subscribes to (name/type):</p><ul>
+<li><b>"base_pose_ground_truth"</b> nav_msgs/Odometry : robot's odometric pose. Only the position information is used (velocity is ignored).</li>
+</ul>
+<p >Publishes to (name / type):</p><ul>
+<li><b>"amcl_pose"</b> geometry_msgs/PoseWithCovarianceStamped : 简单转发仿真器来的位姿 robot's estimated pose in the map, with covariance</li>
+<li><b>"particlecloud"</b> geometry_msgs/PoseArray : 在rviz和nav_view中使用，来可视化机器人位姿的粒子云 fake set of poses being maintained by the filter (one paricle only).</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="parameters"></a>
+ROS parameters</h1>
+<ul>
+<li>"~odom_frame_id" (string) : The odometry frame to be used, default: "odom" </li>
+</ul>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

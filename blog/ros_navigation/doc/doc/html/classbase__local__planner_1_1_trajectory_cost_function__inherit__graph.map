@@ -1,0 +1,8 @@
+<map id="base_local_planner::TrajectoryCostFunction" name="base_local_planner::TrajectoryCostFunction">
+<area shape="rect" id="node1" title="Provides an interface for critics of trajectories During each sampling run, a batch of many trajector..." alt="" coords="5,136,171,177"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_map_grid_cost_function.html" title=" " alt="" coords="235,5,391,47"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_obstacle_cost_function.html" title="Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajec..." alt="" coords="233,71,392,112"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_oscillation_cost_function.html" title=" " alt="" coords="229,136,397,177"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_prefer_forward_cost_function.html" title=" " alt="" coords="219,201,407,243"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_twirling_cost_function.html" title=" " alt="" coords="237,267,388,308"/>
+</map>

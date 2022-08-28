@@ -1,0 +1,122 @@
+\hypertarget{simple__trajectory__generator_8h_source}{}\doxysection{simple\+\_\+trajectory\+\_\+generator.\+h}
+\label{simple__trajectory__generator_8h_source}\index{base\_local\_planner/include/base\_local\_planner/simple\_trajectory\_generator.h@{base\_local\_planner/include/base\_local\_planner/simple\_trajectory\_generator.h}}
+\mbox{\hyperlink{simple__trajectory__generator_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: TKruse}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef SIMPLE\_TRAJECTORY\_GENERATOR\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define SIMPLE\_TRAJECTORY\_GENERATOR\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__sample__generator_8h}{base\_local\_planner/trajectory\_sample\_generator.h}}>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{local__planner__limits_8h}{base\_local\_planner/local\_planner\_limits.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <Eigen/Core>}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{61 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator}{SimpleTrajectoryGenerator}}: \textcolor{keyword}{public} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_sample_generator}{base\_local\_planner::TrajectorySampleGenerator}} \{}
+\DoxyCodeLine{62 \textcolor{keyword}{public}:}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a83cdc24bc40a5ed55ec7d089c67d8018}{SimpleTrajectoryGenerator}}() \{}
+\DoxyCodeLine{65     \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a0586ccaf8b6372830bd715d476889bb9}{limits\_}} = NULL;}
+\DoxyCodeLine{66   \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_aea15c7d1fe8977c75334caff43b12925}{\string~SimpleTrajectoryGenerator}}() \{\}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{79   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf}{initialise}}(}
+\DoxyCodeLine{80       \textcolor{keyword}{const} Eigen::Vector3f\& pos,}
+\DoxyCodeLine{81       \textcolor{keyword}{const} Eigen::Vector3f\& vel,}
+\DoxyCodeLine{82       \textcolor{keyword}{const} Eigen::Vector3f\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}},}
+\DoxyCodeLine{83       \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\_local\_planner::LocalPlannerLimits}}* limits,}
+\DoxyCodeLine{84       \textcolor{keyword}{const} Eigen::Vector3f\& vsamples,}
+\DoxyCodeLine{85       std::vector<Eigen::Vector3f> additional\_samples,}
+\DoxyCodeLine{86       \textcolor{keywordtype}{bool} discretize\_by\_time = \textcolor{keyword}{false});}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{98   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf}{initialise}}(}
+\DoxyCodeLine{99       \textcolor{keyword}{const} Eigen::Vector3f\& pos,}
+\DoxyCodeLine{100       \textcolor{keyword}{const} Eigen::Vector3f\& vel,}
+\DoxyCodeLine{101       \textcolor{keyword}{const} Eigen::Vector3f\& \mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}},}
+\DoxyCodeLine{102       \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\_local\_planner::LocalPlannerLimits}}* limits,}
+\DoxyCodeLine{103       \textcolor{keyword}{const} Eigen::Vector3f\& vsamples,}
+\DoxyCodeLine{104       \textcolor{keywordtype}{bool} discretize\_by\_time = \textcolor{keyword}{false});}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{114   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83}{setParameters}}(\textcolor{keywordtype}{double} sim\_time,}
+\DoxyCodeLine{115       \textcolor{keywordtype}{double} sim\_granularity,}
+\DoxyCodeLine{116       \textcolor{keywordtype}{double} angular\_sim\_granularity,}
+\DoxyCodeLine{117       \textcolor{keywordtype}{bool} use\_dwa = \textcolor{keyword}{false},    \textcolor{comment}{// 默认使用trajectory rollout}}
+\DoxyCodeLine{118       \textcolor{keywordtype}{double} sim\_period = 0.0);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{123   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2}{hasMoreTrajectories}}();}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{128   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8}{nextTrajectory}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131   \textcolor{keyword}{static} Eigen::Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626}{computeNewPositions}}(\textcolor{keyword}{const} Eigen::Vector3f\& pos,}
+\DoxyCodeLine{132       \textcolor{keyword}{const} Eigen::Vector3f\& vel, \textcolor{keywordtype}{double} dt);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134   \textcolor{keyword}{static} Eigen::Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075}{computeNewVelocities}}(\textcolor{keyword}{const} Eigen::Vector3f\& sample\_target\_vel,}
+\DoxyCodeLine{135       \textcolor{keyword}{const} Eigen::Vector3f\& vel, Eigen::Vector3f acclimits, \textcolor{keywordtype}{double} dt);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768}{generateTrajectory}}(}
+\DoxyCodeLine{138         Eigen::Vector3f pos,}
+\DoxyCodeLine{139         Eigen::Vector3f vel,}
+\DoxyCodeLine{140         Eigen::Vector3f sample\_target\_vel,}
+\DoxyCodeLine{141         \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\_local\_planner::Trajectory}}\& traj);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_acc42f25461d9894845955e5d464e4a58}{next\_sample\_index\_}};}
+\DoxyCodeLine{146   \textcolor{comment}{// to store sample params of each sample between init and generation}}
+\DoxyCodeLine{147   \textcolor{comment}{// 存储初始化和产生过程中样本的参数？}}
+\DoxyCodeLine{148   std::vector<Eigen::Vector3f> \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a6084045fc45c79ded7ef6b75f60320e7}{sample\_params\_}};}
+\DoxyCodeLine{149   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{base\_local\_planner::LocalPlannerLimits}}* \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a0586ccaf8b6372830bd715d476889bb9}{limits\_}};}
+\DoxyCodeLine{150   Eigen::Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a1e308de90ce96375e50889bb75398830}{pos\_}};}
+\DoxyCodeLine{151   Eigen::Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a6d5012705423167541f096bedaa5152f}{vel\_}};}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153   \textcolor{comment}{// 局部轨迹的速度是否随着时间变化}}
+\DoxyCodeLine{154   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_aa811b5385f768045ec76638d431c4289}{continued\_acceleration\_}};}
+\DoxyCodeLine{155   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a719ba193671c3057ac1dace84aa01526}{discretize\_by\_time\_}};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a6e59c0e68ed11342bcad2d80db5f967d}{sim\_time\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_ac8e05c3fe4516c7343621649722b1bae}{sim\_granularity\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_abe5c2bf96effe4753a884f5947044fb9}{angular\_sim\_granularity\_}};}
+\DoxyCodeLine{158   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_ad388680d803d492b2565c7f3f4a508e6}{use\_dwa\_}};}
+\DoxyCodeLine{159   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator_a5447b0d5c0fb3f642db474c86d0e33d8}{sim\_period\_}}; \textcolor{comment}{// 该参数只针对DWA}}
+\DoxyCodeLine{160 \};}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \} \textcolor{comment}{/* namespace base\_local\_planner */}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SIMPLE\_TRAJECTORY\_GENERATOR\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

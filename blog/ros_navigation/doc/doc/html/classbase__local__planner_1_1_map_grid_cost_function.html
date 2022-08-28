@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::MapGridCostFunction类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html">MapGridCostFunction</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_map_grid_cost_function-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::MapGridCostFunction类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="map__grid__cost__function_8h_source.html">map_grid_cost_function.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::MapGridCostFunction 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function__inherit__graph.png" border="0" usemap="#abase__local__planner_1_1_map_grid_cost_function_inherit__map" alt="Inheritance graph"/></div>
+<map name="abase__local__planner_1_1_map_grid_cost_function_inherit__map" id="abase__local__planner_1_1_map_grid_cost_function_inherit__map">
+<area shape="rect" title=" " alt="" coords="10,95,166,136"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_cost_function.html" title="Provides an interface for critics of trajectories During each sampling run, a batch of many trajector..." alt="" coords="5,5,171,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+base_local_planner::MapGridCostFunction 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function__coll__graph.png" border="0" usemap="#abase__local__planner_1_1_map_grid_cost_function_coll__map" alt="Collaboration graph"/></div>
+<map name="abase__local__planner_1_1_map_grid_cost_function_coll__map" id="abase__local__planner_1_1_map_grid_cost_function_coll__map">
+<area shape="rect" title=" " alt="" coords="284,64,440,105"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_cost_function.html" title="Provides an interface for critics of trajectories During each sampling run, a batch of many trajector..." alt="" coords="7,5,173,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,71,175,98"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html" title="A grid of MapCell cells that is used to propagate path and goal distances for the trajectory controll..." alt="" coords="23,123,157,164"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a37e0fd0048db78bb703946b56daafe25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a37e0fd0048db78bb703946b56daafe25">MapGridCostFunction</a> (<a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *costmap, double xshift=0.0, double yshift=0.0, bool is_local_goal_function=false, <a class="el" href="namespacebase__local__planner.html#a5b9cbdd645f780317faf39a970c3824c">CostAggregationType</a> aggregationType=<a class="el" href="namespacebase__local__planner.html#a5b9cbdd645f780317faf39a970c3824ca10a1a85cd52631b78010d22d9e0876c6">Last</a>)</td></tr>
+<tr class="separator:a37e0fd0048db78bb703946b56daafe25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3615fe05f64fd08e33133ebdf0059dfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a3615fe05f64fd08e33133ebdf0059dfa">~MapGridCostFunction</a> ()</td></tr>
+<tr class="separator:a3615fe05f64fd08e33133ebdf0059dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f336c23114bcd9ea8fa24462465277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a07f336c23114bcd9ea8fa24462465277">setTargetPoses</a> (std::vector&lt; geometry_msgs::PoseStamped &gt; target_poses)</td></tr>
+<tr class="separator:a07f336c23114bcd9ea8fa24462465277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3d73260adc793dde0317b532b29f8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a7a3d73260adc793dde0317b532b29f8a">setXShift</a> (double xshift)</td></tr>
+<tr class="separator:a7a3d73260adc793dde0317b532b29f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fbe47f2c31ea241b86d5e61b47428a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a08fbe47f2c31ea241b86d5e61b47428a">setYShift</a> (double yshift)</td></tr>
+<tr class="separator:a08fbe47f2c31ea241b86d5e61b47428a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c1cdf742342db135a15eaaad3a8d86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a02c1cdf742342db135a15eaaad3a8d86">setStopOnFailure</a> (bool stop_on_failure)</td></tr>
+<tr class="memdesc:a02c1cdf742342db135a15eaaad3a8d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, failures along the path cause the entire path to be rejected.  <a href="classbase__local__planner_1_1_map_grid_cost_function.html#a02c1cdf742342db135a15eaaad3a8d86">更多...</a><br /></td></tr>
+<tr class="separator:a02c1cdf742342db135a15eaaad3a8d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f80d67ddeefec5871b4828ddafb5dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#af3f80d67ddeefec5871b4828ddafb5dc">prepare</a> ()</td></tr>
+<tr class="separator:af3f80d67ddeefec5871b4828ddafb5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4332b1fd1c72795c87fb5d3a427df476"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a4332b1fd1c72795c87fb5d3a427df476">scoreTrajectory</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj)</td></tr>
+<tr class="separator:a4332b1fd1c72795c87fb5d3a427df476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14783081aef0e5f4702edf317a10c167"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a14783081aef0e5f4702edf317a10c167">obstacleCosts</a> ()</td></tr>
+<tr class="separator:a14783081aef0e5f4702edf317a10c167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e561793dbbb51118834f19673e17892"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a9e561793dbbb51118834f19673e17892">unreachableCellCosts</a> ()</td></tr>
+<tr class="separator:a9e561793dbbb51118834f19673e17892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33">getCellCosts</a> (unsigned int cx, unsigned int cy)</td></tr>
+<tr class="separator:a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1_trajectory_cost_function')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html">base_local_planner::TrajectoryCostFunction</a></td></tr>
+<tr class="memitem:a351dddca226f210a09bd10c151e2975f inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a351dddca226f210a09bd10c151e2975f">prepare</a> ()=0</td></tr>
+<tr class="separator:a351dddca226f210a09bd10c151e2975f inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6908a8071270b455fc25b48db76e2d3c inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a6908a8071270b455fc25b48db76e2d3c">scoreTrajectory</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj)=0</td></tr>
+<tr class="separator:a6908a8071270b455fc25b48db76e2d3c inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaae8d899bd41d8baf02bf7aa175ded9 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#abaae8d899bd41d8baf02bf7aa175ded9">getScale</a> ()</td></tr>
+<tr class="separator:abaae8d899bd41d8baf02bf7aa175ded9 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816da4ed3c9be419fc00abb271d5a8b5 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a816da4ed3c9be419fc00abb271d5a8b5">setScale</a> (double scale)</td></tr>
+<tr class="separator:a816da4ed3c9be419fc00abb271d5a8b5 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac606d6ffc0a09f96d04cbb671c903d68 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#ac606d6ffc0a09f96d04cbb671c903d68">~TrajectoryCostFunction</a> ()</td></tr>
+<tr class="separator:ac606d6ffc0a09f96d04cbb671c903d68 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a22d5b7bb371a8b5593830029db9151a9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::PoseStamped &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a22d5b7bb371a8b5593830029db9151a9">target_poses_</a></td></tr>
+<tr class="separator:a22d5b7bb371a8b5593830029db9151a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a852583e42ce771a6741116986a063a64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a852583e42ce771a6741116986a063a64">costmap_</a></td></tr>
+<tr class="separator:a852583e42ce771a6741116986a063a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f719e06199db21bc4aec99efe7ab2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_map_grid.html">base_local_planner::MapGrid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a01f719e06199db21bc4aec99efe7ab2f">map_</a></td></tr>
+<tr class="separator:a01f719e06199db21bc4aec99efe7ab2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc402c1c11dafcb69ec5d82480b89296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacebase__local__planner.html#a5b9cbdd645f780317faf39a970c3824c">CostAggregationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#abc402c1c11dafcb69ec5d82480b89296">aggregationType_</a></td></tr>
+<tr class="separator:abc402c1c11dafcb69ec5d82480b89296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72819f98ac6695d4ea025f0566bf1b5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#af72819f98ac6695d4ea025f0566bf1b5">xshift_</a></td></tr>
+<tr class="memdesc:af72819f98ac6695d4ea025f0566bf1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">xshift and yshift allow scoring for different  <a href="classbase__local__planner_1_1_map_grid_cost_function.html#af72819f98ac6695d4ea025f0566bf1b5">更多...</a><br /></td></tr>
+<tr class="separator:af72819f98ac6695d4ea025f0566bf1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3153c7d93524431e69f4fc5d72a6b4e6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a3153c7d93524431e69f4fc5d72a6b4e6">yshift_</a></td></tr>
+<tr class="separator:a3153c7d93524431e69f4fc5d72a6b4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f2abca88bdc9f339a76704f25d6654"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a99f2abca88bdc9f339a76704f25d6654">is_local_goal_function_</a></td></tr>
+<tr class="separator:a99f2abca88bdc9f339a76704f25d6654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d1f1bed6814ca5557eb2a9e04c2c670"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_map_grid_cost_function.html#a2d1f1bed6814ca5557eb2a9e04c2c670">stop_on_failure_</a></td></tr>
+<tr class="separator:a2d1f1bed6814ca5557eb2a9e04c2c670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classbase__local__planner_1_1_trajectory_cost_function"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbase__local__planner_1_1_trajectory_cost_function')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html">base_local_planner::TrajectoryCostFunction</a></td></tr>
+<tr class="memitem:a5a80d6bb3fade55e28d8cb234936c43a inherit pro_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a5a80d6bb3fade55e28d8cb234936c43a">TrajectoryCostFunction</a> (double scale=1.0)</td></tr>
+<tr class="separator:a5a80d6bb3fade55e28d8cb234936c43a inherit pro_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >This class provides cost based on a map_grid of a small area of the world. The map_grid covers a the costmap, the costmap containing the information about sensed obstacles. The map_grid is used by setting certain cells to distance 0, and then propagating distances around them, filling up the area reachable around them.</p>
+<p >The approach using grid_maps is used for computational efficiency, allowing to score hundreds of trajectories very quickly.</p>
+<p >This can be used to favor trajectories which stay on a given path, or which approach a given goal. </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costmap_ros</td><td>Reference to object giving updates of obstacles around robot </td></tr>
+    <tr><td class="paramname">xshift</td><td>where the scoring point is with respect to robot center pose </td></tr>
+    <tr><td class="paramname">yshift</td><td>where the scoring point is with respect to robot center pose </td></tr>
+    <tr><td class="paramname">is_local_goal_function,scores</td><td>for local goal rather than whole path </td></tr>
+    <tr><td class="paramname">aggregationType</td><td>how to combine costs along trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a37e0fd0048db78bb703946b56daafe25" name="a37e0fd0048db78bb703946b56daafe25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e0fd0048db78bb703946b56daafe25">&#9670;&nbsp;</a></span>MapGridCostFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::MapGridCostFunction::MapGridCostFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xshift</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yshift</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_local_goal_function</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacebase__local__planner.html#a5b9cbdd645f780317faf39a970c3824c">CostAggregationType</a>&#160;</td>
+          <td class="paramname"><em>aggregationType</em> = <code><a class="el" href="namespacebase__local__planner.html#a5b9cbdd645f780317faf39a970c3824ca10a1a85cd52631b78010d22d9e0876c6">Last</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3615fe05f64fd08e33133ebdf0059dfa" name="a3615fe05f64fd08e33133ebdf0059dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3615fe05f64fd08e33133ebdf0059dfa">&#9670;&nbsp;</a></span>~MapGridCostFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::MapGridCostFunction::~MapGridCostFunction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33" name="a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33">&#9670;&nbsp;</a></span>getCellCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::getCellCosts </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>cy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33_icgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33_icgraph">
+<area shape="rect" title=" " alt="" coords="459,35,615,91"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab62d6664d13e90e42327de34a2ed1cfb" title="Compute the components and total cost for a map grid cell 计算地图网格单元的代价" alt="" coords="232,5,411,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#a4332b1fd1c72795c87fb5d3a427df476" title=" " alt="" coords="243,71,399,127"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a14783081aef0e5f4702edf317a10c167" name="a14783081aef0e5f4702edf317a10c167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14783081aef0e5f4702edf317a10c167">&#9670;&nbsp;</a></span>obstacleCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::obstacleCosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return a value that indicates cell is in obstacle </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_cgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,161,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="209,13,380,54"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_icgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a14783081aef0e5f4702edf317a10c167_icgraph">
+<area shape="rect" title=" " alt="" coords="459,5,615,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab62d6664d13e90e42327de34a2ed1cfb" title="Compute the components and total cost for a map grid cell 计算地图网格单元的代价" alt="" coords="232,13,411,54"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="5,13,184,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3f80d67ddeefec5871b4828ddafb5dc" name="af3f80d67ddeefec5871b4828ddafb5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f80d67ddeefec5871b4828ddafb5dc">&#9670;&nbsp;</a></span>prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::MapGridCostFunction::prepare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >propagate distances </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a351dddca226f210a09bd10c151e2975f">base_local_planner::TrajectoryCostFunction</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc_cgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_af3f80d67ddeefec5871b4828ddafb5dc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,311,161,367"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#aaede39518e77d4eb1f7fc7766da5cb11" title="reset path distance fields for all cells" alt="" coords="211,133,378,174"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab73fe99a7ad21b36a3178e26296945d5" title="Update what cell is considered the next local goal" alt="" coords="213,449,376,490"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a8e3227190b9f67376ee2890f493079d5" title="Update what cells are considered path based on the global plan" alt="" coords="209,318,380,359"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="451,5,630,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a0af367c6272d3c4b7c16dde4a41c306a" title=" " alt="" coords="436,318,645,359"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ab29d565af28ed4dc377ac997c70070f2" title="Compute the distance from each cell in the local map grid to the planned path" alt="" coords="428,631,653,673"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a46a736f0ff4e89771ee50544a625988d" title=" " alt="" coords="943,566,1076,607"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="925,697,1094,738"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="456,514,625,555"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="456,187,625,229"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="456,253,625,294"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a8e39feaa7ee4446347674b3701a1394c" title="Convert from map coordinates to world coordinates" alt="" coords="456,697,625,738"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#ada7418321ccc809a6dfa8e45ada16c6d" title="check if we need to resize" alt="" coords="467,383,615,425"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="456,449,625,490"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a88efaf02a2735770450745f47239f0d9" title="Used to update the distance of a cell in path distance computation" alt="" coords="701,631,876,673"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="924,631,1095,673"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1143,697,1312,738"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4332b1fd1c72795c87fb5d3a427df476" name="a4332b1fd1c72795c87fb5d3a427df476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4332b1fd1c72795c87fb5d3a427df476">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >返回一个局部轨迹的评分，也是纯虚函数 </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a6908a8071270b455fc25b48db76e2d3c">base_local_planner::TrajectoryCostFunction</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476_cgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a4332b1fd1c72795c87fb5d3a427df476_cgraph">
+<area shape="rect" title=" " alt="" coords="5,177,161,233"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid_cost_function.html#a0a9cdd8ffef9d7cfe3c7a8c38a6e6e33" title=" " alt="" coords="221,5,377,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="227,86,371,127"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="210,151,387,193"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#af3db024faefa9420ec75b18d4da90cfe" title=" " alt="" coords="213,217,384,258"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="209,283,388,339"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="214,363,383,405"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02c1cdf742342db135a15eaaad3a8d86" name="a02c1cdf742342db135a15eaaad3a8d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c1cdf742342db135a15eaaad3a8d86">&#9670;&nbsp;</a></span>setStopOnFailure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGridCostFunction::setStopOnFailure </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>stop_on_failure</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If true, failures along the path cause the entire path to be rejected. </p>
+<p >Default is true. </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86_icgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a02c1cdf742342db135a15eaaad3a8d86_icgraph">
+<area shape="rect" title="If true, failures along the path cause the entire path to be rejected." alt="" coords="232,5,388,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="5,13,184,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07f336c23114bcd9ea8fa24462465277" name="a07f336c23114bcd9ea8fa24462465277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f336c23114bcd9ea8fa24462465277">&#9670;&nbsp;</a></span>setTargetPoses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGridCostFunction::setTargetPoses </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt;&#160;</td>
+          <td class="paramname"><em>target_poses</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >set line segments on the grid with distance 0, resets the grid </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277_icgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a07f336c23114bcd9ea8fa24462465277_icgraph">
+<area shape="rect" title=" " alt="" coords="276,5,432,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#aa681debca2e138a957652e9451893f67" title="在路径规划前更新代价函数" alt="" coords="5,5,228,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a3d73260adc793dde0317b532b29f8a" name="a7a3d73260adc793dde0317b532b29f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3d73260adc793dde0317b532b29f8a">&#9670;&nbsp;</a></span>setXShift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGridCostFunction::setXShift </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xshift</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a_icgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a7a3d73260adc793dde0317b532b29f8a_icgraph">
+<area shape="rect" title=" " alt="" coords="221,5,377,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a9388b62309f6148c697aef4ebf5fe20a" title="配置局部规划器" alt="" coords="5,13,173,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a08fbe47f2c31ea241b86d5e61b47428a" name="a08fbe47f2c31ea241b86d5e61b47428a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08fbe47f2c31ea241b86d5e61b47428a">&#9670;&nbsp;</a></span>setYShift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::MapGridCostFunction::setYShift </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yshift</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e561793dbbb51118834f19673e17892" name="a9e561793dbbb51118834f19673e17892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e561793dbbb51118834f19673e17892">&#9670;&nbsp;</a></span>unreachableCellCosts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::unreachableCellCosts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >returns a value indicating cell was not reached by wavefront propagation of set cells. (is behind walls, regarding the region covered by grid) </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_cgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,161,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_map_grid.html#a1b7145c6781d0d3703a1003b9f753420" title=" " alt="" coords="209,5,388,61"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_icgraph" id="aclassbase__local__planner_1_1_map_grid_cost_function_a9e561793dbbb51118834f19673e17892_icgraph">
+<area shape="rect" title=" " alt="" coords="459,5,615,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab62d6664d13e90e42327de34a2ed1cfb" title="Compute the components and total cost for a map grid cell 计算地图网格单元的代价" alt="" coords="232,13,411,54"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="5,13,184,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="abc402c1c11dafcb69ec5d82480b89296" name="abc402c1c11dafcb69ec5d82480b89296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc402c1c11dafcb69ec5d82480b89296">&#9670;&nbsp;</a></span>aggregationType_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacebase__local__planner.html#a5b9cbdd645f780317faf39a970c3824c">CostAggregationType</a> base_local_planner::MapGridCostFunction::aggregationType_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a852583e42ce771a6741116986a063a64" name="a852583e42ce771a6741116986a063a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852583e42ce771a6741116986a063a64">&#9670;&nbsp;</a></span>costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* base_local_planner::MapGridCostFunction::costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99f2abca88bdc9f339a76704f25d6654" name="a99f2abca88bdc9f339a76704f25d6654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f2abca88bdc9f339a76704f25d6654">&#9670;&nbsp;</a></span>is_local_goal_function_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::MapGridCostFunction::is_local_goal_function_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01f719e06199db21bc4aec99efe7ab2f" name="a01f719e06199db21bc4aec99efe7ab2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f719e06199db21bc4aec99efe7ab2f">&#9670;&nbsp;</a></span>map_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_map_grid.html">base_local_planner::MapGrid</a> base_local_planner::MapGridCostFunction::map_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d1f1bed6814ca5557eb2a9e04c2c670" name="a2d1f1bed6814ca5557eb2a9e04c2c670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1f1bed6814ca5557eb2a9e04c2c670">&#9670;&nbsp;</a></span>stop_on_failure_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::MapGridCostFunction::stop_on_failure_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22d5b7bb371a8b5593830029db9151a9" name="a22d5b7bb371a8b5593830029db9151a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d5b7bb371a8b5593830029db9151a9">&#9670;&nbsp;</a></span>target_poses_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::PoseStamped&gt; base_local_planner::MapGridCostFunction::target_poses_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af72819f98ac6695d4ea025f0566bf1b5" name="af72819f98ac6695d4ea025f0566bf1b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72819f98ac6695d4ea025f0566bf1b5">&#9670;&nbsp;</a></span>xshift_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::xshift_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>xshift and yshift allow scoring for different </p>
+
+</div>
+</div>
+<a id="a3153c7d93524431e69f4fc5d72a6b4e6" name="a3153c7d93524431e69f4fc5d72a6b4e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3153c7d93524431e69f4fc5d72a6b4e6">&#9670;&nbsp;</a></span>yshift_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::MapGridCostFunction::yshift_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="map__grid__cost__function_8h_source.html">map_grid_cost_function.h</a></li>
+<li>base_local_planner/src/<a class="el" href="map__grid__cost__function_8cpp.html">map_grid_cost_function.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="costmap_2d::InflationLayer::setInflationParameters" name="costmap_2d::InflationLayer::setInflationParameters">
+<area shape="rect" id="node1" title="Change the values of the inflation radius parameters" alt="" coords="685,5,864,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_inflation_layer.html#aa6137de50b68199a193c8d79022391bb" title=" " alt="" coords="459,5,637,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_inflation_layer.html#a70aa2e82f43d319111403b8f97f37ade" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="232,5,411,47"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_inflation_layer.html#aa5df966fb4dd99b8b69945408f42c2a6" title=" " alt="" coords="5,5,184,47"/>
+</map>

@@ -1,0 +1,477 @@
+\hypertarget{classdwa__local__planner_1_1_d_w_a_planner}{}\doxysection{dwa\+\_\+local\+\_\+planner\+::DWAPlanner类 参考}
+\label{classdwa__local__planner_1_1_d_w_a_planner}\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+
+
+实现\+DWA算法的局部规划器类  
+
+
+
+
+{\ttfamily \#include $<$dwa\+\_\+planner.\+h$>$}
+
+
+
+dwa\+\_\+local\+\_\+planner\+::DWAPlanner 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ab2c1143a3a54638d0dc38f9b6fa16e53}{DWAPlanner}} (std\+::string name, \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}} $\ast$planner\+\_\+util)
+\begin{DoxyCompactList}\small\item\em 规划器的构造 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a9388b62309f6148c697aef4ebf5fe20a}{reconfigure}} (DWAPlanner\+Config \&cfg)
+\begin{DoxyCompactList}\small\item\em 配置局部规划器 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a1200e7b997f2acd8c3b912bed37e69d5}{check\+Trajectory}} (const Eigen\+::\+Vector3f pos, const Eigen\+::\+Vector3f vel, const Eigen\+::\+Vector3f vel\+\_\+samples)
+\begin{DoxyCompactList}\small\item\em 对于位置/速度组合，轨迹是否合法 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_acf862f4cbfd701bacf1eb359cd05892f}{find\+Best\+Path}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+vel, geometry\+\_\+msgs\+::\+Pose\+Stamped \&drive\+\_\+velocities)
+\begin{DoxyCompactList}\small\item\em 从机器人当前的位置和速度找出最好的轨迹去执行 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aa681debca2e138a957652e9451893f67}{update\+Plan\+And\+Local\+Costs}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&global\+\_\+pose, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&new\+\_\+plan, const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&footprint\+\_\+spec)
+\begin{DoxyCompactList}\small\item\em 在路径规划前更新代价函数 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a943ce6facaf2c7602709ed4d0e9c9c54}{get\+Sim\+Period}} ()
+\begin{DoxyCompactList}\small\item\em 获得局部规划器预期所需要的计算时间 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ab62d6664d13e90e42327de34a2ed1cfb}{get\+Cell\+Costs}} (int cx, int cy, float \&path\+\_\+cost, float \&goal\+\_\+cost, float \&occ\+\_\+cost, float \&total\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Compute the components and total cost for a map grid cell 计算地图网格单元的代价 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ac0ab6d668b0b9e867ca2ba3ec2f235bf}{set\+Plan}} (const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&orig\+\_\+global\+\_\+plan)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}} $\ast$ \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a80911d417af035245b182daa41ed996a}{planner\+\_\+util\+\_\+}}
+\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a0e9d95f2a769d13872020a7585446896}{stop\+\_\+time\+\_\+buffer\+\_\+}}
+\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a9c0271e24ee53906d5d01783b5998572}{path\+\_\+distance\+\_\+bias\+\_\+}}
+\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a670cb54a049cabf5dc2226651f34211a}{goal\+\_\+distance\+\_\+bias\+\_\+}}
+\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ae528378c5a61fb120f7ed4c778fcee92}{occdist\+\_\+scale\+\_\+}}
+\item 
+Eigen\+::\+Vector3f \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a77ff6d038eb1408082bfee6bce0d0751}{vsamples\+\_\+}}
+\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_acddd57ac4a93dc2f46a3a3aa84995168}{sim\+\_\+period\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aba965bb265bdaa95578fe8a7839f7d02}{result\+\_\+traj\+\_\+}}
+\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a8b46e66af817344972a9b5509ec3044c}{forward\+\_\+point\+\_\+distance\+\_\+}}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a413ab9f46d17172e70d0b1ac6af0a84b}{global\+\_\+plan\+\_\+}}
+\item 
+boost\+::mutex \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a62e4510843c78f32d5d6408138a30652}{configuration\+\_\+mutex\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a4fc647512336e7e163a87c841a0b40c2}{frame\+\_\+id\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ae4c733079a19f8e6cca701b028dd8bba}{traj\+\_\+cloud\+\_\+pub\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_af3c6fd18e0fe0950fd28cd86cb7523a8}{publish\+\_\+cost\+\_\+grid\+\_\+pc\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aae670e0eded70b90b55a2d8ee10c668b}{publish\+\_\+traj\+\_\+pc\+\_\+}}
+\item 
+double \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aa1b38f3eaf36086cda5d93368a1a9f20}{cheat\+\_\+factor\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a074659f99ba9d320f5aa193332826c4d}{map\+\_\+viz\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator}{base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a2051d8b8239dac32b4e0f4cf5f993edc}{generator\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function}{base\+\_\+local\+\_\+planner\+::\+Oscillation\+Cost\+Function}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_afb957b4eab69c0519269f0ef5e75a775}{oscillation\+\_\+costs\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function}{base\+\_\+local\+\_\+planner\+::\+Obstacle\+Cost\+Function}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_ab822faa322e94ec61635c92f71d7c15c}{obstacle\+\_\+costs\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a42dd253587666acdfb8eaa50beca9aee}{path\+\_\+costs\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_afb85a68900242120afada29e69838012}{goal\+\_\+costs\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a87e487cb691153913256fc03d38f7a6e}{goal\+\_\+front\+\_\+costs\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a3068083b29a756e5d13556f12f26d769}{alignment\+\_\+costs\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_twirling_cost_function}{base\+\_\+local\+\_\+planner\+::\+Twirling\+Cost\+Function}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_a14a5855adec31916cad2b18fbc7b8d28}{twirling\+\_\+costs\+\_\+}}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner}{base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner}} \mbox{\hyperlink{classdwa__local__planner_1_1_d_w_a_planner_aa679e6c999c095032648a586869d07d3}{scored\+\_\+sampling\+\_\+planner\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+实现\+DWA算法的局部规划器类 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_ab2c1143a3a54638d0dc38f9b6fa16e53}\label{classdwa__local__planner_1_1_d_w_a_planner_ab2c1143a3a54638d0dc38f9b6fa16e53}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!DWAPlanner@{DWAPlanner}}
+\index{DWAPlanner@{DWAPlanner}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{DWAPlanner()}{DWAPlanner()}}
+{\footnotesize\ttfamily dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::\+DWAPlanner (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}} $\ast$}]{planner\+\_\+util }\end{DoxyParamCaption})}
+
+
+
+规划器的构造 
+
+
+\begin{DoxyParams}{参数}
+{\em name} & 规划器的名字 \\
+\hline
+{\em costmap\+\_\+ros} & 规划器的将用到的代价地图实例指针 \\
+\hline
+{\em global\+\_\+frame} & 用到的tf frame 中的frame id \\
+\hline
+\end{DoxyParams}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_ab2c1143a3a54638d0dc38f9b6fa16e53_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a1200e7b997f2acd8c3b912bed37e69d5}\label{classdwa__local__planner_1_1_d_w_a_planner_a1200e7b997f2acd8c3b912bed37e69d5}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3f}]{pos,  }\item[{const Eigen\+::\+Vector3f}]{vel,  }\item[{const Eigen\+::\+Vector3f}]{vel\+\_\+samples }\end{DoxyParamCaption})}
+
+
+
+对于位置/速度组合，轨迹是否合法 
+
+
+\begin{DoxyParams}{参数}
+{\em pos} & 机器人的位置 \\
+\hline
+{\em vel} & 机器人的速度 \\
+\hline
+{\em vel\+\_\+samples} & 期望速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+如果是\+True, 轨迹合法
+\end{DoxyReturn}
+This function is used when other strategies are to be applied, but the cost functions for obstacles are to be reused. 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_a1200e7b997f2acd8c3b912bed37e69d5_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_a1200e7b997f2acd8c3b912bed37e69d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_acf862f4cbfd701bacf1eb359cd05892f}\label{classdwa__local__planner_1_1_d_w_a_planner_acf862f4cbfd701bacf1eb359cd05892f}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!findBestPath@{findBestPath}}
+\index{findBestPath@{findBestPath}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{findBestPath()}{findBestPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::find\+Best\+Path (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+vel,  }\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{drive\+\_\+velocities }\end{DoxyParamCaption})}
+
+
+
+从机器人当前的位置和速度找出最好的轨迹去执行 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & 机器人的位置 \\
+\hline
+{\em global\+\_\+vel} & 机器人的速度 \\
+\hline
+{\em drive\+\_\+velocities} & 给机器人底座的速度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回最高得分的轨迹, cost \texorpdfstring{$>$}{>}= 0 意味着该轨迹可以被执行 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_acf862f4cbfd701bacf1eb359cd05892f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_ab62d6664d13e90e42327de34a2ed1cfb}\label{classdwa__local__planner_1_1_d_w_a_planner_ab62d6664d13e90e42327de34a2ed1cfb}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!getCellCosts@{getCellCosts}}
+\index{getCellCosts@{getCellCosts}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{getCellCosts()}{getCellCosts()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::get\+Cell\+Costs (\begin{DoxyParamCaption}\item[{int}]{cx,  }\item[{int}]{cy,  }\item[{float \&}]{path\+\_\+cost,  }\item[{float \&}]{goal\+\_\+cost,  }\item[{float \&}]{occ\+\_\+cost,  }\item[{float \&}]{total\+\_\+cost }\end{DoxyParamCaption})}
+
+
+
+Compute the components and total cost for a map grid cell 计算地图网格单元的代价 
+
+
+\begin{DoxyParams}{参数}
+{\em cx} & 地图网格中单元格x坐标 \\
+\hline
+{\em cy} & 地图网格中单元格y坐标 \\
+\hline
+{\em path\+\_\+cost} & 路径的代价 \\
+\hline
+{\em goal\+\_\+cost} & 到目标点距离的代价 \\
+\hline
+{\em occ\+\_\+cost} & 单元格代价值 \\
+\hline
+{\em total\+\_\+cost} & 总体代价，有把尺度因子考虑进去 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+True \+: 这个单元格可以通过 
+\end{DoxyReturn}
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_ab62d6664d13e90e42327de34a2ed1cfb_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_ab62d6664d13e90e42327de34a2ed1cfb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a943ce6facaf2c7602709ed4d0e9c9c54}\label{classdwa__local__planner_1_1_d_w_a_planner_a943ce6facaf2c7602709ed4d0e9c9c54}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!getSimPeriod@{getSimPeriod}}
+\index{getSimPeriod@{getSimPeriod}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{getSimPeriod()}{getSimPeriod()}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::get\+Sim\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+获得局部规划器预期所需要的计算时间 
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a9388b62309f6148c697aef4ebf5fe20a}\label{classdwa__local__planner_1_1_d_w_a_planner_a9388b62309f6148c697aef4ebf5fe20a}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!reconfigure@{reconfigure}}
+\index{reconfigure@{reconfigure}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{reconfigure()}{reconfigure()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::reconfigure (\begin{DoxyParamCaption}\item[{DWAPlanner\+Config \&}]{cfg }\end{DoxyParamCaption})}
+
+
+
+配置局部规划器 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_a9388b62309f6148c697aef4ebf5fe20a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_ac0ab6d668b0b9e867ca2ba3ec2f235bf}\label{classdwa__local__planner_1_1_d_w_a_planner_ac0ab6d668b0b9e867ca2ba3ec2f235bf}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!setPlan@{setPlan}}
+\index{setPlan@{setPlan}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{setPlan()}{setPlan()}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::set\+Plan (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{orig\+\_\+global\+\_\+plan }\end{DoxyParamCaption})}
+
+设置新的全局路径和重置状态 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_ac0ab6d668b0b9e867ca2ba3ec2f235bf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_aa681debca2e138a957652e9451893f67}\label{classdwa__local__planner_1_1_d_w_a_planner_aa681debca2e138a957652e9451893f67}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!updatePlanAndLocalCosts@{updatePlanAndLocalCosts}}
+\index{updatePlanAndLocalCosts@{updatePlanAndLocalCosts}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{updatePlanAndLocalCosts()}{updatePlanAndLocalCosts()}}
+{\footnotesize\ttfamily void dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::update\+Plan\+And\+Local\+Costs (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{global\+\_\+pose,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{new\+\_\+plan,  }\item[{const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \&}]{footprint\+\_\+spec }\end{DoxyParamCaption})}
+
+
+
+在路径规划前更新代价函数 
+
+
+\begin{DoxyParams}{参数}
+{\em global\+\_\+pose} & 机器人的位置 \\
+\hline
+{\em new\+\_\+plan} & 新的规划路径 \\
+\hline
+{\em footprint\+\_\+spec} & 机器人的footprint(机器人的底盘形状)\\
+\hline
+\end{DoxyParams}
+The obstacle cost function gets the footprint. The path and goal cost functions get the global\+\_\+plan The alignment cost functions get a version of the global plan that is modified based on the global\+\_\+pose 函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdwa__local__planner_1_1_d_w_a_planner_aa681debca2e138a957652e9451893f67_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a3068083b29a756e5d13556f12f26d769}\label{classdwa__local__planner_1_1_d_w_a_planner_a3068083b29a756e5d13556f12f26d769}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!alignment\_costs\_@{alignment\_costs\_}}
+\index{alignment\_costs\_@{alignment\_costs\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{alignment\_costs\_}{alignment\_costs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::alignment\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_aa1b38f3eaf36086cda5d93368a1a9f20}\label{classdwa__local__planner_1_1_d_w_a_planner_aa1b38f3eaf36086cda5d93368a1a9f20}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!cheat\_factor\_@{cheat\_factor\_}}
+\index{cheat\_factor\_@{cheat\_factor\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{cheat\_factor\_}{cheat\_factor\_}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::cheat\+\_\+factor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a62e4510843c78f32d5d6408138a30652}\label{classdwa__local__planner_1_1_d_w_a_planner_a62e4510843c78f32d5d6408138a30652}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!configuration\_mutex\_@{configuration\_mutex\_}}
+\index{configuration\_mutex\_@{configuration\_mutex\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{configuration\_mutex\_}{configuration\_mutex\_}}
+{\footnotesize\ttfamily boost\+::mutex dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::configuration\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a8b46e66af817344972a9b5509ec3044c}\label{classdwa__local__planner_1_1_d_w_a_planner_a8b46e66af817344972a9b5509ec3044c}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!forward\_point\_distance\_@{forward\_point\_distance\_}}
+\index{forward\_point\_distance\_@{forward\_point\_distance\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{forward\_point\_distance\_}{forward\_point\_distance\_}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::forward\+\_\+point\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a4fc647512336e7e163a87c841a0b40c2}\label{classdwa__local__planner_1_1_d_w_a_planner_a4fc647512336e7e163a87c841a0b40c2}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!frame\_id\_@{frame\_id\_}}
+\index{frame\_id\_@{frame\_id\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{frame\_id\_}{frame\_id\_}}
+{\footnotesize\ttfamily std\+::string dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::frame\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a2051d8b8239dac32b4e0f4cf5f993edc}\label{classdwa__local__planner_1_1_d_w_a_planner_a2051d8b8239dac32b4e0f4cf5f993edc}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!generator\_@{generator\_}}
+\index{generator\_@{generator\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{generator\_}{generator\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_simple_trajectory_generator}{base\+\_\+local\+\_\+planner\+::\+Simple\+Trajectory\+Generator}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::generator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a413ab9f46d17172e70d0b1ac6af0a84b}\label{classdwa__local__planner_1_1_d_w_a_planner_a413ab9f46d17172e70d0b1ac6af0a84b}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!global\_plan\_@{global\_plan\_}}
+\index{global\_plan\_@{global\_plan\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{global\_plan\_}{global\_plan\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::global\+\_\+plan\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_afb85a68900242120afada29e69838012}\label{classdwa__local__planner_1_1_d_w_a_planner_afb85a68900242120afada29e69838012}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!goal\_costs\_@{goal\_costs\_}}
+\index{goal\_costs\_@{goal\_costs\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{goal\_costs\_}{goal\_costs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::goal\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a670cb54a049cabf5dc2226651f34211a}\label{classdwa__local__planner_1_1_d_w_a_planner_a670cb54a049cabf5dc2226651f34211a}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!goal\_distance\_bias\_@{goal\_distance\_bias\_}}
+\index{goal\_distance\_bias\_@{goal\_distance\_bias\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{goal\_distance\_bias\_}{goal\_distance\_bias\_}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::goal\+\_\+distance\+\_\+bias\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a87e487cb691153913256fc03d38f7a6e}\label{classdwa__local__planner_1_1_d_w_a_planner_a87e487cb691153913256fc03d38f7a6e}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!goal\_front\_costs\_@{goal\_front\_costs\_}}
+\index{goal\_front\_costs\_@{goal\_front\_costs\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{goal\_front\_costs\_}{goal\_front\_costs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::goal\+\_\+front\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a074659f99ba9d320f5aa193332826c4d}\label{classdwa__local__planner_1_1_d_w_a_planner_a074659f99ba9d320f5aa193332826c4d}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!map\_viz\_@{map\_viz\_}}
+\index{map\_viz\_@{map\_viz\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{map\_viz\_}{map\_viz\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_visualizer}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Visualizer}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::map\+\_\+viz\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_ab822faa322e94ec61635c92f71d7c15c}\label{classdwa__local__planner_1_1_d_w_a_planner_ab822faa322e94ec61635c92f71d7c15c}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!obstacle\_costs\_@{obstacle\_costs\_}}
+\index{obstacle\_costs\_@{obstacle\_costs\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{obstacle\_costs\_}{obstacle\_costs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function}{base\+\_\+local\+\_\+planner\+::\+Obstacle\+Cost\+Function}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::obstacle\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_ae528378c5a61fb120f7ed4c778fcee92}\label{classdwa__local__planner_1_1_d_w_a_planner_ae528378c5a61fb120f7ed4c778fcee92}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!occdist\_scale\_@{occdist\_scale\_}}
+\index{occdist\_scale\_@{occdist\_scale\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{occdist\_scale\_}{occdist\_scale\_}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::occdist\+\_\+scale\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_afb957b4eab69c0519269f0ef5e75a775}\label{classdwa__local__planner_1_1_d_w_a_planner_afb957b4eab69c0519269f0ef5e75a775}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!oscillation\_costs\_@{oscillation\_costs\_}}
+\index{oscillation\_costs\_@{oscillation\_costs\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{oscillation\_costs\_}{oscillation\_costs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_oscillation_cost_function}{base\+\_\+local\+\_\+planner\+::\+Oscillation\+Cost\+Function}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::oscillation\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a42dd253587666acdfb8eaa50beca9aee}\label{classdwa__local__planner_1_1_d_w_a_planner_a42dd253587666acdfb8eaa50beca9aee}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!path\_costs\_@{path\_costs\_}}
+\index{path\_costs\_@{path\_costs\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{path\_costs\_}{path\_costs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_map_grid_cost_function}{base\+\_\+local\+\_\+planner\+::\+Map\+Grid\+Cost\+Function}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::path\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a9c0271e24ee53906d5d01783b5998572}\label{classdwa__local__planner_1_1_d_w_a_planner_a9c0271e24ee53906d5d01783b5998572}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!path\_distance\_bias\_@{path\_distance\_bias\_}}
+\index{path\_distance\_bias\_@{path\_distance\_bias\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{path\_distance\_bias\_}{path\_distance\_bias\_}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::path\+\_\+distance\+\_\+bias\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a80911d417af035245b182daa41ed996a}\label{classdwa__local__planner_1_1_d_w_a_planner_a80911d417af035245b182daa41ed996a}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!planner\_util\_@{planner\_util\_}}
+\index{planner\_util\_@{planner\_util\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{planner\_util\_}{planner\_util\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_util}{base\+\_\+local\+\_\+planner\+::\+Local\+Planner\+Util}}$\ast$ dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::planner\+\_\+util\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_af3c6fd18e0fe0950fd28cd86cb7523a8}\label{classdwa__local__planner_1_1_d_w_a_planner_af3c6fd18e0fe0950fd28cd86cb7523a8}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!publish\_cost\_grid\_pc\_@{publish\_cost\_grid\_pc\_}}
+\index{publish\_cost\_grid\_pc\_@{publish\_cost\_grid\_pc\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{publish\_cost\_grid\_pc\_}{publish\_cost\_grid\_pc\_}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::publish\+\_\+cost\+\_\+grid\+\_\+pc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_aae670e0eded70b90b55a2d8ee10c668b}\label{classdwa__local__planner_1_1_d_w_a_planner_aae670e0eded70b90b55a2d8ee10c668b}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!publish\_traj\_pc\_@{publish\_traj\_pc\_}}
+\index{publish\_traj\_pc\_@{publish\_traj\_pc\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{publish\_traj\_pc\_}{publish\_traj\_pc\_}}
+{\footnotesize\ttfamily bool dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::publish\+\_\+traj\+\_\+pc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_aba965bb265bdaa95578fe8a7839f7d02}\label{classdwa__local__planner_1_1_d_w_a_planner_aba965bb265bdaa95578fe8a7839f7d02}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!result\_traj\_@{result\_traj\_}}
+\index{result\_traj\_@{result\_traj\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{result\_traj\_}{result\_traj\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{base\+\_\+local\+\_\+planner\+::\+Trajectory}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::result\+\_\+traj\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_aa679e6c999c095032648a586869d07d3}\label{classdwa__local__planner_1_1_d_w_a_planner_aa679e6c999c095032648a586869d07d3}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!scored\_sampling\_planner\_@{scored\_sampling\_planner\_}}
+\index{scored\_sampling\_planner\_@{scored\_sampling\_planner\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{scored\_sampling\_planner\_}{scored\_sampling\_planner\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner}{base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::scored\+\_\+sampling\+\_\+planner\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_acddd57ac4a93dc2f46a3a3aa84995168}\label{classdwa__local__planner_1_1_d_w_a_planner_acddd57ac4a93dc2f46a3a3aa84995168}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!sim\_period\_@{sim\_period\_}}
+\index{sim\_period\_@{sim\_period\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{sim\_period\_}{sim\_period\_}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::sim\+\_\+period\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a0e9d95f2a769d13872020a7585446896}\label{classdwa__local__planner_1_1_d_w_a_planner_a0e9d95f2a769d13872020a7585446896}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!stop\_time\_buffer\_@{stop\_time\_buffer\_}}
+\index{stop\_time\_buffer\_@{stop\_time\_buffer\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{stop\_time\_buffer\_}{stop\_time\_buffer\_}}
+{\footnotesize\ttfamily double dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::stop\+\_\+time\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_ae4c733079a19f8e6cca701b028dd8bba}\label{classdwa__local__planner_1_1_d_w_a_planner_ae4c733079a19f8e6cca701b028dd8bba}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!traj\_cloud\_pub\_@{traj\_cloud\_pub\_}}
+\index{traj\_cloud\_pub\_@{traj\_cloud\_pub\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{traj\_cloud\_pub\_}{traj\_cloud\_pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::traj\+\_\+cloud\+\_\+pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a14a5855adec31916cad2b18fbc7b8d28}\label{classdwa__local__planner_1_1_d_w_a_planner_a14a5855adec31916cad2b18fbc7b8d28}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!twirling\_costs\_@{twirling\_costs\_}}
+\index{twirling\_costs\_@{twirling\_costs\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{twirling\_costs\_}{twirling\_costs\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbase__local__planner_1_1_twirling_cost_function}{base\+\_\+local\+\_\+planner\+::\+Twirling\+Cost\+Function}} dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::twirling\+\_\+costs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdwa__local__planner_1_1_d_w_a_planner_a77ff6d038eb1408082bfee6bce0d0751}\label{classdwa__local__planner_1_1_d_w_a_planner_a77ff6d038eb1408082bfee6bce0d0751}} 
+\index{dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}!vsamples\_@{vsamples\_}}
+\index{vsamples\_@{vsamples\_}!dwa\_local\_planner::DWAPlanner@{dwa\_local\_planner::DWAPlanner}}
+\doxysubsubsection{\texorpdfstring{vsamples\_}{vsamples\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3f dwa\+\_\+local\+\_\+planner\+::\+DWAPlanner\+::vsamples\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+dwa\+\_\+local\+\_\+planner/include/dwa\+\_\+local\+\_\+planner/\mbox{\hyperlink{dwa__planner_8h}{dwa\+\_\+planner.\+h}}\item 
+dwa\+\_\+local\+\_\+planner/src/\mbox{\hyperlink{dwa__planner_8cpp}{dwa\+\_\+planner.\+cpp}}\end{DoxyCompactItemize}

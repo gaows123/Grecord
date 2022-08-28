@@ -1,0 +1,117 @@
+\hypertarget{eig3_8c}{}\doxysection{amcl/src/amcl/pf/eig3.c 文件参考}
+\label{eig3_8c}\index{amcl/src/amcl/pf/eig3.c@{amcl/src/amcl/pf/eig3.c}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+eig3.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{eig3_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{eig3_8c_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}}(a,  b)~((a)$>$(b)?(a)\+:(b))
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{eig3_8c_a15ea76429a93fe852559fae8cba4245b}{hypot2}} (double x, double y)
+\item 
+static void \mbox{\hyperlink{eig3_8c_ae6a616c3110d66d701c2b35aec4de178}{tred2}} (double V\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}, double d\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}, double e\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]})
+\item 
+static void \mbox{\hyperlink{eig3_8c_af0dda992a0b1287f065cdb0d8e31229a}{tql2}} (double V\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}, double d\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}, double e\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]})
+\item 
+void \mbox{\hyperlink{eig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f}{eigen\+\_\+decomposition}} (double A\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}, double V\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}, double d\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} = 3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{eig3_8c_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{eig3_8c_afa99ec4acc4ecb2dc3c2d05da15d0e3f}} 
+\index{eig3.c@{eig3.c}!MAX@{MAX}}
+\index{MAX@{MAX}!eig3.c@{eig3.c}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \#define MAX(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~((a)$>$(b)?(a)\+:(b))}
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{eig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f}\label{eig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f}} 
+\index{eig3.c@{eig3.c}!eigen\_decomposition@{eigen\_decomposition}}
+\index{eigen\_decomposition@{eigen\_decomposition}!eig3.c@{eig3.c}}
+\doxysubsubsection{\texorpdfstring{eigen\_decomposition()}{eigen\_decomposition()}}
+{\footnotesize\ttfamily void eigen\+\_\+decomposition (\begin{DoxyParamCaption}\item[{double}]{A\mbox{[}n\mbox{]}\mbox{[}n\mbox{]},  }\item[{double}]{V\mbox{[}n\mbox{]}\mbox{[}n\mbox{]},  }\item[{double}]{d\mbox{[}n\mbox{]} }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{eig3_8c_a7f1557b7e7c736dd14d99bf31f77df8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{eig3_8c_a15ea76429a93fe852559fae8cba4245b}\label{eig3_8c_a15ea76429a93fe852559fae8cba4245b}} 
+\index{eig3.c@{eig3.c}!hypot2@{hypot2}}
+\index{hypot2@{hypot2}!eig3.c@{eig3.c}}
+\doxysubsubsection{\texorpdfstring{hypot2()}{hypot2()}}
+{\footnotesize\ttfamily static double hypot2 (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{eig3_8c_a15ea76429a93fe852559fae8cba4245b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{eig3_8c_af0dda992a0b1287f065cdb0d8e31229a}\label{eig3_8c_af0dda992a0b1287f065cdb0d8e31229a}} 
+\index{eig3.c@{eig3.c}!tql2@{tql2}}
+\index{tql2@{tql2}!eig3.c@{eig3.c}}
+\doxysubsubsection{\texorpdfstring{tql2()}{tql2()}}
+{\footnotesize\ttfamily static void tql2 (\begin{DoxyParamCaption}\item[{double}]{V\mbox{[}n\mbox{]}\mbox{[}n\mbox{]},  }\item[{double}]{d\mbox{[}n\mbox{]},  }\item[{double}]{e\mbox{[}n\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{eig3_8c_af0dda992a0b1287f065cdb0d8e31229a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{eig3_8c_af0dda992a0b1287f065cdb0d8e31229a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{eig3_8c_ae6a616c3110d66d701c2b35aec4de178}\label{eig3_8c_ae6a616c3110d66d701c2b35aec4de178}} 
+\index{eig3.c@{eig3.c}!tred2@{tred2}}
+\index{tred2@{tred2}!eig3.c@{eig3.c}}
+\doxysubsubsection{\texorpdfstring{tred2()}{tred2()}}
+{\footnotesize\ttfamily static void tred2 (\begin{DoxyParamCaption}\item[{double}]{V\mbox{[}n\mbox{]}\mbox{[}n\mbox{]},  }\item[{double}]{d\mbox{[}n\mbox{]},  }\item[{double}]{e\mbox{[}n\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{eig3_8c_ae6a616c3110d66d701c2b35aec4de178_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}\label{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+\index{eig3.c@{eig3.c}!n@{n}}
+\index{n@{n}!eig3.c@{eig3.c}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int n = 3\hspace{0.3cm}{\ttfamily [static]}}
+

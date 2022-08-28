@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: map_server 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">map_server 命名空间参考</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a9a1424290b6d4d4806dfb7621cab693d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemap__server.html#a9a1424290b6d4d4806dfb7621cab693d">loadMapFromFile</a> (nav_msgs::GetMap::Response *resp, const char *fname, double res, bool negate, double occ_th, double free_th, double *origin, <a class="el" href="image__loader_8h.html#aa17ca8c572605df6a7d49a362f6d7534">MapMode</a> mode=<a class="el" href="image__loader_8h.html#aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594">TRINARY</a>)</td></tr>
+<tr class="separator:a9a1424290b6d4d4806dfb7621cab693d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a9a1424290b6d4d4806dfb7621cab693d" name="a9a1424290b6d4d4806dfb7621cab693d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a1424290b6d4d4806dfb7621cab693d">&#9670;&nbsp;</a></span>loadMapFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void map_server::loadMapFromFile </td>
+          <td>(</td>
+          <td class="paramtype">nav_msgs::GetMap::Response *&#160;</td>
+          <td class="paramname"><em>resp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>negate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>occ_th</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>free_th</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="image__loader_8h.html#aa17ca8c572605df6a7d49a362f6d7534">MapMode</a>&#160;</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="image__loader_8h.html#aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594">TRINARY</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Read the image from file and fill out the resp object, for later use when our services are requested.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resp</td><td>The map wil be written into here </td></tr>
+    <tr><td class="paramname">fname</td><td>The image file to read from </td></tr>
+    <tr><td class="paramname">res</td><td>The resolution of the map (gets stored in resp) </td></tr>
+    <tr><td class="paramname">negate</td><td>If true, then whiter pixels are occupied, and blacker pixels are free </td></tr>
+    <tr><td class="paramname">occ_th</td><td>Threshold above which pixels are occupied </td></tr>
+    <tr><td class="paramname">free_th</td><td>Threshold below which pixels are free </td></tr>
+    <tr><td class="paramname">origin</td><td>Triple specifying 2-D pose of lower-left corner of image </td></tr>
+    <tr><td class="paramname">mode</td><td>Map mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>If the image file can't be loaded </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d_icgraph.png" border="0" usemap="#anamespacemap__server_a9a1424290b6d4d4806dfb7621cab693d_icgraph" alt=""/></div>
+<map name="anamespacemap__server_a9a1424290b6d4d4806dfb7621cab693d_icgraph" id="anamespacemap__server_a9a1424290b6d4d4806dfb7621cab693d_icgraph">
+<area shape="rect" title=" " alt="" coords="985,56,1184,83"/>
+<area shape="rect" href="class_map_server.html#a97a151da4f0c2457e4465cbf5e72e389" title=" " alt="" coords="725,31,937,57"/>
+<area shape="rect" href="map__server_2test_2utest_8cpp.html#aed3c6afdd32b4fd4b9c40c3e3c813a29" title=" " alt="" coords="803,81,859,108"/>
+<area shape="rect" href="class_map_server.html#ad11fadd1892f9fc826010ee3478cc13a" title=" " alt="" coords="209,5,427,32"/>
+<area shape="rect" href="class_map_server.html#a3ff2a7171c8d3cc381506c8347e5fae6" title=" " alt="" coords="475,56,677,83"/>
+<area shape="rect" href="class_map_server.html#ae1c28a36205ae2d7fc2faa7e9d53b3e9" title=" " alt="" coords="5,56,161,83"/>
+<area shape="rect" href="class_map_server.html#a3c6808b81ad71ac7e82d4aa8e3ac34df" title=" " alt="" coords="213,107,423,133"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

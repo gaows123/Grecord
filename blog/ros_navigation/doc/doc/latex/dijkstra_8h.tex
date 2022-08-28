@@ -1,0 +1,72 @@
+\hypertarget{dijkstra_8h}{}\doxysection{global\+\_\+planner/include/global\+\_\+planner/dijkstra.h 文件参考}
+\label{dijkstra_8h}\index{global\_planner/include/global\_planner/dijkstra.h@{global\_planner/include/global\_planner/dijkstra.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$global\+\_\+planner/planner\+\_\+core.\+h$>$}\newline
+{\ttfamily \#include $<$global\+\_\+planner/expander.\+h$>$}\newline
+dijkstra.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dijkstra_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{dijkstra_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion}{global\+\_\+planner\+::\+Dijkstra\+Expansion}}
+\end{DoxyCompactItemize}
+\doxysubsection*{命名空间}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceglobal__planner}{global\+\_\+planner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dijkstra_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}}~10000
+\item 
+\#define \mbox{\hyperlink{dijkstra_8h_a0d84ad97d9e5cbb6547781c77e034df1}{push\+\_\+cur}}(\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})~\{ if (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$>$=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$<$ns\+\_\+ \&\& !pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]} \&\& get\+Cost(costs, \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})$<$lethal\+\_\+cost\+\_\+ \&\& current\+End\+\_\+$<$\mbox{\hyperlink{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}})\{ current\+Buffer\+\_\+\mbox{[}current\+End\+\_\+++\mbox{]}=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}=true; \}\}
+\item 
+\#define \mbox{\hyperlink{dijkstra_8h_a5a251060a5b8d30b785c40cc337d6fb2}{push\+\_\+next}}(\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})~\{ if (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$>$=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$<$ns\+\_\+ \&\& !pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]} \&\& get\+Cost(costs, \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})$<$lethal\+\_\+cost\+\_\+ \&\&    next\+End\+\_\+$<$\mbox{\hyperlink{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}})\{    next\+Buffer\+\_\+\mbox{[}   next\+End\+\_\+++\mbox{]}=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}=true; \}\}
+\item 
+\#define \mbox{\hyperlink{dijkstra_8h_a9f319625e73c43d623645edec18b90de}{push\+\_\+over}}(\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})~\{ if (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$>$=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$<$ns\+\_\+ \&\& !pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]} \&\& get\+Cost(costs, \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})$<$lethal\+\_\+cost\+\_\+ \&\&    over\+End\+\_\+$<$\mbox{\hyperlink{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}})\{    over\+Buffer\+\_\+\mbox{[}   over\+End\+\_\+++\mbox{]}=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}=true; \}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{dijkstra_8h_acc292a3d616d167e6b5f3e33cd9dad54}\label{dijkstra_8h_acc292a3d616d167e6b5f3e33cd9dad54}} 
+\index{dijkstra.h@{dijkstra.h}!PRIORITYBUFSIZE@{PRIORITYBUFSIZE}}
+\index{PRIORITYBUFSIZE@{PRIORITYBUFSIZE}!dijkstra.h@{dijkstra.h}}
+\doxysubsubsection{\texorpdfstring{PRIORITYBUFSIZE}{PRIORITYBUFSIZE}}
+{\footnotesize\ttfamily \#define PRIORITYBUFSIZE~10000}
+
+\mbox{\Hypertarget{dijkstra_8h_a0d84ad97d9e5cbb6547781c77e034df1}\label{dijkstra_8h_a0d84ad97d9e5cbb6547781c77e034df1}} 
+\index{dijkstra.h@{dijkstra.h}!push\_cur@{push\_cur}}
+\index{push\_cur@{push\_cur}!dijkstra.h@{dijkstra.h}}
+\doxysubsubsection{\texorpdfstring{push\_cur}{push\_cur}}
+{\footnotesize\ttfamily \#define push\+\_\+cur(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} }\end{DoxyParamCaption})~\{ if (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$>$=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$<$ns\+\_\+ \&\& !pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]} \&\& get\+Cost(costs, \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})$<$lethal\+\_\+cost\+\_\+ \&\& current\+End\+\_\+$<$\mbox{\hyperlink{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}})\{ current\+Buffer\+\_\+\mbox{[}current\+End\+\_\+++\mbox{]}=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}=true; \}\}}
+
+\mbox{\Hypertarget{dijkstra_8h_a5a251060a5b8d30b785c40cc337d6fb2}\label{dijkstra_8h_a5a251060a5b8d30b785c40cc337d6fb2}} 
+\index{dijkstra.h@{dijkstra.h}!push\_next@{push\_next}}
+\index{push\_next@{push\_next}!dijkstra.h@{dijkstra.h}}
+\doxysubsubsection{\texorpdfstring{push\_next}{push\_next}}
+{\footnotesize\ttfamily \#define push\+\_\+next(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} }\end{DoxyParamCaption})~\{ if (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$>$=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$<$ns\+\_\+ \&\& !pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]} \&\& get\+Cost(costs, \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})$<$lethal\+\_\+cost\+\_\+ \&\&    next\+End\+\_\+$<$\mbox{\hyperlink{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}})\{    next\+Buffer\+\_\+\mbox{[}   next\+End\+\_\+++\mbox{]}=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}=true; \}\}}
+
+\mbox{\Hypertarget{dijkstra_8h_a9f319625e73c43d623645edec18b90de}\label{dijkstra_8h_a9f319625e73c43d623645edec18b90de}} 
+\index{dijkstra.h@{dijkstra.h}!push\_over@{push\_over}}
+\index{push\_over@{push\_over}!dijkstra.h@{dijkstra.h}}
+\doxysubsubsection{\texorpdfstring{push\_over}{push\_over}}
+{\footnotesize\ttfamily \#define push\+\_\+over(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} }\end{DoxyParamCaption})~\{ if (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$>$=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}$<$ns\+\_\+ \&\& !pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]} \&\& get\+Cost(costs, \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})$<$lethal\+\_\+cost\+\_\+ \&\&    over\+End\+\_\+$<$\mbox{\hyperlink{navfn_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}})\{    over\+Buffer\+\_\+\mbox{[}   over\+End\+\_\+++\mbox{]}=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending\+\_\+\mbox{[}\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}\mbox{]}=true; \}\}}
+

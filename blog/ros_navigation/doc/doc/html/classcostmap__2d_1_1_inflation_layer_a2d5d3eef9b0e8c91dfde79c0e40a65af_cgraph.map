@@ -1,0 +1,11 @@
+<map id="costmap_2d::InflationLayer::updateCosts" name="costmap_2d::InflationLayer::updateCosts">
+<area shape="rect" id="node1" title="Actually update the underlying costmap, only within the bounds calculated during UpdateBounds()." alt="" coords="5,169,184,211"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_inflation_layer.html#a576a455f199de11e329366df5c1d906a" title="Lookup pre&#45;computed costs" alt="" coords="232,5,411,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_inflation_layer.html#a6c750bb8214b8d1281d0b96598ff0996" title="Given an index of a cell in the costmap, place it into a list pending for obstacle inflation" alt="" coords="232,71,411,112"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d.html#a951c218252d6e66e23062a123dbde34d" title="Will return a pointer to the underlying unsigned char array used as the costmap" alt="" coords="237,136,406,177"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="237,201,406,243"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="237,267,406,308"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="237,332,406,373"/>
+<area shape="rect" id="node4" href="$costmap__math_8h.html#a98aba4ec7ccaf3b54f2a312e2db8ba98" title=" " alt="" coords="513,49,583,75"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_inflation_layer.html#a75897e88513bbaa87f773664879bb1ad" title="Lookup pre&#45;computed distances" alt="" coords="459,100,637,141"/>
+</map>

@@ -1,0 +1,55 @@
+\hypertarget{image__loader_8h_source}{}\doxysection{image\+\_\+loader.\+h}
+\label{image__loader_8h_source}\index{map\_server/include/map\_server/image\_loader.h@{map\_server/include/map\_server/image\_loader.h}}
+\mbox{\hyperlink{image__loader_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{3 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{6 \textcolor{comment}{ * modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{9 \textcolor{comment}{ *       notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{10 \textcolor{comment}{ *     * Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{11 \textcolor{comment}{ *       notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{12 \textcolor{comment}{ *       documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     * Neither the name of the Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{14 \textcolor{comment}{ *       contributors may be used to endorse or promote products derived from}}
+\DoxyCodeLine{15 \textcolor{comment}{ *       this software without specific prior written permission.}}
+\DoxyCodeLine{16 \textcolor{comment}{ *}}
+\DoxyCodeLine{17 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{18 \textcolor{comment}{ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{19 \textcolor{comment}{ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{20 \textcolor{comment}{ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE}}
+\DoxyCodeLine{21 \textcolor{comment}{ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{22 \textcolor{comment}{ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{23 \textcolor{comment}{ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{24 \textcolor{comment}{ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{26 \textcolor{comment}{ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{27 \textcolor{comment}{ * POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{28 \textcolor{comment}{ */}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#ifndef MAP\_SERVER\_MAP\_SERVER\_H}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define MAP\_SERVER\_MAP\_SERVER\_H}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{comment}{/*}}
+\DoxyCodeLine{33 \textcolor{comment}{ * Author: Brian Gerkey}}
+\DoxyCodeLine{34 \textcolor{comment}{ */}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include "{}nav\_msgs/GetMap.h"{}}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{52 \textcolor{keyword}{enum} \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{MapMode}} \{\mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}{TRINARY}}, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534a593be05a10070b4e7e0856e20590eaaf}{SCALE}}, \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534abdeded99fe7d3f2773014a9a2cfb73d7}{RAW}}\};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemap__server}{map\_server}}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{71 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacemap__server_a9a1424290b6d4d4806dfb7621cab693d}{loadMapFromFile}}(nav\_msgs::GetMap::Response* resp,}
+\DoxyCodeLine{72                      \textcolor{keyword}{const} \textcolor{keywordtype}{char}* fname, \textcolor{keywordtype}{double} res, \textcolor{keywordtype}{bool} negate,}
+\DoxyCodeLine{73                      \textcolor{keywordtype}{double} occ\_th, \textcolor{keywordtype}{double} free\_th, \textcolor{keywordtype}{double}* origin,}
+\DoxyCodeLine{74                      \mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534}{MapMode}} mode=\mbox{\hyperlink{image__loader_8h_aa17ca8c572605df6a7d49a362f6d7534ab64af7e0a4e27abbf70b948e37034594}{TRINARY}});}
+\DoxyCodeLine{75 \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

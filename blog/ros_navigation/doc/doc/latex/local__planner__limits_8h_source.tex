@@ -1,0 +1,123 @@
+\hypertarget{local__planner__limits_8h_source}{}\doxysection{local\+\_\+planner\+\_\+limits.\+h}
+\label{local__planner__limits_8h_source}\index{base\_local\_planner/include/base\_local\_planner/local\_planner\_limits.h@{base\_local\_planner/include/base\_local\_planner/local\_planner\_limits.h}}
+\mbox{\hyperlink{local__planner__limits_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/***********************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *}}
+\DoxyCodeLine{7 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{10 \textcolor{comment}{ *}}
+\DoxyCodeLine{11 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{12 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{13 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{14 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{17 \textcolor{comment}{ *   * Neither the name of the Willow Garage nor the names of its}}
+\DoxyCodeLine{18 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{20 \textcolor{comment}{ *}}
+\DoxyCodeLine{21 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{33 \textcolor{comment}{ ***********************************************************/}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#ifndef \_\_base\_local\_planner\_\_LOCALPLANNERLIMITS\_H\_\_}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define \_\_base\_local\_planner\_\_LOCALPLANNERLIMITS\_H\_\_}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <Eigen/Core>}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits}{LocalPlannerLimits}}}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45 \textcolor{keyword}{public}:}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a94d3e428ddd0fa6916c9f03bdf726b10}{max\_vel\_trans}};}
+\DoxyCodeLine{48   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a6b5bdf743e847d93fec659a2ca2c0865}{min\_vel\_trans}};}
+\DoxyCodeLine{49   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_ae77b5cfd468d44cd14c30545f9f1ae88}{max\_vel\_x}};}
+\DoxyCodeLine{50   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a1f28e10f2b8d1cc946e0e9132f1ca675}{min\_vel\_x}};}
+\DoxyCodeLine{51   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a087c58f4b6cc9c4dd65f18ff8e4fd449}{max\_vel\_y}};}
+\DoxyCodeLine{52   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_af84d70acfecc28ffa8d3a5f5e82e3b6c}{min\_vel\_y}};}
+\DoxyCodeLine{53   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a673f702c2bdae2fbbd2d982ee7da4ecc}{max\_vel\_theta}};}
+\DoxyCodeLine{54   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a2ef2f58644811656adef6692720881b2}{min\_vel\_theta}};}
+\DoxyCodeLine{55   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a71cbee519667eb20f1c75574717eb7b3}{acc\_lim\_x}};}
+\DoxyCodeLine{56   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a3f7d1e95cdd377d154afc7ace9a863b6}{acc\_lim\_y}};}
+\DoxyCodeLine{57   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a4fae658b487341ceb5623293993738e6}{acc\_lim\_theta}};}
+\DoxyCodeLine{58   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a0fe79e5cb0fe7ffc76831ba6bb56967d}{acc\_lim\_trans}};}
+\DoxyCodeLine{59   \textcolor{keywordtype}{bool}   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a54d0b4d476e2aa88189b6b54eb29bc53}{prune\_plan}};}
+\DoxyCodeLine{60   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_acf6eecfd9fb865c904a331b26e9ab43b}{xy\_goal\_tolerance}};}
+\DoxyCodeLine{61   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a40de24a1e600606343f3521b2a95c82f}{yaw\_goal\_tolerance}};}
+\DoxyCodeLine{62   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_ab3f35628f5d93eaeab83eaf3fc1e1f55}{trans\_stopped\_vel}};}
+\DoxyCodeLine{63   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a8232d72db9ee490be3b13abed606bf73}{theta\_stopped\_vel}};}
+\DoxyCodeLine{64   \textcolor{keywordtype}{bool}   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a28b046714e96521067f4cb181a176acf}{restore\_defaults}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a458b5a435b59aff5e7599cb957d8cdc1}{LocalPlannerLimits}}() \{\}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a044e044c1ccf1c300bd34d6b7210886f}{LocalPlannerLimits}}(}
+\DoxyCodeLine{69       \textcolor{keywordtype}{double} nmax\_vel\_trans,}
+\DoxyCodeLine{70       \textcolor{keywordtype}{double} nmin\_vel\_trans,}
+\DoxyCodeLine{71       \textcolor{keywordtype}{double} nmax\_vel\_x,}
+\DoxyCodeLine{72       \textcolor{keywordtype}{double} nmin\_vel\_x,}
+\DoxyCodeLine{73       \textcolor{keywordtype}{double} nmax\_vel\_y,}
+\DoxyCodeLine{74       \textcolor{keywordtype}{double} nmin\_vel\_y,}
+\DoxyCodeLine{75       \textcolor{keywordtype}{double} nmax\_vel\_theta,}
+\DoxyCodeLine{76       \textcolor{keywordtype}{double} nmin\_vel\_theta,}
+\DoxyCodeLine{77       \textcolor{keywordtype}{double} nacc\_lim\_x,}
+\DoxyCodeLine{78       \textcolor{keywordtype}{double} nacc\_lim\_y,}
+\DoxyCodeLine{79       \textcolor{keywordtype}{double} nacc\_lim\_theta,}
+\DoxyCodeLine{80       \textcolor{keywordtype}{double} nacc\_lim\_trans,}
+\DoxyCodeLine{81       \textcolor{keywordtype}{double} nxy\_goal\_tolerance,}
+\DoxyCodeLine{82       \textcolor{keywordtype}{double} nyaw\_goal\_tolerance,}
+\DoxyCodeLine{83       \textcolor{keywordtype}{bool}   nprune\_plan = \textcolor{keyword}{true},}
+\DoxyCodeLine{84       \textcolor{keywordtype}{double} ntrans\_stopped\_vel = 0.1,}
+\DoxyCodeLine{85       \textcolor{keywordtype}{double} ntheta\_stopped\_vel = 0.1):}
+\DoxyCodeLine{86         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a94d3e428ddd0fa6916c9f03bdf726b10}{max\_vel\_trans}}(nmax\_vel\_trans),}
+\DoxyCodeLine{87         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a6b5bdf743e847d93fec659a2ca2c0865}{min\_vel\_trans}}(nmin\_vel\_trans),}
+\DoxyCodeLine{88         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_ae77b5cfd468d44cd14c30545f9f1ae88}{max\_vel\_x}}(nmax\_vel\_x),}
+\DoxyCodeLine{89         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a1f28e10f2b8d1cc946e0e9132f1ca675}{min\_vel\_x}}(nmin\_vel\_x),}
+\DoxyCodeLine{90         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a087c58f4b6cc9c4dd65f18ff8e4fd449}{max\_vel\_y}}(nmax\_vel\_y),}
+\DoxyCodeLine{91         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_af84d70acfecc28ffa8d3a5f5e82e3b6c}{min\_vel\_y}}(nmin\_vel\_y),}
+\DoxyCodeLine{92         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a673f702c2bdae2fbbd2d982ee7da4ecc}{max\_vel\_theta}}(nmax\_vel\_theta),}
+\DoxyCodeLine{93         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a2ef2f58644811656adef6692720881b2}{min\_vel\_theta}}(nmin\_vel\_theta),}
+\DoxyCodeLine{94         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a71cbee519667eb20f1c75574717eb7b3}{acc\_lim\_x}}(nacc\_lim\_x),}
+\DoxyCodeLine{95         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a3f7d1e95cdd377d154afc7ace9a863b6}{acc\_lim\_y}}(nacc\_lim\_y),}
+\DoxyCodeLine{96         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a4fae658b487341ceb5623293993738e6}{acc\_lim\_theta}}(nacc\_lim\_theta),}
+\DoxyCodeLine{97         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a0fe79e5cb0fe7ffc76831ba6bb56967d}{acc\_lim\_trans}}(nacc\_lim\_trans),}
+\DoxyCodeLine{98         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a54d0b4d476e2aa88189b6b54eb29bc53}{prune\_plan}}(nprune\_plan),}
+\DoxyCodeLine{99         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_acf6eecfd9fb865c904a331b26e9ab43b}{xy\_goal\_tolerance}}(nxy\_goal\_tolerance),}
+\DoxyCodeLine{100         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a40de24a1e600606343f3521b2a95c82f}{yaw\_goal\_tolerance}}(nyaw\_goal\_tolerance),}
+\DoxyCodeLine{101         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_ab3f35628f5d93eaeab83eaf3fc1e1f55}{trans\_stopped\_vel}}(ntrans\_stopped\_vel),}
+\DoxyCodeLine{102         \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a8232d72db9ee490be3b13abed606bf73}{theta\_stopped\_vel}}(ntheta\_stopped\_vel) \{\}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104   \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a390e4b0c4663ed778b08c95dfe23de1a}{\string~LocalPlannerLimits}}() \{\}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{110   Eigen::Vector3f \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a0402363ae18d44002834003a1b17f14b}{getAccLimits}}() \{}
+\DoxyCodeLine{111     Eigen::Vector3f acc\_limits;}
+\DoxyCodeLine{112     acc\_limits[0] = \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a71cbee519667eb20f1c75574717eb7b3}{acc\_lim\_x}};}
+\DoxyCodeLine{113     acc\_limits[1] = \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a3f7d1e95cdd377d154afc7ace9a863b6}{acc\_lim\_y}};}
+\DoxyCodeLine{114     acc\_limits[2] = \mbox{\hyperlink{classbase__local__planner_1_1_local_planner_limits_a4fae658b487341ceb5623293993738e6}{acc\_lim\_theta}};}
+\DoxyCodeLine{115     \textcolor{keywordflow}{return} acc\_limits;}
+\DoxyCodeLine{116   \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_\_LOCALPLANNERLIMITS\_H\_\_}}
+
+\end{DoxyCode}

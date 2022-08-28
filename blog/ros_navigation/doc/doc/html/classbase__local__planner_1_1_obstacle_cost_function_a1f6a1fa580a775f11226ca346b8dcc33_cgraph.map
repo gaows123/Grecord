@@ -1,0 +1,7 @@
+<map id="base_local_planner::ObstacleCostFunction::footprintCost" name="base_local_planner::ObstacleCostFunction::footprintCost">
+<area shape="rect" id="node1" title=" " alt="" coords="5,63,164,119"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="212,5,392,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="217,71,387,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="217,136,387,177"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="440,71,609,112"/>
+</map>

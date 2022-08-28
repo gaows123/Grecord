@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::ObstacleCostFunction类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html">ObstacleCostFunction</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classbase__local__planner_1_1_obstacle_cost_function-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::ObstacleCostFunction类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajectory.  
+ <a href="classbase__local__planner_1_1_obstacle_cost_function.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="obstacle__cost__function_8h_source.html">obstacle_cost_function.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::ObstacleCostFunction 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function__inherit__graph.png" border="0" usemap="#abase__local__planner_1_1_obstacle_cost_function_inherit__map" alt="Inheritance graph"/></div>
+<map name="abase__local__planner_1_1_obstacle_cost_function_inherit__map" id="abase__local__planner_1_1_obstacle_cost_function_inherit__map">
+<area shape="rect" title="Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajec..." alt="" coords="9,95,167,136"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_cost_function.html" title="Provides an interface for critics of trajectories During each sampling run, a batch of many trajector..." alt="" coords="5,5,171,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+base_local_planner::ObstacleCostFunction 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function__coll__graph.png" border="0" usemap="#abase__local__planner_1_1_obstacle_cost_function_coll__map" alt="Collaboration graph"/></div>
+<map name="abase__local__planner_1_1_obstacle_cost_function_coll__map" id="abase__local__planner_1_1_obstacle_cost_function_coll__map">
+<area shape="rect" title="Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajec..." alt="" coords="307,64,465,105"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_cost_function.html" title="Provides an interface for critics of trajectories During each sampling run, a batch of many trajector..." alt="" coords="7,5,173,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,71,175,98"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html" title="An interface the trajectory controller uses to interact with the world regardless of the underlying w..." alt="" coords="23,123,157,164"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a415ee13143bd2b2dd9b5effa1e7f3a5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a415ee13143bd2b2dd9b5effa1e7f3a5a">ObstacleCostFunction</a> (<a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *costmap)</td></tr>
+<tr class="separator:a415ee13143bd2b2dd9b5effa1e7f3a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba72b1bd0dae5acb7e25dbfd4ea9821a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#aba72b1bd0dae5acb7e25dbfd4ea9821a">~ObstacleCostFunction</a> ()</td></tr>
+<tr class="separator:aba72b1bd0dae5acb7e25dbfd4ea9821a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9929d60bfd91f8814d8b31e51969cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a9a9929d60bfd91f8814d8b31e51969cf">prepare</a> ()</td></tr>
+<tr class="separator:a9a9929d60bfd91f8814d8b31e51969cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bac5a99d333a755440449809270e638"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a3bac5a99d333a755440449809270e638">scoreTrajectory</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj)</td></tr>
+<tr class="separator:a3bac5a99d333a755440449809270e638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62321188c336dbef4d749a79cecc45c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a62321188c336dbef4d749a79cecc45c0">setSumScores</a> (bool score_sums)</td></tr>
+<tr class="separator:a62321188c336dbef4d749a79cecc45c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1fc4b6ee10cf4add4e198967030037c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#ad1fc4b6ee10cf4add4e198967030037c">setParams</a> (double max_trans_vel, double max_scaling_factor, double scaling_speed)</td></tr>
+<tr class="separator:ad1fc4b6ee10cf4add4e198967030037c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8043f943c3bf43dc4836db1a632a6e52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a8043f943c3bf43dc4836db1a632a6e52">setFootprint</a> (std::vector&lt; geometry_msgs::Point &gt; footprint_spec)</td></tr>
+<tr class="separator:a8043f943c3bf43dc4836db1a632a6e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1_trajectory_cost_function')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html">base_local_planner::TrajectoryCostFunction</a></td></tr>
+<tr class="memitem:a351dddca226f210a09bd10c151e2975f inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a351dddca226f210a09bd10c151e2975f">prepare</a> ()=0</td></tr>
+<tr class="separator:a351dddca226f210a09bd10c151e2975f inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6908a8071270b455fc25b48db76e2d3c inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a6908a8071270b455fc25b48db76e2d3c">scoreTrajectory</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj)=0</td></tr>
+<tr class="separator:a6908a8071270b455fc25b48db76e2d3c inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaae8d899bd41d8baf02bf7aa175ded9 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#abaae8d899bd41d8baf02bf7aa175ded9">getScale</a> ()</td></tr>
+<tr class="separator:abaae8d899bd41d8baf02bf7aa175ded9 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816da4ed3c9be419fc00abb271d5a8b5 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a816da4ed3c9be419fc00abb271d5a8b5">setScale</a> (double scale)</td></tr>
+<tr class="separator:a816da4ed3c9be419fc00abb271d5a8b5 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac606d6ffc0a09f96d04cbb671c903d68 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#ac606d6ffc0a09f96d04cbb671c903d68">~TrajectoryCostFunction</a> ()</td></tr>
+<tr class="separator:ac606d6ffc0a09f96d04cbb671c903d68 inherit pub_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:aff41f9f317c9e375d0945bda8b9f8970"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#aff41f9f317c9e375d0945bda8b9f8970">getScalingFactor</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj, double scaling_speed, double max_trans_vel, double max_scaling_factor)</td></tr>
+<tr class="separator:aff41f9f317c9e375d0945bda8b9f8970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6a1fa580a775f11226ca346b8dcc33"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a1f6a1fa580a775f11226ca346b8dcc33">footprintCost</a> (const double &amp;x, const double &amp;y, const double &amp;th, double scale, std::vector&lt; geometry_msgs::Point &gt; footprint_spec, <a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *costmap, <a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a> *world_model)</td></tr>
+<tr class="separator:a1f6a1fa580a775f11226ca346b8dcc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a649bf1d646e4432bdf338ff6b904cefc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a649bf1d646e4432bdf338ff6b904cefc">costmap_</a></td></tr>
+<tr class="separator:a649bf1d646e4432bdf338ff6b904cefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3f0212931d94c234ab6c4cf1dd0689"><td class="memItemLeft" align="right" valign="top">std::vector&lt; geometry_msgs::Point &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#aef3f0212931d94c234ab6c4cf1dd0689">footprint_spec_</a></td></tr>
+<tr class="separator:aef3f0212931d94c234ab6c4cf1dd0689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce234454982f3bd52744f67a04f8be5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#acce234454982f3bd52744f67a04f8be5">world_model_</a></td></tr>
+<tr class="separator:acce234454982f3bd52744f67a04f8be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6617f6131ca6598ec3a07d1d3153dd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#aad6617f6131ca6598ec3a07d1d3153dd">max_trans_vel_</a></td></tr>
+<tr class="separator:aad6617f6131ca6598ec3a07d1d3153dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff9618ab8e84d39d17d0a2f843a8cb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a1ff9618ab8e84d39d17d0a2f843a8cb9">sum_scores_</a></td></tr>
+<tr class="separator:a1ff9618ab8e84d39d17d0a2f843a8cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2ec54222f1ae220836e41a967beb13"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#a5c2ec54222f1ae220836e41a967beb13">max_scaling_factor_</a></td></tr>
+<tr class="separator:a5c2ec54222f1ae220836e41a967beb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac2b51781792694610f477a28f784fb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html#abac2b51781792694610f477a28f784fb">scaling_speed_</a></td></tr>
+<tr class="separator:abac2b51781792694610f477a28f784fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classbase__local__planner_1_1_trajectory_cost_function"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbase__local__planner_1_1_trajectory_cost_function')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html">base_local_planner::TrajectoryCostFunction</a></td></tr>
+<tr class="memitem:a5a80d6bb3fade55e28d8cb234936c43a inherit pro_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a5a80d6bb3fade55e28d8cb234936c43a">TrajectoryCostFunction</a> (double scale=1.0)</td></tr>
+<tr class="separator:a5a80d6bb3fade55e28d8cb234936c43a inherit pro_methods_classbase__local__planner_1_1_trajectory_cost_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajectory. </p>
+<p >class <a class="el" href="classbase__local__planner_1_1_obstacle_cost_function.html" title="Uses costmap 2d to assign negative costs if robot footprint is in obstacle on any point of the trajec...">ObstacleCostFunction</a> </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a415ee13143bd2b2dd9b5effa1e7f3a5a" name="a415ee13143bd2b2dd9b5effa1e7f3a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a415ee13143bd2b2dd9b5effa1e7f3a5a">&#9670;&nbsp;</a></span>ObstacleCostFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::ObstacleCostFunction::ObstacleCostFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba72b1bd0dae5acb7e25dbfd4ea9821a" name="aba72b1bd0dae5acb7e25dbfd4ea9821a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba72b1bd0dae5acb7e25dbfd4ea9821a">&#9670;&nbsp;</a></span>~ObstacleCostFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::ObstacleCostFunction::~ObstacleCostFunction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1f6a1fa580a775f11226ca346b8dcc33" name="a1f6a1fa580a775f11226ca346b8dcc33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6a1fa580a775f11226ca346b8dcc33">&#9670;&nbsp;</a></span>footprintCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::ObstacleCostFunction::footprintCost </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>th</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::Point &gt;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a> *&#160;</td>
+          <td class="paramname"><em>costmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a> *&#160;</td>
+          <td class="paramname"><em>world_model</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_cgraph" id="aclassbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_cgraph">
+<area shape="rect" title=" " alt="" coords="5,63,164,119"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="212,5,392,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="217,71,387,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="217,136,387,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="440,71,609,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_icgraph" id="aclassbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,371,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_obstacle_cost_function.html#a3bac5a99d333a755440449809270e638" title=" " alt="" coords="5,5,164,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff41f9f317c9e375d0945bda8b9f8970" name="aff41f9f317c9e375d0945bda8b9f8970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff41f9f317c9e375d0945bda8b9f8970">&#9670;&nbsp;</a></span>getScalingFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::ObstacleCostFunction::getScalingFactor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scaling_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_trans_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_scaling_factor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function_aff41f9f317c9e375d0945bda8b9f8970_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_obstacle_cost_function_aff41f9f317c9e375d0945bda8b9f8970_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_obstacle_cost_function_aff41f9f317c9e375d0945bda8b9f8970_icgraph" id="aclassbase__local__planner_1_1_obstacle_cost_function_aff41f9f317c9e375d0945bda8b9f8970_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,371,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_obstacle_cost_function.html#a3bac5a99d333a755440449809270e638" title=" " alt="" coords="5,5,164,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9a9929d60bfd91f8814d8b31e51969cf" name="a9a9929d60bfd91f8814d8b31e51969cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9929d60bfd91f8814d8b31e51969cf">&#9670;&nbsp;</a></span>prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::ObstacleCostFunction::prepare </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >更新常用的变量 毕竟纯虚函数，子类中必须重写该函数 </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a351dddca226f210a09bd10c151e2975f">base_local_planner::TrajectoryCostFunction</a>.</p>
+
+</div>
+</div>
+<a id="a3bac5a99d333a755440449809270e638" name="a3bac5a99d333a755440449809270e638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bac5a99d333a755440449809270e638">&#9670;&nbsp;</a></span>scoreTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::ObstacleCostFunction::scoreTrajectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >返回一个局部轨迹的评分，也是纯虚函数 </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_trajectory_cost_function.html#a6908a8071270b455fc25b48db76e2d3c">base_local_planner::TrajectoryCostFunction</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function_a3bac5a99d333a755440449809270e638_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_obstacle_cost_function_a3bac5a99d333a755440449809270e638_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_obstacle_cost_function_a3bac5a99d333a755440449809270e638_cgraph" id="aclassbase__local__planner_1_1_obstacle_cost_function_a3bac5a99d333a755440449809270e638_cgraph">
+<area shape="rect" title=" " alt="" coords="5,170,164,226"/>
+<area shape="rect" href="classbase__local__planner_1_1_obstacle_cost_function.html#a1f6a1fa580a775f11226ca346b8dcc33" title=" " alt="" coords="221,63,380,119"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="229,144,373,185"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="212,209,389,251"/>
+<area shape="rect" href="classbase__local__planner_1_1_obstacle_cost_function.html#aff41f9f317c9e375d0945bda8b9f8970" title=" " alt="" coords="221,275,380,331"/>
+<area shape="rect" href="classbase__local__planner_1_1_world_model.html#a36d4c808bc441e2b87b0ac038099993a" title="Subclass will implement this method to check a footprint at a given position and orientation for lega..." alt="" coords="437,5,617,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="443,71,612,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="443,136,612,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="665,71,835,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8043f943c3bf43dc4836db1a632a6e52" name="a8043f943c3bf43dc4836db1a632a6e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8043f943c3bf43dc4836db1a632a6e52">&#9670;&nbsp;</a></span>setFootprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::ObstacleCostFunction::setFootprint </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::Point &gt;&#160;</td>
+          <td class="paramname"><em>footprint_spec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function_a8043f943c3bf43dc4836db1a632a6e52_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_obstacle_cost_function_a8043f943c3bf43dc4836db1a632a6e52_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_obstacle_cost_function_a8043f943c3bf43dc4836db1a632a6e52_icgraph" id="aclassbase__local__planner_1_1_obstacle_cost_function_a8043f943c3bf43dc4836db1a632a6e52_icgraph">
+<area shape="rect" title=" " alt="" coords="276,5,435,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#aa681debca2e138a957652e9451893f67" title="在路径规划前更新代价函数" alt="" coords="5,5,228,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad1fc4b6ee10cf4add4e198967030037c" name="ad1fc4b6ee10cf4add4e198967030037c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1fc4b6ee10cf4add4e198967030037c">&#9670;&nbsp;</a></span>setParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::ObstacleCostFunction::setParams </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_trans_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max_scaling_factor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scaling_speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function_ad1fc4b6ee10cf4add4e198967030037c_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_obstacle_cost_function_ad1fc4b6ee10cf4add4e198967030037c_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_obstacle_cost_function_ad1fc4b6ee10cf4add4e198967030037c_icgraph" id="aclassbase__local__planner_1_1_obstacle_cost_function_ad1fc4b6ee10cf4add4e198967030037c_icgraph">
+<area shape="rect" title=" " alt="" coords="221,5,380,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a9388b62309f6148c697aef4ebf5fe20a" title="配置局部规划器" alt="" coords="5,13,173,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a62321188c336dbef4d749a79cecc45c0" name="a62321188c336dbef4d749a79cecc45c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62321188c336dbef4d749a79cecc45c0">&#9670;&nbsp;</a></span>setSumScores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::ObstacleCostFunction::setSumScores </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>score_sums</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_obstacle_cost_function_a62321188c336dbef4d749a79cecc45c0_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_obstacle_cost_function_a62321188c336dbef4d749a79cecc45c0_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_obstacle_cost_function_a62321188c336dbef4d749a79cecc45c0_icgraph" id="aclassbase__local__planner_1_1_obstacle_cost_function_a62321188c336dbef4d749a79cecc45c0_icgraph">
+<area shape="rect" title=" " alt="" coords="232,5,391,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#ab2c1143a3a54638d0dc38f9b6fa16e53" title="规划器的构造" alt="" coords="5,13,184,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a649bf1d646e4432bdf338ff6b904cefc" name="a649bf1d646e4432bdf338ff6b904cefc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a649bf1d646e4432bdf338ff6b904cefc">&#9670;&nbsp;</a></span>costmap_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d.html">costmap_2d::Costmap2D</a>* base_local_planner::ObstacleCostFunction::costmap_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef3f0212931d94c234ab6c4cf1dd0689" name="aef3f0212931d94c234ab6c4cf1dd0689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3f0212931d94c234ab6c4cf1dd0689">&#9670;&nbsp;</a></span>footprint_spec_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;geometry_msgs::Point&gt; base_local_planner::ObstacleCostFunction::footprint_spec_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c2ec54222f1ae220836e41a967beb13" name="a5c2ec54222f1ae220836e41a967beb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c2ec54222f1ae220836e41a967beb13">&#9670;&nbsp;</a></span>max_scaling_factor_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::ObstacleCostFunction::max_scaling_factor_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad6617f6131ca6598ec3a07d1d3153dd" name="aad6617f6131ca6598ec3a07d1d3153dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6617f6131ca6598ec3a07d1d3153dd">&#9670;&nbsp;</a></span>max_trans_vel_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::ObstacleCostFunction::max_trans_vel_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abac2b51781792694610f477a28f784fb" name="abac2b51781792694610f477a28f784fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac2b51781792694610f477a28f784fb">&#9670;&nbsp;</a></span>scaling_speed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::ObstacleCostFunction::scaling_speed_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ff9618ab8e84d39d17d0a2f843a8cb9" name="a1ff9618ab8e84d39d17d0a2f843a8cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff9618ab8e84d39d17d0a2f843a8cb9">&#9670;&nbsp;</a></span>sum_scores_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::ObstacleCostFunction::sum_scores_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acce234454982f3bd52744f67a04f8be5" name="acce234454982f3bd52744f67a04f8be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce234454982f3bd52744f67a04f8be5">&#9670;&nbsp;</a></span>world_model_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_world_model.html">base_local_planner::WorldModel</a>* base_local_planner::ObstacleCostFunction::world_model_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="obstacle__cost__function_8h_source.html">obstacle_cost_function.h</a></li>
+<li>base_local_planner/src/<a class="el" href="obstacle__cost__function_8cpp.html">obstacle_cost_function.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

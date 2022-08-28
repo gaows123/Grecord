@@ -1,0 +1,89 @@
+\hypertarget{navfn_8cpp}{}\doxysection{navfn/src/navfn.cpp 文件参考}
+\label{navfn_8cpp}\index{navfn/src/navfn.cpp@{navfn/src/navfn.cpp}}
+{\ttfamily \#include $<$navfn/navfn.\+h$>$}\newline
+{\ttfamily \#include $<$ros/console.\+h$>$}\newline
+navfn.\+cpp 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{navfn_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{命名空间}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacenavfn}{navfn}}
+\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{navfn_8cpp_a0d84ad97d9e5cbb6547781c77e034df1}{push\+\_\+cur}}(\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\item 
+\#define \mbox{\hyperlink{navfn_8cpp_a5a251060a5b8d30b785c40cc337d6fb2}{push\+\_\+next}}(\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\item 
+\#define \mbox{\hyperlink{navfn_8cpp_a9f319625e73c43d623645edec18b90de}{push\+\_\+over}}(\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}})
+\item 
+\#define \mbox{\hyperlink{navfn_8cpp_a58e26e9a27c188d602305ec0bc13149a}{INVSQRT2}}~0.\+707106781
+\item 
+\#define \mbox{\hyperlink{navfn_8cpp_a58e26e9a27c188d602305ec0bc13149a}{INVSQRT2}}~0.\+707106781
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacenavfn_a43e1cf99d005f4c0b40ce27c85ac3a0f}{navfn\+::create\+\_\+nav\+\_\+plan\+\_\+astar}} (\mbox{\hyperlink{navfn_8h_a137fdfc9b1a4312004400270e5f999ea}{COSTTYPE}} $\ast$costmap, int nx, int ny, int $\ast$\mbox{\hyperlink{navtest_8cpp_a924427d23a7d971370018f8d3dc452cf}{goal}}, int $\ast$\mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}}, float $\ast$plan, int nplan)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{navfn_8cpp_a58e26e9a27c188d602305ec0bc13149a}\label{navfn_8cpp_a58e26e9a27c188d602305ec0bc13149a}} 
+\index{navfn.cpp@{navfn.cpp}!INVSQRT2@{INVSQRT2}}
+\index{INVSQRT2@{INVSQRT2}!navfn.cpp@{navfn.cpp}}
+\doxysubsubsection{\texorpdfstring{INVSQRT2}{INVSQRT2}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define INVSQRT2~0.\+707106781}
+
+\mbox{\Hypertarget{navfn_8cpp_a58e26e9a27c188d602305ec0bc13149a}\label{navfn_8cpp_a58e26e9a27c188d602305ec0bc13149a}} 
+\index{navfn.cpp@{navfn.cpp}!INVSQRT2@{INVSQRT2}}
+\index{INVSQRT2@{INVSQRT2}!navfn.cpp@{navfn.cpp}}
+\doxysubsubsection{\texorpdfstring{INVSQRT2}{INVSQRT2}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define INVSQRT2~0.\+707106781}
+
+\mbox{\Hypertarget{navfn_8cpp_a0d84ad97d9e5cbb6547781c77e034df1}\label{navfn_8cpp_a0d84ad97d9e5cbb6547781c77e034df1}} 
+\index{navfn.cpp@{navfn.cpp}!push\_cur@{push\_cur}}
+\index{push\_cur@{push\_cur}!navfn.cpp@{navfn.cpp}}
+\doxysubsubsection{\texorpdfstring{push\_cur}{push\_cur}}
+{\footnotesize\ttfamily \#define push\+\_\+cur(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{ \textcolor{keywordflow}{if} (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}>=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}<ns \&\& !pending[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}] \&\& \(\backslash\)}
+\DoxyCodeLine{    costarr[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]<\mbox{\hyperlink{navfn_8h_afe3f51fbc354670e6c61f8e6f9c9b949}{COST\_OBS}} \&\& curPe<\mbox{\hyperlink{dijkstra_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}}) \(\backslash\)}
+\DoxyCodeLine{  \{ curP[curPe++]=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]=\textcolor{keyword}{true}; \}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{navfn_8cpp_a5a251060a5b8d30b785c40cc337d6fb2}\label{navfn_8cpp_a5a251060a5b8d30b785c40cc337d6fb2}} 
+\index{navfn.cpp@{navfn.cpp}!push\_next@{push\_next}}
+\index{push\_next@{push\_next}!navfn.cpp@{navfn.cpp}}
+\doxysubsubsection{\texorpdfstring{push\_next}{push\_next}}
+{\footnotesize\ttfamily \#define push\+\_\+next(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{ \textcolor{keywordflow}{if} (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}>=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}<ns \&\& !pending[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}] \&\& \(\backslash\)}
+\DoxyCodeLine{    costarr[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]<\mbox{\hyperlink{navfn_8h_afe3f51fbc354670e6c61f8e6f9c9b949}{COST\_OBS}} \&\& nextPe<\mbox{\hyperlink{dijkstra_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}}) \(\backslash\)}
+\DoxyCodeLine{  \{ nextP[nextPe++]=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]=\textcolor{keyword}{true}; \}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{navfn_8cpp_a9f319625e73c43d623645edec18b90de}\label{navfn_8cpp_a9f319625e73c43d623645edec18b90de}} 
+\index{navfn.cpp@{navfn.cpp}!push\_over@{push\_over}}
+\index{push\_over@{push\_over}!navfn.cpp@{navfn.cpp}}
+\doxysubsubsection{\texorpdfstring{push\_over}{push\_over}}
+{\footnotesize\ttfamily \#define push\+\_\+over(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}} }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{ \textcolor{keywordflow}{if} (\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}>=0 \&\& \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}<ns \&\& !pending[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}] \&\& \(\backslash\)}
+\DoxyCodeLine{    costarr[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]<\mbox{\hyperlink{navfn_8h_afe3f51fbc354670e6c61f8e6f9c9b949}{COST\_OBS}} \&\& overPe<\mbox{\hyperlink{dijkstra_8h_acc292a3d616d167e6b5f3e33cd9dad54}{PRIORITYBUFSIZE}}) \(\backslash\)}
+\DoxyCodeLine{  \{ overP[overPe++]=\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; pending[\mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}]=\textcolor{keyword}{true}; \}\}}
+
+\end{DoxyCode}

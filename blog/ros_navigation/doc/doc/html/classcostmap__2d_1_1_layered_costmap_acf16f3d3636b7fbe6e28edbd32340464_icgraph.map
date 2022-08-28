@@ -1,0 +1,10 @@
+<map id="costmap_2d::LayeredCostmap::setFootprint" name="costmap_2d::LayeredCostmap::setFootprint">
+<area shape="rect" id="node1" title="Updates the stored footprint, updates the circumscribed and inscribed radii, and calls onFootprintCha..." alt="" coords="1028,49,1227,90"/>
+<area shape="rect" id="node2" href="$inflation__tests_8cpp.html#aeda5180359541007551a26f092e871b5" title=" " alt="" coords="847,5,916,32"/>
+<area shape="rect" id="node3" href="$inflation__tests_8cpp.html#ad4ae0b82faed5db2b710a038b9cf895f" title=" " alt="" coords="608,5,664,32"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a220a578102cf3592a744ad5264bf09ed" title="Set the footprint of the robot to be the given set of points, padded by footprint_padding." alt="" coords="783,107,980,149"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,118,203,159"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#ae68ab88626d6d5f7a8b3f9dd44d60ff2" title="Set the footprint from the new_config object." alt="" coords="537,107,735,149"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="271,118,469,159"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a05c662c0ad169c124480ed3d9ee500e8" title="Set the footprint of the robot to be the given polygon, padded by footprint_padding." alt="" coords="251,205,489,246"/>
+</map>

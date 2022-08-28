@@ -1,0 +1,7 @@
+<map id="clear_costmap_recovery::ClearCostmapRecovery::clear" name="clear_costmap_recovery::ClearCostmapRecovery::clear">
+<area shape="rect" id="node1" title=" " alt="" coords="659,5,825,61"/>
+<area shape="rect" id="node2" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4" title="Run the ClearCostmapRecovery recovery behavior. Reverts the costmap to the static map outside of a us..." alt="" coords="444,5,611,61"/>
+<area shape="rect" id="node3" href="$clear__tester_8cpp.html#a401dad5e820a56943c7223955000dc1b" title=" " alt="" coords="271,20,396,47"/>
+<area shape="rect" id="node4" href="$clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="109,20,223,47"/>
+<area shape="rect" id="node5" href="$clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="5,20,61,47"/>
+</map>

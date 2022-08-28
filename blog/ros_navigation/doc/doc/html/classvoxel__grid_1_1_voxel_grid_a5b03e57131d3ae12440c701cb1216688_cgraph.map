@@ -1,0 +1,4 @@
+<map id="voxel_grid::VoxelGrid::resize" name="voxel_grid::VoxelGrid::resize">
+<area shape="rect" id="node1" title="Resizes a voxel grid to the desired size" alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node2" href="$classvoxel__grid_1_1_voxel_grid.html#aab30ed5d435c878574d0769186d196ac" title=" " alt="" coords="200,5,347,47"/>
+</map>

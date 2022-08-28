@@ -1,0 +1,13 @@
+<map id="base_local_planner::SimpleScoredSamplingPlanner::findBestTrajectory" name="base_local_planner::SimpleScoredSamplingPlanner::findBestTrajectory">
+<area shape="rect" id="node1" title=" " alt="" coords="5,242,215,298"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="294,5,441,47"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="295,71,439,112"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="279,136,456,177"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_trajectory_sample_generator.html#a053d4cfcef3b7c84bc86eb4c87211e3b" title=" " alt="" coords="273,202,462,258"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_trajectory_sample_generator.html#a810dd5771cf6cd1645fabf5c9bc25d94" title=" " alt="" coords="273,282,462,338"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_trajectory_cost_function.html#a351dddca226f210a09bd10c151e2975f" title=" " alt="" coords="285,362,450,418"/>
+<area shape="rect" id="node8" href="$classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="286,443,449,484"/>
+<area shape="rect" id="node9" href="$classbase__local__planner_1_1_simple_scored_sampling_planner.html#ac11a2d2fbf69d6ed55f720c5ebe1b541" title=" " alt="" coords="263,509,472,565"/>
+<area shape="rect" id="node10" href="$classbase__local__planner_1_1_trajectory_cost_function.html#abaae8d899bd41d8baf02bf7aa175ded9" title=" " alt="" coords="520,469,685,525"/>
+<area shape="rect" id="node11" href="$classbase__local__planner_1_1_trajectory_cost_function.html#a6908a8071270b455fc25b48db76e2d3c" title=" " alt="" coords="520,549,685,605"/>
+</map>

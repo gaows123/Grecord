@@ -1,0 +1,10 @@
+<map id="base_local_planner/include/base_local_planner/local_planner_util.h" name="base_local_planner/include/base_local_planner/local_planner_util.h">
+<area shape="rect" id="node1" title=" " alt="" coords="197,5,347,76"/>
+<area shape="rect" id="node2" href="$latched__stop__rotate__controller_8h.html" title=" " alt="" coords="12,124,161,195"/>
+<area shape="rect" id="node6" href="$local__planner__util_8cpp.html" title=" " alt="" coords="185,139,359,180"/>
+<area shape="rect" id="node7" href="$dwa__planner_8h.html" title=" " alt="" coords="383,131,556,187"/>
+<area shape="rect" id="node3" href="$latched__stop__rotate__controller_8cpp.html" title=" " alt="" coords="5,243,168,299"/>
+<area shape="rect" id="node4" href="$dwa__planner__ros_8h.html" title=" " alt="" coords="195,243,368,299"/>
+<area shape="rect" id="node5" href="$dwa__planner__ros_8cpp.html" title=" " alt="" coords="206,347,357,388"/>
+<area shape="rect" id="node8" href="$dwa__planner_8cpp.html" title=" " alt="" coords="394,250,545,291"/>
+</map>

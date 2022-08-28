@@ -1,0 +1,6 @@
+<map id="base_local_planner::VoxelGridModel::lineCost" name="base_local_planner::VoxelGridModel::lineCost">
+<area shape="rect" id="node1" title="Rasterizes a line in the costmap grid and checks for collisions" alt="" coords="5,5,183,47"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_voxel_grid_model.html#a4fd267d8b1e15639cde041ce9a57c505" title="Checks the cost of a point in the costmap" alt="" coords="231,5,416,47"/>
+<area shape="rect" id="node3" href="$classvoxel__grid_1_1_voxel_grid.html#a1cb19a239dd48a4df82e664f8dd53a36" title=" " alt="" coords="464,5,611,47"/>
+<area shape="rect" id="node4" href="$classvoxel__grid_1_1_voxel_grid.html#a2063758dd2b12bbb08c90257fa4a3cd2" title=" " alt="" coords="659,5,805,47"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="base_local_planner::LocalPlannerUtil" name="base_local_planner::LocalPlannerUtil">
+<area shape="rect" id="node1" title="Helper class implementing infrastructure code many local planner implementations may need." alt="" coords="102,124,235,165"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,60,39"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="84,13,253,39"/>
+<area shape="rect" id="node4" href="$classbase__local__planner_1_1_local_planner_limits.html" title=" " alt="" coords="277,5,417,47"/>
+</map>

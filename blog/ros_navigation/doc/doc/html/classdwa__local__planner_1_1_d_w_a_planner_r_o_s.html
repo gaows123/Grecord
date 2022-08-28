@@ -1,0 +1,1040 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: dwa_local_planner::DWAPlannerROS类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacedwa__local__planner.html">dwa_local_planner</a></li><li class="navelem"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html">DWAPlannerROS</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">dwa_local_planner::DWAPlannerROS类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件  
+ <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="dwa__planner__ros_8h_source.html">dwa_planner_ros.h</a>&gt;</code></p>
+<div class="dynheader">
+类 dwa_local_planner::DWAPlannerROS 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s__inherit__graph.png" border="0" usemap="#adwa__local__planner_1_1_d_w_a_planner_r_o_s_inherit__map" alt="Inheritance graph"/></div>
+<map name="adwa__local__planner_1_1_d_w_a_planner_r_o_s_inherit__map" id="adwa__local__planner_1_1_d_w_a_planner_r_o_s_inherit__map">
+<area shape="rect" title="DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件" alt="" coords="31,80,167,121"/>
+<area shape="rect" href="classnav__core_1_1_base_local_planner.html" title="提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口." alt="" coords="5,5,193,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+dwa_local_planner::DWAPlannerROS 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s__coll__graph.png" border="0" usemap="#adwa__local__planner_1_1_d_w_a_planner_r_o_s_coll__map" alt="Collaboration graph"/></div>
+<map name="adwa__local__planner_1_1_d_w_a_planner_r_o_s_coll__map" id="adwa__local__planner_1_1_d_w_a_planner_r_o_s_coll__map">
+<area shape="rect" title="DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件" alt="" coords="1148,147,1284,189"/>
+<area shape="rect" href="classnav__core_1_1_base_local_planner.html" title="提供局部路径规划的接口，navigation stack调用的所有局部路径规划器插件都要实现这个接口." alt="" coords="734,5,922,32"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html" title="Helper class implementing infrastructure code many local planner implementations may need." alt="" coords="357,417,490,458"/>
+<area shape="rect" title=" " alt="" coords="63,211,117,237"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html" title="A ROS wrapper for a 2D Costmap. Handles subscribing to topics that provide observations about obstacl..." alt="" coords="729,211,927,237"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html" title="Instantiates different layer plugins and aggregates them into one score" alt="" coords="324,255,523,281"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_publisher.html" title="A tool to periodically publish visualization data from a Costmap2D" alt="" coords="312,305,535,332"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html" title=" " alt="" coords="559,51,705,93"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html" title="A 2D costmap provides a mapping between points in the world and their associated &quot;costs&quot;." alt="" coords="5,424,175,451"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_limits.html" title=" " alt="" coords="20,522,160,563"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html" title=" " alt="" coords="730,379,926,421"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a53854eb5a69270d2935db6115da00b07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a53854eb5a69270d2935db6115da00b07">DWAPlannerROS</a> ()</td></tr>
+<tr class="memdesc:a53854eb5a69270d2935db6115da00b07"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html" title="DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件">DWAPlannerROS</a> 封装类的构造  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a53854eb5a69270d2935db6115da00b07">更多...</a><br /></td></tr>
+<tr class="separator:a53854eb5a69270d2935db6115da00b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c4737a8e5eb82f4c2407326e411d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)</td></tr>
+<tr class="memdesc:a61c4737a8e5eb82f4c2407326e411d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建ros的封装  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85">更多...</a><br /></td></tr>
+<tr class="separator:a61c4737a8e5eb82f4c2407326e411d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a313f013569f71f59101ba8529640a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ab4a313f013569f71f59101ba8529640a">~DWAPlannerROS</a> ()</td></tr>
+<tr class="memdesc:ab4a313f013569f71f59101ba8529640a"><td class="mdescLeft">&#160;</td><td class="mdescRight">封装类的析构  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ab4a313f013569f71f59101ba8529640a">更多...</a><br /></td></tr>
+<tr class="separator:ab4a313f013569f71f59101ba8529640a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700178e32159b614d328326b6ba5f8b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0">computeVelocityCommands</a> (geometry_msgs::Twist &amp;cmd_vel)</td></tr>
+<tr class="memdesc:a700178e32159b614d328326b6ba5f8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算下发速度根据机器人的位姿，当前速度和目标点  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0">更多...</a><br /></td></tr>
+<tr class="separator:a700178e32159b614d328326b6ba5f8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5796c54a10c3e2c89ec9afb64e9b5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e">dwaComputeVelocityCommands</a> (geometry_msgs::PoseStamped &amp;global_pose, geometry_msgs::Twist &amp;cmd_vel)</td></tr>
+<tr class="memdesc:a6d5796c54a10c3e2c89ec9afb64e9b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e">更多...</a><br /></td></tr>
+<tr class="separator:a6d5796c54a10c3e2c89ec9afb64e9b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfcf517c3112678a7eabeb498d9b2ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a0cfcf517c3112678a7eabeb498d9b2ce">setPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;orig_global_plan)</td></tr>
+<tr class="memdesc:a0cfcf517c3112678a7eabeb498d9b2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新全局路径  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a0cfcf517c3112678a7eabeb498d9b2ce">更多...</a><br /></td></tr>
+<tr class="separator:a0cfcf517c3112678a7eabeb498d9b2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847c1877d967acd515d7ddf1ac246941"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941">isGoalReached</a> ()</td></tr>
+<tr class="memdesc:a847c1877d967acd515d7ddf1ac246941"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否到达目标点  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941">更多...</a><br /></td></tr>
+<tr class="separator:a847c1877d967acd515d7ddf1ac246941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6d59b99f11c5998b10fba331ef077a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8">isInitialized</a> ()</td></tr>
+<tr class="separator:ae6d59b99f11c5998b10fba331ef077a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnav__core_1_1_base_local_planner"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnav__core_1_1_base_local_planner')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a></td></tr>
+<tr class="memitem:aa02dad5e3be910ae7d5159b7a53c0188 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#aa02dad5e3be910ae7d5159b7a53c0188">computeVelocityCommands</a> (geometry_msgs::Twist &amp;cmd_vel)=0</td></tr>
+<tr class="memdesc:aa02dad5e3be910ae7d5159b7a53c0188 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据当前位置和朝向，机器人速度，计算下发给底座的速度命令  <a href="classnav__core_1_1_base_local_planner.html#aa02dad5e3be910ae7d5159b7a53c0188">更多...</a><br /></td></tr>
+<tr class="separator:aa02dad5e3be910ae7d5159b7a53c0188 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b2312d3218496be06a298767b26716 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#a27b2312d3218496be06a298767b26716">isGoalReached</a> ()=0</td></tr>
+<tr class="memdesc:a27b2312d3218496be06a298767b26716 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否已经到达了目标点  <a href="classnav__core_1_1_base_local_planner.html#a27b2312d3218496be06a298767b26716">更多...</a><br /></td></tr>
+<tr class="separator:a27b2312d3218496be06a298767b26716 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30adc27a5c123f129ef7046ffbb0f3e inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#ac30adc27a5c123f129ef7046ffbb0f3e">setPlan</a> (const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;plan)=0</td></tr>
+<tr class="memdesc:ac30adc27a5c123f129ef7046ffbb0f3e inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新要跟随的全局路径  <a href="classnav__core_1_1_base_local_planner.html#ac30adc27a5c123f129ef7046ffbb0f3e">更多...</a><br /></td></tr>
+<tr class="separator:ac30adc27a5c123f129ef7046ffbb0f3e inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488521ac3d0ff67000aed87ab3fea84b inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#a488521ac3d0ff67000aed87ab3fea84b">initialize</a> (std::string name, tf2_ros::Buffer *tf, <a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *costmap_ros)=0</td></tr>
+<tr class="memdesc:a488521ac3d0ff67000aed87ab3fea84b inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造局部规划器  <a href="classnav__core_1_1_base_local_planner.html#a488521ac3d0ff67000aed87ab3fea84b">更多...</a><br /></td></tr>
+<tr class="separator:a488521ac3d0ff67000aed87ab3fea84b inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5526e4d50be56e27bf5a11a2c177453 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#ad5526e4d50be56e27bf5a11a2c177453">~BaseLocalPlanner</a> ()</td></tr>
+<tr class="memdesc:ad5526e4d50be56e27bf5a11a2c177453 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口的虚析构  <a href="classnav__core_1_1_base_local_planner.html#ad5526e4d50be56e27bf5a11a2c177453">更多...</a><br /></td></tr>
+<tr class="separator:ad5526e4d50be56e27bf5a11a2c177453 inherit pub_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a75d528df04f8600bf205441855c28695"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a75d528df04f8600bf205441855c28695">reconfigureCB</a> (DWAPlannerConfig &amp;config, uint32_t level)</td></tr>
+<tr class="memdesc:a75d528df04f8600bf205441855c28695"><td class="mdescLeft">&#160;</td><td class="mdescRight">动态更新局部规划器参数的回调函数  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a75d528df04f8600bf205441855c28695">更多...</a><br /></td></tr>
+<tr class="separator:a75d528df04f8600bf205441855c28695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ed5e8084732aae21c15adc1f98a68ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3ed5e8084732aae21c15adc1f98a68ca">publishLocalPlan</a> (std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</td></tr>
+<tr class="separator:a3ed5e8084732aae21c15adc1f98a68ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf570c8f336f17667f8a068b77aa9c48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#acf570c8f336f17667f8a068b77aa9c48">publishGlobalPlan</a> (std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;path)</td></tr>
+<tr class="separator:acf570c8f336f17667f8a068b77aa9c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aac8917d72216bad23d03aae6d9b05a4b"><td class="memItemLeft" align="right" valign="top">tf2_ros::Buffer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#aac8917d72216bad23d03aae6d9b05a4b">tf_</a></td></tr>
+<tr class="memdesc:aac8917d72216bad23d03aae6d9b05a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于点云转换  <a href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#aac8917d72216bad23d03aae6d9b05a4b">更多...</a><br /></td></tr>
+<tr class="separator:aac8917d72216bad23d03aae6d9b05a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858610dbe18fa5f37f1da9dbeaa47af6"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a858610dbe18fa5f37f1da9dbeaa47af6">g_plan_pub_</a></td></tr>
+<tr class="separator:a858610dbe18fa5f37f1da9dbeaa47af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7756f098cafda35d4acc1f4ff6af0a28"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a7756f098cafda35d4acc1f4ff6af0a28">l_plan_pub_</a></td></tr>
+<tr class="separator:a7756f098cafda35d4acc1f4ff6af0a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af153046111302f3258ebd2bf2d2aa505"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_local_planner_util.html">base_local_planner::LocalPlannerUtil</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#af153046111302f3258ebd2bf2d2aa505">planner_util_</a></td></tr>
+<tr class="separator:af153046111302f3258ebd2bf2d2aa505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e786447ddb9daccacf0df6fceadd71f"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classdwa__local__planner_1_1_d_w_a_planner.html">DWAPlanner</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e786447ddb9daccacf0df6fceadd71f">dp_</a></td></tr>
+<tr class="separator:a1e786447ddb9daccacf0df6fceadd71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4122daf0cf82134cc935ba26e16969ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4122daf0cf82134cc935ba26e16969ab">costmap_ros_</a></td></tr>
+<tr class="separator:a4122daf0cf82134cc935ba26e16969ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2719957a5e10b456a2044b01eebfdb9d"><td class="memItemLeft" align="right" valign="top">dynamic_reconfigure::Server&lt; DWAPlannerConfig &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a2719957a5e10b456a2044b01eebfdb9d">dsrv_</a></td></tr>
+<tr class="separator:a2719957a5e10b456a2044b01eebfdb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d7933f2f2a867eccc49626cc870fd34"><td class="memItemLeft" align="right" valign="top">dwa_local_planner::DWAPlannerConfig&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a5d7933f2f2a867eccc49626cc870fd34">default_config_</a></td></tr>
+<tr class="separator:a5d7933f2f2a867eccc49626cc870fd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a721d5e2364754273a369a32d445ca771"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a721d5e2364754273a369a32d445ca771">setup_</a></td></tr>
+<tr class="separator:a721d5e2364754273a369a32d445ca771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622801b690be44d668b967d29708c58c"><td class="memItemLeft" align="right" valign="top">geometry_msgs::PoseStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a622801b690be44d668b967d29708c58c">current_pose_</a></td></tr>
+<tr class="separator:a622801b690be44d668b967d29708c58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6132be586af38569fd58f75da07dc6e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html">base_local_planner::LatchedStopRotateController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6132be586af38569fd58f75da07dc6e0">latchedStopRotateController_</a></td></tr>
+<tr class="separator:a6132be586af38569fd58f75da07dc6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f9060b4d745f7ff5cc0ac6e0869cfda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3f9060b4d745f7ff5cc0ac6e0869cfda">initialized_</a></td></tr>
+<tr class="separator:a3f9060b4d745f7ff5cc0ac6e0869cfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fd27149428a4010d44439caa2d749de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">base_local_planner::OdometryHelperRos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a4fd27149428a4010d44439caa2d749de">odom_helper_</a></td></tr>
+<tr class="separator:a4fd27149428a4010d44439caa2d749de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e81ef8eb8c07c08c031b74c9f68bc6e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a1e81ef8eb8c07c08c031b74c9f68bc6e">odom_topic_</a></td></tr>
+<tr class="separator:a1e81ef8eb8c07c08c031b74c9f68bc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classnav__core_1_1_base_local_planner"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classnav__core_1_1_base_local_planner')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classnav__core_1_1_base_local_planner.html">nav_core::BaseLocalPlanner</a></td></tr>
+<tr class="memitem:a5d602dd4cf6f26470ec438cb20af48d7 inherit pro_methods_classnav__core_1_1_base_local_planner"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnav__core_1_1_base_local_planner.html#a5d602dd4cf6f26470ec438cb20af48d7">BaseLocalPlanner</a> ()</td></tr>
+<tr class="separator:a5d602dd4cf6f26470ec438cb20af48d7 inherit pro_methods_classnav__core_1_1_base_local_planner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a53854eb5a69270d2935db6115da00b07" name="a53854eb5a69270d2935db6115da00b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53854eb5a69270d2935db6115da00b07">&#9670;&nbsp;</a></span>DWAPlannerROS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dwa_local_planner::DWAPlannerROS::DWAPlannerROS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html" title="DWAPlannerROS是封装类，提供了与move_base的接口，作为move_base的插件">DWAPlannerROS</a> 封装类的构造 </p>
+
+</div>
+</div>
+<a id="ab4a313f013569f71f59101ba8529640a" name="ab4a313f013569f71f59101ba8529640a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a313f013569f71f59101ba8529640a">&#9670;&nbsp;</a></span>~DWAPlannerROS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dwa_local_planner::DWAPlannerROS::~DWAPlannerROS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>封装类的析构 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a700178e32159b614d328326b6ba5f8b0" name="a700178e32159b614d328326b6ba5f8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700178e32159b614d328326b6ba5f8b0">&#9670;&nbsp;</a></span>computeVelocityCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlannerROS::computeVelocityCommands </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算下发速度根据机器人的位姿，当前速度和目标点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd_vel</td><td>下发速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True:找到有效路径 </dd></dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#aa02dad5e3be910ae7d5159b7a53c0188">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a700178e32159b614d328326b6ba5f8b0_cgraph">
+<area shape="rect" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,1376,235,1432"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="313,491,511,533"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_limits.html#a0402363ae18d44002834003a1b17f14b" title="Get the acceleration limits of the robot" alt="" coords="912,5,1052,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="638,604,771,660"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a5bd9394ca5cabf2a35526dcb193e36be" title=" " alt="" coords="283,977,541,1033"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="285,1376,539,1432"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3ed5e8084732aae21c15adc1f98a68ca" title=" " alt="" coords="589,1611,820,1653"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#adb22b6981dc80e9159298c8f3dc738eb" title=" " alt="" coords="345,1573,479,1629"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a4688b58dc94afe64bdaed02dceab5afd" title="Return the current footprint of the robot as a vector of points." alt="" coords="313,1654,511,1695"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="313,1719,511,1761"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a22892ae258fb69ab1cbb78b3e076fba3" title=" " alt="" coords="314,731,510,787"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#acf570c8f336f17667f8a068b77aa9c48" title=" " alt="" coords="294,1507,530,1549"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a09675e3d736eaf9ff3b8c8bc3587b768" title=" " alt="" coords="612,191,797,247"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a0810ac35a39d3d7ccc1c19a862e97fbf" title=" " alt="" coords="612,444,797,500"/>
+<area shape="rect" href="classbase__local__planner_1_1_oscillation_cost_function.html#afb420d9a488660f3583e182cb1939ee1" title="Reset the oscillation flags for the local planner" alt="" coords="621,524,789,580"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_scored_sampling_planner.html#ac11a2d2fbf69d6ed55f720c5ebe1b541" title=" " alt="" coords="600,340,809,396"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="909,231,1055,273"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a4762e662d557328a98abad8155501626" title=" " alt="" coords="889,297,1075,353"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#abeea221947f5062cdb481c9888c33075" title=" " alt="" coords="889,85,1075,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="901,166,1063,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_cost_function.html#abaae8d899bd41d8baf02bf7aa175ded9" title=" " alt="" coords="899,457,1065,513"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_cost_function.html#a6908a8071270b455fc25b48db76e2d3c" title=" " alt="" coords="899,377,1065,433"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="638,751,771,807"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="589,1058,820,1099"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="631,1124,778,1180"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ab70a70a7a3f3d8e6788e6e1f0503a717" title=" " alt="" coords="631,1204,778,1260"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a3f1784c0f8eb383822d41d0905cb6bda" title="Once a goal position is reached... rotate to the goal orientation 一旦到达目标点位置，开始旋转进行角度对齐" alt="" coords="607,831,803,887"/>
+<area shape="rect" href="namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="638,911,771,953"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#ae204da0df3c727a7f655e7c12a7dae75" title="停止机器人同时考虑加速度的限制" alt="" coords="607,977,803,1033"/>
+<area shape="rect" href="namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="915,758,1049,799"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a8648f8df161c70441a60ec202a137b18" title=" " alt="" coords="868,985,1096,1026"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9d02596d6352e0153a579427bbc2c394" title="Returns the local frame of the costmap" alt="" coords="606,1415,803,1457"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="606,1481,803,1522"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="633,1546,777,1587"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="616,1285,793,1326"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8" title=" " alt="" coords="606,1350,803,1391"/>
+<area shape="rect" href="namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="915,1611,1049,1653"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac8ecc12b4595fc60fdbe4b936ce1a274" title="Trim off parts of the global plan that are far enough behind the robot" alt="" coords="638,1794,771,1835"/>
+<area shape="rect" href="namespacebase__local__planner.html#a962893e66167d44e22bd284e83e4383e" title="Transforms the global plan of the robot from the planner frame to the frame of the costmap,..." alt="" coords="631,1729,779,1770"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="897,1677,1067,1718"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="897,1742,1067,1783"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="897,1807,1067,1849"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="618,685,791,726"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d5796c54a10c3e2c89ec9afb64e9b5e" name="a6d5796c54a10c3e2c89ec9afb64e9b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5796c54a10c3e2c89ec9afb64e9b5e">&#9670;&nbsp;</a></span>dwaComputeVelocityCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlannerROS::dwaComputeVelocityCommands </td>
+          <td>(</td>
+          <td class="paramtype">geometry_msgs::PoseStamped &amp;&#160;</td>
+          <td class="paramname"><em>global_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">geometry_msgs::Twist &amp;&#160;</td>
+          <td class="paramname"><em>cmd_vel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd_vel</td><td>下发速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True:找到有效路径 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_cgraph">
+<area shape="rect" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="5,194,260,250"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a9d02596d6352e0153a579427bbc2c394" title="Returns the local frame of the costmap" alt="" coords="325,5,522,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="325,71,522,112"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#aefeea7b81d210b228cfe041938be6a14" title="Get a point within the trajectory 获取局部轨迹某个点的信息" alt="" coords="351,136,495,177"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a825364365ad68291ce701c0e97bef3d5" title="Return the number of points in the trajectory" alt="" coords="335,201,512,243"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ab70a70a7a3f3d8e6788e6e1f0503a717" title=" " alt="" coords="350,267,497,323"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8" title=" " alt="" coords="325,348,522,389"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a3ed5e8084732aae21c15adc1f98a68ca" title=" " alt="" coords="308,413,539,455"/>
+<area shape="rect" href="namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="587,413,720,455"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_icgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_icgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_icgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a6d5796c54a10c3e2c89ec9afb64e9b5e_icgraph">
+<area shape="rect" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="283,5,537,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a61c4737a8e5eb82f4c2407326e411d85" name="a61c4737a8e5eb82f4c2407326e411d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c4737a8e5eb82f4c2407326e411d85">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dwa_local_planner::DWAPlannerROS::initialize </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tf2_ros::Buffer *&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a> *&#160;</td>
+          <td class="paramname"><em>costmap_ros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建ros的封装 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>局部规划器名字 </td></tr>
+    <tr><td class="paramname">tf</td><td>transform listener 的指针 </td></tr>
+    <tr><td class="paramname">costmap</td><td>代价地图 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#a488521ac3d0ff67000aed87ab3fea84b">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a61c4737a8e5eb82f4c2407326e411d85_cgraph">
+<area shape="rect" title="构建ros的封装" alt="" coords="5,247,184,288"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="246,5,443,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="246,71,443,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="246,136,443,177"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#aef146076f0095773cb6e89827ff06b4b" title=" " alt="" coords="278,202,411,258"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8" title=" " alt="" coords="246,283,443,324"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a75d528df04f8600bf205441855c28695" title="动态更新局部规划器参数的回调函数" alt="" coords="237,348,452,389"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#a3405fc02265edac001b3f4c8802c983d" title="Set the odometry topic. This overrides what was set in the constructor, if anything." alt="" coords="271,414,418,470"/>
+<area shape="rect" href="namespacenav__core.html#a6ae2b94985fa0d1a0f4c9269ba073327" title="Warn if a parameter exists under a deprecated (and unsupported) name." alt="" coords="232,494,457,521"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="505,5,704,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#a84581c07b821dbdb93f78a6def7f8850" title="更新局部规划器参数的回调函数" alt="" coords="538,337,671,393"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#a0eeb49d061e05d16d43cac5196552c01" title="Callback for receiving odometry data" alt="" coords="531,417,678,473"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a847c1877d967acd515d7ddf1ac246941" name="a847c1877d967acd515d7ddf1ac246941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a847c1877d967acd515d7ddf1ac246941">&#9670;&nbsp;</a></span>isGoalReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlannerROS::isGoalReached </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否到达目标点 </p>
+<dl class="section return"><dt>返回</dt><dd>True : 到达目标点 </dd></dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#a27b2312d3218496be06a298767b26716">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a847c1877d967acd515d7ddf1ac246941_cgraph">
+<area shape="rect" title="是否到达目标点" alt="" coords="5,199,225,241"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="273,126,471,167"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#a296b387b74afe1c430f0dc6efb2f2ae8" title=" " alt="" coords="274,192,470,248"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8" title=" " alt="" coords="273,273,471,314"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#ab872bb31110cc8cf9d1fa7f5b339c6fd" title=" " alt="" coords="567,5,701,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#a40a75811cc424cb2f4e205a0ec18cb41" title=" " alt="" coords="567,85,701,141"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac3058c2cea31b23c378465a5e9374219" title="return angle difference to goal to check if the goal orientation has been achieved" alt="" coords="519,166,749,207"/>
+<area shape="rect" href="namespacebase__local__planner.html#ac7ecc277a40eb4e997a94149fbec1fbe" title="返回距离的平方来检测是否到达目标点" alt="" coords="547,231,721,273"/>
+<area shape="rect" href="classbase__local__planner_1_1_odometry_helper_ros.html#ada88271c5b81d4a97b81eb51de64f67c" title=" " alt="" coords="561,297,707,353"/>
+<area shape="rect" href="namespacebase__local__planner.html#a80ea2934aded9d99c3e082dd934ae89c" title="Check whether the robot is stopped or not" alt="" coords="567,378,701,419"/>
+<area shape="rect" href="namespacebase__local__planner.html#a550c4981442b28ca179446972791839b" title="Returns last pose in plan" alt="" coords="797,93,931,134"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6d59b99f11c5998b10fba331ef077a8" name="ae6d59b99f11c5998b10fba331ef077a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d59b99f11c5998b10fba331ef077a8">&#9670;&nbsp;</a></span>isInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlannerROS::isInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8_icgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8_icgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8_icgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_ae6d59b99f11c5998b10fba331ef077a8_icgraph">
+<area shape="rect" title=" " alt="" coords="585,119,783,161"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="283,5,537,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85" title="构建ros的封装" alt="" coords="321,86,499,127"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a847c1877d967acd515d7ddf1ac246941" title="是否到达目标点" alt="" coords="300,151,520,193"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a0cfcf517c3112678a7eabeb498d9b2ce" title="更新全局路径" alt="" coords="322,217,498,258"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf570c8f336f17667f8a068b77aa9c48" name="acf570c8f336f17667f8a068b77aa9c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf570c8f336f17667f8a068b77aa9c48">&#9670;&nbsp;</a></span>publishGlobalPlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dwa_local_planner::DWAPlannerROS::publishGlobalPlan </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,241,47"/>
+<area shape="rect" href="namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="289,5,423,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_icgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_icgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_icgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_acf570c8f336f17667f8a068b77aa9c48_icgraph">
+<area shape="rect" title=" " alt="" coords="283,13,519,54"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3ed5e8084732aae21c15adc1f98a68ca" name="a3ed5e8084732aae21c15adc1f98a68ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed5e8084732aae21c15adc1f98a68ca">&#9670;&nbsp;</a></span>publishLocalPlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dwa_local_planner::DWAPlannerROS::publishLocalPlan </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,236,47"/>
+<area shape="rect" href="namespacebase__local__planner.html#ae89b923286d9fd62be7807372dc50834" title="Publish a plan for visualization purposes" alt="" coords="284,5,417,47"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_icgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_icgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_icgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a3ed5e8084732aae21c15adc1f98a68ca_icgraph">
+<area shape="rect" title=" " alt="" coords="585,13,816,54"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a6d5796c54a10c3e2c89ec9afb64e9b5e" title="根据机器人的位姿，当前速度和目标点，用动态窗口方法计算下发速度" alt="" coords="283,37,537,93"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a75d528df04f8600bf205441855c28695" name="a75d528df04f8600bf205441855c28695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d528df04f8600bf205441855c28695">&#9670;&nbsp;</a></span>reconfigureCB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dwa_local_planner::DWAPlannerROS::reconfigureCB </td>
+          <td>(</td>
+          <td class="paramtype">DWAPlannerConfig &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>动态更新局部规划器参数的回调函数 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_cgraph">
+<area shape="rect" title="动态更新局部规划器参数的回调函数" alt="" coords="5,13,220,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_util.html#a84581c07b821dbdb93f78a6def7f8850" title="更新局部规划器参数的回调函数" alt="" coords="268,5,401,61"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_icgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_icgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_icgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a75d528df04f8600bf205441855c28695_icgraph">
+<area shape="rect" title="动态更新局部规划器参数的回调函数" alt="" coords="232,5,447,47"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a61c4737a8e5eb82f4c2407326e411d85" title="构建ros的封装" alt="" coords="5,5,184,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0cfcf517c3112678a7eabeb498d9b2ce" name="a0cfcf517c3112678a7eabeb498d9b2ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfcf517c3112678a7eabeb498d9b2ce">&#9670;&nbsp;</a></span>setPlan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlannerROS::setPlan </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::PoseStamped &gt; &amp;&#160;</td>
+          <td class="paramname"><em>orig_global_plan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新全局路径 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orig_global_plan</td><td>传递给局部规划器的全局路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>True: 更新成功 </dd></dl>
+
+<p>实现了 <a class="el" href="classnav__core_1_1_base_local_planner.html#ac30adc27a5c123f129ef7046ffbb0f3e">nav_core::BaseLocalPlanner</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce_cgraph.png" border="0" usemap="#aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce_cgraph" alt=""/></div>
+<map name="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce_cgraph" id="aclassdwa__local__planner_1_1_d_w_a_planner_r_o_s_a0cfcf517c3112678a7eabeb498d9b2ce_cgraph">
+<area shape="rect" title="更新全局路径" alt="" coords="5,43,181,84"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#ae6d59b99f11c5998b10fba331ef077a8" title=" " alt="" coords="229,5,427,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html#af3b08514bca9dfc212b770a071f85b3b" title=" " alt="" coords="230,71,426,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a4122daf0cf82134cc935ba26e16969ab" name="a4122daf0cf82134cc935ba26e16969ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4122daf0cf82134cc935ba26e16969ab">&#9670;&nbsp;</a></span>costmap_ros_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcostmap__2d_1_1_costmap2_d_r_o_s.html">costmap_2d::Costmap2DROS</a>* dwa_local_planner::DWAPlannerROS::costmap_ros_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a622801b690be44d668b967d29708c58c" name="a622801b690be44d668b967d29708c58c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622801b690be44d668b967d29708c58c">&#9670;&nbsp;</a></span>current_pose_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::PoseStamped dwa_local_planner::DWAPlannerROS::current_pose_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d7933f2f2a867eccc49626cc870fd34" name="a5d7933f2f2a867eccc49626cc870fd34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7933f2f2a867eccc49626cc870fd34">&#9670;&nbsp;</a></span>default_config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dwa_local_planner::DWAPlannerConfig dwa_local_planner::DWAPlannerROS::default_config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e786447ddb9daccacf0df6fceadd71f" name="a1e786447ddb9daccacf0df6fceadd71f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e786447ddb9daccacf0df6fceadd71f">&#9670;&nbsp;</a></span>dp_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classdwa__local__planner_1_1_d_w_a_planner.html">DWAPlanner</a>&gt; dwa_local_planner::DWAPlannerROS::dp_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2719957a5e10b456a2044b01eebfdb9d" name="a2719957a5e10b456a2044b01eebfdb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2719957a5e10b456a2044b01eebfdb9d">&#9670;&nbsp;</a></span>dsrv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dynamic_reconfigure::Server&lt;DWAPlannerConfig&gt;* dwa_local_planner::DWAPlannerROS::dsrv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a858610dbe18fa5f37f1da9dbeaa47af6" name="a858610dbe18fa5f37f1da9dbeaa47af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a858610dbe18fa5f37f1da9dbeaa47af6">&#9670;&nbsp;</a></span>g_plan_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher dwa_local_planner::DWAPlannerROS::g_plan_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f9060b4d745f7ff5cc0ac6e0869cfda" name="a3f9060b4d745f7ff5cc0ac6e0869cfda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9060b4d745f7ff5cc0ac6e0869cfda">&#9670;&nbsp;</a></span>initialized_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlannerROS::initialized_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7756f098cafda35d4acc1f4ff6af0a28" name="a7756f098cafda35d4acc1f4ff6af0a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7756f098cafda35d4acc1f4ff6af0a28">&#9670;&nbsp;</a></span>l_plan_pub_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ros::Publisher dwa_local_planner::DWAPlannerROS::l_plan_pub_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6132be586af38569fd58f75da07dc6e0" name="a6132be586af38569fd58f75da07dc6e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6132be586af38569fd58f75da07dc6e0">&#9670;&nbsp;</a></span>latchedStopRotateController_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_latched_stop_rotate_controller.html">base_local_planner::LatchedStopRotateController</a> dwa_local_planner::DWAPlannerROS::latchedStopRotateController_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fd27149428a4010d44439caa2d749de" name="a4fd27149428a4010d44439caa2d749de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fd27149428a4010d44439caa2d749de">&#9670;&nbsp;</a></span>odom_helper_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_odometry_helper_ros.html">base_local_planner::OdometryHelperRos</a> dwa_local_planner::DWAPlannerROS::odom_helper_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e81ef8eb8c07c08c031b74c9f68bc6e" name="a1e81ef8eb8c07c08c031b74c9f68bc6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e81ef8eb8c07c08c031b74c9f68bc6e">&#9670;&nbsp;</a></span>odom_topic_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string dwa_local_planner::DWAPlannerROS::odom_topic_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af153046111302f3258ebd2bf2d2aa505" name="af153046111302f3258ebd2bf2d2aa505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af153046111302f3258ebd2bf2d2aa505">&#9670;&nbsp;</a></span>planner_util_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_local_planner_util.html">base_local_planner::LocalPlannerUtil</a> dwa_local_planner::DWAPlannerROS::planner_util_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a721d5e2364754273a369a32d445ca771" name="a721d5e2364754273a369a32d445ca771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a721d5e2364754273a369a32d445ca771">&#9670;&nbsp;</a></span>setup_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dwa_local_planner::DWAPlannerROS::setup_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac8917d72216bad23d03aae6d9b05a4b" name="aac8917d72216bad23d03aae6d9b05a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8917d72216bad23d03aae6d9b05a4b">&#9670;&nbsp;</a></span>tf_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tf2_ros::Buffer* dwa_local_planner::DWAPlannerROS::tf_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>用于点云转换 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>dwa_local_planner/include/dwa_local_planner/<a class="el" href="dwa__planner__ros_8h_source.html">dwa_planner_ros.h</a></li>
+<li>dwa_local_planner/src/<a class="el" href="dwa__planner__ros_8cpp.html">dwa_planner_ros.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

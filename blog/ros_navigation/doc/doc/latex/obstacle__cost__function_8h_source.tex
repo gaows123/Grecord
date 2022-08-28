@@ -1,0 +1,90 @@
+\hypertarget{obstacle__cost__function_8h_source}{}\doxysection{obstacle\+\_\+cost\+\_\+function.\+h}
+\label{obstacle__cost__function_8h_source}\index{base\_local\_planner/include/base\_local\_planner/obstacle\_cost\_function.h@{base\_local\_planner/include/base\_local\_planner/obstacle\_cost\_function.h}}
+\mbox{\hyperlink{obstacle__cost__function_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: TKruse}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef OBSTACLE\_COST\_FUNCTION\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define OBSTACLE\_COST\_FUNCTION\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{trajectory__cost__function_8h}{base\_local\_planner/trajectory\_cost\_function.h}}>}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__model_8h}{base\_local\_planner/costmap\_model.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{costmap__2d_8h}{costmap\_2d/costmap\_2d.h}}>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebase__local__planner}{base\_local\_planner}} \{}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }\mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function}{ObstacleCostFunction}} : \textcolor{keyword}{public} \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_cost_function}{TrajectoryCostFunction}} \{}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56   \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a415ee13143bd2b2dd9b5effa1e7f3a5a}{ObstacleCostFunction}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap);}
+\DoxyCodeLine{57   \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_aba72b1bd0dae5acb7e25dbfd4ea9821a}{\string~ObstacleCostFunction}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a9a9929d60bfd91f8814d8b31e51969cf}{prepare}}();}
+\DoxyCodeLine{60   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a3bac5a99d333a755440449809270e638}{scoreTrajectory}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a62321188c336dbef4d749a79cecc45c0}{setSumScores}}(\textcolor{keywordtype}{bool} score\_sums)\{ \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a1ff9618ab8e84d39d17d0a2f843a8cb9}{sum\_scores\_}}=score\_sums; \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_ad1fc4b6ee10cf4add4e198967030037c}{setParams}}(\textcolor{keywordtype}{double} max\_trans\_vel, \textcolor{keywordtype}{double} max\_scaling\_factor, \textcolor{keywordtype}{double} scaling\_speed);}
+\DoxyCodeLine{65   \textcolor{keywordtype}{void} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a8043f943c3bf43dc4836db1a632a6e52}{setFootprint}}(std::vector<geometry\_msgs::Point> footprint\_spec);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67   \textcolor{comment}{// helper functions, made static for easy unit testing}}
+\DoxyCodeLine{68   \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_aff41f9f317c9e375d0945bda8b9f8970}{getScalingFactor}}(\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj, \textcolor{keywordtype}{double} scaling\_speed, \textcolor{keywordtype}{double} max\_trans\_vel, \textcolor{keywordtype}{double} max\_scaling\_factor);}
+\DoxyCodeLine{69   \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a1f6a1fa580a775f11226ca346b8dcc33}{footprintCost}}(}
+\DoxyCodeLine{70       \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& x,}
+\DoxyCodeLine{71       \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& y,}
+\DoxyCodeLine{72       \textcolor{keyword}{const} \textcolor{keywordtype}{double}\& th,}
+\DoxyCodeLine{73       \textcolor{keywordtype}{double} scale,}
+\DoxyCodeLine{74       std::vector<geometry\_msgs::Point> footprint\_spec,}
+\DoxyCodeLine{75       \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* costmap,}
+\DoxyCodeLine{76       \mbox{\hyperlink{classbase__local__planner_1_1_world_model}{base\_local\_planner::WorldModel}}* world\_model);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{keyword}{private}:}
+\DoxyCodeLine{79   \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}* \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a649bf1d646e4432bdf338ff6b904cefc}{costmap\_}};}
+\DoxyCodeLine{80   std::vector<geometry\_msgs::Point> \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_aef3f0212931d94c234ab6c4cf1dd0689}{footprint\_spec\_}};}
+\DoxyCodeLine{81   \mbox{\hyperlink{classbase__local__planner_1_1_world_model}{base\_local\_planner::WorldModel}}* \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_acce234454982f3bd52744f67a04f8be5}{world\_model\_}};}
+\DoxyCodeLine{82   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_aad6617f6131ca6598ec3a07d1d3153dd}{max\_trans\_vel\_}};}
+\DoxyCodeLine{83   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a1ff9618ab8e84d39d17d0a2f843a8cb9}{sum\_scores\_}};}
+\DoxyCodeLine{84   \textcolor{comment}{//footprint scaling with velocity;}}
+\DoxyCodeLine{85   \textcolor{keywordtype}{double} \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_a5c2ec54222f1ae220836e41a967beb13}{max\_scaling\_factor\_}}, \mbox{\hyperlink{classbase__local__planner_1_1_obstacle_cost_function_abac2b51781792694610f477a28f784fb}{scaling\_speed\_}};}
+\DoxyCodeLine{86 \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \} \textcolor{comment}{/* namespace base\_local\_planner */}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* OBSTACLE\_COST\_FUNCTION\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

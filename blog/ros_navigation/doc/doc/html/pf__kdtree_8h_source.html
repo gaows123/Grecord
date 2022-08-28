@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: amcl/include/amcl/pf/pf_kdtree.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_dadff5d0198cfb767789ab24ddb60c1e.html">amcl</a></li><li class="navelem"><a class="el" href="dir_a9188d7c3d194212696f636cafd54aab.html">include</a></li><li class="navelem"><a class="el" href="dir_d1b05214bc26678a70bc66257a1f97b6.html">amcl</a></li><li class="navelem"><a class="el" href="dir_b250c90a420d93df9de30b473e4ce096.html">pf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pf_kdtree.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pf__kdtree_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *  Player - One Hell of a Robot Server</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *  Copyright (C) 2000  Brian Gerkey   &amp;  Kasper Stoy</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                      gerkey@usc.edu    kaspers@robotics.usc.edu</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  This library is free software; you can redistribute it and/or</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *  modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  version 2.1 of the License, or (at your option) any later version.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *  This library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *  Lesser General Public License for more details.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *  You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *  License along with this library; if not, write to the Free Software</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/**************************************************************************</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * Desc: KD tree functions</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * Author: Andrew Howard</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * Date: 18 Dec 2002</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * CVS: $Id: pf_kdtree.h 6532 2008-06-11 02:45:56Z gbiggs $</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *************************************************************************/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef PF_KDTREE_H</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define PF_KDTREE_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifdef INCLUDE_RTKGUI</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;rtk.h&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Info for a node in the tree</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html">   37</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structpf__kdtree__node.html">pf_kdtree_node</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="comment">// Depth in the tree</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html#a7aeffc9c557e170d875328d4ff4f669e">   40</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpf__kdtree__node.html#aca122fa0177209a6b87be053c6f2b882">leaf</a>, <a class="code hl_variable" href="structpf__kdtree__node.html#a7aeffc9c557e170d875328d4ff4f669e">depth</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="comment">// Pivot dimension and value</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html#a5df8870ca5ffbb2bd6a0fd3cf28e175f">   43</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpf__kdtree__node.html#a5df8870ca5ffbb2bd6a0fd3cf28e175f">pivot_dim</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html#ade0d28797ae474896d933e81628100cb">   44</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structpf__kdtree__node.html#ade0d28797ae474896d933e81628100cb">pivot_value</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="comment">// The key for this node</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html#a6ace1029289ed12095844110faac1b35">   47</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpf__kdtree__node.html#a6ace1029289ed12095844110faac1b35">key</a>[3];</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="comment">// The value for this node</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html#a8df6d7d10dde36dcd28b4c8c5aa0118a">   50</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="structpf__kdtree__node.html#a8df6d7d10dde36dcd28b4c8c5aa0118a">value</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">// The cluster label (leaf nodes)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html#a614cd21deb9335383e9bba968fb3acce">   53</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpf__kdtree__node.html#a614cd21deb9335383e9bba968fb3acce">cluster</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// Child nodes</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structpf__kdtree__node.html#a894275d80a5aa21e4977420b8a8c2676">   56</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structpf__kdtree__node.html">pf_kdtree_node</a> *<a class="code hl_variable" href="structpf__kdtree__node.html#a894275d80a5aa21e4977420b8a8c2676">children</a>[2];</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="pf__kdtree_8h.html#a05fb8223798c8ce1e5d56e4bf6756ee2">   58</a></span>} <a class="code hl_typedef" href="pf__kdtree_8h.html#a05fb8223798c8ce1e5d56e4bf6756ee2">pf_kdtree_node_t</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// A kd tree</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structpf__kdtree__t.html">   62</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// Cell size</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structpf__kdtree__t.html#aa42f62a0e718e210703fa4df765d25fa">   65</a></span>  <span class="keywordtype">double</span> size[3];</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// The root node of the tree</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structpf__kdtree__t.html#a9cb724eb99359c14a2bd4aabc40de3c1">   68</a></span>  <a class="code hl_struct" href="structpf__kdtree__node.html">pf_kdtree_node_t</a> *<a class="code hl_variable" href="structpf__kdtree__t.html#a9cb724eb99359c14a2bd4aabc40de3c1">root</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="comment">// The number of nodes in the tree</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structpf__kdtree__t.html#a93584814fb661d6b39fd9e2a8048ba89">   71</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpf__kdtree__t.html#a93584814fb661d6b39fd9e2a8048ba89">node_count</a>, node_max_count;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structpf__kdtree__t.html#a33a087dd559a8d7b98e350c383ee82e6">   72</a></span>  <a class="code hl_struct" href="structpf__kdtree__node.html">pf_kdtree_node_t</a> *<a class="code hl_variable" href="structpf__kdtree__t.html#a33a087dd559a8d7b98e350c383ee82e6">nodes</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// The number of leaf nodes in the tree</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structpf__kdtree__t.html#a8eae6112056438894b842ce7e489bcc8">   75</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structpf__kdtree__t.html#a8eae6112056438894b842ce7e489bcc8">leaf_count</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>} <a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// Create a tree</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">extern</span> <a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *<a class="code hl_function" href="pf__kdtree_8h.html#ad5e3895479fc829100d1a627ae34e2ec">pf_kdtree_alloc</a>(<span class="keywordtype">int</span> max_size);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// Destroy a tree</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="pf__kdtree_8h.html#ac1f471ee15033bbe30a96abe56f1e072">pf_kdtree_free</a>(<a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// Clear all entries from the tree</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="pf__kdtree_8h.html#afc558bc7d59167c6d5ebcd23b06c5129">pf_kdtree_clear</a>(<a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">// Insert a pose into the tree</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="pf__kdtree_8h.html#a25bb0665463cacfc166b50be94079940">pf_kdtree_insert</a>(<a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self, <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="namespaceset__pose.html#ab2d96ec820df187b492eaf659226e766">pose</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="structpf__kdtree__node.html#a8df6d7d10dde36dcd28b4c8c5aa0118a">value</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">// Cluster the leaves in the tree</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="pf__kdtree_8h.html#a8757b78853ad243c2b823b8560c1027a">pf_kdtree_cluster</a>(<a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">// Determine the probability estimate for the given pose</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">extern</span> <span class="keywordtype">double</span> <a class="code hl_function" href="pf__kdtree_8h.html#a0f854496ce2d903ba3cc0efd7577afce">pf_kdtree_get_prob</a>(<a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self, <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="namespaceset__pose.html#ab2d96ec820df187b492eaf659226e766">pose</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">// Determine the cluster label for the given pose</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="pf__kdtree_8h.html#a84700cffabc8cd46af8145cb215fbc56">pf_kdtree_get_cluster</a>(<a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self, <a class="code hl_struct" href="structpf__vector__t.html">pf_vector_t</a> <a class="code hl_variable" href="namespaceset__pose.html#ab2d96ec820df187b492eaf659226e766">pose</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#ifdef INCLUDE_RTKGUI</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">// Draw the tree</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">extern</span> <span class="keywordtype">void</span> pf_kdtree_draw(<a class="code hl_struct" href="structpf__kdtree__t.html">pf_kdtree_t</a> *self, rtk_fig_t *fig);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespaceset__pose_html_ab2d96ec820df187b492eaf659226e766"><div class="ttname"><a href="namespaceset__pose.html#ab2d96ec820df187b492eaf659226e766">set_pose.pose</a></div><div class="ttdeci">pose</div><div class="ttdef"><b>Definition:</b> set_pose.py:36</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_a05fb8223798c8ce1e5d56e4bf6756ee2"><div class="ttname"><a href="pf__kdtree_8h.html#a05fb8223798c8ce1e5d56e4bf6756ee2">pf_kdtree_node_t</a></div><div class="ttdeci">struct pf_kdtree_node pf_kdtree_node_t</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_a0f854496ce2d903ba3cc0efd7577afce"><div class="ttname"><a href="pf__kdtree_8h.html#a0f854496ce2d903ba3cc0efd7577afce">pf_kdtree_get_prob</a></div><div class="ttdeci">double pf_kdtree_get_prob(pf_kdtree_t *self, pf_vector_t pose)</div><div class="ttdef"><b>Definition:</b> pf_kdtree.c:150</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_a25bb0665463cacfc166b50be94079940"><div class="ttname"><a href="pf__kdtree_8h.html#a25bb0665463cacfc166b50be94079940">pf_kdtree_insert</a></div><div class="ttdeci">void pf_kdtree_insert(pf_kdtree_t *self, pf_vector_t pose, double value)</div><div class="ttdef"><b>Definition:</b> pf_kdtree.c:112</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_a84700cffabc8cd46af8145cb215fbc56"><div class="ttname"><a href="pf__kdtree_8h.html#a84700cffabc8cd46af8145cb215fbc56">pf_kdtree_get_cluster</a></div><div class="ttdeci">int pf_kdtree_get_cluster(pf_kdtree_t *self, pf_vector_t pose)</div><div class="ttdef"><b>Definition:</b> pf_kdtree.c:168</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_a8757b78853ad243c2b823b8560c1027a"><div class="ttname"><a href="pf__kdtree_8h.html#a8757b78853ad243c2b823b8560c1027a">pf_kdtree_cluster</a></div><div class="ttdeci">void pf_kdtree_cluster(pf_kdtree_t *self)</div><div class="ttdef"><b>Definition:</b> pf_kdtree.c:358</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_ac1f471ee15033bbe30a96abe56f1e072"><div class="ttname"><a href="pf__kdtree_8h.html#ac1f471ee15033bbe30a96abe56f1e072">pf_kdtree_free</a></div><div class="ttdeci">void pf_kdtree_free(pf_kdtree_t *self)</div><div class="ttdef"><b>Definition:</b> pf_kdtree.c:90</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_ad5e3895479fc829100d1a627ae34e2ec"><div class="ttname"><a href="pf__kdtree_8h.html#ad5e3895479fc829100d1a627ae34e2ec">pf_kdtree_alloc</a></div><div class="ttdeci">pf_kdtree_t * pf_kdtree_alloc(int max_size)</div><div class="ttdef"><b>Definition:</b> pf_kdtree.c:66</div></div>
+<div class="ttc" id="apf__kdtree_8h_html_afc558bc7d59167c6d5ebcd23b06c5129"><div class="ttname"><a href="pf__kdtree_8h.html#afc558bc7d59167c6d5ebcd23b06c5129">pf_kdtree_clear</a></div><div class="ttdeci">void pf_kdtree_clear(pf_kdtree_t *self)</div><div class="ttdef"><b>Definition:</b> pf_kdtree.c:100</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html"><div class="ttname"><a href="structpf__kdtree__node.html">pf_kdtree_node</a></div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:38</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_a5df8870ca5ffbb2bd6a0fd3cf28e175f"><div class="ttname"><a href="structpf__kdtree__node.html#a5df8870ca5ffbb2bd6a0fd3cf28e175f">pf_kdtree_node::pivot_dim</a></div><div class="ttdeci">int pivot_dim</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:43</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_a614cd21deb9335383e9bba968fb3acce"><div class="ttname"><a href="structpf__kdtree__node.html#a614cd21deb9335383e9bba968fb3acce">pf_kdtree_node::cluster</a></div><div class="ttdeci">int cluster</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:53</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_a6ace1029289ed12095844110faac1b35"><div class="ttname"><a href="structpf__kdtree__node.html#a6ace1029289ed12095844110faac1b35">pf_kdtree_node::key</a></div><div class="ttdeci">int key[3]</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:47</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_a7aeffc9c557e170d875328d4ff4f669e"><div class="ttname"><a href="structpf__kdtree__node.html#a7aeffc9c557e170d875328d4ff4f669e">pf_kdtree_node::depth</a></div><div class="ttdeci">int depth</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:40</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_a894275d80a5aa21e4977420b8a8c2676"><div class="ttname"><a href="structpf__kdtree__node.html#a894275d80a5aa21e4977420b8a8c2676">pf_kdtree_node::children</a></div><div class="ttdeci">struct pf_kdtree_node * children[2]</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:56</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_a8df6d7d10dde36dcd28b4c8c5aa0118a"><div class="ttname"><a href="structpf__kdtree__node.html#a8df6d7d10dde36dcd28b4c8c5aa0118a">pf_kdtree_node::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:50</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_aca122fa0177209a6b87be053c6f2b882"><div class="ttname"><a href="structpf__kdtree__node.html#aca122fa0177209a6b87be053c6f2b882">pf_kdtree_node::leaf</a></div><div class="ttdeci">int leaf</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:40</div></div>
+<div class="ttc" id="astructpf__kdtree__node_html_ade0d28797ae474896d933e81628100cb"><div class="ttname"><a href="structpf__kdtree__node.html#ade0d28797ae474896d933e81628100cb">pf_kdtree_node::pivot_value</a></div><div class="ttdeci">double pivot_value</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:44</div></div>
+<div class="ttc" id="astructpf__kdtree__t_html"><div class="ttname"><a href="structpf__kdtree__t.html">pf_kdtree_t</a></div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:63</div></div>
+<div class="ttc" id="astructpf__kdtree__t_html_a33a087dd559a8d7b98e350c383ee82e6"><div class="ttname"><a href="structpf__kdtree__t.html#a33a087dd559a8d7b98e350c383ee82e6">pf_kdtree_t::nodes</a></div><div class="ttdeci">pf_kdtree_node_t * nodes</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:72</div></div>
+<div class="ttc" id="astructpf__kdtree__t_html_a8eae6112056438894b842ce7e489bcc8"><div class="ttname"><a href="structpf__kdtree__t.html#a8eae6112056438894b842ce7e489bcc8">pf_kdtree_t::leaf_count</a></div><div class="ttdeci">int leaf_count</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:75</div></div>
+<div class="ttc" id="astructpf__kdtree__t_html_a93584814fb661d6b39fd9e2a8048ba89"><div class="ttname"><a href="structpf__kdtree__t.html#a93584814fb661d6b39fd9e2a8048ba89">pf_kdtree_t::node_count</a></div><div class="ttdeci">int node_count</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:71</div></div>
+<div class="ttc" id="astructpf__kdtree__t_html_a9cb724eb99359c14a2bd4aabc40de3c1"><div class="ttname"><a href="structpf__kdtree__t.html#a9cb724eb99359c14a2bd4aabc40de3c1">pf_kdtree_t::root</a></div><div class="ttdeci">pf_kdtree_node_t * root</div><div class="ttdef"><b>Definition:</b> pf_kdtree.h:68</div></div>
+<div class="ttc" id="astructpf__vector__t_html"><div class="ttname"><a href="structpf__vector__t.html">pf_vector_t</a></div><div class="ttdef"><b>Definition:</b> pf_vector.h:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

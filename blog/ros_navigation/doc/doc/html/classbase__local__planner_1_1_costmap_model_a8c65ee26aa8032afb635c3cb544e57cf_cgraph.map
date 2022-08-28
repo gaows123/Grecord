@@ -1,0 +1,7 @@
+<map id="base_local_planner::CostmapModel::lineCost" name="base_local_planner::CostmapModel::lineCost">
+<area shape="rect" id="node1" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="5,39,177,80"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_line_iterator.html#a603d638882063ab678c2a75911591080" title=" " alt="" coords="244,5,387,47"/>
+<area shape="rect" id="node3" href="$classbase__local__planner_1_1_costmap_model.html#abfd021e995f9493ddeb64184a0bd3cf8" title="检查某个点在代价地图中的代价" alt="" coords="225,71,405,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="453,71,623,112"/>
+<area shape="rect" id="node5" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="671,71,840,112"/>
+</map>

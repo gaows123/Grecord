@@ -1,0 +1,4 @@
+<map id="base_local_planner::FootprintHelperTest::correctLineCells" name="base_local_planner::FootprintHelperTest::correctLineCells">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,149,61"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_footprint_helper.html#ab65128ff1acf0eb1d8b398ad0741ee55" title="Bresenham&#39;s 算法追踪网格中连接两点的线" alt="" coords="197,5,365,61"/>
+</map>

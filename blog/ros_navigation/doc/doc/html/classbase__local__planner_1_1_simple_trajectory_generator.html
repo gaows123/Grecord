@@ -1,0 +1,976 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner::SimpleTrajectoryGenerator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacebase__local__planner.html">base_local_planner</a></li><li class="navelem"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html">SimpleTrajectoryGenerator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classbase__local__planner_1_1_simple_trajectory_generator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">base_local_planner::SimpleTrajectoryGenerator类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="simple__trajectory__generator_8h_source.html">simple_trajectory_generator.h</a>&gt;</code></p>
+<div class="dynheader">
+类 base_local_planner::SimpleTrajectoryGenerator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator__inherit__graph.png" border="0" usemap="#abase__local__planner_1_1_simple_trajectory_generator_inherit__map" alt="Inheritance graph"/></div>
+<map name="abase__local__planner_1_1_simple_trajectory_generator_inherit__map" id="abase__local__planner_1_1_simple_trajectory_generator_inherit__map">
+<area shape="rect" title=" " alt="" coords="7,95,193,136"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_sample_generator.html" title="Provides an interface for navigation trajectory generators" alt="" coords="5,5,195,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+base_local_planner::SimpleTrajectoryGenerator 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator__coll__graph.png" border="0" usemap="#abase__local__planner_1_1_simple_trajectory_generator_coll__map" alt="Collaboration graph"/></div>
+<map name="abase__local__planner_1_1_simple_trajectory_generator_coll__map" id="abase__local__planner_1_1_simple_trajectory_generator_coll__map">
+<area shape="rect" title=" " alt="" coords="285,39,471,80"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory_sample_generator.html" title="Provides an interface for navigation trajectory generators" alt="" coords="5,5,195,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_limits.html" title=" " alt="" coords="30,71,170,112"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a83cdc24bc40a5ed55ec7d089c67d8018"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a83cdc24bc40a5ed55ec7d089c67d8018">SimpleTrajectoryGenerator</a> ()</td></tr>
+<tr class="separator:a83cdc24bc40a5ed55ec7d089c67d8018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea15c7d1fe8977c75334caff43b12925"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#aea15c7d1fe8977c75334caff43b12925">~SimpleTrajectoryGenerator</a> ()</td></tr>
+<tr class="separator:aea15c7d1fe8977c75334caff43b12925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0810ac35a39d3d7ccc1c19a862e97fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a0810ac35a39d3d7ccc1c19a862e97fbf">initialise</a> (const Eigen::Vector3f &amp;pos, const Eigen::Vector3f &amp;vel, const Eigen::Vector3f &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, <a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a> *limits, const Eigen::Vector3f &amp;vsamples, std::vector&lt; Eigen::Vector3f &gt; additional_samples, bool discretize_by_time=false)</td></tr>
+<tr class="separator:a0810ac35a39d3d7ccc1c19a862e97fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56881a7d1e6cf7027eb2243a764dc0fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a56881a7d1e6cf7027eb2243a764dc0fa">initialise</a> (const Eigen::Vector3f &amp;pos, const Eigen::Vector3f &amp;vel, const Eigen::Vector3f &amp;<a class="el" href="navtest_8cpp.html#a924427d23a7d971370018f8d3dc452cf">goal</a>, <a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a> *limits, const Eigen::Vector3f &amp;vsamples, bool discretize_by_time=false)</td></tr>
+<tr class="memdesc:a56881a7d1e6cf7027eb2243a764dc0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">这里重载了initialise，跟上一个initialise相比，少了输入参数additional_samples  <a href="classbase__local__planner_1_1_simple_trajectory_generator.html#a56881a7d1e6cf7027eb2243a764dc0fa">更多...</a><br /></td></tr>
+<tr class="separator:a56881a7d1e6cf7027eb2243a764dc0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce8e2d22eafe3f2a2d2daf236e1ce83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a9ce8e2d22eafe3f2a2d2daf236e1ce83">setParameters</a> (double sim_time, double sim_granularity, double angular_sim_granularity, bool use_dwa=false, double sim_period=0.0)</td></tr>
+<tr class="memdesc:a9ce8e2d22eafe3f2a2d2daf236e1ce83"><td class="mdescLeft">&#160;</td><td class="mdescRight">只用在参数被改变的时候，该函数才被调用  <a href="classbase__local__planner_1_1_simple_trajectory_generator.html#a9ce8e2d22eafe3f2a2d2daf236e1ce83">更多...</a><br /></td></tr>
+<tr class="separator:a9ce8e2d22eafe3f2a2d2daf236e1ce83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e9ca5e1468974af51acc17e5c7aec2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#ab2e9ca5e1468974af51acc17e5c7aec2">hasMoreTrajectories</a> ()</td></tr>
+<tr class="separator:ab2e9ca5e1468974af51acc17e5c7aec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb064b57ea297fc3810e185861e444e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#adb064b57ea297fc3810e185861e444e8">nextTrajectory</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj)</td></tr>
+<tr class="separator:adb064b57ea297fc3810e185861e444e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09675e3d736eaf9ff3b8c8bc3587b768"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a09675e3d736eaf9ff3b8c8bc3587b768">generateTrajectory</a> (Eigen::Vector3f pos, Eigen::Vector3f vel, Eigen::Vector3f sample_target_vel, <a class="el" href="classbase__local__planner_1_1_trajectory.html">base_local_planner::Trajectory</a> &amp;traj)</td></tr>
+<tr class="separator:a09675e3d736eaf9ff3b8c8bc3587b768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbase__local__planner_1_1_trajectory_sample_generator')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html">base_local_planner::TrajectorySampleGenerator</a></td></tr>
+<tr class="memitem:a053d4cfcef3b7c84bc86eb4c87211e3b inherit pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html#a053d4cfcef3b7c84bc86eb4c87211e3b">hasMoreTrajectories</a> ()=0</td></tr>
+<tr class="separator:a053d4cfcef3b7c84bc86eb4c87211e3b inherit pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810dd5771cf6cd1645fabf5c9bc25d94 inherit pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html#a810dd5771cf6cd1645fabf5c9bc25d94">nextTrajectory</a> (<a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj)=0</td></tr>
+<tr class="separator:a810dd5771cf6cd1645fabf5c9bc25d94 inherit pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409735b0c1e854fe288d61dcef810175 inherit pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html#a409735b0c1e854fe288d61dcef810175">~TrajectorySampleGenerator</a> ()</td></tr>
+<tr class="memdesc:a409735b0c1e854fe288d61dcef810175 inherit pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="mdescLeft">&#160;</td><td class="mdescRight">接口的虚析构函数  <a href="classbase__local__planner_1_1_trajectory_sample_generator.html#a409735b0c1e854fe288d61dcef810175">更多...</a><br /></td></tr>
+<tr class="separator:a409735b0c1e854fe288d61dcef810175 inherit pub_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a4762e662d557328a98abad8155501626"><td class="memItemLeft" align="right" valign="top">static Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a4762e662d557328a98abad8155501626">computeNewPositions</a> (const Eigen::Vector3f &amp;pos, const Eigen::Vector3f &amp;vel, double dt)</td></tr>
+<tr class="separator:a4762e662d557328a98abad8155501626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeea221947f5062cdb481c9888c33075"><td class="memItemLeft" align="right" valign="top">static Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#abeea221947f5062cdb481c9888c33075">computeNewVelocities</a> (const Eigen::Vector3f &amp;sample_target_vel, const Eigen::Vector3f &amp;vel, Eigen::Vector3f acclimits, double dt)</td></tr>
+<tr class="separator:abeea221947f5062cdb481c9888c33075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:acc42f25461d9894845955e5d464e4a58"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#acc42f25461d9894845955e5d464e4a58">next_sample_index_</a></td></tr>
+<tr class="separator:acc42f25461d9894845955e5d464e4a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6084045fc45c79ded7ef6b75f60320e7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::Vector3f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a6084045fc45c79ded7ef6b75f60320e7">sample_params_</a></td></tr>
+<tr class="separator:a6084045fc45c79ded7ef6b75f60320e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0586ccaf8b6372830bd715d476889bb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a0586ccaf8b6372830bd715d476889bb9">limits_</a></td></tr>
+<tr class="separator:a0586ccaf8b6372830bd715d476889bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e308de90ce96375e50889bb75398830"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a1e308de90ce96375e50889bb75398830">pos_</a></td></tr>
+<tr class="separator:a1e308de90ce96375e50889bb75398830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5012705423167541f096bedaa5152f"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a6d5012705423167541f096bedaa5152f">vel_</a></td></tr>
+<tr class="separator:a6d5012705423167541f096bedaa5152f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa811b5385f768045ec76638d431c4289"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#aa811b5385f768045ec76638d431c4289">continued_acceleration_</a></td></tr>
+<tr class="separator:aa811b5385f768045ec76638d431c4289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719ba193671c3057ac1dace84aa01526"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a719ba193671c3057ac1dace84aa01526">discretize_by_time_</a></td></tr>
+<tr class="separator:a719ba193671c3057ac1dace84aa01526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e59c0e68ed11342bcad2d80db5f967d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a6e59c0e68ed11342bcad2d80db5f967d">sim_time_</a></td></tr>
+<tr class="separator:a6e59c0e68ed11342bcad2d80db5f967d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e05c3fe4516c7343621649722b1bae"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#ac8e05c3fe4516c7343621649722b1bae">sim_granularity_</a></td></tr>
+<tr class="separator:ac8e05c3fe4516c7343621649722b1bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe5c2bf96effe4753a884f5947044fb9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#abe5c2bf96effe4753a884f5947044fb9">angular_sim_granularity_</a></td></tr>
+<tr class="separator:abe5c2bf96effe4753a884f5947044fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad388680d803d492b2565c7f3f4a508e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#ad388680d803d492b2565c7f3f4a508e6">use_dwa_</a></td></tr>
+<tr class="separator:ad388680d803d492b2565c7f3f4a508e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5447b0d5c0fb3f642db474c86d0e33d8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a5447b0d5c0fb3f642db474c86d0e33d8">sim_period_</a></td></tr>
+<tr class="separator:a5447b0d5c0fb3f642db474c86d0e33d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbase__local__planner_1_1_trajectory_sample_generator')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html">base_local_planner::TrajectorySampleGenerator</a></td></tr>
+<tr class="memitem:a015033aef2d21abd86f73e95318cf52c inherit pro_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html#a015033aef2d21abd86f73e95318cf52c">TrajectorySampleGenerator</a> ()</td></tr>
+<tr class="separator:a015033aef2d21abd86f73e95318cf52c inherit pro_methods_classbase__local__planner_1_1_trajectory_sample_generator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >generates trajectories based on equi-distant discretisation of the degrees of freedom. This is supposed to be a simple and robust implementation of the <a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html" title="Provides an interface for navigation trajectory generators">TrajectorySampleGenerator</a> interface, more efficient implementations are thinkable.</p>
+<p >This can be used for both dwa and trajectory rollout approaches. As an example, assuming these values: sim_time = 1s, sim_period=200ms, dt = 200ms, vsamples_x=5, acc_limit_x = 1m/s^2, vel_x=0 (robot at rest, values just for easy calculations) dwa_planner will sample max-x-velocities from 0m/s to 0.2m/s. trajectory rollout approach will sample max-x-velocities 0m/s up to 1m/s trajectory rollout approach does so respecting the acceleration limit, so it gradually increases velocity </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a83cdc24bc40a5ed55ec7d089c67d8018" name="a83cdc24bc40a5ed55ec7d089c67d8018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83cdc24bc40a5ed55ec7d089c67d8018">&#9670;&nbsp;</a></span>SimpleTrajectoryGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::SimpleTrajectoryGenerator::SimpleTrajectoryGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea15c7d1fe8977c75334caff43b12925" name="aea15c7d1fe8977c75334caff43b12925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea15c7d1fe8977c75334caff43b12925">&#9670;&nbsp;</a></span>~SimpleTrajectoryGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">base_local_planner::SimpleTrajectoryGenerator::~SimpleTrajectoryGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4762e662d557328a98abad8155501626" name="a4762e662d557328a98abad8155501626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4762e662d557328a98abad8155501626">&#9670;&nbsp;</a></span>computeNewPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3f base_local_planner::SimpleTrajectoryGenerator::computeNewPositions </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626_icgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_a4762e662d557328a98abad8155501626_icgraph">
+<area shape="rect" title=" " alt="" coords="761,43,947,99"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a09675e3d736eaf9ff3b8c8bc3587b768" title=" " alt="" coords="528,43,713,99"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="283,13,480,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#adb064b57ea297fc3810e185861e444e8" title=" " alt="" coords="289,79,474,135"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abeea221947f5062cdb481c9888c33075" name="abeea221947f5062cdb481c9888c33075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeea221947f5062cdb481c9888c33075">&#9670;&nbsp;</a></span>computeNewVelocities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3f base_local_planner::SimpleTrajectoryGenerator::computeNewVelocities </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>sample_target_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>acclimits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >change vel using acceleration limits to converge towards sample_target-vel 根据加速度限制改变速度，向采样目标速度收敛 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075_icgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_abeea221947f5062cdb481c9888c33075_icgraph">
+<area shape="rect" title=" " alt="" coords="761,43,947,99"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a09675e3d736eaf9ff3b8c8bc3587b768" title=" " alt="" coords="528,43,713,99"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="283,13,480,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#adb064b57ea297fc3810e185861e444e8" title=" " alt="" coords="289,79,474,135"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a09675e3d736eaf9ff3b8c8bc3587b768" name="a09675e3d736eaf9ff3b8c8bc3587b768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09675e3d736eaf9ff3b8c8bc3587b768">&#9670;&nbsp;</a></span>generateTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::generateTrajectory </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::Vector3f&#160;</td>
+          <td class="paramname"><em>sample_target_vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_trajectory.html">base_local_planner::Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>traj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>机器人当前位姿 </td></tr>
+    <tr><td class="paramname">vel</td><td>期望采样的速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_cgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_cgraph">
+<area shape="rect" title=" " alt="" coords="5,151,191,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="258,5,405,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a4762e662d557328a98abad8155501626" title=" " alt="" coords="239,71,424,127"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#abeea221947f5062cdb481c9888c33075" title=" " alt="" coords="239,151,424,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_limits.html#a0402363ae18d44002834003a1b17f14b" title="Get the acceleration limits of the robot" alt="" coords="261,231,401,287"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="250,312,413,353"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_icgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_a09675e3d736eaf9ff3b8c8bc3587b768_icgraph">
+<area shape="rect" title=" " alt="" coords="528,43,713,99"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="283,13,480,54"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#adb064b57ea297fc3810e185861e444e8" title=" " alt="" coords="289,79,474,135"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2e9ca5e1468974af51acc17e5c7aec2" name="ab2e9ca5e1468974af51acc17e5c7aec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e9ca5e1468974af51acc17e5c7aec2">&#9670;&nbsp;</a></span>hasMoreTrajectories()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::hasMoreTrajectories </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >局部路径规划器是否可以产生多个轨迹</p>
+<p >产生器是否可以生成多个局部路径 </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html#a053d4cfcef3b7c84bc86eb4c87211e3b">base_local_planner::TrajectorySampleGenerator</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2_icgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_ab2e9ca5e1468974af51acc17e5c7aec2_icgraph">
+<area shape="rect" title=" " alt="" coords="239,5,424,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#adb064b57ea297fc3810e185861e444e8" title=" " alt="" coords="5,5,191,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56881a7d1e6cf7027eb2243a764dc0fa" name="a56881a7d1e6cf7027eb2243a764dc0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56881a7d1e6cf7027eb2243a764dc0fa">&#9670;&nbsp;</a></span>initialise() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::SimpleTrajectoryGenerator::initialise </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a> *&#160;</td>
+          <td class="paramname"><em>limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vsamples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>discretize_by_time</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>这里重载了initialise，跟上一个initialise相比，少了输入参数additional_samples </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>当前位置 </td></tr>
+    <tr><td class="paramname">vel</td><td>当前速度 </td></tr>
+    <tr><td class="paramname">limits</td><td>速度限制 </td></tr>
+    <tr><td class="paramname">vsamples</td><td>in how many samples to divide the given dimension 分成多少哥样本 </td></tr>
+    <tr><td class="paramname">use_acceleration_limits</td><td>true时，用客观物理模型, 不然用理想的机器人模型 </td></tr>
+    <tr><td class="paramname">discretize_by_time</td><td>如果为true, 路径基于相同时间步长端被分段，不然基于等距的步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa_cgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_a56881a7d1e6cf7027eb2243a764dc0fa_cgraph">
+<area shape="rect" title="这里重载了initialise，跟上一个initialise相比，少了输入参数additional_samples" alt="" coords="5,125,191,181"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_limits.html#a0402363ae18d44002834003a1b17f14b" title="Get the acceleration limits of the robot" alt="" coords="246,5,386,61"/>
+<area shape="rect" href="classbase__local__planner_1_1_velocity_iterator.html#aa89af2f5352eda024084506787e45a01" title=" " alt="" coords="249,85,383,141"/>
+<area shape="rect" href="classbase__local__planner_1_1_velocity_iterator.html#a26feadcdf741e954dd8551028a4ed204" title=" " alt="" coords="249,165,383,221"/>
+<area shape="rect" href="classbase__local__planner_1_1_velocity_iterator.html#a305df916173f8e725ae5cd81e75d2306" title=" " alt="" coords="239,246,393,287"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0810ac35a39d3d7ccc1c19a862e97fbf" name="a0810ac35a39d3d7ccc1c19a862e97fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0810ac35a39d3d7ccc1c19a862e97fbf">&#9670;&nbsp;</a></span>initialise() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::SimpleTrajectoryGenerator::initialise </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>goal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a> *&#160;</td>
+          <td class="paramname"><em>limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>vsamples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; Eigen::Vector3f &gt;&#160;</td>
+          <td class="paramname"><em>additional_samples</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>discretize_by_time</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>当前位置 </td></tr>
+    <tr><td class="paramname">vel</td><td>当前速度 </td></tr>
+    <tr><td class="paramname">limits</td><td>速度限制 </td></tr>
+    <tr><td class="paramname">vsamples</td><td>in how many samples to divide the given dimension 采样速度，分成多少哥样本 </td></tr>
+    <tr><td class="paramname">use_acceleration_limits</td><td>true时，用客观物理模型, 不然用理想的机器人模型 </td></tr>
+    <tr><td class="paramname">additional_samples</td><td>(deprecated): Additional velocity samples to generate individual trajectories from. 用来产生局部轨迹的附加的速度样本(不怎么用到) </td></tr>
+    <tr><td class="paramname">discretize_by_time</td><td>如果为true, 路径基于相同时间步长端被分段，不然基于等距的步长 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_cgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,191,85"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_icgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_a0810ac35a39d3d7ccc1c19a862e97fbf_icgraph">
+<area shape="rect" title=" " alt="" coords="528,39,713,95"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a1200e7b997f2acd8c3b912bed37e69d5" title="对于位置/速度组合，轨迹是否合法" alt="" coords="283,13,480,54"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#acf862f4cbfd701bacf1eb359cd05892f" title="从机器人当前的位置和速度找出最好的轨迹去执行" alt="" coords="292,78,471,119"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb064b57ea297fc3810e185861e444e8" name="adb064b57ea297fc3810e185861e444e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb064b57ea297fc3810e185861e444e8">&#9670;&nbsp;</a></span>nextTrajectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::nextTrajectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>comp_traj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >局部路径规划器是否可以产生多个轨迹</p>
+<p >产生和返回下个采样局部路径 </p>
+
+<p>实现了 <a class="el" href="classbase__local__planner_1_1_trajectory_sample_generator.html#a810dd5771cf6cd1645fabf5c9bc25d94">base_local_planner::TrajectorySampleGenerator</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8_cgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8_cgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8_cgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_adb064b57ea297fc3810e185861e444e8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,191,191,247"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a09675e3d736eaf9ff3b8c8bc3587b768" title=" " alt="" coords="239,151,424,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#ab2e9ca5e1468974af51acc17e5c7aec2" title=" " alt="" coords="239,231,424,287"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a94ff45de82ae4417fdbb1158c5c2b204" title="Add a point to the end of a trajectory" alt="" coords="491,5,638,47"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#a4762e662d557328a98abad8155501626" title=" " alt="" coords="472,71,657,127"/>
+<area shape="rect" href="classbase__local__planner_1_1_simple_trajectory_generator.html#abeea221947f5062cdb481c9888c33075" title=" " alt="" coords="472,151,657,207"/>
+<area shape="rect" href="classbase__local__planner_1_1_local_planner_limits.html#a0402363ae18d44002834003a1b17f14b" title="Get the acceleration limits of the robot" alt="" coords="495,231,635,287"/>
+<area shape="rect" href="classbase__local__planner_1_1_trajectory.html#a35c05c071ce0f8e54c18f0f8816315d3" title="Clear the trajectory&#39;s points" alt="" coords="483,312,646,353"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ce8e2d22eafe3f2a2d2daf236e1ce83" name="a9ce8e2d22eafe3f2a2d2daf236e1ce83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce8e2d22eafe3f2a2d2daf236e1ce83">&#9670;&nbsp;</a></span>setParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void base_local_planner::SimpleTrajectoryGenerator::setParameters </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_granularity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angular_sim_granularity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_dwa</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sim_period</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>只用在参数被改变的时候，该函数才被调用 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sim_granularity</td><td>granularity of collision detection </td></tr>
+    <tr><td class="paramname">angular_sim_granularity</td><td>angular granularity of collision detection </td></tr>
+    <tr><td class="paramname">use_dwa</td><td>是否使用DWA（不是则使用trajectory rollout） </td></tr>
+    <tr><td class="paramname">sim_period</td><td>同一轨迹中两点之间的距离 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83_icgraph.png" border="0" usemap="#aclassbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83_icgraph" alt=""/></div>
+<map name="aclassbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83_icgraph" id="aclassbase__local__planner_1_1_simple_trajectory_generator_a9ce8e2d22eafe3f2a2d2daf236e1ce83_icgraph">
+<area shape="rect" title="只用在参数被改变的时候，该函数才被调用" alt="" coords="221,5,407,61"/>
+<area shape="rect" href="classdwa__local__planner_1_1_d_w_a_planner.html#a9388b62309f6148c697aef4ebf5fe20a" title="配置局部规划器" alt="" coords="5,13,173,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="abe5c2bf96effe4753a884f5947044fb9" name="abe5c2bf96effe4753a884f5947044fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe5c2bf96effe4753a884f5947044fb9">&#9670;&nbsp;</a></span>angular_sim_granularity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::SimpleTrajectoryGenerator::angular_sim_granularity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa811b5385f768045ec76638d431c4289" name="aa811b5385f768045ec76638d431c4289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa811b5385f768045ec76638d431c4289">&#9670;&nbsp;</a></span>continued_acceleration_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::continued_acceleration_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a719ba193671c3057ac1dace84aa01526" name="a719ba193671c3057ac1dace84aa01526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719ba193671c3057ac1dace84aa01526">&#9670;&nbsp;</a></span>discretize_by_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::discretize_by_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0586ccaf8b6372830bd715d476889bb9" name="a0586ccaf8b6372830bd715d476889bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0586ccaf8b6372830bd715d476889bb9">&#9670;&nbsp;</a></span>limits_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbase__local__planner_1_1_local_planner_limits.html">base_local_planner::LocalPlannerLimits</a>* base_local_planner::SimpleTrajectoryGenerator::limits_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc42f25461d9894845955e5d464e4a58" name="acc42f25461d9894845955e5d464e4a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc42f25461d9894845955e5d464e4a58">&#9670;&nbsp;</a></span>next_sample_index_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int base_local_planner::SimpleTrajectoryGenerator::next_sample_index_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e308de90ce96375e50889bb75398830" name="a1e308de90ce96375e50889bb75398830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e308de90ce96375e50889bb75398830">&#9670;&nbsp;</a></span>pos_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3f base_local_planner::SimpleTrajectoryGenerator::pos_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6084045fc45c79ded7ef6b75f60320e7" name="a6084045fc45c79ded7ef6b75f60320e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6084045fc45c79ded7ef6b75f60320e7">&#9670;&nbsp;</a></span>sample_params_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Eigen::Vector3f&gt; base_local_planner::SimpleTrajectoryGenerator::sample_params_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8e05c3fe4516c7343621649722b1bae" name="ac8e05c3fe4516c7343621649722b1bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e05c3fe4516c7343621649722b1bae">&#9670;&nbsp;</a></span>sim_granularity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::SimpleTrajectoryGenerator::sim_granularity_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5447b0d5c0fb3f642db474c86d0e33d8" name="a5447b0d5c0fb3f642db474c86d0e33d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5447b0d5c0fb3f642db474c86d0e33d8">&#9670;&nbsp;</a></span>sim_period_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::SimpleTrajectoryGenerator::sim_period_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e59c0e68ed11342bcad2d80db5f967d" name="a6e59c0e68ed11342bcad2d80db5f967d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e59c0e68ed11342bcad2d80db5f967d">&#9670;&nbsp;</a></span>sim_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double base_local_planner::SimpleTrajectoryGenerator::sim_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad388680d803d492b2565c7f3f4a508e6" name="ad388680d803d492b2565c7f3f4a508e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad388680d803d492b2565c7f3f4a508e6">&#9670;&nbsp;</a></span>use_dwa_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool base_local_planner::SimpleTrajectoryGenerator::use_dwa_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d5012705423167541f096bedaa5152f" name="a6d5012705423167541f096bedaa5152f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5012705423167541f096bedaa5152f">&#9670;&nbsp;</a></span>vel_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3f base_local_planner::SimpleTrajectoryGenerator::vel_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>base_local_planner/include/base_local_planner/<a class="el" href="simple__trajectory__generator_8h_source.html">simple_trajectory_generator.h</a></li>
+<li>base_local_planner/src/<a class="el" href="simple__trajectory__generator_8cpp.html">simple_trajectory_generator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

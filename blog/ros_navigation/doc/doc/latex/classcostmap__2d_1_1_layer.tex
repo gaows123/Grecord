@@ -1,0 +1,343 @@
+\hypertarget{classcostmap__2d_1_1_layer}{}\doxysection{costmap\+\_\+2d\+::Layer类 参考}
+\label{classcostmap__2d_1_1_layer}\index{costmap\_2d::Layer@{costmap\_2d::Layer}}
+
+
+{\ttfamily \#include $<$layer.\+h$>$}
+
+
+
+类 costmap\+\_\+2d\+::Layer 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_layer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+costmap\+\_\+2d\+::Layer 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classcostmap__2d_1_1_layer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_layer_a1f83227fd701bf4bc29143cd66c4de5c}{Layer}} ()
+\item 
+void \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize}} (\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} $\ast$parent, std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf)
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_a978fb5288265b293a6fd08787314f2f1}{update\+Bounds}} (double robot\+\_\+x, double robot\+\_\+y, double robot\+\_\+yaw, double $\ast$min\+\_\+x, double $\ast$min\+\_\+y, double $\ast$max\+\_\+x, double $\ast$max\+\_\+y)
+\begin{DoxyCompactList}\small\item\em This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_a56528644ba7d534b15ca3d73615dc12e}{update\+Costs}} (\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&master\+\_\+grid, int min\+\_\+i, int min\+\_\+j, int max\+\_\+i, int max\+\_\+j)
+\begin{DoxyCompactList}\small\item\em Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_a8238b7e03dc09bade9543a23addc65e2}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em Stop publishers. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_a83cb399475b5536ae8e278569756d68b}{activate}} ()
+\begin{DoxyCompactList}\small\item\em Restart publishers if they\textquotesingle{}ve been stopped. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_a7e57e2de15f2ac5104465da537b60ada}{reset}} ()
+\item 
+virtual \mbox{\hyperlink{classcostmap__2d_1_1_layer_a40154c4ffbc768749e3724728ad96a27}{$\sim$\+Layer}} ()
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_layer_a3331b68fc4db5ca14dcc31de179fd75f}{is\+Current}} () const
+\begin{DoxyCompactList}\small\item\em Check to make sure all the data in the layer is up to date. If the layer is not up to date, then it may be unsafe to plan using the data from this layer, and the planner may need to know. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_layer_a57d19ac5805530fc76a2cdbe9eb41421}{is\+Enabled}} () const noexcept
+\begin{DoxyCompactList}\small\item\em getter if the current layer is enabled. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_a2e0a0cf4fb307699c098507d718af7ff}{match\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to make this layer match the size of the parent costmap. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classcostmap__2d_1_1_layer_ae26a90b4bc5922cfc23dfc55b6a573fe}{get\+Name}} () const noexcept
+\item 
+const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& \mbox{\hyperlink{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44}{get\+Footprint}} () const
+\begin{DoxyCompactList}\small\item\em Convenience function for layered\+\_\+costmap\+\_\+-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44}{get\+Footprint()}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_ab65a9d55987f504e8c658bc64f61181e}{on\+Footprint\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} calls this whenever the footprint there changes (via \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464}{Layered\+Costmap\+::set\+Footprint()}}). Override to be notified of changes to the robot\textquotesingle{}s footprint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcostmap__2d_1_1_layer_a97888a23e12ab5b798a854c2f590ae71}{on\+Initialize}} ()
+\begin{DoxyCompactList}\small\item\em This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_layer_a4cebd6c53e8089f863f16cee9a0a2184}{layered\+\_\+costmap\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_layer_af67484d6f9573d583f3ad809375e976a}{current\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classcostmap__2d_1_1_layer_ab61b2a3e01353b97258c207a397977fe}{enabled\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classcostmap__2d_1_1_layer_ac1fa1f64ebd9d39af5947c738202e248}{name\+\_\+}}
+\item 
+tf2\+\_\+ros\+::\+Buffer $\ast$ \mbox{\hyperlink{classcostmap__2d_1_1_layer_a4a977acd639966f447262b5c8837a40f}{tf\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \mbox{\hyperlink{classcostmap__2d_1_1_layer_a42380f2eea4dea8c474a9acf802be0e4}{footprint\+\_\+spec\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a1f83227fd701bf4bc29143cd66c4de5c}\label{classcostmap__2d_1_1_layer_a1f83227fd701bf4bc29143cd66c4de5c}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{Layer()}{Layer()}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Layer\+::\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a40154c4ffbc768749e3724728ad96a27}\label{classcostmap__2d_1_1_layer_a40154c4ffbc768749e3724728ad96a27}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!````~Layer@{$\sim$Layer}}
+\index{````~Layer@{$\sim$Layer}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Layer()}{~Layer()}}
+{\footnotesize\ttfamily virtual costmap\+\_\+2d\+::\+Layer\+::$\sim$\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a83cb399475b5536ae8e278569756d68b}\label{classcostmap__2d_1_1_layer_a83cb399475b5536ae8e278569756d68b}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!activate@{activate}}
+\index{activate@{activate}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Restart publishers if they\textquotesingle{}ve been stopped. 
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a96d2b1af3b09d35e02e6d2fc8366195f}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a4b70375c6f9b105dd2fa765657cc46f8}{costmap\+\_\+2d\+::\+Static\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a8238b7e03dc09bade9543a23addc65e2}\label{classcostmap__2d_1_1_layer_a8238b7e03dc09bade9543a23addc65e2}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::deactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Stop publishers. 
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a4b5054749c568e2df8180c2a7c0e6177}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a861c1b31d3314e3f551ef94c8cee92c5}{costmap\+\_\+2d\+::\+Static\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44}\label{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!getFootprint@{getFootprint}}
+\index{getFootprint@{getFootprint}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{getFootprint()}{getFootprint()}}
+{\footnotesize\ttfamily const std\+::vector$<$ geometry\+\_\+msgs\+::\+Point $>$ \& costmap\+\_\+2d\+::\+Layer\+::get\+Footprint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Convenience function for layered\+\_\+costmap\+\_\+-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44}{get\+Footprint()}}. 
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_layer_ac24cade239a2cb0923a774bc5231ac44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_ae26a90b4bc5922cfc23dfc55b6a573fe}\label{classcostmap__2d_1_1_layer_ae26a90b4bc5922cfc23dfc55b6a573fe}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!getName@{getName}}
+\index{getName@{getName}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& costmap\+\_\+2d\+::\+Layer\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}\label{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!initialize@{initialize}}
+\index{initialize@{initialize}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void costmap\+\_\+2d\+::\+Layer\+::initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} $\ast$}]{parent,  }\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf }\end{DoxyParamCaption})}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a3331b68fc4db5ca14dcc31de179fd75f}\label{classcostmap__2d_1_1_layer_a3331b68fc4db5ca14dcc31de179fd75f}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!isCurrent@{isCurrent}}
+\index{isCurrent@{isCurrent}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{isCurrent()}{isCurrent()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Layer\+::is\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check to make sure all the data in the layer is up to date. If the layer is not up to date, then it may be unsafe to plan using the data from this layer, and the planner may need to know. 
+
+A layer\textquotesingle{}s current state should be managed by the protected variable current\+\_\+. \begin{DoxyReturn}{返回}
+Whether the data in the layer is up to date. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a57d19ac5805530fc76a2cdbe9eb41421}\label{classcostmap__2d_1_1_layer_a57d19ac5805530fc76a2cdbe9eb41421}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Layer\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+getter if the current layer is enabled. 
+
+The user may enable/disable a layer though dynamic reconfigure. Disabled layers won\textquotesingle{}t receive calls to
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classcostmap__2d_1_1_layer_a56528644ba7d534b15ca3d73615dc12e}{Layer\+::update\+Costs}}
+\item \mbox{\hyperlink{classcostmap__2d_1_1_layer_a978fb5288265b293a6fd08787314f2f1}{Layer\+::update\+Bounds}}
+\item \mbox{\hyperlink{classcostmap__2d_1_1_layer_a3331b68fc4db5ca14dcc31de179fd75f}{Layer\+::is\+Current}} from the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}}.
+\end{DoxyItemize}
+
+Calls to \mbox{\hyperlink{classcostmap__2d_1_1_layer_a83cb399475b5536ae8e278569756d68b}{Layer\+::activate}}, \mbox{\hyperlink{classcostmap__2d_1_1_layer_a8238b7e03dc09bade9543a23addc65e2}{Layer\+::deactivate}} and \mbox{\hyperlink{classcostmap__2d_1_1_layer_a7e57e2de15f2ac5104465da537b60ada}{Layer\+::reset}} won\textquotesingle{}t be blocked. \mbox{\Hypertarget{classcostmap__2d_1_1_layer_a2e0a0cf4fb307699c098507d718af7ff}\label{classcostmap__2d_1_1_layer_a2e0a0cf4fb307699c098507d718af7ff}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!matchSize@{matchSize}}
+\index{matchSize@{matchSize}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{matchSize()}{matchSize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::match\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implement this to make this layer match the size of the parent costmap. 
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_costmap_layer_a9260d210630b6522cad87397506f9696}{costmap\+\_\+2d\+::\+Costmap\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5}{costmap\+\_\+2d\+::\+Inflation\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a3c8a9c7ea061ad416e09d2f1f18cdc8a}{costmap\+\_\+2d\+::\+Static\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a0528c59b3cbe4c1b81748284ae0a3dc5}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_ab65a9d55987f504e8c658bc64f61181e}\label{classcostmap__2d_1_1_layer_ab65a9d55987f504e8c658bc64f61181e}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!onFootprintChanged@{onFootprintChanged}}
+\index{onFootprintChanged@{onFootprintChanged}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{onFootprintChanged()}{onFootprintChanged()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::on\+Footprint\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} calls this whenever the footprint there changes (via \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_acf16f3d3636b7fbe6e28edbd32340464}{Layered\+Costmap\+::set\+Footprint()}}). Override to be notified of changes to the robot\textquotesingle{}s footprint. 
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335}{costmap\+\_\+2d\+::\+Inflation\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a97888a23e12ab5b798a854c2f590ae71}\label{classcostmap__2d_1_1_layer_a97888a23e12ab5b798a854c2f590ae71}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This is called at the end of \mbox{\hyperlink{classcostmap__2d_1_1_layer_af6c7a09667d7cc23e207e0121e60ba4b}{initialize()}}. Override to implement subclass-\/specific initialization. 
+
+tf\+\_\+, name\+\_\+, and layered\+\_\+costmap\+\_\+ will all be set already when this is called. 
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade}{costmap\+\_\+2d\+::\+Inflation\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a370822e3b19d717ef04311b7b967f496}{costmap\+\_\+2d\+::\+Obstacle\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a05ac3b3a903d45c76d076fed8ae220f6}{costmap\+\_\+2d\+::\+Static\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_a7b0d5249f27fd757f206493b491fd37a}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcostmap__2d_1_1_layer_a97888a23e12ab5b798a854c2f590ae71_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a7e57e2de15f2ac5104465da537b60ada}\label{classcostmap__2d_1_1_layer_a7e57e2de15f2ac5104465da537b60ada}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!reset@{reset}}
+\index{reset@{reset}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6}{costmap\+\_\+2d\+::\+Inflation\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a9eca6114b3d54c93504058a1754103e4}{costmap\+\_\+2d\+::\+Obstacle\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a80083e19e7d50881f3d46c79e324dd93}{costmap\+\_\+2d\+::\+Static\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_af5f57588c57a8a5c8dff065b5a76a0db}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a978fb5288265b293a6fd08787314f2f1}\label{classcostmap__2d_1_1_layer_a978fb5288265b293a6fd08787314f2f1}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!updateBounds@{updateBounds}}
+\index{updateBounds@{updateBounds}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{updateBounds()}{updateBounds()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::update\+Bounds (\begin{DoxyParamCaption}\item[{double}]{robot\+\_\+x,  }\item[{double}]{robot\+\_\+y,  }\item[{double}]{robot\+\_\+yaw,  }\item[{double $\ast$}]{min\+\_\+x,  }\item[{double $\ast$}]{min\+\_\+y,  }\item[{double $\ast$}]{max\+\_\+x,  }\item[{double $\ast$}]{max\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called by the \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}} to poll this plugin as to how much of the costmap it needs to update. Each layer can increase the size of this bounds. 
+
+For more details, see \char`\"{}\+Layered Costmaps for Context-\/\+Sensitive Navigation\char`\"{}, by Lu et. Al, IROS 2014. 
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a7834a60ae6fe62f40dbe0b5815b9b4ed}{costmap\+\_\+2d\+::\+Inflation\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a1bfef13f020e8aa64a33743f72824ebd}{costmap\+\_\+2d\+::\+Obstacle\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_ad433844bcb32418450e0fcb763173b6a}{costmap\+\_\+2d\+::\+Static\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1_voxel_layer_ab28185cd71c8e42f72880b779ef08ae2}{costmap\+\_\+2d\+::\+Voxel\+Layer}} 重载.
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a56528644ba7d534b15ca3d73615dc12e}\label{classcostmap__2d_1_1_layer_a56528644ba7d534b15ca3d73615dc12e}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!updateCosts@{updateCosts}}
+\index{updateCosts@{updateCosts}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{updateCosts()}{updateCosts()}}
+{\footnotesize\ttfamily virtual void costmap\+\_\+2d\+::\+Layer\+::update\+Costs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{Costmap2D}} \&}]{master\+\_\+grid,  }\item[{int}]{min\+\_\+i,  }\item[{int}]{min\+\_\+j,  }\item[{int}]{max\+\_\+i,  }\item[{int}]{max\+\_\+j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Actually update the underlying costmap, only within the bounds calculated during Update\+Bounds(). 
+
+
+
+被 \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af}{costmap\+\_\+2d\+::\+Inflation\+Layer}}, \mbox{\hyperlink{classcostmap__2d_1_1_obstacle_layer_a02fbdf76db69ddc03c400b2c00e903ee}{costmap\+\_\+2d\+::\+Obstacle\+Layer}} , 以及 \mbox{\hyperlink{classcostmap__2d_1_1_static_layer_a9ebed8f042ee945073031e51f82229f1}{costmap\+\_\+2d\+::\+Static\+Layer}} 重载.
+
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_af67484d6f9573d583f3ad809375e976a}\label{classcostmap__2d_1_1_layer_af67484d6f9573d583f3ad809375e976a}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!current\_@{current\_}}
+\index{current\_@{current\_}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{current\_}{current\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Layer\+::current\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_ab61b2a3e01353b97258c207a397977fe}\label{classcostmap__2d_1_1_layer_ab61b2a3e01353b97258c207a397977fe}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!enabled\_@{enabled\_}}
+\index{enabled\_@{enabled\_}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{enabled\_}{enabled\_}}
+{\footnotesize\ttfamily bool costmap\+\_\+2d\+::\+Layer\+::enabled\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a42380f2eea4dea8c474a9acf802be0e4}\label{classcostmap__2d_1_1_layer_a42380f2eea4dea8c474a9acf802be0e4}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!footprint\_spec\_@{footprint\_spec\_}}
+\index{footprint\_spec\_@{footprint\_spec\_}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{footprint\_spec\_}{footprint\_spec\_}}
+{\footnotesize\ttfamily std\+::vector$<$geometry\+\_\+msgs\+::\+Point$>$ costmap\+\_\+2d\+::\+Layer\+::footprint\+\_\+spec\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a4cebd6c53e8089f863f16cee9a0a2184}\label{classcostmap__2d_1_1_layer_a4cebd6c53e8089f863f16cee9a0a2184}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!layered\_costmap\_@{layered\_costmap\_}}
+\index{layered\_costmap\_@{layered\_costmap\_}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{layered\_costmap\_}{layered\_costmap\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap}{Layered\+Costmap}}$\ast$ costmap\+\_\+2d\+::\+Layer\+::layered\+\_\+costmap\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_ac1fa1f64ebd9d39af5947c738202e248}\label{classcostmap__2d_1_1_layer_ac1fa1f64ebd9d39af5947c738202e248}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!name\_@{name\_}}
+\index{name\_@{name\_}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string costmap\+\_\+2d\+::\+Layer\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcostmap__2d_1_1_layer_a4a977acd639966f447262b5c8837a40f}\label{classcostmap__2d_1_1_layer_a4a977acd639966f447262b5c8837a40f}} 
+\index{costmap\_2d::Layer@{costmap\_2d::Layer}!tf\_@{tf\_}}
+\index{tf\_@{tf\_}!costmap\_2d::Layer@{costmap\_2d::Layer}}
+\doxysubsubsection{\texorpdfstring{tf\_}{tf\_}}
+{\footnotesize\ttfamily tf2\+\_\+ros\+::\+Buffer$\ast$ costmap\+\_\+2d\+::\+Layer\+::tf\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+costmap\+\_\+2d/include/costmap\+\_\+2d/\mbox{\hyperlink{layer_8h}{layer.\+h}}\item 
+costmap\+\_\+2d/src/\mbox{\hyperlink{layer_8cpp}{layer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{orientation__filter_8h_source}{}\doxysection{orientation\+\_\+filter.\+h}
+\label{orientation__filter_8h_source}\index{global\_planner/include/global\_planner/orientation\_filter.h@{global\_planner/include/global\_planner/orientation\_filter.h}}
+\mbox{\hyperlink{orientation__filter_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2015, David V. Lu!!}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of David V. Lu nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: David V. Lu!!}}
+\DoxyCodeLine{36 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#ifndef GLOBAL\_PLANNER\_ORIENTATION\_FILTER\_H}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define GLOBAL\_PLANNER\_ORIENTATION\_FILTER\_H}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <nav\_msgs/Path.h>}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglobal__planner}{global\_planner}} \{}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{enum} \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{OrientationMode}} \{ \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816aa5cb53cba5b8b634142e2c670fc075df}{NONE}}, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a8a36eec94c6d4a17329e48906087af38}{FORWARD}}, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ab1bcffe73a5d678181f6a1d0d7d21230}{INTERPOLATE}}, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ad38da445936ac2ac33da8a2031486f23}{FORWARDTHENINTERPOLATE}}, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a834964e21897dfbe849684e5a1bab0a6}{BACKWARD}}, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816af10d8d9fb3ea74bc81d8319f6418840b}{LEFTWARD}}, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a5572a79ff003b2e771ed6a5175fa052e}{RIGHTWARD}} \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{classglobal__planner_1_1_orientation_filter}{OrientationFilter}} \{}
+\DoxyCodeLine{46     \textcolor{keyword}{public}:}
+\DoxyCodeLine{47         \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_ab4a576fb0224492885d69a734bacfc5e}{OrientationFilter}}() : \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}{omode\_}}(\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816aa5cb53cba5b8b634142e2c670fc075df}{NONE}}) \{\}}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{49     }
+\DoxyCodeLine{50         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a90c8cd6c44018145bf0ae3e71580c1b1}{processPath}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& \mbox{\hyperlink{navtest_8cpp_a035d2eadd3e54f4a028144044585cd71}{start}},}
+\DoxyCodeLine{51                                  std::vector<geometry\_msgs::PoseStamped>\& path);}
+\DoxyCodeLine{52                                  }
+\DoxyCodeLine{53         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a59770ba7f30c0e87e62b407bc44feda1}{setAngleBasedOnPositionDerivative}}(std::vector<geometry\_msgs::PoseStamped>\& path, \textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{54         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a36817535ca10c2662b6cc2d0919576bf}{interpolate}}(std::vector<geometry\_msgs::PoseStamped>\& path, }
+\DoxyCodeLine{55                          \textcolor{keywordtype}{int} start\_index, \textcolor{keywordtype}{int} end\_index);}
+\DoxyCodeLine{56                          }
+\DoxyCodeLine{57         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a1934b57509ac8d2074695bee82c8e178}{setMode}}(\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{OrientationMode}} new\_mode)\{ \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}{omode\_}} = new\_mode; \}}
+\DoxyCodeLine{58         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333}{setMode}}(\textcolor{keywordtype}{int} new\_mode)\{ \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a7419925acb4ebb8b67bf1ae95f9c4333}{setMode}}((\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{OrientationMode}}) new\_mode); \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \textcolor{keywordtype}{void} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_acf2026f87791f87970220d7a42e42422}{setWindowSize}}(\textcolor{keywordtype}{size\_t} window\_size)\{ \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_aed9456a588e42436e590db2a4f0c98dc}{window\_size\_}} = window\_size; \}}
+\DoxyCodeLine{61     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{62         \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{OrientationMode}} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_a5f155f74ab99402aaaee9f23d8a5741c}{omode\_}};}
+\DoxyCodeLine{63         \textcolor{keywordtype}{int} \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter_aed9456a588e42436e590db2a4f0c98dc}{window\_size\_}};}
+\DoxyCodeLine{64 \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \} \textcolor{comment}{//end namespace global\_planner}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

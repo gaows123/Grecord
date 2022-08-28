@@ -1,0 +1,106 @@
+\hypertarget{namespaceglobal__planner}{}\doxysection{global\+\_\+planner 命名空间参考}
+\label{namespaceglobal__planner}\index{global\_planner@{global\_planner}}
+\doxysubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_a_star_expansion}{AStar\+Expansion}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_dijkstra_expansion}{Dijkstra\+Expansion}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_expander}{Expander}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_global_planner}{Global\+Planner}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_gradient_path}{Gradient\+Path}}
+\item 
+struct \mbox{\hyperlink{structglobal__planner_1_1greater1}{greater1}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_grid_path}{Grid\+Path}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_index}{Index}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_orientation_filter}{Orientation\+Filter}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_planner_with_costmap}{Planner\+With\+Costmap}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_potential_calculator}{Potential\+Calculator}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_quadratic_calculator}{Quadratic\+Calculator}}
+\item 
+class \mbox{\hyperlink{classglobal__planner_1_1_traceback}{Traceback}}
+\end{DoxyCompactItemize}
+\doxysubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{Orientation\+Mode}} \{ \newline
+\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816aa5cb53cba5b8b634142e2c670fc075df}{NONE}}
+, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a8a36eec94c6d4a17329e48906087af38}{FORWARD}}
+, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ab1bcffe73a5d678181f6a1d0d7d21230}{INTERPOLATE}}
+, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ad38da445936ac2ac33da8a2031486f23}{FORWARDTHENINTERPOLATE}}
+, \newline
+\mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a834964e21897dfbe849684e5a1bab0a6}{BACKWARD}}
+, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816af10d8d9fb3ea74bc81d8319f6418840b}{LEFTWARD}}
+, \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a5572a79ff003b2e771ed6a5175fa052e}{RIGHTWARD}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceglobal__planner_ad0324dd96d644d514929f39bf5b856cd}{set\+\_\+angle}} (geometry\+\_\+msgs\+::\+Pose\+Stamped $\ast$pose, double angle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{枚举类型说明}
+\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}} 
+\index{global\_planner@{global\_planner}!OrientationMode@{OrientationMode}}
+\index{OrientationMode@{OrientationMode}!global\_planner@{global\_planner}}
+\doxysubsubsection{\texorpdfstring{OrientationMode}{OrientationMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816}{global\+\_\+planner\+::\+Orientation\+Mode}}}
+
+\begin{DoxyEnumFields}{枚举值}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!global\_planner@{global\_planner}}\index{global\_planner@{global\_planner}!NONE@{NONE}}}\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816aa5cb53cba5b8b634142e2c670fc075df}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816aa5cb53cba5b8b634142e2c670fc075df}} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD@{FORWARD}!global\_planner@{global\_planner}}\index{global\_planner@{global\_planner}!FORWARD@{FORWARD}}}\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a8a36eec94c6d4a17329e48906087af38}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a8a36eec94c6d4a17329e48906087af38}} 
+FORWARD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTERPOLATE@{INTERPOLATE}!global\_planner@{global\_planner}}\index{global\_planner@{global\_planner}!INTERPOLATE@{INTERPOLATE}}}\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ab1bcffe73a5d678181f6a1d0d7d21230}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ab1bcffe73a5d678181f6a1d0d7d21230}} 
+INTERPOLATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARDTHENINTERPOLATE@{FORWARDTHENINTERPOLATE}!global\_planner@{global\_planner}}\index{global\_planner@{global\_planner}!FORWARDTHENINTERPOLATE@{FORWARDTHENINTERPOLATE}}}\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ad38da445936ac2ac33da8a2031486f23}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816ad38da445936ac2ac33da8a2031486f23}} 
+FORWARDTHENINTERPOLATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BACKWARD@{BACKWARD}!global\_planner@{global\_planner}}\index{global\_planner@{global\_planner}!BACKWARD@{BACKWARD}}}\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a834964e21897dfbe849684e5a1bab0a6}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a834964e21897dfbe849684e5a1bab0a6}} 
+BACKWARD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFTWARD@{LEFTWARD}!global\_planner@{global\_planner}}\index{global\_planner@{global\_planner}!LEFTWARD@{LEFTWARD}}}\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816af10d8d9fb3ea74bc81d8319f6418840b}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816af10d8d9fb3ea74bc81d8319f6418840b}} 
+LEFTWARD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHTWARD@{RIGHTWARD}!global\_planner@{global\_planner}}\index{global\_planner@{global\_planner}!RIGHTWARD@{RIGHTWARD}}}\mbox{\Hypertarget{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a5572a79ff003b2e771ed6a5175fa052e}\label{namespaceglobal__planner_aa8e3d09712327d61a381dd6368f5b816a5572a79ff003b2e771ed6a5175fa052e}} 
+RIGHTWARD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{namespaceglobal__planner_ad0324dd96d644d514929f39bf5b856cd}\label{namespaceglobal__planner_ad0324dd96d644d514929f39bf5b856cd}} 
+\index{global\_planner@{global\_planner}!set\_angle@{set\_angle}}
+\index{set\_angle@{set\_angle}!global\_planner@{global\_planner}}
+\doxysubsubsection{\texorpdfstring{set\_angle()}{set\_angle()}}
+{\footnotesize\ttfamily void global\+\_\+planner\+::set\+\_\+angle (\begin{DoxyParamCaption}\item[{geometry\+\_\+msgs\+::\+Pose\+Stamped $\ast$}]{pose,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceglobal__planner_ad0324dd96d644d514929f39bf5b856cd_icgraph}
+\end{center}
+\end{figure}

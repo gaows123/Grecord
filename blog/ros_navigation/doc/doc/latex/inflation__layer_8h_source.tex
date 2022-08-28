@@ -1,0 +1,169 @@
+\hypertarget{inflation__layer_8h_source}{}\doxysection{inflation\+\_\+layer.\+h}
+\label{inflation__layer_8h_source}\index{costmap\_2d/include/costmap\_2d/inflation\_layer.h@{costmap\_2d/include/costmap\_2d/inflation\_layer.h}}
+\mbox{\hyperlink{inflation__layer_8h}{浏览该文件的文档.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ *}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Software License Agreement (BSD License)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ *  Copyright (c) 2008, 2013, Willow Garage, Inc.}}
+\DoxyCodeLine{6 \textcolor{comment}{ *  All rights reserved.}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *  Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{9 \textcolor{comment}{ *  modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{10 \textcolor{comment}{ *  are met:}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ *   * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{13 \textcolor{comment}{ *     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{14 \textcolor{comment}{ *   * Redistributions in binary form must reproduce the above}}
+\DoxyCodeLine{15 \textcolor{comment}{ *     copyright notice, this list of conditions and the following}}
+\DoxyCodeLine{16 \textcolor{comment}{ *     disclaimer in the documentation and/or other materials provided}}
+\DoxyCodeLine{17 \textcolor{comment}{ *     with the distribution.}}
+\DoxyCodeLine{18 \textcolor{comment}{ *   * Neither the name of Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{19 \textcolor{comment}{ *     contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{20 \textcolor{comment}{ *     from this software without specific prior written permission.}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}}
+\DoxyCodeLine{23 \textcolor{comment}{ *  "{}AS IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}}
+\DoxyCodeLine{24 \textcolor{comment}{ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS}}
+\DoxyCodeLine{25 \textcolor{comment}{ *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE}}
+\DoxyCodeLine{26 \textcolor{comment}{ *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,}}
+\DoxyCodeLine{27 \textcolor{comment}{ *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,}}
+\DoxyCodeLine{28 \textcolor{comment}{ *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;}}
+\DoxyCodeLine{29 \textcolor{comment}{ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{30 \textcolor{comment}{ *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT}}
+\DoxyCodeLine{31 \textcolor{comment}{ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN}}
+\DoxyCodeLine{32 \textcolor{comment}{ *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{33 \textcolor{comment}{ *  POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{34 \textcolor{comment}{ *}}
+\DoxyCodeLine{35 \textcolor{comment}{ * Author: Eitan Marder-\/Eppstein}}
+\DoxyCodeLine{36 \textcolor{comment}{ *         David V. Lu!!}}
+\DoxyCodeLine{37 \textcolor{comment}{ *********************************************************************/}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifndef COSTMAP\_2D\_INFLATION\_LAYER\_H\_}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define COSTMAP\_2D\_INFLATION\_LAYER\_H\_}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layer_8h}{costmap\_2d/layer.h}}>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{layered__costmap_8h}{costmap\_2d/layered\_costmap.h}}>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <costmap\_2d/InflationPluginConfig.h>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/server.h>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <boost/thread.hpp>}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecostmap__2d}{costmap\_2d}}}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{54 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_cell_data}{CellData}}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56 \textcolor{keyword}{public}:}
+\DoxyCodeLine{66   \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_a4918fc882905b510243dd7834d6bb41e}{CellData}}(\textcolor{keywordtype}{double} i, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sy) :}
+\DoxyCodeLine{67       \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_aa37feddb470fb77327f89459d5f9c0d6}{index\_}}(i), \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_a0be2739a4ba7be11c179fd1edf641f36}{x\_}}(x), \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_ac3625459924c7e17c792402817e77c3b}{y\_}}(y), \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_a4e0aa3874a9c9e236beda9b4e2a8b3a1}{src\_x\_}}(sx), \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_a221c3e3685d734d376235fe005202d8d}{src\_y\_}}(sy)}
+\DoxyCodeLine{68   \{}
+\DoxyCodeLine{69   \}}
+\DoxyCodeLine{70   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_aa37feddb470fb77327f89459d5f9c0d6}{index\_}};}
+\DoxyCodeLine{71   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_a0be2739a4ba7be11c179fd1edf641f36}{x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_ac3625459924c7e17c792402817e77c3b}{y\_}};}
+\DoxyCodeLine{72   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_a4e0aa3874a9c9e236beda9b4e2a8b3a1}{src\_x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_cell_data_a221c3e3685d734d376235fe005202d8d}{src\_y\_}};}
+\DoxyCodeLine{73 \};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{keyword}{class }\mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer}{InflationLayer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classcostmap__2d_1_1_layer}{Layer}}}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77 \textcolor{keyword}{public}:}
+\DoxyCodeLine{78   \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_abdd1ac7152ebe8072dd142c8b1106631}{InflationLayer}}();}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   \textcolor{keyword}{virtual} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a498fcc27acce5456e672ca4ad644ebe1}{\string~InflationLayer}}()}
+\DoxyCodeLine{81   \{}
+\DoxyCodeLine{82     \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138}{deleteKernels}}();}
+\DoxyCodeLine{83     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa504d83a6236b89c0eea95f384bdca2a}{dsrv\_}})}
+\DoxyCodeLine{84         \textcolor{keyword}{delete} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa504d83a6236b89c0eea95f384bdca2a}{dsrv\_}};}
+\DoxyCodeLine{85     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a45cbbeb44dd1b73daf4111a1adfa5d69}{seen\_}})}
+\DoxyCodeLine{86         \textcolor{keyword}{delete}[] \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a45cbbeb44dd1b73daf4111a1adfa5d69}{seen\_}};}
+\DoxyCodeLine{87   \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade}{onInitialize}}();}
+\DoxyCodeLine{90   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a7834a60ae6fe62f40dbe0b5815b9b4ed}{updateBounds}}(\textcolor{keywordtype}{double} robot\_x, \textcolor{keywordtype}{double} robot\_y, \textcolor{keywordtype}{double} robot\_yaw, \textcolor{keywordtype}{double}* min\_x, \textcolor{keywordtype}{double}* min\_y,}
+\DoxyCodeLine{91                             \textcolor{keywordtype}{double}* max\_x, \textcolor{keywordtype}{double}* max\_y);}
+\DoxyCodeLine{92   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a2d5d3eef9b0e8c91dfde79c0e40a65af}{updateCosts}}(\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d}{costmap\_2d::Costmap2D}}\& master\_grid, \textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j);}
+\DoxyCodeLine{93   \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a298ae7ff737ea8b409405c51aa34dab3}{isDiscretized}}()}
+\DoxyCodeLine{94   \{}
+\DoxyCodeLine{95     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{96   \}}
+\DoxyCodeLine{97   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a740c5ab2d838eb17f8fbfa16001feff5}{matchSize}}();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa5df966fb4dd99b8b69945408f42c2a6}{reset}}() \{ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a70aa2e82f43d319111403b8f97f37ade}{onInitialize}}(); \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{107   \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aded99a51737669d85ccc3f1b932061e5}{computeCost}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}})\textcolor{keyword}{ const}}
+\DoxyCodeLine{108 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{109     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cost = 0;}
+\DoxyCodeLine{110     \textcolor{keywordflow}{if} (\mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}} == 0)}
+\DoxyCodeLine{111       cost = \mbox{\hyperlink{namespacecostmap__2d_aab110f187082d88d103ee84c8e420872}{LETHAL\_OBSTACLE}};}
+\DoxyCodeLine{112     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}} * \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a05d76789a37f24cf6af5d82e900a5852}{resolution\_}} <= \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af7c7d884932a3d5f215099f29361d0a8}{inscribed\_radius\_}})}
+\DoxyCodeLine{113       cost = \mbox{\hyperlink{namespacecostmap__2d_a5d3c464519e4135a8f54c9aea7a51d2b}{INSCRIBED\_INFLATED\_OBSTACLE}};}
+\DoxyCodeLine{114     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{115     \{}
+\DoxyCodeLine{116       \textcolor{comment}{// make sure cost falls off by Euclidean distance}}
+\DoxyCodeLine{117       \textcolor{keywordtype}{double} euclidean\_distance = \mbox{\hyperlink{costmap__math_8h_a98aba4ec7ccaf3b54f2a312e2db8ba98}{distance}} * \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a05d76789a37f24cf6af5d82e900a5852}{resolution\_}};}
+\DoxyCodeLine{118       \textcolor{keywordtype}{double} factor = exp(-\/1.0 * \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a507bd49c3aca392d91efcabfe999cc0d}{weight\_}} * (euclidean\_distance -\/ \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af7c7d884932a3d5f215099f29361d0a8}{inscribed\_radius\_}}));}
+\DoxyCodeLine{119       cost = (\textcolor{keywordtype}{unsigned} char)((\mbox{\hyperlink{namespacecostmap__2d_a5d3c464519e4135a8f54c9aea7a51d2b}{INSCRIBED\_INFLATED\_OBSTACLE}} -\/ 1) * factor);}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121     \textcolor{keywordflow}{return} cost;}
+\DoxyCodeLine{122   \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{129   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a9bb0571041eaadcf3e93a9e0b1395cbb}{setInflationParameters}}(\textcolor{keywordtype}{double} inflation\_radius, \textcolor{keywordtype}{double} cost\_scaling\_factor);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{132   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae838b68ddf6d2dce9efca777e8455335}{onFootprintChanged}}();}
+\DoxyCodeLine{133   boost::recursive\_mutex* \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a194f58d14ff80500d724c0822c5f960a}{inflation\_access\_}};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a05d76789a37f24cf6af5d82e900a5852}{resolution\_}};}
+\DoxyCodeLine{136   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a66302e9f414da11c156e7ce1b5e16bae}{inflation\_radius\_}};}
+\DoxyCodeLine{137   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af7c7d884932a3d5f215099f29361d0a8}{inscribed\_radius\_}};}
+\DoxyCodeLine{138   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a507bd49c3aca392d91efcabfe999cc0d}{weight\_}};}
+\DoxyCodeLine{139   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a9dcffd8162d89b97e668bde22b53ec4a}{inflate\_unknown\_}};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{keyword}{private}:}
+\DoxyCodeLine{150   \textcolor{keyword}{inline} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a75897e88513bbaa87f773664879bb1ad}{distanceLookup}}(\textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{int} my, \textcolor{keywordtype}{int} src\_x, \textcolor{keywordtype}{int} src\_y)}
+\DoxyCodeLine{151   \{}
+\DoxyCodeLine{152     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dx = abs(mx -\/ src\_x);}
+\DoxyCodeLine{153     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dy = abs(my -\/ src\_y);}
+\DoxyCodeLine{154     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae7a7da01002c8f330cdb06c071fa034f}{cached\_distances\_}}[dx][dy];}
+\DoxyCodeLine{155   \}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{165   \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a576a455f199de11e329366df5c1d906a}{costLookup}}(\textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{int} my, \textcolor{keywordtype}{int} src\_x, \textcolor{keywordtype}{int} src\_y)}
+\DoxyCodeLine{166   \{}
+\DoxyCodeLine{167     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dx = abs(mx -\/ src\_x);}
+\DoxyCodeLine{168     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dy = abs(my -\/ src\_y);}
+\DoxyCodeLine{169     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a3c35d2fdb226235c6eccb734c8ea369e}{cached\_costs\_}}[dx][dy];}
+\DoxyCodeLine{170   \}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a05a6dbb2bb36948cdc9404f7480c5261}{computeCaches}}();}
+\DoxyCodeLine{173   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a8ca7ac87199c293c06fa5d068c855138}{deleteKernels}}();}
+\DoxyCodeLine{174   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a3dc15a0b886693f024940c42f295349f}{inflate\_area}}(\textcolor{keywordtype}{int} min\_i, \textcolor{keywordtype}{int} min\_j, \textcolor{keywordtype}{int} max\_i, \textcolor{keywordtype}{int} max\_j, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* master\_grid);}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af8596c7a8c0ffc98da47cfc99854cdd0}{cellDistance}}(\textcolor{keywordtype}{double} world\_dist)}
+\DoxyCodeLine{177   \{}
+\DoxyCodeLine{178     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcostmap__2d_1_1_layer_a4cebd6c53e8089f863f16cee9a0a2184}{layered\_costmap\_}}-\/>\mbox{\hyperlink{classcostmap__2d_1_1_layered_costmap_a22e2f5d750be195f71da46b2062460f2}{getCostmap}}()-\/>\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_abffbb5c7d49fae947d70c4e6d0fbeae9}{cellDistance}}(world\_dist);}
+\DoxyCodeLine{179   \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181   \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a6c750bb8214b8d1281d0b96598ff0996}{enqueue}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} my,}
+\DoxyCodeLine{182                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} src\_x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} src\_y);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_af9d33497e3d4ec8342786f234fac6896}{cell\_inflation\_radius\_}};}
+\DoxyCodeLine{185   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a789f910861acabe83383ba36cfd041e6}{cached\_cell\_inflation\_radius\_}};}
+\DoxyCodeLine{186   std::map<double, std::vector<CellData> > \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a5d43c961fe3696b45457a97037defb09}{inflation\_cells\_}};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188   \textcolor{keywordtype}{bool}* \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a45cbbeb44dd1b73daf4111a1adfa5d69}{seen\_}};}
+\DoxyCodeLine{189   \textcolor{keywordtype}{int} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a29c1027cf8409532ca36cc3b7e681e63}{seen\_size\_}};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}** \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a3c35d2fdb226235c6eccb734c8ea369e}{cached\_costs\_}};}
+\DoxyCodeLine{192   \textcolor{keywordtype}{double}** \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae7a7da01002c8f330cdb06c071fa034f}{cached\_distances\_}};}
+\DoxyCodeLine{193   \textcolor{keywordtype}{double} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a01d20509f20eaab7d74ca86f5a68e170}{last\_min\_x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ac48dde484133ff6a592332473b4ccb9a}{last\_min\_y\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_ae6af2f42669c6563498013ddbcc1d578}{last\_max\_x\_}}, \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_a17493c35e11ae6bc0239c3c9fdbc369d}{last\_max\_y\_}};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195   dynamic\_reconfigure::Server<costmap\_2d::InflationPluginConfig> *\mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa504d83a6236b89c0eea95f384bdca2a}{dsrv\_}};}
+\DoxyCodeLine{196   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aa6137de50b68199a193c8d79022391bb}{reconfigureCB}}(costmap\_2d::InflationPluginConfig \&config, uint32\_t level);}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcostmap__2d_1_1_inflation_layer_aebdeee9b6c8c9cad19bbc5ec0e546305}{need\_reinflation\_}};  }
+\DoxyCodeLine{199 \};}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201 \}  \textcolor{comment}{// namespace costmap\_2d}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{// COSTMAP\_2D\_INFLATION\_LAYER\_H\_}}
+
+\end{DoxyCode}

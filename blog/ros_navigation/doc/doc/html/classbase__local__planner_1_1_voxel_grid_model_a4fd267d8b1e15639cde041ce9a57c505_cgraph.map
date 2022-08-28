@@ -1,0 +1,5 @@
+<map id="base_local_planner::VoxelGridModel::pointCost" name="base_local_planner::VoxelGridModel::pointCost">
+<area shape="rect" id="node1" title="Checks the cost of a point in the costmap" alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node2" href="$classvoxel__grid_1_1_voxel_grid.html#a1cb19a239dd48a4df82e664f8dd53a36" title=" " alt="" coords="239,5,385,47"/>
+<area shape="rect" id="node3" href="$classvoxel__grid_1_1_voxel_grid.html#a2063758dd2b12bbb08c90257fa4a3cd2" title=" " alt="" coords="433,5,580,47"/>
+</map>

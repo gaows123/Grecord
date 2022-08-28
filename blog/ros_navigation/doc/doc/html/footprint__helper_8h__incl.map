@@ -1,0 +1,10 @@
+<map id="base_local_planner/include/base_local_planner/footprint_helper.h" name="base_local_planner/include/base_local_planner/footprint_helper.h">
+<area shape="rect" id="node1" title=" " alt="" coords="251,5,426,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,199,64,225"/>
+<area shape="rect" id="node3" href="$costmap__2d_8h.html" title=" " alt="" coords="123,117,301,143"/>
+<area shape="rect" id="node5" title=" " alt="" coords="313,199,473,225"/>
+<area shape="rect" id="node7" title=" " alt="" coords="377,117,463,143"/>
+<area shape="rect" id="node8" title=" " alt="" coords="488,109,621,151"/>
+<area shape="rect" id="node4" title=" " alt="" coords="89,199,146,225"/>
+<area shape="rect" id="node6" title=" " alt="" coords="170,199,289,225"/>
+</map>

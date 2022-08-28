@@ -1,0 +1,19 @@
+<map id="move_base::MoveBase::planService" name="move_base::MoveBase::planService">
+<area shape="rect" id="node1" title="A service call that can be made when the action is inactive that will return a plan" alt="" coords="5,199,164,240"/>
+<area shape="rect" id="node2" href="$classmove__base_1_1_move_base.html#ac3ec5faa6a11697af52c061fd90907d2" title="Clears obstacles within a window around the robot" alt="" coords="215,169,378,211"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a1fe322e03f6a103e3fbf9beeef530c0f" title="Return a pointer to the &quot;master&quot; costmap which receives updates from all the layers." alt="" coords="429,104,627,145"/>
+<area shape="rect" id="node5" href="$classmove__base_1_1_move_base.html#ab267e8cd4697812fde4df300cb5902ac" title=" " alt="" coords="449,267,607,308"/>
+<area shape="rect" id="node17" href="$classcostmap__2d_1_1_costmap2_d.html#ade55f512e27c62cec28a3de5ca775759" title="Accessor for the resolution of the costmap" alt="" coords="212,287,381,328"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d.html#afb8a42c3810e796107ed04c0ca3cbf90" title="Sets the cost of a convex polygon to a desired value" alt="" coords="443,169,613,211"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="675,5,873,47"/>
+<area shape="rect" id="node6" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa2942240e1eb2ecadf166c56f8e79bd7" title="Returns the global frame of the costmap" alt="" coords="675,332,873,373"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a94655d85e11b8c1e542a26674bcdc9b2" title="Returns costmap name" alt="" coords="675,397,873,439"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#aa96116a5847c4cbbe872e7ace18dc67c" title="Returns the delay in transform (tf) data that is tolerable in seconds" alt="" coords="675,267,873,308"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d.html#aa3c49f2d63f6edfb7396d1b0c79a4b12" title="Get the map cells that fill a convex polygon" alt="" coords="689,136,859,177"/>
+<area shape="rect" id="node15" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="689,201,859,243"/>
+<area shape="rect" id="node16" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="689,71,859,112"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d.html#ad0c6f7cb8e11569a02f873c545acec90" title="Get the map cells that make up the outline of a polygon" alt="" coords="921,136,1091,177"/>
+<area shape="rect" id="node12" href="$classcostmap__2d_1_1_costmap2_d.html#af1d619d9b49b6851cb0a33de4e39ec78" title="Raytrace a line and apply some action at each step" alt="" coords="1139,136,1308,177"/>
+<area shape="rect" id="node13" href="$classcostmap__2d_1_1_costmap2_d.html#a54462e95337134adf0a59785b39b57f6" title="A 2D implementation of Bresenham&#39;s raytracing algorithm... applies an action at each step 实现了 对于离散的平面..." alt="" coords="1356,103,1525,144"/>
+<area shape="rect" id="node14" href="$classcostmap__2d_1_1_costmap2_d.html#a947041f50d5fb1a44c3fd0601c4fc608" title=" " alt="" coords="1356,168,1525,209"/>
+</map>

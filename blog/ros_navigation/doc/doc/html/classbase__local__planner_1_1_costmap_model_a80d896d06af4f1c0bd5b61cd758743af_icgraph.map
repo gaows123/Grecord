@@ -1,0 +1,4 @@
+<map id="base_local_planner::CostmapModel::footprintCost" name="base_local_planner::CostmapModel::footprintCost">
+<area shape="rect" id="node1" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="267,5,465,47"/>
+<area shape="rect" id="node2" href="$classrotate__recovery_1_1_rotate_recovery.html#a8a95adca66937ca4d01fb7a584b905f9" title="启动旋转恢复行为" alt="" coords="5,5,219,47"/>
+</map>

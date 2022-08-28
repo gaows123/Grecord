@@ -1,0 +1,6 @@
+<map id="addStaticLayer" name="addStaticLayer">
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,115,73"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="163,5,361,47"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="191,71,333,112"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="409,71,551,112"/>
+</map>

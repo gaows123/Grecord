@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: base_local_planner/include/base_local_planner/oscillation_cost_function.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_fc4ccca1cedd5ad98a9c5935ebe74b0e.html">base_local_planner</a></li><li class="navelem"><a class="el" href="dir_fb1526ef91c927002057b842ea75b919.html">include</a></li><li class="navelem"><a class="el" href="dir_022ab8b8b2793d2a4d98ca8ea9cb4917.html">base_local_planner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">oscillation_cost_function.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="oscillation__cost__function_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Software License Agreement (BSD License)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *  Copyright (c) 2008, Willow Garage, Inc.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *  All rights reserved.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *  are met:</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *   * Redistributions in binary form must reproduce the above</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *     copyright notice, this list of conditions and the following</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *     disclaimer in the documentation and/or other materials provided</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *     with the distribution.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *   * Neither the name of Willow Garage, Inc. nor the names of its</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *     from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *  POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Author: TKruse</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *********************************************************************/</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#ifndef OSCILLATION_COST_FUNCTION_H_</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define OSCILLATION_COST_FUNCTION_H_</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;<a class="code" href="trajectory__cost__function_8h.html">base_local_planner/trajectory_cost_function.h</a>&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;Eigen/Core&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebase__local__planner.html">base_local_planner</a> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_oscillation_cost_function.html">   46</a></span><span class="keyword">class </span><a class="code hl_class" href="classbase__local__planner_1_1_oscillation_cost_function.html">OscillationCostFunction</a>: <span class="keyword">public</span> <a class="code hl_class" href="classbase__local__planner_1_1_trajectory_cost_function.html">base_local_planner::TrajectoryCostFunction</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#a50e1b85389706d2e1dcdaa36cb56cdc8">OscillationCostFunction</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#a4b5ad241fd0d42863996f8e746a49b82">~OscillationCostFunction</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#ac9fd440e97142115b8bbe81408eadc14">scoreTrajectory</a>(<a class="code hl_class" href="classbase__local__planner_1_1_trajectory.html">Trajectory</a> &amp;traj);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_oscillation_cost_function.html#a1cc7c1cd4c49df97515da3c12400f4df">   53</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#a1cc7c1cd4c49df97515da3c12400f4df">prepare</a>() {<span class="keywordflow">return</span> <span class="keyword">true</span>;};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#afb420d9a488660f3583e182cb1939ee1">resetOscillationFlags</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#a2cd60c5b611d43697f3345e3c356f48f">updateOscillationFlags</a>(Eigen::Vector3f pos, <a class="code hl_class" href="classbase__local__planner_1_1_trajectory.html">base_local_planner::Trajectory</a>* traj, <span class="keywordtype">double</span> min_vel_trans);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#a489f8c9c3f2322d6f24fe8aa1e39b118">setOscillationResetDist</a>(<span class="keywordtype">double</span> dist, <span class="keywordtype">double</span> angle);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#aa6224a4812d149fcf71dc2131b92cb96">resetOscillationFlagsIfPossible</a>(<span class="keyword">const</span> Eigen::Vector3f&amp; pos, <span class="keyword">const</span> Eigen::Vector3f&amp; prev);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classbase__local__planner_1_1_oscillation_cost_function.html#ada617a8fb122a0889bbbe93e6baa82de">setOscillationFlags</a>(<a class="code hl_class" href="classbase__local__planner_1_1_trajectory.html">base_local_planner::Trajectory</a>* t, <span class="keywordtype">double</span> min_vel_trans);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="comment">// flags</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_oscillation_cost_function.html#a4c9881934f9f9b62a6ea0cc39ec9cd15">   78</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#ae3f12ed64ffab83f6cc14407740a0dd3">strafe_pos_only_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a4c9881934f9f9b62a6ea0cc39ec9cd15">strafe_neg_only_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a99e1d7c6f0d521b1dd3ad89dee6fdd68">strafing_pos_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#acfbe248a46b833410f67962551086be9">strafing_neg_</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_oscillation_cost_function.html#ada6b20572e35e6661531663ee7aef485">   79</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a6bbd2e3ab21235b798561a8b25694ae4">rot_pos_only_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#ada6b20572e35e6661531663ee7aef485">rot_neg_only_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a782792324148e9c4f25fd293c306fca6">rotating_pos_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a2db7a4bf9080265e0fbde53935631bbc">rotating_neg_</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_oscillation_cost_function.html#a57abdb2c09e71ec1b42649ad27540d9b">   80</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a72f5a9ba109d22be48984bdcc2b3d461">forward_pos_only_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a49dd0b6e2f6f7a5a9266234f0dc2a40c">forward_neg_only_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a7df909c5d41cabd2b0f9f35710fe36e5">forward_pos_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a57abdb2c09e71ec1b42649ad27540d9b">forward_neg_</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">// param</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_oscillation_cost_function.html#a82d992b7b3776a2adfa576e8fd5cc136">   83</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a8bbd803cecdd9786df4cf8c5c2996223">oscillation_reset_dist_</a>, <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a82d992b7b3776a2adfa576e8fd5cc136">oscillation_reset_angle_</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classbase__local__planner_1_1_oscillation_cost_function.html#a0f8cf234ccff7a60e79868c33e3d9f4a">   85</a></span>  Eigen::Vector3f <a class="code hl_variable" href="classbase__local__planner_1_1_oscillation_cost_function.html#a0f8cf234ccff7a60e79868c33e3d9f4a">prev_stationary_pos_</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">/* namespace base_local_planner */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">/* OSCILLATION_COST_FUNCTION_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html">base_local_planner::OscillationCostFunction</a></div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:46</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a0f8cf234ccff7a60e79868c33e3d9f4a"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a0f8cf234ccff7a60e79868c33e3d9f4a">base_local_planner::OscillationCostFunction::prev_stationary_pos_</a></div><div class="ttdeci">Eigen::Vector3f prev_stationary_pos_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:85</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a1cc7c1cd4c49df97515da3c12400f4df"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a1cc7c1cd4c49df97515da3c12400f4df">base_local_planner::OscillationCostFunction::prepare</a></div><div class="ttdeci">bool prepare()</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:53</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a2cd60c5b611d43697f3345e3c356f48f"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a2cd60c5b611d43697f3345e3c356f48f">base_local_planner::OscillationCostFunction::updateOscillationFlags</a></div><div class="ttdeci">void updateOscillationFlags(Eigen::Vector3f pos, base_local_planner::Trajectory *traj, double min_vel_trans)</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:56</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a2db7a4bf9080265e0fbde53935631bbc"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a2db7a4bf9080265e0fbde53935631bbc">base_local_planner::OscillationCostFunction::rotating_neg_</a></div><div class="ttdeci">bool rotating_neg_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:79</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a489f8c9c3f2322d6f24fe8aa1e39b118"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a489f8c9c3f2322d6f24fe8aa1e39b118">base_local_planner::OscillationCostFunction::setOscillationResetDist</a></div><div class="ttdeci">void setOscillationResetDist(double dist, double angle)</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:51</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a49dd0b6e2f6f7a5a9266234f0dc2a40c"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a49dd0b6e2f6f7a5a9266234f0dc2a40c">base_local_planner::OscillationCostFunction::forward_neg_only_</a></div><div class="ttdeci">bool forward_neg_only_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:80</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a4b5ad241fd0d42863996f8e746a49b82"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a4b5ad241fd0d42863996f8e746a49b82">base_local_planner::OscillationCostFunction::~OscillationCostFunction</a></div><div class="ttdeci">virtual ~OscillationCostFunction()</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:47</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a4c9881934f9f9b62a6ea0cc39ec9cd15"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a4c9881934f9f9b62a6ea0cc39ec9cd15">base_local_planner::OscillationCostFunction::strafe_neg_only_</a></div><div class="ttdeci">bool strafe_neg_only_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:78</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a50e1b85389706d2e1dcdaa36cb56cdc8"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a50e1b85389706d2e1dcdaa36cb56cdc8">base_local_planner::OscillationCostFunction::OscillationCostFunction</a></div><div class="ttdeci">OscillationCostFunction()</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:44</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a57abdb2c09e71ec1b42649ad27540d9b"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a57abdb2c09e71ec1b42649ad27540d9b">base_local_planner::OscillationCostFunction::forward_neg_</a></div><div class="ttdeci">bool forward_neg_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:80</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a6bbd2e3ab21235b798561a8b25694ae4"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a6bbd2e3ab21235b798561a8b25694ae4">base_local_planner::OscillationCostFunction::rot_pos_only_</a></div><div class="ttdeci">bool rot_pos_only_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:79</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a72f5a9ba109d22be48984bdcc2b3d461"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a72f5a9ba109d22be48984bdcc2b3d461">base_local_planner::OscillationCostFunction::forward_pos_only_</a></div><div class="ttdeci">bool forward_pos_only_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:80</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a782792324148e9c4f25fd293c306fca6"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a782792324148e9c4f25fd293c306fca6">base_local_planner::OscillationCostFunction::rotating_pos_</a></div><div class="ttdeci">bool rotating_pos_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:79</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a7df909c5d41cabd2b0f9f35710fe36e5"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a7df909c5d41cabd2b0f9f35710fe36e5">base_local_planner::OscillationCostFunction::forward_pos_</a></div><div class="ttdeci">bool forward_pos_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:80</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a82d992b7b3776a2adfa576e8fd5cc136"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a82d992b7b3776a2adfa576e8fd5cc136">base_local_planner::OscillationCostFunction::oscillation_reset_angle_</a></div><div class="ttdeci">double oscillation_reset_angle_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:83</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a8bbd803cecdd9786df4cf8c5c2996223"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a8bbd803cecdd9786df4cf8c5c2996223">base_local_planner::OscillationCostFunction::oscillation_reset_dist_</a></div><div class="ttdeci">double oscillation_reset_dist_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:83</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_a99e1d7c6f0d521b1dd3ad89dee6fdd68"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#a99e1d7c6f0d521b1dd3ad89dee6fdd68">base_local_planner::OscillationCostFunction::strafing_pos_</a></div><div class="ttdeci">bool strafing_pos_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:78</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_aa6224a4812d149fcf71dc2131b92cb96"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#aa6224a4812d149fcf71dc2131b92cb96">base_local_planner::OscillationCostFunction::resetOscillationFlagsIfPossible</a></div><div class="ttdeci">void resetOscillationFlagsIfPossible(const Eigen::Vector3f &amp;pos, const Eigen::Vector3f &amp;prev)</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:70</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_ac9fd440e97142115b8bbe81408eadc14"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#ac9fd440e97142115b8bbe81408eadc14">base_local_planner::OscillationCostFunction::scoreTrajectory</a></div><div class="ttdeci">double scoreTrajectory(Trajectory &amp;traj)</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:166</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_acfbe248a46b833410f67962551086be9"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#acfbe248a46b833410f67962551086be9">base_local_planner::OscillationCostFunction::strafing_neg_</a></div><div class="ttdeci">bool strafing_neg_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:78</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_ada617a8fb122a0889bbbe93e6baa82de"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#ada617a8fb122a0889bbbe93e6baa82de">base_local_planner::OscillationCostFunction::setOscillationFlags</a></div><div class="ttdeci">bool setOscillationFlags(base_local_planner::Trajectory *t, double min_vel_trans)</div><div class="ttdoc">Given a trajectory that's selected, set flags if needed to prevent the robot from oscillating</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:101</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_ada6b20572e35e6661531663ee7aef485"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#ada6b20572e35e6661531663ee7aef485">base_local_planner::OscillationCostFunction::rot_neg_only_</a></div><div class="ttdeci">bool rot_neg_only_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:79</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_ae3f12ed64ffab83f6cc14407740a0dd3"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#ae3f12ed64ffab83f6cc14407740a0dd3">base_local_planner::OscillationCostFunction::strafe_pos_only_</a></div><div class="ttdeci">bool strafe_pos_only_</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.h:78</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_oscillation_cost_function_html_afb420d9a488660f3583e182cb1939ee1"><div class="ttname"><a href="classbase__local__planner_1_1_oscillation_cost_function.html#afb420d9a488660f3583e182cb1939ee1">base_local_planner::OscillationCostFunction::resetOscillationFlags</a></div><div class="ttdeci">void resetOscillationFlags()</div><div class="ttdoc">Reset the oscillation flags for the local planner</div><div class="ttdef"><b>Definition:</b> oscillation_cost_function.cpp:84</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_cost_function_html"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory_cost_function.html">base_local_planner::TrajectoryCostFunction</a></div><div class="ttdoc">Provides an interface for critics of trajectories During each sampling run, a batch of many trajector...</div><div class="ttdef"><b>Definition:</b> trajectory_cost_function.h:52</div></div>
+<div class="ttc" id="aclassbase__local__planner_1_1_trajectory_html"><div class="ttname"><a href="classbase__local__planner_1_1_trajectory.html">base_local_planner::Trajectory</a></div><div class="ttdoc">Holds a trajectory generated by considering an x, y, and theta velocity</div><div class="ttdef"><b>Definition:</b> trajectory.h:44</div></div>
+<div class="ttc" id="anamespacebase__local__planner_html"><div class="ttname"><a href="namespacebase__local__planner.html">base_local_planner</a></div><div class="ttdef"><b>Definition:</b> costmap_model.h:44</div></div>
+<div class="ttc" id="atrajectory__cost__function_8h_html"><div class="ttname"><a href="trajectory__cost__function_8h.html">trajectory_cost_function.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

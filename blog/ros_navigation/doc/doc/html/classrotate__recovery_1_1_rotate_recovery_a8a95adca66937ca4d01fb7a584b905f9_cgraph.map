@@ -1,0 +1,12 @@
+<map id="rotate_recovery::RotateRecovery::runBehavior" name="rotate_recovery::RotateRecovery::runBehavior">
+<area shape="rect" id="node1" title="启动旋转恢复行为" alt="" coords="5,100,219,142"/>
+<area shape="rect" id="node2" href="$classbase__local__planner_1_1_costmap_model.html#a80d896d06af4f1c0bd5b61cd758743af" title="检查是否有障碍物落到凸footprint里面，其中footprint已经被栅格化成网格" alt="" coords="267,35,465,76"/>
+<area shape="rect" id="node9" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a4688b58dc94afe64bdaed02dceab5afd" title="Return the current footprint of the robot as a vector of points." alt="" coords="267,100,465,142"/>
+<area shape="rect" id="node10" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="267,166,465,207"/>
+<area shape="rect" id="node3" href="$classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="961,39,1131,80"/>
+<area shape="rect" id="node5" href="$classbase__local__planner_1_1_costmap_model.html#a8c65ee26aa8032afb635c3cb544e57cf" title="栅格化一条线段到代价地图网格并且进行碰撞检测" alt="" coords="513,35,685,76"/>
+<area shape="rect" id="node8" href="$classcostmap__2d_1_1_costmap2_d.html#a9a2c824d4cd3bcad3ac3435d81982986" title="Convert from world coordinates to map coordinates" alt="" coords="515,100,684,142"/>
+<area shape="rect" id="node4" href="$classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="1179,39,1348,80"/>
+<area shape="rect" id="node6" href="$classbase__local__planner_1_1_line_iterator.html#a603d638882063ab678c2a75911591080" title=" " alt="" coords="752,35,895,76"/>
+<area shape="rect" id="node7" href="$classbase__local__planner_1_1_costmap_model.html#abfd021e995f9493ddeb64184a0bd3cf8" title="检查某个点在代价地图中的代价" alt="" coords="733,100,913,142"/>
+</map>

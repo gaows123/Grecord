@@ -1,0 +1,21 @@
+<map id="costmap_2d::LayeredCostmap::getPlugins" name="costmap_2d::LayeredCostmap::getPlugins">
+<area shape="rect" id="node1" title=" " alt="" coords="1447,166,1645,207"/>
+<area shape="rect" id="node2" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html#afa64ceeb9a0ab7eb3796e3a0095545a7" title=" " alt="" coords="1217,5,1383,61"/>
+<area shape="rect" id="node5" href="$clear__tester_8cpp.html#ae52f25afda509d6ef50c32f8feaae444" title=" " alt="" coords="538,45,651,72"/>
+<area shape="rect" id="node7" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#af0370b7b97c5d8cfcc961abb8d190f21" title="Reset each individual layer" alt="" coords="1201,377,1399,418"/>
+<area shape="rect" id="node10" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html#abf32e06b525c141d8b7afcac857c241a" title="Run the behavior" alt="" coords="1225,191,1375,247"/>
+<area shape="rect" id="node11" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a426e3bfc085f9534b908807d1d734396" title="Subscribes to sensor topics if necessary and starts costmap updates, can be called to restart the cos..." alt="" coords="741,137,939,178"/>
+<area shape="rect" id="node16" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a6034554ce34557a2426eda649629c670" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="1201,271,1399,313"/>
+<area shape="rect" id="node3" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html#a7306f9a6b3db7e909e07e7fac7ee84a4" title="Run the ClearCostmapRecovery recovery behavior. Reverts the costmap to the static map outside of a us..." alt="" coords="987,5,1153,61"/>
+<area shape="rect" id="node4" href="$clear__tester_8cpp.html#a401dad5e820a56943c7223955000dc1b" title=" " alt="" coords="777,27,903,53"/>
+<area shape="rect" id="node6" href="$clear__tester_8cpp.html#abafd3249b8a1dc81312408e67fec172a" title=" " alt="" coords="321,45,377,72"/>
+<area shape="rect" id="node8" href="$classmove__base_1_1_move_base.html#aa38fbbcfa91d3ee562fedd16a43bd098" title="A service call that clears the costmaps of obstacles" alt="" coords="989,421,1151,462"/>
+<area shape="rect" id="node9" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="270,303,429,345"/>
+<area shape="rect" id="node12" href="$classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="515,238,674,279"/>
+<area shape="rect" id="node13" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a82872c177faeaaf9c5e0c93039329391" title=" " alt="" coords="496,121,693,162"/>
+<area shape="rect" id="node14" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a600b1395b84f782470c4c7a7fa661834" title=" " alt="" coords="251,121,448,162"/>
+<area shape="rect" id="node15" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#a8e6acdb79ef3eb738e8f4d9a5197a9ed" title="Constructor for the wrapper" alt="" coords="5,121,203,162"/>
+<area shape="rect" id="node17" href="$classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="991,267,1149,309"/>
+<area shape="rect" id="node18" href="$classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="761,202,919,243"/>
+<area shape="rect" id="node19" href="$classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="515,303,674,345"/>
+</map>

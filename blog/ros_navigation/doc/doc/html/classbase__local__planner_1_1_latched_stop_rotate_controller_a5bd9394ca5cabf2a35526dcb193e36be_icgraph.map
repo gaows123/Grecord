@@ -1,0 +1,4 @@
+<map id="base_local_planner::LatchedStopRotateController::computeVelocityCommandsStopRotate" name="base_local_planner::LatchedStopRotateController::computeVelocityCommandsStopRotate">
+<area shape="rect" id="node1" title=" " alt="" coords="283,5,541,61"/>
+<area shape="rect" id="node2" href="$classdwa__local__planner_1_1_d_w_a_planner_r_o_s.html#a700178e32159b614d328326b6ba5f8b0" title="计算下发速度根据机器人的位姿，当前速度和目标点" alt="" coords="5,5,235,61"/>
+</map>

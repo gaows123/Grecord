@@ -1,0 +1,4 @@
+<map id="move_base::MoveBase::loadRecoveryBehaviors" name="move_base::MoveBase::loadRecoveryBehaviors">
+<area shape="rect" id="node1" title="Load the recovery behaviors for the navigation stack from the parameter server" alt="" coords="212,5,379,47"/>
+<area shape="rect" id="node2" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,5,164,47"/>
+</map>

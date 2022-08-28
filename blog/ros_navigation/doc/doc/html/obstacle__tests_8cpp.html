@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: costmap_2d/test/obstacle_tests.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0b3e1cffb416dedbab195a1bf6c77f35.html">costmap_2d</a></li><li class="navelem"><a class="el" href="dir_937d906ccfe5ef58b0167ee489be34b2.html">test</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">obstacle_tests.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="costmap__2d_8h_source.html">costmap_2d/costmap_2d.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="layered__costmap_8h_source.html">costmap_2d/layered_costmap.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="observation__buffer_8h_source.html">costmap_2d/observation_buffer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="testing__helper_8h_source.html">costmap_2d/testing_helper.h</a>&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;gtest/gtest.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+obstacle_tests.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="obstacle__tests_8cpp__incl.png" border="0" usemap="#acostmap__2d_2test_2obstacle__tests_8cpp" alt=""/></div>
+<map name="acostmap__2d_2test_2obstacle__tests_8cpp" id="acostmap__2d_2test_2obstacle__tests_8cpp">
+<area shape="rect" title=" " alt="" coords="3067,5,3239,47"/>
+<area shape="rect" href="costmap__2d_8h.html" title=" " alt="" coords="2107,541,2285,568"/>
+<area shape="rect" href="layered__costmap_8h.html" title=" " alt="" coords="2236,363,2375,404"/>
+<area shape="rect" href="observation__buffer_8h.html" title=" " alt="" coords="1175,452,1339,493"/>
+<area shape="rect" href="testing__helper_8h.html" title=" " alt="" coords="2348,95,2484,136"/>
+<area shape="rect" title=" " alt="" coords="3216,102,3256,129"/>
+<area shape="rect" title=" " alt="" coords="3281,102,3375,129"/>
+<area shape="rect" title=" " alt="" coords="2208,616,2267,643"/>
+<area shape="rect" title=" " alt="" coords="2126,616,2183,643"/>
+<area shape="rect" title=" " alt="" coords="1412,616,1572,643"/>
+<area shape="rect" title=" " alt="" coords="1597,616,1715,643"/>
+<area shape="rect" href="cost__values_8h.html" title=" " alt="" coords="2611,459,2789,486"/>
+<area shape="rect" href="layer_8h.html" title=" " alt="" coords="2048,459,2184,486"/>
+<area shape="rect" title=" " alt="" coords="2027,541,2082,568"/>
+<area shape="rect" title=" " alt="" coords="1805,541,1915,568"/>
+<area shape="rect" title=" " alt="" coords="1173,541,1211,568"/>
+<area shape="rect" title=" " alt="" coords="1068,541,1148,568"/>
+<area shape="rect" href="observation_8h.html" title=" " alt="" coords="1235,541,1410,568"/>
+<area shape="rect" title=" " alt="" coords="938,616,1123,643"/>
+<area shape="rect" href="static__layer_8h.html" title=" " alt="" coords="2329,191,2503,218"/>
+<area shape="rect" href="obstacle__layer_8h.html" title=" " alt="" coords="1168,184,1315,225"/>
+<area shape="rect" href="inflation__layer_8h.html" title=" " alt="" coords="1590,273,1733,315"/>
+<area shape="rect" title=" " alt="" coords="2075,184,2253,225"/>
+<area shape="rect" title=" " alt="" coords="1537,370,1610,397"/>
+<area shape="rect" href="costmap__layer_8h.html" title=" " alt="" coords="2232,273,2379,315"/>
+<area shape="rect" title=" " alt="" coords="2504,273,2683,315"/>
+<area shape="rect" title=" " alt="" coords="1943,363,2086,404"/>
+<area shape="rect" title=" " alt="" coords="1808,281,1995,307"/>
+<area shape="rect" title=" " alt="" coords="2707,281,2939,307"/>
+<area shape="rect" title=" " alt="" coords="2019,281,2208,307"/>
+<area shape="rect" title=" " alt="" coords="1337,281,1514,307"/>
+<area shape="rect" title=" " alt="" coords="145,273,287,315"/>
+<area shape="rect" title=" " alt="" coords="312,281,491,307"/>
+<area shape="rect" title=" " alt="" coords="515,273,685,315"/>
+<area shape="rect" title=" " alt="" coords="709,281,872,307"/>
+<area shape="rect" title=" " alt="" coords="897,273,1082,315"/>
+<area shape="rect" href="footprint_8h.html" title=" " alt="" coords="1107,281,1261,307"/>
+<area shape="rect" title=" " alt="" coords="830,370,1007,397"/>
+<area shape="rect" title=" " alt="" coords="1032,370,1261,397"/>
+<area shape="rect" title=" " alt="" coords="1286,370,1461,397"/>
+<area shape="rect" title=" " alt="" coords="1689,363,1868,404"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad8fe201867d3b317211acab7d5e136bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obstacle__tests_8cpp.html#ad8fe201867d3b317211acab7d5e136bb">TEST</a> (costmap, testRaytracing)</td></tr>
+<tr class="separator:ad8fe201867d3b317211acab7d5e136bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a60e8b8b1e2774d5d94b0b402ea9d34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obstacle__tests_8cpp.html#a9a60e8b8b1e2774d5d94b0b402ea9d34">TEST</a> (costmap, testRaytracing2)</td></tr>
+<tr class="separator:a9a60e8b8b1e2774d5d94b0b402ea9d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4661fcb3128774239d9c5e0409c0735a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obstacle__tests_8cpp.html#a4661fcb3128774239d9c5e0409c0735a">TEST</a> (costmap, testWaveInterference)</td></tr>
+<tr class="separator:a4661fcb3128774239d9c5e0409c0735a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d425c6c31665d69ec97adaf1cc3981"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obstacle__tests_8cpp.html#ad5d425c6c31665d69ec97adaf1cc3981">TEST</a> (costmap, testZThreshold)</td></tr>
+<tr class="separator:ad5d425c6c31665d69ec97adaf1cc3981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d63bc48ed207889be83298c6e0e46f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obstacle__tests_8cpp.html#a1d63bc48ed207889be83298c6e0e46f7">TEST</a> (costmap, testDynamicObstacles)</td></tr>
+<tr class="separator:a1d63bc48ed207889be83298c6e0e46f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21809284d087f0beef9c2ad655520816"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obstacle__tests_8cpp.html#a21809284d087f0beef9c2ad655520816">TEST</a> (costmap, testMultipleAdditions)</td></tr>
+<tr class="separator:a21809284d087f0beef9c2ad655520816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="obstacle__tests_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d63bc48ed207889be83298c6e0e46f7" name="a1d63bc48ed207889be83298c6e0e46f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d63bc48ed207889be83298c6e0e46f7">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">costmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">testDynamicObstacles&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Verify that dynamic obstacles are added </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="obstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7_cgraph.png" border="0" usemap="#aobstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7_cgraph" alt=""/></div>
+<map name="aobstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7_cgraph" id="aobstacle__tests_8cpp_a1d63bc48ed207889be83298c6e0e46f7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,210,61,237"/>
+<area shape="rect" href="testing__helper_8h.html#a043c2232e047ce2a6c03a493e5e31ee9" title=" " alt="" coords="152,33,265,59"/>
+<area shape="rect" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a" title=" " alt="" coords="145,123,272,150"/>
+<area shape="rect" href="testing__helper_8h.html#a44d779d80cd1879d61ab1e32e179a806" title=" " alt="" coords="154,174,263,201"/>
+<area shape="rect" href="testing__helper_8h.html#af4d497e66d7195f0a4b02ce26603c5c8" title=" " alt="" coords="161,250,256,277"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="109,495,308,536"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="109,429,308,471"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac835aba4f43e4c8a2a8ed66c97899b5f" title=" " alt="" coords="363,5,548,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="356,71,555,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="385,136,526,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="617,136,758,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="371,201,540,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="371,267,540,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="371,332,540,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="603,201,772,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="371,397,540,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="371,463,540,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="371,528,540,569"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="371,593,540,635"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="371,659,540,700"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="361,724,550,765"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="603,625,772,667"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="603,691,772,732"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21809284d087f0beef9c2ad655520816" name="a21809284d087f0beef9c2ad655520816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21809284d087f0beef9c2ad655520816">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">costmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">testMultipleAdditions&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Verify that if we add a point that is already a static obstacle we do not end up with a new ostacle </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="obstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816_cgraph.png" border="0" usemap="#aobstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816_cgraph" alt=""/></div>
+<map name="aobstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816_cgraph" id="aobstacle__tests_8cpp_a21809284d087f0beef9c2ad655520816_cgraph">
+<area shape="rect" title=" " alt="" coords="5,210,61,237"/>
+<area shape="rect" href="testing__helper_8h.html#a043c2232e047ce2a6c03a493e5e31ee9" title=" " alt="" coords="152,33,265,59"/>
+<area shape="rect" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a" title=" " alt="" coords="145,123,272,150"/>
+<area shape="rect" href="testing__helper_8h.html#a44d779d80cd1879d61ab1e32e179a806" title=" " alt="" coords="154,174,263,201"/>
+<area shape="rect" href="testing__helper_8h.html#af4d497e66d7195f0a4b02ce26603c5c8" title=" " alt="" coords="161,250,256,277"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="109,495,308,536"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="109,429,308,471"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac835aba4f43e4c8a2a8ed66c97899b5f" title=" " alt="" coords="363,5,548,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="356,71,555,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="385,136,526,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="617,136,758,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="371,201,540,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="371,267,540,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="371,332,540,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="603,201,772,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="371,397,540,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="371,463,540,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="371,528,540,569"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="371,593,540,635"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="371,659,540,700"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="361,724,550,765"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="603,625,772,667"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="603,691,772,732"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad8fe201867d3b317211acab7d5e136bb" name="ad8fe201867d3b317211acab7d5e136bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8fe201867d3b317211acab7d5e136bb">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">costmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">testRaytracing&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Test for ray tracing free space </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="obstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb_cgraph.png" border="0" usemap="#aobstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb_cgraph" alt=""/></div>
+<map name="aobstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb_cgraph" id="aobstacle__tests_8cpp_ad8fe201867d3b317211acab7d5e136bb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,274,61,301"/>
+<area shape="rect" href="testing__helper_8h.html#a043c2232e047ce2a6c03a493e5e31ee9" title=" " alt="" coords="152,33,265,59"/>
+<area shape="rect" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a" title=" " alt="" coords="145,174,272,201"/>
+<area shape="rect" href="testing__helper_8h.html#a44d779d80cd1879d61ab1e32e179a806" title=" " alt="" coords="154,123,263,150"/>
+<area shape="rect" href="testing__helper_8h.html#af4d497e66d7195f0a4b02ce26603c5c8" title=" " alt="" coords="161,274,256,301"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="109,463,308,504"/>
+<area shape="rect" href="testing__helper_8h.html#a80945e4c9ec06fccdb5342cacfea6e3d" title=" " alt="" coords="175,529,242,555"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="109,397,308,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac835aba4f43e4c8a2a8ed66c97899b5f" title=" " alt="" coords="363,5,548,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="356,71,555,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="385,136,526,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="617,136,758,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="371,201,540,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="371,267,540,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="371,332,540,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="603,201,772,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="371,397,540,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="371,463,540,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="371,528,540,569"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="371,593,540,635"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="371,659,540,700"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="361,724,550,765"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="603,625,772,667"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="603,691,772,732"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9a60e8b8b1e2774d5d94b0b402ea9d34" name="a9a60e8b8b1e2774d5d94b0b402ea9d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a60e8b8b1e2774d5d94b0b402ea9d34">&#9670;&nbsp;</a></span>TEST() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">costmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">testRaytracing2&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Test for ray tracing free space </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="obstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34_cgraph.png" border="0" usemap="#aobstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34_cgraph" alt=""/></div>
+<map name="aobstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34_cgraph" id="aobstacle__tests_8cpp_a9a60e8b8b1e2774d5d94b0b402ea9d34_cgraph">
+<area shape="rect" title=" " alt="" coords="5,275,61,302"/>
+<area shape="rect" href="testing__helper_8h.html#a043c2232e047ce2a6c03a493e5e31ee9" title=" " alt="" coords="152,27,265,54"/>
+<area shape="rect" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a" title=" " alt="" coords="145,147,272,174"/>
+<area shape="rect" href="testing__helper_8h.html#a44d779d80cd1879d61ab1e32e179a806" title=" " alt="" coords="154,97,263,123"/>
+<area shape="rect" href="testing__helper_8h.html#af4d497e66d7195f0a4b02ce26603c5c8" title=" " alt="" coords="161,326,256,353"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="371,319,540,360"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="109,515,308,556"/>
+<area shape="rect" href="testing__helper_8h.html#a80945e4c9ec06fccdb5342cacfea6e3d" title=" " alt="" coords="175,581,242,607"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae1703900adbbf1e0d929cec0735a8b0e" title="Set the cost of a cell in the costmap" alt="" coords="124,205,293,247"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="109,449,308,491"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac835aba4f43e4c8a2a8ed66c97899b5f" title=" " alt="" coords="363,5,548,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="356,136,555,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="385,71,526,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="617,71,758,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="371,253,540,295"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="371,384,540,425"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="603,224,772,265"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="371,645,540,687"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="371,711,540,752"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="371,776,540,817"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="371,449,540,491"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="371,515,540,556"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="361,580,550,621"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="603,483,772,524"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="603,548,772,589"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4661fcb3128774239d9c5e0409c0735a" name="a4661fcb3128774239d9c5e0409c0735a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4661fcb3128774239d9c5e0409c0735a">&#9670;&nbsp;</a></span>TEST() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">costmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">testWaveInterference&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Test for wave interference </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="obstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a_cgraph.png" border="0" usemap="#aobstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a_cgraph" alt=""/></div>
+<map name="aobstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a_cgraph" id="aobstacle__tests_8cpp_a4661fcb3128774239d9c5e0409c0735a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,405,61,431"/>
+<area shape="rect" href="testing__helper_8h.html#a043c2232e047ce2a6c03a493e5e31ee9" title=" " alt="" coords="152,53,265,79"/>
+<area shape="rect" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a" title=" " alt="" coords="145,143,272,170"/>
+<area shape="rect" href="testing__helper_8h.html#af4d497e66d7195f0a4b02ce26603c5c8" title=" " alt="" coords="161,307,256,334"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="109,528,308,569"/>
+<area shape="rect" href="testing__helper_8h.html#a80945e4c9ec06fccdb5342cacfea6e3d" title=" " alt="" coords="175,594,242,621"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8f8121ac0c6a2c5f267cf1cc07cfc40b" title=" " alt="" coords="109,397,308,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="109,463,308,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac835aba4f43e4c8a2a8ed66c97899b5f" title=" " alt="" coords="363,5,548,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="356,136,555,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="385,71,526,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="617,71,758,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="371,201,540,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="371,267,540,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="371,332,540,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="603,201,772,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="371,463,540,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a95bae6eccd820a77d8040562e2a51118" title=" " alt="" coords="371,397,540,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a1da91220df45a19376a3e3df3a517c27" title="Initializes the costmap, static_map, and markers data structures" alt="" coords="603,397,772,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="603,593,772,635"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="371,528,540,569"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="371,593,540,635"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="371,659,540,700"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="371,789,540,831"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="361,724,550,765"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="603,789,772,831"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad5d425c6c31665d69ec97adaf1cc3981" name="ad5d425c6c31665d69ec97adaf1cc3981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d425c6c31665d69ec97adaf1cc3981">&#9670;&nbsp;</a></span>TEST() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">costmap&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">testZThreshold&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Make sure we ignore points outside of our z threshold </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="obstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981_cgraph.png" border="0" usemap="#aobstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981_cgraph" alt=""/></div>
+<map name="aobstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981_cgraph" id="aobstacle__tests_8cpp_ad5d425c6c31665d69ec97adaf1cc3981_cgraph">
+<area shape="rect" title=" " alt="" coords="5,373,61,399"/>
+<area shape="rect" href="testing__helper_8h.html#a043c2232e047ce2a6c03a493e5e31ee9" title=" " alt="" coords="152,53,265,79"/>
+<area shape="rect" href="testing__helper_8h.html#afd328050d3b7af24194fabf58454f91a" title=" " alt="" coords="145,143,272,170"/>
+<area shape="rect" href="testing__helper_8h.html#af4d497e66d7195f0a4b02ce26603c5c8" title=" " alt="" coords="161,307,256,334"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a22e2f5d750be195f71da46b2062460f2" title=" " alt="" coords="109,560,308,601"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8f8121ac0c6a2c5f267cf1cc07cfc40b" title=" " alt="" coords="109,397,308,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#ab598d6442277ba8299ba3c7b952662d6" title="Update the underlying costmap with new data. If you want to update the map outside of the update loop..." alt="" coords="109,495,308,536"/>
+<area shape="rect" href="classcostmap__2d_1_1_obstacle_layer.html#ac835aba4f43e4c8a2a8ed66c97899b5f" title=" " alt="" coords="363,5,548,47"/>
+<area shape="rect" href="classcostmap__2d_1_1_layered_costmap.html#a8afdb4c9795e2383bd5b66b89c748a6b" title=" " alt="" coords="356,136,555,177"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#af6c7a09667d7cc23e207e0121e60ba4b" title=" " alt="" coords="385,71,526,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_layer.html#a97888a23e12ab5b798a854c2f590ae71" title="This is called at the end of initialize(). Override to implement subclass&#45;specific initialization." alt="" coords="617,71,758,112"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a2a8ad2c3fc3aa47be8d2d0f9ae113c27" title="Get the cost of a cell in the costmap" alt="" coords="371,201,540,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a615a4186649d8970111f8a356906b320" title="Accessor for the x size of the costmap in cells" alt="" coords="371,267,540,308"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a702f4ed109f94c8513500cf97ff066a4" title="Accessor for the y size of the costmap in cells" alt="" coords="371,332,540,373"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a57d2ea3f3a039d72640c159cd149ff9d" title="Given two map coordinates... compute the associated index" alt="" coords="603,201,772,243"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a48c32f1cbe1cae7d2fb6a0a96192db21" title=" " alt="" coords="371,463,540,504"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a95bae6eccd820a77d8040562e2a51118" title=" " alt="" coords="371,397,540,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a1da91220df45a19376a3e3df3a517c27" title="Initializes the costmap, static_map, and markers data structures" alt="" coords="603,397,772,439"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab4424e85f6daaf91eaf455e4bb241c19" title="Resets the costmap and static_map to be unknown space" alt="" coords="603,593,772,635"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a645ea4720d5cab8bcf662687cc81d087" title="Accessor for the x size of the costmap in meters" alt="" coords="371,528,540,569"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#afb1d6cdc01d77452175487955e6aff4d" title="Accessor for the y size of the costmap in meters" alt="" coords="371,593,540,635"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#aba344550cbc08bcc3a54c64290f8f568" title=" " alt="" coords="371,659,540,700"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#a5ca05c95f95e1408ca9e23d2e7f8987a" title="Move the origin of the costmap to a new location.... keeping data when it can" alt="" coords="371,789,540,831"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ae412173f42af7edba9996f86754b7cbf" title="Convert from world coordinates to map coordinates, constraining results to legal bounds." alt="" coords="361,724,550,765"/>
+<area shape="rect" href="classcostmap__2d_1_1_costmap2_d.html#ab857ec41de2e14d601b85bbf6497b612" title="Copy a region of a source map into a destination map" alt="" coords="603,789,772,831"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

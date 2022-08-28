@@ -1,0 +1,113 @@
+\hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map}{}\doxysection{voxel\+\_\+grid\+::Voxel\+Grid\+::Clear\+Voxel\+In\+Map类 参考}
+\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map}\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a91418638749a342326efeeaea2a5621d}{Clear\+Voxel\+In\+Map}} (uint32\+\_\+t $\ast$data, unsigned char $\ast$\mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_a9b79f913b789b0ba8e21a6d3bde5e215}{costmap}}, unsigned int unknown\+\_\+clear\+\_\+threshold, unsigned int marked\+\_\+clear\+\_\+threshold, unsigned char free\+\_\+cost=0, unsigned char unknown\+\_\+cost=255)
+\item 
+void \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a5a61c2c6bdddaee95bc38e770507761b}{operator()}} (unsigned int offset, unsigned int z\+\_\+mask)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_af795f0b432e2d627e7eb92c05f3a1898}{bits\+Below\+Threshold}} (unsigned int \mbox{\hyperlink{eig3_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, unsigned int bit\+\_\+threshold)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 属性}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t $\ast$ \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a56dddaf67c47caf6d57ad05863f7756b}{data\+\_\+}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_aa7c29128bd268869ea418ac577c46b8e}{costmap\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_ab6a88319eaa04936b5efab554a7dae6e}{unknown\+\_\+clear\+\_\+threshold\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a155879eba5d82c9919fb29eafadc8414}{marked\+\_\+clear\+\_\+threshold\+\_\+}}
+\item 
+unsigned char \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a1c5c96982daeaa1e5570a21f0fdca059}{free\+\_\+cost\+\_\+}}
+\item 
+unsigned char \mbox{\hyperlink{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a4e35e2e646512924aaa70f18eed0cef3}{unknown\+\_\+cost\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a91418638749a342326efeeaea2a5621d}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a91418638749a342326efeeaea2a5621d}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!ClearVoxelInMap@{ClearVoxelInMap}}
+\index{ClearVoxelInMap@{ClearVoxelInMap}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{ClearVoxelInMap()}{ClearVoxelInMap()}}
+{\footnotesize\ttfamily voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::\+Clear\+Voxel\+In\+Map (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{data,  }\item[{unsigned char $\ast$}]{costmap,  }\item[{unsigned int}]{unknown\+\_\+clear\+\_\+threshold,  }\item[{unsigned int}]{marked\+\_\+clear\+\_\+threshold,  }\item[{unsigned char}]{free\+\_\+cost = {\ttfamily 0},  }\item[{unsigned char}]{unknown\+\_\+cost = {\ttfamily 255} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_af795f0b432e2d627e7eb92c05f3a1898}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_af795f0b432e2d627e7eb92c05f3a1898}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!bitsBelowThreshold@{bitsBelowThreshold}}
+\index{bitsBelowThreshold@{bitsBelowThreshold}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{bitsBelowThreshold()}{bitsBelowThreshold()}}
+{\footnotesize\ttfamily bool voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::bits\+Below\+Threshold (\begin{DoxyParamCaption}\item[{unsigned int}]{n,  }\item[{unsigned int}]{bit\+\_\+threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_af795f0b432e2d627e7eb92c05f3a1898_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a5a61c2c6bdddaee95bc38e770507761b}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a5a61c2c6bdddaee95bc38e770507761b}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!operator()@{operator()}}
+\index{operator()@{operator()}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{offset,  }\item[{unsigned int}]{z\+\_\+mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a5a61c2c6bdddaee95bc38e770507761b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{类成员变量说明}
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_aa7c29128bd268869ea418ac577c46b8e}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_aa7c29128bd268869ea418ac577c46b8e}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!costmap\_@{costmap\_}}
+\index{costmap\_@{costmap\_}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{costmap\_}{costmap\_}}
+{\footnotesize\ttfamily unsigned char$\ast$ voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::costmap\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a56dddaf67c47caf6d57ad05863f7756b}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a56dddaf67c47caf6d57ad05863f7756b}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!data\_@{data\_}}
+\index{data\_@{data\_}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::data\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a1c5c96982daeaa1e5570a21f0fdca059}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a1c5c96982daeaa1e5570a21f0fdca059}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!free\_cost\_@{free\_cost\_}}
+\index{free\_cost\_@{free\_cost\_}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{free\_cost\_}{free\_cost\_}}
+{\footnotesize\ttfamily unsigned char voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::free\+\_\+cost\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a155879eba5d82c9919fb29eafadc8414}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a155879eba5d82c9919fb29eafadc8414}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!marked\_clear\_threshold\_@{marked\_clear\_threshold\_}}
+\index{marked\_clear\_threshold\_@{marked\_clear\_threshold\_}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{marked\_clear\_threshold\_}{marked\_clear\_threshold\_}}
+{\footnotesize\ttfamily unsigned int voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::marked\+\_\+clear\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_ab6a88319eaa04936b5efab554a7dae6e}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_ab6a88319eaa04936b5efab554a7dae6e}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!unknown\_clear\_threshold\_@{unknown\_clear\_threshold\_}}
+\index{unknown\_clear\_threshold\_@{unknown\_clear\_threshold\_}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{unknown\_clear\_threshold\_}{unknown\_clear\_threshold\_}}
+{\footnotesize\ttfamily unsigned int voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::unknown\+\_\+clear\+\_\+threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a4e35e2e646512924aaa70f18eed0cef3}\label{classvoxel__grid_1_1_voxel_grid_1_1_clear_voxel_in_map_a4e35e2e646512924aaa70f18eed0cef3}} 
+\index{voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}!unknown\_cost\_@{unknown\_cost\_}}
+\index{unknown\_cost\_@{unknown\_cost\_}!voxel\_grid::VoxelGrid::ClearVoxelInMap@{voxel\_grid::VoxelGrid::ClearVoxelInMap}}
+\doxysubsubsection{\texorpdfstring{unknown\_cost\_}{unknown\_cost\_}}
+{\footnotesize\ttfamily unsigned char voxel\+\_\+grid\+::\+Voxel\+Grid\+::\+Clear\+Voxel\+In\+Map\+::unknown\+\_\+cost\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+voxel\+\_\+grid/include/voxel\+\_\+grid/\mbox{\hyperlink{voxel__grid_8h}{voxel\+\_\+grid.\+h}}\end{DoxyCompactItemize}

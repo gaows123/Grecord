@@ -1,0 +1,8 @@
+<map id="costmap_2d::Costmap2DROS::stop" name="costmap_2d::Costmap2DROS::stop">
+<area shape="rect" id="node1" title="Stops costmap updates and unsubscribes from sensor topics" alt="" coords="832,18,1029,60"/>
+<area shape="rect" id="node2" href="$classmove__base_1_1_move_base.html#a1132ccb47b3c514d52be347805eb31f5" title="Constructor for the actions" alt="" coords="5,33,164,74"/>
+<area shape="rect" id="node3" href="$classmove__base_1_1_move_base.html#a874fe3d747671d75dfafd26d7b36068d" title="Reset the state of the move_base action and send a zero velocity command to the base" alt="" coords="625,48,784,89"/>
+<area shape="rect" id="node4" href="$classmove__base_1_1_move_base.html#a02ac84b1ead88c0b9b0f361475c90401" title=" " alt="" coords="212,33,371,74"/>
+<area shape="rect" id="node5" href="$classmove__base_1_1_move_base.html#a4cde906bc7b501d5918f8482da5fbabe" title="Performs a control cycle" alt="" coords="419,73,577,114"/>
+<area shape="rect" id="node6" href="$classmove__base_1_1_move_base.html#ab67ea64882589c75055cc07bf4bd9aa1" title=" " alt="" coords="212,120,371,161"/>
+</map>

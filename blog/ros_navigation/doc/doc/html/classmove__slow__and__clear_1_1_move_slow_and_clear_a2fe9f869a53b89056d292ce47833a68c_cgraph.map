@@ -1,0 +1,4 @@
+<map id="move_slow_and_clear::MoveSlowAndClear::getSqDistance" name="move_slow_and_clear::MoveSlowAndClear::getSqDistance">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,156,61"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_costmap2_d_r_o_s.html#adcf3512b555a02dbbe2f57e784defce9" title="Get the pose of the robot in the global frame of the costmap" alt="" coords="204,13,401,54"/>
+</map>

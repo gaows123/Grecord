@@ -1,0 +1,4 @@
+<map id="costmap_2d::ObstacleLayer::raytraceFreespace" name="costmap_2d::ObstacleLayer::raytraceFreespace">
+<area shape="rect" id="node1" title="根据单次的观测来清除自由空间" alt="" coords="239,5,424,47"/>
+<area shape="rect" id="node2" href="$classcostmap__2d_1_1_obstacle_layer.html#a1bfef13f020e8aa64a33743f72824ebd" title="This is called by the LayeredCostmap to poll this plugin as to how much of the costmap it needs to up..." alt="" coords="5,5,191,47"/>
+</map>

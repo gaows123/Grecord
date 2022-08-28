@@ -1,0 +1,76 @@
+\hypertarget{classbase__local__planner_1_1_trajectory_search}{}\doxysection{base\+\_\+local\+\_\+planner\+::Trajectory\+Search类 参考}
+\label{classbase__local__planner_1_1_trajectory_search}\index{base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}}
+
+
+作为一个纯虚类，提供寻找局部轨迹的模块接口  
+
+
+
+
+{\ttfamily \#include $<$trajectory\+\_\+search.\+h$>$}
+
+
+
+类 base\+\_\+local\+\_\+planner\+::Trajectory\+Search 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classbase__local__planner_1_1_trajectory_search__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_search_a75fd0f1e0c72b6ba6f6edabe569e8271}{find\+Best\+Trajectory}} (\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&traj, std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} $>$ $\ast$all\+\_\+explored)=0
+\item 
+virtual \mbox{\hyperlink{classbase__local__planner_1_1_trajectory_search_aff40ef5d337f537fd4997e60e010f15b}{$\sim$\+Trajectory\+Search}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__local__planner_1_1_trajectory_search_a841ca025afcb9e199074c60167f0f0dd}{Trajectory\+Search}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+作为一个纯虚类，提供寻找局部轨迹的模块接口 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_search_aff40ef5d337f537fd4997e60e010f15b}\label{classbase__local__planner_1_1_trajectory_search_aff40ef5d337f537fd4997e60e010f15b}} 
+\index{base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}!````~TrajectorySearch@{$\sim$TrajectorySearch}}
+\index{````~TrajectorySearch@{$\sim$TrajectorySearch}!base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}}
+\doxysubsubsection{\texorpdfstring{$\sim$TrajectorySearch()}{~TrajectorySearch()}}
+{\footnotesize\ttfamily virtual base\+\_\+local\+\_\+planner\+::\+Trajectory\+Search\+::$\sim$\+Trajectory\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_search_a841ca025afcb9e199074c60167f0f0dd}\label{classbase__local__planner_1_1_trajectory_search_a841ca025afcb9e199074c60167f0f0dd}} 
+\index{base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}!TrajectorySearch@{TrajectorySearch}}
+\index{TrajectorySearch@{TrajectorySearch}!base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}}
+\doxysubsubsection{\texorpdfstring{TrajectorySearch()}{TrajectorySearch()}}
+{\footnotesize\ttfamily base\+\_\+local\+\_\+planner\+::\+Trajectory\+Search\+::\+Trajectory\+Search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classbase__local__planner_1_1_trajectory_search_a75fd0f1e0c72b6ba6f6edabe569e8271}\label{classbase__local__planner_1_1_trajectory_search_a75fd0f1e0c72b6ba6f6edabe569e8271}} 
+\index{base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}!findBestTrajectory@{findBestTrajectory}}
+\index{findBestTrajectory@{findBestTrajectory}!base\_local\_planner::TrajectorySearch@{base\_local\_planner::TrajectorySearch}}
+\doxysubsubsection{\texorpdfstring{findBestTrajectory()}{findBestTrajectory()}}
+{\footnotesize\ttfamily virtual bool base\+\_\+local\+\_\+planner\+::\+Trajectory\+Search\+::find\+Best\+Trajectory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} \&}]{traj,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbase__local__planner_1_1_trajectory}{Trajectory}} $>$ $\ast$}]{all\+\_\+explored }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+在给定的空间里搜寻局部路径，在满足一些限制情况下，返回最优的一个 
+\begin{DoxyParams}{参数}
+{\em traj} & 存储计算结果的容器 \\
+\hline
+{\em all\+\_\+explored} & 传递null或者搜集了所以路径的容器，用来debug(有一定惩罚) \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classbase__local__planner_1_1_simple_scored_sampling_planner_ad1a365b0504879a2e57f1a9d713acdc4}{base\+\_\+local\+\_\+planner\+::\+Simple\+Scored\+Sampling\+Planner}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+local\+\_\+planner/include/base\+\_\+local\+\_\+planner/\mbox{\hyperlink{trajectory__search_8h}{trajectory\+\_\+search.\+h}}\end{DoxyCompactItemize}

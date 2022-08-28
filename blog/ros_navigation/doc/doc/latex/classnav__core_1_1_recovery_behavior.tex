@@ -1,0 +1,102 @@
+\hypertarget{classnav__core_1_1_recovery_behavior}{}\doxysection{nav\+\_\+core\+::Recovery\+Behavior类 参考}
+\label{classnav__core_1_1_recovery_behavior}\index{nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}}
+
+
+提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口.  
+
+
+
+
+{\ttfamily \#include $<$recovery\+\_\+behavior.\+h$>$}
+
+
+
+类 nav\+\_\+core\+::Recovery\+Behavior 继承关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnav__core_1_1_recovery_behavior__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classnav__core_1_1_recovery_behavior_ab35332f465b3d2509c9e73d4d95c7b5d}{initialize}} (std\+::string name, tf2\+\_\+ros\+::\+Buffer $\ast$tf, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$global\+\_\+costmap, \mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$local\+\_\+costmap)=0
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{Recovery\+Behavior}} 的初始化函数 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classnav__core_1_1_recovery_behavior_a6d8e1eec7a483e530e48b2593ea4fc03}{run\+Behavior}} ()=0
+\begin{DoxyCompactList}\small\item\em 运行\+Recovery\+Behavior \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classnav__core_1_1_recovery_behavior_add375f2ed722549afd00b7dae9874ac6}{$\sim$\+Recovery\+Behavior}} ()
+\begin{DoxyCompactList}\small\item\em 接口的虚析构 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnav__core_1_1_recovery_behavior_a7518e621154c10ad9cc5a060af4fa81e}{Recovery\+Behavior}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口. 
+
+\doxysubsection{构造及析构函数说明}
+\mbox{\Hypertarget{classnav__core_1_1_recovery_behavior_add375f2ed722549afd00b7dae9874ac6}\label{classnav__core_1_1_recovery_behavior_add375f2ed722549afd00b7dae9874ac6}} 
+\index{nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}!````~RecoveryBehavior@{$\sim$RecoveryBehavior}}
+\index{````~RecoveryBehavior@{$\sim$RecoveryBehavior}!nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}}
+\doxysubsubsection{\texorpdfstring{$\sim$RecoveryBehavior()}{~RecoveryBehavior()}}
+{\footnotesize\ttfamily virtual nav\+\_\+core\+::\+Recovery\+Behavior\+::$\sim$\+Recovery\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+接口的虚析构 
+
+\mbox{\Hypertarget{classnav__core_1_1_recovery_behavior_a7518e621154c10ad9cc5a060af4fa81e}\label{classnav__core_1_1_recovery_behavior_a7518e621154c10ad9cc5a060af4fa81e}} 
+\index{nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}!RecoveryBehavior@{RecoveryBehavior}}
+\index{RecoveryBehavior@{RecoveryBehavior}!nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}}
+\doxysubsubsection{\texorpdfstring{RecoveryBehavior()}{RecoveryBehavior()}}
+{\footnotesize\ttfamily nav\+\_\+core\+::\+Recovery\+Behavior\+::\+Recovery\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{成员函数说明}
+\mbox{\Hypertarget{classnav__core_1_1_recovery_behavior_ab35332f465b3d2509c9e73d4d95c7b5d}\label{classnav__core_1_1_recovery_behavior_ab35332f465b3d2509c9e73d4d95c7b5d}} 
+\index{nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}!initialize@{initialize}}
+\index{initialize@{initialize}!nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void nav\+\_\+core\+::\+Recovery\+Behavior\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{tf2\+\_\+ros\+::\+Buffer $\ast$}]{tf,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{global\+\_\+costmap,  }\item[{\mbox{\hyperlink{classcostmap__2d_1_1_costmap2_d_r_o_s}{costmap\+\_\+2d\+::\+Costmap2\+DROS}} $\ast$}]{local\+\_\+costmap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{classnav__core_1_1_recovery_behavior}{Recovery\+Behavior}} 的初始化函数 
+
+
+\begin{DoxyParams}{参数}
+{\em tf} & transform listener 的指针 \\
+\hline
+{\em global\+\_\+costmap} & 指向 global\+\_\+costmap 的指针 \\
+\hline
+{\em local\+\_\+costmap} & 指向 local\+\_\+costmap 的指针 \\
+\hline
+\end{DoxyParams}
+
+
+在 \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_a8c3abf7314837b065c79f55947ebabf5}{move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear}}, \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a609f496f7a9f916f526a40a517c69204}{rotate\+\_\+recovery\+::\+Rotate\+Recovery}} , 以及 \mbox{\hyperlink{classclear__costmap__recovery_1_1_clear_costmap_recovery_a5b0e81f3ad151bb9d4058a36c9411efd}{clear\+\_\+costmap\+\_\+recovery\+::\+Clear\+Costmap\+Recovery}} 内被实现.
+
+\mbox{\Hypertarget{classnav__core_1_1_recovery_behavior_a6d8e1eec7a483e530e48b2593ea4fc03}\label{classnav__core_1_1_recovery_behavior_a6d8e1eec7a483e530e48b2593ea4fc03}} 
+\index{nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}!runBehavior@{runBehavior}}
+\index{runBehavior@{runBehavior}!nav\_core::RecoveryBehavior@{nav\_core::RecoveryBehavior}}
+\doxysubsubsection{\texorpdfstring{runBehavior()}{runBehavior()}}
+{\footnotesize\ttfamily virtual void nav\+\_\+core\+::\+Recovery\+Behavior\+::run\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+运行\+Recovery\+Behavior 
+
+
+
+在 \mbox{\hyperlink{classclear__costmap__recovery_1_1_clear_costmap_recovery_a7306f9a6b3db7e909e07e7fac7ee84a4}{clear\+\_\+costmap\+\_\+recovery\+::\+Clear\+Costmap\+Recovery}}, \mbox{\hyperlink{classmove__slow__and__clear_1_1_move_slow_and_clear_abf32e06b525c141d8b7afcac857c241a}{move\+\_\+slow\+\_\+and\+\_\+clear\+::\+Move\+Slow\+And\+Clear}} , 以及 \mbox{\hyperlink{classrotate__recovery_1_1_rotate_recovery_a8a95adca66937ca4d01fb7a584b905f9}{rotate\+\_\+recovery\+::\+Rotate\+Recovery}} 内被实现.
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+nav\+\_\+core/include/nav\+\_\+core/\mbox{\hyperlink{recovery__behavior_8h}{recovery\+\_\+behavior.\+h}}\end{DoxyCompactItemize}

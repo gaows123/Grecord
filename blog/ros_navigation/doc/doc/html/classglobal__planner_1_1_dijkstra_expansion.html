@@ -1,0 +1,854 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>navigation-noetic: global_planner::DijkstraExpansion类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">navigation-noetic
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.3 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','搜索');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceglobal__planner.html">global_planner</a></li><li class="navelem"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html">DijkstraExpansion</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classglobal__planner_1_1_dijkstra_expansion-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">global_planner::DijkstraExpansion类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="dijkstra_8h_source.html">dijkstra.h</a>&gt;</code></p>
+<div class="dynheader">
+类 global_planner::DijkstraExpansion 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion__inherit__graph.png" border="0" usemap="#aglobal__planner_1_1_dijkstra_expansion_inherit__map" alt="Inheritance graph"/></div>
+<map name="aglobal__planner_1_1_dijkstra_expansion_inherit__map" id="aglobal__planner_1_1_dijkstra_expansion_inherit__map">
+<area shape="rect" title=" " alt="" coords="11,80,168,121"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html" title=" " alt="" coords="5,5,173,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+global_planner::DijkstraExpansion 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion__coll__graph.png" border="0" usemap="#aglobal__planner_1_1_dijkstra_expansion_coll__map" alt="Collaboration graph"/></div>
+<map name="aglobal__planner_1_1_dijkstra_expansion_coll__map" id="aglobal__planner_1_1_dijkstra_expansion_coll__map">
+<area shape="rect" title=" " alt="" coords="11,185,168,227"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html" title=" " alt="" coords="5,109,173,136"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html" title=" " alt="" coords="7,5,171,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a58e6885deccbdab45ecda172bb74c702"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a58e6885deccbdab45ecda172bb74c702">DijkstraExpansion</a> (<a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *p_calc, int nx, int ny)</td></tr>
+<tr class="separator:a58e6885deccbdab45ecda172bb74c702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab535b80f93f16281cdb9f4ff8cd301e0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#ab535b80f93f16281cdb9f4ff8cd301e0">~DijkstraExpansion</a> ()</td></tr>
+<tr class="separator:ab535b80f93f16281cdb9f4ff8cd301e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1102e169bb79dac31de8fe5ca5ace39b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a1102e169bb79dac31de8fe5ca5ace39b">calculatePotentials</a> (unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)</td></tr>
+<tr class="separator:a1102e169bb79dac31de8fe5ca5ace39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d286126b2c478fc55c5e995e1deff29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a7d286126b2c478fc55c5e995e1deff29">setSize</a> (int nx, int ny)</td></tr>
+<tr class="memdesc:a7d286126b2c478fc55c5e995e1deff29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or resets the size of the map  <a href="classglobal__planner_1_1_dijkstra_expansion.html#a7d286126b2c478fc55c5e995e1deff29">更多...</a><br /></td></tr>
+<tr class="separator:a7d286126b2c478fc55c5e995e1deff29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ec5a9b73f4a8680adc8e406bc18b254"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a2ec5a9b73f4a8680adc8e406bc18b254">setNeutralCost</a> (unsigned char neutral_cost)</td></tr>
+<tr class="separator:a2ec5a9b73f4a8680adc8e406bc18b254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba5aa2bff86fd1b18b24163379d9e2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a5ba5aa2bff86fd1b18b24163379d9e2b">setPreciseStart</a> (bool precise)</td></tr>
+<tr class="separator:a5ba5aa2bff86fd1b18b24163379d9e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classglobal__planner_1_1_expander"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classglobal__planner_1_1_expander')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:a8ccb306a28ea41d2bfd9202d4b16f26a inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a8ccb306a28ea41d2bfd9202d4b16f26a">Expander</a> (<a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *p_calc, int nx, int ny)</td></tr>
+<tr class="separator:a8ccb306a28ea41d2bfd9202d4b16f26a inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3350230a12f804b95b0aa45435631c7 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#af3350230a12f804b95b0aa45435631c7">~Expander</a> ()</td></tr>
+<tr class="separator:af3350230a12f804b95b0aa45435631c7 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c352121a2ea1e1b650b219004c98786 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a7c352121a2ea1e1b650b219004c98786">calculatePotentials</a> (unsigned char *costs, double start_x, double start_y, double end_x, double end_y, int cycles, float *potential)=0</td></tr>
+<tr class="separator:a7c352121a2ea1e1b650b219004c98786 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeaa60103de1ee71a1969e40a3735094 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">setSize</a> (int nx, int ny)</td></tr>
+<tr class="memdesc:aeeaa60103de1ee71a1969e40a3735094 inherit pub_methods_classglobal__planner_1_1_expander"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or resets the size of the map  <a href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">更多...</a><br /></td></tr>
+<tr class="separator:aeeaa60103de1ee71a1969e40a3735094 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9c360fb6316c538bbadcccc6bf98b1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#aee9c360fb6316c538bbadcccc6bf98b1">setLethalCost</a> (unsigned char lethal_cost)</td></tr>
+<tr class="separator:aee9c360fb6316c538bbadcccc6bf98b1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386d3239f3aaa7a5e583bad9893a8ca1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a386d3239f3aaa7a5e583bad9893a8ca1">setNeutralCost</a> (unsigned char neutral_cost)</td></tr>
+<tr class="separator:a386d3239f3aaa7a5e583bad9893a8ca1 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a3174aef024f0a4d01ac3fa7a74489 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a53a3174aef024f0a4d01ac3fa7a74489">setFactor</a> (float factor)</td></tr>
+<tr class="separator:a53a3174aef024f0a4d01ac3fa7a74489 inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcbac968719e195552d063c4314618e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a1dcbac968719e195552d063c4314618e">setHasUnknown</a> (bool unknown)</td></tr>
+<tr class="separator:a1dcbac968719e195552d063c4314618e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02060106b60c2661cb1f1878a151a40e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a02060106b60c2661cb1f1878a151a40e">clearEndpoint</a> (unsigned char *costs, float *potential, int gx, int gy, int s)</td></tr>
+<tr class="separator:a02060106b60c2661cb1f1878a151a40e inherit pub_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a037961c97a953fddf61bbae64f9c1b97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a037961c97a953fddf61bbae64f9c1b97">updateCell</a> (unsigned char *costs, float *potential, int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="memdesc:a037961c97a953fddf61bbae64f9c1b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the cell at index n  <a href="classglobal__planner_1_1_dijkstra_expansion.html#a037961c97a953fddf61bbae64f9c1b97">更多...</a><br /></td></tr>
+<tr class="separator:a037961c97a953fddf61bbae64f9c1b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13395ccfa132ce826ee5f88865b73aee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a13395ccfa132ce826ee5f88865b73aee">getCost</a> (unsigned char *costs, int <a class="el" href="eig3_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>)</td></tr>
+<tr class="separator:a13395ccfa132ce826ee5f88865b73aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:abc3bb648b490893ed0102df9d62b8c8e"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#abc3bb648b490893ed0102df9d62b8c8e">buffer1_</a></td></tr>
+<tr class="separator:abc3bb648b490893ed0102df9d62b8c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f79af0e0fd56427a7797d1a74b04d7c"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a5f79af0e0fd56427a7797d1a74b04d7c">buffer2_</a></td></tr>
+<tr class="separator:a5f79af0e0fd56427a7797d1a74b04d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3748fa770dba7b326ee3cd3f9570c2"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a0b3748fa770dba7b326ee3cd3f9570c2">buffer3_</a></td></tr>
+<tr class="separator:a0b3748fa770dba7b326ee3cd3f9570c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac2b1b9911253ad9a78995352f30fa0"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a7ac2b1b9911253ad9a78995352f30fa0">currentBuffer_</a></td></tr>
+<tr class="separator:a7ac2b1b9911253ad9a78995352f30fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0fc94d2007ad3c5418fe05f150be00"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a8a0fc94d2007ad3c5418fe05f150be00">nextBuffer_</a></td></tr>
+<tr class="separator:a8a0fc94d2007ad3c5418fe05f150be00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35e9b00bffc3967973cedafee95ca5c"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#ab35e9b00bffc3967973cedafee95ca5c">overBuffer_</a></td></tr>
+<tr class="separator:ab35e9b00bffc3967973cedafee95ca5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f20397d9d6950d0505effc87151fd99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a2f20397d9d6950d0505effc87151fd99">currentEnd_</a></td></tr>
+<tr class="separator:a2f20397d9d6950d0505effc87151fd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb8b6cbadbcf990639f22f159804b5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#abfb8b6cbadbcf990639f22f159804b5d">nextEnd_</a></td></tr>
+<tr class="separator:abfb8b6cbadbcf990639f22f159804b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38469ef117b6f192a473884f5595e942"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a38469ef117b6f192a473884f5595e942">overEnd_</a></td></tr>
+<tr class="separator:a38469ef117b6f192a473884f5595e942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d014c133dd833a10f53fcdf8c0bb04"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a89d014c133dd833a10f53fcdf8c0bb04">pending_</a></td></tr>
+<tr class="separator:a89d014c133dd833a10f53fcdf8c0bb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94dbd3ba373631604ee8cb021e39cd41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#a94dbd3ba373631604ee8cb021e39cd41">precise_</a></td></tr>
+<tr class="separator:a94dbd3ba373631604ee8cb021e39cd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc180530057dffbd53ba8c44d9ae1efa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#acc180530057dffbd53ba8c44d9ae1efa">threshold_</a></td></tr>
+<tr class="separator:acc180530057dffbd53ba8c44d9ae1efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3256e3646ba17ea885abd80ac12b692"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_dijkstra_expansion.html#ac3256e3646ba17ea885abd80ac12b692">priorityIncrement_</a></td></tr>
+<tr class="separator:ac3256e3646ba17ea885abd80ac12b692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classglobal__planner_1_1_expander"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classglobal__planner_1_1_expander')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:ab9ed0e500049774014960dfb68f1e50c inherit pro_methods_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c">toIndex</a> (int x, int y)</td></tr>
+<tr class="separator:ab9ed0e500049774014960dfb68f1e50c inherit pro_methods_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classglobal__planner_1_1_expander"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classglobal__planner_1_1_expander')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classglobal__planner_1_1_expander.html">global_planner::Expander</a></td></tr>
+<tr class="memitem:a72bbafddd4f838603ebe42cf7fb57cbc inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a72bbafddd4f838603ebe42cf7fb57cbc">nx_</a></td></tr>
+<tr class="separator:a72bbafddd4f838603ebe42cf7fb57cbc inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1877778a6ed03533dace263d0dbe7e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a3d1877778a6ed03533dace263d0dbe7e">ny_</a></td></tr>
+<tr class="separator:a3d1877778a6ed03533dace263d0dbe7e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0538b977e9cd0022810096b79e61e529 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a0538b977e9cd0022810096b79e61e529">ns_</a></td></tr>
+<tr class="separator:a0538b977e9cd0022810096b79e61e529 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb2fc0fd78f4ae3e8ffad2981629a91 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#abbb2fc0fd78f4ae3e8ffad2981629a91">unknown_</a></td></tr>
+<tr class="separator:abbb2fc0fd78f4ae3e8ffad2981629a91 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044a34d5d5ddd41016afec643cb65d4e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a044a34d5d5ddd41016afec643cb65d4e">lethal_cost_</a></td></tr>
+<tr class="separator:a044a34d5d5ddd41016afec643cb65d4e inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8941c07a0f50a2e3ce3088f7ecb8e61 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#aa8941c07a0f50a2e3ce3088f7ecb8e61">neutral_cost_</a></td></tr>
+<tr class="separator:aa8941c07a0f50a2e3ce3088f7ecb8e61 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad51bd3f97e8d1ca48c357175d723f3f4 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#ad51bd3f97e8d1ca48c357175d723f3f4">cells_visited_</a></td></tr>
+<tr class="separator:ad51bd3f97e8d1ca48c357175d723f3f4 inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999123a5d229a31933a64ba56a4f525d inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a999123a5d229a31933a64ba56a4f525d">factor_</a></td></tr>
+<tr class="separator:a999123a5d229a31933a64ba56a4f525d inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d991703be557e08056daedd3d872fff inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classglobal__planner_1_1_expander.html#a3d991703be557e08056daedd3d872fff">p_calc_</a></td></tr>
+<tr class="separator:a3d991703be557e08056daedd3d872fff inherit pro_attribs_classglobal__planner_1_1_expander"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a58e6885deccbdab45ecda172bb74c702" name="a58e6885deccbdab45ecda172bb74c702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e6885deccbdab45ecda172bb74c702">&#9670;&nbsp;</a></span>DijkstraExpansion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">global_planner::DijkstraExpansion::DijkstraExpansion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classglobal__planner_1_1_potential_calculator.html">PotentialCalculator</a> *&#160;</td>
+          <td class="paramname"><em>p_calc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab535b80f93f16281cdb9f4ff8cd301e0" name="ab535b80f93f16281cdb9f4ff8cd301e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab535b80f93f16281cdb9f4ff8cd301e0">&#9670;&nbsp;</a></span>~DijkstraExpansion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global_planner::DijkstraExpansion::~DijkstraExpansion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1102e169bb79dac31de8fe5ca5ace39b" name="a1102e169bb79dac31de8fe5ca5ace39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1102e169bb79dac31de8fe5ca5ace39b">&#9670;&nbsp;</a></span>calculatePotentials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_planner::DijkstraExpansion::calculatePotentials </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>costs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>start_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>end_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>end_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cycles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>potential</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="classglobal__planner_1_1_expander.html#a7c352121a2ea1e1b650b219004c98786">global_planner::Expander</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b_cgraph" id="aclassglobal__planner_1_1_dijkstra_expansion_a1102e169bb79dac31de8fe5ca5ace39b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,207,80"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html#ab9ed0e500049774014960dfb68f1e50c" title=" " alt="" coords="255,5,423,47"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a037961c97a953fddf61bbae64f9c1b97" title="Updates the cell at index n" alt="" coords="260,71,417,112"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html#a4befc4819934603d43c8dc539f445fd4" title=" " alt="" coords="471,37,661,79"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a13395ccfa132ce826ee5f88865b73aee" title=" " alt="" coords="487,103,645,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a13395ccfa132ce826ee5f88865b73aee" name="a13395ccfa132ce826ee5f88865b73aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13395ccfa132ce826ee5f88865b73aee">&#9670;&nbsp;</a></span>getCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float global_planner::DijkstraExpansion::getCost </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>costs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >updates the cell at index n </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee_icgraph" id="aclassglobal__planner_1_1_dijkstra_expansion_a13395ccfa132ce826ee5f88865b73aee_icgraph">
+<area shape="rect" title=" " alt="" coords="460,5,617,47"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a037961c97a953fddf61bbae64f9c1b97" title="Updates the cell at index n" alt="" coords="255,5,412,47"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a1102e169bb79dac31de8fe5ca5ace39b" title=" " alt="" coords="5,5,207,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2ec5a9b73f4a8680adc8e406bc18b254" name="a2ec5a9b73f4a8680adc8e406bc18b254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ec5a9b73f4a8680adc8e406bc18b254">&#9670;&nbsp;</a></span>setNeutralCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_planner::DijkstraExpansion::setNeutralCost </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>neutral_cost</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ba5aa2bff86fd1b18b24163379d9e2b" name="a5ba5aa2bff86fd1b18b24163379d9e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ba5aa2bff86fd1b18b24163379d9e2b">&#9670;&nbsp;</a></span>setPreciseStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_planner::DijkstraExpansion::setPreciseStart </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>precise</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b_icgraph" id="aclassglobal__planner_1_1_dijkstra_expansion_a5ba5aa2bff86fd1b18b24163379d9e2b_icgraph">
+<area shape="rect" title=" " alt="" coords="248,5,429,47"/>
+<area shape="rect" href="classglobal__planner_1_1_global_planner.html#af3ade8f9f487fe2ddd109f0845a6ffb2" title=" " alt="" coords="5,5,200,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d286126b2c478fc55c5e995e1deff29" name="a7d286126b2c478fc55c5e995e1deff29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d286126b2c478fc55c5e995e1deff29">&#9670;&nbsp;</a></span>setSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_planner::DijkstraExpansion::setSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ny</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets or resets the size of the map </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nx</td><td>The x size of the map </td></tr>
+    <tr><td class="paramname">ny</td><td>The y size of the map sets or resets the size of the map </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094">global_planner::Expander</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29_cgraph" id="aclassglobal__planner_1_1_dijkstra_expansion_a7d286126b2c478fc55c5e995e1deff29_cgraph">
+<area shape="rect" title="Sets or resets the size of the map" alt="" coords="5,5,163,47"/>
+<area shape="rect" href="classglobal__planner_1_1_expander.html#aeeaa60103de1ee71a1969e40a3735094" title="Sets or resets the size of the map" alt="" coords="211,5,379,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a037961c97a953fddf61bbae64f9c1b97" name="a037961c97a953fddf61bbae64f9c1b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a037961c97a953fddf61bbae64f9c1b97">&#9670;&nbsp;</a></span>updateCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void global_planner::DijkstraExpansion::updateCell </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>costs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>potential</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the cell at index n </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">costs</td><td>The costmap </td></tr>
+    <tr><td class="paramname">potential</td><td>The potential array in which we are calculating </td></tr>
+    <tr><td class="paramname">n</td><td>The index to update </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_cgraph.png" border="0" usemap="#aclassglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_cgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_cgraph" id="aclassglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_cgraph">
+<area shape="rect" title="Updates the cell at index n" alt="" coords="5,39,163,80"/>
+<area shape="rect" href="classglobal__planner_1_1_potential_calculator.html#a4befc4819934603d43c8dc539f445fd4" title=" " alt="" coords="211,5,401,47"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a13395ccfa132ce826ee5f88865b73aee" title=" " alt="" coords="227,71,385,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_icgraph.png" border="0" usemap="#aclassglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_icgraph" alt=""/></div>
+<map name="aclassglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_icgraph" id="aclassglobal__planner_1_1_dijkstra_expansion_a037961c97a953fddf61bbae64f9c1b97_icgraph">
+<area shape="rect" title="Updates the cell at index n" alt="" coords="255,5,412,47"/>
+<area shape="rect" href="classglobal__planner_1_1_dijkstra_expansion.html#a1102e169bb79dac31de8fe5ca5ace39b" title=" " alt="" coords="5,5,207,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="abc3bb648b490893ed0102df9d62b8c8e" name="abc3bb648b490893ed0102df9d62b8c8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3bb648b490893ed0102df9d62b8c8e">&#9670;&nbsp;</a></span>buffer1_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* global_planner::DijkstraExpansion::buffer1_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >block priority buffers </p>
+
+</div>
+</div>
+<a id="a5f79af0e0fd56427a7797d1a74b04d7c" name="a5f79af0e0fd56427a7797d1a74b04d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f79af0e0fd56427a7797d1a74b04d7c">&#9670;&nbsp;</a></span>buffer2_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * global_planner::DijkstraExpansion::buffer2_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b3748fa770dba7b326ee3cd3f9570c2" name="a0b3748fa770dba7b326ee3cd3f9570c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3748fa770dba7b326ee3cd3f9570c2">&#9670;&nbsp;</a></span>buffer3_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * global_planner::DijkstraExpansion::buffer3_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >storage buffers for priority blocks </p>
+
+</div>
+</div>
+<a id="a7ac2b1b9911253ad9a78995352f30fa0" name="a7ac2b1b9911253ad9a78995352f30fa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac2b1b9911253ad9a78995352f30fa0">&#9670;&nbsp;</a></span>currentBuffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* global_planner::DijkstraExpansion::currentBuffer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f20397d9d6950d0505effc87151fd99" name="a2f20397d9d6950d0505effc87151fd99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f20397d9d6950d0505effc87151fd99">&#9670;&nbsp;</a></span>currentEnd_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_planner::DijkstraExpansion::currentEnd_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a0fc94d2007ad3c5418fe05f150be00" name="a8a0fc94d2007ad3c5418fe05f150be00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0fc94d2007ad3c5418fe05f150be00">&#9670;&nbsp;</a></span>nextBuffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * global_planner::DijkstraExpansion::nextBuffer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfb8b6cbadbcf990639f22f159804b5d" name="abfb8b6cbadbcf990639f22f159804b5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfb8b6cbadbcf990639f22f159804b5d">&#9670;&nbsp;</a></span>nextEnd_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_planner::DijkstraExpansion::nextEnd_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab35e9b00bffc3967973cedafee95ca5c" name="ab35e9b00bffc3967973cedafee95ca5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35e9b00bffc3967973cedafee95ca5c">&#9670;&nbsp;</a></span>overBuffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int * global_planner::DijkstraExpansion::overBuffer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >priority buffer block ptrs </p>
+
+</div>
+</div>
+<a id="a38469ef117b6f192a473884f5595e942" name="a38469ef117b6f192a473884f5595e942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38469ef117b6f192a473884f5595e942">&#9670;&nbsp;</a></span>overEnd_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int global_planner::DijkstraExpansion::overEnd_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >end points of arrays </p>
+
+</div>
+</div>
+<a id="a89d014c133dd833a10f53fcdf8c0bb04" name="a89d014c133dd833a10f53fcdf8c0bb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d014c133dd833a10f53fcdf8c0bb04">&#9670;&nbsp;</a></span>pending_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool* global_planner::DijkstraExpansion::pending_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >pending_ cells during propagation </p>
+
+</div>
+</div>
+<a id="a94dbd3ba373631604ee8cb021e39cd41" name="a94dbd3ba373631604ee8cb021e39cd41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94dbd3ba373631604ee8cb021e39cd41">&#9670;&nbsp;</a></span>precise_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool global_planner::DijkstraExpansion::precise_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3256e3646ba17ea885abd80ac12b692" name="ac3256e3646ba17ea885abd80ac12b692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3256e3646ba17ea885abd80ac12b692">&#9670;&nbsp;</a></span>priorityIncrement_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float global_planner::DijkstraExpansion::priorityIncrement_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >priority threshold increment </p>
+
+</div>
+</div>
+<a id="acc180530057dffbd53ba8c44d9ae1efa" name="acc180530057dffbd53ba8c44d9ae1efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc180530057dffbd53ba8c44d9ae1efa">&#9670;&nbsp;</a></span>threshold_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float global_planner::DijkstraExpansion::threshold_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >block priority thresholds current threshold </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>global_planner/include/global_planner/<a class="el" href="dijkstra_8h_source.html">dijkstra.h</a></li>
+<li>global_planner/src/<a class="el" href="dijkstra_8cpp.html">dijkstra.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

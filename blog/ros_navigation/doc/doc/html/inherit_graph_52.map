@@ -1,0 +1,6 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="node1" href="$classnav__core_1_1_recovery_behavior.html" title="提供恢复行为的接口，navigation stack调用的所有恢复行为模块都要实现这个接口." alt="" coords="5,78,195,105"/>
+<area shape="rect" id="node2" href="$classclear__costmap__recovery_1_1_clear_costmap_recovery.html" title="A recovery behavior that reverts the navigation stack&#39;s costmaps to the static map outside of a user&#45;..." alt="" coords="266,5,433,47"/>
+<area shape="rect" id="node3" href="$classmove__slow__and__clear_1_1_move_slow_and_clear.html" title=" " alt="" coords="274,71,425,112"/>
+<area shape="rect" id="node4" href="$classrotate__recovery_1_1_rotate_recovery.html" title="恢复行为会让机器人定点旋转一圈，尝试清除调周围的障碍物" alt="" coords="243,137,456,163"/>
+</map>
