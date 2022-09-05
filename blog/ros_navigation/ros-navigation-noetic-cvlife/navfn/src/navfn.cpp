@@ -645,7 +645,7 @@ namespace navfn {
         if (curPe == 0 && nextPe == 0) // priority blocks 为空
           break;
 
-        // stats
+        // statsbreakbreak
         nc += curPe;
         if (curPe > nwv)
           nwv = curPe;

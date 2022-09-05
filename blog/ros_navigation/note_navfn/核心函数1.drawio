@@ -1,0 +1,581 @@
+<mxfile host="65bd71144e">
+    <diagram id="QZwI53sY2sKeJIn4_zFJ" name="Page-1">
+        <mxGraphModel dx="19860" dy="12260" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="7" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1440" y="840" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="edgeStyle=none;html=1;" parent="1" source="3" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;clearRobotCell&lt;/span&gt;(start, mx, my)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="890" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;" parent="1" source="6" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;planner_&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setNavArr(&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(156 , 220 , 254)&quot;&gt;costmap_&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(220 , 220 , 170)&quot;&gt;getSizeInCellsX&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace&quot;&gt;(), &lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(156 , 220 , 254)&quot;&gt;costmap_&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(220 , 220 , 170)&quot;&gt;getSizeInCellsY&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace&quot;&gt;()&lt;/span&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="990" width="660" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;makePlan&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1380" y="770" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="edgeStyle=none;html=1;" parent="1" source="9" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;planner_&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setCostmap&lt;/span&gt;(&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;costmap_&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;getCharMap&lt;/span&gt;(),...)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1225" y="1090" width="430" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;html=1;" parent="1" source="11" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;map_start&lt;/span&gt;[&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;2&lt;/span&gt;] 起点&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;map_goal&lt;/span&gt;[&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;2&lt;/span&gt;] 终点&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1335" y="1210" width="210" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=none;html=1;" parent="1" source="13" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;机器人起点作为dijkstra的终点&lt;/span&gt;&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;planner_&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setStart&lt;/span&gt;(map_goal);&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;planner_&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setGoal&lt;/span&gt;(map_start);&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1285" y="1310" width="310" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="edgeStyle=none;html=1;" parent="1" source="15" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;planner_&lt;/span&gt;-&amp;gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;calcNavFnDijkstra&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;true&lt;/span&gt;)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1285" y="1410" width="310" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=none;html=1;" parent="1" source="17" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="在以goal为中心的边长为2*tolerance的正方形内，需要距离goal最近的且potential&amp;lt;POT_HIGH的点--&amp;gt;best_pose;&lt;br&gt;如果找到，则found_legal = true;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1315" y="1510" width="250" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=none;html=1;" parent="1" source="19" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="23" vertex="1" connectable="0">
+                    <mxGeometry x="-0.5377" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;" parent="1" source="19" target="27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="found_legal" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1315" y="1650" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=none;html=1;" parent="1" source="22" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;getPlanFromPotential&lt;/span&gt;(best_pose, plan)&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1255" y="1780" width="370" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="edgeStyle=none;html=1;" parent="1" source="25" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;        &lt;span style=&quot;color: rgb(78 , 201 , 176)&quot;&gt;geometry_msgs&lt;/span&gt;::PoseStamped goal_copy = best_pose;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #9cdcfe&quot;&gt;goal_copy&lt;/span&gt;.&lt;span style=&quot;color: #9cdcfe&quot;&gt;header&lt;/span&gt;.&lt;span style=&quot;color: #9cdcfe&quot;&gt;stamp&lt;/span&gt; = &lt;span style=&quot;color: #4ec9b0&quot;&gt;ros&lt;/span&gt;::&lt;span style=&quot;color: #4ec9b0&quot;&gt;Time&lt;/span&gt;::&lt;span style=&quot;color: #dcdcaa&quot;&gt;now&lt;/span&gt;();&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;plan&lt;/span&gt;.&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;push_back&lt;/span&gt;(goal_copy);&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1220" y="1930" width="440" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="无法提取路线" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1670" y="1660" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="edgeStyle=none;html=1;" parent="1" source="29" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="将planner_-&amp;gt;potarr发布为PointClound2;&lt;br&gt;将plan路线发布；" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1305" y="2060" width="270" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;return&lt;/span&gt; !&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;plan&lt;/span&gt;.&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;empty&lt;/span&gt;();&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="2160" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6" target="41" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1920" y="1370" as="sourcePoint"/>
+                        <mxPoint x="1990" y="340" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1790" y="1020"/>
+                            <mxPoint x="1790" y="415"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="" style="edgeStyle=none;html=1;" parent="1" source="34" target="37" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt; = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;xs&lt;/span&gt;; costmap的x栅格数&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;ny&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;ys&lt;/span&gt;; costmap的y栅格数&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ns&lt;/span&gt; = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt;*&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ny&lt;/span&gt;; 总栅格数&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="2270" y="280" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="edgeStyle=none;html=1;" parent="1" source="35" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setNavArr&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;xs&lt;/span&gt;, &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ys&lt;/span&gt;)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="2277.5" y="170" width="215" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="edgeStyle=none;html=1;" parent="1" source="37" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;delete[]&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;costarr;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;span style=&quot;color: #c586c0&quot;&gt;delete[]&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;potarr&lt;/span&gt;;&lt;/div&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;span style=&quot;color: #c586c0&quot;&gt;delete[]&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;pending&lt;/span&gt;;&lt;/div&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;span style=&quot;color: #c586c0&quot;&gt;delete[]&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;gradx&lt;/span&gt;;&lt;/div&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;delete[]&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;grady&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="2295" y="370" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;costarr&lt;/span&gt; = &lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;COSTTYPE&lt;/span&gt;[&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ns&lt;/span&gt;];&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt; // cost array, 2d config space&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #dcdcaa&quot;&gt;memset&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;costarr&lt;/span&gt;, &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;, &lt;span style=&quot;color: #9cdcfe&quot;&gt;ns&lt;/span&gt;*&lt;span style=&quot;color: #569cd6&quot;&gt;sizeof&lt;/span&gt;(&lt;span style=&quot;color: #569cd6&quot;&gt;COSTTYPE&lt;/span&gt;)); //&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(197 , 134 , 192)&quot;&gt;#define&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(86 , 156 , 214)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(86 , 156 , 214)&quot;&gt;COSTTYPE&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(86 , 156 , 214)&quot;&gt; unsigned char&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;potarr&lt;/span&gt; = &lt;span style=&quot;color: #c586c0&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #569cd6&quot;&gt;float&lt;/span&gt;[&lt;span style=&quot;color: #9cdcfe&quot;&gt;ns&lt;/span&gt;];&lt;span style=&quot;color: #6a9955&quot;&gt; // navigation potential array&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;pending&lt;/span&gt; = &lt;span style=&quot;color: #c586c0&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #569cd6&quot;&gt;bool&lt;/span&gt;[&lt;span style=&quot;color: #9cdcfe&quot;&gt;ns&lt;/span&gt;];&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #dcdcaa&quot;&gt;memset&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;pending&lt;/span&gt;, &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;, &lt;span style=&quot;color: #9cdcfe&quot;&gt;ns&lt;/span&gt;*&lt;span style=&quot;color: #569cd6&quot;&gt;sizeof&lt;/span&gt;(&lt;span style=&quot;color: #569cd6&quot;&gt;bool&lt;/span&gt;)); //默认false&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;gradx&lt;/span&gt; = &lt;span style=&quot;color: #c586c0&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #569cd6&quot;&gt;float&lt;/span&gt;[&lt;span style=&quot;color: #9cdcfe&quot;&gt;ns&lt;/span&gt;];&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;grady&lt;/span&gt; = &lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;float&lt;/span&gt;[&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ns&lt;/span&gt;];&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2070" y="510" width="630" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="setNavArr(int xs, int ys)" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="2030" y="110" width="710" height="610" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="42" target="43" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setCostmap&lt;/span&gt;(&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(156 , 220 , 254)&quot;&gt;costmap_&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(220 , 220 , 170)&quot;&gt;getCharMap&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace&quot;&gt;(), &lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; color: rgb(86 , 156 , 214)&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace&quot;&gt;, allow_unknown_&lt;/span&gt;&lt;span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2240" y="990" width="660" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="43" target="45" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      // 全局规划用到的地图costarr&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;COSTTYPE&lt;/span&gt; *&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cm&lt;/span&gt; = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;costarr&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2445" y="1150" width="250" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="45" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;ROS类型的代价矩阵&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2390" y="1280" width="360" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="47" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;i&lt;/span&gt;=&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2510" y="1390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="" style="edgeStyle=none;html=1;fontSize=24;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="48" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2570" y="1620" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="71" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=24;" parent="52" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4775" y="-2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=24;" parent="1" source="48" target="72" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;i&lt;/span&gt;&amp;lt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ny&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2492.5" y="1500" width="155" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="53" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;j&lt;/span&gt;=&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2510" y="1620" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="55" target="57" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=24;" parent="58" vertex="1" connectable="0">
+                    <mxGeometry x="-0.3057" y="-2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" style="edgeStyle=none;html=1;fontSize=24;startArrow=none;" parent="1" source="66" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2570" y="1470" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="2280" y="1470"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;j&lt;/span&gt;&amp;lt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2530" y="1720" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" style="edgeStyle=none;html=1;fontSize=24;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="57" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2570" y="1700" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="2570" y="2140"/>
+                            <mxPoint x="3190" y="2140"/>
+                            <mxPoint x="3190" y="1700"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt; // 在这里会转换输入的代价值:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;            // 若当前cell在costmap上的值 == COST_OBS(254)，即致命障碍物（障碍物本身），值仍为254&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;            // 若当前cell在costmap上的值 == COST_UNKNOWN_ROS(255)，即未知区域，赋值为253；&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;            // 若当前cell在costmap上的值 &amp;lt; COST_OBS_ROS(253)，重新将其赋值为COST_NEUTRAL(50)+当前cell在costmap上的值×0.8，最高253&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;            //默认最小权重值为COST_NEUTRAL＝50，最大权重值为COST_OBS＝254&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;            //注：最小权重值即行走单个free(无障碍物影响)栅格所付出的权重代价&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;            //最大权重值即行走单个障碍物栅格所付出的权重代价&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="2105" y="1860" width="930" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="j++" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="3120" y="1890" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="i++" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2220" y="1560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="" style="edgeStyle=none;html=1;fontSize=24;endArrow=none;" parent="1" source="55" target="66" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2569.9999999999995" y="1470" as="targetPoint"/>
+                        <mxPoint x="2529.9999999999995" y="1760" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="2280" y="1760"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=24;" parent="67" vertex="1" connectable="0">
+                    <mxGeometry x="-0.7299" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="72" value="结束" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="2760" y="1485" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="setCostmap(costmap_-&gt;getCharMap(), true, allow_unknown_)" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="2090" y="890" width="1170" height="1350" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=24;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9" target="75" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="2010" y="1340" as="sourcePoint"/>
+                        <mxPoint x="2060" y="1290" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1940" y="1125"/>
+                            <mxPoint x="1940" y="1380"/>
+                            <mxPoint x="1940" y="1565"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="82" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="77" target="81" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      //重新设置势场矩阵potarr的值、设置costarr的边际值、设置目标在costarr中的值为0，对四周cell进行处理，记录costarr中障碍物cell数&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setupNavFn&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;true&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="950" width="360" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="edgeStyle=none;html=1;fontSize=24;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="80" target="77" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="575" y="890" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="80" value="&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; color: rgb(156 , 220 , 254)&quot;&gt;planner_&lt;/span&gt;&lt;span style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; color: rgb(220 , 220 , 170)&quot;&gt;calcNavFnDijkstra&lt;/span&gt;&lt;span style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; color: rgb(86 , 156 , 214)&quot;&gt;true&lt;/span&gt;&lt;span style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px&quot;&gt;)&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="417.5" y="790" width="315" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="81" target="83" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      // 计算navfn和全局路径&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;propNavFnDijkstra&lt;/span&gt;(&lt;span style=&quot;color: rgb(78 , 201 , 176)&quot;&gt;std&lt;/span&gt;::&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;max&lt;/span&gt;(&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt;*&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ny&lt;/span&gt;/&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;20&lt;/span&gt;,&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt;+&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ny&lt;/span&gt;),&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;atStart&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="1100" width="450" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="83" target="85" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      // 全局路径&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;len&lt;/span&gt; = &lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;calcPath&lt;/span&gt;(&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt;*&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ny&lt;/span&gt;/&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;2&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="435" y="1240" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="85" target="88" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="" style="edgeStyle=none;html=1;fontSize=24;" parent="1" source="85" target="87" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=24;" parent="90" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4711" y="5" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="85" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;len&lt;/span&gt; &amp;gt; &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="502.5" y="1340" width="145" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #c586c0&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: #569cd6&quot;&gt;true&lt;/span&gt;;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="1520" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #c586c0&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: #569cd6&quot;&gt;false&lt;/span&gt;;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=24;" parent="1" vertex="1">
+                    <mxGeometry x="732.5" y="1340" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="planner_-&gt;calcNavFnDijkstra(true)" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="670" width="670" height="1000" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="" style="shape=flexArrow;endArrow=classic;html=1;fontSize=24;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="15" target="92" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1170" y="1700" as="sourcePoint"/>
+                        <mxPoint x="1220" y="1650" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1030" y="1440"/>
+                            <mxPoint x="1030" y="1170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="96" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="94" target="95">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;setupNavFn&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;bool&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;keepit&lt;/span&gt;)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-434.37" y="835" width="210" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="95" target="97">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;step 1: 重新设置potarr的值&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #9cdcfe&quot;&gt;potarr&lt;/span&gt;[&lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;] = &lt;span style=&quot;color: #569cd6&quot;&gt;POT_HIGH&lt;/span&gt;;&lt;/div&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; line-height: 19px&quot;&gt;&lt;div style=&quot;line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;gradx&lt;/span&gt;[&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;i&lt;/span&gt;] = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;grady&lt;/span&gt;[&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;i&lt;/span&gt;] = &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0.0&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-465.62" y="1015" width="272.5" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="97" target="99">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;// step 2: 接下来设置costarr的四条边的cell的值为COST_OBS(致命层254)，封闭地图四周，以防产生边界以外的轨迹。&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; line-height: 19px&quot;&gt;&lt;div&gt;      &lt;span style=&quot;color: #569cd6&quot;&gt;COSTTYPE&lt;/span&gt; *&lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;costarr&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;      // costarr第一行全部设置为COST_OBS(致命层254)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #c586c0&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;=&lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;&amp;lt;&lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;++)&lt;/div&gt;&lt;div&gt;        *&lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt;++ = &lt;span style=&quot;color: #569cd6&quot;&gt;COST_OBS&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;      // costarr最后一行全部设置为COST_OBS(致命层254)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;costarr&lt;/span&gt; + (&lt;span style=&quot;color: #9cdcfe&quot;&gt;ny&lt;/span&gt;-&lt;span style=&quot;color: #b5cea8&quot;&gt;1&lt;/span&gt;)*&lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #c586c0&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;=&lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;&amp;lt;&lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;++)&lt;/div&gt;&lt;div&gt;        *&lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt;++ = &lt;span style=&quot;color: #569cd6&quot;&gt;COST_OBS&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;costarr&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;      // costarr第一列全部设置为COST_OBS(致命层254)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #c586c0&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;=&lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;&amp;lt;&lt;span style=&quot;color: #9cdcfe&quot;&gt;ny&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;++, &lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt;+=&lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt;)&lt;/div&gt;&lt;div&gt;        *&lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt; = &lt;span style=&quot;color: #569cd6&quot;&gt;COST_OBS&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;costarr&lt;/span&gt; + &lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt; - &lt;span style=&quot;color: #b5cea8&quot;&gt;1&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;      // costarr最后一列全部设置为COST_OBS(致命层254)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #c586c0&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;=&lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;&amp;lt;&lt;span style=&quot;color: #9cdcfe&quot;&gt;ny&lt;/span&gt;; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;++, &lt;span style=&quot;color: #9cdcfe&quot;&gt;pc&lt;/span&gt;+=&lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt;)&lt;/div&gt;&lt;div&gt;        *&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;pc&lt;/span&gt; = &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;COST_OBS&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-580" y="1175" width="501.25" height="445" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="99" target="101">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      // step 3: 初始化一些用于迭代更新potarr的数据，并初始化pending数组为全0，设置所有的cell状态都为非等待状态。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;      // 优先级缓冲&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;curT&lt;/span&gt; = &lt;span style=&quot;color: #569cd6&quot;&gt;COST_OBS&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; // 传播阈值设为254&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;curP&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;pb1&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; // 当前用于传播的cell索引数组&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;curPe&lt;/span&gt; = &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; //当前用于传播的cell的数量&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;nextP&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;pb2&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; //用于下个传播过程的cell索引数组&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;nextPe&lt;/span&gt; = &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; //用于下个传播过程的cell的数量&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;overP&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;pb3&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; //传播界限外的cell索引数组&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #9cdcfe&quot;&gt;overPe&lt;/span&gt; = &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; //传播界限外的cell的数量&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;memset&lt;/span&gt;(&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;pending&lt;/span&gt;, &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;, &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;ns&lt;/span&gt;*&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;sizeof&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;bool&lt;/span&gt;));&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-564.37" y="1750" width="470" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="101" target="104">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      // k为目标cell的索引&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;k&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;goal&lt;/span&gt;[&lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;] + &lt;span style=&quot;color: #9cdcfe&quot;&gt;goal&lt;/span&gt;[&lt;span style=&quot;color: #b5cea8&quot;&gt;1&lt;/span&gt;]*&lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;      // step 4: costarr的索引k（目标点）的元素值设为0，并对它四周的cell在pending[]中进行标记“等待状态”，并把索引存放入curP数组&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;initCost&lt;/span&gt;(&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;k&lt;/span&gt;,&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-574.06" y="2080" width="489.38" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="这里指的是机器人当前位置" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-310" y="2050" width="164.37" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;// step 5: 更新障碍物单元格的数量nobs&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-474.37" y="2311" width="290" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="77" target="94">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="90" y="1330" as="sourcePoint"/>
+                        <mxPoint x="140" y="1280" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="310" y="995"/>
+                            <mxPoint x="310" y="885"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" value="makePlan" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+                    <mxGeometry x="1077" y="653" width="807" height="1623" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="setupNavFn(bool keepit)" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="-630" y="723" width="597" height="1720" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;potarr&lt;/span&gt;[&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;k&lt;/span&gt;] = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;v&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #569cd6&quot;&gt;push_cur&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;k&lt;/span&gt;+&lt;span style=&quot;color: #b5cea8&quot;&gt;1&lt;/span&gt;);&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #569cd6&quot;&gt;push_cur&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;k&lt;/span&gt;-&lt;span style=&quot;color: #b5cea8&quot;&gt;1&lt;/span&gt;);&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #569cd6&quot;&gt;push_cur&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;k&lt;/span&gt;-&lt;span style=&quot;color: #9cdcfe&quot;&gt;nx&lt;/span&gt;);&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;push_cur&lt;/span&gt;(&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;k&lt;/span&gt;+&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt;);&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-1057" y="2096.5" width="210" height="127" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="101" target="109">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-486" y="2430" as="sourcePoint"/>
+                        <mxPoint x="-436" y="2380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="111" target="109">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;initCost&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;k&lt;/span&gt;, &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;float&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;v&lt;/span&gt;)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="-1055" y="1963" width="208" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="initCost(int k, float v)" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="-1105" y="1880" width="347" height="396" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="114" target="115">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;propNavFnDijkstra&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cycles&lt;/span&gt;, &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;bool&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;atStart&lt;/span&gt;)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1202" y="2616" width="375" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="115" target="117">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; line-height: 19px&quot;&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nwv&lt;/span&gt; = &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      // priority block 的最大值&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;nc&lt;/span&gt; = &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt;     // 放到priority blocks中单元格数量&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cycle&lt;/span&gt; = &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;    // which cycle we're on 当前迭代次数&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1178" y="2780" width="423" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="117" target="121">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;      // 记录起始位置的索引&lt;/span&gt;&lt;/div&gt;&lt;div&gt;      &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;startCell&lt;/span&gt; = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;start&lt;/span&gt;[&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;1&lt;/span&gt;]*&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nx&lt;/span&gt; + &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;start&lt;/span&gt;[&lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;];&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1207" y="2970" width="370" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="这里是机器人的终点" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1420" y="2940" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="121" target="123">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="124">
+                    <mxGeometry x="-0.4581" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="165" style="edgeStyle=none;html=1;" edge="1" parent="1" source="121" target="164">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="165">
+                    <mxGeometry x="-0.3765" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="121" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cycle&lt;/span&gt; &amp;lt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cycles&lt;/span&gt;;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1290.5" y="3100" width="198" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="123" target="126">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="127">
+                    <mxGeometry x="-0.2838" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="130" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="123" target="128">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="130">
+                    <mxGeometry x="-0.5494" y="6" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div style=&quot;font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt; // priority blocks 为空&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;curPe&lt;/span&gt; == &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nextPe&lt;/span&gt; == &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1259.5" y="3250" width="260" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="126" target="167">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;break&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="3275" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="128" target="132">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nc&lt;/span&gt; += &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;curPe&lt;/span&gt;;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1329.5" y="3440" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="132" target="134">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="135">
+                    <mxGeometry x="-0.3006" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="132" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;curPe&lt;/span&gt; &amp;gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nwv&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1309.5" y="3540" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="134" target="137">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nwv&lt;/span&gt; = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;curPe&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1329.5" y="3690" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="137" target="139">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;        // reset pending flags on current priority buffer //对pending数组进行设置&lt;/span&gt;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; *&lt;span style=&quot;color: #9cdcfe&quot;&gt;pb&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;curP&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #569cd6&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;curPe&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #c586c0&quot;&gt;while&lt;/span&gt; (&lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;-- &amp;gt; &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;) {&lt;/div&gt;&lt;div&gt;          &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;&amp;nbsp; pending&lt;/span&gt;[*(&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;pb&lt;/span&gt;++)] = &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;false&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="1169.25" y="3800" width="440.5" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="139" target="141">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;        // process current priority buffer&lt;/span&gt;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #9cdcfe&quot;&gt;pb&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;curP&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;curPe&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #c586c0&quot;&gt;while&lt;/span&gt; (&lt;span style=&quot;color: #9cdcfe&quot;&gt;i&lt;/span&gt;-- &amp;gt; &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;) {&lt;/div&gt;&lt;div&gt;          &lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;&amp;nbsp; updateCell&lt;/span&gt;(*&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;pb&lt;/span&gt;++);&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="1244.5" y="4060" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="141" target="143">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;        // 交换 priority blocks，即 curP &amp;lt;=&amp;gt; nextP&lt;/span&gt;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #9cdcfe&quot;&gt;curPe&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;nextPe&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;nextPe&lt;/span&gt; = &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1227" y="4250" width="330" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="143" target="145">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;br&gt;&lt;div&gt;        &lt;span style=&quot;color: #9cdcfe&quot;&gt;pb&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;curP&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt;    // 交换缓存&lt;/span&gt;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #9cdcfe&quot;&gt;curP&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;nextP&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;        &lt;span style=&quot;color: #9cdcfe&quot;&gt;nextP&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;pb&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1291.75" y="4380" width="200.5" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="145" target="148">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="149">
+                    <mxGeometry x="-0.3839" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="145" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;curPe&lt;/span&gt; == &lt;span style=&quot;color: rgb(181 , 206 , 168)&quot;&gt;0&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1330.5" y="4530" width="118" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #6a9955&quot;&gt;// see if we're done with this priority level&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1400" y="4520" width="390" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="148" target="151">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;div&gt;          &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;curT&lt;/span&gt; += &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;priInc&lt;/span&gt;;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt; // increment priority threshold&lt;/span&gt;&lt;/div&gt;&lt;div&gt;          &lt;span style=&quot;color: #9cdcfe&quot;&gt;curPe&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;overPe&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt; // set current to overflow block&lt;/span&gt;&lt;/div&gt;&lt;div&gt;          &lt;span style=&quot;color: #9cdcfe&quot;&gt;overPe&lt;/span&gt; = &lt;span style=&quot;color: #b5cea8&quot;&gt;0&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;          &lt;span style=&quot;color: #9cdcfe&quot;&gt;pb&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;curP&lt;/span&gt;;&lt;span style=&quot;color: #6a9955&quot;&gt;    // swap buffers&lt;/span&gt;&lt;/div&gt;&lt;div&gt;          &lt;span style=&quot;color: #9cdcfe&quot;&gt;curP&lt;/span&gt; = &lt;span style=&quot;color: #9cdcfe&quot;&gt;overP&lt;/span&gt;;&lt;/div&gt;&lt;div&gt;          &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;overP&lt;/span&gt; = &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;pb&lt;/span&gt;;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="1187" y="4660" width="408" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="151" target="153">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="154">
+                    <mxGeometry x="-0.3239" y="-1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="156" style="edgeStyle=none;html=1;" edge="1" parent="1" source="151">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1390" y="3070" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1390" y="5120"/>
+                            <mxPoint x="1940" y="5120"/>
+                            <mxPoint x="1950" y="3070"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="151" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;potarr&lt;/span&gt;[&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;startCell&lt;/span&gt;] &amp;lt; &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;POT_HIGH&lt;/span&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1252" y="4870" width="275" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="171" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="153" target="167">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="390" y="4920" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="550" y="4920"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="153" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;break&lt;/span&gt;;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="4890" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cycle&lt;/span&gt;++&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1890" y="4100" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;false&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="3110" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="167" target="164">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" value="no" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="169">
+                    <mxGeometry x="-0.2781" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="173" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="167" target="172">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cycle&lt;/span&gt; &amp;lt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;cycles&lt;/span&gt;;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="461" y="3260" width="198" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="172" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(197 , 134 , 192)&quot;&gt;return&lt;/span&gt; &lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;true&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="3265" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="174" value="propNavFnDijkstra(int cycles, bool atStart)" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="2430" width="1970" height="2800" as="geometry"/>
+                </mxCell>
+                <mxCell id="175" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="139">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="620" y="4310" as="sourcePoint"/>
+                        <mxPoint x="-1410" y="4150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="176" value="updateCell(int n)" style="swimlane;labelBackgroundColor=none;fontSize=24;startSize=50;" vertex="1" parent="1">
+                    <mxGeometry x="-2110" y="4020" width="687" height="780" as="geometry"/>
+                </mxCell>
+                <mxCell id="177" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(220 , 220 , 170)&quot;&gt;updateCell&lt;/span&gt;(&lt;span style=&quot;color: rgb(86 , 156 , 214)&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: rgb(156 , 220 , 254)&quot;&gt;n&lt;/span&gt;)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" vertex="1" parent="176">
+                    <mxGeometry x="240" y="150" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;updateCell用于更新某个单元格(cell) 的Potential值，&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , &amp;#34;monospace&amp;#34; , monospace ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: rgb(106 , 153 , 85)&quot;&gt;先获取当前cell四周邻点的potential值，并取最小的值存入ta。&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="176">
+                    <mxGeometry x="100" y="90" width="440" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
